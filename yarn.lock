@@ -5127,10 +5127,10 @@ ember-cli-version-checker@^5.1.1, ember-cli-version-checker@^5.1.2:
     semver "^7.3.4"
     silent-error "^1.1.1"
 
-ember-cli@~4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-4.1.0.tgz#65d482c25a7f0b93f400f799d92bb28af8527086"
-  integrity sha512-weWNx1bWdcLGCfUTRSN9393yzBkTBcIIhbGW/cOIvwsDjTxkT+RA2XdnpdeHtH4JnIW2JiJSAErCebN5R4wT7w==
+ember-cli@~4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-4.1.1.tgz#166a15f44b1ec6d4643261a18c3faa1b2cd4a5a2"
+  integrity sha512-QFgV14wYOPIc4h1szQ8OW5evPUn7B8YZDs/dexRmD6x9+Y/2BH8lmWyO6vFopBhgV91w1/mSiNDsef+MSdBLbQ==
   dependencies:
     "@babel/core" "^7.16.0"
     "@babel/plugin-transform-modules-amd" "^7.12.1"
@@ -11735,10 +11735,10 @@ webpack@^4.43.0:
     watchpack "^1.7.4"
     webpack-sources "^1.4.1"
 
-webpack@^5.67.0:
-  version "5.67.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.67.0.tgz#cb43ca2aad5f7cc81c4cd36b626e6b819805dbfd"
-  integrity sha512-LjFbfMh89xBDpUMgA1W9Ur6Rn/gnr2Cq1jjHFPo4v6a79/ypznSYbAyPgGhwsxBtMIaEmDD1oJoA7BEYw/Fbrw==
+webpack@^5.68.0:
+  version "5.68.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.68.0.tgz#a653a58ed44280062e47257f260117e4be90d560"
+  integrity sha512-zUcqaUO0772UuuW2bzaES2Zjlm/y3kRBQDVFVCge+s2Y8mwuUTdperGaAv65/NtRL/1zanpSJOq/MD8u61vo6g==
   dependencies:
     "@types/eslint-scope" "^3.7.0"
     "@types/estree" "^0.0.50"
