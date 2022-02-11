@@ -1,0 +1,13 @@
+<button
+  class="velvet-button"
+  data-color={{or @color "velvet-thunder"}}
+  data-rounded={{@isRounded}}
+  data-size={{or @size "md"}}
+  data-variant={{or @variant "solid"}}
+  disabled={{@isDisabled}}
+  type={{or @type "button"}}
+  {{(if @onClick (modifier this.on "click" @onClick))}}
+  ...attributes
+>
+  {{yield}}
+</button>

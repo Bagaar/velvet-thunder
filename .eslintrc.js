@@ -29,9 +29,11 @@ module.exports = {
         './.template-lintrc.js',
         './ember-cli-build.js',
         './index.js',
+        './tailwind.config.js',
         './testem.js',
         './blueprints/*/index.js',
         './config/**/*.js',
+        './tailwind/**/*.js',
         './tests/dummy/config/**/*.js',
       ],
       parserOptions: {
@@ -43,6 +45,9 @@ module.exports = {
       },
       plugins: ['node'],
       extends: ['plugin:node/recommended'],
+      rules: {
+        strict: 'error',
+      },
     },
     {
       // test files

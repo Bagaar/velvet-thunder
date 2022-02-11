@@ -22,6 +22,8 @@
     "lint:js:fix": "eslint . --fix",
     "prepare": "husky install",
     "start": "ember serve",
+    "tailwind:build": "tailwindcss -i ./tailwind.input.css -o ./tests/dummy/public/assets/tailwind.css --minify",
+    "tailwind:watch": "tailwindcss -i ./tailwind.input.css -o ./tests/dummy/public/assets/tailwind.css --watch",
     "test": "npm-run-all lint test:*",
     "test:ember": "ember test",
     "test:ember-compatibility": "ember try:each"
@@ -33,7 +35,8 @@
   },
   "dependencies": {
     "ember-cli-babel": "^7.26.11",
-    "ember-cli-htmlbars": "^6.0.1"
+    "ember-cli-htmlbars": "^6.0.1",
+    "ember-truth-helpers": "^3.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.1.0",
@@ -73,7 +76,11 @@
     "prettier": "^2.5.1",
     "qunit": "^2.17.2",
     "qunit-dom": "^2.0.0",
+    "tailwindcss": "^3.0.19",
     "webpack": "^5.68.0"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3.0.0"
   },
   "engines": {
     "node": "12.* || 14.* || >= 16"
