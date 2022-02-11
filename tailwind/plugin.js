@@ -1,3 +1,5 @@
+'use strict';
+
 const tailwindColors = require('tailwindcss/colors');
 const tailwindPlugin = require('tailwindcss/plugin');
 

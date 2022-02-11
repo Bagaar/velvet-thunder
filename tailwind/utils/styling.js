@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Reduce an array to a styles object.
  *

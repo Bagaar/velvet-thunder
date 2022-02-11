@@ -33,6 +33,7 @@ module.exports = {
         './testem.js',
         './blueprints/*/index.js',
         './config/**/*.js',
+        './tailwind/**/*.js',
         './tests/dummy/config/**/*.js',
       ],
       parserOptions: {
@@ -44,6 +45,9 @@ module.exports = {
       },
       plugins: ['node'],
       extends: ['plugin:node/recommended'],
+      rules: {
+        strict: 'error',
+      },
     },
     {
       // test files

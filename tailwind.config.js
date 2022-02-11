@@ -1,3 +1,5 @@
+'use strict';
+
 const velvetThunderTailwindContent = require('./tailwind/content');
 const velvetThunderTailwindPlugin = require('./tailwind/plugin');
 
