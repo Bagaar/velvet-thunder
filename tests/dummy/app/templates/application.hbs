@@ -1,5 +1,53 @@
-{{page-title "Dummy"}}
+{{page-title "Velvet Thunder"}}
 
-<h2 id="title">Welcome to Ember</h2>
+{{#each (array "bg-gray-200" "bg-gray-800") as |bgColor|}}
+  <div class="p-8 {{bgColor}}">
+    {{#each (array "velvet-thunder") as |color|}}
+      {{#each (array "sm" "md" "lg") as |size|}}
+        <div class="flex mb-8 last:mb-0">
+          {{#each (array "solid" "outline" "ghost") as |variant|}}
+            <VelvetButton
+              @color={{color}}
+              @size={{size}}
+              @variant={{variant}}
+              class="mr-4"
+            >
+              Button
+            </VelvetButton>
 
-{{outlet}}
+            <VelvetButton
+              @color={{color}}
+              @isDisabled={{true}}
+              @size={{size}}
+              @variant={{variant}}
+              class="mr-4"
+            >
+              Disabled
+            </VelvetButton>
+
+            <VelvetButton
+              @color={{color}}
+              @isRounded={{true}}
+              @size={{size}}
+              @variant={{variant}}
+              class="mr-4"
+            >
+              Button
+            </VelvetButton>
+
+            <VelvetButton
+              @color={{color}}
+              @isDisabled={{true}}
+              @isRounded={{true}}
+              @size={{size}}
+              @variant={{variant}}
+              class="mr-4"
+            >
+              Disabled
+            </VelvetButton>
+          {{/each}}
+        </div>
+      {{/each}}
+    {{/each}}
+  </div>
+{{/each}}

@@ -1,7 +1,7 @@
 const tailwindColors = require('tailwindcss/colors');
 const tailwindPlugin = require('tailwindcss/plugin');
 
-const COMPONENTS = [];
+const COMPONENTS = [require('./components/button')];
 
 const DEFAULT_COLOR = 'velvet-thunder';
 const DEFAULT_OPTIONS = {
