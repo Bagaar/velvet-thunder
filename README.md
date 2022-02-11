@@ -18,9 +18,9 @@
 ember install velvet-thunder
 ```
 
-## Usage
+## Documentation
 
-TODO.
+Documentation can be found at [velvet-thunder.netlify.app](https://velvet-thunder.netlify.app/).
 
 ## Contributing
 
