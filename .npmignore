@@ -20,12 +20,13 @@
 /.prettierignore
 /.prettierrc.js
 /.template-lintrc.js
-/.travis.yml
 /.watchmanconfig
 /bower.json
 /config/ember-try.js
 /CONTRIBUTING.md
 /ember-cli-build.js
+/tailwind.input.js
+/tailwind.input.css
 /testem.js
 /tests/
 /yarn-error.log
