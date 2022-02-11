@@ -2,7 +2,7 @@
 
 {{#each (array "bg-gray-200" "bg-gray-800") as |bgColor|}}
   <div class="p-8 {{bgColor}}">
-    {{#each (array "velvet-thunder") as |color|}}
+    {{#each (array "indigo") as |color|}}
       {{#each (array "sm" "md" "lg") as |size|}}
         <div class="flex mb-8 last:mb-0">
           {{#each (array "solid" "outline" "ghost") as |variant|}}
@@ -44,6 +44,18 @@
               class="mr-4"
             >
               Disabled
+            </VelvetButton>
+
+            <VelvetButton
+              @isRenderless={{true}}
+              @color={{color}}
+              @size={{size}}
+              @variant={{variant}}
+              as |button|
+            >
+              <LinkTo @route="application" class="{{button.class}} mr-4">
+                Link
+              </LinkTo>
             </VelvetButton>
           {{/each}}
         </div>

@@ -1,13 +1,14 @@
 'use strict';
 
-const tailwindColors = require('tailwindcss/colors');
 const tailwindPlugin = require('tailwindcss/plugin');
 
-const COMPONENTS = [require('./components/button')];
+const COMPONENTS = {
+  button: require('./components/button'),
+};
 
-const DEFAULT_COLOR = 'velvet-thunder';
 const DEFAULT_OPTIONS = {
-  colors: [DEFAULT_COLOR],
+  colors: ['indigo'],
+  components: {},
 };
 
 module.exports = tailwindPlugin.withOptions(
@@ -17,12 +18,17 @@ module.exports = tailwindPlugin.withOptions(
       ...providedOptions,
     };
 
+    const components = Object.keys(COMPONENTS).filter((component) => {
+      return options.components[component] !== false;
+    });
+
     return ({ addComponents, config, theme }) => {
       addComponents(
-        COMPONENTS.map((component) =>
-          component({
+        components.map((component) =>
+          COMPONENTS[component]({
+            colors: options.colors,
             config,
-            options,
+            options: options.components[component],
             theme,
           })
         )
@@ -30,12 +36,10 @@ module.exports = tailwindPlugin.withOptions(
     };
   },
   () => ({
-    theme: {
-      extend: {
-        colors: {
-          [DEFAULT_COLOR]: tailwindColors.indigo,
-        },
+    safelist: [
+      {
+        pattern: /^velvet-/,
       },
-    },
+    ],
   })
 );

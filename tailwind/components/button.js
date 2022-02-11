@@ -2,74 +2,75 @@
 
 const { reduceStyles } = require('../utils/styling');
 
-module.exports = ({ options }) => ({
+module.exports = ({ colors }) => ({
   '.velvet-button': {
-    '@apply border border-transparent inline-flex items-center outline-none transition':
-      {},
+    '@apply border border-transparent': {},
+    '@apply inline-flex items-center': {},
+    '@apply outline-none transition': {},
 
-    '&:focus': reduceStyles(options.colors, (color) => ({
-      [`&[data-color="${color}"]`]: {
+    '&:focus': reduceStyles(colors, (color) => ({
+      [`&.velvet-button-${color}`]: {
         [`@apply ring ring-${color}-400/50`]: {},
       },
     })),
 
-    '&:disabled': {
+    '&-disabled': {
       '@apply cursor-not-allowed': {},
     },
 
-    '&[data-size="sm"]': {
+    '&-sm': {
       '@apply h-6 px-3 rounded text-sm': {},
     },
 
-    '&[data-size="md"]': {
+    '&-md': {
       '@apply h-8 px-4 rounded-md text-base': {},
     },
 
-    '&[data-size="lg"]': {
+    '&-lg': {
       '@apply h-10 px-5 rounded-lg text-lg': {},
     },
 
-    '&[data-rounded]': {
+    '&-rounded': {
       '@apply rounded-full': {},
     },
 
-    '&[data-variant="solid"]': reduceStyles(options.colors, (color) => ({
-      [`&[data-color="${color}"]`]: {
+    '&-solid': reduceStyles(colors, (color) => ({
+      [`&.velvet-button-${color}`]: {
         [`@apply bg-${color}-400 text-white`]: {},
 
         '&:hover': {
           [`@apply bg-${color}-500`]: {},
         },
 
-        '&:disabled': {
+        '&.velvet-button-disabled': {
           [`@apply bg-${color}-300`]: {},
         },
       },
     })),
 
-    '&[data-variant="outline"]': reduceStyles(options.colors, (color) => ({
-      [`&[data-color="${color}"]`]: {
+    '&-outline': reduceStyles(colors, (color) => ({
+      [`&.velvet-button-${color}`]: {
         [`@apply border-${color}-400 text-${color}-400`]: {},
 
         '&:hover': {
           [`@apply border-${color}-500 text-${color}-500`]: {},
         },
 
-        '&:disabled': {
+        '&.velvet-button-disabled': {
           [`@apply border-${color}-300 text-${color}-300`]: {},
         },
       },
     })),
 
-    '&[data-variant="ghost"]': reduceStyles(options.colors, (color) => ({
-      [`&[data-color="${color}"]`]: {
+    '&-ghost': reduceStyles(colors, (color) => ({
+      [`&.velvet-button-${color}`]: {
         [`@apply text-${color}-400`]: {},
 
         '&:hover': {
           [`@apply bg-${color}-400/25`]: {},
         },
 
-        '&:disabled': {
+        '&.velvet-button-disabled': {
           [`@apply bg-transparent text-${color}-300`]: {},
         },
       },
