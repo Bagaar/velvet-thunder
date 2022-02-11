@@ -1,13 +1,27 @@
-<button
-  class="velvet-button"
-  data-color={{or @color "velvet-thunder"}}
-  data-rounded={{@isRounded}}
-  data-size={{or @size "md"}}
-  data-variant={{or @variant "solid"}}
-  disabled={{@isDisabled}}
-  type={{or @type "button"}}
-  {{(if @onClick (modifier this.on "click" @onClick))}}
-  ...attributes
->
-  {{yield}}
-</button>
+{{#let (helper "-velvet/class" "velvet-button") as |class|}}
+  {{#let
+    (-velvet/class-list
+      (class)
+      (class (or @color "indigo"))
+      (class (or @size "md"))
+      (class (or @variant "solid"))
+      (if @isDisabled (class "disabled"))
+      (if @isRounded (class "rounded"))
+    )
+    as |className|
+  }}
+    {{#if @isRenderless}}
+      {{yield (hash class=className)}}
+    {{else}}
+      <button
+        class={{className}}
+        disabled={{@isDisabled}}
+        type={{or @type "button"}}
+        {{(if @onClick (modifier this.on "click" @onClick))}}
+        ...attributes
+      >
+        {{yield}}
+      </button>
+    {{/if}}
+  {{/let}}
+{{/let}}
