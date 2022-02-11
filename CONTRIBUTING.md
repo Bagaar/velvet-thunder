@@ -2,7 +2,7 @@
 
 ## Installation
 
-* `git clone <repository-url>`
+* `git clone git@github.com:Bagaar/velvet-thunder.git`
 * `cd velvet-thunder`
 * `yarn install`
 
@@ -19,6 +19,7 @@
 
 ## Running the dummy application
 
+* `yarn tailwind:watch`
 * `ember serve`
 * Visit the dummy application at [http://localhost:4200](http://localhost:4200).
 
