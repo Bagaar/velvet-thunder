@@ -4,6 +4,7 @@ const tailwindPlugin = require('tailwindcss/plugin');
 
 const COMPONENTS = {
   button: require('./components/button'),
+  spinner: require('./components/spinner'),
 };
 
 const DEFAULT_OPTIONS = {
