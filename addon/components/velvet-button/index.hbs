@@ -20,7 +20,10 @@
         {{(if @onClick (modifier this.on "click" @onClick))}}
         ...attributes
       >
-        {{yield}}
+        {{#if @isLoading}}
+          <VelvetSpinner @size={{@size}} />
+        {{/if}}
+        <span>{{yield}}</span>
       </button>
     {{/if}}
   {{/let}}

@@ -84,6 +84,20 @@ module('Integration | Component | velvet-button', function (hooks) {
       .hasClass('velvet-button-disabled');
   });
 
+  test('it renders a loading state', async function (assert) {
+    await render(hbs`
+      <VelvetButton />
+    `);
+
+    assert.dom('.velvet-spinner').doesNotExist();
+
+    await render(hbs`
+      <VelvetButton @isLoading={{true}} />
+    `);
+
+    assert.dom('.velvet-spinner').exists();
+  });
+
   test('it renders a rounded button', async function (assert) {
     await render(hbs`
       <VelvetButton />
