@@ -1,16 +1,24 @@
 {{page-title "Velvet Thunder"}}
 
-{{#each (array "bg-gray-200" "bg-gray-800") as |bgColor|}}
-  <div class="p-8 {{bgColor}}">
+{{#each (array "bg-indigo-100" "bg-indigo-900") as |bgColor|}}
+  <div class="overflow-auto p-8 {{bgColor}}">
     {{#each (array "indigo") as |color|}}
       {{#each (array "sm" "md" "lg") as |size|}}
-        <div class="flex mb-8 last:mb-0">
+        <div class="flex mb-8 last:mb-0 space-x-4">
           {{#each (array "solid" "outline" "ghost") as |variant|}}
             <VelvetButton
               @color={{color}}
               @size={{size}}
               @variant={{variant}}
-              class="mr-4"
+            >
+              Button
+            </VelvetButton>
+
+            <VelvetButton
+              @color={{color}}
+              @isLoading={{true}}
+              @size={{size}}
+              @variant={{variant}}
             >
               Button
             </VelvetButton>
@@ -20,7 +28,6 @@
               @isDisabled={{true}}
               @size={{size}}
               @variant={{variant}}
-              class="mr-4"
             >
               Disabled
             </VelvetButton>
@@ -30,7 +37,6 @@
               @isRounded={{true}}
               @size={{size}}
               @variant={{variant}}
-              class="mr-4"
             >
               Button
             </VelvetButton>
@@ -41,7 +47,6 @@
               @isRounded={{true}}
               @size={{size}}
               @variant={{variant}}
-              class="mr-4"
             >
               Disabled
             </VelvetButton>
@@ -53,13 +58,28 @@
               @variant={{variant}}
               as |button|
             >
-              <LinkTo @route="application" class="{{button.class}} mr-4">
+              <LinkTo @route="application" class={{button.class}}>
                 Link
               </LinkTo>
             </VelvetButton>
           {{/each}}
         </div>
       {{/each}}
+    {{/each}}
+  </div>
+{{/each}}
+
+{{#each (array "bg-indigo-100" "bg-indigo-900") as |bgColor|}}
+  <div class="overflow-auto p-8 {{bgColor}}">
+    {{#each (array "indigo") as |color|}}
+      <div class="flex mb-8 last:mb-0 space-x-4">
+        {{#each (array "sm" "md" "lg") as |size|}}
+          <VelvetSpinner
+            @color={{color}}
+            @size={{size}}
+          />
+        {{/each}}
+      </div>
     {{/each}}
   </div>
 {{/each}}
