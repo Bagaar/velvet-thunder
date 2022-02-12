@@ -1,3 +1,5 @@
+'use strict';
+
 const { reduceStyles } = require('../utils/styling');
 
 module.exports = ({ colors }) => ({
