@@ -19,15 +19,27 @@ module.exports = ({ colors }) => ({
     },
 
     '&-sm': {
-      '@apply h-6 px-3 rounded space-x-1 text-sm': {},
+      '@apply h-6 px-3 rounded text-sm': {},
+
+      '.velvet-spinner': {
+        '@apply mr-1': {},
+      },
     },
 
     '&-md': {
-      '@apply h-8 px-4 rounded-md space-x-2 text-base': {},
+      '@apply h-8 px-4 rounded-md text-base': {},
+
+      '.velvet-spinner': {
+        '@apply mr-2': {},
+      },
     },
 
     '&-lg': {
-      '@apply h-10 px-5 rounded-lg space-x-3 text-lg': {},
+      '@apply h-10 px-5 rounded-lg text-lg': {},
+
+      '.velvet-spinner': {
+        '@apply mr-3': {},
+      },
     },
 
     '&-rounded': {
