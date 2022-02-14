@@ -7,6 +7,7 @@
 
 # misc
 /.bowerrc
+/.docfy-config.js
 /.editorconfig
 /.ember-cli
 /.env*
@@ -26,7 +27,7 @@
 /CONTRIBUTING.md
 /ember-cli-build.js
 /RELEASE.md
-/tailwind.input.js
+/tailwind.config.js
 /tailwind.input.css
 /testem.js
 /tests/

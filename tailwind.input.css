@@ -1,3 +1,82 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Code Blocks */
+
+pre[class*="language-"] {
+  @apply bg-slate-900 border border-slate-900 m-0 p-4 rounded-xl;
+  @apply dark:bg-slate-800/50 dark:border-slate-800;
+}
+
+/* Docfy */
+
+.docfy-demo {
+  @apply border border-slate-100 overflow-hidden rounded-xl;
+  @apply dark:border-slate-800;
+}
+
+.docfy-demo__description,
+.docfy-demo__example,
+.docfy-demo__snippets__tabs {
+  @apply border-b border-slate-100 p-4;
+  @apply dark:border-slate-800;
+}
+
+.docfy-demo__description__header {
+  @apply flex justify-between;
+}
+
+.docfy-demo__description__header__title {
+  @apply m-0;
+}
+
+.docfy-demo__description__header__edit-url,
+.docfy-demo__snippets__tabs__button {
+  @apply text-slate-500 text-sm transition-colors;
+  @apply dark:text-slate-400;
+}
+
+.docfy-demo__description__header__edit-url {
+  @apply font-normal;
+}
+
+.docfy-demo__description__header__edit-url:hover,
+.docfy-demo__snippets__tabs__button:hover,
+.docfy-demo__snippets__tabs__button--active {
+  @apply text-slate-900;
+  @apply dark:text-white;
+}
+
+.docfy-demo__description__content :last-child {
+  @apply mb-0;
+}
+
+.docfy-demo__snippets__tabs {
+  @apply flex space-x-4;
+}
+
+.docfy-demo__snippet pre[class*="language-"] {
+  @apply border-none rounded-none;
+}
+
+/* Tailwind Typography */
+
+.prose p code,
+.prose table code {
+  @apply bg-slate-100 px-1 py-0.5 rounded;
+  @apply dark:bg-slate-800;
+}
+
+.prose p code::after,
+.prose p code::before,
+.prose table code::after,
+.prose table code::before {
+  content: '';
+}
+
+.prose table thead,
+.prose table tbody tr {
+  @apply border-slate-100;
+  @apply dark:border-slate-800;
+}
