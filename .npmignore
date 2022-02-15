@@ -26,6 +26,7 @@
 /config/ember-try.js
 /CONTRIBUTING.md
 /ember-cli-build.js
+/netlify.toml
 /RELEASE.md
 /tailwind.config.js
 /tailwind.input.css
