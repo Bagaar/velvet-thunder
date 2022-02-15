@@ -10,12 +10,24 @@
     {{content-for "head"}}
 
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/prism-coldark-dark.css">
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/tailwind.css">
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/dummy.css">
 
     {{content-for "head-footer"}}
+
+    <script>
+      const DARK_MODE_CLASS = 'dark';
+      const HTML = document.querySelector('html');
+
+      if (localStorage.theme === 'dark' || (!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        HTML.classList.add(DARK_MODE_CLASS);
+      } else {
+        HTML.classList.remove(DARK_MODE_CLASS);
+      }
+    </script>
   </head>
-  <body>
+  <body class="antialiased bg-white text-slate-500 dark:bg-slate-900 dark:text-slate-400">
     {{content-for "body"}}
 
     <script src="{{rootURL}}assets/vendor.js"></script>

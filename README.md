@@ -15,7 +15,7 @@
 ## Installation
 
 ```shell
-ember install velvet-thunder
+ember install velvet-thunder tailwindcss
 ```
 
 ## Documentation
