@@ -46,7 +46,7 @@ module.exports = {
   ],
   plugins: [
     velvetThunderTailwindPlugin({
-      colors: ['green', 'indigo', 'orange', 'red'],
+      colors: ['green', 'orange', 'primary', 'red'],
     }),
   ],
 };

@@ -15,7 +15,7 @@ module.exports = {
   plugins: [
     tailwindTypographyPlugin,
     velvetThunderTailwindPlugin({
-      colors: ['green', 'indigo', 'orange', 'red'],
+      colors: ['green', 'orange', 'primary', 'red'],
     }),
   ],
   theme: {

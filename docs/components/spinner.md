@@ -4,7 +4,7 @@
 
 | Name     | Description               | Default Value |
 | -------- | ------------------------- | ------------- |
-| `@color` | The color of the spinner. | `"indigo"`    |
+| `@color` | The color of the spinner. | `"primary"`   |
 | `@size`  | The size of the spinner.  | `"md"`        |
 
 ## Colors

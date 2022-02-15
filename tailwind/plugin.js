@@ -1,5 +1,6 @@
 'use strict';
 
+const tailwindColors = require('tailwindcss/colors');
 const tailwindPlugin = require('tailwindcss/plugin');
 
 const COMPONENTS = {
@@ -8,7 +9,7 @@ const COMPONENTS = {
 };
 
 const DEFAULT_OPTIONS = {
-  colors: ['indigo'],
+  colors: ['primary'],
   components: {},
 };
 
@@ -42,5 +43,12 @@ module.exports = tailwindPlugin.withOptions(
         pattern: /^velvet-/,
       },
     ],
+    theme: {
+      extend: {
+        colors: {
+          primary: tailwindColors.cyan,
+        },
+      },
+    },
   })
 );

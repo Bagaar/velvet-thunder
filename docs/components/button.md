@@ -4,7 +4,7 @@
 
 | Name            | Description                                             | Default Value |
 | --------------- | ------------------------------------------------------- | ------------- |
-| `@color`        | The color of the button.                                | `"indigo"`    |
+| `@color`        | The color of the button.                                | `"primary"`   |
 | `@isDisabled`   | Indicates if the button is disabled.                    | `false`       |
 | `@isLoading`    | Indicates if the button should display a loading state. | `false`       |
 | `@isRenderless` | Make the button renderless.                             | `false`       |

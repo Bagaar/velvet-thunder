@@ -27,7 +27,7 @@ module('Integration | Component | velvet-button', function (hooks) {
       <VelvetButton />
     `);
 
-    assert.dom('button').hasClass('velvet-button-indigo');
+    assert.dom('button').hasClass('velvet-button-primary');
 
     await render(hbs`
       <VelvetButton @color="red" />
@@ -150,7 +150,7 @@ module('Integration | Component | velvet-button', function (hooks) {
     assert
       .dom(this.element)
       .hasText(
-        'velvet-button velvet-button-indigo velvet-button-md velvet-button-solid'
+        'velvet-button velvet-button-primary velvet-button-md velvet-button-solid'
       );
   });
 

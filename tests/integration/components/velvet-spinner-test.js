@@ -16,10 +16,10 @@ module('Integration | Component | velvet-spinner', function (hooks) {
 
   test('it renders the correct color', async function (assert) {
     await render(hbs`
-      <VelvetSpinner @color="indigo" />
+      <VelvetSpinner @color="primary" />
     `);
 
-    assert.dom('.velvet-spinner').hasClass('velvet-spinner-indigo');
+    assert.dom('.velvet-spinner').hasClass('velvet-spinner-primary');
   });
 
   test('it renders the correct size', async function (assert) {
