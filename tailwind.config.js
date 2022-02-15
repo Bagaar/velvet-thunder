@@ -1,7 +1,7 @@
 'use strict';
 
 const tailwindTypographyPlugin = require('@tailwindcss/typography');
-const velvetThunderTailwindPlugin = require('./tailwind/plugin');
+const velvetThunderPlugin = require('./tailwind/plugin');
 
 module.exports = {
   content: [
@@ -12,7 +12,7 @@ module.exports = {
   darkMode: 'class',
   plugins: [
     tailwindTypographyPlugin,
-    velvetThunderTailwindPlugin({
+    velvetThunderPlugin({
       colors: ['green', 'orange', 'primary', 'red'],
     }),
   ],

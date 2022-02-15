@@ -37,11 +37,11 @@ pnpm install velvet-thunder tailwindcss --dev
 
 'use strict';
 
-const velvetThunderTailwindPlugin = require('velvet-thunder/tailwind/plugin');
+const velvetThunderPlugin = require('velvet-thunder/tailwind/plugin');
 
 module.exports = {
   plugins: [
-    velvetThunderTailwindPlugin({
+    velvetThunderPlugin({
       colors: ['green', 'orange', 'primary', 'red'],
     }),
   ],
