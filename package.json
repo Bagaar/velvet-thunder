@@ -83,7 +83,7 @@
     "rehype-autolink-headings": "^5.0.0",
     "release-it": "^14.2.1",
     "release-it-lerna-changelog": "^3.1.0",
-    "tailwindcss": "^3.0.19",
+    "tailwindcss": "^3.0.22",
     "webpack": "^5.68.0"
   },
   "peerDependencies": {
