@@ -10,19 +10,19 @@
 ## Colors
 
 ```hbs preview-template
-<DocsSpacer>
-  <VelvetSpinner @color="green"></VelvetSpinner>
-  <VelvetSpinner @color="orange"></VelvetSpinner>
-  <VelvetSpinner @color="red"></VelvetSpinner>
-</DocsSpacer>
+<DocsSpaceX>
+  <VelvetSpinner @color='green' />
+  <VelvetSpinner @color='orange' />
+  <VelvetSpinner @color='red' />
+</DocsSpaceX>
 ```
 
 ## Sizes
 
 ```hbs preview-template
-<DocsSpacer>
-  <VelvetSpinner @size="sm"></VelvetSpinner>
-  <VelvetSpinner @size="md"></VelvetSpinner>
-  <VelvetSpinner @size="lg"></VelvetSpinner>
-</DocsSpacer>
+<DocsSpaceX>
+  <VelvetSpinner @size='sm' />
+  <VelvetSpinner @size='md' />
+  <VelvetSpinner @size='lg' />
+</DocsSpaceX>
 ```
