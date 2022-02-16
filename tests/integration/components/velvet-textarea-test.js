@@ -69,7 +69,7 @@ module('Integration | Component | velvet-textarea', function (hooks) {
       <VelvetTextarea @onChange={{this.onChange}} />
     `);
 
-    await typeIn('textarea', 'foo');
+    await typeIn('textarea', 'foo', { delay: 0 });
 
     assert.verifySteps(['foo']);
   });
@@ -81,7 +81,7 @@ module('Integration | Component | velvet-textarea', function (hooks) {
       <VelvetTextarea @onInput={{this.onInput}} />
     `);
 
-    await typeIn('textarea', 'foo');
+    await typeIn('textarea', 'foo', { delay: 0 });
 
     assert.verifySteps(['f', 'fo', 'foo']);
   });

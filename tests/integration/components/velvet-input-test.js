@@ -83,7 +83,7 @@ module('Integration | Component | velvet-input', function (hooks) {
       <VelvetInput @onChange={{this.onChange}} />
     `);
 
-    await typeIn('input', 'foo');
+    await typeIn('input', 'foo', { delay: 0 });
 
     assert.verifySteps(['foo']);
   });
@@ -95,7 +95,7 @@ module('Integration | Component | velvet-input', function (hooks) {
       <VelvetInput @onInput={{this.onInput}} />
     `);
 
-    await typeIn('input', 'foo');
+    await typeIn('input', 'foo', { delay: 0 });
 
     assert.verifySteps(['f', 'fo', 'foo']);
   });
