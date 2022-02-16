@@ -4,7 +4,7 @@ const { reduceStyles } = require('../utils/styling');
 
 module.exports = ({ colors }) => ({
   '.velvet-input': {
-    '@apply bg-transparent border border-gray-400/20 font-medium': {},
+    '@apply bg-transparent border border-gray-400/20 font-medium py-0': {},
     '@apply outline-none transition': {},
 
     '&:focus': reduceStyles(colors, (color) => ({

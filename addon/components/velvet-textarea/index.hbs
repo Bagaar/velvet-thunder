@@ -1,6 +1,7 @@
 {{#let (helper "-velvet/class" "velvet-textarea") as |class|}}
   <textarea
     class={{-velvet/class-list
+      "form-textarea"
       (class)
       (class (or @color "primary"))
       (class (or @size "md"))

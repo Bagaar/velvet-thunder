@@ -1,6 +1,7 @@
 {{#let (helper "-velvet/class" "velvet-input") as |class|}}
   <input
     class={{-velvet/class-list
+      "form-input"
       (class)
       (class (or @color "primary"))
       (class (or @size "md"))
