@@ -1,4 +1,4 @@
-# Handling Change Events
+# Handle Change Events
 
 Use the `@onChange` argument to handle `change` events.
 

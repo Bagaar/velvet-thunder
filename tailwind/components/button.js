@@ -4,7 +4,7 @@ const { reduceStyles } = require('../utils/styling');
 
 module.exports = ({ colors }) => ({
   '.velvet-button': {
-    '@apply border-2 border-transparent font-medium': {},
+    '@apply border border-transparent font-medium': {},
     '@apply inline-flex items-center': {},
     '@apply outline-none transition': {},
 

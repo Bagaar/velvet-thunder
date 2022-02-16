@@ -4,7 +4,7 @@ const { reduceStyles } = require('../utils/styling');
 
 module.exports = ({ colors }) => ({
   '.velvet-input': {
-    '@apply bg-transparent border-2 border-gray-400/20 font-medium': {},
+    '@apply bg-transparent border border-gray-400/20 font-medium': {},
     '@apply outline-none transition': {},
 
     '&:focus': reduceStyles(colors, (color) => ({
@@ -35,10 +35,6 @@ module.exports = ({ colors }) => ({
 
     '&-invalid': {
       '@apply border-red-400': {},
-
-      '&:focus': {
-        '@apply border-gray-400/20': {},
-      },
     },
   },
 });
