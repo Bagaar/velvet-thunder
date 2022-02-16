@@ -79,7 +79,7 @@ module.exports = ({ colors }) => ({
         [`@apply text-${color}-400`]: {},
 
         '&:hover': {
-          [`@apply bg-${color}-400/25`]: {},
+          [`@apply bg-${color}-400/25 text-${color}-500`]: {},
         },
 
         '&.velvet-button-disabled': {
