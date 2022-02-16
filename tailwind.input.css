@@ -28,7 +28,7 @@ pre {
 }
 
 .docfy-demo__description__header {
-  @apply flex justify-between;
+  @apply flex items-start justify-between;
 }
 
 .docfy-demo__description__header__title {
@@ -37,7 +37,7 @@ pre {
 
 .docfy-demo__description__header__edit-url,
 .docfy-demo__snippets__tabs__button {
-  @apply text-slate-500 text-sm transition-colors;
+  @apply text-slate-500 text-sm transition;
   @apply dark:text-slate-400;
 }
 
@@ -50,6 +50,11 @@ pre {
 .docfy-demo__snippets__tabs__button--active {
   @apply text-slate-900;
   @apply dark:text-white;
+}
+
+.docfy-demo__description__header__edit-url:focus,
+.docfy-demo__snippets__tabs__button:focus {
+  @apply outline-none ring;
 }
 
 .docfy-demo__description__content :last-child {
