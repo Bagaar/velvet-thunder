@@ -6,7 +6,15 @@ import { module, test } from 'qunit';
 module('Integration | Component | velvet-button', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function (assert) {
+  test('it renders the correct base class', async function (assert) {
+    await render(hbs`
+      <VelvetButton />
+    `);
+
+    assert.dom('.velvet-button').exists();
+  });
+
+  test('it renders the yielded content', async function (assert) {
     await render(hbs`
       <VelvetButton />
     `);
@@ -126,16 +134,16 @@ module('Integration | Component | velvet-button', function (hooks) {
     assert.dom('button').hasAttribute('type', 'submit');
   });
 
-  test('it handles click events', async function (assert) {
-    this.isClicked = false;
+  test('it handles `click` events', async function (assert) {
+    this.onClick = () => assert.step('clicked');
 
     await render(hbs`
-      <VelvetButton @onClick={{fn (mut this.isClicked) true}} />
+      <VelvetButton @onClick={{this.onClick}} />
     `);
 
     await click('button');
 
-    assert.true(this.isClicked);
+    assert.verifySteps(['clicked']);
   });
 
   test('renderless', async function (assert) {
@@ -148,13 +156,13 @@ module('Integration | Component | velvet-button', function (hooks) {
     assert.dom('button').doesNotExist();
 
     assert
-      .dom(this.element)
+      .dom()
       .hasText(
         'velvet-button velvet-button-primary velvet-button-md velvet-button-solid'
       );
   });
 
-  test('...attributes works', async function (assert) {
+  test('`...attributes` works', async function (assert) {
     await render(hbs`
       <VelvetButton class="mr-2" />
     `);
