@@ -4,8 +4,8 @@
 
 /* Code Blocks */
 
-pre[class*="language-"] {
-  @apply bg-slate-900 border border-slate-900 m-0 p-4 rounded-xl;
+pre {
+  @apply bg-slate-900 border border-slate-900 p-4 rounded-xl text-[0.875rem];
   @apply dark:bg-slate-800/50 dark:border-slate-800;
 }
 
@@ -16,6 +16,10 @@ pre[class*="language-"] {
   @apply dark:border-slate-800;
 }
 
+.docfy-demo + .docfy-demo {
+  @apply mt-8;
+}
+
 .docfy-demo__description,
 .docfy-demo__example,
 .docfy-demo__snippets__tabs {
@@ -24,7 +28,7 @@ pre[class*="language-"] {
 }
 
 .docfy-demo__description__header {
-  @apply flex justify-between;
+  @apply flex items-start justify-between;
 }
 
 .docfy-demo__description__header__title {
@@ -33,7 +37,7 @@ pre[class*="language-"] {
 
 .docfy-demo__description__header__edit-url,
 .docfy-demo__snippets__tabs__button {
-  @apply text-slate-500 text-sm transition-colors;
+  @apply text-slate-500 text-sm transition;
   @apply dark:text-slate-400;
 }
 
@@ -48,6 +52,11 @@ pre[class*="language-"] {
   @apply dark:text-white;
 }
 
+.docfy-demo__description__header__edit-url:focus,
+.docfy-demo__snippets__tabs__button:focus {
+  @apply outline-none ring;
+}
+
 .docfy-demo__description__content :last-child {
   @apply mb-0;
 }
@@ -56,27 +65,30 @@ pre[class*="language-"] {
   @apply flex space-x-4;
 }
 
-.docfy-demo__snippet pre[class*="language-"] {
+.docfy-demo__snippet pre {
   @apply border-none rounded-none;
 }
 
 /* Tailwind Typography */
 
-.prose p code,
-.prose table code {
+.prose :where(code):not(:where([class~='not-prose'] *)) {
   @apply bg-slate-100 px-1 py-0.5 rounded;
-  @apply dark:bg-slate-800;
+  @apply dark:bg-slate-800/50;
 }
 
-.prose p code::after,
-.prose p code::before,
-.prose table code::after,
-.prose table code::before {
-  content: '';
+.prose :where(code):not(:where([class~='not-prose'] *))::after,
+.prose :where(code):not(:where([class~='not-prose'] *))::before {
+  @apply content-none;
 }
 
-.prose table thead,
-.prose table tbody tr {
+.prose :where(thead):not(:where([class~='not-prose'] *)),
+.prose :where(tbody tr):not(:where([class~='not-prose'] *)) {
   @apply border-slate-100;
   @apply dark:border-slate-800;
+}
+
+/* Highlight.js */
+
+.hljs {
+  @apply bg-transparent;
 }

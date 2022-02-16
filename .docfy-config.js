@@ -1,7 +1,8 @@
 'use strict';
 
-const rehypePrism = require('@mapbox/rehype-prism');
 const rehypeAutolinkHeadings = require('rehype-autolink-headings');
+const rehypeHighlight = require('rehype-highlight');
+const rehypeWrapAll = require('rehype-wrap-all');
 
 module.exports = {
   rehypePlugins: [
@@ -11,11 +12,17 @@ module.exports = {
         behavior: 'wrap',
       },
     ],
-    rehypePrism,
+    [
+      rehypeWrapAll,
+      [
+        {
+          selector: 'pre',
+          wrapper: 'div.not-prose',
+        },
+      ],
+    ],
+    rehypeHighlight,
   ],
-  remarkHbsOptions: {
-    escapeCurliesCode: false,
-  },
   repository: {
     editBranch: 'main',
     url: 'https://github.com/Bagaar/velvet-thunder',

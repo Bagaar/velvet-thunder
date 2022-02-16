@@ -1,9 +1,11 @@
 # Handling Click Events
 
-Use the `@onClick` argument to handle click events.
+Use the `@onClick` argument to handle `click` events.
 
 ```hbs template
-<VelvetButton @onClick={{this.onClick}}>Click Me!</VelvetButton>
+<VelvetButton @onClick={{this.onClick}}>
+  Click Me!
+</VelvetButton>
 ```
 
 ```js component

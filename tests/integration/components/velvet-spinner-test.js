@@ -6,7 +6,7 @@ import { module, test } from 'qunit';
 module('Integration | Component | velvet-spinner', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function (assert) {
+  test('it renders the correct base class', async function (assert) {
     await render(hbs`
       <VelvetSpinner />
     `);
@@ -36,7 +36,7 @@ module('Integration | Component | velvet-spinner', function (hooks) {
     assert.dom('.velvet-spinner').hasClass('velvet-spinner-lg');
   });
 
-  test('...attributes works', async function (assert) {
+  test('`...attributes` works', async function (assert) {
     await render(hbs`
       <VelvetSpinner class="mr-2" />
     `);

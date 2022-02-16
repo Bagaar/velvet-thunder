@@ -1,9 +1,14 @@
 <DocfyLink
-  @activeClass="bg-slate-900 text-white hover:text-white dark:bg-slate-800"
+  @activeClass={{-velvet/class-list
+    "bg-slate-900 text-white"
+    "dark:bg-slate-800/50 dark:border-slate-800"
+    "hover:text-white"
+  }}
   @to={{@page.url}}
   class={{-velvet/class-list
-    "block px-4 py-2 rounded-full text-sm transition-colors"
+    "block border border-transparent px-4 py-2 rounded-full text-sm transition"
     "hover:text-slate-900 dark:hover:text-white"
+    "focus:outline-none focus:ring"
   }}
   ...attributes
 >
