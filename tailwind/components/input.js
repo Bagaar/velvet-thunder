@@ -9,7 +9,7 @@ module.exports = ({ colors }) => ({
 
     '&:focus': reduceStyles(colors, (color) => ({
       [`&.velvet-input-${color}`]: {
-        [`@apply ring ring-${color}-400/50`]: {},
+        [`@apply border-${color}-400 ring ring-${color}-400/50`]: {},
       },
     })),
 
