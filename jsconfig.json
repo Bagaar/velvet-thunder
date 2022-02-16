@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "experimentalDecorators": true,
+    "paths": {
+      "velvet-thunder/*": ["./addon/*"]
+    },
+    "target": "es6"
+  },
+  "exclude": [".git", ".github", ".husky", "dist", "node_modules", "vendor"]
+}
