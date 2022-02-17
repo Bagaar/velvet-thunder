@@ -42,9 +42,7 @@ const velvetThunderContent = require('velvet-thunder/tailwind/content');
 const velvetThunderPlugin = require('velvet-thunder/tailwind/plugin');
 
 module.exports = {
-  content: [
-    ...velvetThunderContent(),
-  ],
+  content: [...velvetThunderContent()],
   plugins: [
     tailwindFormsPlugin({
       strategy: 'class',
