@@ -3,6 +3,8 @@ import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
+const SELECTOR = '.velvet-spinner';
+
 module('Integration | Component | velvet-spinner', function (hooks) {
   setupRenderingTest(hooks);
 
@@ -11,7 +13,7 @@ module('Integration | Component | velvet-spinner', function (hooks) {
       <VelvetSpinner />
     `);
 
-    assert.dom('.velvet-spinner').exists();
+    assert.dom(SELECTOR).exists();
   });
 
   test('it renders the correct color', async function (assert) {
@@ -19,7 +21,7 @@ module('Integration | Component | velvet-spinner', function (hooks) {
       <VelvetSpinner @color="primary" />
     `);
 
-    assert.dom('.velvet-spinner').hasClass('velvet-spinner-primary');
+    assert.dom(SELECTOR).hasClass('velvet-spinner-primary');
   });
 
   test('it renders the correct size', async function (assert) {
@@ -27,13 +29,13 @@ module('Integration | Component | velvet-spinner', function (hooks) {
       <VelvetSpinner />
     `);
 
-    assert.dom('.velvet-spinner').hasClass('velvet-spinner-md');
+    assert.dom(SELECTOR).hasClass('velvet-spinner-md');
 
     await render(hbs`
       <VelvetSpinner @size="lg" />
     `);
 
-    assert.dom('.velvet-spinner').hasClass('velvet-spinner-lg');
+    assert.dom(SELECTOR).hasClass('velvet-spinner-lg');
   });
 
   test('`...attributes` works', async function (assert) {
@@ -41,6 +43,6 @@ module('Integration | Component | velvet-spinner', function (hooks) {
       <VelvetSpinner class="mr-2" />
     `);
 
-    assert.dom('.velvet-spinner').hasClass('mr-2');
+    assert.dom(SELECTOR).hasClass('mr-2');
   });
 });
