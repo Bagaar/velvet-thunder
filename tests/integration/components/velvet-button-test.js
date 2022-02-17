@@ -3,6 +3,8 @@ import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
+const SELECTOR = 'button[type="button"]';
+
 module('Integration | Component | velvet-button', function (hooks) {
   setupRenderingTest(hooks);
 
@@ -11,7 +13,7 @@ module('Integration | Component | velvet-button', function (hooks) {
       <VelvetButton />
     `);
 
-    assert.dom('.velvet-button').exists();
+    assert.dom(SELECTOR).exists();
   });
 
   test('it renders the yielded content', async function (assert) {
@@ -19,7 +21,7 @@ module('Integration | Component | velvet-button', function (hooks) {
       <VelvetButton />
     `);
 
-    assert.dom('button').hasNoText();
+    assert.dom(SELECTOR).hasNoText();
 
     await render(hbs`
       <VelvetButton>
@@ -27,7 +29,7 @@ module('Integration | Component | velvet-button', function (hooks) {
       </VelvetButton>
     `);
 
-    assert.dom('button').hasText('Text');
+    assert.dom(SELECTOR).hasText('Text');
   });
 
   test('it renders the correct color', async function (assert) {
@@ -35,13 +37,13 @@ module('Integration | Component | velvet-button', function (hooks) {
       <VelvetButton />
     `);
 
-    assert.dom('button').hasClass('velvet-button-primary');
+    assert.dom(SELECTOR).hasClass('velvet-button-primary');
 
     await render(hbs`
       <VelvetButton @color="red" />
     `);
 
-    assert.dom('button').hasClass('velvet-button-red');
+    assert.dom(SELECTOR).hasClass('velvet-button-red');
   });
 
   test('it renders the correct size', async function (assert) {
@@ -49,13 +51,13 @@ module('Integration | Component | velvet-button', function (hooks) {
       <VelvetButton />
     `);
 
-    assert.dom('button').hasClass('velvet-button-md');
+    assert.dom(SELECTOR).hasClass('velvet-button-md');
 
     await render(hbs`
       <VelvetButton @size="lg" />
     `);
 
-    assert.dom('button').hasClass('velvet-button-lg');
+    assert.dom(SELECTOR).hasClass('velvet-button-lg');
   });
 
   test('it renders the correct variant', async function (assert) {
@@ -63,13 +65,13 @@ module('Integration | Component | velvet-button', function (hooks) {
       <VelvetButton />
     `);
 
-    assert.dom('button').hasClass('velvet-button-solid');
+    assert.dom(SELECTOR).hasClass('velvet-button-solid');
 
     await render(hbs`
       <VelvetButton @variant="outline" />
     `);
 
-    assert.dom('button').hasClass('velvet-button-outline');
+    assert.dom(SELECTOR).hasClass('velvet-button-outline');
   });
 
   test('it renders a disabled button', async function (assert) {
@@ -77,19 +79,13 @@ module('Integration | Component | velvet-button', function (hooks) {
       <VelvetButton />
     `);
 
-    assert
-      .dom('button')
-      .doesNotHaveAttribute('disabled')
-      .doesNotHaveClass('velvet-button-disabled');
+    assert.dom(SELECTOR).doesNotHaveAttribute('disabled');
 
     await render(hbs`
       <VelvetButton @isDisabled={{true}} />
     `);
 
-    assert
-      .dom('button')
-      .hasAttribute('disabled')
-      .hasClass('velvet-button-disabled');
+    assert.dom(SELECTOR).hasAttribute('disabled');
   });
 
   test('it renders a loading state', async function (assert) {
@@ -111,13 +107,13 @@ module('Integration | Component | velvet-button', function (hooks) {
       <VelvetButton />
     `);
 
-    assert.dom('button').doesNotHaveClass('velvet-button-rounded');
+    assert.dom(SELECTOR).doesNotHaveClass('velvet-button-rounded');
 
     await render(hbs`
       <VelvetButton @isRounded={{true}} />
     `);
 
-    assert.dom('button').hasClass('velvet-button-rounded');
+    assert.dom(SELECTOR).hasClass('velvet-button-rounded');
   });
 
   test('it renders the correct type', async function (assert) {
@@ -125,13 +121,13 @@ module('Integration | Component | velvet-button', function (hooks) {
       <VelvetButton />
     `);
 
-    assert.dom('button').hasAttribute('type', 'button');
+    assert.dom(SELECTOR).exists();
 
     await render(hbs`
       <VelvetButton @type="submit" />
     `);
 
-    assert.dom('button').hasAttribute('type', 'submit');
+    assert.dom('button[type="submit"]').exists();
   });
 
   test('it handles `click` events', async function (assert) {
@@ -141,7 +137,7 @@ module('Integration | Component | velvet-button', function (hooks) {
       <VelvetButton @onClick={{this.onClick}} />
     `);
 
-    await click('button');
+    await click(SELECTOR);
 
     assert.verifySteps(['clicked']);
   });
@@ -153,7 +149,7 @@ module('Integration | Component | velvet-button', function (hooks) {
       </VelvetButton>
     `);
 
-    assert.dom('button').doesNotExist();
+    assert.dom(SELECTOR).doesNotExist();
 
     assert
       .dom()
@@ -167,6 +163,6 @@ module('Integration | Component | velvet-button', function (hooks) {
       <VelvetButton class="mr-2" />
     `);
 
-    assert.dom('button').hasClass('mr-2');
+    assert.dom(SELECTOR).hasClass('mr-2');
   });
 });

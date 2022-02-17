@@ -53,6 +53,7 @@
     "@embroider/test-setup": "^1.2.0",
     "@glimmer/component": "^1.0.4",
     "@glimmer/tracking": "^1.0.4",
+    "@tailwindcss/forms": "^0.4.0",
     "@tailwindcss/typography": "^0.5.2",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
@@ -94,6 +95,7 @@
     "webpack": "^5.68.0"
   },
   "peerDependencies": {
+    "@tailwindcss/forms": "^0.4.0",
     "tailwindcss": "^3.0.0"
   },
   "engines": {

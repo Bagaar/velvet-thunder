@@ -1,16 +1,17 @@
-{{#let (helper "-velvet/class" "velvet-textarea") as |class|}}
-  <textarea
+{{#let (helper "-velvet/class" "velvet-checkbox") as |class|}}
+  <input
+    checked={{@isChecked}}
     class={{-velvet/class-list
-      "form-textarea"
+      "form-checkbox"
       (class)
       (class (or @color "primary"))
       (class (or @size "md"))
       (if @isInvalid (class "invalid"))
     }}
     disabled={{@isDisabled}}
-    value={{@value}}
+    indeterminate={{@isIndeterminate}}
+    type="checkbox"
     {{(if (and @onChange (not @isDisabled)) (modifier this.on "change" (fn this.invokeHandler @onChange)))}}
-    {{(if (and @onInput (not @isDisabled)) (modifier this.on "input" (fn this.invokeHandler @onInput)))}}
     ...attributes
-  />
+  >
 {{/let}}

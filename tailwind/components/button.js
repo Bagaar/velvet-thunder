@@ -4,17 +4,20 @@ const { reduceStyles } = require('../utils/styling');
 
 module.exports = ({ colors }) => ({
   '.velvet-button': {
-    '@apply border-2 border-transparent font-medium': {},
-    '@apply inline-flex items-center': {},
-    '@apply outline-none transition': {},
+    '@apply border border-transparent font-medium': {},
+    '@apply inline-flex items-center transition': {},
 
-    '&:focus': reduceStyles(colors, (color) => ({
-      [`&.velvet-button-${color}`]: {
-        [`@apply ring ring-${color}-400/50`]: {},
-      },
-    })),
+    '&:focus': {
+      '@apply outline-none ring': {},
 
-    '&-disabled': {
+      ...reduceStyles(colors, (color) => ({
+        [`&.velvet-button-${color}`]: {
+          [`@apply ring-${color}-400/40`]: {},
+        },
+      })),
+    },
+
+    '&:disabled': {
       '@apply cursor-not-allowed': {},
     },
 
@@ -46,46 +49,52 @@ module.exports = ({ colors }) => ({
       '@apply rounded-full': {},
     },
 
-    '&-solid': reduceStyles(colors, (color) => ({
-      [`&.velvet-button-${color}`]: {
-        [`@apply bg-${color}-400 text-white`]: {},
+    '&-solid': {
+      ...reduceStyles(colors, (color) => ({
+        [`&.velvet-button-${color}`]: {
+          [`@apply bg-${color}-400 text-white`]: {},
 
-        '&:hover': {
-          [`@apply bg-${color}-500`]: {},
+          '&:hover': {
+            [`@apply bg-${color}-500`]: {},
+          },
+
+          '&:disabled': {
+            [`@apply bg-${color}-300`]: {},
+          },
         },
+      })),
+    },
 
-        '&.velvet-button-disabled': {
-          [`@apply bg-${color}-300`]: {},
+    '&-outline': {
+      ...reduceStyles(colors, (color) => ({
+        [`&.velvet-button-${color}`]: {
+          [`@apply border-${color}-400 text-${color}-400`]: {},
+
+          '&:hover': {
+            [`@apply border-${color}-500 text-${color}-500`]: {},
+          },
+
+          '&:disabled': {
+            [`@apply border-${color}-300 text-${color}-300`]: {},
+          },
         },
-      },
-    })),
+      })),
+    },
 
-    '&-outline': reduceStyles(colors, (color) => ({
-      [`&.velvet-button-${color}`]: {
-        [`@apply border-${color}-400 text-${color}-400`]: {},
+    '&-ghost': {
+      ...reduceStyles(colors, (color) => ({
+        [`&.velvet-button-${color}`]: {
+          [`@apply text-${color}-400`]: {},
 
-        '&:hover': {
-          [`@apply border-${color}-500 text-${color}-500`]: {},
+          '&:hover': {
+            [`@apply bg-${color}-400/20 text-${color}-500`]: {},
+          },
+
+          '&:disabled': {
+            [`@apply bg-transparent text-${color}-300`]: {},
+          },
         },
-
-        '&.velvet-button-disabled': {
-          [`@apply border-${color}-300 text-${color}-300`]: {},
-        },
-      },
-    })),
-
-    '&-ghost': reduceStyles(colors, (color) => ({
-      [`&.velvet-button-${color}`]: {
-        [`@apply text-${color}-400`]: {},
-
-        '&:hover': {
-          [`@apply bg-${color}-400/25`]: {},
-        },
-
-        '&.velvet-button-disabled': {
-          [`@apply bg-transparent text-${color}-300`]: {},
-        },
-      },
-    })),
+      })),
+    },
   },
 });

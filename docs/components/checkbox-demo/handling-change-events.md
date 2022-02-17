@@ -3,10 +3,8 @@
 Use the `@onChange` argument to handle `change` events.
 
 ```hbs template
-<DocsSpaceY>
-  <div>Value: "{{this.value}}"</div>
-  <VelvetTextarea @onChange={{this.onChange}} @value={{this.value}} />
-</DocsSpaceY>
+<div>Checked: "{{this.isChecked}}"</div>
+<VelvetCheckbox @isChecked={{this.isChecked}} @onChange={{this.onChange}} />
 ```
 
 ```js component
@@ -15,11 +13,11 @@ import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 
 export default class DemoComponent extends Component {
-  @tracked value = '';
+  @tracked isChecked = false;
 
   @action
-  onChange(value) {
-    this.value = value;
+  onChange(isChecked) {
+    this.isChecked = isChecked;
   }
 }
 ```

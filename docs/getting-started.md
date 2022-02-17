@@ -9,25 +9,25 @@ order: 2
 ### Ember
 
 ```shell
-ember install velvet-thunder tailwindcss
+ember install velvet-thunder tailwindcss @tailwindcss/forms
 ```
 
 ### Yarn
 
 ```shell
-yarn add velvet-thunder tailwindcss --dev
+yarn add velvet-thunder tailwindcss @tailwindcss/forms --dev
 ```
 
 ### npm
 
 ```shell
-npm install velvet-thunder tailwindcss --save-dev
+npm install velvet-thunder tailwindcss @tailwindcss/forms --save-dev
 ```
 
 ### pnpm
 
 ```shell
-pnpm install velvet-thunder tailwindcss --dev
+pnpm install velvet-thunder tailwindcss @tailwindcss/forms --dev
 ```
 
 ## Configuration
@@ -37,10 +37,16 @@ pnpm install velvet-thunder tailwindcss --dev
 
 'use strict';
 
+const tailwindFormsPlugin = require('@tailwindcss/forms');
+const velvetThunderContent = require('velvet-thunder/tailwind/content');
 const velvetThunderPlugin = require('velvet-thunder/tailwind/plugin');
 
 module.exports = {
+  content: [...velvetThunderContent()],
   plugins: [
+    tailwindFormsPlugin({
+      strategy: 'class',
+    }),
     velvetThunderPlugin({
       colors: ['green', 'orange', 'primary', 'red'],
     }),

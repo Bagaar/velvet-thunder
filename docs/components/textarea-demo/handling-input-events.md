@@ -1,4 +1,4 @@
-# Handling Input Events
+# Handle Input Events
 
 Use the `@onInput` argument to handle `input` events.
 

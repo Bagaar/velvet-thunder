@@ -1,4 +1,4 @@
-# Handling Click Events
+# Handle Click Events
 
 Use the `@onClick` argument to handle `click` events.
 

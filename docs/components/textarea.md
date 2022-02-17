@@ -2,15 +2,15 @@
 
 ## Arguments
 
-| Name          | Description                            | Default Value |
-| ------------- | -------------------------------------- | ------------- |
-| `@color`      | The ring color of the textarea.        | `"primary"`   |
-| `@isDisabled` | Indicates if the textarea is disabled. | `false`       |
-| `@isInvalid`  | Indicates if the textarea is invalid.  | `false`       |
-| `@onChange`   | Handle the textarea's `change` event.  | `undefined`   |
-| `@onInput`    | Handle the textarea's `input` event.   | `undefined`   |
-| `@size`       | The size of the textarea.              | `"md"`        |
-| `@value`      | The value of the textarea.             | `undefined`   |
+| Name          | Description                           | Default Value |
+| ------------- | ------------------------------------- | ------------- |
+| `@color`      | The ring color of the textarea.       | `"primary"`   |
+| `@isDisabled` | Indicate if the textarea is disabled. | `undefined`   |
+| `@isInvalid`  | Indicate if the textarea is invalid.  | `undefined`   |
+| `@onChange`   | Handle the textarea's `change` event. | `undefined`   |
+| `@onInput`    | Handle the textarea's `input` event.  | `undefined`   |
+| `@size`       | The size of the textarea.             | `"md"`        |
+| `@value`      | The value of the textarea.            | `undefined`   |
 
 ## Colors
 

@@ -3,15 +3,17 @@ import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
+const SELECTOR = 'input[type="text"]';
+
 module('Integration | Component | velvet-input', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders the correct base class', async function (assert) {
+  test('it renders the correct base classes', async function (assert) {
     await render(hbs`
       <VelvetInput />
     `);
 
-    assert.dom('.velvet-input').exists();
+    assert.dom(SELECTOR).hasClass('form-input').hasClass('velvet-input');
   });
 
   test('it renders the correct color', async function (assert) {
@@ -19,13 +21,13 @@ module('Integration | Component | velvet-input', function (hooks) {
       <VelvetInput />
     `);
 
-    assert.dom('input').hasClass('velvet-input-primary');
+    assert.dom(SELECTOR).hasClass('velvet-input-primary');
 
     await render(hbs`
       <VelvetInput @color="red" />
     `);
 
-    assert.dom('input').hasClass('velvet-input-red');
+    assert.dom(SELECTOR).hasClass('velvet-input-red');
   });
 
   test('it renders a disabled input', async function (assert) {
@@ -33,19 +35,13 @@ module('Integration | Component | velvet-input', function (hooks) {
       <VelvetInput />
     `);
 
-    assert
-      .dom('input')
-      .doesNotHaveAttribute('disabled')
-      .doesNotHaveClass('velvet-input-disabled');
+    assert.dom(SELECTOR).doesNotHaveAttribute('disabled');
 
     await render(hbs`
       <VelvetInput @isDisabled={{true}} />
     `);
 
-    assert
-      .dom('input')
-      .hasAttribute('disabled')
-      .hasClass('velvet-input-disabled');
+    assert.dom(SELECTOR).hasAttribute('disabled');
   });
 
   test('it renders an invalid input', async function (assert) {
@@ -53,13 +49,13 @@ module('Integration | Component | velvet-input', function (hooks) {
       <VelvetInput />
     `);
 
-    assert.dom('input').doesNotHaveClass('velvet-input-invalid');
+    assert.dom(SELECTOR).doesNotHaveClass('velvet-input-invalid');
 
     await render(hbs`
       <VelvetInput @isInvalid={{true}} />
     `);
 
-    assert.dom('input').hasClass('velvet-input-invalid');
+    assert.dom(SELECTOR).hasClass('velvet-input-invalid');
   });
 
   test('it renders a rounded input', async function (assert) {
@@ -67,13 +63,13 @@ module('Integration | Component | velvet-input', function (hooks) {
       <VelvetInput />
     `);
 
-    assert.dom('input').doesNotHaveClass('velvet-input-rounded');
+    assert.dom(SELECTOR).doesNotHaveClass('velvet-input-rounded');
 
     await render(hbs`
       <VelvetInput @isRounded={{true}} />
     `);
 
-    assert.dom('input').hasClass('velvet-input-rounded');
+    assert.dom(SELECTOR).hasClass('velvet-input-rounded');
   });
 
   test('it handles `change` events', async function (assert) {
@@ -83,7 +79,7 @@ module('Integration | Component | velvet-input', function (hooks) {
       <VelvetInput @onChange={{this.onChange}} />
     `);
 
-    await typeIn('input', 'foo');
+    await typeIn(SELECTOR, 'foo', { delay: 0 });
 
     assert.verifySteps(['foo']);
   });
@@ -95,7 +91,7 @@ module('Integration | Component | velvet-input', function (hooks) {
       <VelvetInput @onInput={{this.onInput}} />
     `);
 
-    await typeIn('input', 'foo');
+    await typeIn(SELECTOR, 'foo', { delay: 0 });
 
     assert.verifySteps(['f', 'fo', 'foo']);
   });
@@ -105,13 +101,13 @@ module('Integration | Component | velvet-input', function (hooks) {
       <VelvetInput />
     `);
 
-    assert.dom('input').hasClass('velvet-input-md');
+    assert.dom(SELECTOR).hasClass('velvet-input-md');
 
     await render(hbs`
       <VelvetInput @size="lg" />
     `);
 
-    assert.dom('input').hasClass('velvet-input-lg');
+    assert.dom(SELECTOR).hasClass('velvet-input-lg');
   });
 
   test('it renders the correct type', async function (assert) {
@@ -119,13 +115,13 @@ module('Integration | Component | velvet-input', function (hooks) {
       <VelvetInput />
     `);
 
-    assert.dom('input').hasAttribute('type', 'text');
+    assert.dom(SELECTOR).exists();
 
     await render(hbs`
       <VelvetInput @type="number" />
     `);
 
-    assert.dom('input').hasAttribute('type', 'number');
+    assert.dom('input[type="number"]').exists();
   });
 
   test('it renders the correct value', async function (assert) {
@@ -133,13 +129,13 @@ module('Integration | Component | velvet-input', function (hooks) {
       <VelvetInput />
     `);
 
-    assert.dom('input').hasNoValue();
+    assert.dom(SELECTOR).hasNoValue();
 
     await render(hbs`
       <VelvetInput @value="foo" />
     `);
 
-    assert.dom('input').hasValue('foo');
+    assert.dom(SELECTOR).hasValue('foo');
   });
 
   test('`...attributes` works', async function (assert) {
@@ -147,6 +143,6 @@ module('Integration | Component | velvet-input', function (hooks) {
       <VelvetInput class="mr-2" />
     `);
 
-    assert.dom('input').hasClass('mr-2');
+    assert.dom(SELECTOR).hasClass('mr-2');
   });
 });
