@@ -5,7 +5,7 @@ import { module, test } from 'qunit';
 
 const SELECTOR = 'select';
 
-module('Integration | Component | velvet-select', function(hooks) {
+module('Integration | Component | velvet-select', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders the correct base classes', async function (assert) {
@@ -112,7 +112,7 @@ module('Integration | Component | velvet-select', function(hooks) {
     assert.dom(SELECTOR).hasValue('option-2');
   });
 
-  test('it renders a placeholder', async function(assert) {
+  test('it renders a placeholder', async function (assert) {
     await render(hbs`
       <VelvetSelect @placeholder="Select an Option" as |select|>
         <select.Option @value="option-1" />
@@ -120,10 +120,7 @@ module('Integration | Component | velvet-select', function(hooks) {
       </VelvetSelect>
     `);
 
-    assert
-      .dom('option')
-      .hasText('Select an Option')
-      .isDisabled();
+    assert.dom('option').hasText('Select an Option').isDisabled();
   });
 
   test('`...attributes` works', async function (assert) {
