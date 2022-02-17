@@ -4,8 +4,8 @@ const { reduceStyles } = require('../utils/styling');
 
 module.exports = ({ colors }) => ({
   '.velvet-textarea': {
-    '@apply bg-transparent border border-gray-400/20': {},
-    '@apply font-medium transition': {},
+    '@apply bg-transparent border-gray-400/20': {},
+    '@apply font-medium transition w-full': {},
 
     '&:hover': {
       '@apply border-gray-400/40': {},
