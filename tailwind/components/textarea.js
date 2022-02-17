@@ -4,16 +4,24 @@ const { reduceStyles } = require('../utils/styling');
 
 module.exports = ({ colors }) => ({
   '.velvet-textarea': {
-    '@apply bg-transparent border border-gray-400/20 font-medium': {},
-    '@apply outline-none transition': {},
+    '@apply bg-transparent border border-gray-400/20': {},
+    '@apply font-medium transition': {},
 
-    '&:focus': reduceStyles(colors, (color) => ({
-      [`&.velvet-textarea-${color}`]: {
-        [`@apply border-${color}-400 ring ring-${color}-400/50`]: {},
-      },
-    })),
+    '&:hover': {
+      '@apply border-gray-400/40': {},
+    },
 
-    '&-disabled': {
+    '&:focus': {
+      '@apply ring': {},
+
+      ...reduceStyles(colors, (color) => ({
+        [`&.velvet-textarea-${color}`]: {
+          [`@apply border-${color}-400 ring-${color}-400/40`]: {},
+        },
+      })),
+    },
+
+    '&:disabled': {
       '@apply border-gray-400/10 cursor-not-allowed': {},
     },
 

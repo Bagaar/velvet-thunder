@@ -3,15 +3,17 @@ import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
+const SELECTOR = 'textarea';
+
 module('Integration | Component | velvet-textarea', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders the correct base class', async function (assert) {
+  test('it renders the correct base classes', async function (assert) {
     await render(hbs`
       <VelvetTextarea />
     `);
 
-    assert.dom('.velvet-textarea').exists();
+    assert.dom(SELECTOR).hasClass('form-textarea').hasClass('velvet-textarea');
   });
 
   test('it renders the correct color', async function (assert) {
@@ -19,13 +21,13 @@ module('Integration | Component | velvet-textarea', function (hooks) {
       <VelvetTextarea />
     `);
 
-    assert.dom('textarea').hasClass('velvet-textarea-primary');
+    assert.dom(SELECTOR).hasClass('velvet-textarea-primary');
 
     await render(hbs`
       <VelvetTextarea @color="red" />
     `);
 
-    assert.dom('textarea').hasClass('velvet-textarea-red');
+    assert.dom(SELECTOR).hasClass('velvet-textarea-red');
   });
 
   test('it renders a disabled textarea', async function (assert) {
@@ -33,19 +35,13 @@ module('Integration | Component | velvet-textarea', function (hooks) {
       <VelvetTextarea />
     `);
 
-    assert
-      .dom('textarea')
-      .doesNotHaveAttribute('disabled')
-      .doesNotHaveClass('velvet-textarea-disabled');
+    assert.dom(SELECTOR).doesNotHaveAttribute('disabled');
 
     await render(hbs`
       <VelvetTextarea @isDisabled={{true}} />
     `);
 
-    assert
-      .dom('textarea')
-      .hasAttribute('disabled')
-      .hasClass('velvet-textarea-disabled');
+    assert.dom(SELECTOR).hasAttribute('disabled');
   });
 
   test('it renders an invalid textarea', async function (assert) {
@@ -53,13 +49,13 @@ module('Integration | Component | velvet-textarea', function (hooks) {
       <VelvetTextarea />
     `);
 
-    assert.dom('textarea').doesNotHaveClass('velvet-textarea-invalid');
+    assert.dom(SELECTOR).doesNotHaveClass('velvet-textarea-invalid');
 
     await render(hbs`
       <VelvetTextarea @isInvalid={{true}} />
     `);
 
-    assert.dom('textarea').hasClass('velvet-textarea-invalid');
+    assert.dom(SELECTOR).hasClass('velvet-textarea-invalid');
   });
 
   test('it handles `change` events', async function (assert) {
@@ -69,7 +65,7 @@ module('Integration | Component | velvet-textarea', function (hooks) {
       <VelvetTextarea @onChange={{this.onChange}} />
     `);
 
-    await typeIn('textarea', 'foo', { delay: 0 });
+    await typeIn(SELECTOR, 'foo', { delay: 0 });
 
     assert.verifySteps(['foo']);
   });
@@ -81,7 +77,7 @@ module('Integration | Component | velvet-textarea', function (hooks) {
       <VelvetTextarea @onInput={{this.onInput}} />
     `);
 
-    await typeIn('textarea', 'foo', { delay: 0 });
+    await typeIn(SELECTOR, 'foo', { delay: 0 });
 
     assert.verifySteps(['f', 'fo', 'foo']);
   });
@@ -91,13 +87,13 @@ module('Integration | Component | velvet-textarea', function (hooks) {
       <VelvetTextarea />
     `);
 
-    assert.dom('textarea').hasClass('velvet-textarea-md');
+    assert.dom(SELECTOR).hasClass('velvet-textarea-md');
 
     await render(hbs`
       <VelvetTextarea @size="lg" />
     `);
 
-    assert.dom('textarea').hasClass('velvet-textarea-lg');
+    assert.dom(SELECTOR).hasClass('velvet-textarea-lg');
   });
 
   test('it renders the correct value', async function (assert) {
@@ -105,13 +101,13 @@ module('Integration | Component | velvet-textarea', function (hooks) {
       <VelvetTextarea />
     `);
 
-    assert.dom('textarea').hasNoValue();
+    assert.dom(SELECTOR).hasNoValue();
 
     await render(hbs`
       <VelvetTextarea @value="foo" />
     `);
 
-    assert.dom('textarea').hasValue('foo');
+    assert.dom(SELECTOR).hasValue('foo');
   });
 
   test('`...attributes` works', async function (assert) {
@@ -119,6 +115,6 @@ module('Integration | Component | velvet-textarea', function (hooks) {
       <VelvetTextarea class="mr-2" />
     `);
 
-    assert.dom('textarea').hasClass('mr-2');
+    assert.dom(SELECTOR).hasClass('mr-2');
   });
 });
