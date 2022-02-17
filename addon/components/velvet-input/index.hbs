@@ -5,15 +5,14 @@
       (class)
       (class (or @color "primary"))
       (class (or @size "md"))
-      (if @isDisabled (class "disabled"))
       (if @isInvalid (class "invalid"))
       (if @isRounded (class "rounded"))
     }}
     disabled={{@isDisabled}}
     type={{or @type "text"}}
     value={{@value}}
-    {{(if @onChange (modifier this.on "change" (fn this.invokeHandler @onChange)))}}
-    {{(if @onInput (modifier this.on "input" (fn this.invokeHandler @onInput)))}}
+    {{(if (and @onChange (not @isDisabled)) (modifier this.on "change" (fn this.invokeHandler @onChange)))}}
+    {{(if (and @onInput (not @isDisabled)) (modifier this.on "input" (fn this.invokeHandler @onInput)))}}
     ...attributes
   >
 {{/let}}
