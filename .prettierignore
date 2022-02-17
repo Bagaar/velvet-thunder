@@ -4,7 +4,7 @@
 
 # compiled output
 /dist/
-/tests/dummy/public/assets/tailwind.css
+/tests/dummy/public/assets/*.css
 /tmp/
 
 # dependencies
