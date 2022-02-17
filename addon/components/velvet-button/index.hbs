@@ -5,7 +5,6 @@
       (class (or @color "primary"))
       (class (or @size "md"))
       (class (or @variant "solid"))
-      (if @isDisabled (class "disabled"))
       (if @isRounded (class "rounded"))
     )
     as |className|
@@ -17,7 +16,7 @@
         class={{className}}
         disabled={{@isDisabled}}
         type={{or @type "button"}}
-        {{(if @onClick (modifier this.on "click" @onClick))}}
+        {{(if (and @onClick (not @isDisabled)) (modifier this.on "click" @onClick))}}
         ...attributes
       >
         {{#if @isLoading}}
