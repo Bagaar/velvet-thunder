@@ -1,0 +1,27 @@
+{{#let (helper "-velvet/class" "velvet-select") as |class|}}
+  <select
+    class={{-velvet/class-list
+      "form-select"
+      (class)
+      (class (or @color "primary"))
+      (class (or @size "md"))
+      (if @isInvalid (class "invalid"))
+      (if (and @placeholder (not @selected)) (class "placeholder"))
+      (if @isRounded (class "rounded"))
+    }}
+    disabled={{@isDisabled}}
+    {{(if (and @onChange (not @isDisabled)) (modifier this.on "change" (fn this.invokeHandler @onChange)))}}
+    ...attributes
+  >
+    {{#if @placeholder}}
+      <option disabled selected={{not @selected}}>
+        {{@placeholder}}
+      </option>
+    {{/if}}
+    {{yield
+      (hash
+        Option=(component "velvet-select/option" selected=@selected)
+      )
+    }}
+  </select>
+{{/let}}

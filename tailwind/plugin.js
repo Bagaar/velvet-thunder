@@ -8,6 +8,7 @@ const COMPONENTS = {
   checkbox: require('./components/checkbox'),
   input: require('./components/input'),
   radio: require('./components/radio'),
+  select: require('./components/select'),
   spinner: require('./components/spinner'),
   textarea: require('./components/textarea'),
 };
