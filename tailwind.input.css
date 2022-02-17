@@ -6,7 +6,7 @@
 
 pre {
   @apply bg-slate-900 border border-slate-900 p-4 rounded-xl text-[0.875rem];
-  @apply dark:bg-slate-800/50 dark:border-slate-800;
+  @apply dark:bg-slate-800/40 dark:border-slate-800;
 }
 
 /* Docfy */
@@ -73,7 +73,7 @@ pre {
 
 .prose :where(code):not(:where([class~='not-prose'] *)) {
   @apply bg-slate-100 px-1 py-0.5 rounded;
-  @apply dark:bg-slate-800/50;
+  @apply dark:bg-slate-800/40;
 }
 
 .prose :where(code):not(:where([class~='not-prose'] *))::after,
