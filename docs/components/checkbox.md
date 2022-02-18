@@ -1,17 +1,5 @@
 # Checkbox
 
-## Arguments
-
-| Name               | Description                                | Default Value |
-| ------------------ | ------------------------------------------ | ------------- |
-| `@color`           | The ring color of the checkbox.            | `"primary"`   |
-| `@isChecked`       | Indicate if the checkbox is checked.       | `undefined`   |
-| `@isDisabled`      | Indicate if the checkbox is disabled.      | `undefined`   |
-| `@isIndeterminate` | Indicate if the checkbox is indeterminate. | `undefined`   |
-| `@isInvalid`       | Indicate if the checkbox is invalid.       | `undefined`   |
-| `@onChange`        | Handle the checkbox's `change` event.      | `undefined`   |
-| `@size`            | The size of the checkbox.                  | `"md"`        |
-
 ## Colors
 
 ```hbs preview-template
@@ -55,3 +43,15 @@
 ```hbs preview-template
 <VelvetCheckbox @isInvalid={{true}} />
 ```
+
+## Arguments
+
+| Name               | Description                                | Default Value |
+| ------------------ | ------------------------------------------ | ------------- |
+| `@color`           | The ring color of the checkbox.            | `"primary"`   |
+| `@isChecked`       | Indicate if the checkbox is checked.       | `undefined`   |
+| `@isDisabled`      | Indicate if the checkbox is disabled.      | `undefined`   |
+| `@isIndeterminate` | Indicate if the checkbox is indeterminate. | `undefined`   |
+| `@isInvalid`       | Indicate if the checkbox is invalid.       | `undefined`   |
+| `@onChange`        | Handle the checkbox's `change` event.      | `undefined`   |
+| `@size`            | The size of the checkbox.                  | `"md"`        |

@@ -1,12 +1,5 @@
 # Spinner
 
-## Arguments
-
-| Name     | Description               | Default Value |
-| -------- | ------------------------- | ------------- |
-| `@color` | The color of the spinner. | `"primary"`   |
-| `@size`  | The size of the spinner.  | `"md"`        |
-
 ## Colors
 
 ```hbs preview-template
@@ -26,3 +19,10 @@
   <VelvetSpinner @size='lg' />
 </DocsSpaceX>
 ```
+
+## Arguments
+
+| Name     | Description               | Default Value |
+| -------- | ------------------------- | ------------- |
+| `@color` | The color of the spinner. | `"primary"`   |
+| `@size`  | The size of the spinner.  | `"md"`        |

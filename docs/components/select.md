@@ -1,18 +1,5 @@
 # Select
 
-## Arguments
-
-| Name           | Description                         | Default Value |
-| -------------- | ----------------------------------- | ------------- |
-| `@color`       | The ring color of the select.       | `"primary"`   |
-| `@isDisabled`  | Indicate if the select is disabled. | `undefined`   |
-| `@isInvalid`   | Indicate if the select is invalid.  | `undefined`   |
-| `@isRounded`   | Indicate if the select is rounded.  | `undefined`   |
-| `@onChange`    | Handle the select's `change` event. | `undefined`   |
-| `@placeholder` | The placeholder of the select.      | `undefined`   |
-| `@selected`    | The selected option of the select.  | `undefined`   |
-| `@size`        | The size of the select.             | `"md"`        |
-
 ## Colors
 
 ```hbs preview-template
@@ -96,3 +83,16 @@
   <select.Option @value='option-3'>Option 3</select.Option>
 </VelvetSelect>
 ```
+
+## Arguments
+
+| Name           | Description                         | Default Value |
+| -------------- | ----------------------------------- | ------------- |
+| `@color`       | The ring color of the select.       | `"primary"`   |
+| `@isDisabled`  | Indicate if the select is disabled. | `undefined`   |
+| `@isInvalid`   | Indicate if the select is invalid.  | `undefined`   |
+| `@isRounded`   | Indicate if the select is rounded.  | `undefined`   |
+| `@onChange`    | Handle the select's `change` event. | `undefined`   |
+| `@placeholder` | The placeholder of the select.      | `undefined`   |
+| `@selected`    | The selected option of the select.  | `undefined`   |
+| `@size`        | The size of the select.             | `"md"`        |
