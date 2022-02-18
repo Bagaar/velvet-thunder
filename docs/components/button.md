@@ -1,19 +1,5 @@
 # Button
 
-## Arguments
-
-| Name            | Description                                            | Default Value |
-| --------------- | ------------------------------------------------------ | ------------- |
-| `@color`        | The color of the button.                               | `"primary"`   |
-| `@isDisabled`   | Indicate if the button is disabled.                    | `undefined`   |
-| `@isLoading`    | Indicate if the button should display a loading state. | `undefined`   |
-| `@isRenderless` | Make the button renderless.                            | `undefined`   |
-| `@isRounded`    | Indicate if the button is rounded.                     | `undefined`   |
-| `@onClick`      | Handle the button's `click` event.                     | `undefined`   |
-| `@size`         | The size of the button.                                | `"md"`        |
-| `@type`         | The type of the button.                                | `"button"`    |
-| `@variant`      | The basic appearance of the button.                    | `"solid"`     |
-
 ## Variants
 
 ```hbs preview-template
@@ -89,3 +75,17 @@
   </VelvetButton>
 </DocsSpaceX>
 ```
+
+## Arguments
+
+| Name            | Description                                            | Default Value |
+| --------------- | ------------------------------------------------------ | ------------- |
+| `@color`        | The color of the button.                               | `"primary"`   |
+| `@isDisabled`   | Indicate if the button is disabled.                    | `undefined`   |
+| `@isLoading`    | Indicate if the button should display a loading state. | `undefined`   |
+| `@isRenderless` | Make the button renderless.                            | `undefined`   |
+| `@isRounded`    | Indicate if the button is rounded.                     | `undefined`   |
+| `@onClick`      | Handle the button's `click` event.                     | `undefined`   |
+| `@size`         | The size of the button.                                | `"md"`        |
+| `@type`         | The type of the button.                                | `"button"`    |
+| `@variant`      | The basic appearance of the button.                    | `"solid"`     |

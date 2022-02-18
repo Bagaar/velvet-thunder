@@ -1,0 +1,25 @@
+{{#let (helper "-velvet/class" "velvet-avatar") as |class|}}
+  <div
+    class={{-velvet/class-list
+      (class)
+      (class (or @color "primary"))
+      (class (or @size "md"))
+      (if @isRounded (class "rounded"))
+    }}
+    ...attributes
+  >
+    {{#if @src}}
+      <img
+        alt={{@name}}
+        class={{class "image"}}
+        src={{@src}}
+      >
+    {{else if @name}}
+      {{this.initials}}
+    {{else if @initials}}
+      {{@initials}}
+    {{else}}
+      ?
+    {{/if}}
+  </div>
+{{/let}}

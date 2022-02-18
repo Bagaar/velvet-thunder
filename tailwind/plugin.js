@@ -4,6 +4,7 @@ const tailwindColors = require('tailwindcss/colors');
 const tailwindPlugin = require('tailwindcss/plugin');
 
 const COMPONENTS = {
+  avatar: require('./components/avatar'),
   button: require('./components/button'),
   checkbox: require('./components/checkbox'),
   input: require('./components/input'),
