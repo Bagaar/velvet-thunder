@@ -4,17 +4,17 @@
 
 ```hbs preview-template
 <DocsSpaceX>
-  <VelvetSelect @color='green' as |select|>
+  <VelvetSelect @color='emerald' as |select|>
     <select.Option @value='option-1'>Option 1</select.Option>
     <select.Option @value='option-2'>Option 2</select.Option>
     <select.Option @value='option-3'>Option 3</select.Option>
   </VelvetSelect>
-  <VelvetSelect @color='orange' as |select|>
+  <VelvetSelect @color='amber' as |select|>
     <select.Option @value='option-1'>Option 1</select.Option>
     <select.Option @value='option-2'>Option 2</select.Option>
     <select.Option @value='option-3'>Option 3</select.Option>
   </VelvetSelect>
-  <VelvetSelect @color='red' as |select|>
+  <VelvetSelect @color='rose' as |select|>
     <select.Option @value='option-1'>Option 1</select.Option>
     <select.Option @value='option-2'>Option 2</select.Option>
     <select.Option @value='option-3'>Option 3</select.Option>

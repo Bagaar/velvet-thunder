@@ -4,9 +4,9 @@
 
 ```hbs preview-template
 <DocsSpaceX>
-  <VelvetCheckbox @color='green' />
-  <VelvetCheckbox @color='orange' />
-  <VelvetCheckbox @color='red' />
+  <VelvetCheckbox @color='emerald' />
+  <VelvetCheckbox @color='amber' />
+  <VelvetCheckbox @color='rose' />
 </DocsSpaceX>
 ```
 

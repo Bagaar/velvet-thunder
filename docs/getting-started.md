@@ -48,7 +48,7 @@ module.exports = {
       strategy: 'class',
     }),
     velvetThunderPlugin({
-      colors: ['green', 'orange', 'primary', 'red'],
+      colors: ['amber', 'emerald', 'primary', 'rose'],
     }),
   ],
 };

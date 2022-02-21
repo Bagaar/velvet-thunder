@@ -24,10 +24,10 @@ module('Integration | Component | velvet-textarea', function (hooks) {
     assert.dom(SELECTOR).hasClass('velvet-textarea-primary');
 
     await render(hbs`
-      <VelvetTextarea @color="red" />
+      <VelvetTextarea @color="rose" />
     `);
 
-    assert.dom(SELECTOR).hasClass('velvet-textarea-red');
+    assert.dom(SELECTOR).hasClass('velvet-textarea-rose');
   });
 
   test('it renders a disabled textarea', async function (assert) {

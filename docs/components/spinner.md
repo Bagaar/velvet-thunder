@@ -4,9 +4,9 @@
 
 ```hbs preview-template
 <DocsSpaceX>
-  <VelvetSpinner @color='green' />
-  <VelvetSpinner @color='orange' />
-  <VelvetSpinner @color='red' />
+  <VelvetSpinner @color='emerald' />
+  <VelvetSpinner @color='amber' />
+  <VelvetSpinner @color='rose' />
 </DocsSpaceX>
 ```
 

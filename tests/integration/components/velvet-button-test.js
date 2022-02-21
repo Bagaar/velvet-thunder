@@ -40,10 +40,10 @@ module('Integration | Component | velvet-button', function (hooks) {
     assert.dom(SELECTOR).hasClass('velvet-button-primary');
 
     await render(hbs`
-      <VelvetButton @color="red" />
+      <VelvetButton @color="rose" />
     `);
 
-    assert.dom(SELECTOR).hasClass('velvet-button-red');
+    assert.dom(SELECTOR).hasClass('velvet-button-rose');
   });
 
   test('it renders the correct size', async function (assert) {

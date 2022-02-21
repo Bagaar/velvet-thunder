@@ -9,12 +9,6 @@ module.exports = ({ colors }) => ({
 
     '&:focus': {
       '@apply outline-none ring': {},
-
-      ...reduceStyles(colors, (color) => ({
-        [`&.velvet-button-${color}`]: {
-          [`@apply ring-${color}-400/40`]: {},
-        },
-      })),
     },
 
     '&:disabled': {
@@ -48,6 +42,12 @@ module.exports = ({ colors }) => ({
     '&-rounded': {
       '@apply rounded-full': {},
     },
+
+    ...reduceStyles(colors, (color) => ({
+      [`&-${color}`]: {
+        [`@apply ring-${color}-400/40`]: {},
+      },
+    })),
 
     '&-solid': {
       ...reduceStyles(colors, (color) => ({

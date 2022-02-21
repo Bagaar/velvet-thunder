@@ -24,10 +24,10 @@ module('Integration | Component | velvet-select', function (hooks) {
     assert.dom(SELECTOR).hasClass('velvet-select-primary');
 
     await render(hbs`
-      <VelvetSelect @color="red" />
+      <VelvetSelect @color="rose" />
     `);
 
-    assert.dom(SELECTOR).hasClass('velvet-select-red');
+    assert.dom(SELECTOR).hasClass('velvet-select-rose');
   });
 
   test('it renders a disabled select', async function (assert) {

@@ -22,10 +22,8 @@ module.exports = ({ colors }) => ({
       '@apply opacity-40': {},
     },
 
-    '&-line': {},
-
     ...reduceStyles(colors, (color) => ({
-      [`&.velvet-spinner-${color}`]: {
+      [`&-${color}`]: {
         [`@apply text-${color}-400`]: {},
       },
     })),

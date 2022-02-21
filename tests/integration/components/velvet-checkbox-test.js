@@ -24,10 +24,10 @@ module('Integration | Component | velvet-checkbox', function (hooks) {
     assert.dom(SELECTOR).hasClass('velvet-checkbox-primary');
 
     await render(hbs`
-      <VelvetCheckbox @color="red" />
+      <VelvetCheckbox @color="rose" />
     `);
 
-    assert.dom(SELECTOR).hasClass('velvet-checkbox-red');
+    assert.dom(SELECTOR).hasClass('velvet-checkbox-rose');
   });
 
   test('it renders a disabled checkbox', async function (assert) {
