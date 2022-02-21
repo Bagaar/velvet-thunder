@@ -12,28 +12,6 @@ module.exports = ({ colors }) => ({
 
     '&:focus': {
       '@apply ring ring-offset-0': {},
-
-      ...reduceStyles(colors, (color) => ({
-        [`&.velvet-checkbox-${color}`]: {
-          [`@apply border-${color}-400 ring-${color}-400/40`]: {},
-        },
-      })),
-    },
-
-    '&:indeterminate': {
-      ...reduceStyles(colors, (color) => ({
-        [`&.velvet-checkbox-${color}`]: {
-          [`@apply bg-${color}-400`]: {},
-        },
-      })),
-    },
-
-    '&:checked': {
-      ...reduceStyles(colors, (color) => ({
-        [`&.velvet-checkbox-${color}`]: {
-          [`@apply bg-${color}-400`]: {},
-        },
-      })),
     },
 
     '&:disabled': {
@@ -53,7 +31,39 @@ module.exports = ({ colors }) => ({
     },
 
     '&-invalid': {
-      '@apply border-red-400': {},
+      '@apply border-rose-400': {},
     },
+
+    ...reduceStyles(colors, (color) => ({
+      [`&-${color}`]: {
+        '&:focus': {
+          [`@apply border-${color}-400 ring-${color}-400/40`]: {},
+        },
+
+        '&:indeterminate': {
+          [`@apply bg-${color}-400`]: {},
+
+          '&:hover': {
+            [`@apply bg-${color}-400`]: {},
+          },
+
+          '&:focus': {
+            [`@apply bg-${color}-400`]: {},
+          },
+        },
+
+        '&:checked': {
+          [`@apply bg-${color}-400`]: {},
+
+          '&:hover': {
+            [`@apply bg-${color}-400`]: {},
+          },
+
+          '&:focus': {
+            [`@apply bg-${color}-400`]: {},
+          },
+        },
+      },
+    })),
   },
 });

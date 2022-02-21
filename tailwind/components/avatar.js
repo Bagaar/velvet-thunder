@@ -28,7 +28,7 @@ module.exports = ({ colors }) => ({
     },
 
     ...reduceStyles(colors, (color) => ({
-      [`&.velvet-avatar-${color}`]: {
+      [`&-${color}`]: {
         [`@apply bg-${color}-400`]: {},
       },
     })),

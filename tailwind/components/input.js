@@ -13,12 +13,6 @@ module.exports = ({ colors }) => ({
 
     '&:focus': {
       '@apply ring': {},
-
-      ...reduceStyles(colors, (color) => ({
-        [`&.velvet-input-${color}`]: {
-          [`@apply border-${color}-400 ring-${color}-400/40`]: {},
-        },
-      })),
     },
 
     '&:disabled': {
@@ -38,11 +32,19 @@ module.exports = ({ colors }) => ({
     },
 
     '&-invalid': {
-      '@apply border-red-400': {},
+      '@apply border-rose-400': {},
     },
 
     '&-rounded': {
       '@apply rounded-full': {},
     },
+
+    ...reduceStyles(colors, (color) => ({
+      [`&-${color}`]: {
+        '&:focus': {
+          [`@apply border-${color}-400 ring-${color}-400/40`]: {},
+        },
+      },
+    })),
   },
 });
