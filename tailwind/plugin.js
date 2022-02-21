@@ -52,7 +52,7 @@ module.exports = tailwindPlugin.withOptions(
     theme: {
       extend: {
         colors: {
-          primary: tailwindColors.cyan,
+          primary: tailwindColors.slate,
         },
       },
     },

@@ -4,9 +4,9 @@
 
 ```hbs preview-template
 <DocsSpaceX>
-  <VelvetRadio @color='green' />
-  <VelvetRadio @color='orange' />
-  <VelvetRadio @color='red' />
+  <VelvetRadio @color='emerald' />
+  <VelvetRadio @color='amber' />
+  <VelvetRadio @color='rose' />
 </DocsSpaceX>
 ```
 

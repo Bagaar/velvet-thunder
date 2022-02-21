@@ -4,9 +4,9 @@
 
 ```hbs preview-template
 <DocsSpaceX>
-  <VelvetInput @color='green' />
-  <VelvetInput @color='orange' />
-  <VelvetInput @color='red' />
+  <VelvetInput @color='emerald' />
+  <VelvetInput @color='amber' />
+  <VelvetInput @color='rose' />
 </DocsSpaceX>
 ```
 

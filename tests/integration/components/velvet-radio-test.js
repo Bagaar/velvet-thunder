@@ -24,10 +24,10 @@ module('Integration | Component | velvet-radio', function (hooks) {
     assert.dom(SELECTOR).hasClass('velvet-radio-primary');
 
     await render(hbs`
-      <VelvetRadio @color="red" />
+      <VelvetRadio @color="rose" />
     `);
 
-    assert.dom(SELECTOR).hasClass('velvet-radio-red');
+    assert.dom(SELECTOR).hasClass('velvet-radio-rose');
   });
 
   test('it renders a disabled radio', async function (assert) {

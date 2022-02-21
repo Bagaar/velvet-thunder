@@ -19,7 +19,7 @@ module.exports = {
     }),
     tailwindTypographyPlugin,
     velvetThunderPlugin({
-      colors: ['green', 'orange', 'primary', 'red'],
+      colors: ['amber', 'emerald', 'primary', 'rose'],
     }),
   ],
   theme: {

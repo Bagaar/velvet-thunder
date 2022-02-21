@@ -4,9 +4,9 @@
 
 ```hbs preview-template
 <DocsSpaceX>
-  <VelvetAvatar @color='green' @name='Jake Peralta' />
-  <VelvetAvatar @color='orange' @name='Jake Peralta' />
-  <VelvetAvatar @color='red' @name='Jake Peralta' />
+  <VelvetAvatar @color='emerald' @name='Jake Peralta' />
+  <VelvetAvatar @color='amber' @name='Jake Peralta' />
+  <VelvetAvatar @color='rose' @name='Jake Peralta' />
 </DocsSpaceX>
 ```
 

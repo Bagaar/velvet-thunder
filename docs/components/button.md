@@ -14,9 +14,9 @@
 
 ```hbs preview-template
 <DocsSpaceX>
-  <VelvetButton @color='green'>Button</VelvetButton>
-  <VelvetButton @color='orange'>Button</VelvetButton>
-  <VelvetButton @color='red'>Button</VelvetButton>
+  <VelvetButton @color='emerald'>Button</VelvetButton>
+  <VelvetButton @color='amber'>Button</VelvetButton>
+  <VelvetButton @color='rose'>Button</VelvetButton>
 </DocsSpaceX>
 ```
 
@@ -88,4 +88,4 @@
 | `@onClick`      | Handle the button's `click` event.                     | `undefined`   |
 | `@size`         | The size of the button.                                | `"md"`        |
 | `@type`         | The type of the button.                                | `"button"`    |
-| `@variant`      | The basic appearance of the button.                    | `"solid"`     |
+| `@variant`      | The appearance of the button.                          | `"solid"`     |

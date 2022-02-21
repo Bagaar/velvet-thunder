@@ -4,9 +4,9 @@
 
 ```hbs preview-template
 <DocsSpaceX>
-  <VelvetTextarea @color='green' />
-  <VelvetTextarea @color='orange' />
-  <VelvetTextarea @color='red' />
+  <VelvetTextarea @color='emerald' />
+  <VelvetTextarea @color='amber' />
+  <VelvetTextarea @color='rose' />
 </DocsSpaceX>
 ```
 
