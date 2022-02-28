@@ -3,7 +3,7 @@
 Use the `@onChange` argument to handle `change` events.
 
 ```hbs template
-<DocsSpaceY>
+<DemoSpaceY>
   <div>Selected: "{{this.selected}}"</div>
   <VelvetSelect
     @onChange={{this.onChange}}
@@ -15,7 +15,7 @@ Use the `@onChange` argument to handle `change` events.
     <select.Option @value='option-2'>Option 2</select.Option>
     <select.Option @value='option-3'>Option 3</select.Option>
   </VelvetSelect>
-</DocsSpaceY>
+</DemoSpaceY>
 ```
 
 ```js component

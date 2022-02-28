@@ -3,21 +3,21 @@
 ## Colors
 
 ```hbs preview-template
-<DocsSpaceX>
+<DemoSpaceX>
   <VelvetTextarea @color='emerald' />
   <VelvetTextarea @color='amber' />
   <VelvetTextarea @color='rose' />
-</DocsSpaceX>
+</DemoSpaceX>
 ```
 
 ## Sizes
 
 ```hbs preview-template
-<DocsSpaceX>
+<DemoSpaceX>
   <VelvetTextarea @size='sm' />
   <VelvetTextarea @size='md' />
   <VelvetTextarea @size='lg' />
-</DocsSpaceX>
+</DemoSpaceX>
 ```
 
 ## Disabled

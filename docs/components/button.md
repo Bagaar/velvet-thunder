@@ -3,67 +3,67 @@
 ## Variants
 
 ```hbs preview-template
-<DocsSpaceX>
+<DemoSpaceX>
   <VelvetButton @variant='solid'>Button</VelvetButton>
   <VelvetButton @variant='outline'>Button</VelvetButton>
   <VelvetButton @variant='ghost'>Button</VelvetButton>
-</DocsSpaceX>
+</DemoSpaceX>
 ```
 
 ## Colors
 
 ```hbs preview-template
-<DocsSpaceX>
+<DemoSpaceX>
   <VelvetButton @color='emerald'>Button</VelvetButton>
   <VelvetButton @color='amber'>Button</VelvetButton>
   <VelvetButton @color='rose'>Button</VelvetButton>
-</DocsSpaceX>
+</DemoSpaceX>
 ```
 
 ## Sizes
 
 ```hbs preview-template
-<DocsSpaceX>
+<DemoSpaceX>
   <VelvetButton @size='sm'>Button</VelvetButton>
   <VelvetButton @size='md'>Button</VelvetButton>
   <VelvetButton @size='lg'>Button</VelvetButton>
-</DocsSpaceX>
+</DemoSpaceX>
 ```
 
 ## Rounded
 
 ```hbs preview-template
-<DocsSpaceX>
+<DemoSpaceX>
   <VelvetButton @isRounded={{true}} @variant='solid'>Button</VelvetButton>
   <VelvetButton @isRounded={{true}} @variant='outline'>Button</VelvetButton>
   <VelvetButton @isRounded={{true}} @variant='ghost'>Button</VelvetButton>
-</DocsSpaceX>
+</DemoSpaceX>
 ```
 
 ## Disabled
 
 ```hbs preview-template
-<DocsSpaceX>
+<DemoSpaceX>
   <VelvetButton @isDisabled={{true}} @variant='solid'>Button</VelvetButton>
   <VelvetButton @isDisabled={{true}} @variant='outline'>Button</VelvetButton>
   <VelvetButton @isDisabled={{true}} @variant='ghost'>Button</VelvetButton>
-</DocsSpaceX>
+</DemoSpaceX>
 ```
 
 ## Loading
 
 ```hbs preview-template
-<DocsSpaceX>
+<DemoSpaceX>
   <VelvetButton @isLoading={{true}} @variant='solid'>Button</VelvetButton>
   <VelvetButton @isLoading={{true}} @variant='outline'>Button</VelvetButton>
   <VelvetButton @isLoading={{true}} @variant='ghost'>Button</VelvetButton>
-</DocsSpaceX>
+</DemoSpaceX>
 ```
 
 ## Renderless
 
 ```hbs preview-template
-<DocsSpaceX>
+<DemoSpaceX>
   <VelvetButton @isRenderless={{true}} @variant='solid' as |button|>
     <a class={{button.class}} href='#renderless'>Link</a>
   </VelvetButton>
@@ -73,7 +73,7 @@
   <VelvetButton @isRenderless={{true}} @variant='ghost' as |button|>
     <a class={{button.class}} href='#renderless'>Link</a>
   </VelvetButton>
-</DocsSpaceX>
+</DemoSpaceX>
 ```
 
 ## Arguments

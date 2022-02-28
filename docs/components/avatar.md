@@ -3,21 +3,21 @@
 ## Colors
 
 ```hbs preview-template
-<DocsSpaceX>
+<DemoSpaceX>
   <VelvetAvatar @color='emerald' @name='Jake Peralta' />
   <VelvetAvatar @color='amber' @name='Jake Peralta' />
   <VelvetAvatar @color='rose' @name='Jake Peralta' />
-</DocsSpaceX>
+</DemoSpaceX>
 ```
 
 ## Sizes
 
 ```hbs preview-template
-<DocsSpaceX>
+<DemoSpaceX>
   <VelvetAvatar @name='Jake Peralta' @size='sm' />
   <VelvetAvatar @name='Jake Peralta' @size='md' />
   <VelvetAvatar @name='Jake Peralta' @size='lg' />
-</DocsSpaceX>
+</DemoSpaceX>
 ```
 
 ## Rounded

@@ -3,21 +3,21 @@
 ## Colors
 
 ```hbs preview-template
-<DocsSpaceX>
+<DemoSpaceX>
   <VelvetInput @color='emerald' />
   <VelvetInput @color='amber' />
   <VelvetInput @color='rose' />
-</DocsSpaceX>
+</DemoSpaceX>
 ```
 
 ## Sizes
 
 ```hbs preview-template
-<DocsSpaceX>
+<DemoSpaceX>
   <VelvetInput @size='sm' />
   <VelvetInput @size='md' />
   <VelvetInput @size='lg' />
-</DocsSpaceX>
+</DemoSpaceX>
 ```
 
 ## Rounded
@@ -41,11 +41,11 @@
 ## Types
 
 ```hbs preview-template
-<DocsSpaceX>
+<DemoSpaceX>
   <VelvetInput @type='number' />
   <VelvetInput @type='time' />
   <VelvetInput @type='date' />
-</DocsSpaceX>
+</DemoSpaceX>
 ```
 
 ## Arguments

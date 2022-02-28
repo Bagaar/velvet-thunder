@@ -3,10 +3,10 @@
 Use the `@onChange` argument to handle `change` events.
 
 ```hbs template
-<DocsSpaceY>
+<DemoSpaceY>
   <div>Value: "{{this.value}}"</div>
   <VelvetInput @onChange={{this.onChange}} @value={{this.value}} />
-</DocsSpaceY>
+</DemoSpaceY>
 ```
 
 ```js component

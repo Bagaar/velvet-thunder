@@ -3,21 +3,21 @@
 ## Colors
 
 ```hbs preview-template
-<DocsSpaceX>
+<DemoSpaceX>
   <VelvetSpinner @color='emerald' />
   <VelvetSpinner @color='amber' />
   <VelvetSpinner @color='rose' />
-</DocsSpaceX>
+</DemoSpaceX>
 ```
 
 ## Sizes
 
 ```hbs preview-template
-<DocsSpaceX>
+<DemoSpaceX>
   <VelvetSpinner @size='sm' />
   <VelvetSpinner @size='md' />
   <VelvetSpinner @size='lg' />
-</DocsSpaceX>
+</DemoSpaceX>
 ```
 
 ## Arguments

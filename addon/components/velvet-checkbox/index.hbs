@@ -1,17 +1,24 @@
 {{#let (helper "-velvet/class" "velvet-checkbox") as |class|}}
-  <input
-    checked={{@isChecked}}
+  <label
     class={{-velvet/class-list
-      "form-checkbox"
       (class)
       (class (or @color "primary"))
       (class (or @size "md"))
-      (if @isInvalid (class "invalid"))
+      (if @isDisabled (class "disabled"))
     }}
-    disabled={{@isDisabled}}
-    indeterminate={{@isIndeterminate}}
-    type="checkbox"
-    {{(if (and @onChange (not @isDisabled)) (modifier this.on "change" (fn this.invokeHandler @onChange)))}}
-    ...attributes
   >
+    <input
+      checked={{@isChecked}}
+      class={{-velvet/class-list
+        "form-checkbox"
+        (class "input")
+      }}
+      disabled={{@isDisabled}}
+      indeterminate={{@isIndeterminate}}
+      type="checkbox"
+      {{(if (and @onChange (not @isDisabled)) (modifier this.on "change" (fn this.invokeHandler @onChange)))}}
+      ...attributes
+    >
+    {{yield}}
+  </label>
 {{/let}}

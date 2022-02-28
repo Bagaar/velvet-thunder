@@ -3,45 +3,38 @@
 ## Colors
 
 ```hbs preview-template
-<DocsSpaceX>
-  <VelvetCheckbox @color='emerald' />
-  <VelvetCheckbox @color='amber' />
-  <VelvetCheckbox @color='rose' />
-</DocsSpaceX>
+<DemoSpaceX>
+  <VelvetCheckbox @color='emerald' @isChecked={{true}}>Emerald</VelvetCheckbox>
+  <VelvetCheckbox @color='amber' @isChecked={{true}}>Amber</VelvetCheckbox>
+  <VelvetCheckbox @color='rose' @isChecked={{true}}>Rose</VelvetCheckbox>
+</DemoSpaceX>
 ```
 
 ## Sizes
 
 ```hbs preview-template
-<DocsSpaceX>
-  <VelvetCheckbox @size='sm' />
-  <VelvetCheckbox @size='md' />
-  <VelvetCheckbox @size='lg' />
-</DocsSpaceX>
-```
-
-## Checked
-
-```hbs preview-template
-<VelvetCheckbox @isChecked={{true}} />
+<DemoSpaceX>
+  <VelvetCheckbox @isChecked={{true}} @size='sm'>Small</VelvetCheckbox>
+  <VelvetCheckbox @isChecked={{true}} @size='md'>Medium</VelvetCheckbox>
+  <VelvetCheckbox @isChecked={{true}} @size='lg'>Large</VelvetCheckbox>
+</DemoSpaceX>
 ```
 
 ## Disabled
 
 ```hbs preview-template
-<VelvetCheckbox @isDisabled={{true}} />
+<DemoSpaceX>
+  <VelvetCheckbox @isDisabled={{true}}>Disabled</VelvetCheckbox>
+  <VelvetCheckbox @isChecked={{true}} @isDisabled={{true}}>
+    Disabled
+  </VelvetCheckbox>
+</DemoSpaceX>
 ```
 
 ## Indeterminate
 
 ```hbs preview-template
-<VelvetCheckbox @isIndeterminate={{true}} />
-```
-
-## Invalid
-
-```hbs preview-template
-<VelvetCheckbox @isInvalid={{true}} />
+<VelvetCheckbox @isIndeterminate={{true}}>Indeterminate</VelvetCheckbox>
 ```
 
 ## Arguments
@@ -52,6 +45,5 @@
 | `@isChecked`       | Indicate if the checkbox is checked.       | `undefined`   |
 | `@isDisabled`      | Indicate if the checkbox is disabled.      | `undefined`   |
 | `@isIndeterminate` | Indicate if the checkbox is indeterminate. | `undefined`   |
-| `@isInvalid`       | Indicate if the checkbox is invalid.       | `undefined`   |
 | `@onChange`        | Handle the checkbox's `change` event.      | `undefined`   |
 | `@size`            | The size of the checkbox.                  | `"md"`        |

@@ -4,54 +4,72 @@ const { reduceStyles } = require('../utils/styling');
 
 module.exports = ({ colors }) => ({
   '.velvet-radio': {
-    '@apply bg-transparent border-gray-400/20 rounded-full transition': {},
-
-    '&:hover': {
-      '@apply border-gray-400/40': {},
-    },
-
-    '&:focus': {
-      '@apply ring ring-offset-0': {},
-    },
-
-    '&:disabled': {
-      '@apply border-gray-400/10 cursor-not-allowed': {},
-    },
+    '@apply flex items-center select-none w-fit': {},
 
     '&-sm': {
-      '@apply h-3 w-3': {},
+      '@apply text-sm': {},
+
+      '.velvet-radio-input': {
+        '@apply h-3 mr-2 w-3': {},
+      },
     },
 
     '&-md': {
-      '@apply h-4 w-4': {},
+      '@apply text-base': {},
+
+      '.velvet-radio-input': {
+        '@apply h-4 mr-3 w-4': {},
+      },
     },
 
     '&-lg': {
-      '@apply h-5 w-5': {},
+      '@apply text-lg': {},
+
+      '.velvet-radio-input': {
+        '@apply h-5 mr-4 w-5': {},
+      },
     },
 
-    '&-invalid': {
-      '@apply border-rose-400': {},
+    '&-disabled': {
+      '@apply cursor-not-allowed opacity-40': {},
     },
 
     ...reduceStyles(colors, (color) => ({
       [`&-${color}`]: {
-        '&:focus': {
-          [`@apply border-${color}-400 ring-${color}-400/40`]: {},
-        },
-
-        '&:checked': {
-          [`@apply bg-${color}-400`]: {},
-
-          '&:hover': {
-            [`@apply bg-${color}-400`]: {},
+        '.velvet-radio-input': {
+          '&:focus': {
+            [`@apply border-${color}-400 ring-${color}-400/40`]: {},
           },
 
-          '&:focus': {
+          '&:checked': {
             [`@apply bg-${color}-400`]: {},
+
+            '&:hover': {
+              [`@apply bg-${color}-400`]: {},
+            },
+
+            '&:focus': {
+              [`@apply bg-${color}-400`]: {},
+            },
           },
         },
       },
     })),
+
+    '&-input': {
+      '@apply bg-transparent border-gray-400/40 transition': {},
+
+      '&:not(:checked):not(:disabled):not(:focus):hover': {
+        '@apply border-gray-400/80': {},
+      },
+
+      '&:focus': {
+        '@apply ring ring-offset-0': {},
+      },
+
+      '&:disabled': {
+        '@apply cursor-not-allowed': {},
+      },
+    },
   },
 });

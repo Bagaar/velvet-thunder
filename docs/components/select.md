@@ -3,7 +3,7 @@
 ## Colors
 
 ```hbs preview-template
-<DocsSpaceX>
+<DemoSpaceX>
   <VelvetSelect @color='emerald' as |select|>
     <select.Option @value='option-1'>Option 1</select.Option>
     <select.Option @value='option-2'>Option 2</select.Option>
@@ -19,13 +19,13 @@
     <select.Option @value='option-2'>Option 2</select.Option>
     <select.Option @value='option-3'>Option 3</select.Option>
   </VelvetSelect>
-</DocsSpaceX>
+</DemoSpaceX>
 ```
 
 ## Sizes
 
 ```hbs preview-template
-<DocsSpaceX>
+<DemoSpaceX>
   <VelvetSelect @size='sm' as |select|>
     <select.Option @value='option-1'>Option 1</select.Option>
     <select.Option @value='option-2'>Option 2</select.Option>
@@ -41,7 +41,7 @@
     <select.Option @value='option-2'>Option 2</select.Option>
     <select.Option @value='option-3'>Option 3</select.Option>
   </VelvetSelect>
-</DocsSpaceX>
+</DemoSpaceX>
 ```
 
 ## Selected

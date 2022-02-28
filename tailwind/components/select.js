@@ -4,11 +4,11 @@ const { reduceStyles } = require('../utils/styling');
 
 module.exports = ({ colors, theme }) => ({
   '.velvet-select': {
-    '@apply bg-transparent border-gray-400/20': {},
+    '@apply bg-transparent border-gray-400/40': {},
     '@apply font-medium py-0 transition w-full': {},
 
-    '&:hover': {
-      '@apply border-gray-400/40': {},
+    '&:not(.velvet-select-invalid):not(:disabled):not(:focus):hover': {
+      '@apply border-gray-400/80': {},
     },
 
     '&:focus': {
@@ -16,7 +16,7 @@ module.exports = ({ colors, theme }) => ({
     },
 
     '&:disabled': {
-      '@apply border-gray-400/10 cursor-not-allowed text-gray-400/40': {},
+      '@apply cursor-not-allowed opacity-40': {},
     },
 
     '&-sm': {
@@ -34,10 +34,6 @@ module.exports = ({ colors, theme }) => ({
       [`@apply bg-[right_${theme('spacing.4')}_center]`]: {},
     },
 
-    '&-invalid': {
-      '@apply border-rose-400': {},
-    },
-
     '&-placeholder': {
       '@apply text-gray-400/40': {},
     },
@@ -53,5 +49,9 @@ module.exports = ({ colors, theme }) => ({
         },
       },
     })),
+
+    '&-invalid': {
+      '@apply border-rose-400': {},
+    },
   },
 });
