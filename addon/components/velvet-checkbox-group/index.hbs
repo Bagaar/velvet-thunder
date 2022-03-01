@@ -1,9 +1,5 @@
 {{#let (helper "-velvet/class" "velvet-checkbox-group") as |class|}}
-  <div
-    class={{(class)}}
-    role="group"
-    ...attributes
-  >
+  <div class={{(class)}} role="group" ...attributes>
     {{yield
       (hash
         Checkbox=(component

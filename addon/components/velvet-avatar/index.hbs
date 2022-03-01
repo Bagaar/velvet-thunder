@@ -9,11 +9,7 @@
     ...attributes
   >
     {{#if @src}}
-      <img
-        alt={{@name}}
-        class={{class "image"}}
-        src={{@src}}
-      >
+      <img alt={{@name}} class={{class "image"}} src={{@src}} />
     {{else if @name}}
       {{this.initials}}
     {{else if @initials}}

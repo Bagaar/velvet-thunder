@@ -9,17 +9,23 @@
   >
     <input
       checked={{if @inGroup (eq @value @groupValue) @isChecked}}
-      class={{-velvet/class-list
-        "form-radio"
-        (class "input")
-      }}
+      class={{-velvet/class-list "form-radio" (class "input")}}
       disabled={{@isDisabled}}
       name={{@name}}
       type="radio"
       value={{@value}}
-      {{(if (and @onChange (not @isDisabled)) (modifier this.on "change" (fn (if @inGroup this.invokeGroupHandler this.invokeHandler) @onChange)))}}
+      {{(if
+        (and @onChange (not @isDisabled))
+        (modifier
+          this.on
+          "change"
+          (fn
+            (if @inGroup this.invokeGroupHandler this.invokeHandler) @onChange
+          )
+        )
+      )}}
       ...attributes
-    >
+    />
     {{yield}}
   </label>
 {{/let}}

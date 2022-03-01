@@ -16,7 +16,9 @@
         class={{className}}
         disabled={{@isDisabled}}
         type={{or @type "button"}}
-        {{(if (and @onClick (not @isDisabled)) (modifier this.on "click" @onClick))}}
+        {{(if
+          (and @onClick (not @isDisabled)) (modifier this.on "click" @onClick)
+        )}}
         ...attributes
       >
         {{#if @isLoading}}
