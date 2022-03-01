@@ -77,14 +77,14 @@ module('Integration | Component | velvet-select', function (hooks) {
 
     await render(hbs`
       <VelvetSelect @onChange={{this.onChange}} as |select|>
-        <select.Option @value="option-1" />
-        <select.Option @value="option-2" />
+        <select.Option @value="first" />
+        <select.Option @value="second" />
       </VelvetSelect>
     `);
 
-    await select(SELECTOR, 'option-2');
+    await select(SELECTOR, 'second');
 
-    assert.verifySteps(['option-2']);
+    assert.verifySteps(['second']);
   });
 
   test('it renders the correct size', async function (assert) {
@@ -103,20 +103,20 @@ module('Integration | Component | velvet-select', function (hooks) {
 
   test('it selects the correct option', async function (assert) {
     await render(hbs`
-      <VelvetSelect @selected="option-2" as |select|>
-        <select.Option @value="option-1" />
-        <select.Option @value="option-2" />
+      <VelvetSelect @selected="second" as |select|>
+        <select.Option @value="first" />
+        <select.Option @value="second" />
       </VelvetSelect>
     `);
 
-    assert.dom(SELECTOR).hasValue('option-2');
+    assert.dom(SELECTOR).hasValue('second');
   });
 
   test('it renders a placeholder', async function (assert) {
     await render(hbs`
       <VelvetSelect @placeholder="Select an Option" as |select|>
-        <select.Option @value="option-1" />
-        <select.Option @value="option-2" />
+        <select.Option @value="first" />
+        <select.Option @value="second" />
       </VelvetSelect>
     `);
 

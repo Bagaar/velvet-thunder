@@ -10,7 +10,7 @@ module.exports = ({ colors }) => ({
       '@apply text-sm': {},
 
       '.velvet-radio-input': {
-        '@apply h-3 mr-2 w-3': {},
+        '@apply h-3 mr-1 w-3': {},
       },
     },
 
@@ -18,7 +18,7 @@ module.exports = ({ colors }) => ({
       '@apply text-base': {},
 
       '.velvet-radio-input': {
-        '@apply h-4 mr-3 w-4': {},
+        '@apply h-4 mr-2 w-4': {},
       },
     },
 
@@ -26,7 +26,7 @@ module.exports = ({ colors }) => ({
       '@apply text-lg': {},
 
       '.velvet-radio-input': {
-        '@apply h-5 mr-4 w-5': {},
+        '@apply h-5 mr-3 w-5': {},
       },
     },
 

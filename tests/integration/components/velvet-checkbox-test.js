@@ -110,6 +110,20 @@ module('Integration | Component | velvet-checkbox', function (hooks) {
     assert.dom(SELECTOR.INPUT).isChecked();
   });
 
+  test('it renders the correct name', async function (assert) {
+    await render(hbs`
+      <VelvetCheckbox />
+    `);
+
+    assert.dom(SELECTOR.INPUT).doesNotHaveAttribute('name');
+
+    await render(hbs`
+      <VelvetCheckbox @name="foo" />
+    `);
+
+    assert.dom(SELECTOR.INPUT).hasAttribute('name', 'foo');
+  });
+
   test('`...attributes` works', async function (assert) {
     await render(hbs`
       <VelvetCheckbox id="foo" />

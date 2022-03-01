@@ -45,5 +45,6 @@
 | `@isChecked`       | Indicate if the checkbox is checked.       | `undefined`   |
 | `@isDisabled`      | Indicate if the checkbox is disabled.      | `undefined`   |
 | `@isIndeterminate` | Indicate if the checkbox is indeterminate. | `undefined`   |
+| `@name`            | The name of the checkbox.                  | `undefined`   |
 | `@onChange`        | Handle the checkbox's `change` event.      | `undefined`   |
 | `@size`            | The size of the checkbox.                  | `"md"`        |

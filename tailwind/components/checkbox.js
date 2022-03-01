@@ -10,7 +10,7 @@ module.exports = ({ colors }) => ({
       '@apply text-sm': {},
 
       '.velvet-checkbox-input': {
-        '@apply h-3 mr-2 rounded-sm w-3': {},
+        '@apply h-3 mr-1 rounded-sm w-3': {},
       },
     },
 
@@ -18,7 +18,7 @@ module.exports = ({ colors }) => ({
       '@apply text-base': {},
 
       '.velvet-checkbox-input': {
-        '@apply h-4 mr-3 rounded w-4': {},
+        '@apply h-4 mr-2 rounded w-4': {},
       },
     },
 
@@ -26,7 +26,7 @@ module.exports = ({ colors }) => ({
       '@apply text-lg': {},
 
       '.velvet-checkbox-input': {
-        '@apply h-5 mr-4 rounded-md w-5': {},
+        '@apply h-5 mr-3 rounded-md w-5': {},
       },
     },
 

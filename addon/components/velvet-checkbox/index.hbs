@@ -8,15 +8,16 @@
     }}
   >
     <input
-      checked={{@isChecked}}
+      checked={{if @inGroup (eq (get @groupValue @name) true) @isChecked}}
       class={{-velvet/class-list
         "form-checkbox"
         (class "input")
       }}
       disabled={{@isDisabled}}
       indeterminate={{@isIndeterminate}}
+      name={{@name}}
       type="checkbox"
-      {{(if (and @onChange (not @isDisabled)) (modifier this.on "change" (fn this.invokeHandler @onChange)))}}
+      {{(if (and @onChange (not @isDisabled)) (modifier this.on "change" (fn (if @inGroup this.invokeGroupHandler this.invokeHandler) @onChange)))}}
       ...attributes
     >
     {{yield}}

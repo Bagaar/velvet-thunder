@@ -5,19 +5,19 @@
 ```hbs preview-template
 <DemoSpaceX>
   <VelvetSelect @color='emerald' as |select|>
-    <select.Option @value='option-1'>Option 1</select.Option>
-    <select.Option @value='option-2'>Option 2</select.Option>
-    <select.Option @value='option-3'>Option 3</select.Option>
+    <select.Option @value='first'>First</select.Option>
+    <select.Option @value='second'>Second</select.Option>
+    <select.Option @value='third'>Third</select.Option>
   </VelvetSelect>
   <VelvetSelect @color='amber' as |select|>
-    <select.Option @value='option-1'>Option 1</select.Option>
-    <select.Option @value='option-2'>Option 2</select.Option>
-    <select.Option @value='option-3'>Option 3</select.Option>
+    <select.Option @value='first'>First</select.Option>
+    <select.Option @value='second'>Second</select.Option>
+    <select.Option @value='third'>Third</select.Option>
   </VelvetSelect>
   <VelvetSelect @color='rose' as |select|>
-    <select.Option @value='option-1'>Option 1</select.Option>
-    <select.Option @value='option-2'>Option 2</select.Option>
-    <select.Option @value='option-3'>Option 3</select.Option>
+    <select.Option @value='first'>First</select.Option>
+    <select.Option @value='second'>Second</select.Option>
+    <select.Option @value='third'>Third</select.Option>
   </VelvetSelect>
 </DemoSpaceX>
 ```
@@ -27,19 +27,19 @@
 ```hbs preview-template
 <DemoSpaceX>
   <VelvetSelect @size='sm' as |select|>
-    <select.Option @value='option-1'>Option 1</select.Option>
-    <select.Option @value='option-2'>Option 2</select.Option>
-    <select.Option @value='option-3'>Option 3</select.Option>
+    <select.Option @value='first'>First</select.Option>
+    <select.Option @value='second'>Second</select.Option>
+    <select.Option @value='third'>Third</select.Option>
   </VelvetSelect>
   <VelvetSelect @size='md' as |select|>
-    <select.Option @value='option-1'>Option 1</select.Option>
-    <select.Option @value='option-2'>Option 2</select.Option>
-    <select.Option @value='option-3'>Option 3</select.Option>
+    <select.Option @value='first'>First</select.Option>
+    <select.Option @value='second'>Second</select.Option>
+    <select.Option @value='third'>Third</select.Option>
   </VelvetSelect>
   <VelvetSelect @size='lg' as |select|>
-    <select.Option @value='option-1'>Option 1</select.Option>
-    <select.Option @value='option-2'>Option 2</select.Option>
-    <select.Option @value='option-3'>Option 3</select.Option>
+    <select.Option @value='first'>First</select.Option>
+    <select.Option @value='second'>Second</select.Option>
+    <select.Option @value='third'>Third</select.Option>
   </VelvetSelect>
 </DemoSpaceX>
 ```
@@ -47,10 +47,10 @@
 ## Selected
 
 ```hbs preview-template
-<VelvetSelect @selected='option-2' as |select|>
-  <select.Option @value='option-1'>Option 1</select.Option>
-  <select.Option @value='option-2'>Option 2</select.Option>
-  <select.Option @value='option-3'>Option 3</select.Option>
+<VelvetSelect @selected='second' as |select|>
+  <select.Option @value='first'>First</select.Option>
+  <select.Option @value='second'>Second</select.Option>
+  <select.Option @value='third'>Third</select.Option>
 </VelvetSelect>
 ```
 
@@ -58,9 +58,9 @@
 
 ```hbs preview-template
 <VelvetSelect @isRounded={{true}} as |select|>
-  <select.Option @value='option-1'>Option 1</select.Option>
-  <select.Option @value='option-2'>Option 2</select.Option>
-  <select.Option @value='option-3'>Option 3</select.Option>
+  <select.Option @value='first'>First</select.Option>
+  <select.Option @value='second'>Second</select.Option>
+  <select.Option @value='third'>Third</select.Option>
 </VelvetSelect>
 ```
 
@@ -68,9 +68,9 @@
 
 ```hbs preview-template
 <VelvetSelect @isDisabled={{true}} as |select|>
-  <select.Option @value='option-1'>Option 1</select.Option>
-  <select.Option @value='option-2'>Option 2</select.Option>
-  <select.Option @value='option-3'>Option 3</select.Option>
+  <select.Option @value='first'>First</select.Option>
+  <select.Option @value='second'>Second</select.Option>
+  <select.Option @value='third'>Third</select.Option>
 </VelvetSelect>
 ```
 
@@ -78,9 +78,9 @@
 
 ```hbs preview-template
 <VelvetSelect @isInvalid={{true}} as |select|>
-  <select.Option @value='option-1'>Option 1</select.Option>
-  <select.Option @value='option-2'>Option 2</select.Option>
-  <select.Option @value='option-3'>Option 3</select.Option>
+  <select.Option @value='first'>First</select.Option>
+  <select.Option @value='second'>Second</select.Option>
+  <select.Option @value='third'>Third</select.Option>
 </VelvetSelect>
 ```
 

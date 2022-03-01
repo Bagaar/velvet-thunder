@@ -39,3 +39,4 @@
 | `@name`       | The name of the radio.             | `undefined`   |
 | `@onChange`   | Handle the radio's `change` event. | `undefined`   |
 | `@size`       | The size of the radio.             | `"md"`        |
+| `@value`      | The value of the radio.            | `undefined`   |

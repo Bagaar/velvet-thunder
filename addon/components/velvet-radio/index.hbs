@@ -8,7 +8,7 @@
     }}
   >
     <input
-      checked={{@isChecked}}
+      checked={{if @inGroup (eq @value @groupValue) @isChecked}}
       class={{-velvet/class-list
         "form-radio"
         (class "input")
@@ -16,7 +16,8 @@
       disabled={{@isDisabled}}
       name={{@name}}
       type="radio"
-      {{(if (and @onChange (not @isDisabled)) (modifier this.on "change" (fn this.invokeHandler @onChange)))}}
+      value={{@value}}
+      {{(if (and @onChange (not @isDisabled)) (modifier this.on "change" (fn (if @inGroup this.invokeGroupHandler this.invokeHandler) @onChange)))}}
       ...attributes
     >
     {{yield}}

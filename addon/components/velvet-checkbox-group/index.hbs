@@ -1,0 +1,21 @@
+{{#let (helper "-velvet/class" "velvet-checkbox-group") as |class|}}
+  <div
+    class={{(class)}}
+    role="group"
+    ...attributes
+  >
+    {{yield
+      (hash
+        Checkbox=(component
+          "velvet-checkbox"
+          color=@color
+          groupValue=@value
+          inGroup=true
+          isDisabled=@isDisabled
+          onChange=@onChange
+          size=@size
+        )
+      )
+    }}
+  </div>
+{{/let}}

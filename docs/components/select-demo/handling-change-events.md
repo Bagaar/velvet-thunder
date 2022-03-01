@@ -11,9 +11,9 @@ Use the `@onChange` argument to handle `change` events.
     @selected={{this.selected}}
     as |select|
   >
-    <select.Option @value='option-1'>Option 1</select.Option>
-    <select.Option @value='option-2'>Option 2</select.Option>
-    <select.Option @value='option-3'>Option 3</select.Option>
+    <select.Option @value='first'>First</select.Option>
+    <select.Option @value='second'>Second</select.Option>
+    <select.Option @value='third'>Third</select.Option>
   </VelvetSelect>
 </DemoSpaceY>
 ```

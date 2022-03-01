@@ -90,6 +90,20 @@ module('Integration | Component | velvet-radio', function (hooks) {
     assert.dom(SELECTOR.INPUT).isChecked();
   });
 
+  test('it renders the correct value', async function (assert) {
+    await render(hbs`
+      <VelvetRadio />
+    `);
+
+    assert.dom(SELECTOR.INPUT).hasAttribute('value', '');
+
+    await render(hbs`
+      <VelvetRadio @value="foo" />
+    `);
+
+    assert.dom(SELECTOR.INPUT).hasAttribute('value', 'foo');
+  });
+
   test('`...attributes` works', async function (assert) {
     await render(hbs`
       <VelvetRadio id="foo" />
