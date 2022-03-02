@@ -6,6 +6,7 @@ module.exports = ({ colors }) => ({
   '.velvet-input': {
     '@apply bg-transparent border-gray-400/40': {},
     '@apply font-medium py-0 transition w-full': {},
+    '@apply placeholder:opacity-40 placeholder:text-inherit': {},
 
     '&:not(.velvet-input-invalid):not(:disabled):not(:focus):hover': {
       '@apply border-gray-400/80': {},

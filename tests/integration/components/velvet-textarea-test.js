@@ -110,6 +110,20 @@ module('Integration | Component | velvet-textarea', function (hooks) {
     assert.dom(SELECTOR).hasValue('foo');
   });
 
+  test('it renders the correct placeholder', async function (assert) {
+    await render(hbs`
+      <VelvetTextarea />
+    `);
+
+    assert.dom(SELECTOR).doesNotHaveAttribute('placeholder');
+
+    await render(hbs`
+      <VelvetTextarea @placeholder="foo" />
+    `);
+
+    assert.dom(SELECTOR).hasAttribute('placeholder', 'foo');
+  });
+
   test('`...attributes` works', async function (assert) {
     await render(hbs`
       <VelvetTextarea class="mr-2" />

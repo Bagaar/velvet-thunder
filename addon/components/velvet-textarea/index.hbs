@@ -8,6 +8,7 @@
       (if @isInvalid (class "invalid"))
     }}
     disabled={{@isDisabled}}
+    placeholder={{@placeholder}}
     value={{@value}}
     {{(if
       (and @onChange (not @isDisabled))

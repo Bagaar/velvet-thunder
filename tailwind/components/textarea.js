@@ -6,6 +6,7 @@ module.exports = ({ colors }) => ({
   '.velvet-textarea': {
     '@apply bg-transparent border-gray-400/40': {},
     '@apply font-medium transition w-full': {},
+    '@apply placeholder:opacity-40 placeholder:text-inherit': {},
 
     '&:not(.velvet-textarea-invalid):not(:disabled):not(:focus):hover': {
       '@apply border-gray-400/80': {},

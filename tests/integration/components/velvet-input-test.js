@@ -138,6 +138,20 @@ module('Integration | Component | velvet-input', function (hooks) {
     assert.dom(SELECTOR).hasValue('foo');
   });
 
+  test('it renders the correct placeholder', async function (assert) {
+    await render(hbs`
+      <VelvetInput />
+    `);
+
+    assert.dom(SELECTOR).doesNotHaveAttribute('placeholder');
+
+    await render(hbs`
+      <VelvetInput @placeholder="foo" />
+    `);
+
+    assert.dom(SELECTOR).hasAttribute('placeholder', 'foo');
+  });
+
   test('`...attributes` works', async function (assert) {
     await render(hbs`
       <VelvetInput class="mr-2" />
