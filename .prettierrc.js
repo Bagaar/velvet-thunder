@@ -3,7 +3,7 @@
 module.exports = {
   overrides: [
     {
-      files: '*.yml',
+      files: '*.{hbs,yml}',
       options: {
         singleQuote: false,
       },

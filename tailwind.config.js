@@ -8,6 +8,7 @@ const velvetThunderPlugin = require('./tailwind/plugin');
 module.exports = {
   content: [
     ...velvetThunderContent('.'),
+    './docs/**/*.md',
     './tests/dummy/app/components/**/*.{hbs,js}',
     './tests/dummy/app/templates/**/*.hbs',
     './tests/dummy/app/index.html',

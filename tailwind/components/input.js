@@ -4,11 +4,11 @@ const { reduceStyles } = require('../utils/styling');
 
 module.exports = ({ colors }) => ({
   '.velvet-input': {
-    '@apply bg-transparent border-gray-400/20': {},
+    '@apply bg-transparent border-gray-400/40': {},
     '@apply font-medium py-0 transition w-full': {},
 
-    '&:hover': {
-      '@apply border-gray-400/40': {},
+    '&:not(.velvet-input-invalid):not(:disabled):not(:focus):hover': {
+      '@apply border-gray-400/80': {},
     },
 
     '&:focus': {
@@ -16,7 +16,7 @@ module.exports = ({ colors }) => ({
     },
 
     '&:disabled': {
-      '@apply border-gray-400/10 cursor-not-allowed': {},
+      '@apply cursor-not-allowed opacity-40': {},
     },
 
     '&-sm': {
@@ -31,10 +31,6 @@ module.exports = ({ colors }) => ({
       '@apply h-10 px-5 rounded-lg text-lg': {},
     },
 
-    '&-invalid': {
-      '@apply border-rose-400': {},
-    },
-
     '&-rounded': {
       '@apply rounded-full': {},
     },
@@ -46,5 +42,9 @@ module.exports = ({ colors }) => ({
         },
       },
     })),
+
+    '&-invalid': {
+      '@apply border-rose-400': {},
+    },
   },
 });

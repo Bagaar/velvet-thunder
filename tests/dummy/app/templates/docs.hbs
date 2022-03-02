@@ -4,10 +4,7 @@
   <DocsLogo />
 
   <div class="flex items-center">
-    <DocsDarkModeToggle
-      @onToggle={{this.toggleDarkMode}}
-      class="mr-4"
-    />
+    <DocsDarkModeToggle @onToggle={{this.toggleDarkMode}} class="mr-4" />
     <DocsGithubLink />
   </div>
 </DocsHeader>
@@ -43,7 +40,9 @@
 </DocsSidebar>
 
 <div class="ml-64 my-16 p-8 xl:mr-64">
-  <main class="max-w-4xl mx-auto prose prose-slate prose-a:no-underline dark:prose-invert">
+  <main
+    class="max-w-4xl mx-auto prose prose-slate prose-a:no-underline dark:prose-invert"
+  >
     {{outlet}}
   </main>
 </div>
@@ -60,17 +59,16 @@
       <div>
         {{#if previous}}
           <DocsSimpleLink as |link|>
-            <DocfyLink
-              @to={{previous.url}}
-              class={{link.class}}
-            >
+            <DocfyLink @to={{previous.url}} class={{link.class}}>
               <svg
                 class="h-3 mr-3 rotate-180 w-3"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z" />
+                <path
+                  d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"
+                ></path>
               </svg>
               {{previous.title}}
             </DocfyLink>
@@ -80,10 +78,7 @@
       <div>
         {{#if next}}
           <DocsSimpleLink as |link|>
-            <DocfyLink
-              @to={{next.url}}
-              class={{link.class}}
-            >
+            <DocfyLink @to={{next.url}} class={{link.class}}>
               {{next.title}}
               <svg
                 class="h-3 ml-3 w-3"
@@ -91,7 +86,9 @@
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z" />
+                <path
+                  d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"
+                ></path>
               </svg>
             </DocfyLink>
           </DocsSimpleLink>

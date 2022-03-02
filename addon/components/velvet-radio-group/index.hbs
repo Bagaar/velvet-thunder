@@ -1,0 +1,18 @@
+{{#let (helper "-velvet/class" "velvet-radio-group") as |class|}}
+  <div class={{(class)}} role="radiogroup" ...attributes>
+    {{yield
+      (hash
+        Radio=(component
+          "velvet-radio"
+          color=@color
+          groupValue=@value
+          inGroup=true
+          isDisabled=@isDisabled
+          name=(or @name this.uniqueName)
+          onChange=@onChange
+          size=@size
+        )
+      )
+    }}
+  </div>
+{{/let}}

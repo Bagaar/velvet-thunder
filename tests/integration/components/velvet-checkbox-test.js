@@ -3,7 +3,10 @@ import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
-const SELECTOR = 'input[type="checkbox"]';
+const SELECTOR = {
+  INPUT: 'input[type="checkbox"]',
+  LABEL: 'label',
+};
 
 module('Integration | Component | velvet-checkbox', function (hooks) {
   setupRenderingTest(hooks);
@@ -13,7 +16,8 @@ module('Integration | Component | velvet-checkbox', function (hooks) {
       <VelvetCheckbox />
     `);
 
-    assert.dom(SELECTOR).hasClass('form-checkbox').hasClass('velvet-checkbox');
+    assert.dom(SELECTOR.LABEL).hasClass('velvet-checkbox');
+    assert.dom(SELECTOR.INPUT).hasClass('form-checkbox');
   });
 
   test('it renders the correct color', async function (assert) {
@@ -21,13 +25,13 @@ module('Integration | Component | velvet-checkbox', function (hooks) {
       <VelvetCheckbox />
     `);
 
-    assert.dom(SELECTOR).hasClass('velvet-checkbox-primary');
+    assert.dom(SELECTOR.LABEL).hasClass('velvet-checkbox-primary');
 
     await render(hbs`
       <VelvetCheckbox @color="rose" />
     `);
 
-    assert.dom(SELECTOR).hasClass('velvet-checkbox-rose');
+    assert.dom(SELECTOR.LABEL).hasClass('velvet-checkbox-rose');
   });
 
   test('it renders a disabled checkbox', async function (assert) {
@@ -35,27 +39,15 @@ module('Integration | Component | velvet-checkbox', function (hooks) {
       <VelvetCheckbox />
     `);
 
-    assert.dom(SELECTOR).doesNotHaveAttribute('disabled');
+    assert.dom(SELECTOR.LABEL).doesNotHaveClass('velvet-checkbox-disabled');
+    assert.dom(SELECTOR.INPUT).doesNotHaveAttribute('disabled');
 
     await render(hbs`
       <VelvetCheckbox @isDisabled={{true}} />
     `);
 
-    assert.dom(SELECTOR).hasAttribute('disabled');
-  });
-
-  test('it renders an invalid checkbox', async function (assert) {
-    await render(hbs`
-      <VelvetCheckbox />
-    `);
-
-    assert.dom(SELECTOR).doesNotHaveClass('velvet-checkbox-invalid');
-
-    await render(hbs`
-      <VelvetCheckbox @isInvalid={{true}} />
-    `);
-
-    assert.dom(SELECTOR).hasClass('velvet-checkbox-invalid');
+    assert.dom(SELECTOR.LABEL).hasClass('velvet-checkbox-disabled');
+    assert.dom(SELECTOR.INPUT).hasAttribute('disabled');
   });
 
   test('it handles `change` events', async function (assert) {
@@ -65,7 +57,7 @@ module('Integration | Component | velvet-checkbox', function (hooks) {
       <VelvetCheckbox @onChange={{this.onChange}} />
     `);
 
-    await click(SELECTOR);
+    await click(SELECTOR.INPUT);
 
     assert.verifySteps(['true']);
   });
@@ -75,13 +67,13 @@ module('Integration | Component | velvet-checkbox', function (hooks) {
       <VelvetCheckbox />
     `);
 
-    assert.dom(SELECTOR).hasClass('velvet-checkbox-md');
+    assert.dom(SELECTOR.LABEL).hasClass('velvet-checkbox-md');
 
     await render(hbs`
       <VelvetCheckbox @size="lg" />
     `);
 
-    assert.dom(SELECTOR).hasClass('velvet-checkbox-lg');
+    assert.dom(SELECTOR.LABEL).hasClass('velvet-checkbox-lg');
   });
 
   test('it renders an indeterminate checkbox', async function (assert) {
@@ -89,13 +81,19 @@ module('Integration | Component | velvet-checkbox', function (hooks) {
       <VelvetCheckbox />
     `);
 
-    assert.dom(SELECTOR).isNotChecked().hasProperty('indeterminate', false);
+    assert
+      .dom(SELECTOR.INPUT)
+      .isNotChecked()
+      .hasProperty('indeterminate', false);
 
     await render(hbs`
       <VelvetCheckbox @isIndeterminate={{true}} />
     `);
 
-    assert.dom(SELECTOR).isNotChecked().hasProperty('indeterminate', true);
+    assert
+      .dom(SELECTOR.INPUT)
+      .isNotChecked()
+      .hasProperty('indeterminate', true);
   });
 
   test('it renders a checked checkbox', async function (assert) {
@@ -103,20 +101,34 @@ module('Integration | Component | velvet-checkbox', function (hooks) {
       <VelvetCheckbox />
     `);
 
-    assert.dom(SELECTOR).isNotChecked();
+    assert.dom(SELECTOR.INPUT).isNotChecked();
 
     await render(hbs`
       <VelvetCheckbox @isChecked={{true}} />
     `);
 
-    assert.dom(SELECTOR).isChecked();
+    assert.dom(SELECTOR.INPUT).isChecked();
+  });
+
+  test('it renders the correct name', async function (assert) {
+    await render(hbs`
+      <VelvetCheckbox />
+    `);
+
+    assert.dom(SELECTOR.INPUT).doesNotHaveAttribute('name');
+
+    await render(hbs`
+      <VelvetCheckbox @name="foo" />
+    `);
+
+    assert.dom(SELECTOR.INPUT).hasAttribute('name', 'foo');
   });
 
   test('`...attributes` works', async function (assert) {
     await render(hbs`
-      <VelvetCheckbox class="mr-2" />
+      <VelvetCheckbox id="foo" />
     `);
 
-    assert.dom(SELECTOR).hasClass('mr-2');
+    assert.dom(SELECTOR.INPUT).hasAttribute('id', 'foo');
   });
 });

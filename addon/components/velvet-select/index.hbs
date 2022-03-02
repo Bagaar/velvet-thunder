@@ -10,7 +10,10 @@
       (if @isRounded (class "rounded"))
     }}
     disabled={{@isDisabled}}
-    {{(if (and @onChange (not @isDisabled)) (modifier this.on "change" (fn this.invokeHandler @onChange)))}}
+    {{(if
+      (and @onChange (not @isDisabled))
+      (modifier this.on "change" (fn this.invokeHandler @onChange))
+    )}}
     ...attributes
   >
     {{#if @placeholder}}
@@ -19,9 +22,7 @@
       </option>
     {{/if}}
     {{yield
-      (hash
-        Option=(component "velvet-select/option" selected=@selected)
-      )
+      (hash Option=(component "velvet-select/option" selected=@selected))
     }}
   </select>
 {{/let}}

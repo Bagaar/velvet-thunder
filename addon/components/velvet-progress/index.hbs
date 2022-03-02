@@ -1,0 +1,17 @@
+{{#let (helper "-velvet/class" "velvet-progress") as |class|}}
+  <div
+    class={{-velvet/class-list
+      (class)
+      (class (or @color "primary"))
+      (class (or @size "md"))
+    }}
+    aria-valuemax={{if this.hasMax @max this.defaultMax}}
+    aria-valuemin={{if this.hasMin @min this.defaultMin}}
+    aria-valuenow={{if this.hasValue @value this.defaultValue}}
+    aria-valuetext={{@text}}
+    role="progressbar"
+    ...attributes
+  >
+    <div class={{class "line"}} style={{this.style}}></div>
+  </div>
+{{/let}}

@@ -9,8 +9,14 @@
     }}
     disabled={{@isDisabled}}
     value={{@value}}
-    {{(if (and @onChange (not @isDisabled)) (modifier this.on "change" (fn this.invokeHandler @onChange)))}}
-    {{(if (and @onInput (not @isDisabled)) (modifier this.on "input" (fn this.invokeHandler @onInput)))}}
+    {{(if
+      (and @onChange (not @isDisabled))
+      (modifier this.on "change" (fn this.invokeHandler @onChange))
+    )}}
+    {{(if
+      (and @onInput (not @isDisabled))
+      (modifier this.on "input" (fn this.invokeHandler @onInput))
+    )}}
     ...attributes
-  />
+  ></textarea>
 {{/let}}

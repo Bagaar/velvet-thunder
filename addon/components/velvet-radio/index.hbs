@@ -1,18 +1,31 @@
 {{#let (helper "-velvet/class" "velvet-radio") as |class|}}
-  <input
-    checked={{@isChecked}}
+  <label
     class={{-velvet/class-list
-      "form-radio"
       (class)
       (class (or @color "primary"))
       (class (or @size "md"))
-      (if @isInvalid (class "invalid"))
+      (if @isDisabled (class "disabled"))
     }}
-    disabled={{@isDisabled}}
-    indeterminate={{@isIndeterminate}}
-    name={{@name}}
-    type="radio"
-    {{(if (and @onChange (not @isDisabled)) (modifier this.on "change" (fn this.invokeHandler @onChange)))}}
-    ...attributes
   >
+    <input
+      checked={{if @inGroup (eq @value @groupValue) @isChecked}}
+      class={{-velvet/class-list "form-radio" (class "input")}}
+      disabled={{@isDisabled}}
+      name={{@name}}
+      type="radio"
+      value={{@value}}
+      {{(if
+        (and @onChange (not @isDisabled))
+        (modifier
+          this.on
+          "change"
+          (fn
+            (if @inGroup this.invokeGroupHandler this.invokeHandler) @onChange
+          )
+        )
+      )}}
+      ...attributes
+    />
+    {{yield}}
+  </label>
 {{/let}}
