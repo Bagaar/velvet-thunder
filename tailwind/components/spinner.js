@@ -19,7 +19,7 @@ module.exports = ({ colors }) => ({
     },
 
     '&-track': {
-      '@apply opacity-40': {},
+      '@apply opacity-20': {},
     },
 
     ...reduceStyles(colors, (color) => ({
