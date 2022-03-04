@@ -12,11 +12,11 @@
     value={{@value}}
     {{(if
       (and @onChange (not @isDisabled))
-      (modifier this.on "change" (fn this.invokeHandler @onChange))
+      (modifier this.on "change" this.changeHandler)
     )}}
     {{(if
       (and @onInput (not @isDisabled))
-      (modifier this.on "input" (fn this.invokeHandler @onInput))
+      (modifier this.on "input" this.inputHandler)
     )}}
     ...attributes
   ></textarea>

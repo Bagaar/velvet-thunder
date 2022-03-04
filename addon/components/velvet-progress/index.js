@@ -18,7 +18,7 @@ export default class VelvetProgressComponent extends Component {
     return typeof this.args.value === 'number';
   }
 
-  get style() {
+  get lineStyle() {
     const max = this.hasMax ? this.args.max : this.defaultMax;
     const min = this.hasMin ? this.args.min : this.defaultMin;
     const value = this.hasValue ? this.args.value : this.defaultValue;

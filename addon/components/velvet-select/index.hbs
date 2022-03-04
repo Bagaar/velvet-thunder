@@ -12,7 +12,7 @@
     disabled={{@isDisabled}}
     {{(if
       (and @onChange (not @isDisabled))
-      (modifier this.on "change" (fn this.invokeHandler @onChange))
+      (modifier this.on "change" this.changeHandler)
     )}}
     ...attributes
   >

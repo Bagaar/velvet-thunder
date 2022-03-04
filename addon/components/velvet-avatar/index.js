@@ -5,7 +5,7 @@ export default class VelvetAvatarComponent extends Component {
     return this.args.name
       .split(' ')
       .slice(0, 2)
-      .map((part) => part.charAt(0))
+      .map((name) => name.charAt(0))
       .join('');
   }
 }
