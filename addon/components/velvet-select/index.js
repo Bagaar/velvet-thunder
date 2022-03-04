@@ -4,9 +4,19 @@ import Component from '@glimmer/component';
 
 export default class VelvetSelectComponent extends Component {
   on = on;
+  options = new Map();
 
   @action
   changeHandler(event) {
-    this.args.onChange(event.target.value, event);
+    this.args.onChange(this.options.get(event.target.value), event);
+  }
+
+  @action
+  registerOption(id, value) {
+    this.options.set(id, value);
+  }
+
+  get hasSelection() {
+    return [...this.options.values()].includes(this.args.selected);
   }
 }
