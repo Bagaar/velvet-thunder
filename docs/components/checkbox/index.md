@@ -39,12 +39,12 @@
 
 ## Arguments
 
-| Name               | Description                                | Default Value |
-| ------------------ | ------------------------------------------ | ------------- |
-| `@color`           | The ring color of the checkbox.            | `"primary"`   |
-| `@isChecked`       | Indicate if the checkbox is checked.       | `undefined`   |
-| `@isDisabled`      | Indicate if the checkbox is disabled.      | `undefined`   |
-| `@isIndeterminate` | Indicate if the checkbox is indeterminate. | `undefined`   |
-| `@name`            | The name of the checkbox.                  | `undefined`   |
-| `@onChange`        | Handle the checkbox's `change` event.      | `undefined`   |
-| `@size`            | The size of the checkbox.                  | `"md"`        |
+| Name               | Description                                | Type       | Default Value |
+| ------------------ | ------------------------------------------ | ---------- | ------------- |
+| `@color`           | The ring color of the checkbox.            | `String`   | `'primary'`   |
+| `@isChecked`       | Indicate if the checkbox is checked.       | `Boolean`  | `false`       |
+| `@isDisabled`      | Indicate if the checkbox is disabled.      | `Boolean`  | `false`       |
+| `@isIndeterminate` | Indicate if the checkbox is indeterminate. | `Boolean`  | `false`       |
+| `@name`            | The name of the checkbox.                  | `String`   | `''`          |
+| `@onChange`        | Handle the checkbox's `change` event.      | `Function` | `undefined`   |
+| `@size`            | The size of the checkbox.                  | `String`   | `'md'`        |

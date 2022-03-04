@@ -86,13 +86,19 @@
 
 ## Arguments
 
-| Name           | Description                         | Default Value |
-| -------------- | ----------------------------------- | ------------- |
-| `@color`       | The ring color of the select.       | `"primary"`   |
-| `@isDisabled`  | Indicate if the select is disabled. | `undefined`   |
-| `@isInvalid`   | Indicate if the select is invalid.  | `undefined`   |
-| `@isRounded`   | Indicate if the select is rounded.  | `undefined`   |
-| `@onChange`    | Handle the select's `change` event. | `undefined`   |
-| `@placeholder` | The placeholder of the select.      | `undefined`   |
-| `@selected`    | The selected option of the select.  | `undefined`   |
-| `@size`        | The size of the select.             | `"md"`        |
+| Name           | Description                         | Type       | Default Value |
+| -------------- | ----------------------------------- | ---------- | ------------- |
+| `@color`       | The ring color of the select.       | `String`   | `'primary'`   |
+| `@isDisabled`  | Indicate if the select is disabled. | `Boolean`  | `false`       |
+| `@isInvalid`   | Indicate if the select is invalid.  | `Boolean`  | `false`       |
+| `@isRounded`   | Indicate if the select is rounded.  | `Boolean`  | `false`       |
+| `@onChange`    | Handle the select's `change` event. | `Function` | `undefined`   |
+| `@placeholder` | The placeholder of the select.      | `String`   | `''`          |
+| `@selected`    | The selected option of the select.  | `Any`      | `undefined`   |
+| `@size`        | The size of the select.             | `String`   | `'md'`        |
+
+### Option Arguments
+
+| Name     | Description              | Type  | Default Value |
+| -------- | ------------------------ | ----- | ------------- |
+| `@value` | The value of the option. | `Any` | `undefined`   |

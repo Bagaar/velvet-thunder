@@ -31,12 +31,12 @@
 
 ## Arguments
 
-| Name          | Description                        | Default Value |
-| ------------- | ---------------------------------- | ------------- |
-| `@color`      | The ring color of the radio.       | `"primary"`   |
-| `@isChecked`  | Indicate if the radio is checked.  | `undefined`   |
-| `@isDisabled` | Indicate if the radio is disabled. | `undefined`   |
-| `@name`       | The name of the radio.             | `undefined`   |
-| `@onChange`   | Handle the radio's `change` event. | `undefined`   |
-| `@size`       | The size of the radio.             | `"md"`        |
-| `@value`      | The value of the radio.            | `undefined`   |
+| Name          | Description                        | Type       | Default Value |
+| ------------- | ---------------------------------- | ---------- | ------------- |
+| `@color`      | The ring color of the radio.       | `String`   | `'primary'`   |
+| `@isChecked`  | Indicate if the radio is checked.  | `Boolean`  | `false`       |
+| `@isDisabled` | Indicate if the radio is disabled. | `Boolean`  | `false`       |
+| `@name`       | The name of the radio.             | `String`   | `''`          |
+| `@onChange`   | Handle the radio's `change` event. | `Function` | `undefined`   |
+| `@size`       | The size of the radio.             | `String`   | `'md'`        |
+| `@value`      | The value of the radio.            | `Any`      | `undefined`   |

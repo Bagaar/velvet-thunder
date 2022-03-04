@@ -91,10 +91,10 @@
 
 ## Arguments
 
-| Name          | Description                                 | Default Value |
-| ------------- | ------------------------------------------- | ------------- |
-| `@color`      | The ring color of the checkboxes.           | `"primary"`   |
-| `@isDisabled` | Indicate if the checkbox group is disabled. | `undefined`   |
-| `@onChange`   | Handle the checkbox group's `change` event. | `undefined`   |
-| `@size`       | The size of the checkboxes.                 | `"md"`        |
-| `@value`      | The value of the checkbox group.            | `undefined`   |
+| Name          | Description                                 | Type       | Default Value |
+| ------------- | ------------------------------------------- | ---------- | ------------- |
+| `@color`      | The ring color of the checkboxes.           | `String`   | `'primary'`   |
+| `@isDisabled` | Indicate if the checkbox group is disabled. | `Boolean`  | `false`       |
+| `@onChange`   | Handle the checkbox group's `change` event. | `Function` | `undefined`   |
+| `@size`       | The size of the checkboxes.                 | `String`   | `'md'`        |
+| `@value`      | The value of the checkbox group.            | `Object`   | `undefined`   |
