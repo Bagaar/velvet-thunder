@@ -22,7 +22,7 @@
 
 ## Arguments
 
-| Name     | Description               | Default Value |
-| -------- | ------------------------- | ------------- |
-| `@color` | The color of the spinner. | `"primary"`   |
-| `@size`  | The size of the spinner.  | `"md"`        |
+| Name     | Description               | Type     | Default Value |
+| -------- | ------------------------- | -------- | ------------- |
+| `@color` | The color of the spinner. | `String` | `'primary'`   |
+| `@size`  | The size of the spinner.  | `String` | `'md'`        |

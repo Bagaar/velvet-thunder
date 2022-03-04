@@ -4,7 +4,7 @@ Use the `@onChange` argument to handle `change` events.
 
 ```hbs template
 <DemoSpaceY>
-  <div>Value: "{{this.value}}"</div>
+  <div>Value: '{{this.value}}'</div>
   <VelvetRadioGroup
     @onChange={{this.onChange}}
     @value={{this.value}}

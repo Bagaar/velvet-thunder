@@ -40,13 +40,13 @@
 
 ## Arguments
 
-| Name           | Description                           | Default Value |
-| -------------- | ------------------------------------- | ------------- |
-| `@color`       | The ring color of the textarea.       | `"primary"`   |
-| `@isDisabled`  | Indicate if the textarea is disabled. | `undefined`   |
-| `@isInvalid`   | Indicate if the textarea is invalid.  | `undefined`   |
-| `@onChange`    | Handle the textarea's `change` event. | `undefined`   |
-| `@onInput`     | Handle the textarea's `input` event.  | `undefined`   |
-| `@placeholder` | The placeholder of the textarea.      | `undefined`   |
-| `@size`        | The size of the textarea.             | `"md"`        |
-| `@value`       | The value of the textarea.            | `undefined`   |
+| Name           | Description                           | Type       | Default Value |
+| -------------- | ------------------------------------- | ---------- | ------------- |
+| `@color`       | The ring color of the textarea.       | `String`   | `'primary'`   |
+| `@isDisabled`  | Indicate if the textarea is disabled. | `Boolean`  | `false`       |
+| `@isInvalid`   | Indicate if the textarea is invalid.  | `Boolean`  | `false`       |
+| `@onChange`    | Handle the textarea's `change` event. | `Function` | `undefined`   |
+| `@onInput`     | Handle the textarea's `input` event.  | `Function` | `undefined`   |
+| `@placeholder` | The placeholder of the textarea.      | `String`   | `''`          |
+| `@size`        | The size of the textarea.             | `String`   | `'md'`        |
+| `@value`       | The value of the textarea.            | `String`   | `''`          |

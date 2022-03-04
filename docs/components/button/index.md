@@ -78,14 +78,14 @@
 
 ## Arguments
 
-| Name            | Description                                            | Default Value |
-| --------------- | ------------------------------------------------------ | ------------- |
-| `@color`        | The color of the button.                               | `"primary"`   |
-| `@isDisabled`   | Indicate if the button is disabled.                    | `undefined`   |
-| `@isLoading`    | Indicate if the button should display a loading state. | `undefined`   |
-| `@isRenderless` | Make the button renderless.                            | `undefined`   |
-| `@isRounded`    | Indicate if the button is rounded.                     | `undefined`   |
-| `@onClick`      | Handle the button's `click` event.                     | `undefined`   |
-| `@size`         | The size of the button.                                | `"md"`        |
-| `@type`         | The type of the button.                                | `"button"`    |
-| `@variant`      | The appearance of the button.                          | `"solid"`     |
+| Name            | Description                                            | Type       | Default Value |
+| --------------- | ------------------------------------------------------ | ---------- | ------------- |
+| `@color`        | The color of the button.                               | `String`   | `'primary'`   |
+| `@isDisabled`   | Indicate if the button is disabled.                    | `Boolean`  | `false`       |
+| `@isLoading`    | Indicate if the button should display a loading state. | `Boolean`  | `false`       |
+| `@isRenderless` | Make the button renderless.                            | `Boolean`  | `false`       |
+| `@isRounded`    | Indicate if the button is rounded.                     | `Boolean`  | `false`       |
+| `@onClick`      | Handle the button's `click` event.                     | `Function` | `undefined`   |
+| `@size`         | The size of the button.                                | `String`   | `'md'`        |
+| `@type`         | The type of the button.                                | `String`   | `'button'`    |
+| `@variant`      | The appearance of the button.                          | `String`   | `'solid'`     |

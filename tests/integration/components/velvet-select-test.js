@@ -82,7 +82,9 @@ module('Integration | Component | velvet-select', function (hooks) {
       </VelvetSelect>
     `);
 
-    await select(SELECTOR, 'second');
+    const secondOption = this.element.querySelectorAll('option')[1];
+
+    await select(SELECTOR, secondOption.value);
 
     assert.verifySteps(['second']);
   });
@@ -109,7 +111,9 @@ module('Integration | Component | velvet-select', function (hooks) {
       </VelvetSelect>
     `);
 
-    assert.dom(SELECTOR).hasValue('second');
+    const secondOption = this.element.querySelectorAll('option')[1];
+
+    assert.dom(SELECTOR).hasValue(secondOption.value);
   });
 
   test('it renders a placeholder', async function (assert) {

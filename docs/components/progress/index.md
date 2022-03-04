@@ -22,11 +22,11 @@
 
 ## Arguments
 
-| Name     | Description                                  | Default Value |
-| -------- | -------------------------------------------- | ------------- |
-| `@color` | The color of the progress.                   | `"primary"`   |
-| `@max`   | The maximum value of the progress.           | `100`         |
-| `@min`   | The minimum value of the progress.           | `0`           |
-| `@size`  | The size of the progress.                    | `"md"`        |
-| `@text`  | The text describing the process in progress. | `"md"`        |
-| `@value` | The value of the progress.                   | `0`           |
+| Name     | Description                                  | Type     | Default Value |
+| -------- | -------------------------------------------- | -------- | ------------- |
+| `@color` | The color of the progress.                   | `String` | `'primary'`   |
+| `@max`   | The maximum value of the progress.           | `Number` | `100`         |
+| `@min`   | The minimum value of the progress.           | `Number` | `0`           |
+| `@size`  | The size of the progress.                    | `String` | `'md'`        |
+| `@text`  | The text describing the process in progress. | `String` | `''`          |
+| `@value` | The value of the progress.                   | `Number` | `0`           |

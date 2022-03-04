@@ -4,7 +4,7 @@ Use the `@onChange` argument to handle `change` events.
 
 ```hbs template
 <DemoSpaceY>
-  <div>Selected: "{{this.selected}}"</div>
+  <div>Selected: '{{this.selected}}'</div>
   <VelvetSelect
     @onChange={{this.onChange}}
     @placeholder='Select an Option'

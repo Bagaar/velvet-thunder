@@ -66,11 +66,11 @@
 
 ## Arguments
 
-| Name          | Description                              | Default Value   |
-| ------------- | ---------------------------------------- | --------------- |
-| `@color`      | The ring color of the radios.            | `"primary"`     |
-| `@isDisabled` | Indicate if the radio group is disabled. | `undefined`     |
-| `@name`       | The name of the radio group.             | `guidFor(this)` |
-| `@onChange`   | Handle the radio group's `change` event. | `undefined`     |
-| `@size`       | The size of the radios.                  | `"md"`          |
-| `@value`      | The value of the radio group.            | `undefined`     |
+| Name          | Description                              | Type       | Default Value |
+| ------------- | ---------------------------------------- | ---------- | ------------- |
+| `@color`      | The ring color of the radios.            | `String`   | `'primary'`   |
+| `@isDisabled` | Indicate if the radio group is disabled. | `Boolean`  | `false`       |
+| `@name`       | The name of the radio group.             | `String`   | `uid`         |
+| `@onChange`   | Handle the radio group's `change` event. | `Function` | `undefined`   |
+| `@size`       | The size of the radios.                  | `String`   | `'md'`        |
+| `@value`      | The value of the radio group.            | `Any`      | `undefined`   |

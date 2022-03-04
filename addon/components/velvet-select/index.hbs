@@ -6,7 +6,7 @@
       (class (or @color "primary"))
       (class (or @size "md"))
       (if @isInvalid (class "invalid"))
-      (if (and @placeholder (not @selected)) (class "placeholder"))
+      (if (and @placeholder (not this.hasSelection)) (class "placeholder"))
       (if @isRounded (class "rounded"))
     }}
     disabled={{@isDisabled}}
@@ -17,12 +17,18 @@
     ...attributes
   >
     {{#if @placeholder}}
-      <option disabled selected={{not @selected}}>
+      <option disabled selected={{not this.hasSelection}}>
         {{@placeholder}}
       </option>
     {{/if}}
     {{yield
-      (hash Option=(component "velvet-select/option" selected=@selected))
+      (hash
+        Option=(component
+          "velvet-select/option"
+          onRegister=this.registerOption
+          selected=@selected
+        )
+      )
     }}
   </select>
 {{/let}}

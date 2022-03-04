@@ -4,7 +4,7 @@ Use the `@onInput` argument to handle `input` events.
 
 ```hbs template
 <DemoSpaceY>
-  <div>Value: "{{this.value}}"</div>
+  <div>Value: '{{this.value}}'</div>
   <VelvetTextarea @onInput={{this.onInput}} @value={{this.value}} />
 </DemoSpaceY>
 ```

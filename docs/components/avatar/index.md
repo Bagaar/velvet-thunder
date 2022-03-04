@@ -46,14 +46,14 @@
 
 ## Arguments
 
-| Name         | Description                        | Default Value |
-| ------------ | ---------------------------------- | ------------- |
-| `@color`     | The color of the avatar.           | `"primary"`   |
-| `@initials`  | The initials of the user.          | `undefined`   |
-| `@isRounded` | Indicate if the avatar is rounded. | `undefined`   |
-| `@name`      | The name of the user.              | `undefined`   |
-| `@size`      | The size of the avatar.            | `"md"`        |
-| `@src`       | The source of the image.           | `undefined`   |
+| Name         | Description                        | Type      | Default Value |
+| ------------ | ---------------------------------- | --------- | ------------- |
+| `@color`     | The color of the avatar.           | `String`  | `'primary'`   |
+| `@initials`  | The initials of the user.          | `String`  | `''`          |
+| `@isRounded` | Indicate if the avatar is rounded. | `Boolean` | `false`       |
+| `@name`      | The name of the user.              | `String`  | `''`          |
+| `@size`      | The size of the avatar.            | `String`  | `'md'`        |
+| `@src`       | The source of the image.           | `String`  | `''`          |
 
 The order to determine what to display is as follows:
 
