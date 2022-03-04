@@ -19,9 +19,7 @@
         (modifier
           this.on
           "change"
-          (fn
-            (if @inGroup this.invokeGroupHandler this.invokeHandler) @onChange
-          )
+          (if @inGroup this.changeGroupHandler this.changeHandler)
         )
       )}}
       ...attributes

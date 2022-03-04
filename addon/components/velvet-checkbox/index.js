@@ -6,16 +6,17 @@ export default class VelvetCheckboxComponent extends Component {
   on = on;
 
   @action
-  invokeGroupHandler(handler, event) {
+  changeHandler(event) {
+    this.args.onChange(event.target.checked, event);
+  }
+
+  @action
+  changeGroupHandler(event) {
     const value = {
       ...this.args.groupValue,
       [this.args.name]: event.target.checked,
     };
 
-    handler(value, event);
-  }
-
-  invokeHandler(handler, event) {
-    handler(event.target.checked, event);
+    this.args.onChange(value, event);
   }
 }

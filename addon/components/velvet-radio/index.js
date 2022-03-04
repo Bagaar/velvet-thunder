@@ -6,11 +6,12 @@ export default class VelvetRadioComponent extends Component {
   on = on;
 
   @action
-  invokeGroupHandler(handler, event) {
-    handler(this.args.value, event);
+  changeHandler(event) {
+    this.args.onChange(event.target.checked, event);
   }
 
-  invokeHandler(handler, event) {
-    handler(event.target.checked, event);
+  @action
+  changeGroupHandler(event) {
+    this.args.onChange(this.args.value, event);
   }
 }
