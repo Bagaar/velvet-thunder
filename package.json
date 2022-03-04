@@ -57,10 +57,10 @@
     "@docfy/ember": "^0.5.0",
     "@ember/optional-features": "^2.0.0",
     "@ember/test-helpers": "^2.6.0",
-    "@embroider/test-setup": "^1.2.0",
+    "@embroider/test-setup": "^1.3.0",
     "@glimmer/component": "^1.0.4",
     "@glimmer/tracking": "^1.0.4",
-    "@tailwindcss/forms": "^0.4.0",
+    "@tailwindcss/forms": "^0.5.0",
     "@tailwindcss/typography": "^0.5.2",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
@@ -83,7 +83,7 @@
     "ember-template-lint-plugin-prettier": "^4.0.0",
     "ember-try": "^2.0.0",
     "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.4.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-ember": "^10.5.9",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
@@ -101,7 +101,7 @@
     "release-it": "^14.12.5",
     "release-it-lerna-changelog": "^4.0.1",
     "tailwindcss": "^3.0.23",
-    "webpack": "^5.69.1"
+    "webpack": "^5.70.0"
   },
   "peerDependencies": {
     "@tailwindcss/forms": "^0.4.0",
