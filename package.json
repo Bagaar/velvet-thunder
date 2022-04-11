@@ -98,7 +98,7 @@
     "rehype-autolink-headings": "^5.0.0",
     "rehype-highlight": "^4.1.0",
     "rehype-wrap-all": "^1.1.0",
-    "release-it": "^14.12.5",
+    "release-it": "^14.14.1",
     "release-it-lerna-changelog": "^4.0.1",
     "tailwindcss": "^3.0.23",
     "webpack": "^5.70.0"
