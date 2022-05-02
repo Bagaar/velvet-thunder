@@ -53,7 +53,7 @@
     "ember-truth-helpers": "^3.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.2.1",
+    "@commitlint/cli": "^16.2.4",
     "@commitlint/config-conventional": "^16.2.1",
     "@docfy/ember": "^0.5.0",
     "@ember/optional-features": "^2.0.0",
