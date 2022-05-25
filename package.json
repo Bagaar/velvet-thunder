@@ -53,8 +53,8 @@
     "ember-truth-helpers": "^3.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.2.1",
-    "@commitlint/config-conventional": "^16.2.1",
+    "@commitlint/cli": "^17.0.1",
+    "@commitlint/config-conventional": "^17.0.0",
     "@docfy/ember": "^0.5.0",
     "@ember/optional-features": "^2.0.0",
     "@ember/test-helpers": "^2.8.1",
@@ -88,7 +88,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-qunit": "^7.2.0",
-    "husky": "^7.0.4",
+    "husky": "^8.0.1",
     "lint-staged": "^12.4.2",
     "loader.js": "^4.7.0",
     "npm-run-all": "^4.1.5",
@@ -98,7 +98,7 @@
     "rehype-autolink-headings": "^5.0.0",
     "rehype-highlight": "^4.1.0",
     "rehype-wrap-all": "^1.1.0",
-    "release-it": "^14.12.5",
+    "release-it": "^15.0.0",
     "release-it-lerna-changelog": "^4.0.1",
     "tailwindcss": "^3.0.24",
     "webpack": "^5.72.1"
