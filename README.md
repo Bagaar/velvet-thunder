@@ -12,12 +12,6 @@
 - Node.js v14 or above
 - Tailwind v3 or above
 
-## Installation
-
-```shell
-ember install velvet-thunder tailwindcss
-```
-
 ## Documentation
 
 Documentation can be found at [velvet-thunder.netlify.app](https://velvet-thunder.netlify.app/).
