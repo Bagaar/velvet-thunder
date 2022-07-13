@@ -2,10 +2,9 @@
   {{#let
     (-velvet/class-list
       (class)
-      (class (or @color "primary"))
       (class (or @size "md"))
-      (class (or @variant "solid"))
-      (if @isRounded (class "rounded"))
+      (class (or @variant "primary"))
+      (if @isPill (class "pill"))
     )
     as |className|
   }}
