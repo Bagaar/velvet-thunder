@@ -2,11 +2,7 @@
 
 const { join } = require('path');
 
-const CONTENT_PATHS = ['/addon/components/**/*.hbs'];
+const CONTENT_PATHS = ['addon/components/**/*.hbs'];
+const ROOT_PATH = join(__dirname, '..');
 
-module.exports = (providedPathToVelvetThunder) => {
-  const pathToVelvetThunder =
-    providedPathToVelvetThunder || './node_modules/velvet-thunder';
-
-  return CONTENT_PATHS.map((path) => join(pathToVelvetThunder, path));
-};
+module.exports = () => CONTENT_PATHS.map((path) => join(ROOT_PATH, path));

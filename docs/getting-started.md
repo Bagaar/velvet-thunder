@@ -38,16 +38,15 @@ pnpm install velvet-thunder tailwindcss @tailwindcss/forms --dev
 'use strict';
 
 const tailwindFormsPlugin = require('@tailwindcss/forms');
-const velvetThunderContent = require('velvet-thunder/tailwind/content');
-const velvetThunderPlugin = require('velvet-thunder/tailwind/plugin');
+const velvetThunder = require('velvet-thunder/tailwind');
 
 module.exports = {
-  content: [...velvetThunderContent()],
+  content: [...velvetThunder.content()],
   plugins: [
     tailwindFormsPlugin({
       strategy: 'class',
     }),
-    velvetThunderPlugin({
+    velvetThunder.plugin({
       colors: ['amber', 'emerald', 'primary', 'rose'],
     }),
   ],
