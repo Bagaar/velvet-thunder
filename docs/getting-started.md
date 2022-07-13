@@ -6,12 +6,6 @@ order: 2
 
 ## Installation
 
-### Ember
-
-```shell
-ember install velvet-thunder tailwindcss @tailwindcss/forms
-```
-
 ### Yarn
 
 ```shell
