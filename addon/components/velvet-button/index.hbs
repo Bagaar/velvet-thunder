@@ -2,10 +2,9 @@
   {{#let
     (-velvet/class-list
       (class)
-      (class (or @color "primary"))
       (class (or @size "md"))
-      (class (or @variant "solid"))
-      (if @isRounded (class "rounded"))
+      (class (or @variant "primary"))
+      (if @isPill (class "pill"))
     )
     as |className|
   }}
@@ -22,9 +21,24 @@
         ...attributes
       >
         {{#if @isLoading}}
-          <VelvetSpinner @size={{@size}} />
+          <VelvetSpinner />
         {{/if}}
         {{yield}}
+        {{#if @isDisclosure}}
+          <svg
+            class={{class "disclosure-icon"}}
+            fill="none"
+            height="7"
+            viewBox="0 0 10 7"
+            width="10"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.175 0.150024L5 3.97502L8.825 0.150024L10 1.33336L5 6.33336L0 1.33336L1.175 0.150024Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        {{/if}}
       </button>
     {{/if}}
   {{/let}}

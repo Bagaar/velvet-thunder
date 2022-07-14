@@ -32,20 +32,6 @@ module('Integration | Component | velvet-button', function (hooks) {
     assert.dom(SELECTOR).hasText('Text');
   });
 
-  test('it renders the correct color', async function (assert) {
-    await render(hbs`
-      <VelvetButton />
-    `);
-
-    assert.dom(SELECTOR).hasClass('velvet-button-primary');
-
-    await render(hbs`
-      <VelvetButton @color="rose" />
-    `);
-
-    assert.dom(SELECTOR).hasClass('velvet-button-rose');
-  });
-
   test('it renders the correct size', async function (assert) {
     await render(hbs`
       <VelvetButton />
@@ -65,7 +51,7 @@ module('Integration | Component | velvet-button', function (hooks) {
       <VelvetButton />
     `);
 
-    assert.dom(SELECTOR).hasClass('velvet-button-solid');
+    assert.dom(SELECTOR).hasClass('velvet-button-primary');
 
     await render(hbs`
       <VelvetButton @variant="outline" />
@@ -102,18 +88,32 @@ module('Integration | Component | velvet-button', function (hooks) {
     assert.dom('.velvet-spinner').exists();
   });
 
-  test('it renders a rounded button', async function (assert) {
+  test('it renders the disclosure icon', async function (assert) {
     await render(hbs`
       <VelvetButton />
     `);
 
-    assert.dom(SELECTOR).doesNotHaveClass('velvet-button-rounded');
+    assert.dom('.velvet-button-disclosure-icon').doesNotExist();
 
     await render(hbs`
-      <VelvetButton @isRounded={{true}} />
+      <VelvetButton @isDisclosure={{true}} />
     `);
 
-    assert.dom(SELECTOR).hasClass('velvet-button-rounded');
+    assert.dom('.velvet-button-disclosure-icon').exists();
+  });
+
+  test('it renders a pill-shaped button', async function (assert) {
+    await render(hbs`
+      <VelvetButton />
+    `);
+
+    assert.dom(SELECTOR).doesNotHaveClass('velvet-button-pill');
+
+    await render(hbs`
+      <VelvetButton @isPill={{true}} />
+    `);
+
+    assert.dom(SELECTOR).hasClass('velvet-button-pill');
   });
 
   test('it renders the correct type', async function (assert) {
@@ -153,9 +153,7 @@ module('Integration | Component | velvet-button', function (hooks) {
 
     assert
       .dom()
-      .hasText(
-        'velvet-button velvet-button-primary velvet-button-md velvet-button-solid'
-      );
+      .hasText('velvet-button velvet-button-md velvet-button-primary');
   });
 
   test('`...attributes` works', async function (assert) {

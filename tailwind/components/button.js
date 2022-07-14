@@ -1,14 +1,12 @@
 'use strict';
 
-const { reduceStyles } = require('../utils/styling');
-
-module.exports = ({ colors }) => ({
+module.exports = () => ({
   '.velvet-button': {
     '@apply border border-transparent flex font-medium items-center': {},
-    '@apply transition': {},
+    '@apply rounded-md text-sm transition': {},
 
-    '&:focus': {
-      '@apply outline-none ring': {},
+    '&:focus-visible': {
+      '@apply outline-none ring-2 ring-offset-1': {},
     },
 
     '&:disabled': {
@@ -16,85 +14,27 @@ module.exports = ({ colors }) => ({
     },
 
     '&-sm': {
-      '@apply h-6 px-3 rounded text-sm': {},
-
-      '.velvet-spinner': {
-        '@apply mr-1': {},
-      },
+      '@apply h-8 px-3': {},
     },
 
     '&-md': {
-      '@apply h-8 px-4 rounded-md text-base': {},
-
-      '.velvet-spinner': {
-        '@apply mr-2': {},
-      },
+      '@apply h-9 px-4': {},
     },
 
     '&-lg': {
-      '@apply h-10 px-5 rounded-lg text-lg': {},
-
-      '.velvet-spinner': {
-        '@apply mr-3': {},
-      },
+      '@apply h-10 px-6': {},
     },
 
-    '&-rounded': {
+    '&-pill': {
       '@apply rounded-full': {},
     },
 
-    ...reduceStyles(colors, (color) => ({
-      [`&-${color}`]: {
-        [`@apply ring-${color}-400/40`]: {},
-      },
-    })),
-
-    '&-solid': {
-      ...reduceStyles(colors, (color) => ({
-        [`&.velvet-button-${color}`]: {
-          [`@apply bg-${color}-400 text-white`]: {},
-
-          '&:hover': {
-            [`@apply bg-${color}-500`]: {},
-          },
-
-          '&:disabled': {
-            [`@apply bg-${color}-300`]: {},
-          },
-        },
-      })),
+    '&-disclosure-icon': {
+      '@apply ml-2': {},
     },
 
-    '&-outline': {
-      ...reduceStyles(colors, (color) => ({
-        [`&.velvet-button-${color}`]: {
-          [`@apply border-${color}-400 text-${color}-400`]: {},
-
-          '&:hover': {
-            [`@apply border-${color}-500 text-${color}-500`]: {},
-          },
-
-          '&:disabled': {
-            [`@apply border-${color}-300 text-${color}-300`]: {},
-          },
-        },
-      })),
-    },
-
-    '&-ghost': {
-      ...reduceStyles(colors, (color) => ({
-        [`&.velvet-button-${color}`]: {
-          [`@apply text-${color}-400`]: {},
-
-          '&:hover': {
-            [`@apply bg-${color}-400/20 text-${color}-500`]: {},
-          },
-
-          '&:disabled': {
-            [`@apply bg-transparent text-${color}-300`]: {},
-          },
-        },
-      })),
+    '.velvet-spinner': {
+      '@apply mr-2': {},
     },
   },
 });
