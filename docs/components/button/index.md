@@ -50,6 +50,22 @@
 </DemoSpaceX>
 ```
 
+## Disclosure
+
+```hbs preview-template
+<DemoSpaceX>
+  <VelvetButton @isDisclosure={{true}} @variant='primary'>
+    Button
+  </VelvetButton>
+  <VelvetButton @isDisclosure={{true}} @variant='secondary'>
+    Button
+  </VelvetButton>
+  <VelvetButton @isDisclosure={{true}} @variant='ghost'>
+    Button
+  </VelvetButton>
+</DemoSpaceX>
+```
+
 ## Renderless
 
 ```hbs preview-template
@@ -70,6 +86,7 @@
 
 | Name            | Description                                            | Type       | Default Value |
 | --------------- | ------------------------------------------------------ | ---------- | ------------- |
+| `@isDisclosure` | Indicate if the button discloses content.              | `Boolean`  | `false`       |
 | `@isDisabled`   | Indicate if the button is disabled.                    | `Boolean`  | `false`       |
 | `@isLoading`    | Indicate if the button should display a loading state. | `Boolean`  | `false`       |
 | `@isPill`       | Indicate if the button is pill shaped.                 | `Boolean`  | `false`       |

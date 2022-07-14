@@ -29,6 +29,10 @@ module.exports = () => ({
       '@apply rounded-full': {},
     },
 
+    '&-disclosure-icon': {
+      '@apply ml-2': {},
+    },
+
     '.velvet-spinner': {
       '@apply mr-2': {},
     },

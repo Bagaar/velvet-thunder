@@ -88,6 +88,20 @@ module('Integration | Component | velvet-button', function (hooks) {
     assert.dom('.velvet-spinner').exists();
   });
 
+  test('it renders the disclosure icon', async function (assert) {
+    await render(hbs`
+      <VelvetButton />
+    `);
+
+    assert.dom('.velvet-button-disclosure-icon').doesNotExist();
+
+    await render(hbs`
+      <VelvetButton @isDisclosure={{true}} />
+    `);
+
+    assert.dom('.velvet-button-disclosure-icon').exists();
+  });
+
   test('it renders a pill-shaped button', async function (assert) {
     await render(hbs`
       <VelvetButton />
