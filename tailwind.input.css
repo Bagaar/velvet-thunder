@@ -96,8 +96,12 @@ pre {
 
 /* Velvet Button */
 
+.velvet-button:focus-visible {
+  @apply ring-violet-500/40;
+}
+
 .velvet-button-primary {
-  @apply bg-violet-500 ring-violet-500/40 text-white;
+  @apply bg-violet-500 text-white;
 }
 
 .velvet-button-primary:hover {
@@ -113,7 +117,7 @@ pre {
 }
 
 .velvet-button-secondary {
-  @apply border-violet-500 ring-violet-500/40 text-violet-500;
+  @apply border-violet-500 text-violet-500;
 }
 
 .velvet-button-secondary:hover {
@@ -129,7 +133,7 @@ pre {
 }
 
 .velvet-button-ghost {
-  @apply ring-violet-500/40 text-violet-500;
+  @apply text-violet-500;
 }
 
 .velvet-button-ghost:hover {
@@ -142,4 +146,32 @@ pre {
 
 .velvet-button-ghost:disabled {
   @apply bg-transparent text-violet-400;
+}
+
+/* Velvet Input & Textarea */
+
+.velvet-input,
+.velvet-textarea {
+  @apply bg-transparent border-gray-400/40;
+  @apply placeholder:opacity-40 placeholder:text-inherit;
+}
+
+.velvet-input:focus-visible,
+.velvet-textarea:focus-visible {
+  @apply border-violet-400 ring-violet-500/40;
+}
+
+.velvet-input:not(.velvet-input-invalid):not(:disabled):not(:focus):hover,
+.velvet-textarea:not(.velvet-textarea-invalid):not(:disabled):not(:focus):hover {
+  @apply border-gray-400/80;
+}
+
+.velvet-input-invalid,
+.velvet-textarea-invalid {
+  @apply border-rose-400;
+}
+
+.velvet-input-invalid:focus-visible,
+.velvet-textarea-invalid:focus-visible {
+  @apply border-rose-400 ring-rose-500/40;
 }
