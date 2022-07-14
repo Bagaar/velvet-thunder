@@ -16,20 +16,6 @@ module('Integration | Component | velvet-textarea', function (hooks) {
     assert.dom(SELECTOR).hasClass('form-textarea').hasClass('velvet-textarea');
   });
 
-  test('it renders the correct color', async function (assert) {
-    await render(hbs`
-      <VelvetTextarea />
-    `);
-
-    assert.dom(SELECTOR).hasClass('velvet-textarea-primary');
-
-    await render(hbs`
-      <VelvetTextarea @color="rose" />
-    `);
-
-    assert.dom(SELECTOR).hasClass('velvet-textarea-rose');
-  });
-
   test('it renders a disabled textarea', async function (assert) {
     await render(hbs`
       <VelvetTextarea />

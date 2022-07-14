@@ -3,10 +3,9 @@
     class={{-velvet/class-list
       "form-input"
       (class)
-      (class (or @color "primary"))
       (class (or @size "md"))
       (if @isInvalid (class "invalid"))
-      (if @isRounded (class "rounded"))
+      (if @isPill (class "pill"))
     }}
     disabled={{@isDisabled}}
     placeholder={{@placeholder}}

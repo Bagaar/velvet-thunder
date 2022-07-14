@@ -1,15 +1,5 @@
 # Textarea
 
-## Colors
-
-```hbs preview-template
-<DemoSpaceX>
-  <VelvetTextarea @color='emerald' />
-  <VelvetTextarea @color='amber' />
-  <VelvetTextarea @color='rose' />
-</DemoSpaceX>
-```
-
 ## Sizes
 
 ```hbs preview-template
@@ -42,7 +32,6 @@
 
 | Name           | Description                           | Type       | Default Value |
 | -------------- | ------------------------------------- | ---------- | ------------- |
-| `@color`       | The ring color of the textarea.       | `String`   | `'primary'`   |
 | `@isDisabled`  | Indicate if the textarea is disabled. | `Boolean`  | `false`       |
 | `@isInvalid`   | Indicate if the textarea is invalid.  | `Boolean`  | `false`       |
 | `@onChange`    | Handle the textarea's `change` event. | `Function` | `undefined`   |

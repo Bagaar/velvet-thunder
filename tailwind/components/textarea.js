@@ -1,47 +1,27 @@
 'use strict';
 
-const { reduceStyles } = require('../utils/styling');
-
-module.exports = ({ colors }) => ({
+module.exports = () => ({
   '.velvet-textarea': {
-    '@apply bg-transparent border-gray-400/40': {},
-    '@apply font-medium transition w-full': {},
-    '@apply placeholder:opacity-40 placeholder:text-inherit': {},
+    '@apply rounded-md text-sm transition w-full': {},
 
-    '&:not(.velvet-textarea-invalid):not(:disabled):not(:focus):hover': {
-      '@apply border-gray-400/80': {},
-    },
-
-    '&:focus': {
-      '@apply ring': {},
+    '&:focus-visible': {
+      '@apply outline-none ring-2': {},
     },
 
     '&:disabled': {
-      '@apply cursor-not-allowed opacity-40': {},
+      '@apply cursor-not-allowed': {},
     },
 
     '&-sm': {
-      '@apply h-16 px-3 py-2 rounded text-sm': {},
+      '@apply h-16 px-2 py-1': {},
     },
 
     '&-md': {
-      '@apply h-24 px-4 py-3 rounded-md text-base': {},
+      '@apply h-24 px-3 py-2': {},
     },
 
     '&-lg': {
-      '@apply h-32 px-5 py-4 rounded-lg text-lg': {},
-    },
-
-    ...reduceStyles(colors, (color) => ({
-      [`&-${color}`]: {
-        '&:focus': {
-          [`@apply border-${color}-400 ring-${color}-400/40`]: {},
-        },
-      },
-    })),
-
-    '&-invalid': {
-      '@apply border-rose-400': {},
+      '@apply h-32 px-4 py-3': {},
     },
   },
 });
