@@ -86,8 +86,8 @@
 
 | Name            | Description                                            | Type       | Default Value |
 | --------------- | ------------------------------------------------------ | ---------- | ------------- |
-| `@isDisclosure` | Indicate if the button discloses content.              | `Boolean`  | `false`       |
 | `@isDisabled`   | Indicate if the button is disabled.                    | `Boolean`  | `false`       |
+| `@isDisclosure` | Indicate if the button discloses content.              | `Boolean`  | `false`       |
 | `@isLoading`    | Indicate if the button should display a loading state. | `Boolean`  | `false`       |
 | `@isPill`       | Indicate if the button is pill shaped.                 | `Boolean`  | `false`       |
 | `@isRenderless` | Make the button renderless.                            | `Boolean`  | `false`       |
