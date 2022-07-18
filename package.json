@@ -61,7 +61,7 @@
     "@embroider/test-setup": "^1.8.0",
     "@glimmer/tracking": "^1.1.2",
     "@tailwindcss/forms": "^0.5.2",
-    "@tailwindcss/typography": "^0.5.3",
+    "@tailwindcss/typography": "^0.5.4",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
     "ember-auto-import": "^2.4.2",
