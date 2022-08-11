@@ -9,7 +9,7 @@
   >
     <input
       checked={{if @inGroup (eq @value @groupValue) @isChecked}}
-      class={{-velvet/class-list "form-radio" (class "input")}}
+      class={{-velvet/class-list (class "input") "form-radio"}}
       disabled={{@isDisabled}}
       name={{@name}}
       type="radio"
