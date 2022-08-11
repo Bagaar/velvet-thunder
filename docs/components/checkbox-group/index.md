@@ -7,7 +7,7 @@
   <VelvetCheckboxGroup
     @size='sm'
     @value={{hash first=true}}
-    class='space-y-3'
+    class='space-y-2'
     as |group|
   >
     <group.Checkbox @name='first'>First</group.Checkbox>
@@ -27,7 +27,7 @@
   <VelvetCheckboxGroup
     @size='lg'
     @value={{hash first=true}}
-    class='space-y-3'
+    class='space-y-4'
     as |group|
   >
     <group.Checkbox @name='first'>First</group.Checkbox>

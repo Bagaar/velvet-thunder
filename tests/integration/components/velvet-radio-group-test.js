@@ -17,26 +17,6 @@ module('Integration | Component | velvet-radio-group', function (hooks) {
     assert.dom(GROUP_SELECTOR).exists();
   });
 
-  test('it renders the correct color for each radio', async function (assert) {
-    await render(hbs`
-      <VelvetRadioGroup as |group|>
-        <group.Radio />
-        <group.Radio />
-      </VelvetRadioGroup>
-    `);
-
-    assert.dom('.velvet-radio-primary').exists({ count: 2 });
-
-    await render(hbs`
-      <VelvetRadioGroup @color="rose" as |group|>
-        <group.Radio />
-        <group.Radio />
-      </VelvetRadioGroup>
-    `);
-
-    assert.dom('.velvet-radio-rose').exists({ count: 2 });
-  });
-
   test('it renders disabled radios', async function (assert) {
     await render(hbs`
       <VelvetRadioGroup as |group|>
