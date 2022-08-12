@@ -4,8 +4,8 @@ module.exports = () => ({
   '.velvet-textarea': {
     '@apply rounded-md text-sm transition w-full': {},
 
-    '&:focus-visible': {
-      '@apply outline-none ring-2': {},
+    '&:focus': {
+      '@apply outline outline-2 outline-offset-0 ring-0': {},
     },
 
     '&:disabled': {

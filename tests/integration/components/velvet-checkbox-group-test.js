@@ -17,26 +17,6 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
     assert.dom(GROUP_SELECTOR).exists();
   });
 
-  test('it renders the correct color for each checkbox', async function (assert) {
-    await render(hbs`
-      <VelvetCheckboxGroup as |group|>
-        <group.Checkbox />
-        <group.Checkbox />
-      </VelvetCheckboxGroup>
-    `);
-
-    assert.dom('.velvet-checkbox-primary').exists({ count: 2 });
-
-    await render(hbs`
-      <VelvetCheckboxGroup @color="rose" as |group|>
-        <group.Checkbox />
-        <group.Checkbox />
-      </VelvetCheckboxGroup>
-    `);
-
-    assert.dom('.velvet-checkbox-rose').exists({ count: 2 });
-  });
-
   test('it renders disabled checkboxes', async function (assert) {
     await render(hbs`
       <VelvetCheckboxGroup as |group|>

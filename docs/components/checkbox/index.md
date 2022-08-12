@@ -1,15 +1,5 @@
 # Checkbox
 
-## Colors
-
-```hbs preview-template
-<DemoSpaceX>
-  <VelvetCheckbox @color='emerald' @isChecked={{true}}>Emerald</VelvetCheckbox>
-  <VelvetCheckbox @color='amber' @isChecked={{true}}>Amber</VelvetCheckbox>
-  <VelvetCheckbox @color='rose' @isChecked={{true}}>Rose</VelvetCheckbox>
-</DemoSpaceX>
-```
-
 ## Sizes
 
 ```hbs preview-template
@@ -41,7 +31,6 @@
 
 | Name               | Description                                | Type       | Default Value |
 | ------------------ | ------------------------------------------ | ---------- | ------------- |
-| `@color`           | The ring color of the checkbox.            | `String`   | `'primary'`   |
 | `@isChecked`       | Indicate if the checkbox is checked.       | `Boolean`  | `false`       |
 | `@isDisabled`      | Indicate if the checkbox is disabled.      | `Boolean`  | `false`       |
 | `@isIndeterminate` | Indicate if the checkbox is indeterminate. | `Boolean`  | `false`       |

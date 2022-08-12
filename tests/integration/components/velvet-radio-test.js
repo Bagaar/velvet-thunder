@@ -20,20 +20,6 @@ module('Integration | Component | velvet-radio', function (hooks) {
     assert.dom(SELECTOR.INPUT).hasClass('form-radio');
   });
 
-  test('it renders the correct color', async function (assert) {
-    await render(hbs`
-      <VelvetRadio />
-    `);
-
-    assert.dom(SELECTOR.LABEL).hasClass('velvet-radio-primary');
-
-    await render(hbs`
-      <VelvetRadio @color="rose" />
-    `);
-
-    assert.dom(SELECTOR.LABEL).hasClass('velvet-radio-rose');
-  });
-
   test('it renders a disabled radio', async function (assert) {
     await render(hbs`
       <VelvetRadio />

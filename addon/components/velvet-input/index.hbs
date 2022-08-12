@@ -1,11 +1,11 @@
 {{#let (helper "-velvet/class" "velvet-input") as |class|}}
   <input
     class={{-velvet/class-list
-      "form-input"
       (class)
       (class (or @size "md"))
       (if @isInvalid (class "invalid"))
       (if @isPill (class "pill"))
+      "form-input"
     }}
     disabled={{@isDisabled}}
     placeholder={{@placeholder}}

@@ -20,20 +20,6 @@ module('Integration | Component | velvet-checkbox', function (hooks) {
     assert.dom(SELECTOR.INPUT).hasClass('form-checkbox');
   });
 
-  test('it renders the correct color', async function (assert) {
-    await render(hbs`
-      <VelvetCheckbox />
-    `);
-
-    assert.dom(SELECTOR.LABEL).hasClass('velvet-checkbox-primary');
-
-    await render(hbs`
-      <VelvetCheckbox @color="rose" />
-    `);
-
-    assert.dom(SELECTOR.LABEL).hasClass('velvet-checkbox-rose');
-  });
-
   test('it renders a disabled checkbox', async function (assert) {
     await render(hbs`
       <VelvetCheckbox />

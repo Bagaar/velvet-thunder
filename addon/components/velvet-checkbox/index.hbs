@@ -2,14 +2,13 @@
   <label
     class={{-velvet/class-list
       (class)
-      (class (or @color "primary"))
       (class (or @size "md"))
       (if @isDisabled (class "disabled"))
     }}
   >
     <input
       checked={{if @inGroup (eq (get @groupValue @name) true) @isChecked}}
-      class={{-velvet/class-list "form-checkbox" (class "input")}}
+      class={{-velvet/class-list (class "input") "form-checkbox"}}
       disabled={{@isDisabled}}
       indeterminate={{@isIndeterminate}}
       name={{@name}}

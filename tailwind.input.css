@@ -97,7 +97,7 @@ pre {
 /* Velvet Button */
 
 .velvet-button:focus-visible {
-  @apply ring-violet-500/40;
+  @apply outline-violet-500/40;
 }
 
 .velvet-button-primary {
@@ -125,11 +125,11 @@ pre {
 }
 
 .velvet-button-secondary:active {
-  @apply border-violet-700 text-violet-700;
+  @apply bg-violet-500/20 border-violet-700 text-violet-700;
 }
 
 .velvet-button-secondary:disabled {
-  @apply border-violet-400 text-violet-400;
+  @apply bg-transparent border-violet-400 text-violet-400;
 }
 
 .velvet-button-ghost {
@@ -156,9 +156,9 @@ pre {
   @apply placeholder:opacity-40 placeholder:text-inherit;
 }
 
-.velvet-input:focus-visible,
-.velvet-textarea:focus-visible {
-  @apply border-violet-400 ring-violet-500/40;
+.velvet-input:focus,
+.velvet-textarea:focus {
+  @apply border-violet-500 outline-violet-500/40;
 }
 
 .velvet-input:not(.velvet-input-invalid):not(:disabled):not(:focus):hover,
@@ -168,10 +168,44 @@ pre {
 
 .velvet-input-invalid,
 .velvet-textarea-invalid {
-  @apply border-rose-400;
+  @apply border-rose-500;
 }
 
-.velvet-input-invalid:focus-visible,
-.velvet-textarea-invalid:focus-visible {
-  @apply border-rose-400 ring-rose-500/40;
+.velvet-input-invalid:focus,
+.velvet-textarea-invalid:focus {
+  @apply border-rose-500 outline-rose-500/40;
+}
+
+/* Velvet Checkbox & Radio */
+
+.velvet-checkbox-disabled,
+.velvet-radio-disabled {
+  @apply opacity-40;
+}
+
+.velvet-checkbox-input,
+.velvet-radio-input {
+  @apply bg-transparent border-gray-400/40;
+}
+
+.velvet-checkbox-input:not(:checked):not(:disabled):not(:focus-visible):hover,
+.velvet-radio-input:not(:checked):not(:disabled):not(:focus-visible):hover {
+  @apply border-gray-400/80;
+}
+
+.velvet-checkbox-input:checked,
+.velvet-checkbox-input:checked:hover,
+.velvet-checkbox-input:checked:focus,
+.velvet-checkbox-input:indeterminate,
+.velvet-checkbox-input:indeterminate:hover,
+.velvet-checkbox-input:indeterminate:focus,
+.velvet-radio-input:checked,
+.velvet-radio-input:checked:hover,
+.velvet-radio-input:checked:focus {
+  @apply bg-violet-500;
+}
+
+.velvet-checkbox-input:focus-visible,
+.velvet-radio-input:focus-visible {
+  @apply border-violet-500 outline-violet-500/40;
 }

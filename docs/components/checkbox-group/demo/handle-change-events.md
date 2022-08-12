@@ -8,7 +8,7 @@ Use the `@onChange` argument to handle `change` events.
   <VelvetCheckboxGroup
     @onChange={{this.onChange}}
     @value={{this.value}}
-    class='space-y-2'
+    class='space-y-3'
     as |group|
   >
     <group.Checkbox @name='first'>First</group.Checkbox>
