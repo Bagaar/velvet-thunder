@@ -25,6 +25,7 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
       </VelvetCheckboxGroup>
     `);
 
+    assert.dom('.velvet-checkbox-group-disabled').doesNotExist();
     assert.dom('.velvet-checkbox-disabled').doesNotExist();
     assert.dom(`${CHECKBOX_SELECTOR}:disabled`).doesNotExist();
 
@@ -35,6 +36,7 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
       </VelvetCheckboxGroup>
     `);
 
+    assert.dom('.velvet-checkbox-group-disabled').exists();
     assert.dom('.velvet-checkbox-disabled').exists({ count: 2 });
     assert.dom(`${CHECKBOX_SELECTOR}:disabled`).exists({ count: 2 });
   });
@@ -77,6 +79,7 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
       </VelvetCheckboxGroup>
     `);
 
+    assert.dom('.velvet-checkbox-group-md').exists();
     assert.dom('.velvet-checkbox-md').exists({ count: 2 });
 
     await render(hbs`
@@ -86,6 +89,7 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
       </VelvetCheckboxGroup>
     `);
 
+    assert.dom('.velvet-checkbox-group-lg').exists();
     assert.dom('.velvet-checkbox-lg').exists({ count: 2 });
   });
 
