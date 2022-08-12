@@ -15,8 +15,8 @@
   "scripts": {
     "build": "yarn tailwind:build && ember build --environment=production",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel \"lint:!(fix)\"",
-    "lint:css": "prettier \"./**/*.css\" --check",
-    "lint:css:fix": "prettier \"./**/*.css\" --write",
+    "lint:css": "stylelint \"./**/*.css\"",
+    "lint:css:fix": "stylelint \"./**/*.css\" --fix",
     "lint:fix": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*:fix",
     "lint:hbs": "ember-template-lint .",
     "lint:hbs:fix": "ember-template-lint . --fix",
@@ -42,7 +42,8 @@
     ]
   },
   "lint-staged": {
-    "*.{css,json,md,yml}": "prettier --check",
+    "*.{json,md,yml}": "prettier --check",
+    "*.css": "stylelint --fix",
     "*.hbs": "ember-template-lint",
     "*.js": "eslint"
   },
@@ -99,6 +100,11 @@
     "rehype-wrap-all": "^1.1.0",
     "release-it": "^14.14.3",
     "release-it-lerna-changelog": "^5.0.0",
+    "stylelint": "^14.10.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^27.0.0",
+    "stylelint-config-tailwindcss": "^0.0.6",
+    "stylelint-prettier": "^2.0.0",
     "tailwindcss": "^3.1.8",
     "webpack": "^5.74.0"
   },
