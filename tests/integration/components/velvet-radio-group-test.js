@@ -25,6 +25,7 @@ module('Integration | Component | velvet-radio-group', function (hooks) {
       </VelvetRadioGroup>
     `);
 
+    assert.dom('.velvet-radio-group-disabled').doesNotExist();
     assert.dom('.velvet-radio-disabled').doesNotExist();
     assert.dom(`${RADIO_SELECTOR}:disabled`).doesNotExist();
 
@@ -35,6 +36,7 @@ module('Integration | Component | velvet-radio-group', function (hooks) {
       </VelvetRadioGroup>
     `);
 
+    assert.dom('.velvet-radio-group-disabled').exists();
     assert.dom('.velvet-radio-disabled').exists({ count: 2 });
     assert.dom(`${RADIO_SELECTOR}:disabled`).exists({ count: 2 });
   });
@@ -65,6 +67,7 @@ module('Integration | Component | velvet-radio-group', function (hooks) {
       </VelvetRadioGroup>
     `);
 
+    assert.dom('.velvet-radio-group-md').exists();
     assert.dom('.velvet-radio-md').exists({ count: 2 });
 
     await render(hbs`
@@ -74,6 +77,7 @@ module('Integration | Component | velvet-radio-group', function (hooks) {
       </VelvetRadioGroup>
     `);
 
+    assert.dom('.velvet-radio-group-lg').exists();
     assert.dom('.velvet-radio-lg').exists({ count: 2 });
   });
 
