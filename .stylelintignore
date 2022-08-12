@@ -1,0 +1,4 @@
+# compiled output
+/coverage/
+/dist/
+/tests/dummy/public/assets/*.css
