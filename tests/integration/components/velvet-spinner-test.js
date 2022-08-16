@@ -16,14 +16,6 @@ module('Integration | Component | velvet-spinner', function (hooks) {
     assert.dom(SELECTOR).exists();
   });
 
-  test('it renders the correct color', async function (assert) {
-    await render(hbs`
-      <VelvetSpinner @color="primary" />
-    `);
-
-    assert.dom(SELECTOR).hasClass('velvet-spinner-primary');
-  });
-
   test('it renders the correct size', async function (assert) {
     await render(hbs`
       <VelvetSpinner />

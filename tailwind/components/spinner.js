@@ -1,31 +1,31 @@
 'use strict';
 
-const { reduceStyles } = require('../utils/styling');
-
-module.exports = ({ colors }) => ({
+module.exports = () => ({
   '.velvet-spinner': {
     '@apply animate-spin': {},
 
-    '&-sm': {
+    '&-xs': {
       '@apply h-3 w-3': {},
     },
 
-    '&-md': {
+    '&-sm': {
       '@apply h-4 w-4': {},
     },
 
-    '&-lg': {
+    '&-md': {
       '@apply h-5 w-5': {},
+    },
+
+    '&-lg': {
+      '@apply h-6 w-6': {},
+    },
+
+    '&-xl': {
+      '@apply h-7 w-7': {},
     },
 
     '&-track': {
       '@apply opacity-20': {},
     },
-
-    ...reduceStyles(colors, (color) => ({
-      [`&-${color}`]: {
-        [`@apply text-${color}-400`]: {},
-      },
-    })),
   },
 });
