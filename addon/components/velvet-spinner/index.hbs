@@ -1,10 +1,6 @@
 {{#let (helper "-velvet/class" "velvet-spinner") as |class|}}
   <svg
-    class={{-velvet/class-list
-      (class)
-      (class (or @size "md"))
-      (if @color (class @color))
-    }}
+    class={{-velvet/class-list (class) (class (or @size "md"))}}
     fill="none"
     role="status"
     stroke="currentColor"
