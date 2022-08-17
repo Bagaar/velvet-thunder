@@ -3,7 +3,7 @@ import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
-const SELECTOR = 'textarea';
+const SELECTOR = '.velvet-textarea';
 
 module('Integration | Component | velvet-textarea', function (hooks) {
   setupRenderingTest(hooks);

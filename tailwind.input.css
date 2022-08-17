@@ -94,57 +94,70 @@ pre {
   @apply bg-transparent;
 }
 
-/* Velvet Button */
+/* Velvet Button & Icon Button */
 
-.velvet-button:focus-visible {
+.velvet-button:focus-visible,
+.velvet-icon-button:focus-visible {
   @apply outline-violet-500/40;
 }
 
-.velvet-button-primary {
+.velvet-button-primary,
+.velvet-icon-button-primary {
   @apply bg-violet-500 text-white;
 }
 
-.velvet-button-primary:hover {
+.velvet-button-primary:hover,
+.velvet-icon-button-primary:hover {
   @apply bg-violet-600;
 }
 
-.velvet-button-primary:active {
+.velvet-button-primary:active,
+.velvet-icon-button-primary:active {
   @apply bg-violet-700;
 }
 
-.velvet-button-primary:disabled {
+.velvet-button-primary:disabled,
+.velvet-icon-button-primary:disabled {
   @apply bg-violet-400;
 }
 
-.velvet-button-secondary {
+.velvet-button-secondary,
+.velvet-icon-button-secondary {
   @apply border-violet-500 text-violet-500;
 }
 
-.velvet-button-secondary:hover {
+.velvet-button-secondary:hover,
+.velvet-icon-button-secondary:hover {
   @apply border-violet-600 text-violet-600;
 }
 
-.velvet-button-secondary:active {
+.velvet-button-secondary:active,
+.velvet-icon-button-secondary:active {
   @apply bg-violet-500/20 border-violet-700 text-violet-700;
 }
 
-.velvet-button-secondary:disabled {
+.velvet-button-secondary:disabled,
+.velvet-icon-button-secondary:disabled {
   @apply bg-transparent border-violet-400 text-violet-400;
 }
 
-.velvet-button-ghost {
+.velvet-button-ghost,
+.velvet-icon-button-ghost {
   @apply text-violet-500;
 }
 
-.velvet-button-ghost:hover {
+.velvet-button-ghost:hover,
+.velvet-icon-button-ghost:hover {
   @apply bg-violet-500/20 text-violet-600;
 }
 
-.velvet-button-ghost:active {
+.velvet-button-ghost:active,
+.velvet-icon-button-ghost:active {
   @apply bg-violet-500/40 text-violet-700;
 }
 
-.velvet-button-ghost:disabled {
+.velvet-button-ghost:disabled,
+.velvet-icon-button-ghost:disabled {
   @apply bg-transparent text-violet-400;
 }
 

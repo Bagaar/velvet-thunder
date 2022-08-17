@@ -3,7 +3,7 @@ import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
-const SELECTOR = 'input[type="text"]';
+const SELECTOR = '.velvet-input';
 
 module('Integration | Component | velvet-input', function (hooks) {
   setupRenderingTest(hooks);
