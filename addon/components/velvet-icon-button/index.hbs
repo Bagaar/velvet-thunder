@@ -1,10 +1,10 @@
-{{#let (helper "-velvet/class" "velvet-button") as |class|}}
+{{#let (helper "-velvet/class" "velvet-icon-button") as |class|}}
   {{#let
     (-velvet/class-list
       (class)
       (class (or @size "md"))
       (class (or @variant "primary"))
-      (if @isPill (class "pill"))
+      (if @isRound (class "round"))
     )
     as |className|
   }}
@@ -22,10 +22,10 @@
       >
         {{#if @isLoading}}
           <VelvetSpinner />
-        {{/if}}
-        {{yield}}
-        {{#if @isDisclosure}}
+        {{else if @isDisclosure}}
           <VelvetDisclosureIcon class={{class "disclosure-icon"}} />
+        {{else}}
+          {{yield}}
         {{/if}}
       </button>
     {{/if}}
