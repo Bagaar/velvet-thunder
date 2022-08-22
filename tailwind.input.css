@@ -222,3 +222,13 @@ pre {
 .velvet-radio-input:not(:checked, :disabled, :focus-visible):hover {
   @apply border-gray-400/80;
 }
+
+/* Velvet Tag */
+
+.velvet-tag-primary {
+  @apply bg-violet-500 text-white;
+}
+
+.velvet-tag-secondary {
+  @apply bg-violet-500/20 text-violet-600;
+}

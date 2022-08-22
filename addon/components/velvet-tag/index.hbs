@@ -1,0 +1,13 @@
+{{#let (helper "-velvet/class" "velvet-tag") as |class|}}
+  <div
+    class={{-velvet/class-list
+      (class)
+      (class (or @size "md"))
+      (class (or @variant "primary"))
+      (if @isPill (class "pill"))
+    }}
+    ...attributes
+  >
+    {{yield}}
+  </div>
+{{/let}}
