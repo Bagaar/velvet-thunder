@@ -4,7 +4,7 @@ module.exports = () => ({
   '.velvet-tag': {
     '@apply border border-transparent font-medium': {},
     '@apply flex items-center justify-center': {},
-    '@apply rounded text-sm': {},
+    '@apply rounded text-sm w-fit': {},
 
     '&-sm': {
       '@apply h-5 px-1 text-xs': {},
