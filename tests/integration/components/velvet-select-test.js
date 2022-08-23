@@ -16,20 +16,6 @@ module('Integration | Component | velvet-select', function (hooks) {
     assert.dom(SELECTOR).hasClass('form-select').hasClass('velvet-select');
   });
 
-  test('it renders the correct color', async function (assert) {
-    await render(hbs`
-      <VelvetSelect />
-    `);
-
-    assert.dom(SELECTOR).hasClass('velvet-select-primary');
-
-    await render(hbs`
-      <VelvetSelect @color="rose" />
-    `);
-
-    assert.dom(SELECTOR).hasClass('velvet-select-rose');
-  });
-
   test('it renders a disabled select', async function (assert) {
     await render(hbs`
       <VelvetSelect />
@@ -58,18 +44,18 @@ module('Integration | Component | velvet-select', function (hooks) {
     assert.dom(SELECTOR).hasClass('velvet-select-invalid');
   });
 
-  test('it renders a rounded select', async function (assert) {
+  test('it renders a pill-shaped select', async function (assert) {
     await render(hbs`
       <VelvetSelect />
     `);
 
-    assert.dom(SELECTOR).doesNotHaveClass('velvet-select-rounded');
+    assert.dom(SELECTOR).doesNotHaveClass('velvet-select-pill');
 
     await render(hbs`
-      <VelvetSelect @isRounded={{true}} />
+      <VelvetSelect @isPill={{true}} />
     `);
 
-    assert.dom(SELECTOR).hasClass('velvet-select-rounded');
+    assert.dom(SELECTOR).hasClass('velvet-select-pill');
   });
 
   test('it handles `change` events', async function (assert) {

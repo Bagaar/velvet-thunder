@@ -166,7 +166,8 @@ pre {
 .velvet-input,
 .velvet-textarea {
   @apply bg-transparent border-gray-400/40;
-  @apply placeholder:opacity-40 placeholder:text-inherit;
+  @apply placeholder:opacity-50 placeholder:text-slate-500;
+  @apply dark:placeholder:opacity-50 dark:placeholder:text-slate-400;
 }
 
 .velvet-input:focus,
@@ -193,7 +194,7 @@ pre {
 
 .velvet-checkbox-disabled,
 .velvet-radio-disabled {
-  @apply opacity-40;
+  @apply opacity-50;
 }
 
 .velvet-checkbox-input,
@@ -231,4 +232,31 @@ pre {
 
 .velvet-tag-secondary {
   @apply bg-violet-500/20 text-violet-600;
+}
+
+/* Velvet Select */
+
+.velvet-select {
+  @apply bg-transparent border-gray-400/40;
+}
+
+.velvet-select-placeholder {
+  @apply text-opacity-50 text-slate-500;
+  @apply dark:text-opacity-50 dark:text-slate-400;
+}
+
+.velvet-select:focus {
+  @apply border-violet-500 outline-violet-500/40;
+}
+
+.velvet-select:not(.velvet-select-invalid, :disabled, :focus):hover {
+  @apply border-gray-400/80;
+}
+
+.velvet-select-invalid {
+  @apply border-rose-500;
+}
+
+.velvet-select-invalid:focus {
+  @apply border-rose-500 outline-rose-500/40;
 }
