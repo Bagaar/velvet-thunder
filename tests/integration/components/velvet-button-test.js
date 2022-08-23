@@ -65,13 +65,19 @@ module('Integration | Component | velvet-button', function (hooks) {
       <VelvetButton />
     `);
 
-    assert.dom(SELECTOR).doesNotHaveAttribute('disabled');
+    assert
+      .dom(SELECTOR)
+      .doesNotHaveAttribute('disabled')
+      .doesNotHaveClass('velvet-button-disabled');
 
     await render(hbs`
       <VelvetButton @isDisabled={{true}} />
     `);
 
-    assert.dom(SELECTOR).hasAttribute('disabled');
+    assert
+      .dom(SELECTOR)
+      .hasAttribute('disabled')
+      .hasClass('velvet-button-disabled');
   });
 
   test('it renders a loading state', async function (assert) {

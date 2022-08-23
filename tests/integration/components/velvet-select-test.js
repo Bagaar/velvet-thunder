@@ -21,13 +21,19 @@ module('Integration | Component | velvet-select', function (hooks) {
       <VelvetSelect />
     `);
 
-    assert.dom(SELECTOR).doesNotHaveAttribute('disabled');
+    assert
+      .dom(SELECTOR)
+      .doesNotHaveAttribute('disabled')
+      .doesNotHaveClass('velvet-select-disabled');
 
     await render(hbs`
       <VelvetSelect @isDisabled={{true}} />
     `);
 
-    assert.dom(SELECTOR).hasAttribute('disabled');
+    assert
+      .dom(SELECTOR)
+      .hasAttribute('disabled')
+      .hasClass('velvet-select-disabled');
   });
 
   test('it renders an invalid select', async function (assert) {

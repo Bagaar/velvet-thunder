@@ -21,13 +21,19 @@ module('Integration | Component | velvet-textarea', function (hooks) {
       <VelvetTextarea />
     `);
 
-    assert.dom(SELECTOR).doesNotHaveAttribute('disabled');
+    assert
+      .dom(SELECTOR)
+      .doesNotHaveAttribute('disabled')
+      .doesNotHaveClass('velvet-textarea-disabled');
 
     await render(hbs`
       <VelvetTextarea @isDisabled={{true}} />
     `);
 
-    assert.dom(SELECTOR).hasAttribute('disabled');
+    assert
+      .dom(SELECTOR)
+      .hasAttribute('disabled')
+      .hasClass('velvet-textarea-disabled');
   });
 
   test('it renders an invalid textarea', async function (assert) {
