@@ -26,6 +26,8 @@ jobs:
           cache: yarn
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
+      - name: Lint Root
+        run: yarn lint
       - name: Lint
         run: yarn lint
         working-directory: velvet-thunder
