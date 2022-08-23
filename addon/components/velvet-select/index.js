@@ -10,6 +10,10 @@ export default class VelvetSelectComponent extends Component {
     return [...this.options.values()].includes(this.args.selected);
   }
 
+  get shouldDisplayPlaceholder() {
+    return Boolean(this.args.placeholder) && this.hasSelection === false;
+  }
+
   @action
   changeHandler(event) {
     this.args.onChange(this.options.get(event.target.value), event);

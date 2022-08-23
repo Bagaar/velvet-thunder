@@ -1,27 +1,5 @@
 # Select
 
-## Colors
-
-```hbs preview-template
-<DemoSpaceX>
-  <VelvetSelect @color='emerald' as |select|>
-    <select.Option @value='first'>First</select.Option>
-    <select.Option @value='second'>Second</select.Option>
-    <select.Option @value='third'>Third</select.Option>
-  </VelvetSelect>
-  <VelvetSelect @color='amber' as |select|>
-    <select.Option @value='first'>First</select.Option>
-    <select.Option @value='second'>Second</select.Option>
-    <select.Option @value='third'>Third</select.Option>
-  </VelvetSelect>
-  <VelvetSelect @color='rose' as |select|>
-    <select.Option @value='first'>First</select.Option>
-    <select.Option @value='second'>Second</select.Option>
-    <select.Option @value='third'>Third</select.Option>
-  </VelvetSelect>
-</DemoSpaceX>
-```
-
 ## Sizes
 
 ```hbs preview-template
@@ -54,10 +32,10 @@
 </VelvetSelect>
 ```
 
-## Rounded
+## Pill
 
 ```hbs preview-template
-<VelvetSelect @isRounded={{true}} as |select|>
+<VelvetSelect @isPill={{true}} as |select|>
   <select.Option @value='first'>First</select.Option>
   <select.Option @value='second'>Second</select.Option>
   <select.Option @value='third'>Third</select.Option>
@@ -86,16 +64,15 @@
 
 ## Arguments
 
-| Name           | Description                         | Type       | Default Value |
-| -------------- | ----------------------------------- | ---------- | ------------- |
-| `@color`       | The ring color of the select.       | `String`   | `'primary'`   |
-| `@isDisabled`  | Indicate if the select is disabled. | `Boolean`  | `false`       |
-| `@isInvalid`   | Indicate if the select is invalid.  | `Boolean`  | `false`       |
-| `@isRounded`   | Indicate if the select is rounded.  | `Boolean`  | `false`       |
-| `@onChange`    | Handle the select's `change` event. | `Function` | `undefined`   |
-| `@placeholder` | The placeholder of the select.      | `String`   | `''`          |
-| `@selected`    | The selected option of the select.  | `Any`      | `undefined`   |
-| `@size`        | The size of the select.             | `String`   | `'md'`        |
+| Name           | Description                            | Type       | Default Value |
+| -------------- | -------------------------------------- | ---------- | ------------- |
+| `@isDisabled`  | Indicate if the select is disabled.    | `Boolean`  | `false`       |
+| `@isInvalid`   | Indicate if the select is invalid.     | `Boolean`  | `false`       |
+| `@isPill`      | Indicate if the select is pill shaped. | `Boolean`  | `false`       |
+| `@onChange`    | Handle the select's `change` event.    | `Function` | `undefined`   |
+| `@placeholder` | The placeholder of the select.         | `String`   | `''`          |
+| `@selected`    | The selected option of the select.     | `Any`      | `undefined`   |
+| `@size`        | The size of the select.                | `String`   | `'md'`        |
 
 ### Option Arguments
 
