@@ -8,12 +8,6 @@
     "docs",
     "velvet-thunder"
   ],
-  "scripts": {
-    "prepare": "husky install"
-  },
-  "devDependencies": {
-    "husky": "^8.0.1"
-  },
   "volta": {
     "node": "16.13.2",
     "yarn": "1.22.17"

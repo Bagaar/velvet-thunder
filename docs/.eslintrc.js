@@ -27,6 +27,7 @@ module.exports = {
         './.docfy-config.js',
         './.eslintrc.js',
         './.prettierrc.js',
+        './.stylelintrc.js',
         './.template-lintrc.js',
         './ember-cli-build.js',
         './tailwind.config.js',
