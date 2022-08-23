@@ -19,7 +19,6 @@
 
 ## Running the dummy application
 
-- `yarn tailwind:watch`
 - `ember serve`
 - Visit the dummy application at [http://localhost:4200](http://localhost:4200).
 

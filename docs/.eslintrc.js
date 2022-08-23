@@ -24,17 +24,17 @@ module.exports = {
     // node files
     {
       files: [
+        './.docfy-config.js',
         './.eslintrc.js',
         './.prettierrc.js',
-        './.stylelintrc.js',
         './.template-lintrc.js',
         './ember-cli-build.js',
-        './index.js',
+        './tailwind.config.js',
         './testem.js',
         './blueprints/*/index.js',
         './config/**/*.js',
-        './tailwind/**/*.js',
-        './tests/dummy/config/**/*.js',
+        './lib/*/index.js',
+        './server/**/*.js',
       ],
       parserOptions: {
         sourceType: 'script',
@@ -46,7 +46,9 @@ module.exports = {
       plugins: ['node'],
       extends: ['plugin:node/recommended'],
       rules: {
-        strict: 'error',
+        // this can be removed once the following is fixed
+        // https://github.com/mysticatea/eslint-plugin-node/issues/77
+        'node/no-unpublished-require': 'off',
       },
     },
     {

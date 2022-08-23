@@ -2,6 +2,7 @@
 
 # compiled output
 /dist/
+/public/assets/tailwind.css
 /tmp/
 
 # dependencies

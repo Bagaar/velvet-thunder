@@ -2,15 +2,15 @@
 
 const tailwindFormsPlugin = require('@tailwindcss/forms');
 const tailwindTypographyPlugin = require('@tailwindcss/typography');
-const velvetThunder = require('./tailwind');
+const velvetThunder = require('velvet-thunder/tailwind');
 
 module.exports = {
   content: [
     ...velvetThunder.content(),
     './docs/**/*.md',
-    './tests/dummy/app/components/**/*.{hbs,js}',
-    './tests/dummy/app/templates/**/*.hbs',
-    './tests/dummy/app/index.html',
+    './app/components/**/*.{hbs,js}',
+    './app/templates/**/*.hbs',
+    './app/index.html',
   ],
   darkMode: 'class',
   plugins: [

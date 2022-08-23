@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Velvet Thunder</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{content-for "head"}}
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/night-owl.min.css">
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/tailwind.css">
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/docs.css">
+
+    {{content-for "head-footer"}}
+
+    <script>
+      const DARK_MODE_CLASS = 'dark';
+      const HTML = document.querySelector('html');
+
+      if (localStorage.theme === 'dark' || (!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        HTML.classList.add(DARK_MODE_CLASS);
+      } else {
+        HTML.classList.remove(DARK_MODE_CLASS);
+      }
+    </script>
+  </head>
+  <body class="antialiased bg-white text-slate-500 dark:bg-slate-900 dark:text-slate-400">
+    {{content-for "body"}}
+
+    <script src="{{rootURL}}assets/vendor.js"></script>
+    <script src="{{rootURL}}assets/docs.js"></script>
+
+    {{content-for "body-footer"}}
+  </body>
+</html>
