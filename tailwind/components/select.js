@@ -9,7 +9,7 @@ module.exports = ({ theme }) => ({
     },
 
     '&:disabled': {
-      '@apply cursor-not-allowed': {},
+      '@apply cursor-not-allowed opacity-100': {},
     },
 
     '&-sm': {
