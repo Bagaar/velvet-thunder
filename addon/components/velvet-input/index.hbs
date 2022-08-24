@@ -5,6 +5,7 @@
       (class (or @size "md"))
       (if @isInvalid (class "invalid"))
       (if @isPill (class "pill"))
+      (if @isDisabled (class "disabled"))
       "form-input"
     }}
     disabled={{@isDisabled}}

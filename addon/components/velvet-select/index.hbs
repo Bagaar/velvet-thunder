@@ -4,8 +4,9 @@
       (class)
       (class (or @size "md"))
       (if @isInvalid (class "invalid"))
-      (if this.shouldDisplayPlaceholder (class "placeholder"))
       (if @isPill (class "pill"))
+      (if @isDisabled (class "disabled"))
+      (if this.shouldDisplayPlaceholder (class "placeholder"))
       "form-select"
     }}
     disabled={{@isDisabled}}

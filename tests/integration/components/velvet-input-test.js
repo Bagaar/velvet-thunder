@@ -21,13 +21,19 @@ module('Integration | Component | velvet-input', function (hooks) {
       <VelvetInput />
     `);
 
-    assert.dom(SELECTOR).doesNotHaveAttribute('disabled');
+    assert
+      .dom(SELECTOR)
+      .doesNotHaveAttribute('disabled')
+      .doesNotHaveClass('velvet-input-disabled');
 
     await render(hbs`
       <VelvetInput @isDisabled={{true}} />
     `);
 
-    assert.dom(SELECTOR).hasAttribute('disabled');
+    assert
+      .dom(SELECTOR)
+      .hasAttribute('disabled')
+      .hasClass('velvet-input-disabled');
   });
 
   test('it renders an invalid input', async function (assert) {
