@@ -88,6 +88,20 @@ module('Integration | Component | velvet-textarea', function (hooks) {
     assert.dom(SELECTOR).hasClass('velvet-textarea-lg');
   });
 
+  test('it renders the correct variant', async function (assert) {
+    await render(hbs`
+      <VelvetTextarea />
+    `);
+
+    assert.dom(SELECTOR).hasClass('velvet-textarea-primary');
+
+    await render(hbs`
+      <VelvetTextarea @variant="secondary" />
+    `);
+
+    assert.dom(SELECTOR).hasClass('velvet-textarea-secondary');
+  });
+
   test('it renders the correct value', async function (assert) {
     await render(hbs`
       <VelvetTextarea />

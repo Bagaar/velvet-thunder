@@ -57,3 +57,4 @@
 | `@size`        | The size of the input.                | `String`   | `'md'`        |
 | `@type`        | The type of the input.                | `String`   | `'text'`      |
 | `@value`       | The value of the input.               | `String`   | `''`          |
+| `@variant`     | The appearance of the input.          | `String`   | `'primary'`   |

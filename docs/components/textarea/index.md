@@ -39,3 +39,4 @@
 | `@placeholder` | The placeholder of the textarea.      | `String`   | `''`          |
 | `@size`        | The size of the textarea.             | `String`   | `'md'`        |
 | `@value`       | The value of the textarea.            | `String`   | `''`          |
+| `@variant`     | The appearance of the textarea.       | `String`   | `'primary'`   |
