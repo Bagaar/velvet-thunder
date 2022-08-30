@@ -124,7 +124,7 @@ module('Integration | Component | velvet-select', function (hooks) {
 
   test('it renders a placeholder', async function (assert) {
     await render(hbs`
-      <VelvetSelect @placeholder="Select an Option" as |select|>
+      <VelvetSelect @placeholder="Select an Option" @selected={{null}} as |select|>
         <select.Option @value="first" />
         <select.Option @value="second" />
       </VelvetSelect>
