@@ -7,7 +7,7 @@ export default class VelvetSelectComponent extends Component {
   options = new Map();
 
   get hasSelection() {
-    return [...this.options.values()].includes(this.args.selected);
+    return this.args.selected !== undefined && this.args.selected !== null;
   }
 
   get shouldDisplayPlaceholder() {
