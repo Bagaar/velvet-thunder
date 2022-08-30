@@ -95,6 +95,20 @@ module('Integration | Component | velvet-select', function (hooks) {
     assert.dom(SELECTOR).hasClass('velvet-select-lg');
   });
 
+  test('it renders the correct variant', async function (assert) {
+    await render(hbs`
+      <VelvetSelect />
+    `);
+
+    assert.dom(SELECTOR).hasClass('velvet-select-primary');
+
+    await render(hbs`
+      <VelvetSelect @variant="secondary" />
+    `);
+
+    assert.dom(SELECTOR).hasClass('velvet-select-secondary');
+  });
+
   test('it selects the correct option', async function (assert) {
     await render(hbs`
       <VelvetSelect @selected="second" as |select|>

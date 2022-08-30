@@ -73,6 +73,7 @@
 | `@placeholder` | The placeholder of the select.         | `String`   | `''`          |
 | `@selected`    | The selected option of the select.     | `Any`      | `undefined`   |
 | `@size`        | The size of the select.                | `String`   | `'md'`        |
+| `@variant`     | The appearance of the select.          | `String`   | `'primary'`   |
 
 ### Option Arguments
 

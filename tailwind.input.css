@@ -163,30 +163,35 @@ pre {
 
 /* Velvet Input & Textarea */
 
-.velvet-input,
-.velvet-textarea {
+.velvet-input-primary,
+.velvet-textarea-primary {
   @apply bg-transparent border-gray-400/40;
   @apply placeholder:opacity-50 placeholder:text-slate-500;
   @apply dark:placeholder:opacity-50 dark:placeholder:text-slate-400;
 }
 
-.velvet-input:focus,
-.velvet-textarea:focus {
+.velvet-input-primary:disabled,
+.velvet-textarea-primary:disabled {
+  @apply opacity-50;
+}
+
+.velvet-input-primary:focus,
+.velvet-textarea-primary:focus {
   @apply border-violet-500 outline-violet-500/40;
 }
 
-.velvet-input:not(.velvet-input-invalid, :disabled, :focus):hover,
-.velvet-textarea:not(.velvet-textarea-invalid, :disabled, :focus):hover {
+.velvet-input-primary:not(.velvet-input-invalid, :disabled, :focus):hover,
+.velvet-textarea-primary:not(.velvet-textarea-invalid, :disabled, :focus):hover {
   @apply border-gray-400/80;
 }
 
-.velvet-input-invalid,
-.velvet-textarea-invalid {
+.velvet-input-primary.velvet-input-invalid,
+.velvet-textarea-primary.velvet-textarea-invalid {
   @apply border-rose-500;
 }
 
-.velvet-input-invalid:focus,
-.velvet-textarea-invalid:focus {
+.velvet-input-primary.velvet-input-invalid:focus,
+.velvet-textarea-primary.velvet-textarea-invalid:focus {
   @apply border-rose-500 outline-rose-500/40;
 }
 
@@ -236,27 +241,31 @@ pre {
 
 /* Velvet Select */
 
-.velvet-select {
+.velvet-select-primary {
   @apply bg-transparent border-gray-400/40;
 }
 
-.velvet-select-placeholder {
+.velvet-select-primary.velvet-select-placeholder {
   @apply text-opacity-50 text-slate-500;
   @apply dark:text-opacity-50 dark:text-slate-400;
 }
 
-.velvet-select:focus {
+.velvet-select-primary:disabled {
+  @apply opacity-50;
+}
+
+.velvet-select-primary:focus {
   @apply border-violet-500 outline-violet-500/40;
 }
 
-.velvet-select:not(.velvet-select-invalid, :disabled, :focus):hover {
+.velvet-select-primary:not(.velvet-select-invalid, :disabled, :focus):hover {
   @apply border-gray-400/80;
 }
 
-.velvet-select-invalid {
+.velvet-select-primary.velvet-select-invalid {
   @apply border-rose-500;
 }
 
-.velvet-select-invalid:focus {
+.velvet-select-primary.velvet-select-invalid:focus {
   @apply border-rose-500 outline-rose-500/40;
 }

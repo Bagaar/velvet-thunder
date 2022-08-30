@@ -102,6 +102,20 @@ module('Integration | Component | velvet-input', function (hooks) {
     assert.dom(SELECTOR).hasClass('velvet-input-lg');
   });
 
+  test('it renders the correct variant', async function (assert) {
+    await render(hbs`
+      <VelvetInput />
+    `);
+
+    assert.dom(SELECTOR).hasClass('velvet-input-primary');
+
+    await render(hbs`
+      <VelvetInput @variant="secondary" />
+    `);
+
+    assert.dom(SELECTOR).hasClass('velvet-input-secondary');
+  });
+
   test('it renders the correct type', async function (assert) {
     await render(hbs`
       <VelvetInput />
