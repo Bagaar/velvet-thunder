@@ -11,10 +11,10 @@
       "form-select"
     }}
     disabled={{@isDisabled}}
-    {{(if
-      (and @onChange (not @isDisabled))
-      (modifier this.on "change" this.changeHandler)
-    )}}
+    {{on
+      "change"
+      (if (and @onChange (not @isDisabled)) this.changeHandler (-velvet/noop))
+    }}
     ...attributes
   >
     {{#if this.shouldDisplayPlaceholder}}
