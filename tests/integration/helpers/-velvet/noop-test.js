@@ -3,14 +3,17 @@ import { setupRenderingTest } from 'dummy/tests/helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { module, test } from 'qunit';
 
-module('Integration | Helper | -velvet/class', function (hooks) {
+module('Integration | Helper | -velvet/noop', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders a class', async function (assert) {
+  test('it returns a noop function', async function (assert) {
     await render(hbs`
-      {{-velvet/class "foo" "bar"}}
+      <button
+        type="button"
+        {{on "click" (-velvet/noop)}}
+      ></button>
     `);
 
-    assert.dom(this.element).hasText('foo-bar');
+    assert.ok(true);
   });
 });

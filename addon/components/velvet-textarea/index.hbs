@@ -11,14 +11,14 @@
     disabled={{@isDisabled}}
     placeholder={{@placeholder}}
     value={{@value}}
-    {{(if
-      (and @onChange (not @isDisabled))
-      (modifier this.on "change" this.changeHandler)
-    )}}
-    {{(if
-      (and @onInput (not @isDisabled))
-      (modifier this.on "input" this.inputHandler)
-    )}}
+    {{on
+      "change"
+      (if (and @onChange (not @isDisabled)) this.changeHandler (-velvet/noop))
+    }}
+    {{on
+      "input"
+      (if (and @onInput (not @isDisabled)) this.inputHandler (-velvet/noop))
+    }}
     ...attributes
   ></textarea>
 {{/let}}

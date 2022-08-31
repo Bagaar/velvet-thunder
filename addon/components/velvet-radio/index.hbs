@@ -13,14 +13,14 @@
       name={{@name}}
       type="radio"
       value={{@value}}
-      {{(if
-        (and @onChange (not @isDisabled))
-        (modifier
-          this.on
-          "change"
+      {{on
+        "change"
+        (if
+          (and @onChange (not @isDisabled))
           (if @inGroup this.changeGroupHandler this.changeHandler)
+          (-velvet/noop)
         )
-      )}}
+      }}
       ...attributes
     />
     {{yield}}

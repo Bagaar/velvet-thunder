@@ -1,6 +1,6 @@
 import { render, select } from '@ember/test-helpers';
+import { setupRenderingTest } from 'dummy/tests/helpers';
 import { hbs } from 'ember-cli-htmlbars';
-import { setupRenderingTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
 const SELECTOR = '.velvet-select';

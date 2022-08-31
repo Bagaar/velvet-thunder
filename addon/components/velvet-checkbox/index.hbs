@@ -13,14 +13,14 @@
       indeterminate={{@isIndeterminate}}
       name={{@name}}
       type="checkbox"
-      {{(if
-        (and @onChange (not @isDisabled))
-        (modifier
-          this.on
-          "change"
+      {{on
+        "change"
+        (if
+          (and @onChange (not @isDisabled))
           (if @inGroup this.changeGroupHandler this.changeHandler)
+          (-velvet/noop)
         )
-      )}}
+      }}
       ...attributes
     />
     {{yield}}
