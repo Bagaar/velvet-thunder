@@ -1,7 +1,8 @@
-import { render, select } from '@ember/test-helpers';
+import { render } from '@ember/test-helpers';
 import { setupRenderingTest } from 'dummy/tests/helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { module, test } from 'qunit';
+import { velvetSelect } from 'velvet-thunder/test-support';
 
 const SELECTOR = '.velvet-select';
 
@@ -74,9 +75,7 @@ module('Integration | Component | velvet-select', function (hooks) {
       </VelvetSelect>
     `);
 
-    const secondOption = this.element.querySelectorAll('option')[1];
-
-    await select(SELECTOR, secondOption.value);
+    await velvetSelect(SELECTOR, { index: 1 });
 
     assert.verifySteps(['second']);
   });

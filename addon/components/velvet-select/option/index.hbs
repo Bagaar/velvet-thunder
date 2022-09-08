@@ -1,3 +1,7 @@
 <option selected={{eq @value @selected}} value={{this.uniqueId}} ...attributes>
-  {{yield}}
+  {{#if (has-block)}}
+    {{yield}}
+  {{else}}
+    {{@value}}
+  {{/if}}
 </option>
