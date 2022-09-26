@@ -42,7 +42,7 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
   });
 
   test('it handles `change` events', async function (assert) {
-    this.value = { third: true };
+    this.value = ['third'];
 
     this.onChange = (value) => this.set('value', value);
 
@@ -64,11 +64,7 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
     await click(checkbox[1]);
     await click(checkbox[2]);
 
-    assert.deepEqual(this.value, {
-      first: true,
-      second: true,
-      third: false,
-    });
+    assert.deepEqual(this.value, ['first', 'second']);
   });
 
   test('it renders the correct size for each checkbox', async function (assert) {
@@ -109,7 +105,7 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
     assert.dom(checkbox[1]).isNotChecked();
 
     await render(hbs`
-      <VelvetCheckboxGroup @value={{hash first=true second=true}} as |group|>
+      <VelvetCheckboxGroup @value={{array "first" "second"}} as |group|>
         <group.Checkbox @name="first" />
         <group.Checkbox @name="second" />
       </VelvetCheckboxGroup>
@@ -127,5 +123,70 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
     `);
 
     assert.dom(GROUP_SELECTOR).hasClass('space-x-2');
+  });
+
+  module('@valueIsObject={{true}}', function () {
+    test('it handles `change` events', async function (assert) {
+      this.value = { third: true };
+
+      this.onChange = (value) => this.set('value', value);
+
+      await render(hbs`
+        <VelvetCheckboxGroup
+          @onChange={{this.onChange}}
+          @value={{this.value}}
+          @valueIsObject={{true}}
+          as |group|
+        >
+          <group.Checkbox @name="first" />
+          <group.Checkbox @name="second" />
+          <group.Checkbox @name="third" />
+        </VelvetCheckboxGroup>
+      `);
+
+      const checkbox = this.element.querySelectorAll(CHECKBOX_SELECTOR);
+
+      await click(checkbox[0]);
+      await click(checkbox[1]);
+      await click(checkbox[2]);
+
+      assert.deepEqual(this.value, {
+        first: true,
+        second: true,
+        third: false,
+      });
+    });
+
+    test('it checks the correct checkboxes', async function (assert) {
+      let checkbox;
+
+      await render(hbs`
+        <VelvetCheckboxGroup @valueIsObject={{true}} as |group|>
+          <group.Checkbox @name="first" />
+          <group.Checkbox @name="second" />
+        </VelvetCheckboxGroup>
+      `);
+
+      checkbox = this.element.querySelectorAll(CHECKBOX_SELECTOR);
+
+      assert.dom(checkbox[0]).isNotChecked();
+      assert.dom(checkbox[1]).isNotChecked();
+
+      await render(hbs`
+        <VelvetCheckboxGroup
+          @value={{hash first=true second=true}}
+          @valueIsObject={{true}}
+          as |group|
+        >
+          <group.Checkbox @name="first" />
+          <group.Checkbox @name="second" />
+        </VelvetCheckboxGroup>
+      `);
+
+      checkbox = this.element.querySelectorAll(CHECKBOX_SELECTOR);
+
+      assert.dom(checkbox[0]).isChecked();
+      assert.dom(checkbox[1]).isChecked();
+    });
   });
 });
