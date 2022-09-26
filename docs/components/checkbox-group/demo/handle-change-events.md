@@ -24,7 +24,7 @@ import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 
 export default class DemoComponent extends Component {
-  @tracked value = null;
+  @tracked value = ['first'];
 
   get valueAsString() {
     return JSON.stringify(this.value);

@@ -6,7 +6,7 @@
 <DemoSpaceX>
   <VelvetCheckboxGroup
     @size='sm'
-    @value={{hash first=true}}
+    @value={{array 'first'}}
     class='space-y-2'
     as |group|
   >
@@ -16,7 +16,7 @@
   </VelvetCheckboxGroup>
   <VelvetCheckboxGroup
     @size='md'
-    @value={{hash first=true}}
+    @value={{array 'first'}}
     class='space-y-3'
     as |group|
   >
@@ -26,7 +26,7 @@
   </VelvetCheckboxGroup>
   <VelvetCheckboxGroup
     @size='lg'
-    @value={{hash first=true}}
+    @value={{array 'first'}}
     class='space-y-4'
     as |group|
   >
@@ -42,7 +42,7 @@
 ```hbs preview-template
 <VelvetCheckboxGroup
   @isDisabled={{true}}
-  @value={{hash first=true}}
+  @value={{array 'first'}}
   class='space-y-3'
   as |group|
 >
@@ -54,9 +54,10 @@
 
 ## Arguments
 
-| Name          | Description                                 | Type       | Default Value |
-| ------------- | ------------------------------------------- | ---------- | ------------- |
-| `@isDisabled` | Indicate if the checkbox group is disabled. | `Boolean`  | `false`       |
-| `@onChange`   | Handle the checkbox group's `change` event. | `Function` | `undefined`   |
-| `@size`       | The size of the checkboxes.                 | `String`   | `'md'`        |
-| `@value`      | The value of the checkbox group.            | `Object`   | `undefined`   |
+| Name             | Description                                                            | Type       | Default Value |
+| ---------------- | ---------------------------------------------------------------------- | ---------- | ------------- |
+| `@isDisabled`    | Indicate if the checkbox group is disabled.                            | `Boolean`  | `false`       |
+| `@onChange`      | Handle the checkbox group's `change` event.                            | `Function` | `undefined`   |
+| `@size`          | The size of the checkboxes.                                            | `String`   | `'md'`        |
+| `@value`         | The value of the checkbox group.                                       | `Array`    | `undefined`   |
+| `@valueIsObject` | Indicate if `@value` is / should be an `Object` instead of an `Array`. | `Boolean`  | `false`       |

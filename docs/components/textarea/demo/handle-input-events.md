@@ -15,7 +15,7 @@ import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 
 export default class DemoComponent extends Component {
-  @tracked value = '';
+  @tracked value = 'Value';
 
   @action
   onInput(value) {
