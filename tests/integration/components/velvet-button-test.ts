@@ -14,7 +14,6 @@ module('Integration | Component | velvet-button', function (hooks) {
 
   test('it renders the correct base class', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetButton />
     `);
 
@@ -23,14 +22,12 @@ module('Integration | Component | velvet-button', function (hooks) {
 
   test('it renders the yielded content', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetButton />
     `);
 
     assert.dom(SELECTOR).hasNoText();
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetButton>
         Text
       </VelvetButton>
@@ -41,14 +38,12 @@ module('Integration | Component | velvet-button', function (hooks) {
 
   test('it renders the correct size', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetButton />
     `);
 
     assert.dom(SELECTOR).hasClass('velvet-button-md');
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetButton @size="lg" />
     `);
 
@@ -57,14 +52,12 @@ module('Integration | Component | velvet-button', function (hooks) {
 
   test('it renders the correct variant', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetButton />
     `);
 
     assert.dom(SELECTOR).hasClass('velvet-button-primary');
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetButton @variant="secondary" />
     `);
 
@@ -73,7 +66,6 @@ module('Integration | Component | velvet-button', function (hooks) {
 
   test('it renders a disabled button', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetButton />
     `);
 
@@ -83,7 +75,6 @@ module('Integration | Component | velvet-button', function (hooks) {
       .doesNotHaveClass('velvet-button-disabled');
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetButton @isDisabled={{true}} />
     `);
 
@@ -95,14 +86,12 @@ module('Integration | Component | velvet-button', function (hooks) {
 
   test('it renders a loading state', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetButton />
     `);
 
     assert.dom('.velvet-spinner').doesNotExist();
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetButton @isLoading={{true}} />
     `);
 
@@ -111,14 +100,12 @@ module('Integration | Component | velvet-button', function (hooks) {
 
   test('it renders the disclosure icon', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetButton />
     `);
 
     assert.dom('.velvet-button-disclosure-icon').doesNotExist();
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetButton @isDisclosure={{true}} />
     `);
 
@@ -127,14 +114,12 @@ module('Integration | Component | velvet-button', function (hooks) {
 
   test('it renders a pill-shaped button', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetButton />
     `);
 
     assert.dom(SELECTOR).doesNotHaveClass('velvet-button-pill');
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetButton @isPill={{true}} />
     `);
 
@@ -143,14 +128,12 @@ module('Integration | Component | velvet-button', function (hooks) {
 
   test('it renders the correct type', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetButton />
     `);
 
     assert.dom(SELECTOR).exists();
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetButton @type="submit" />
     `);
 
@@ -160,8 +143,7 @@ module('Integration | Component | velvet-button', function (hooks) {
   test('it handles `click` events', async function (this: VelvetButtonTestContext, assert) {
     this.onClick = () => assert.step('clicked');
 
-    await render(hbs`
-      {{! @glint-nocheck }}
+    await render<VelvetButtonTestContext>(hbs`
       <VelvetButton @onClick={{this.onClick}} />
     `);
 
@@ -172,7 +154,6 @@ module('Integration | Component | velvet-button', function (hooks) {
 
   test('renderless', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetButton @isRenderless={{true}} as |button|>
         {{button.class}}
       </VelvetButton>
@@ -187,7 +168,6 @@ module('Integration | Component | velvet-button', function (hooks) {
 
   test('`...attributes` works', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetButton class="mr-2" />
     `);
 
