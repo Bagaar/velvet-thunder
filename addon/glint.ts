@@ -1,6 +1,7 @@
 import type VelvetAvatarComponent from 'velvet-thunder/components/velvet-avatar';
 import type VelvetButtonComponent from 'velvet-thunder/components/velvet-button';
 import type VelvetDisclosureIconComponent from 'velvet-thunder/components/velvet-disclosure-icon';
+import type VelvetIconButtonComponent from 'velvet-thunder/components/velvet-icon-button';
 import type VelvetProgressComponent from 'velvet-thunder/components/velvet-progress';
 import type VelvetSpinnerComponent from 'velvet-thunder/components/velvet-spinner';
 import type VelvetTagComponent from 'velvet-thunder/components/velvet-tag';
@@ -20,6 +21,7 @@ declare module '@glint/environment-ember-loose/registry' {
     VelvetAvatar: typeof VelvetAvatarComponent;
     VelvetButton: typeof VelvetButtonComponent;
     VelvetDisclosureIcon: typeof VelvetDisclosureIconComponent;
+    VelvetIconButton: typeof VelvetIconButtonComponent;
     VelvetProgress: typeof VelvetProgressComponent;
     VelvetSpinner: typeof VelvetSpinnerComponent;
     VelvetTag: typeof VelvetTagComponent;
