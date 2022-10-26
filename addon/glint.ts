@@ -4,6 +4,8 @@ import type VelvetDisclosureIconComponent from 'velvet-thunder/components/velvet
 import type VelvetIconButtonComponent from 'velvet-thunder/components/velvet-icon-button';
 import type VelvetInputComponent from 'velvet-thunder/components/velvet-input';
 import type VelvetProgressComponent from 'velvet-thunder/components/velvet-progress';
+import type VelvetRadioComponent from 'velvet-thunder/components/velvet-radio';
+import type VelvetRadioGroupComponent from 'velvet-thunder/components/velvet-radio-group';
 import type VelvetSelectComponent from 'velvet-thunder/components/velvet-select';
 import type VelvetSelectOptionComponent from 'velvet-thunder/components/velvet-select/option';
 import type VelvetSpinnerComponent from 'velvet-thunder/components/velvet-spinner';
@@ -29,11 +31,14 @@ declare module '@glint/environment-ember-loose/registry' {
     VelvetIconButton: typeof VelvetIconButtonComponent;
     VelvetInput: typeof VelvetInputComponent;
     VelvetProgress: typeof VelvetProgressComponent;
+    VelvetRadio: typeof VelvetRadioComponent;
+    VelvetRadioGroup: typeof VelvetRadioGroupComponent;
     VelvetSelect: typeof VelvetSelectComponent;
     VelvetSpinner: typeof VelvetSpinnerComponent;
     VelvetTag: typeof VelvetTagComponent;
     VelvetTextarea: typeof VelvetTextareaComponent;
 
+    'velvet-radio': typeof VelvetRadioComponent;
     'velvet-select/option': typeof VelvetSelectOptionComponent;
 
     // Private:

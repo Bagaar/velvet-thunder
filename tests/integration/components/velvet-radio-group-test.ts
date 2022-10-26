@@ -4,7 +4,7 @@ import { hbs } from 'ember-cli-htmlbars';
 import { module, test } from 'qunit';
 
 interface VelvetRadioGroupTestContext extends TestContext {
-  onChange: (value: string, event: Event) => void;
+  onChange: (value: unknown, event: Event) => void;
 }
 
 const GROUP_SELECTOR = '.velvet-radio-group';
@@ -15,7 +15,6 @@ module('Integration | Component | velvet-radio-group', function (hooks) {
 
   test('it renders the correct base class', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetRadioGroup />
     `);
 
@@ -24,7 +23,6 @@ module('Integration | Component | velvet-radio-group', function (hooks) {
 
   test('it renders disabled radios', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetRadioGroup as |group|>
         <group.Radio />
         <group.Radio />
@@ -36,7 +34,6 @@ module('Integration | Component | velvet-radio-group', function (hooks) {
     assert.dom(`${RADIO_SELECTOR}:disabled`).doesNotExist();
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetRadioGroup @isDisabled={{true}} as |group|>
         <group.Radio />
         <group.Radio />
@@ -49,10 +46,9 @@ module('Integration | Component | velvet-radio-group', function (hooks) {
   });
 
   test('it handles `change` events', async function (this: VelvetRadioGroupTestContext, assert) {
-    this.onChange = (value) => assert.step(value);
+    this.onChange = (value) => assert.step(value as string);
 
-    await render(hbs`
-      {{! @glint-nocheck }}
+    await render<VelvetRadioGroupTestContext>(hbs`
       <VelvetRadioGroup @onChange={{this.onChange}} as |group|>
         <group.Radio @value="first" />
         <group.Radio @value="second" />
@@ -67,7 +63,6 @@ module('Integration | Component | velvet-radio-group', function (hooks) {
 
   test('it renders the correct size for each radio', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetRadioGroup as |group|>
         <group.Radio />
         <group.Radio />
@@ -78,7 +73,6 @@ module('Integration | Component | velvet-radio-group', function (hooks) {
     assert.dom('.velvet-radio-md').exists({ count: 2 });
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetRadioGroup @size="lg" as |group|>
         <group.Radio />
         <group.Radio />
@@ -91,7 +85,6 @@ module('Integration | Component | velvet-radio-group', function (hooks) {
 
   test('it renders the correct name for each radio', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetRadioGroup @name="foo" as |group|>
         <group.Radio />
         <group.Radio />
@@ -105,7 +98,6 @@ module('Integration | Component | velvet-radio-group', function (hooks) {
     let radio;
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetRadioGroup as |group|>
         <group.Radio @value="first" />
         <group.Radio @value="second" />
@@ -118,7 +110,6 @@ module('Integration | Component | velvet-radio-group', function (hooks) {
     assert.dom(radio[1]).isNotChecked();
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetRadioGroup @value="second" as |group|>
         <group.Radio @value="first" />
         <group.Radio @value="second" />
@@ -133,7 +124,6 @@ module('Integration | Component | velvet-radio-group', function (hooks) {
 
   test('`...attributes` works', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetRadioGroup class="space-x-2" />
     `);
 
