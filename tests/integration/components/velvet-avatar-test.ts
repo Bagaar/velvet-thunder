@@ -10,7 +10,6 @@ module('Integration | Component | velvet-avatar', function (hooks) {
 
   test('it renders the correct base class', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetAvatar />
     `);
 
@@ -19,7 +18,6 @@ module('Integration | Component | velvet-avatar', function (hooks) {
 
   test('it renders the correct color', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetAvatar @color="primary" />
     `);
 
@@ -28,14 +26,12 @@ module('Integration | Component | velvet-avatar', function (hooks) {
 
   test('it renders the correct size', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetAvatar />
     `);
 
     assert.dom(SELECTOR).hasClass('velvet-avatar-md');
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetAvatar @size="lg" />
     `);
 
@@ -44,14 +40,12 @@ module('Integration | Component | velvet-avatar', function (hooks) {
 
   test('it renders a rounded avatar', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetAvatar />
     `);
 
     assert.dom(SELECTOR).doesNotHaveClass('velvet-avatar-rounded');
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetAvatar @isRounded={{true}} />
     `);
 
@@ -60,7 +54,6 @@ module('Integration | Component | velvet-avatar', function (hooks) {
 
   test('it renders the image', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetAvatar
         @initials="JP"
         @name="Jake Peralta"
@@ -76,7 +69,6 @@ module('Integration | Component | velvet-avatar', function (hooks) {
 
   test('it renders the initials based on the `@name` argument', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetAvatar
         @initials="BD"
         @name="Jake Peralta"
@@ -88,7 +80,6 @@ module('Integration | Component | velvet-avatar', function (hooks) {
 
   test('it renders the `@initials` argument', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetAvatar
         @initials="JP"
       />
@@ -99,7 +90,6 @@ module('Integration | Component | velvet-avatar', function (hooks) {
 
   test('it renders a question mark as a last resort', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetAvatar />
     `);
 
@@ -108,7 +98,6 @@ module('Integration | Component | velvet-avatar', function (hooks) {
 
   test('`...attributes` works', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetAvatar class="mr-2" />
     `);
 
