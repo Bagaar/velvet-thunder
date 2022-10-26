@@ -1,12 +1,30 @@
 import { action } from '@ember/object';
 import Component from '@glimmer/component';
+import { WithBoundArgs } from '@glint/template';
+import type VelvetSelectOptionComponent from 'velvet-thunder/components/velvet-select/option';
 
 interface VelvetSelectComponentSignature {
   Args: {
-    onChange: (value: unknown, event: Event) => void;
-    placeholder: string;
-    selected: unknown;
+    isDisabled?: boolean;
+    isInvalid?: boolean;
+    isPill?: boolean;
+    onChange?: (selected: unknown, event: Event) => void;
+    placeholder?: string;
+    selected?: unknown;
+    size?: string;
+    variant?: string;
   };
+  Blocks: {
+    default: [
+      {
+        Option: WithBoundArgs<
+          typeof VelvetSelectOptionComponent,
+          'onRegister' | 'selected'
+        >;
+      }
+    ];
+  };
+  Element: HTMLSelectElement;
 }
 
 export default class VelvetSelectComponent extends Component<VelvetSelectComponentSignature> {
@@ -22,7 +40,7 @@ export default class VelvetSelectComponent extends Component<VelvetSelectCompone
 
   @action
   changeHandler(event: Event) {
-    this.args.onChange(
+    this.args.onChange?.(
       this.options.get((event.target as HTMLSelectElement).value),
       event
     );

@@ -4,8 +4,13 @@ import Component from '@glimmer/component';
 interface VelvetSelectOptionComponentSignature {
   Args: {
     onRegister: (id: string, value: unknown) => void;
+    selected: unknown;
     value: unknown;
   };
+  Blocks: {
+    default: [];
+  };
+  Element: HTMLOptionElement;
 }
 
 export default class VelvetSelectOptionComponent extends Component<VelvetSelectOptionComponentSignature> {
