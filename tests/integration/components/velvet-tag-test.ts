@@ -10,7 +10,6 @@ module('Integration | Component | velvet-tag', function (hooks) {
 
   test('it renders the correct base class', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetTag />
     `);
 
@@ -19,14 +18,12 @@ module('Integration | Component | velvet-tag', function (hooks) {
 
   test('it renders the yielded content', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetTag />
     `);
 
     assert.dom(SELECTOR).hasNoText();
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetTag>
         Text
       </VelvetTag>
@@ -37,14 +34,12 @@ module('Integration | Component | velvet-tag', function (hooks) {
 
   test('it renders the correct size', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetTag />
     `);
 
     assert.dom(SELECTOR).hasClass('velvet-tag-md');
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetTag @size="lg" />
     `);
 
@@ -53,14 +48,12 @@ module('Integration | Component | velvet-tag', function (hooks) {
 
   test('it renders the correct variant', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetTag />
     `);
 
     assert.dom(SELECTOR).hasClass('velvet-tag-primary');
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetTag @variant="secondary" />
     `);
 
@@ -69,14 +62,12 @@ module('Integration | Component | velvet-tag', function (hooks) {
 
   test('it renders a pill-shaped tag', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetTag />
     `);
 
     assert.dom(SELECTOR).doesNotHaveClass('velvet-tag-pill');
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetTag @isPill={{true}} />
     `);
 
@@ -85,7 +76,6 @@ module('Integration | Component | velvet-tag', function (hooks) {
 
   test('`...attributes` works', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetTag class="mr-2" />
     `);
 
