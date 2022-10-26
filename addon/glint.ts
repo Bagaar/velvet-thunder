@@ -6,6 +6,7 @@ import type VelvetInputComponent from 'velvet-thunder/components/velvet-input';
 import type VelvetProgressComponent from 'velvet-thunder/components/velvet-progress';
 import type VelvetSpinnerComponent from 'velvet-thunder/components/velvet-spinner';
 import type VelvetTagComponent from 'velvet-thunder/components/velvet-tag';
+import type VelvetTextareaComponent from 'velvet-thunder/components/velvet-textarea';
 
 // Private:
 import type VelvetClassListHelper from 'velvet-thunder/helpers/-velvet/class-list';
@@ -27,6 +28,7 @@ declare module '@glint/environment-ember-loose/registry' {
     VelvetProgress: typeof VelvetProgressComponent;
     VelvetSpinner: typeof VelvetSpinnerComponent;
     VelvetTag: typeof VelvetTagComponent;
+    VelvetTextarea: typeof VelvetTextareaComponent;
 
     // Private:
     '-velvet/class-list': typeof VelvetClassListHelper;

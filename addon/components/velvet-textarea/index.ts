@@ -3,19 +3,26 @@ import Component from '@glimmer/component';
 
 interface VelvetTextareaComponentSignature {
   Args: {
-    onChange: (value: string, event: Event) => void;
-    onInput: (value: string, event: Event) => void;
+    isDisabled?: boolean;
+    isInvalid?: boolean;
+    onChange?: (value: string, event: Event) => void;
+    onInput?: (value: string, event: Event) => void;
+    placeholder?: string;
+    size?: string;
+    value?: string;
+    variant?: string;
   };
+  Element: HTMLTextAreaElement;
 }
 
 export default class VelvetTextareaComponent extends Component<VelvetTextareaComponentSignature> {
   @action
   changeHandler(event: Event) {
-    this.args.onChange((event.target as HTMLTextAreaElement).value, event);
+    this.args.onChange?.((event.target as HTMLTextAreaElement).value, event);
   }
 
   @action
   inputHandler(event: Event) {
-    this.args.onInput((event.target as HTMLTextAreaElement).value, event);
+    this.args.onInput?.((event.target as HTMLTextAreaElement).value, event);
   }
 }

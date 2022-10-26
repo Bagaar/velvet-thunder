@@ -15,7 +15,6 @@ module('Integration | Component | velvet-textarea', function (hooks) {
 
   test('it renders the correct base classes', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetTextarea />
     `);
 
@@ -24,7 +23,6 @@ module('Integration | Component | velvet-textarea', function (hooks) {
 
   test('it renders a disabled textarea', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetTextarea />
     `);
 
@@ -34,7 +32,6 @@ module('Integration | Component | velvet-textarea', function (hooks) {
       .doesNotHaveClass('velvet-textarea-disabled');
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetTextarea @isDisabled={{true}} />
     `);
 
@@ -46,14 +43,12 @@ module('Integration | Component | velvet-textarea', function (hooks) {
 
   test('it renders an invalid textarea', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetTextarea />
     `);
 
     assert.dom(SELECTOR).doesNotHaveClass('velvet-textarea-invalid');
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetTextarea @isInvalid={{true}} />
     `);
 
@@ -63,8 +58,7 @@ module('Integration | Component | velvet-textarea', function (hooks) {
   test('it handles `change` events', async function (this: VelvetTextareaTestContext, assert) {
     this.onChange = (value) => assert.step(value);
 
-    await render(hbs`
-      {{! @glint-nocheck }}
+    await render<VelvetTextareaTestContext>(hbs`
       <VelvetTextarea @onChange={{this.onChange}} />
     `);
 
@@ -76,8 +70,7 @@ module('Integration | Component | velvet-textarea', function (hooks) {
   test('it handles `input` events', async function (this: VelvetTextareaTestContext, assert) {
     this.onInput = (value) => assert.step(value);
 
-    await render(hbs`
-      {{! @glint-nocheck }}
+    await render<VelvetTextareaTestContext>(hbs`
       <VelvetTextarea @onInput={{this.onInput}} />
     `);
 
@@ -88,14 +81,12 @@ module('Integration | Component | velvet-textarea', function (hooks) {
 
   test('it renders the correct size', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetTextarea />
     `);
 
     assert.dom(SELECTOR).hasClass('velvet-textarea-md');
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetTextarea @size="lg" />
     `);
 
@@ -104,14 +95,12 @@ module('Integration | Component | velvet-textarea', function (hooks) {
 
   test('it renders the correct variant', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetTextarea />
     `);
 
     assert.dom(SELECTOR).hasClass('velvet-textarea-primary');
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetTextarea @variant="secondary" />
     `);
 
@@ -120,14 +109,12 @@ module('Integration | Component | velvet-textarea', function (hooks) {
 
   test('it renders the correct value', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetTextarea />
     `);
 
     assert.dom(SELECTOR).hasNoValue();
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetTextarea @value="foo" />
     `);
 
@@ -136,14 +123,12 @@ module('Integration | Component | velvet-textarea', function (hooks) {
 
   test('it renders the correct placeholder', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetTextarea />
     `);
 
     assert.dom(SELECTOR).doesNotHaveAttribute('placeholder');
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetTextarea @placeholder="foo" />
     `);
 
@@ -152,7 +137,6 @@ module('Integration | Component | velvet-textarea', function (hooks) {
 
   test('`...attributes` works', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetTextarea class="mr-2" />
     `);
 
