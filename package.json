@@ -28,6 +28,8 @@
     "lint:md:fix": "prettier \"./**/*.md\" --write",
     "lint:yml": "prettier \"./**/*.yml\" --check",
     "lint:yml:fix": "prettier \"./**/*.yml\" --write",
+    "prepack": "ember ts:precompile",
+    "postpack": "ember ts:clean",
     "prepare": "husky install",
     "start": "ember serve",
     "tailwind:build": "tailwindcss -i ./tailwind.input.css -o ./tests/dummy/public/assets/tailwind.css --minify",
@@ -51,6 +53,7 @@
     "@glimmer/component": "^1.1.2",
     "ember-cli-babel": "^7.26.11",
     "ember-cli-htmlbars": "^6.1.1",
+    "ember-cli-typescript": "5.1.1",
     "ember-truth-helpers": "^3.1.1"
   },
   "devDependencies": {
@@ -64,6 +67,30 @@
     "@release-it-plugins/lerna-changelog": "^5.0.0",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.7",
+    "@tsconfig/ember": "^1.0.1",
+    "@types/ember": "^4.0.2",
+    "@types/ember-qunit": "^5.0.2",
+    "@types/ember-resolver": "^5.0.12",
+    "@types/ember__application": "^4.0.3",
+    "@types/ember__array": "^4.0.3",
+    "@types/ember__component": "^4.0.11",
+    "@types/ember__controller": "^4.0.3",
+    "@types/ember__debug": "^4.0.2",
+    "@types/ember__destroyable": "^4.0.0",
+    "@types/ember__engine": "^4.0.3",
+    "@types/ember__error": "^4.0.1",
+    "@types/ember__object": "^4.0.5",
+    "@types/ember__polyfills": "^4.0.1",
+    "@types/ember__routing": "^4.0.12",
+    "@types/ember__runloop": "^4.0.2",
+    "@types/ember__service": "^4.0.1",
+    "@types/ember__string": "^3.0.10",
+    "@types/ember__template": "^4.0.1",
+    "@types/ember__test": "^4.0.1",
+    "@types/ember__test-helpers": "^2.8.2",
+    "@types/ember__utils": "^4.0.2",
+    "@types/qunit": "^2.19.3",
+    "@types/rsvp": "^4.0.4",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
     "ember-auto-import": "^2.4.2",
@@ -107,6 +134,7 @@
     "stylelint-config-tailwindcss": "^0.0.6",
     "stylelint-prettier": "^2.0.0",
     "tailwindcss": "^3.1.8",
+    "typescript": "^4.8.4",
     "webpack": "^5.74.0"
   },
   "peerDependencies": {
@@ -117,6 +145,10 @@
   },
   "engines": {
     "node": "14.* || >= 16"
+  },
+  "volta": {
+    "node": "16.17.0",
+    "yarn": "1.22.19"
   },
   "publishConfig": {
     "access": "public",
@@ -143,9 +175,5 @@
       "release": true,
       "tokenRef": "GITHUB_AUTH"
     }
-  },
-  "volta": {
-    "node": "16.17.0",
-    "yarn": "1.22.19"
   }
 }

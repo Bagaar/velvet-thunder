@@ -31,7 +31,9 @@
 /tailwind.config.js
 /tailwind.input.css
 /testem.js
+/tsconfig.json
 /tests/
+/types/
 /yarn-error.log
 /yarn.lock
 .gitkeep
