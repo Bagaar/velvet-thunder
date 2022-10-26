@@ -10,7 +10,6 @@ module('Integration | Component | velvet-progress', function (hooks) {
 
   test('it renders the correct base class', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetProgress />
     `);
 
@@ -19,14 +18,12 @@ module('Integration | Component | velvet-progress', function (hooks) {
 
   test('it renders the correct color', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetProgress />
     `);
 
     assert.dom(SELECTOR).hasClass('velvet-progress-primary');
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetProgress @color="rose" />
     `);
 
@@ -35,14 +32,12 @@ module('Integration | Component | velvet-progress', function (hooks) {
 
   test('it renders the correct size', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetProgress />
     `);
 
     assert.dom(SELECTOR).hasClass('velvet-progress-md');
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetProgress @size="lg" />
     `);
 
@@ -51,14 +46,12 @@ module('Integration | Component | velvet-progress', function (hooks) {
 
   test('it renders the correct max value', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetProgress />
     `);
 
     assert.dom(SELECTOR).hasAria('valuemax', '100');
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetProgress @max={{50}} />
     `);
 
@@ -67,14 +60,12 @@ module('Integration | Component | velvet-progress', function (hooks) {
 
   test('it renders the correct min value', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetProgress />
     `);
 
     assert.dom(SELECTOR).hasAria('valuemin', '0');
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetProgress @min={{50}} />
     `);
 
@@ -83,14 +74,12 @@ module('Integration | Component | velvet-progress', function (hooks) {
 
   test('it renders the correct value', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetProgress />
     `);
 
     assert.dom(SELECTOR).hasAria('valuenow', '0');
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetProgress @value={{50}} />
     `);
 
@@ -99,14 +88,12 @@ module('Integration | Component | velvet-progress', function (hooks) {
 
   test('it renders the correct text', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetProgress />
     `);
 
     assert.dom(SELECTOR).doesNotHaveAria('valuetext');
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetProgress @text="Uploading files..." />
     `);
 
@@ -115,42 +102,36 @@ module('Integration | Component | velvet-progress', function (hooks) {
 
   test('it renders the correct progress', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetProgress />
     `);
 
     assert.dom('.velvet-progress-line').hasAttribute('style', 'width: 0%;');
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetProgress @value={{50}} />
     `);
 
     assert.dom('.velvet-progress-line').hasAttribute('style', 'width: 50%;');
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetProgress @max={{50}} @min={{-50}} @value={{0}} />
     `);
 
     assert.dom('.velvet-progress-line').hasAttribute('style', 'width: 50%;');
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetProgress @max={{150}} @min={{50}} @value={{100}} />
     `);
 
     assert.dom('.velvet-progress-line').hasAttribute('style', 'width: 50%;');
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetProgress @value={{-50}} />
     `);
 
     assert.dom('.velvet-progress-line').hasAttribute('style', 'width: 0%;');
 
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetProgress @value={{150}} />
     `);
 
@@ -159,7 +140,6 @@ module('Integration | Component | velvet-progress', function (hooks) {
 
   test('`...attributes` works', async function (assert) {
     await render(hbs`
-      {{! @glint-nocheck }}
       <VelvetProgress class="mr-2" />
     `);
 

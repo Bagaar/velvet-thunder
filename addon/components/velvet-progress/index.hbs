@@ -7,9 +7,9 @@
       (class (or @color "primary"))
       (class (or @size "md"))
     }}
-    aria-valuemax={{if this.hasMax @max this.defaultMax}}
-    aria-valuemin={{if this.hasMin @min this.defaultMin}}
-    aria-valuenow={{if this.hasValue @value this.defaultValue}}
+    aria-valuemax={{this.max}}
+    aria-valuemin={{this.min}}
+    aria-valuenow={{this.value}}
     aria-valuetext={{@text}}
     role="progressbar"
     ...attributes

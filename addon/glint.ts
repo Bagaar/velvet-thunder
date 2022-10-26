@@ -1,3 +1,4 @@
+import type VelvetProgressComponent from 'velvet-thunder/components/velvet-progress';
 import type VelvetSpinnerComponent from 'velvet-thunder/components/velvet-spinner';
 import type VelvetTagComponent from 'velvet-thunder/components/velvet-tag';
 
@@ -11,6 +12,7 @@ import OrHelper from '@gavant/glint-template-types/types/ember-truth-helpers/or'
 
 declare module '@glint/environment-ember-loose/registry' {
   export default interface Registry {
+    VelvetProgress: typeof VelvetProgressComponent;
     VelvetSpinner: typeof VelvetSpinnerComponent;
     VelvetTag: typeof VelvetTagComponent;
 

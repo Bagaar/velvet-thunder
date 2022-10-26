@@ -3,36 +3,34 @@ import Component from '@glimmer/component';
 
 interface VelvetProgressComponentSignature {
   Args: {
-    max: number;
-    min: number;
-    value: number;
+    color?: string;
+    max?: number;
+    min?: number;
+    size?: string;
+    text?: string;
+    value?: number;
   };
+  Element: HTMLDivElement;
 }
 
 export default class VelvetProgressComponent extends Component<VelvetProgressComponentSignature> {
-  defaultMax = 100;
-  defaultMin = 0;
-  defaultValue = 0;
-
-  get hasMax() {
-    return typeof this.args.max === 'number';
-  }
-
-  get hasMin() {
-    return typeof this.args.min === 'number';
-  }
-
-  get hasValue() {
-    return typeof this.args.value === 'number';
-  }
-
   get lineStyle() {
-    const max = this.hasMax ? this.args.max : this.defaultMax;
-    const min = this.hasMin ? this.args.min : this.defaultMin;
-    const value = this.hasValue ? this.args.value : this.defaultValue;
+    const { max, min, value } = this;
     const progress = Math.floor(((value - min) / (max - min)) * 100);
     const progressClipped = Math.max(0, Math.min(100, progress));
 
     return htmlSafe(`width: ${progressClipped}%;`);
+  }
+
+  get max() {
+    return typeof this.args.max === 'number' ? this.args.max : 100;
+  }
+
+  get min() {
+    return typeof this.args.min === 'number' ? this.args.min : 0;
+  }
+
+  get value() {
+    return typeof this.args.value === 'number' ? this.args.value : 0;
   }
 }
