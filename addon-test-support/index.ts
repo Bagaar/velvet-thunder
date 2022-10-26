@@ -1,17 +1,25 @@
 import { assert } from '@ember/debug';
 import { find, select } from '@ember/test-helpers';
 
-export function velvetSelect(target, { index, text }) {
+interface VelvetSelectOptions {
+  index?: number;
+  text?: string;
+}
+
+export function velvetSelect(
+  target: Parameters<typeof find>[0],
+  { index, text }: VelvetSelectOptions
+) {
   const element = find(target);
 
   assert(
     `velvetSelect: No select element found matching "${target}".`,
-    element
+    element instanceof HTMLSelectElement
   );
 
   let option;
 
-  if (Number.isInteger(index)) {
+  if (typeof index === 'number') {
     option = element.options[index];
   } else {
     option = [...element.options].find((option) => option.text === text);

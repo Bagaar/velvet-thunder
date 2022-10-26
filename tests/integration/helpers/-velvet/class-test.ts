@@ -11,6 +11,6 @@ module('Integration | Helper | -velvet/class', function (hooks) {
       {{-velvet/class "foo" "bar"}}
     `);
 
-    assert.dom(this.element).hasText('foo-bar');
+    assert.dom().hasText('foo-bar');
   });
 });

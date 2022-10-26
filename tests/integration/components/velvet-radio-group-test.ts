@@ -1,7 +1,11 @@
-import { click, render } from '@ember/test-helpers';
+import { click, render, TestContext } from '@ember/test-helpers';
 import { setupRenderingTest } from 'dummy/tests/helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { module, test } from 'qunit';
+
+interface VelvetRadioGroupTestContext extends TestContext {
+  onChange: (value: string, event: Event) => void;
+}
 
 const GROUP_SELECTOR = '.velvet-radio-group';
 const RADIO_SELECTOR = 'input[type="radio"]';
@@ -41,7 +45,7 @@ module('Integration | Component | velvet-radio-group', function (hooks) {
     assert.dom(`${RADIO_SELECTOR}:disabled`).exists({ count: 2 });
   });
 
-  test('it handles `change` events', async function (assert) {
+  test('it handles `change` events', async function (this: VelvetRadioGroupTestContext, assert) {
     this.onChange = (value) => assert.step(value);
 
     await render(hbs`
@@ -51,10 +55,8 @@ module('Integration | Component | velvet-radio-group', function (hooks) {
       </VelvetRadioGroup>
     `);
 
-    const radio = this.element.querySelectorAll(RADIO_SELECTOR);
-
-    await click(radio[0]);
-    await click(radio[1]);
+    await click(`${RADIO_SELECTOR}[value="first"]`);
+    await click(`${RADIO_SELECTOR}[value="second"]`);
 
     assert.verifySteps(['first', 'second']);
   });
