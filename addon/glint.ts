@@ -1,3 +1,4 @@
+import type VelvetSpinnerComponent from 'velvet-thunder/components/velvet-spinner';
 import type VelvetTagComponent from 'velvet-thunder/components/velvet-tag';
 
 // Private:
@@ -10,6 +11,7 @@ import OrHelper from '@gavant/glint-template-types/types/ember-truth-helpers/or'
 
 declare module '@glint/environment-ember-loose/registry' {
   export default interface Registry {
+    VelvetSpinner: typeof VelvetSpinnerComponent;
     VelvetTag: typeof VelvetTagComponent;
 
     // Private:
