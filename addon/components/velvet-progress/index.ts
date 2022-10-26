@@ -1,7 +1,15 @@
 import { htmlSafe } from '@ember/template';
 import Component from '@glimmer/component';
 
-export default class VelvetProgressComponent extends Component {
+interface VelvetProgressComponentSignature {
+  Args: {
+    max: number;
+    min: number;
+    value: number;
+  };
+}
+
+export default class VelvetProgressComponent extends Component<VelvetProgressComponentSignature> {
   defaultMax = 100;
   defaultMin = 0;
   defaultValue = 0;

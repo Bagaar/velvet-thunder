@@ -1,6 +1,12 @@
 import Component from '@glimmer/component';
 
-export default class VelvetAvatarComponent extends Component {
+interface VelvetAvatarComponentSignature {
+  Args: {
+    name: string;
+  };
+}
+
+export default class VelvetAvatarComponent extends Component<VelvetAvatarComponentSignature> {
   get initials() {
     return this.args.name
       .split(' ')
