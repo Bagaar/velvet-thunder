@@ -4,7 +4,7 @@ import { hbs } from 'ember-cli-htmlbars';
 import { module, test } from 'qunit';
 
 interface VelvetButtonTestContext extends TestContext {
-  onClick: (event: Event) => void;
+  onClick: (event: MouseEvent) => void;
 }
 
 const SELECTOR = '.velvet-button';
