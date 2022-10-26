@@ -8,6 +8,7 @@ module('Integration | Helper | -velvet/class-list', function (hooks) {
 
   test('it renders a class list', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       {{-velvet/class-list "foo" null "bar"}}
     `);
 

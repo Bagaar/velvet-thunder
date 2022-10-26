@@ -10,6 +10,7 @@ module('Integration | Component | velvet-spinner', function (hooks) {
 
   test('it renders the correct base class', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetSpinner />
     `);
 
@@ -18,12 +19,14 @@ module('Integration | Component | velvet-spinner', function (hooks) {
 
   test('it renders the correct size', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetSpinner />
     `);
 
     assert.dom(SELECTOR).hasClass('velvet-spinner-md');
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetSpinner @size="lg" />
     `);
 
@@ -32,6 +35,7 @@ module('Integration | Component | velvet-spinner', function (hooks) {
 
   test('`...attributes` works', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetSpinner class="mr-2" />
     `);
 

@@ -15,6 +15,7 @@ module('Integration | Component | velvet-input', function (hooks) {
 
   test('it renders the correct base classes', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetInput />
     `);
 
@@ -23,6 +24,7 @@ module('Integration | Component | velvet-input', function (hooks) {
 
   test('it renders a disabled input', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetInput />
     `);
 
@@ -32,6 +34,7 @@ module('Integration | Component | velvet-input', function (hooks) {
       .doesNotHaveClass('velvet-input-disabled');
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetInput @isDisabled={{true}} />
     `);
 
@@ -43,12 +46,14 @@ module('Integration | Component | velvet-input', function (hooks) {
 
   test('it renders an invalid input', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetInput />
     `);
 
     assert.dom(SELECTOR).doesNotHaveClass('velvet-input-invalid');
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetInput @isInvalid={{true}} />
     `);
 
@@ -57,12 +62,14 @@ module('Integration | Component | velvet-input', function (hooks) {
 
   test('it renders a pill-shaped input', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetInput />
     `);
 
     assert.dom(SELECTOR).doesNotHaveClass('velvet-input-pill');
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetInput @isPill={{true}} />
     `);
 
@@ -73,6 +80,7 @@ module('Integration | Component | velvet-input', function (hooks) {
     this.onChange = (value) => assert.step(value);
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetInput @onChange={{this.onChange}} />
     `);
 
@@ -85,6 +93,7 @@ module('Integration | Component | velvet-input', function (hooks) {
     this.onInput = (value) => assert.step(value);
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetInput @onInput={{this.onInput}} />
     `);
 
@@ -95,12 +104,14 @@ module('Integration | Component | velvet-input', function (hooks) {
 
   test('it renders the correct size', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetInput />
     `);
 
     assert.dom(SELECTOR).hasClass('velvet-input-md');
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetInput @size="lg" />
     `);
 
@@ -109,12 +120,14 @@ module('Integration | Component | velvet-input', function (hooks) {
 
   test('it renders the correct variant', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetInput />
     `);
 
     assert.dom(SELECTOR).hasClass('velvet-input-primary');
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetInput @variant="secondary" />
     `);
 
@@ -123,12 +136,14 @@ module('Integration | Component | velvet-input', function (hooks) {
 
   test('it renders the correct type', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetInput />
     `);
 
     assert.dom(SELECTOR).exists();
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetInput @type="number" />
     `);
 
@@ -137,12 +152,14 @@ module('Integration | Component | velvet-input', function (hooks) {
 
   test('it renders the correct value', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetInput />
     `);
 
     assert.dom(SELECTOR).hasNoValue();
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetInput @value="foo" />
     `);
 
@@ -151,12 +168,14 @@ module('Integration | Component | velvet-input', function (hooks) {
 
   test('it renders the correct placeholder', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetInput />
     `);
 
     assert.dom(SELECTOR).doesNotHaveAttribute('placeholder');
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetInput @placeholder="foo" />
     `);
 
@@ -165,6 +184,7 @@ module('Integration | Component | velvet-input', function (hooks) {
 
   test('`...attributes` works', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetInput class="mr-2" />
     `);
 

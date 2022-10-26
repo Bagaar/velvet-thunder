@@ -18,6 +18,7 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
 
   test('it renders the correct base class', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetCheckboxGroup />
     `);
 
@@ -26,6 +27,7 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
 
   test('it renders disabled checkboxes', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetCheckboxGroup as |group|>
         <group.Checkbox />
         <group.Checkbox />
@@ -37,6 +39,7 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
     assert.dom(`${CHECKBOX_SELECTOR}:disabled`).doesNotExist();
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetCheckboxGroup @isDisabled={{true}} as |group|>
         <group.Checkbox />
         <group.Checkbox />
@@ -54,6 +57,7 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
     this.onChange = (value) => this.set('value', value);
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetCheckboxGroup
         @onChange={{this.onChange}}
         @value={{this.value}}
@@ -74,6 +78,7 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
 
   test('it renders the correct size for each checkbox', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetCheckboxGroup as |group|>
         <group.Checkbox />
         <group.Checkbox />
@@ -84,6 +89,7 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
     assert.dom('.velvet-checkbox-md').exists({ count: 2 });
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetCheckboxGroup @size="lg" as |group|>
         <group.Checkbox />
         <group.Checkbox />
@@ -98,6 +104,7 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
     let checkbox;
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetCheckboxGroup as |group|>
         <group.Checkbox @name="first" />
         <group.Checkbox @name="second" />
@@ -110,6 +117,7 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
     assert.dom(checkbox[1]).isNotChecked();
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetCheckboxGroup @value={{array "first" "second"}} as |group|>
         <group.Checkbox @name="first" />
         <group.Checkbox @name="second" />
@@ -124,6 +132,7 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
 
   test('`...attributes` works', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetCheckboxGroup class="space-x-2" />
     `);
 
@@ -137,6 +146,7 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
       this.onChange = (value) => this.set('value', value);
 
       await render(hbs`
+        {{! @glint-nocheck }}
         <VelvetCheckboxGroup
           @onChange={{this.onChange}}
           @value={{this.value}}
@@ -164,6 +174,7 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
       let checkbox;
 
       await render(hbs`
+        {{! @glint-nocheck }}
         <VelvetCheckboxGroup @valueIsObject={{true}} as |group|>
           <group.Checkbox @name="first" />
           <group.Checkbox @name="second" />
@@ -176,6 +187,7 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
       assert.dom(checkbox[1]).isNotChecked();
 
       await render(hbs`
+        {{! @glint-nocheck }}
         <VelvetCheckboxGroup
           @value={{hash first=true second=true}}
           @valueIsObject={{true}}

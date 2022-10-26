@@ -8,6 +8,7 @@ module('Integration | Helper | -velvet/class', function (hooks) {
 
   test('it renders a class', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       {{-velvet/class "foo" "bar"}}
     `);
 

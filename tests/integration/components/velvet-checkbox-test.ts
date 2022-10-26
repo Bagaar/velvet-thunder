@@ -17,6 +17,7 @@ module('Integration | Component | velvet-checkbox', function (hooks) {
 
   test('it renders the correct base classes', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetCheckbox />
     `);
 
@@ -26,6 +27,7 @@ module('Integration | Component | velvet-checkbox', function (hooks) {
 
   test('it renders a disabled checkbox', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetCheckbox />
     `);
 
@@ -33,6 +35,7 @@ module('Integration | Component | velvet-checkbox', function (hooks) {
     assert.dom(SELECTOR.INPUT).doesNotHaveAttribute('disabled');
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetCheckbox @isDisabled={{true}} />
     `);
 
@@ -44,6 +47,7 @@ module('Integration | Component | velvet-checkbox', function (hooks) {
     this.onChange = (isChecked) => assert.step(String(isChecked));
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetCheckbox @onChange={{this.onChange}} />
     `);
 
@@ -54,12 +58,14 @@ module('Integration | Component | velvet-checkbox', function (hooks) {
 
   test('it renders the correct size', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetCheckbox />
     `);
 
     assert.dom(SELECTOR.LABEL).hasClass('velvet-checkbox-md');
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetCheckbox @size="lg" />
     `);
 
@@ -68,6 +74,7 @@ module('Integration | Component | velvet-checkbox', function (hooks) {
 
   test('it renders an indeterminate checkbox', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetCheckbox />
     `);
 
@@ -77,6 +84,7 @@ module('Integration | Component | velvet-checkbox', function (hooks) {
       .hasProperty('indeterminate', false);
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetCheckbox @isIndeterminate={{true}} />
     `);
 
@@ -88,12 +96,14 @@ module('Integration | Component | velvet-checkbox', function (hooks) {
 
   test('it renders a checked checkbox', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetCheckbox />
     `);
 
     assert.dom(SELECTOR.INPUT).isNotChecked();
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetCheckbox @isChecked={{true}} />
     `);
 
@@ -102,12 +112,14 @@ module('Integration | Component | velvet-checkbox', function (hooks) {
 
   test('it renders the correct name', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetCheckbox />
     `);
 
     assert.dom(SELECTOR.INPUT).doesNotHaveAttribute('name');
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetCheckbox @name="foo" />
     `);
 
@@ -116,6 +128,7 @@ module('Integration | Component | velvet-checkbox', function (hooks) {
 
   test('`...attributes` works', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetCheckbox id="foo" />
     `);
 

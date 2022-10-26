@@ -15,6 +15,9 @@
       "*": ["types/*"]
     }
   },
+  "glint": {
+    "environment": "ember-loose"
+  },
   "include": [
     "app/**/*",
     "addon/**/*",

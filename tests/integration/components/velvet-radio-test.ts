@@ -17,6 +17,7 @@ module('Integration | Component | velvet-radio', function (hooks) {
 
   test('it renders the correct base classes', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetRadio />
     `);
 
@@ -26,6 +27,7 @@ module('Integration | Component | velvet-radio', function (hooks) {
 
   test('it renders a disabled radio', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetRadio />
     `);
 
@@ -33,6 +35,7 @@ module('Integration | Component | velvet-radio', function (hooks) {
     assert.dom(SELECTOR.INPUT).doesNotHaveAttribute('disabled');
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetRadio @isDisabled={{true}} />
     `);
 
@@ -44,6 +47,7 @@ module('Integration | Component | velvet-radio', function (hooks) {
     this.onChange = (isChecked) => assert.step(String(isChecked));
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetRadio @onChange={{this.onChange}} />
     `);
 
@@ -54,12 +58,14 @@ module('Integration | Component | velvet-radio', function (hooks) {
 
   test('it renders the correct size', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetRadio />
     `);
 
     assert.dom(SELECTOR.LABEL).hasClass('velvet-radio-md');
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetRadio @size="lg" />
     `);
 
@@ -68,12 +74,14 @@ module('Integration | Component | velvet-radio', function (hooks) {
 
   test('it renders a checked radio', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetRadio />
     `);
 
     assert.dom(SELECTOR.INPUT).isNotChecked();
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetRadio @isChecked={{true}} />
     `);
 
@@ -82,12 +90,14 @@ module('Integration | Component | velvet-radio', function (hooks) {
 
   test('it renders the correct value', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetRadio />
     `);
 
     assert.dom(SELECTOR.INPUT).hasAttribute('value', '');
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetRadio @value="foo" />
     `);
 
@@ -96,6 +106,7 @@ module('Integration | Component | velvet-radio', function (hooks) {
 
   test('`...attributes` works', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetRadio id="foo" />
     `);
 

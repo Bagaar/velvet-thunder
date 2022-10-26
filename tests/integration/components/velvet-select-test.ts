@@ -15,6 +15,7 @@ module('Integration | Component | velvet-select', function (hooks) {
 
   test('it renders the correct base classes', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetSelect />
     `);
 
@@ -23,6 +24,7 @@ module('Integration | Component | velvet-select', function (hooks) {
 
   test('it renders a disabled select', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetSelect />
     `);
 
@@ -32,6 +34,7 @@ module('Integration | Component | velvet-select', function (hooks) {
       .doesNotHaveClass('velvet-select-disabled');
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetSelect @isDisabled={{true}} />
     `);
 
@@ -43,12 +46,14 @@ module('Integration | Component | velvet-select', function (hooks) {
 
   test('it renders an invalid select', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetSelect />
     `);
 
     assert.dom(SELECTOR).doesNotHaveClass('velvet-select-invalid');
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetSelect @isInvalid={{true}} />
     `);
 
@@ -57,12 +62,14 @@ module('Integration | Component | velvet-select', function (hooks) {
 
   test('it renders a pill-shaped select', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetSelect />
     `);
 
     assert.dom(SELECTOR).doesNotHaveClass('velvet-select-pill');
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetSelect @isPill={{true}} />
     `);
 
@@ -73,6 +80,7 @@ module('Integration | Component | velvet-select', function (hooks) {
     this.onChange = (selected) => assert.step(selected);
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetSelect @onChange={{this.onChange}} as |select|>
         <select.Option @value="first" />
         <select.Option @value="second" />
@@ -86,12 +94,14 @@ module('Integration | Component | velvet-select', function (hooks) {
 
   test('it renders the correct size', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetSelect />
     `);
 
     assert.dom(SELECTOR).hasClass('velvet-select-md');
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetSelect @size="lg" />
     `);
 
@@ -100,12 +110,14 @@ module('Integration | Component | velvet-select', function (hooks) {
 
   test('it renders the correct variant', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetSelect />
     `);
 
     assert.dom(SELECTOR).hasClass('velvet-select-primary');
 
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetSelect @variant="secondary" />
     `);
 
@@ -114,6 +126,7 @@ module('Integration | Component | velvet-select', function (hooks) {
 
   test('it selects the correct option', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetSelect @selected="second" as |select|>
         <select.Option @value="first" />
         <select.Option @value="second" />
@@ -127,6 +140,7 @@ module('Integration | Component | velvet-select', function (hooks) {
 
   test('it renders a placeholder', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetSelect @placeholder="Select an Option" @selected={{null}} as |select|>
         <select.Option @value="first" />
         <select.Option @value="second" />
@@ -138,6 +152,7 @@ module('Integration | Component | velvet-select', function (hooks) {
 
   test('`...attributes` works', async function (assert) {
     await render(hbs`
+      {{! @glint-nocheck }}
       <VelvetSelect class="mr-2" />
     `);
 
