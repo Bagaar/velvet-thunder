@@ -3,12 +3,12 @@ import Component from '@glimmer/component';
 
 interface VelvetProgressComponentSignature {
   Args: {
-    color?: string | 'primary'; // TODO: Remove.
     max?: number;
     min?: number;
     size?: 'sm' | 'md' | 'lg';
     text?: string;
     value?: number;
+    variant?: string | 'primary';
   };
   Element: HTMLDivElement;
 }

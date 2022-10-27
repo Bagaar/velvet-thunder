@@ -40,9 +40,7 @@ module.exports = {
     tailwindFormsPlugin({
       strategy: 'class',
     }),
-    velvetThunder.plugin({
-      colors: ['amber', 'emerald', 'primary', 'rose'],
-    }),
+    velvetThunder.plugin(),
   ],
 };
 ```

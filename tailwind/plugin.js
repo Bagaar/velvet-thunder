@@ -1,6 +1,5 @@
 'use strict';
 
-const tailwindColors = require('tailwindcss/colors');
 const tailwindPlugin = require('tailwindcss/plugin');
 
 const COMPONENTS = {
@@ -18,7 +17,6 @@ const COMPONENTS = {
 };
 
 const DEFAULT_OPTIONS = {
-  colors: ['primary'],
   components: {},
 };
 
@@ -37,7 +35,6 @@ module.exports = tailwindPlugin.withOptions(
       addComponents(
         components.map((component) =>
           COMPONENTS[component]({
-            colors: options.colors,
             config,
             options: options.components[component],
             theme,
@@ -52,12 +49,5 @@ module.exports = tailwindPlugin.withOptions(
         pattern: /^velvet-/,
       },
     ],
-    theme: {
-      extend: {
-        colors: {
-          primary: tailwindColors.slate,
-        },
-      },
-    },
   })
 );

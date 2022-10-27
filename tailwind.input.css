@@ -269,3 +269,39 @@ pre {
 .velvet-select-primary.velvet-select-invalid:focus {
   @apply border-rose-500 outline-rose-500/40;
 }
+
+/* Velvet Avatar */
+
+.velvet-avatar-primary {
+  @apply bg-slate-400;
+}
+
+.velvet-avatar-emerald {
+  @apply bg-emerald-400;
+}
+
+.velvet-avatar-amber {
+  @apply bg-amber-400;
+}
+
+.velvet-avatar-rose {
+  @apply bg-rose-400;
+}
+
+/* Velvet Progress */
+
+.velvet-progress-primary {
+  @apply bg-slate-400;
+}
+
+.velvet-progress-emerald {
+  @apply bg-emerald-400;
+}
+
+.velvet-progress-amber {
+  @apply bg-amber-400;
+}
+
+.velvet-progress-rose {
+  @apply bg-rose-400;
+}

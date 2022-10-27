@@ -18,9 +18,7 @@ module.exports = {
       strategy: 'class',
     }),
     tailwindTypographyPlugin,
-    velvetThunder.plugin({
-      colors: ['amber', 'emerald', 'primary', 'rose'],
-    }),
+    velvetThunder.plugin(),
   ],
   theme: {
     extend: {},
