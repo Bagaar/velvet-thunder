@@ -1,8 +1,6 @@
 'use strict';
 
-const { reduceStyles } = require('../utils/styling');
-
-module.exports = ({ colors }) => ({
+module.exports = () => ({
   '.velvet-progress': {
     '@apply overflow-hidden rounded-full w-full': {},
 
@@ -21,15 +19,5 @@ module.exports = ({ colors }) => ({
     '&-line': {
       '@apply h-full rounded-full transition-all': {},
     },
-
-    ...reduceStyles(colors, (color) => ({
-      [`&-${color}`]: {
-        [`@apply bg-${color}-400/20`]: {},
-
-        '.velvet-progress-line': {
-          [`@apply bg-${color}-400`]: {},
-        },
-      },
-    })),
   },
 });

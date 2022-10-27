@@ -4,9 +4,9 @@
   <div
     class={{-velvet/class-list
       (class)
-      (class (or @color "primary"))
       (class (or @size "md"))
-      (if @isRounded (class "rounded"))
+      (class (or @variant "primary"))
+      (if @isRound (class "round"))
     }}
     ...attributes
   >

@@ -1,12 +1,12 @@
 # Avatar
 
-## Colors
+## Variants
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetAvatar @color='emerald' @name='Jake Peralta' />
-  <VelvetAvatar @color='amber' @name='Jake Peralta' />
-  <VelvetAvatar @color='rose' @name='Jake Peralta' />
+  <VelvetAvatar @variant='emerald' @name='Jake Peralta' />
+  <VelvetAvatar @variant='amber' @name='Jake Peralta' />
+  <VelvetAvatar @variant='rose' @name='Jake Peralta' />
 </DemoSpaceX>
 ```
 
@@ -20,10 +20,10 @@
 </DemoSpaceX>
 ```
 
-## Rounded
+## Round
 
 ```hbs preview-template
-<VelvetAvatar @isRounded={{true}} @name='Jake Peralta' />
+<VelvetAvatar @isRound={{true}} @name='Jake Peralta' />
 ```
 
 ## Images
@@ -46,14 +46,14 @@
 
 ## Arguments
 
-| Name         | Description                        | Type      | Default Value |
-| ------------ | ---------------------------------- | --------- | ------------- |
-| `@color`     | The color of the avatar.           | `String`  | `'primary'`   |
-| `@initials`  | The initials of the user.          | `String`  | `''`          |
-| `@isRounded` | Indicate if the avatar is rounded. | `Boolean` | `false`       |
-| `@name`      | The name of the user.              | `String`  | `''`          |
-| `@size`      | The size of the avatar.            | `String`  | `'md'`        |
-| `@src`       | The source of the image.           | `String`  | `''`          |
+| Name        | Description                      | Type      | Default Value |
+| ----------- | -------------------------------- | --------- | ------------- |
+| `@initials` | The initials of the user.        | `String`  | `''`          |
+| `@isRound`  | Indicate if the avatar is round. | `Boolean` | `false`       |
+| `@name`     | The name of the user.            | `String`  | `''`          |
+| `@size`     | The size of the avatar.          | `String`  | `'md'`        |
+| `@src`      | The source of the image.         | `String`  | `''`          |
+| `@variant`  | The appearance of the avatar.    | `String`  | `'primary'`   |
 
 The order to determine what to display is as follows:
 

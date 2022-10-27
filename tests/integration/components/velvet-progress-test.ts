@@ -16,20 +16,6 @@ module('Integration | Component | velvet-progress', function (hooks) {
     assert.dom(SELECTOR).exists();
   });
 
-  test('it renders the correct color', async function (assert) {
-    await render(hbs`
-      <VelvetProgress />
-    `);
-
-    assert.dom(SELECTOR).hasClass('velvet-progress-primary');
-
-    await render(hbs`
-      <VelvetProgress @color="rose" />
-    `);
-
-    assert.dom(SELECTOR).hasClass('velvet-progress-rose');
-  });
-
   test('it renders the correct size', async function (assert) {
     await render(hbs`
       <VelvetProgress />
@@ -42,6 +28,20 @@ module('Integration | Component | velvet-progress', function (hooks) {
     `);
 
     assert.dom(SELECTOR).hasClass('velvet-progress-lg');
+  });
+
+  test('it renders the correct variant', async function (assert) {
+    await render(hbs`
+      <VelvetProgress />
+    `);
+
+    assert.dom(SELECTOR).hasClass('velvet-progress-primary');
+
+    await render(hbs`
+      <VelvetProgress @variant="rose" />
+    `);
+
+    assert.dom(SELECTOR).hasClass('velvet-progress-rose');
   });
 
   test('it renders the correct max value', async function (assert) {

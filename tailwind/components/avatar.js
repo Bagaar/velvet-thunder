@@ -1,8 +1,6 @@
 'use strict';
 
-const { reduceStyles } = require('../utils/styling');
-
-module.exports = ({ colors }) => ({
+module.exports = () => ({
   '.velvet-avatar': {
     '@apply flex font-medium items-center justify-center': {},
     '@apply overflow-hidden text-white uppercase': {},
@@ -23,14 +21,8 @@ module.exports = ({ colors }) => ({
       '@apply h-10 rounded-lg text-base w-10': {},
     },
 
-    '&-rounded': {
+    '&-round': {
       '@apply rounded-full': {},
     },
-
-    ...reduceStyles(colors, (color) => ({
-      [`&-${color}`]: {
-        [`@apply bg-${color}-400`]: {},
-      },
-    })),
   },
 });

@@ -16,14 +16,6 @@ module('Integration | Component | velvet-avatar', function (hooks) {
     assert.dom(SELECTOR).exists();
   });
 
-  test('it renders the correct color', async function (assert) {
-    await render(hbs`
-      <VelvetAvatar @color="primary" />
-    `);
-
-    assert.dom(SELECTOR).hasClass('velvet-avatar-primary');
-  });
-
   test('it renders the correct size', async function (assert) {
     await render(hbs`
       <VelvetAvatar />
@@ -38,18 +30,26 @@ module('Integration | Component | velvet-avatar', function (hooks) {
     assert.dom(SELECTOR).hasClass('velvet-avatar-lg');
   });
 
-  test('it renders a rounded avatar', async function (assert) {
+  test('it renders the correct variant', async function (assert) {
+    await render(hbs`
+      <VelvetAvatar @variant="primary" />
+    `);
+
+    assert.dom(SELECTOR).hasClass('velvet-avatar-primary');
+  });
+
+  test('it renders a round avatar', async function (assert) {
     await render(hbs`
       <VelvetAvatar />
     `);
 
-    assert.dom(SELECTOR).doesNotHaveClass('velvet-avatar-rounded');
+    assert.dom(SELECTOR).doesNotHaveClass('velvet-avatar-round');
 
     await render(hbs`
-      <VelvetAvatar @isRounded={{true}} />
+      <VelvetAvatar @isRound={{true}} />
     `);
 
-    assert.dom(SELECTOR).hasClass('velvet-avatar-rounded');
+    assert.dom(SELECTOR).hasClass('velvet-avatar-round');
   });
 
   test('it renders the image', async function (assert) {
