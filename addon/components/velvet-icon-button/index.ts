@@ -8,9 +8,9 @@ interface VelvetIconButtonComponentSignature {
     isRenderless?: boolean;
     isRound?: boolean;
     onClick?: (event: MouseEvent) => void;
-    size?: string;
-    type?: string;
-    variant?: string;
+    size?: 'sm' | 'md' | 'lg';
+    type?: 'button' | 'reset' | 'submit';
+    variant?: string | 'primary';
   };
   Blocks: {
     default: [{ class: string }];

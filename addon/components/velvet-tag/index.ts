@@ -3,8 +3,8 @@ import templateOnlyComponent from '@ember/component/template-only';
 interface VelvetTagComponentSignature {
   Args: {
     isPill?: boolean;
-    size?: string;
-    variant?: string;
+    size?: 'sm' | 'md' | 'lg';
+    variant?: string | 'primary';
   };
   Blocks: {
     default: [];

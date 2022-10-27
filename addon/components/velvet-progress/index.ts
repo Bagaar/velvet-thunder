@@ -3,10 +3,10 @@ import Component from '@glimmer/component';
 
 interface VelvetProgressComponentSignature {
   Args: {
-    color?: string;
+    color?: string | 'primary'; // TODO: Remove.
     max?: number;
     min?: number;
-    size?: string;
+    size?: 'sm' | 'md' | 'lg';
     text?: string;
     value?: number;
   };

@@ -2,13 +2,14 @@ import { guidFor } from '@ember/object/internals';
 import Component from '@glimmer/component';
 import { WithBoundArgs } from '@glint/template';
 import type VelvetRadioComponent from 'velvet-thunder/components/velvet-radio';
+import type { Size } from 'velvet-thunder/components/velvet-radio';
 
 interface VelvetRadioGroupComponentSignature {
   Args: {
     isDisabled?: boolean;
     name?: string;
     onChange?: (value: unknown, event: Event) => void;
-    size?: string;
+    size?: Size;
     value?: unknown;
   };
   Blocks: {

@@ -9,10 +9,10 @@ interface VelvetInputComponentSignature {
     onChange?: (value: string, event: Event) => void;
     onInput?: (value: string, event: Event) => void;
     placeholder?: string;
-    size?: string;
+    size?: 'sm' | 'md' | 'lg';
     type?: string;
     value?: string;
-    variant?: string;
+    variant?: string | 'primary';
   };
   Element: HTMLInputElement;
 }

@@ -2,11 +2,11 @@ import Component from '@glimmer/component';
 
 interface VelvetAvatarComponentSignature {
   Args: {
-    color?: string;
+    color?: string | 'primary'; // TODO: Remove.
     initials?: string;
     isRounded?: boolean;
     name?: string;
-    size?: string;
+    size?: 'sm' | 'md' | 'lg';
     src?: string;
   };
   Element: HTMLDivElement;

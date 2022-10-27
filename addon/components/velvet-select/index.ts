@@ -11,8 +11,8 @@ interface VelvetSelectComponentSignature {
     onChange?: (selected: unknown, event: Event) => void;
     placeholder?: string;
     selected?: unknown;
-    size?: string;
-    variant?: string;
+    size?: 'sm' | 'md' | 'lg';
+    variant?: string | 'primary';
   };
   Blocks: {
     default: [

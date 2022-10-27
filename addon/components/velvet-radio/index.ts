@@ -1,13 +1,15 @@
 import { action } from '@ember/object';
 import Component from '@glimmer/component';
 
+export type Size = 'sm' | 'md' | 'lg';
+
 interface VelvetRadioComponentSignature {
   Args: {
     isChecked?: boolean;
     isDisabled?: boolean;
     name?: string;
     onChange?: (isChecked: boolean, event: Event) => void;
-    size?: string;
+    size?: Size;
     value?: unknown;
 
     // Private:

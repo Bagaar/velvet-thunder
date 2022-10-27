@@ -2,6 +2,7 @@ import { guidFor } from '@ember/object/internals';
 import Component from '@glimmer/component';
 import { WithBoundArgs } from '@glint/template';
 import type VelvetCheckboxComponent from 'velvet-thunder/components/velvet-checkbox';
+import type { Size } from 'velvet-thunder/components/velvet-checkbox';
 
 export type ValueAsArray = string[];
 export type ValueAsObject = { [name: string]: boolean };
@@ -11,7 +12,7 @@ interface VelvetCheckboxGroupComponentSignature {
   Args: {
     isDisabled?: boolean;
     onChange?: (value: Value, event: Event) => void;
-    size?: string;
+    size?: Size;
     value?: Value;
     valueIsObject?: boolean;
   };

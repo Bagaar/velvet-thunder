@@ -8,9 +8,9 @@ interface VelvetTextareaComponentSignature {
     onChange?: (value: string, event: Event) => void;
     onInput?: (value: string, event: Event) => void;
     placeholder?: string;
-    size?: string;
+    size?: 'sm' | 'md' | 'lg';
     value?: string;
-    variant?: string;
+    variant?: string | 'primary';
   };
   Element: HTMLTextAreaElement;
 }

@@ -6,6 +6,8 @@ import type {
   ValueAsObject as GroupValueAsObject,
 } from 'velvet-thunder/components/velvet-checkbox-group';
 
+export type Size = 'sm' | 'md' | 'lg';
+
 interface VelvetCheckboxComponentSignature {
   Args: {
     isChecked?: boolean;
@@ -13,7 +15,7 @@ interface VelvetCheckboxComponentSignature {
     isIndeterminate?: boolean;
     name?: string;
     onChange?: (value: boolean, event: Event) => void;
-    size?: string;
+    size?: Size;
 
     // Private:
     groupValue?: GroupValue;
