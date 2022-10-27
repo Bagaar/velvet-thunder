@@ -46,7 +46,7 @@
   },
   "lint-staged": {
     "*.{json,md,yml}": "prettier --check",
-    "*.css": "stylelint --fix",
+    "*.css": "stylelint",
     "*.hbs": "ember-template-lint",
     "*.js": "eslint"
   },
