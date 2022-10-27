@@ -45,4 +45,4 @@
 | `@name`       | The name of the radio group.             | `String`   | `uid`         |
 | `@onChange`   | Handle the radio group's `change` event. | `Function` | `undefined`   |
 | `@size`       | The size of the radios.                  | `String`   | `'md'`        |
-| `@value`      | The value of the radio group.            | `Any`      | `undefined`   |
+| `@value`      | The value of the radio group.            | `Unknown`  | `undefined`   |

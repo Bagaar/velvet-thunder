@@ -71,12 +71,12 @@
 | `@isPill`      | Indicate if the select is pill shaped. | `Boolean`  | `false`       |
 | `@onChange`    | Handle the select's `change` event.    | `Function` | `undefined`   |
 | `@placeholder` | The placeholder of the select.         | `String`   | `''`          |
-| `@selected`    | The selected option of the select.     | `Any`      | `undefined`   |
+| `@selected`    | The selected option of the select.     | `Unknown`  | `undefined`   |
 | `@size`        | The size of the select.                | `String`   | `'md'`        |
 | `@variant`     | The appearance of the select.          | `String`   | `'primary'`   |
 
 ### Option Arguments
 
-| Name     | Description              | Type  | Default Value |
-| -------- | ------------------------ | ----- | ------------- |
-| `@value` | The value of the option. | `Any` | `undefined`   |
+| Name     | Description              | Type      | Default Value |
+| -------- | ------------------------ | --------- | ------------- |
+| `@value` | The value of the option. | `Unknown` | `undefined`   |

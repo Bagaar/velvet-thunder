@@ -28,4 +28,4 @@
 | `@name`       | The name of the radio.             | `String`   | `''`          |
 | `@onChange`   | Handle the radio's `change` event. | `Function` | `undefined`   |
 | `@size`       | The size of the radio.             | `String`   | `'md'`        |
-| `@value`      | The value of the radio.            | `Any`      | `undefined`   |
+| `@value`      | The value of the radio.            | `Unknown`  | `undefined`   |
