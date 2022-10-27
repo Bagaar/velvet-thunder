@@ -20,10 +20,10 @@ import type VelvetClassHelper from 'velvet-thunder/helpers/-velvet/class';
 import type VelvetNoopHelper from 'velvet-thunder/helpers/-velvet/noop';
 
 // Dependencies:
-import AndHelper from '@gavant/glint-template-types/types/ember-truth-helpers/and';
-import EqHelper from '@gavant/glint-template-types/types/ember-truth-helpers/eq';
-import NotHelper from '@gavant/glint-template-types/types/ember-truth-helpers/not';
-import OrHelper from '@gavant/glint-template-types/types/ember-truth-helpers/or';
+import type AndHelper from '@gavant/glint-template-types/types/ember-truth-helpers/and';
+import type EqHelper from '@gavant/glint-template-types/types/ember-truth-helpers/eq';
+import type NotHelper from '@gavant/glint-template-types/types/ember-truth-helpers/not';
+import type OrHelper from '@gavant/glint-template-types/types/ember-truth-helpers/or';
 
 declare module '@glint/environment-ember-loose/registry' {
   export default interface Registry {

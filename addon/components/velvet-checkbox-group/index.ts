@@ -1,6 +1,6 @@
 import { guidFor } from '@ember/object/internals';
 import Component from '@glimmer/component';
-import { WithBoundArgs } from '@glint/template';
+import type { WithBoundArgs } from '@glint/template';
 import type VelvetCheckboxComponent from 'velvet-thunder/components/velvet-checkbox';
 import type { Size } from 'velvet-thunder/components/velvet-checkbox';
 

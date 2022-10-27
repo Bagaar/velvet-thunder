@@ -1,5 +1,6 @@
 import { action } from '@ember/object';
 import Component from '@glimmer/component';
+import type { HTMLInputElementEvent } from 'velvet-thunder/-private/types';
 
 interface VelvetInputComponentSignature {
   Args: {
@@ -19,12 +20,12 @@ interface VelvetInputComponentSignature {
 
 export default class VelvetInputComponent extends Component<VelvetInputComponentSignature> {
   @action
-  changeHandler(event: Event) {
-    this.args.onChange?.((event.target as HTMLInputElement).value, event);
+  changeHandler(event: HTMLInputElementEvent) {
+    this.args.onChange?.(event.target.value, event);
   }
 
   @action
-  inputHandler(event: Event) {
-    this.args.onInput?.((event.target as HTMLInputElement).value, event);
+  inputHandler(event: HTMLInputElementEvent) {
+    this.args.onInput?.(event.target.value, event);
   }
 }

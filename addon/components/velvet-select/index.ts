@@ -1,6 +1,7 @@
 import { action } from '@ember/object';
 import Component from '@glimmer/component';
-import { WithBoundArgs } from '@glint/template';
+import type { WithBoundArgs } from '@glint/template';
+import type { HTMLSelectElementEvent } from 'velvet-thunder/-private/types';
 import type VelvetSelectOptionComponent from 'velvet-thunder/components/velvet-select/option';
 
 interface VelvetSelectComponentSignature {
@@ -39,11 +40,8 @@ export default class VelvetSelectComponent extends Component<VelvetSelectCompone
   }
 
   @action
-  changeHandler(event: Event) {
-    this.args.onChange?.(
-      this.options.get((event.target as HTMLSelectElement).value),
-      event
-    );
+  changeHandler(event: HTMLSelectElementEvent) {
+    this.args.onChange?.(this.options.get(event.target.value), event);
   }
 
   @action
