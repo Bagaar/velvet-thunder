@@ -1,3 +1,5 @@
+{{! @glint-nocheck }}
+
 {{#let (helper "-velvet/class" "velvet-radio") as |class|}}
   <label
     class={{-velvet/class-list
@@ -16,9 +18,15 @@
       {{on
         "change"
         (if
-          (and @onChange (not @isDisabled))
-          (if @inGroup this.changeGroupHandler this.changeHandler)
-          (-velvet/noop)
+          @inGroup
+          (if
+            (and @onChangeGroup (not @isDisabled))
+            this.changeGroupHandler
+            (-velvet/noop)
+          )
+          (if
+            (and @onChange (not @isDisabled)) this.changeHandler (-velvet/noop)
+          )
         )
       }}
       ...attributes

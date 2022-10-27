@@ -1,3 +1,5 @@
+{{! @glint-nocheck }}
+
 {{#let (helper "-velvet/class" "velvet-button") as |class|}}
   {{#let
     (-velvet/class-list
@@ -25,7 +27,7 @@
         {{#if @isLoading}}
           <VelvetSpinner />
         {{/if}}
-        {{yield}}
+        {{yield (hash class=className)}}
         {{#if @isDisclosure}}
           <VelvetDisclosureIcon class={{class "disclosure-icon"}} />
         {{/if}}

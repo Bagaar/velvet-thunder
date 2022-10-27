@@ -1,7 +1,14 @@
-import { click, render } from '@ember/test-helpers';
+import { click, render, TestContext } from '@ember/test-helpers';
 import { setupRenderingTest } from 'dummy/tests/helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { module, test } from 'qunit';
+
+type VelvetCheckboxGroupValue = string[] | { [name: string]: boolean };
+
+interface VelvetCheckboxGroupTestContext extends TestContext {
+  onChange: (value: VelvetCheckboxGroupValue, event: Event) => void;
+  value: VelvetCheckboxGroupValue;
+}
 
 const GROUP_SELECTOR = '.velvet-checkbox-group';
 const CHECKBOX_SELECTOR = 'input[type="checkbox"]';
@@ -41,12 +48,12 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
     assert.dom(`${CHECKBOX_SELECTOR}:disabled`).exists({ count: 2 });
   });
 
-  test('it handles `change` events', async function (assert) {
+  test('it handles `change` events', async function (this: VelvetCheckboxGroupTestContext, assert) {
     this.value = ['third'];
 
     this.onChange = (value) => this.set('value', value);
 
-    await render(hbs`
+    await render<VelvetCheckboxGroupTestContext>(hbs`
       <VelvetCheckboxGroup
         @onChange={{this.onChange}}
         @value={{this.value}}
@@ -58,11 +65,9 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
       </VelvetCheckboxGroup>
     `);
 
-    const checkbox = this.element.querySelectorAll(CHECKBOX_SELECTOR);
-
-    await click(checkbox[0]);
-    await click(checkbox[1]);
-    await click(checkbox[2]);
+    await click(`${CHECKBOX_SELECTOR}[name="first"]`);
+    await click(`${CHECKBOX_SELECTOR}[name="second"]`);
+    await click(`${CHECKBOX_SELECTOR}[name="third"]`);
 
     assert.deepEqual(this.value, ['first', 'second']);
   });
@@ -126,12 +131,12 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
   });
 
   module('@valueIsObject={{true}}', function () {
-    test('it handles `change` events', async function (assert) {
+    test('it handles `change` events', async function (this: VelvetCheckboxGroupTestContext, assert) {
       this.value = { third: true };
 
       this.onChange = (value) => this.set('value', value);
 
-      await render(hbs`
+      await render<VelvetCheckboxGroupTestContext>(hbs`
         <VelvetCheckboxGroup
           @onChange={{this.onChange}}
           @value={{this.value}}
@@ -144,11 +149,9 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
         </VelvetCheckboxGroup>
       `);
 
-      const checkbox = this.element.querySelectorAll(CHECKBOX_SELECTOR);
-
-      await click(checkbox[0]);
-      await click(checkbox[1]);
-      await click(checkbox[2]);
+      await click(`${CHECKBOX_SELECTOR}[name="first"]`);
+      await click(`${CHECKBOX_SELECTOR}[name="second"]`);
+      await click(`${CHECKBOX_SELECTOR}[name="third"]`);
 
       assert.deepEqual(this.value, {
         first: true,

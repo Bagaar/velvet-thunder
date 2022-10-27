@@ -1,3 +1,5 @@
+{{! @glint-nocheck }}
+
 {{#let (helper "-velvet/class" "velvet-icon-button") as |class|}}
   {{#let
     (-velvet/class-list
@@ -27,7 +29,7 @@
         {{else if @isDisclosure}}
           <VelvetDisclosureIcon class={{class "disclosure-icon"}} />
         {{else}}
-          {{yield}}
+          {{yield (hash class=className)}}
         {{/if}}
       </button>
     {{/if}}

@@ -1,8 +1,12 @@
-import { render } from '@ember/test-helpers';
+import { render, TestContext } from '@ember/test-helpers';
 import { setupRenderingTest } from 'dummy/tests/helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { module, test } from 'qunit';
 import { velvetSelect } from 'velvet-thunder/test-support';
+
+interface VelvetSelectTestContext extends TestContext {
+  onChange: (selected: unknown, event: Event) => void;
+}
 
 const SELECTOR = '.velvet-select';
 
@@ -65,10 +69,10 @@ module('Integration | Component | velvet-select', function (hooks) {
     assert.dom(SELECTOR).hasClass('velvet-select-pill');
   });
 
-  test('it handles `change` events', async function (assert) {
-    this.onChange = (selected) => assert.step(selected);
+  test('it handles `change` events', async function (this: VelvetSelectTestContext, assert) {
+    this.onChange = (selected) => assert.step(selected as string);
 
-    await render(hbs`
+    await render<VelvetSelectTestContext>(hbs`
       <VelvetSelect @onChange={{this.onChange}} as |select|>
         <select.Option @value="first" />
         <select.Option @value="second" />
@@ -118,7 +122,7 @@ module('Integration | Component | velvet-select', function (hooks) {
 
     const secondOption = this.element.querySelectorAll('option')[1];
 
-    assert.dom(SELECTOR).hasValue(secondOption.value);
+    assert.dom(SELECTOR).hasValue(secondOption?.value);
   });
 
   test('it renders a placeholder', async function (assert) {

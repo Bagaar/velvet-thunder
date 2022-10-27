@@ -1,7 +1,11 @@
-import { click, render } from '@ember/test-helpers';
+import { click, render, TestContext } from '@ember/test-helpers';
 import { setupRenderingTest } from 'dummy/tests/helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { module, test } from 'qunit';
+
+interface VelvetRadioTestContext extends TestContext {
+  onChange: (isChecked: boolean, event: Event) => void;
+}
 
 const SELECTOR = {
   INPUT: 'input[type="radio"]',
@@ -36,10 +40,10 @@ module('Integration | Component | velvet-radio', function (hooks) {
     assert.dom(SELECTOR.INPUT).hasAttribute('disabled');
   });
 
-  test('it handles `change` events', async function (assert) {
+  test('it handles `change` events', async function (this: VelvetRadioTestContext, assert) {
     this.onChange = (isChecked) => assert.step(String(isChecked));
 
-    await render(hbs`
+    await render<VelvetRadioTestContext>(hbs`
       <VelvetRadio @onChange={{this.onChange}} />
     `);
 

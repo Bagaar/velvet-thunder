@@ -1,7 +1,11 @@
-import { click, render } from '@ember/test-helpers';
+import { click, render, TestContext } from '@ember/test-helpers';
 import { setupRenderingTest } from 'dummy/tests/helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { module, test } from 'qunit';
+
+interface VelvetCheckboxTestContext extends TestContext {
+  onChange: (isChecked: boolean, event: Event) => void;
+}
 
 const SELECTOR = {
   INPUT: 'input[type="checkbox"]',
@@ -36,10 +40,10 @@ module('Integration | Component | velvet-checkbox', function (hooks) {
     assert.dom(SELECTOR.INPUT).hasAttribute('disabled');
   });
 
-  test('it handles `change` events', async function (assert) {
+  test('it handles `change` events', async function (this: VelvetCheckboxTestContext, assert) {
     this.onChange = (isChecked) => assert.step(String(isChecked));
 
-    await render(hbs`
+    await render<VelvetCheckboxTestContext>(hbs`
       <VelvetCheckbox @onChange={{this.onChange}} />
     `);
 

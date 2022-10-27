@@ -1,7 +1,12 @@
-import { render, typeIn } from '@ember/test-helpers';
+import { render, typeIn, TestContext } from '@ember/test-helpers';
 import { setupRenderingTest } from 'dummy/tests/helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { module, test } from 'qunit';
+
+interface VelvetTextareaTestContext extends TestContext {
+  onChange: (value: string, event: Event) => void;
+  onInput: (value: string, event: Event) => void;
+}
 
 const SELECTOR = '.velvet-textarea';
 
@@ -50,10 +55,10 @@ module('Integration | Component | velvet-textarea', function (hooks) {
     assert.dom(SELECTOR).hasClass('velvet-textarea-invalid');
   });
 
-  test('it handles `change` events', async function (assert) {
+  test('it handles `change` events', async function (this: VelvetTextareaTestContext, assert) {
     this.onChange = (value) => assert.step(value);
 
-    await render(hbs`
+    await render<VelvetTextareaTestContext>(hbs`
       <VelvetTextarea @onChange={{this.onChange}} />
     `);
 
@@ -62,10 +67,10 @@ module('Integration | Component | velvet-textarea', function (hooks) {
     assert.verifySteps(['foo']);
   });
 
-  test('it handles `input` events', async function (assert) {
+  test('it handles `input` events', async function (this: VelvetTextareaTestContext, assert) {
     this.onInput = (value) => assert.step(value);
 
-    await render(hbs`
+    await render<VelvetTextareaTestContext>(hbs`
       <VelvetTextarea @onInput={{this.onInput}} />
     `);
 

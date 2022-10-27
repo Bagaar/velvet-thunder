@@ -11,11 +11,15 @@ const THEME = {
 export default class DocsController extends Controller {
   @action
   toggleDarkMode() {
+    if (HTML === null) {
+      return;
+    }
+
     if (HTML.classList.contains(DARK_MODE_CLASS)) {
-      localStorage.theme = THEME.LIGHT;
+      localStorage.setItem('theme', THEME.LIGHT);
       HTML.classList.remove(DARK_MODE_CLASS);
     } else {
-      localStorage.theme = THEME.DARK;
+      localStorage.setItem('theme', THEME.DARK);
       HTML.classList.add(DARK_MODE_CLASS);
     }
   }
