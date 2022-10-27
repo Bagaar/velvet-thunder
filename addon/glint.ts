@@ -1,5 +1,7 @@
 import type VelvetAvatarComponent from 'velvet-thunder/components/velvet-avatar';
 import type VelvetButtonComponent from 'velvet-thunder/components/velvet-button';
+import type VelvetCheckboxComponent from 'velvet-thunder/components/velvet-checkbox';
+import type VelvetCheckboxGroupComponent from 'velvet-thunder/components/velvet-checkbox-group';
 import type VelvetDisclosureIconComponent from 'velvet-thunder/components/velvet-disclosure-icon';
 import type VelvetIconButtonComponent from 'velvet-thunder/components/velvet-icon-button';
 import type VelvetInputComponent from 'velvet-thunder/components/velvet-input';
@@ -27,6 +29,8 @@ declare module '@glint/environment-ember-loose/registry' {
   export default interface Registry {
     VelvetAvatar: typeof VelvetAvatarComponent;
     VelvetButton: typeof VelvetButtonComponent;
+    VelvetCheckbox: typeof VelvetCheckboxComponent;
+    VelvetCheckboxGroup: typeof VelvetCheckboxGroupComponent;
     VelvetDisclosureIcon: typeof VelvetDisclosureIconComponent;
     VelvetIconButton: typeof VelvetIconButtonComponent;
     VelvetInput: typeof VelvetInputComponent;
@@ -38,6 +42,7 @@ declare module '@glint/environment-ember-loose/registry' {
     VelvetTag: typeof VelvetTagComponent;
     VelvetTextarea: typeof VelvetTextareaComponent;
 
+    'velvet-checkbox': typeof VelvetCheckboxComponent;
     'velvet-radio': typeof VelvetRadioComponent;
     'velvet-select/option': typeof VelvetSelectOptionComponent;
 

@@ -1,36 +1,52 @@
 import { action } from '@ember/object';
 import Component from '@glimmer/component';
-
-type GroupValueArray = string[];
-type GroupValueObject = { [name: string]: boolean };
-type GroupValue = GroupValueArray | GroupValueObject;
+import type {
+  Value as GroupValue,
+  ValueAsArray as GroupValueAsArray,
+  ValueAsObject as GroupValueAsObject,
+} from 'velvet-thunder/components/velvet-checkbox-group';
 
 interface VelvetCheckboxComponentSignature {
   Args: {
-    groupValue: GroupValue;
-    groupValueIsObject: boolean;
-    name: string;
-    // TODO: Add separate `onChange` argument for groups.
-    onChange: (value: boolean | GroupValue, event: Event) => void;
+    isChecked?: boolean;
+    isDisabled?: boolean;
+    isIndeterminate?: boolean;
+    name?: string;
+    onChange?: (value: boolean, event: Event) => void;
+    size?: string;
+
+    // Private:
+    groupValue?: GroupValue;
+    groupValueIsObject?: boolean;
+    inGroup?: boolean;
+    onChangeGroup?: (value: GroupValue, event: Event) => void;
   };
+  Blocks: {
+    default: [];
+  };
+  Element: HTMLInputElement;
 }
 
 export default class VelvetCheckboxComponent extends Component<VelvetCheckboxComponentSignature> {
-  get groupValue() {
-    return this.args.groupValue || (this.args.groupValueIsObject ? {} : []);
+  get groupValueAsArray() {
+    return (this.args.groupValue || []) as GroupValueAsArray;
+  }
+
+  get groupValueAsObject() {
+    return (this.args.groupValue || {}) as GroupValueAsObject;
   }
 
   get isCheckedInGroup() {
     if (this.args.groupValueIsObject) {
-      return (this.groupValue as GroupValueObject)[this.args.name] === true;
+      return this.groupValueAsObject[this.args.name as string] === true;
     }
 
-    return (this.groupValue as GroupValueArray).includes(this.args.name);
+    return this.groupValueAsArray.includes(this.args.name as string);
   }
 
   @action
   changeHandler(event: Event) {
-    this.args.onChange((event.target as HTMLInputElement).checked, event);
+    this.args.onChange?.((event.target as HTMLInputElement).checked, event);
   }
 
   @action
@@ -39,17 +55,17 @@ export default class VelvetCheckboxComponent extends Component<VelvetCheckboxCom
 
     if (this.args.groupValueIsObject) {
       groupValue = {
-        ...this.groupValue,
-        [this.args.name]: (event.target as HTMLInputElement).checked,
+        ...this.groupValueAsObject,
+        [this.args.name as string]: (event.target as HTMLInputElement).checked,
       };
     } else if ((event.target as HTMLInputElement).checked) {
-      groupValue = [...(this.groupValue as GroupValueArray), this.args.name];
+      groupValue = [...this.groupValueAsArray, this.args.name];
     } else {
-      groupValue = (this.groupValue as GroupValueArray).filter(
+      groupValue = this.groupValueAsArray.filter(
         (name) => name !== this.args.name
       );
     }
 
-    this.args.onChange(groupValue, event);
+    this.args.onChangeGroup?.(groupValue as GroupValue, event);
   }
 }
