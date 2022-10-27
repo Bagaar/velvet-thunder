@@ -42,7 +42,6 @@ module.exports = {
         './tailwind.config.js',
         './testem.js',
         './blueprints/*/index.js',
-        './config/**/*.js',
         './tailwind/**/*.js',
         './tests/dummy/config/**/*.js',
       ],
