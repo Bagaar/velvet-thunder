@@ -112,7 +112,7 @@
     "ember-router-scroll": "^4.1.2",
     "ember-source": "~4.7.0",
     "ember-source-channel-url": "^3.0.0",
-    "ember-template-lint": "^4.14.0",
+    "ember-template-lint": "^4.17.0",
     "ember-template-lint-plugin-prettier": "^4.0.0",
     "ember-try": "^2.0.0",
     "eslint": "^7.32.0",
