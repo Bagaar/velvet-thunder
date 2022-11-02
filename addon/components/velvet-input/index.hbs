@@ -1,28 +1,26 @@
 {{! @glint-nocheck }}
 
-{{#let (helper "-velvet/class" "velvet-input") as |class|}}
-  <input
-    class={{-velvet/class-list
-      (class)
-      (class (or @size "md"))
-      (class (or @variant "primary"))
-      (if @isInvalid (class "invalid"))
-      (if @isPill (class "pill"))
-      (if @isDisabled (class "disabled"))
-      "form-input"
-    }}
-    disabled={{@isDisabled}}
-    placeholder={{@placeholder}}
-    type={{or @type "text"}}
-    value={{@value}}
-    {{on
-      "change"
-      (if (and @onChange (not @isDisabled)) this.changeHandler (-velvet/noop))
-    }}
-    {{on
-      "input"
-      (if (and @onInput (not @isDisabled)) this.inputHandler (-velvet/noop))
-    }}
-    ...attributes
-  />
-{{/let}}
+<input
+  class={{-velvet/class-list
+    "velvet-input"
+    (concat "velvet-input-" (or @size "md"))
+    (concat "velvet-input-" (or @variant "primary"))
+    (if @isInvalid "velvet-input-invalid")
+    (if @isPill "velvet-input-pill")
+    (if @isDisabled "velvet-input-disabled")
+    "form-input"
+  }}
+  disabled={{@isDisabled}}
+  placeholder={{@placeholder}}
+  type={{or @type "text"}}
+  value={{@value}}
+  {{on
+    "change"
+    (if (and @onChange (not @isDisabled)) this.changeHandler (-velvet/noop))
+  }}
+  {{on
+    "input"
+    (if (and @onInput (not @isDisabled)) this.inputHandler (-velvet/noop))
+  }}
+  ...attributes
+/>

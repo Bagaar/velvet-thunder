@@ -1,37 +1,33 @@
 {{! @glint-nocheck }}
 
-{{#let (helper "-velvet/class" "velvet-select") as |class|}}
-  <select
-    class={{-velvet/class-list
-      (class)
-      (class (or @size "md"))
-      (class (or @variant "primary"))
-      (if @isInvalid (class "invalid"))
-      (if @isPill (class "pill"))
-      (if @isDisabled (class "disabled"))
-      (if this.shouldDisplayPlaceholder (class "placeholder"))
-      "form-select"
-    }}
-    disabled={{@isDisabled}}
-    {{on
-      "change"
-      (if (and @onChange (not @isDisabled)) this.changeHandler (-velvet/noop))
-    }}
-    ...attributes
-  >
-    {{#if this.shouldDisplayPlaceholder}}
-      <option disabled selected={{true}}>
-        {{@placeholder}}
-      </option>
-    {{/if}}
-    {{yield
-      (hash
-        Option=(component
-          "velvet-select/option"
-          onRegister=this.registerOption
-          selected=@selected
-        )
+<select
+  class={{-velvet/class-list
+    "velvet-select"
+    (concat "velvet-select-" (or @size "md"))
+    (concat "velvet-select-" (or @variant "primary"))
+    (if @isInvalid "velvet-select-invalid")
+    (if @isPill "velvet-select-pill")
+    (if @isDisabled "velvet-select-disabled")
+    (if this.shouldDisplayPlaceholder "velvet-select-placeholder")
+    "form-select"
+  }}
+  disabled={{@isDisabled}}
+  {{on
+    "change"
+    (if (and @onChange (not @isDisabled)) this.changeHandler (-velvet/noop))
+  }}
+  ...attributes
+>
+  {{#if this.shouldDisplayPlaceholder}}
+    <option disabled selected={{true}}>
+      {{@placeholder}}
+    </option>
+  {{/if}}
+  {{yield
+    (hash
+      Option=(component
+        "velvet-select/option" onRegister=this.registerOption selected=@selected
       )
-    }}
-  </select>
-{{/let}}
+    )
+  }}
+</select>

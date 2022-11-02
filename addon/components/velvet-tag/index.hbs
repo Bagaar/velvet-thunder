@@ -1,15 +1,11 @@
-{{! @glint-nocheck }}
-
-{{#let (helper "-velvet/class" "velvet-tag") as |class|}}
-  <div
-    class={{-velvet/class-list
-      (class)
-      (class (or @size "md"))
-      (class (or @variant "primary"))
-      (if @isPill (class "pill"))
-    }}
-    ...attributes
-  >
-    {{yield}}
-  </div>
-{{/let}}
+<div
+  class={{-velvet/class-list
+    "velvet-tag"
+    (concat "velvet-tag-" (or @size "md"))
+    (concat "velvet-tag-" (or @variant "primary"))
+    (if @isPill "velvet-tag-pill")
+  }}
+  ...attributes
+>
+  {{yield}}
+</div>

@@ -1,19 +1,15 @@
-{{! @glint-nocheck }}
-
-{{#let (helper "-velvet/class" "velvet-progress") as |class|}}
-  <div
-    class={{-velvet/class-list
-      (class)
-      (class (or @size "md"))
-      (class (or @variant "primary"))
-    }}
-    aria-valuemax={{this.max}}
-    aria-valuemin={{this.min}}
-    aria-valuenow={{this.value}}
-    aria-valuetext={{@text}}
-    role="progressbar"
-    ...attributes
-  >
-    <div class={{class "line"}} style={{this.lineStyle}}></div>
-  </div>
-{{/let}}
+<div
+  class={{-velvet/class-list
+    "velvet-progress"
+    (concat "velvet-progress-" (or @size "md"))
+    (concat "velvet-progress-" (or @variant "primary"))
+  }}
+  aria-valuemax={{this.max}}
+  aria-valuemin={{this.min}}
+  aria-valuenow={{this.value}}
+  aria-valuetext={{@text}}
+  role="progressbar"
+  ...attributes
+>
+  <div class="velvet-progress-line" style={{this.lineStyle}}></div>
+</div>

@@ -1,9 +1,8 @@
-{{! @glint-nocheck }}
-
 <option selected={{eq @value @selected}} value={{this.uniqueId}} ...attributes>
   {{#if (has-block)}}
     {{yield}}
   {{else}}
+    {{! @glint-expect-error }}
     {{@value}}
   {{/if}}
 </option>

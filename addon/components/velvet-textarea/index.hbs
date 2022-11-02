@@ -1,26 +1,24 @@
 {{! @glint-nocheck }}
 
-{{#let (helper "-velvet/class" "velvet-textarea") as |class|}}
-  <textarea
-    class={{-velvet/class-list
-      (class)
-      (class (or @size "md"))
-      (class (or @variant "primary"))
-      (if @isInvalid (class "invalid"))
-      (if @isDisabled (class "disabled"))
-      "form-textarea"
-    }}
-    disabled={{@isDisabled}}
-    placeholder={{@placeholder}}
-    value={{@value}}
-    {{on
-      "change"
-      (if (and @onChange (not @isDisabled)) this.changeHandler (-velvet/noop))
-    }}
-    {{on
-      "input"
-      (if (and @onInput (not @isDisabled)) this.inputHandler (-velvet/noop))
-    }}
-    ...attributes
-  ></textarea>
-{{/let}}
+<textarea
+  class={{-velvet/class-list
+    "velvet-textarea"
+    (concat "velvet-textarea-" (or @size "md"))
+    (concat "velvet-textarea-" (or @variant "primary"))
+    (if @isInvalid "velvet-textarea-invalid")
+    (if @isDisabled "velvet-textarea-disabled")
+    "form-textarea"
+  }}
+  disabled={{@isDisabled}}
+  placeholder={{@placeholder}}
+  value={{@value}}
+  {{on
+    "change"
+    (if (and @onChange (not @isDisabled)) this.changeHandler (-velvet/noop))
+  }}
+  {{on
+    "input"
+    (if (and @onInput (not @isDisabled)) this.inputHandler (-velvet/noop))
+  }}
+  ...attributes
+></textarea>

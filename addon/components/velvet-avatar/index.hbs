@@ -1,23 +1,19 @@
-{{! @glint-nocheck }}
-
-{{#let (helper "-velvet/class" "velvet-avatar") as |class|}}
-  <div
-    class={{-velvet/class-list
-      (class)
-      (class (or @size "md"))
-      (class (or @variant "primary"))
-      (if @isRound (class "round"))
-    }}
-    ...attributes
-  >
-    {{#if @src}}
-      <img alt={{@name}} class={{class "image"}} src={{@src}} />
-    {{else if @name}}
-      {{this.initials}}
-    {{else if @initials}}
-      {{@initials}}
-    {{else}}
-      ?
-    {{/if}}
-  </div>
-{{/let}}
+<div
+  class={{-velvet/class-list
+    "velvet-avatar"
+    (concat "velvet-avatar-" (or @size "md"))
+    (concat "velvet-avatar-" (or @variant "primary"))
+    (if @isRound "velvet-avatar-round")
+  }}
+  ...attributes
+>
+  {{#if @src}}
+    <img alt={{@name}} class="velvet-avatar-image" src={{@src}} />
+  {{else if @name}}
+    {{this.initials}}
+  {{else if @initials}}
+    {{@initials}}
+  {{else}}
+    ?
+  {{/if}}
+</div>
