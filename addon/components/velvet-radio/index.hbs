@@ -1,36 +1,32 @@
 {{! @glint-nocheck }}
 
-{{#let (helper "-velvet/class" "velvet-radio") as |class|}}
-  <label
-    class={{-velvet/class-list
-      (class)
-      (class (or @size "md"))
-      (if @isDisabled (class "disabled"))
-    }}
-  >
-    <input
-      checked={{if @inGroup (eq @value @groupValue) @isChecked}}
-      class={{-velvet/class-list (class "input") "form-radio"}}
-      disabled={{@isDisabled}}
-      name={{@name}}
-      type="radio"
-      value={{@value}}
-      {{on
-        "change"
+<label
+  class={{-velvet/class-list
+    "velvet-radio"
+    (concat "velvet-radio-" (or @size "md"))
+    (if @isDisabled "velvet-radio-disabled")
+  }}
+>
+  <input
+    checked={{if @inGroup (eq @value @groupValue) @isChecked}}
+    class="velvet-radio-input form-radio"
+    disabled={{@isDisabled}}
+    name={{@name}}
+    type="radio"
+    value={{@value}}
+    {{on
+      "change"
+      (if
+        @inGroup
         (if
-          @inGroup
-          (if
-            (and @onChangeGroup (not @isDisabled))
-            this.changeGroupHandler
-            (-velvet/noop)
-          )
-          (if
-            (and @onChange (not @isDisabled)) this.changeHandler (-velvet/noop)
-          )
+          (and @onChangeGroup (not @isDisabled))
+          this.changeGroupHandler
+          (-velvet/noop)
         )
-      }}
-      ...attributes
-    />
-    {{yield}}
-  </label>
-{{/let}}
+        (if (and @onChange (not @isDisabled)) this.changeHandler (-velvet/noop))
+      )
+    }}
+    ...attributes
+  />
+  {{yield}}
+</label>

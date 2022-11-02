@@ -1,27 +1,23 @@
-{{! @glint-nocheck }}
-
-{{#let (helper "-velvet/class" "velvet-checkbox-group") as |class|}}
-  <div
-    class={{-velvet/class-list
-      (class)
-      (class (or @size "md"))
-      (if @isDisabled (class "disabled"))
-    }}
-    role="group"
-    ...attributes
-  >
-    {{yield
-      (hash
-        Checkbox=(component
-          "velvet-checkbox"
-          groupValue=@value
-          groupValueIsObject=@valueIsObject
-          inGroup=true
-          isDisabled=@isDisabled
-          onChangeGroup=@onChange
-          size=@size
-        )
+<div
+  class={{-velvet/class-list
+    "velvet-checkbox-group"
+    (concat "velvet-checkbox-group-" (or @size "md"))
+    (if @isDisabled "velvet-checkbox-group-disabled")
+  }}
+  role="group"
+  ...attributes
+>
+  {{yield
+    (hash
+      Checkbox=(component
+        "velvet-checkbox"
+        groupValue=@value
+        groupValueIsObject=@valueIsObject
+        inGroup=true
+        isDisabled=@isDisabled
+        onChangeGroup=@onChange
+        size=@size
       )
-    }}
-  </div>
-{{/let}}
+    )
+  }}
+</div>

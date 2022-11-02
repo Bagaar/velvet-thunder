@@ -1,37 +1,35 @@
 {{! @glint-nocheck }}
 
-{{#let (helper "-velvet/class" "velvet-icon-button") as |class|}}
-  {{#let
-    (-velvet/class-list
-      (class)
-      (class (or @size "md"))
-      (class (or @variant "primary"))
-      (if @isRound (class "round"))
-      (if @isDisabled (class "disabled"))
-    )
-    as |className|
-  }}
-    {{#if @isRenderless}}
-      {{yield (hash class=className)}}
-    {{else}}
-      <button
-        class={{className}}
-        disabled={{@isDisabled}}
-        type={{or @type "button"}}
-        {{on
-          "click"
-          (if (and @onClick (not @isDisabled)) @onClick (-velvet/noop))
-        }}
-        ...attributes
-      >
-        {{#if @isLoading}}
-          <VelvetSpinner />
-        {{else if @isDisclosure}}
-          <VelvetDisclosureIcon class={{class "disclosure-icon"}} />
-        {{else}}
-          {{yield (hash class=className)}}
-        {{/if}}
-      </button>
-    {{/if}}
-  {{/let}}
+{{#let
+  (-velvet/class-list
+    "velvet-icon-button"
+    (concat "velvet-icon-button-" (or @size "md"))
+    (concat "velvet-icon-button-" (or @variant "primary"))
+    (if @isRound "velvet-icon-button-round")
+    (if @isDisabled "velvet-icon-button-disabled")
+  )
+  as |className|
+}}
+  {{#if @isRenderless}}
+    {{yield (hash class=className)}}
+  {{else}}
+    <button
+      class={{className}}
+      disabled={{@isDisabled}}
+      type={{or @type "button"}}
+      {{on
+        "click"
+        (if (and @onClick (not @isDisabled)) @onClick (-velvet/noop))
+      }}
+      ...attributes
+    >
+      {{#if @isLoading}}
+        <VelvetSpinner />
+      {{else if @isDisclosure}}
+        <VelvetDisclosureIcon class="velvet-icon-button-disclosure-icon" />
+      {{else}}
+        {{yield (hash class=className)}}
+      {{/if}}
+    </button>
+  {{/if}}
 {{/let}}
