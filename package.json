@@ -58,8 +58,8 @@
     "ember-truth-helpers": "^3.1.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.1.2",
-    "@commitlint/config-conventional": "^17.1.0",
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/config-conventional": "^17.2.0",
     "@docfy/ember": "^0.5.0",
     "@ember/optional-features": "^2.0.0",
     "@ember/test-helpers": "^2.8.1",
@@ -97,8 +97,8 @@
     "@types/ember__utils": "^4.0.2",
     "@types/qunit": "^2.19.3",
     "@types/rsvp": "^4.0.4",
-    "@typescript-eslint/eslint-plugin": "^5.41.0",
-    "@typescript-eslint/parser": "^5.41.0",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
     "broccoli-asset-rev": "^3.0.0",
     "ember-auto-import": "^2.4.3",
     "ember-cli": "~4.8.0",
