@@ -28,10 +28,14 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Lint
         run: yarn lint
-      - name: Build Tailwind
-        run: yarn tailwind:build
+
       - name: Run Tests
-        run: npx percy exec -- yarn test:ember
+        if: ${{ contains(github.event.*.labels.*.name, 'percy') == false }}
+        run: yarn test:ember
+
+      - name: Run Tests With Percy
+        if: ${{ contains(github.event.*.labels.*.name, 'percy') }}
+        run: yarn tailwind:build && npx percy exec -- yarn test:ember
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
