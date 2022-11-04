@@ -4,12 +4,12 @@
 
 - `git clone git@github.com:Bagaar/velvet-thunder.git`
 - `cd velvet-thunder`
-- `yarn install`
+- `pnpm install`
 
 ## Linting
 
-- `yarn lint`
-- `yarn lint:fix`
+- `pnpm lint`
+- `pnpm lint:fix`
 
 ## Running tests
 
@@ -19,7 +19,7 @@
 
 ## Running the dummy application
 
-- `yarn tailwind:watch`
+- `pnpm tailwind:watch`
 - `ember serve`
 - Visit the dummy application at [http://localhost:4200](http://localhost:4200).
 
