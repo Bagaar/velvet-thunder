@@ -3,7 +3,8 @@ import Component from '@glimmer/component';
 
 interface VelvetSelectOptionComponentSignature {
   Args: {
-    onRegister: (id: string, value: unknown) => void;
+    onCreate: (id: string, value: unknown) => void;
+    onDestroy: (id: string) => void;
     selected: unknown;
     value: unknown;
   };
@@ -22,6 +23,12 @@ export default class VelvetSelectOptionComponent extends Component<VelvetSelectO
   ) {
     super(owner, args);
 
-    this.args.onRegister(this.uniqueId, this.args.value);
+    this.args.onCreate(this.uniqueId, this.args.value);
+  }
+
+  willDestroy() {
+    super.willDestroy();
+
+    this.args.onDestroy(this.uniqueId);
   }
 }

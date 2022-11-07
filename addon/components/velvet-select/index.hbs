@@ -26,7 +26,10 @@
   {{yield
     (hash
       Option=(component
-        "velvet-select/option" onRegister=this.registerOption selected=@selected
+        "velvet-select/option"
+        onCreate=this.addOption
+        onDestroy=this.removeOption
+        selected=@selected
       )
     )
   }}
