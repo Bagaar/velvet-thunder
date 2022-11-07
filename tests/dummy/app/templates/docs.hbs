@@ -13,23 +13,23 @@
 
 <DocsSidebar class="border-r left-0 px-4" as |sidebar|>
   <nav aria-label="primary site navigation">
-    <ul>
+    <ul class="space-y-2">
       <DocfyOutput @scope="docs" as |node|>
         {{#each node.pages as |page|}}
-          <li class="mb-2 last:mb-0">
+          <li>
             <sidebar.Link @page={{page}} />
           </li>
         {{/each}}
 
         {{#each node.children as |child|}}
-          <li class="mb-2 last:mb-0">
+          <li>
             <sidebar.Heading class="mb-2 px-4 py-2">
               {{child.label}}
             </sidebar.Heading>
 
-            <ul>
+            <ul class="space-y-2">
               {{#each child.pages as |page|}}
-                <li class="mb-2 last:mb-0">
+                <li>
                   <sidebar.Link @page={{page}} class="pl-8" />
                 </li>
               {{/each}}
@@ -105,11 +105,11 @@
     On This Page
   </sidebar.Heading>
   <nav aria-label="secondary site navigation">
-    <ul>
+    <ul class="space-y-4">
       <DocfyOutput @fromCurrentURL={{true}} as |page|>
         {{#if page.headings}}
           {{#each page.headings as |heading|}}
-            <li class="mb-4 last:mb-0">
+            <li>
               <DocsSimpleLink as |link|>
                 <a class={{link.class}} href="#{{heading.id}}">
                   {{heading.title}}

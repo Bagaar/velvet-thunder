@@ -88,6 +88,14 @@ pre {
   @apply dark:border-slate-800;
 }
 
+.prose h1[id]::before,
+.prose h2[id]::before,
+.prose h3[id]::before {
+  @apply block h-24 invisible -mt-24 pointer-events-none;
+
+  content: '';
+}
+
 /* Highlight.js */
 
 .hljs {
