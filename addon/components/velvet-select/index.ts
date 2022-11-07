@@ -20,7 +20,7 @@ interface VelvetSelectComponentSignature {
       {
         Option: WithBoundArgs<
           typeof VelvetSelectOptionComponent,
-          'onRegister' | 'selected'
+          'onCreate' | 'onDestroy' | 'selected'
         >;
       }
     ];
@@ -45,7 +45,12 @@ export default class VelvetSelectComponent extends Component<VelvetSelectCompone
   }
 
   @action
-  registerOption(id: string, value: unknown) {
+  addOption(id: string, value: unknown) {
     this.options.set(id, value);
+  }
+
+  @action
+  removeOption(id: string) {
+    this.options.delete(id);
   }
 }
