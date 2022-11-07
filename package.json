@@ -78,7 +78,7 @@
     "@tsconfig/ember": "^1.0.1",
     "@types/ember": "^4.0.2",
     "@types/ember-qunit": "^5.0.2",
-    "@types/ember-resolver": "^5.0.12",
+    "@types/ember-resolver": "^5.0.13",
     "@types/ember__application": "^4.0.3",
     "@types/ember__array": "^4.0.3",
     "@types/ember__component": "^4.0.11",
