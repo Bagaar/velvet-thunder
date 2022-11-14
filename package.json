@@ -70,7 +70,7 @@
     "@glimmer/tracking": "^1.1.2",
     "@glint/core": "^0.9.7",
     "@glint/environment-ember-loose": "^0.9.7",
-    "@percy/cli": "^1.12.0",
+    "@percy/cli": "^1.14.0",
     "@percy/ember": "^4.0.0",
     "@release-it-plugins/lerna-changelog": "^5.0.0",
     "@tailwindcss/forms": "^0.5.3",
