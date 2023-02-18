@@ -4,7 +4,7 @@ import type { HTMLInputElementEvent } from 'velvet-thunder/-private/types';
 
 export type Size = 'sm' | 'md' | 'lg';
 
-interface VelvetRadioComponentSignature {
+interface VelvetRadioSignature {
   Args: {
     isChecked?: boolean;
     isDisabled?: boolean;
@@ -24,7 +24,7 @@ interface VelvetRadioComponentSignature {
   Element: HTMLInputElement;
 }
 
-export default class VelvetRadioComponent extends Component<VelvetRadioComponentSignature> {
+export default class VelvetRadio extends Component<VelvetRadioSignature> {
   @action
   changeHandler(event: HTMLInputElementEvent) {
     this.args.onChange?.(event.target.checked, event);

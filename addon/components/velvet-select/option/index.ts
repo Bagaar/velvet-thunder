@@ -1,7 +1,7 @@
 import { guidFor } from '@ember/object/internals';
 import Component from '@glimmer/component';
 
-interface VelvetSelectOptionComponentSignature {
+interface VelvetSelectOptionSignature {
   Args: {
     onCreate: (id: string, value: unknown) => void;
     onDestroy: (id: string) => void;
@@ -14,12 +14,12 @@ interface VelvetSelectOptionComponentSignature {
   Element: HTMLOptionElement;
 }
 
-export default class VelvetSelectOptionComponent extends Component<VelvetSelectOptionComponentSignature> {
+export default class VelvetSelectOption extends Component<VelvetSelectOptionSignature> {
   uniqueId = guidFor(this);
 
   constructor(
     owner: unknown,
-    args: VelvetSelectOptionComponentSignature['Args']
+    args: VelvetSelectOptionSignature['Args']
   ) {
     super(owner, args);
 

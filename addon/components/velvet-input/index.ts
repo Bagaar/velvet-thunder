@@ -2,7 +2,7 @@ import { action } from '@ember/object';
 import Component from '@glimmer/component';
 import type { HTMLInputElementEvent } from 'velvet-thunder/-private/types';
 
-interface VelvetInputComponentSignature {
+interface VelvetInputSignature {
   Args: {
     isDisabled?: boolean;
     isInvalid?: boolean;
@@ -18,7 +18,7 @@ interface VelvetInputComponentSignature {
   Element: HTMLInputElement;
 }
 
-export default class VelvetInputComponent extends Component<VelvetInputComponentSignature> {
+export default class VelvetInput extends Component<VelvetInputSignature> {
   @action
   changeHandler(event: HTMLInputElementEvent) {
     this.args.onChange?.(event.target.value, event);

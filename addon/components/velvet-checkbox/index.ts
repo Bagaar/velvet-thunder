@@ -9,7 +9,7 @@ import type {
 
 export type Size = 'sm' | 'md' | 'lg';
 
-interface VelvetCheckboxComponentSignature {
+interface VelvetCheckboxSignature {
   Args: {
     isChecked?: boolean;
     isDisabled?: boolean;
@@ -30,7 +30,7 @@ interface VelvetCheckboxComponentSignature {
   Element: HTMLInputElement;
 }
 
-export default class VelvetCheckboxComponent extends Component<VelvetCheckboxComponentSignature> {
+export default class VelvetCheckbox extends Component<VelvetCheckboxSignature> {
   get groupValueAsArray() {
     return (this.args.groupValue || []) as GroupValueAsArray;
   }

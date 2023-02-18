@@ -1,7 +1,7 @@
 import templateOnlyComponent from '@ember/component/template-only';
 
-interface VelvetDisclosureIconComponentSignature {
+interface VelvetDisclosureIconSignature {
   Element: SVGElement;
 }
 
-export default templateOnlyComponent<VelvetDisclosureIconComponentSignature>();
+export default templateOnlyComponent<VelvetDisclosureIconSignature>();

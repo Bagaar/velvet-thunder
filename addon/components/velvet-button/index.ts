@@ -1,6 +1,6 @@
 import templateOnlyComponent from '@ember/component/template-only';
 
-interface VelvetButtonComponentSignature {
+interface VelvetButtonSignature {
   Args: {
     isDisabled?: boolean;
     isDisclosure?: boolean;
@@ -18,4 +18,4 @@ interface VelvetButtonComponentSignature {
   Element: HTMLButtonElement;
 }
 
-export default templateOnlyComponent<VelvetButtonComponentSignature>();
+export default templateOnlyComponent<VelvetButtonSignature>();

@@ -1,18 +1,18 @@
-import type VelvetAvatarComponent from 'velvet-thunder/components/velvet-avatar';
-import type VelvetButtonComponent from 'velvet-thunder/components/velvet-button';
-import type VelvetCheckboxComponent from 'velvet-thunder/components/velvet-checkbox';
-import type VelvetCheckboxGroupComponent from 'velvet-thunder/components/velvet-checkbox-group';
-import type VelvetDisclosureIconComponent from 'velvet-thunder/components/velvet-disclosure-icon';
-import type VelvetIconButtonComponent from 'velvet-thunder/components/velvet-icon-button';
-import type VelvetInputComponent from 'velvet-thunder/components/velvet-input';
-import type VelvetProgressComponent from 'velvet-thunder/components/velvet-progress';
-import type VelvetRadioComponent from 'velvet-thunder/components/velvet-radio';
-import type VelvetRadioGroupComponent from 'velvet-thunder/components/velvet-radio-group';
-import type VelvetSelectComponent from 'velvet-thunder/components/velvet-select';
-import type VelvetSelectOptionComponent from 'velvet-thunder/components/velvet-select/option';
-import type VelvetSpinnerComponent from 'velvet-thunder/components/velvet-spinner';
-import type VelvetTagComponent from 'velvet-thunder/components/velvet-tag';
-import type VelvetTextareaComponent from 'velvet-thunder/components/velvet-textarea';
+import type VelvetAvatar from 'velvet-thunder/components/velvet-avatar';
+import type VelvetButton from 'velvet-thunder/components/velvet-button';
+import type VelvetCheckbox from 'velvet-thunder/components/velvet-checkbox';
+import type VelvetCheckboxGroup from 'velvet-thunder/components/velvet-checkbox-group';
+import type VelvetDisclosureIcon from 'velvet-thunder/components/velvet-disclosure-icon';
+import type VelvetIconButton from 'velvet-thunder/components/velvet-icon-button';
+import type VelvetInput from 'velvet-thunder/components/velvet-input';
+import type VelvetProgress from 'velvet-thunder/components/velvet-progress';
+import type VelvetRadio from 'velvet-thunder/components/velvet-radio';
+import type VelvetRadioGroup from 'velvet-thunder/components/velvet-radio-group';
+import type VelvetSelect from 'velvet-thunder/components/velvet-select';
+import type VelvetSelectOption from 'velvet-thunder/components/velvet-select/option';
+import type VelvetSpinner from 'velvet-thunder/components/velvet-spinner';
+import type VelvetTag from 'velvet-thunder/components/velvet-tag';
+import type VelvetTextarea from 'velvet-thunder/components/velvet-textarea';
 
 // Private:
 import type VelvetClassListHelper from 'velvet-thunder/helpers/-velvet/class-list';
@@ -26,24 +26,24 @@ import type OrHelper from '@gavant/glint-template-types/types/ember-truth-helper
 
 declare module '@glint/environment-ember-loose/registry' {
   export default interface Registry {
-    VelvetAvatar: typeof VelvetAvatarComponent;
-    VelvetButton: typeof VelvetButtonComponent;
-    VelvetCheckbox: typeof VelvetCheckboxComponent;
-    VelvetCheckboxGroup: typeof VelvetCheckboxGroupComponent;
-    VelvetDisclosureIcon: typeof VelvetDisclosureIconComponent;
-    VelvetIconButton: typeof VelvetIconButtonComponent;
-    VelvetInput: typeof VelvetInputComponent;
-    VelvetProgress: typeof VelvetProgressComponent;
-    VelvetRadio: typeof VelvetRadioComponent;
-    VelvetRadioGroup: typeof VelvetRadioGroupComponent;
-    VelvetSelect: typeof VelvetSelectComponent;
-    VelvetSpinner: typeof VelvetSpinnerComponent;
-    VelvetTag: typeof VelvetTagComponent;
-    VelvetTextarea: typeof VelvetTextareaComponent;
+    VelvetAvatar: typeof VelvetAvatar;
+    VelvetButton: typeof VelvetButton;
+    VelvetCheckbox: typeof VelvetCheckbox;
+    VelvetCheckboxGroup: typeof VelvetCheckboxGroup;
+    VelvetDisclosureIcon: typeof VelvetDisclosureIcon;
+    VelvetIconButton: typeof VelvetIconButton;
+    VelvetInput: typeof VelvetInput;
+    VelvetProgress: typeof VelvetProgress;
+    VelvetRadio: typeof VelvetRadio;
+    VelvetRadioGroup: typeof VelvetRadioGroup;
+    VelvetSelect: typeof VelvetSelect;
+    VelvetSpinner: typeof VelvetSpinner;
+    VelvetTag: typeof VelvetTag;
+    VelvetTextarea: typeof VelvetTextarea;
 
-    'velvet-checkbox': typeof VelvetCheckboxComponent;
-    'velvet-radio': typeof VelvetRadioComponent;
-    'velvet-select/option': typeof VelvetSelectOptionComponent;
+    'velvet-checkbox': typeof VelvetCheckbox;
+    'velvet-radio': typeof VelvetRadio;
+    'velvet-select/option': typeof VelvetSelectOption;
 
     // Private:
     '-velvet/class-list': typeof VelvetClassListHelper;
