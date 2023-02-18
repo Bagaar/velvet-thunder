@@ -16,12 +16,8 @@ import type VelvetTextarea from 'velvet-thunder/components/velvet-textarea';
 
 // Private:
 import type VelvetClassListHelper from 'velvet-thunder/helpers/-velvet/class-list';
-import type VelvetNoopHelper from 'velvet-thunder/helpers/-velvet/noop';
 
 // Dependencies:
-import type AndHelper from '@gavant/glint-template-types/types/ember-truth-helpers/and';
-import type EqHelper from '@gavant/glint-template-types/types/ember-truth-helpers/eq';
-import type NotHelper from '@gavant/glint-template-types/types/ember-truth-helpers/not';
 import type OrHelper from '@gavant/glint-template-types/types/ember-truth-helpers/or';
 
 declare module '@glint/environment-ember-loose/registry' {
@@ -47,12 +43,8 @@ declare module '@glint/environment-ember-loose/registry' {
 
     // Private:
     '-velvet/class-list': typeof VelvetClassListHelper;
-    '-velvet/noop': typeof VelvetNoopHelper;
 
     // Dependencies:
-    and: typeof AndHelper;
-    eq: typeof EqHelper;
-    not: typeof NotHelper;
     or: typeof OrHelper;
   }
 }

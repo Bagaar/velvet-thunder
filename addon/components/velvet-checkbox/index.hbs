@@ -1,5 +1,3 @@
-{{! @glint-nocheck }}
-
 <label
   class={{-velvet/class-list
     "velvet-checkbox"
@@ -14,18 +12,7 @@
     indeterminate={{@isIndeterminate}}
     name={{@name}}
     type="checkbox"
-    {{on
-      "change"
-      (if
-        @inGroup
-        (if
-          (and @onChangeGroup (not @isDisabled))
-          this.changeGroupHandler
-          (-velvet/noop)
-        )
-        (if (and @onChange (not @isDisabled)) this.changeHandler (-velvet/noop))
-      )
-    }}
+    {{on "change" this.changeHandler}}
     ...attributes
   />
   {{yield}}

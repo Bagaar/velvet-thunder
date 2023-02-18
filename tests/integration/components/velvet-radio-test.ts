@@ -85,7 +85,7 @@ module('Integration | Component | velvet-radio', function (hooks) {
       <VelvetRadio />
     `);
 
-    assert.dom(SELECTOR.INPUT).hasAttribute('value', '');
+    assert.dom(SELECTOR.INPUT).doesNotHaveAttribute('value');
 
     await render(hbs`
       <VelvetRadio @value="foo" />

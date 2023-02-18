@@ -1,5 +1,3 @@
-{{! @glint-nocheck }}
-
 {{#let
   (-velvet/class-list
     "velvet-icon-button"
@@ -17,10 +15,7 @@
       class={{className}}
       disabled={{@isDisabled}}
       type={{or @type "button"}}
-      {{on
-        "click"
-        (if (and @onClick (not @isDisabled)) @onClick (-velvet/noop))
-      }}
+      {{on "click" this.clickHandler}}
       ...attributes
     >
       {{#if @isLoading}}

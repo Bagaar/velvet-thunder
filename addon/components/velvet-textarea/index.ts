@@ -1,6 +1,5 @@
 import { action } from '@ember/object';
 import Component from '@glimmer/component';
-import type { HTMLTextAreaElementEvent } from 'velvet-thunder/-private/types';
 
 interface VelvetTextareaSignature {
   Args: {
@@ -18,12 +17,24 @@ interface VelvetTextareaSignature {
 
 export default class VelvetTextarea extends Component<VelvetTextareaSignature> {
   @action
-  changeHandler(event: HTMLTextAreaElementEvent) {
-    this.args.onChange?.(event.target.value, event);
+  changeHandler(event: Event) {
+    const { isDisabled, onChange } = this.args;
+
+    if (typeof onChange !== 'function' || isDisabled === true) {
+      return;
+    }
+
+    onChange((event.target as HTMLTextAreaElement).value, event);
   }
 
   @action
-  inputHandler(event: HTMLTextAreaElementEvent) {
-    this.args.onInput?.(event.target.value, event);
+  inputHandler(event: Event) {
+    const { isDisabled, onInput } = this.args;
+
+    if (typeof onInput !== 'function' || isDisabled === true) {
+      return;
+    }
+
+    onInput((event.target as HTMLTextAreaElement).value, event);
   }
 }

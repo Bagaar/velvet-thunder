@@ -17,10 +17,11 @@ interface VelvetSelectOptionSignature {
 export default class VelvetSelectOption extends Component<VelvetSelectOptionSignature> {
   uniqueId = guidFor(this);
 
-  constructor(
-    owner: unknown,
-    args: VelvetSelectOptionSignature['Args']
-  ) {
+  get isSelected() {
+    return this.args.value === this.args.selected;
+  }
+
+  constructor(owner: unknown, args: VelvetSelectOptionSignature['Args']) {
     super(owner, args);
 
     this.args.onCreate(this.uniqueId, this.args.value);
