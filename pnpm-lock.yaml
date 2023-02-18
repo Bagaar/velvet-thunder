@@ -10,7 +10,7 @@ specifiers:
   '@docfy/ember': ^0.5.0
   '@ember/optional-features': ^2.0.0
   '@ember/test-helpers': ^2.8.1
-  '@embroider/test-setup': ^1.8.3
+  '@embroider/test-setup': ^2.1.1
   '@gavant/glint-template-types': ^0.2.4
   '@glimmer/component': ^1.1.2
   '@glimmer/tracking': ^1.1.2
@@ -110,7 +110,7 @@ devDependencies:
   '@docfy/ember': 0.5.0
   '@ember/optional-features': 2.0.0
   '@ember/test-helpers': 2.8.1_o6vra3atesdmwivzf2sf5xbdmm
-  '@embroider/test-setup': 1.8.3
+  '@embroider/test-setup': 2.1.1
   '@gavant/glint-template-types': 0.2.4
   '@glimmer/tracking': 1.1.2
   '@glint/core': 0.9.7_typescript@4.8.4
@@ -1671,8 +1671,8 @@ packages:
       typescript-memoize: 1.1.1
     dev: true
 
-  /@embroider/test-setup/1.8.3:
-    resolution: {integrity: sha512-BCCbBG7UWkCw+cQ401Ip6LnqTRaQDeKImxR+e7Q4oP6H4EBj7p4iGR1z6fhMy4NNyXKPB6jk3bGa9bTiiNoEAw==}
+  /@embroider/test-setup/2.1.1:
+    resolution: {integrity: sha512-t81a2z2OEFAOZVbV7wkgiDuCyZ3ajD7J7J+keaTfNSRiXoQgeFFASEECYq1TCsH8m/R+xHMRiY59apF2FIeFhw==}
     engines: {node: 12.* || 14.* || >= 16}
     dependencies:
       lodash: 4.17.21
