@@ -17,7 +17,12 @@ interface VelvetRadioGroupSignature {
       {
         Radio: WithBoundArgs<
           typeof VelvetRadio,
-          'groupValue' | 'inGroup' | 'isDisabled' | 'name' | 'onChange' | 'size'
+          | 'groupValue'
+          | 'inGroup'
+          | 'isDisabled'
+          | 'name'
+          | 'onChangeGroup'
+          | 'size'
         >;
       }
     ];
