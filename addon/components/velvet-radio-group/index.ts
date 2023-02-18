@@ -1,10 +1,10 @@
 import { guidFor } from '@ember/object/internals';
 import Component from '@glimmer/component';
 import type { WithBoundArgs } from '@glint/template';
-import type VelvetRadioComponent from 'velvet-thunder/components/velvet-radio';
+import type VelvetRadio from 'velvet-thunder/components/velvet-radio';
 import type { Size } from 'velvet-thunder/components/velvet-radio';
 
-interface VelvetRadioGroupComponentSignature {
+interface VelvetRadioGroupSignature {
   Args: {
     isDisabled?: boolean;
     name?: string;
@@ -16,8 +16,13 @@ interface VelvetRadioGroupComponentSignature {
     default: [
       {
         Radio: WithBoundArgs<
-          typeof VelvetRadioComponent,
-          'groupValue' | 'inGroup' | 'isDisabled' | 'name' | 'onChange' | 'size'
+          typeof VelvetRadio,
+          | 'groupValue'
+          | 'inGroup'
+          | 'isDisabled'
+          | 'name'
+          | 'onChangeGroup'
+          | 'size'
         >;
       }
     ];
@@ -25,6 +30,6 @@ interface VelvetRadioGroupComponentSignature {
   Element: HTMLDivElement;
 }
 
-export default class VelvetRadioGroupComponent extends Component<VelvetRadioGroupComponentSignature> {
+export default class VelvetRadioGroup extends Component<VelvetRadioGroupSignature> {
   uniqueName = guidFor(this);
 }

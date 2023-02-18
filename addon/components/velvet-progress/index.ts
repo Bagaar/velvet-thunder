@@ -1,7 +1,7 @@
 import { htmlSafe } from '@ember/template';
 import Component from '@glimmer/component';
 
-interface VelvetProgressComponentSignature {
+interface VelvetProgressSignature {
   Args: {
     max?: number;
     min?: number;
@@ -13,7 +13,7 @@ interface VelvetProgressComponentSignature {
   Element: HTMLDivElement;
 }
 
-export default class VelvetProgressComponent extends Component<VelvetProgressComponentSignature> {
+export default class VelvetProgress extends Component<VelvetProgressSignature> {
   get lineStyle() {
     const { max, min, value } = this;
     const progress = Math.floor(((value - min) / (max - min)) * 100);

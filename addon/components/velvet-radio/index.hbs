@@ -1,5 +1,3 @@
-{{! @glint-nocheck }}
-
 <label
   class={{-velvet/class-list
     "velvet-radio"
@@ -8,24 +6,13 @@
   }}
 >
   <input
-    checked={{if @inGroup (eq @value @groupValue) @isChecked}}
+    checked={{this.isChecked}}
     class="velvet-radio-input form-radio"
     disabled={{@isDisabled}}
     name={{@name}}
     type="radio"
-    value={{@value}}
-    {{on
-      "change"
-      (if
-        @inGroup
-        (if
-          (and @onChangeGroup (not @isDisabled))
-          this.changeGroupHandler
-          (-velvet/noop)
-        )
-        (if (and @onChange (not @isDisabled)) this.changeHandler (-velvet/noop))
-      )
-    }}
+    value={{this.valueAttr}}
+    {{on "change" this.changeHandler}}
     ...attributes
   />
   {{yield}}

@@ -1,14 +1,14 @@
 import { guidFor } from '@ember/object/internals';
 import Component from '@glimmer/component';
 import type { WithBoundArgs } from '@glint/template';
-import type VelvetCheckboxComponent from 'velvet-thunder/components/velvet-checkbox';
+import type VelvetCheckbox from 'velvet-thunder/components/velvet-checkbox';
 import type { Size } from 'velvet-thunder/components/velvet-checkbox';
 
 export type ValueAsArray = string[];
 export type ValueAsObject = { [name: string]: boolean };
 export type Value = ValueAsArray | ValueAsObject;
 
-interface VelvetCheckboxGroupComponentSignature {
+interface VelvetCheckboxGroupSignature {
   Args: {
     isDisabled?: boolean;
     onChange?: (value: Value, event: Event) => void;
@@ -20,7 +20,7 @@ interface VelvetCheckboxGroupComponentSignature {
     default: [
       {
         Checkbox: WithBoundArgs<
-          typeof VelvetCheckboxComponent,
+          typeof VelvetCheckbox,
           | 'groupValue'
           | 'groupValueIsObject'
           | 'inGroup'
@@ -34,6 +34,6 @@ interface VelvetCheckboxGroupComponentSignature {
   Element: HTMLDivElement;
 }
 
-export default class VelvetCheckboxGroupComponent extends Component<VelvetCheckboxGroupComponentSignature> {
+export default class VelvetCheckboxGroup extends Component<VelvetCheckboxGroupSignature> {
   uniqueName = guidFor(this);
 }

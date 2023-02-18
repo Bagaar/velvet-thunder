@@ -1,5 +1,3 @@
-{{! @glint-nocheck }}
-
 <textarea
   class={{-velvet/class-list
     "velvet-textarea"
@@ -12,13 +10,7 @@
   disabled={{@isDisabled}}
   placeholder={{@placeholder}}
   value={{@value}}
-  {{on
-    "change"
-    (if (and @onChange (not @isDisabled)) this.changeHandler (-velvet/noop))
-  }}
-  {{on
-    "input"
-    (if (and @onInput (not @isDisabled)) this.inputHandler (-velvet/noop))
-  }}
+  {{on "change" this.changeHandler}}
+  {{on "input" this.inputHandler}}
   ...attributes
 ></textarea>

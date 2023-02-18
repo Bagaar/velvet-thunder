@@ -1,6 +1,6 @@
 import templateOnlyComponent from '@ember/component/template-only';
 
-interface VelvetTagComponentSignature {
+interface VelvetTagSignature {
   Args: {
     isPill?: boolean;
     size?: 'sm' | 'md' | 'lg';
@@ -12,4 +12,4 @@ interface VelvetTagComponentSignature {
   Element: HTMLDivElement;
 }
 
-export default templateOnlyComponent<VelvetTagComponentSignature>();
+export default templateOnlyComponent<VelvetTagSignature>();

@@ -1,6 +1,7 @@
-import templateOnlyComponent from '@ember/component/template-only';
+import { action } from '@ember/object';
+import Component from '@glimmer/component';
 
-interface VelvetButtonComponentSignature {
+interface VelvetButtonSignature {
   Args: {
     isDisabled?: boolean;
     isDisclosure?: boolean;
@@ -18,4 +19,15 @@ interface VelvetButtonComponentSignature {
   Element: HTMLButtonElement;
 }
 
-export default templateOnlyComponent<VelvetButtonComponentSignature>();
+export default class VelvetButton extends Component<VelvetButtonSignature> {
+  @action
+  clickHandler(event: MouseEvent) {
+    const { isDisabled, onClick } = this.args;
+
+    if (typeof onClick !== 'function' || isDisabled === true) {
+      return;
+    }
+
+    onClick(event);
+  }
+}

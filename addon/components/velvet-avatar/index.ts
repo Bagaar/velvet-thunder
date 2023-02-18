@@ -1,6 +1,6 @@
 import Component from '@glimmer/component';
 
-interface VelvetAvatarComponentSignature {
+interface VelvetAvatarSignature {
   Args: {
     initials?: string;
     isRound?: boolean;
@@ -12,7 +12,7 @@ interface VelvetAvatarComponentSignature {
   Element: HTMLDivElement;
 }
 
-export default class VelvetAvatarComponent extends Component<VelvetAvatarComponentSignature> {
+export default class VelvetAvatar extends Component<VelvetAvatarSignature> {
   get initials() {
     return (this.args.name || '')
       .split(' ')

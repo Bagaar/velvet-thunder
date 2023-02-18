@@ -1,8 +1,7 @@
 import { action } from '@ember/object';
 import Component from '@glimmer/component';
-import type { HTMLInputElementEvent } from 'velvet-thunder/-private/types';
 
-interface VelvetInputComponentSignature {
+interface VelvetInputSignature {
   Args: {
     isDisabled?: boolean;
     isInvalid?: boolean;
@@ -18,14 +17,26 @@ interface VelvetInputComponentSignature {
   Element: HTMLInputElement;
 }
 
-export default class VelvetInputComponent extends Component<VelvetInputComponentSignature> {
+export default class VelvetInput extends Component<VelvetInputSignature> {
   @action
-  changeHandler(event: HTMLInputElementEvent) {
-    this.args.onChange?.(event.target.value, event);
+  changeHandler(event: Event) {
+    const { isDisabled, onChange } = this.args;
+
+    if (typeof onChange !== 'function' || isDisabled === true) {
+      return;
+    }
+
+    onChange((event.target as HTMLInputElement).value, event);
   }
 
   @action
-  inputHandler(event: HTMLInputElementEvent) {
-    this.args.onInput?.(event.target.value, event);
+  inputHandler(event: Event) {
+    const { isDisabled, onInput } = this.args;
+
+    if (typeof onInput !== 'function' || isDisabled === true) {
+      return;
+    }
+
+    onInput((event.target as HTMLInputElement).value, event);
   }
 }

@@ -1,10 +1,9 @@
 import { action } from '@ember/object';
 import Component from '@glimmer/component';
-import type { HTMLInputElementEvent } from 'velvet-thunder/-private/types';
 
 export type Size = 'sm' | 'md' | 'lg';
 
-interface VelvetRadioComponentSignature {
+interface VelvetRadioSignature {
   Args: {
     isChecked?: boolean;
     isDisabled?: boolean;
@@ -24,14 +23,31 @@ interface VelvetRadioComponentSignature {
   Element: HTMLInputElement;
 }
 
-export default class VelvetRadioComponent extends Component<VelvetRadioComponentSignature> {
-  @action
-  changeHandler(event: HTMLInputElementEvent) {
-    this.args.onChange?.(event.target.checked, event);
+export default class VelvetRadio extends Component<VelvetRadioSignature> {
+  get isChecked() {
+    const { inGroup, isChecked, groupValue, value } = this.args;
+
+    return inGroup ? value === groupValue : isChecked;
+  }
+
+  get valueAttr() {
+    const { value } = this.args;
+
+    return value === undefined ? undefined : String(value);
   }
 
   @action
-  changeGroupHandler(event: HTMLInputElementEvent) {
-    this.args.onChangeGroup?.(this.args.value, event);
+  changeHandler(event: Event) {
+    if (this.args.isDisabled === true) {
+      return;
+    }
+
+    const { inGroup, onChange, onChangeGroup, value } = this.args;
+
+    if (inGroup && typeof onChangeGroup === 'function') {
+      onChangeGroup(value, event);
+    } else if (typeof onChange === 'function') {
+      onChange((event.target as HTMLInputElement).checked, event);
+    }
   }
 }

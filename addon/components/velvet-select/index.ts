@@ -1,10 +1,9 @@
 import { action } from '@ember/object';
 import Component from '@glimmer/component';
 import type { WithBoundArgs } from '@glint/template';
-import type { HTMLSelectElementEvent } from 'velvet-thunder/-private/types';
-import type VelvetSelectOptionComponent from 'velvet-thunder/components/velvet-select/option';
+import type VelvetSelectOption from 'velvet-thunder/components/velvet-select/option';
 
-interface VelvetSelectComponentSignature {
+interface VelvetSelectSignature {
   Args: {
     isDisabled?: boolean;
     isInvalid?: boolean;
@@ -19,7 +18,7 @@ interface VelvetSelectComponentSignature {
     default: [
       {
         Option: WithBoundArgs<
-          typeof VelvetSelectOptionComponent,
+          typeof VelvetSelectOption,
           'onCreate' | 'onDestroy' | 'selected'
         >;
       }
@@ -28,7 +27,7 @@ interface VelvetSelectComponentSignature {
   Element: HTMLSelectElement;
 }
 
-export default class VelvetSelectComponent extends Component<VelvetSelectComponentSignature> {
+export default class VelvetSelect extends Component<VelvetSelectSignature> {
   options = new Map();
 
   get hasSelection() {
@@ -40,8 +39,17 @@ export default class VelvetSelectComponent extends Component<VelvetSelectCompone
   }
 
   @action
-  changeHandler(event: HTMLSelectElementEvent) {
-    this.args.onChange?.(this.options.get(event.target.value), event);
+  changeHandler(event: Event) {
+    const { isDisabled, onChange } = this.args;
+
+    if (typeof onChange !== 'function' || isDisabled === true) {
+      return;
+    }
+
+    onChange(
+      this.options.get((event.target as HTMLSelectElement).value),
+      event
+    );
   }
 
   @action

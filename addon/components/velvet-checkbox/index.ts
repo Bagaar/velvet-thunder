@@ -1,6 +1,5 @@
 import { action } from '@ember/object';
 import Component from '@glimmer/component';
-import type { HTMLInputElementEvent } from 'velvet-thunder/-private/types';
 import type {
   Value as GroupValue,
   ValueAsArray as GroupValueAsArray,
@@ -9,7 +8,7 @@ import type {
 
 export type Size = 'sm' | 'md' | 'lg';
 
-interface VelvetCheckboxComponentSignature {
+interface VelvetCheckboxSignature {
   Args: {
     isChecked?: boolean;
     isDisabled?: boolean;
@@ -30,7 +29,7 @@ interface VelvetCheckboxComponentSignature {
   Element: HTMLInputElement;
 }
 
-export default class VelvetCheckboxComponent extends Component<VelvetCheckboxComponentSignature> {
+export default class VelvetCheckbox extends Component<VelvetCheckboxSignature> {
   get groupValueAsArray() {
     return (this.args.groupValue || []) as GroupValueAsArray;
   }
@@ -50,27 +49,31 @@ export default class VelvetCheckboxComponent extends Component<VelvetCheckboxCom
   }
 
   @action
-  changeHandler(event: HTMLInputElementEvent) {
-    this.args.onChange?.(event.target.checked, event);
-  }
-
-  @action
-  changeGroupHandler(event: HTMLInputElementEvent) {
-    let groupValue;
-
-    if (this.args.groupValueIsObject) {
-      groupValue = {
-        ...this.groupValueAsObject,
-        [this.args.name as string]: event.target.checked,
-      };
-    } else if (event.target.checked) {
-      groupValue = [...this.groupValueAsArray, this.args.name];
-    } else {
-      groupValue = this.groupValueAsArray.filter(
-        (name) => name !== this.args.name
-      );
+  changeHandler(event: Event) {
+    if (this.args.isDisabled === true) {
+      return;
     }
 
-    this.args.onChangeGroup?.(groupValue as GroupValue, event);
+    const { checked } = event.target as HTMLInputElement;
+    const { inGroup, onChange, onChangeGroup } = this.args;
+
+    if (inGroup && typeof onChangeGroup === 'function') {
+      const { groupValueAsArray, groupValueAsObject } = this;
+      const { groupValueIsObject, name } = this.args;
+
+      let groupValue;
+
+      if (groupValueIsObject) {
+        groupValue = { ...groupValueAsObject, [name as string]: checked };
+      } else if (checked) {
+        groupValue = [...groupValueAsArray, name];
+      } else {
+        groupValue = groupValueAsArray.filter((n) => n !== name);
+      }
+
+      onChangeGroup(groupValue as GroupValue, event);
+    } else if (typeof onChange === 'function') {
+      onChange(checked, event);
+    }
   }
 }
