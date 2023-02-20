@@ -29,16 +29,16 @@ pnpm install velvet-thunder tailwindcss @tailwindcss/forms --dev
 ```js
 // tailwind.config.js
 
-'use strict';
+"use strict";
 
-const tailwindFormsPlugin = require('@tailwindcss/forms');
-const velvetThunder = require('velvet-thunder/tailwind');
+const tailwindFormsPlugin = require("@tailwindcss/forms");
+const velvetThunder = require("velvet-thunder/tailwind");
 
 module.exports = {
   content: [...velvetThunder.content()],
   plugins: [
     tailwindFormsPlugin({
-      strategy: 'class',
+      strategy: "class",
     }),
     velvetThunder.plugin(),
   ],

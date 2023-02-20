@@ -4,13 +4,13 @@
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetIconButton @variant='primary'>
+  <VelvetIconButton @variant="primary">
     <DemoMenuIcon />
   </VelvetIconButton>
-  <VelvetIconButton @variant='secondary'>
+  <VelvetIconButton @variant="secondary">
     <DemoMenuIcon />
   </VelvetIconButton>
-  <VelvetIconButton @variant='ghost'>
+  <VelvetIconButton @variant="ghost">
     <DemoMenuIcon />
   </VelvetIconButton>
 </DemoSpaceX>
@@ -20,13 +20,13 @@
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetIconButton @size='sm'>
+  <VelvetIconButton @size="sm">
     <DemoMenuIcon />
   </VelvetIconButton>
-  <VelvetIconButton @size='md'>
+  <VelvetIconButton @size="md">
     <DemoMenuIcon />
   </VelvetIconButton>
-  <VelvetIconButton @size='lg'>
+  <VelvetIconButton @size="lg">
     <DemoMenuIcon />
   </VelvetIconButton>
 </DemoSpaceX>
@@ -36,13 +36,13 @@
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetIconButton @isRound={{true}} @variant='primary'>
+  <VelvetIconButton @isRound={{true}} @variant="primary">
     <DemoMenuIcon />
   </VelvetIconButton>
-  <VelvetIconButton @isRound={{true}} @variant='secondary'>
+  <VelvetIconButton @isRound={{true}} @variant="secondary">
     <DemoMenuIcon />
   </VelvetIconButton>
-  <VelvetIconButton @isRound={{true}} @variant='ghost'>
+  <VelvetIconButton @isRound={{true}} @variant="ghost">
     <DemoMenuIcon />
   </VelvetIconButton>
 </DemoSpaceX>
@@ -52,13 +52,13 @@
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetIconButton @isDisabled={{true}} @variant='primary'>
+  <VelvetIconButton @isDisabled={{true}} @variant="primary">
     <DemoMenuIcon />
   </VelvetIconButton>
-  <VelvetIconButton @isDisabled={{true}} @variant='secondary'>
+  <VelvetIconButton @isDisabled={{true}} @variant="secondary">
     <DemoMenuIcon />
   </VelvetIconButton>
-  <VelvetIconButton @isDisabled={{true}} @variant='ghost'>
+  <VelvetIconButton @isDisabled={{true}} @variant="ghost">
     <DemoMenuIcon />
   </VelvetIconButton>
 </DemoSpaceX>
@@ -68,13 +68,13 @@
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetIconButton @isLoading={{true}} @variant='primary'>
+  <VelvetIconButton @isLoading={{true}} @variant="primary">
     <DemoMenuIcon />
   </VelvetIconButton>
-  <VelvetIconButton @isLoading={{true}} @variant='secondary'>
+  <VelvetIconButton @isLoading={{true}} @variant="secondary">
     <DemoMenuIcon />
   </VelvetIconButton>
-  <VelvetIconButton @isLoading={{true}} @variant='ghost'>
+  <VelvetIconButton @isLoading={{true}} @variant="ghost">
     <DemoMenuIcon />
   </VelvetIconButton>
 </DemoSpaceX>
@@ -84,13 +84,13 @@
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetIconButton @isDisclosure={{true}} @variant='primary'>
+  <VelvetIconButton @isDisclosure={{true}} @variant="primary">
     <DemoMenuIcon />
   </VelvetIconButton>
-  <VelvetIconButton @isDisclosure={{true}} @variant='secondary'>
+  <VelvetIconButton @isDisclosure={{true}} @variant="secondary">
     <DemoMenuIcon />
   </VelvetIconButton>
-  <VelvetIconButton @isDisclosure={{true}} @variant='ghost'>
+  <VelvetIconButton @isDisclosure={{true}} @variant="ghost">
     <DemoMenuIcon />
   </VelvetIconButton>
 </DemoSpaceX>
@@ -100,18 +100,18 @@
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetIconButton @isRenderless={{true}} @variant='primary' as |iconButton|>
-    <a class={{iconButton.class}} href='#renderless'>
+  <VelvetIconButton @isRenderless={{true}} @variant="primary" as |iconButton|>
+    <a class={{iconButton.class}} href="#renderless">
       <DemoMenuIcon />
     </a>
   </VelvetIconButton>
-  <VelvetIconButton @isRenderless={{true}} @variant='secondary' as |iconButton|>
-    <a class={{iconButton.class}} href='#renderless'>
+  <VelvetIconButton @isRenderless={{true}} @variant="secondary" as |iconButton|>
+    <a class={{iconButton.class}} href="#renderless">
       <DemoMenuIcon />
     </a>
   </VelvetIconButton>
-  <VelvetIconButton @isRenderless={{true}} @variant='ghost' as |iconButton|>
-    <a class={{iconButton.class}} href='#renderless'>
+  <VelvetIconButton @isRenderless={{true}} @variant="ghost" as |iconButton|>
+    <a class={{iconButton.class}} href="#renderless">
       <DemoMenuIcon />
     </a>
   </VelvetIconButton>

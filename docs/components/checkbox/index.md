@@ -4,9 +4,9 @@
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetCheckbox @isChecked={{true}} @size='sm'>Small</VelvetCheckbox>
-  <VelvetCheckbox @isChecked={{true}} @size='md'>Medium</VelvetCheckbox>
-  <VelvetCheckbox @isChecked={{true}} @size='lg'>Large</VelvetCheckbox>
+  <VelvetCheckbox @isChecked={{true}} @size="sm">Small</VelvetCheckbox>
+  <VelvetCheckbox @isChecked={{true}} @size="md">Medium</VelvetCheckbox>
+  <VelvetCheckbox @isChecked={{true}} @size="lg">Large</VelvetCheckbox>
 </DemoSpaceX>
 ```
 

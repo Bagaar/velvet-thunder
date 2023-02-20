@@ -9,11 +9,11 @@ Use the `@onClick` argument to handle `click` events.
 ```
 
 ```js component
-import Component from '@glimmer/component';
+import Component from "@glimmer/component";
 
 export default class Demo extends Component {
   onClick() {
-    alert('Clicked!');
+    alert("Clicked!");
   }
 }
 ```

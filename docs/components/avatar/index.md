@@ -4,9 +4,9 @@
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetAvatar @variant='emerald' @name='Jake Peralta' />
-  <VelvetAvatar @variant='amber' @name='Jake Peralta' />
-  <VelvetAvatar @variant='rose' @name='Jake Peralta' />
+  <VelvetAvatar @variant="emerald" @name="Jake Peralta" />
+  <VelvetAvatar @variant="amber" @name="Jake Peralta" />
+  <VelvetAvatar @variant="rose" @name="Jake Peralta" />
 </DemoSpaceX>
 ```
 
@@ -14,28 +14,28 @@
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetAvatar @name='Jake Peralta' @size='sm' />
-  <VelvetAvatar @name='Jake Peralta' @size='md' />
-  <VelvetAvatar @name='Jake Peralta' @size='lg' />
+  <VelvetAvatar @name="Jake Peralta" @size="sm" />
+  <VelvetAvatar @name="Jake Peralta" @size="md" />
+  <VelvetAvatar @name="Jake Peralta" @size="lg" />
 </DemoSpaceX>
 ```
 
 ## Round
 
 ```hbs preview-template
-<VelvetAvatar @isRound={{true}} @name='Jake Peralta' />
+<VelvetAvatar @isRound={{true}} @name="Jake Peralta" />
 ```
 
 ## Images
 
 ```hbs preview-template
-<VelvetAvatar @src='https://avatars.githubusercontent.com/u/7403183' />
+<VelvetAvatar @src="https://avatars.githubusercontent.com/u/7403183" />
 ```
 
 ## Initials
 
 ```hbs preview-template
-<VelvetAvatar @initials='JP' />
+<VelvetAvatar @initials="JP" />
 ```
 
 ## No User Data

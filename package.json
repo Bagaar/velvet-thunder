@@ -48,7 +48,7 @@
     "*.{json,md,yml}": "prettier --check",
     "*.css": "stylelint",
     "*.hbs": "ember-template-lint",
-    "*.js": "eslint"
+    "*.{js,ts}": "eslint"
   },
   "dependencies": {
     "@glimmer/component": "^1.1.2",
