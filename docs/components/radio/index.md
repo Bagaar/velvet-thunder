@@ -4,9 +4,9 @@
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetRadio @isChecked={{true}} @size='sm'>Small</VelvetRadio>
-  <VelvetRadio @isChecked={{true}} @size='md'>Medium</VelvetRadio>
-  <VelvetRadio @isChecked={{true}} @size='lg'>Large</VelvetRadio>
+  <VelvetRadio @isChecked={{true}} @size="sm">Small</VelvetRadio>
+  <VelvetRadio @isChecked={{true}} @size="md">Medium</VelvetRadio>
+  <VelvetRadio @isChecked={{true}} @size="lg">Large</VelvetRadio>
 </DemoSpaceX>
 ```
 

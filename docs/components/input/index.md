@@ -4,9 +4,9 @@
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetInput @size='sm' />
-  <VelvetInput @size='md' />
-  <VelvetInput @size='lg' />
+  <VelvetInput @size="sm" />
+  <VelvetInput @size="md" />
+  <VelvetInput @size="lg" />
 </DemoSpaceX>
 ```
 
@@ -31,16 +31,16 @@
 ## Placeholder
 
 ```hbs preview-template
-<VelvetInput @placeholder='Type something here...' />
+<VelvetInput @placeholder="Type something here..." />
 ```
 
 ## Types
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetInput @type='number' />
-  <VelvetInput @type='time' />
-  <VelvetInput @type='date' />
+  <VelvetInput @type="number" />
+  <VelvetInput @type="time" />
+  <VelvetInput @type="date" />
 </DemoSpaceX>
 ```
 

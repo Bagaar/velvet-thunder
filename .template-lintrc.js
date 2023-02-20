@@ -8,7 +8,7 @@ module.exports = {
   ],
   overrides: [
     {
-      files: ['**/tests/integration/**/*.js'],
+      files: ['**/tests/integration/**/*.{js,ts}'],
       rules: {
         // Doesn't work reliably for inline templates.
         prettier: false,

@@ -1,4 +1,4 @@
-import { render, TestContext } from '@ember/test-helpers';
+import { render, findAll, TestContext } from '@ember/test-helpers';
 import { setupRenderingTest } from 'dummy/tests/helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { module, test } from 'qunit';
@@ -120,7 +120,7 @@ module('Integration | Component | velvet-select', function (hooks) {
       </VelvetSelect>
     `);
 
-    const secondOption = this.element.querySelectorAll('option')[1];
+    const secondOption = findAll('option')[1];
 
     assert.dom(SELECTOR).hasValue(secondOption?.value);
   });

@@ -10,12 +10,12 @@ Use the `@onInput` argument to handle `input` events.
 ```
 
 ```js component
-import { action } from '@ember/object';
-import Component from '@glimmer/component';
-import { tracked } from '@glimmer/tracking';
+import { action } from "@ember/object";
+import Component from "@glimmer/component";
+import { tracked } from "@glimmer/tracking";
 
 export default class Demo extends Component {
-  @tracked value = 'Value';
+  @tracked value = "Value";
 
   @action
   onInput(value) {

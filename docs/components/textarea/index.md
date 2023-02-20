@@ -4,9 +4,9 @@
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetTextarea @size='sm' />
-  <VelvetTextarea @size='md' />
-  <VelvetTextarea @size='lg' />
+  <VelvetTextarea @size="sm" />
+  <VelvetTextarea @size="md" />
+  <VelvetTextarea @size="lg" />
 </DemoSpaceX>
 ```
 
@@ -25,7 +25,7 @@
 ## Placeholder
 
 ```hbs preview-template
-<VelvetTextarea @placeholder='Type something here...' />
+<VelvetTextarea @placeholder="Type something here..." />
 ```
 
 ## Arguments

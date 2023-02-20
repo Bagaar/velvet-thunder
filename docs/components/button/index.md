@@ -4,9 +4,9 @@
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetButton @variant='primary'>Button</VelvetButton>
-  <VelvetButton @variant='secondary'>Button</VelvetButton>
-  <VelvetButton @variant='ghost'>Button</VelvetButton>
+  <VelvetButton @variant="primary">Button</VelvetButton>
+  <VelvetButton @variant="secondary">Button</VelvetButton>
+  <VelvetButton @variant="ghost">Button</VelvetButton>
 </DemoSpaceX>
 ```
 
@@ -14,9 +14,9 @@
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetButton @size='sm'>Button</VelvetButton>
-  <VelvetButton @size='md'>Button</VelvetButton>
-  <VelvetButton @size='lg'>Button</VelvetButton>
+  <VelvetButton @size="sm">Button</VelvetButton>
+  <VelvetButton @size="md">Button</VelvetButton>
+  <VelvetButton @size="lg">Button</VelvetButton>
 </DemoSpaceX>
 ```
 
@@ -24,9 +24,9 @@
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetButton @isPill={{true}} @variant='primary'>Button</VelvetButton>
-  <VelvetButton @isPill={{true}} @variant='secondary'>Button</VelvetButton>
-  <VelvetButton @isPill={{true}} @variant='ghost'>Button</VelvetButton>
+  <VelvetButton @isPill={{true}} @variant="primary">Button</VelvetButton>
+  <VelvetButton @isPill={{true}} @variant="secondary">Button</VelvetButton>
+  <VelvetButton @isPill={{true}} @variant="ghost">Button</VelvetButton>
 </DemoSpaceX>
 ```
 
@@ -34,9 +34,9 @@
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetButton @isDisabled={{true}} @variant='primary'>Button</VelvetButton>
-  <VelvetButton @isDisabled={{true}} @variant='secondary'>Button</VelvetButton>
-  <VelvetButton @isDisabled={{true}} @variant='ghost'>Button</VelvetButton>
+  <VelvetButton @isDisabled={{true}} @variant="primary">Button</VelvetButton>
+  <VelvetButton @isDisabled={{true}} @variant="secondary">Button</VelvetButton>
+  <VelvetButton @isDisabled={{true}} @variant="ghost">Button</VelvetButton>
 </DemoSpaceX>
 ```
 
@@ -44,9 +44,9 @@
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetButton @isLoading={{true}} @variant='primary'>Button</VelvetButton>
-  <VelvetButton @isLoading={{true}} @variant='secondary'>Button</VelvetButton>
-  <VelvetButton @isLoading={{true}} @variant='ghost'>Button</VelvetButton>
+  <VelvetButton @isLoading={{true}} @variant="primary">Button</VelvetButton>
+  <VelvetButton @isLoading={{true}} @variant="secondary">Button</VelvetButton>
+  <VelvetButton @isLoading={{true}} @variant="ghost">Button</VelvetButton>
 </DemoSpaceX>
 ```
 
@@ -54,13 +54,13 @@
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetButton @isDisclosure={{true}} @variant='primary'>
+  <VelvetButton @isDisclosure={{true}} @variant="primary">
     Button
   </VelvetButton>
-  <VelvetButton @isDisclosure={{true}} @variant='secondary'>
+  <VelvetButton @isDisclosure={{true}} @variant="secondary">
     Button
   </VelvetButton>
-  <VelvetButton @isDisclosure={{true}} @variant='ghost'>
+  <VelvetButton @isDisclosure={{true}} @variant="ghost">
     Button
   </VelvetButton>
 </DemoSpaceX>
@@ -70,14 +70,14 @@
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetButton @isRenderless={{true}} @variant='primary' as |button|>
-    <a class={{button.class}} href='#renderless'>Link</a>
+  <VelvetButton @isRenderless={{true}} @variant="primary" as |button|>
+    <a class={{button.class}} href="#renderless">Link</a>
   </VelvetButton>
-  <VelvetButton @isRenderless={{true}} @variant='secondary' as |button|>
-    <a class={{button.class}} href='#renderless'>Link</a>
+  <VelvetButton @isRenderless={{true}} @variant="secondary" as |button|>
+    <a class={{button.class}} href="#renderless">Link</a>
   </VelvetButton>
-  <VelvetButton @isRenderless={{true}} @variant='ghost' as |button|>
-    <a class={{button.class}} href='#renderless'>Link</a>
+  <VelvetButton @isRenderless={{true}} @variant="ghost" as |button|>
+    <a class={{button.class}} href="#renderless">Link</a>
   </VelvetButton>
 </DemoSpaceX>
 ```

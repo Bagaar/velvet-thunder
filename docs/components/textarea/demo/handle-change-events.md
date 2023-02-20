@@ -10,12 +10,12 @@ Use the `@onChange` argument to handle `change` events.
 ```
 
 ```js component
-import { action } from '@ember/object';
-import Component from '@glimmer/component';
-import { tracked } from '@glimmer/tracking';
+import { action } from "@ember/object";
+import Component from "@glimmer/component";
+import { tracked } from "@glimmer/tracking";
 
 export default class Demo extends Component {
-  @tracked value = 'Value';
+  @tracked value = "Value";
 
   @action
   onChange(value) {

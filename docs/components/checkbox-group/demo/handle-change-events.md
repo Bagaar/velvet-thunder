@@ -8,23 +8,23 @@ Use the `@onChange` argument to handle `change` events.
   <VelvetCheckboxGroup
     @onChange={{this.onChange}}
     @value={{this.value}}
-    class='space-y-3'
+    class="space-y-3"
     as |group|
   >
-    <group.Checkbox @name='first'>First</group.Checkbox>
-    <group.Checkbox @name='second'>Second</group.Checkbox>
-    <group.Checkbox @name='third'>Third</group.Checkbox>
+    <group.Checkbox @name="first">First</group.Checkbox>
+    <group.Checkbox @name="second">Second</group.Checkbox>
+    <group.Checkbox @name="third">Third</group.Checkbox>
   </VelvetCheckboxGroup>
 </DemoSpaceY>
 ```
 
 ```js component
-import { action } from '@ember/object';
-import Component from '@glimmer/component';
-import { tracked } from '@glimmer/tracking';
+import { action } from "@ember/object";
+import Component from "@glimmer/component";
+import { tracked } from "@glimmer/tracking";
 
 export default class Demo extends Component {
-  @tracked value = ['first'];
+  @tracked value = ["first"];
 
   get valueAsString() {
     return JSON.stringify(this.value);

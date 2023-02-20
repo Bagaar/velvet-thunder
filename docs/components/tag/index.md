@@ -4,8 +4,8 @@
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetTag @variant='primary'>Tag</VelvetTag>
-  <VelvetTag @variant='secondary'>Tag</VelvetTag>
+  <VelvetTag @variant="primary">Tag</VelvetTag>
+  <VelvetTag @variant="secondary">Tag</VelvetTag>
 </DemoSpaceX>
 ```
 
@@ -13,9 +13,9 @@
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetTag @size='sm'>Tag</VelvetTag>
-  <VelvetTag @size='md'>Tag</VelvetTag>
-  <VelvetTag @size='lg'>Tag</VelvetTag>
+  <VelvetTag @size="sm">Tag</VelvetTag>
+  <VelvetTag @size="md">Tag</VelvetTag>
+  <VelvetTag @size="lg">Tag</VelvetTag>
 </DemoSpaceX>
 ```
 
@@ -23,8 +23,8 @@
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetTag @isPill={{true}} @variant='primary'>Tag</VelvetTag>
-  <VelvetTag @isPill={{true}} @variant='secondary'>Tag</VelvetTag>
+  <VelvetTag @isPill={{true}} @variant="primary">Tag</VelvetTag>
+  <VelvetTag @isPill={{true}} @variant="secondary">Tag</VelvetTag>
 </DemoSpaceX>
 ```
 

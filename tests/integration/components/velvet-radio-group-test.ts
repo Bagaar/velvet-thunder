@@ -1,4 +1,4 @@
-import { click, render, TestContext } from '@ember/test-helpers';
+import { click, findAll, render, TestContext } from '@ember/test-helpers';
 import { setupRenderingTest } from 'dummy/tests/helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { module, test } from 'qunit';
@@ -104,7 +104,7 @@ module('Integration | Component | velvet-radio-group', function (hooks) {
       </VelvetRadioGroup>
     `);
 
-    radio = this.element.querySelectorAll(RADIO_SELECTOR);
+    radio = findAll(RADIO_SELECTOR);
 
     assert.dom(radio[0]).isNotChecked();
     assert.dom(radio[1]).isNotChecked();
@@ -116,7 +116,7 @@ module('Integration | Component | velvet-radio-group', function (hooks) {
       </VelvetRadioGroup>
     `);
 
-    radio = this.element.querySelectorAll(RADIO_SELECTOR);
+    radio = findAll(RADIO_SELECTOR);
 
     assert.dom(radio[0]).isNotChecked();
     assert.dom(radio[1]).isChecked();
