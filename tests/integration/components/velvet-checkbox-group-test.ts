@@ -1,4 +1,4 @@
-import { click, render, TestContext } from '@ember/test-helpers';
+import { click, findAll, render, TestContext } from '@ember/test-helpers';
 import { setupRenderingTest } from 'dummy/tests/helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { module, test } from 'qunit';
@@ -104,7 +104,7 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
       </VelvetCheckboxGroup>
     `);
 
-    checkbox = this.element.querySelectorAll(CHECKBOX_SELECTOR);
+    checkbox = findAll(CHECKBOX_SELECTOR);
 
     assert.dom(checkbox[0]).isNotChecked();
     assert.dom(checkbox[1]).isNotChecked();
@@ -116,7 +116,7 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
       </VelvetCheckboxGroup>
     `);
 
-    checkbox = this.element.querySelectorAll(CHECKBOX_SELECTOR);
+    checkbox = findAll(CHECKBOX_SELECTOR);
 
     assert.dom(checkbox[0]).isChecked();
     assert.dom(checkbox[1]).isChecked();
@@ -170,7 +170,7 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
         </VelvetCheckboxGroup>
       `);
 
-      checkbox = this.element.querySelectorAll(CHECKBOX_SELECTOR);
+      checkbox = findAll(CHECKBOX_SELECTOR);
 
       assert.dom(checkbox[0]).isNotChecked();
       assert.dom(checkbox[1]).isNotChecked();
@@ -186,7 +186,7 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
         </VelvetCheckboxGroup>
       `);
 
-      checkbox = this.element.querySelectorAll(CHECKBOX_SELECTOR);
+      checkbox = findAll(CHECKBOX_SELECTOR);
 
       assert.dom(checkbox[0]).isChecked();
       assert.dom(checkbox[1]).isChecked();
