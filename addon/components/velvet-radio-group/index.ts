@@ -1,7 +1,7 @@
 import { guidFor } from '@ember/object/internals';
 import Component from '@glimmer/component';
 import type { WithBoundArgs } from '@glint/template';
-import type VelvetRadio from 'velvet-thunder/components/velvet-radio';
+import VelvetRadio from 'velvet-thunder/components/velvet-radio';
 import type { Size } from 'velvet-thunder/components/velvet-radio';
 
 interface VelvetRadioGroupSignature {
@@ -37,4 +37,5 @@ interface VelvetRadioGroupSignature {
 
 export default class VelvetRadioGroup extends Component<VelvetRadioGroupSignature> {
   uniqueName = guidFor(this);
+  VelvetRadio = VelvetRadio;
 }

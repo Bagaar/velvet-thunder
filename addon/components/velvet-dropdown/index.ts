@@ -12,9 +12,9 @@ import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import type { ModifierLike, WithBoundArgs } from '@glint/template';
 import { modifier } from 'ember-modifier';
-import type VelvetButton from 'velvet-thunder/components/velvet-button';
-import type VelvetIconButton from 'velvet-thunder/components/velvet-icon-button';
-import type VelvetDropdownContent from 'velvet-thunder/components/velvet-dropdown/content';
+import VelvetButton from 'velvet-thunder/components/velvet-button';
+import VelvetDropdownContent from 'velvet-thunder/components/velvet-dropdown/content';
+import VelvetIconButton from 'velvet-thunder/components/velvet-icon-button';
 
 interface VelvetDropdownSignature {
   Args: {
@@ -64,6 +64,9 @@ export default class VelvetDropdown extends Component<VelvetDropdownSignature> {
   @tracked isShown = false;
 
   triggerElement: HTMLElement | null = null;
+  VelvetButton = VelvetButton;
+  VelvetDropdownContent = VelvetDropdownContent;
+  VelvetIconButton = VelvetIconButton;
 
   get offset(): number {
     const { offset } = this.args;

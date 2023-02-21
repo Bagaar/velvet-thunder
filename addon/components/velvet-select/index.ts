@@ -1,7 +1,7 @@
 import { action } from '@ember/object';
 import Component from '@glimmer/component';
 import type { WithBoundArgs } from '@glint/template';
-import type VelvetSelectOption from 'velvet-thunder/components/velvet-select/option';
+import VelvetSelectOption from 'velvet-thunder/components/velvet-select/option';
 
 interface VelvetSelectSignature {
   Args: {
@@ -37,6 +37,7 @@ interface VelvetSelectSignature {
 
 export default class VelvetSelect extends Component<VelvetSelectSignature> {
   options = new Map();
+  VelvetSelectOption = VelvetSelectOption;
 
   get hasSelection() {
     return this.args.selected !== undefined && this.args.selected !== null;

@@ -20,6 +20,7 @@ import type VelvetTextarea from 'velvet-thunder/components/velvet-textarea';
 import type VelvetClassListHelper from 'velvet-thunder/helpers/-velvet/class-list';
 
 // Dependencies:
+import type { EnsureSafeComponentHelper } from '@embroider/util';
 import type OrHelper from 'ember-truth-helpers/helpers/or';
 
 declare module '@glint/environment-ember-loose/registry' {
@@ -62,6 +63,7 @@ declare module '@glint/environment-ember-loose/registry' {
     '-velvet/class-list': typeof VelvetClassListHelper;
 
     // Dependencies:
+    'ensure-safe-component': typeof EnsureSafeComponentHelper;
     or: typeof OrHelper;
   }
 }

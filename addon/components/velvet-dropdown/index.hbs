@@ -1,14 +1,22 @@
+{{! @glint-nocheck }}
+{{! Needs https://github.com/embroider-build/embroider/pull/1367 to remove `@glint-nocheck`. }}
+
 <div class="velvet-dropdown" ...attributes>
   {{yield
     (hash
       Button=(component
-        "velvet-button" privateDropdownTrigger=this.trigger isDisclosure=true
+        (ensure-safe-component this.VelvetButton)
+        isDisclosure=true
+        privateDropdownTrigger=this.trigger
       )
       Content=(component
-        "velvet-dropdown/content" isShown=this.isShown modifier=this.content
+        (ensure-safe-component this.VelvetDropdownContent)
+        isShown=this.isShown
+        modifier=this.content
       )
       IconButton=(component
-        "velvet-icon-button" privateDropdownTrigger=this.trigger
+        (ensure-safe-component this.VelvetIconButton)
+        privateDropdownTrigger=this.trigger
       )
       isShown=this.isShown
       hide=this.hide
