@@ -6,22 +6,22 @@ order: 2
 
 ## Installation
 
-### Yarn
-
-```shell
-yarn add velvet-thunder tailwindcss @tailwindcss/forms --dev
-```
-
 ### npm
 
 ```shell
-npm install velvet-thunder tailwindcss @tailwindcss/forms --save-dev
+npm install -D velvet-thunder tailwindcss @tailwindcss/forms
 ```
 
 ### pnpm
 
 ```shell
-pnpm install velvet-thunder tailwindcss @tailwindcss/forms --dev
+pnpm add -D velvet-thunder tailwindcss @tailwindcss/forms
+```
+
+### yarn
+
+```shell
+yarn add -D velvet-thunder tailwindcss @tailwindcss/forms
 ```
 
 ## Configuration

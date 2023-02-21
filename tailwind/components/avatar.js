@@ -10,15 +10,15 @@ module.exports = () => ({
     },
 
     '&-sm': {
-      '@apply h-6 rounded text-xs w-6': {},
+      '@apply h-7 rounded text-xs w-7': {},
     },
 
     '&-md': {
-      '@apply h-8 rounded-md text-sm w-8': {},
+      '@apply h-9 rounded-md text-sm w-9': {},
     },
 
     '&-lg': {
-      '@apply h-10 rounded-lg text-base w-10': {},
+      '@apply h-11 rounded-lg text-base w-11': {},
     },
 
     '&-round': {

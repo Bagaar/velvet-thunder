@@ -67,7 +67,7 @@ pre {
 }
 
 .docfy-demo__snippet pre {
-  @apply border-none max-h-64 rounded-none;
+  @apply border-none rounded-none;
 }
 
 /* Tailwind Typography */
