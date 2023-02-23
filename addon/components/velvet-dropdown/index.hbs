@@ -1,0 +1,21 @@
+<div class="velvet-dropdown" ...attributes>
+  {{yield
+    (hash
+      Button=(component
+        "velvet-button" privateDropdownTrigger=this.trigger isDisclosure=true
+      )
+      Content=(component
+        "velvet-dropdown/content" isShown=this.isShown modifier=this.content
+      )
+      IconButton=(component
+        "velvet-icon-button" privateDropdownTrigger=this.trigger
+      )
+      isShown=this.isShown
+      hide=this.hide
+      show=this.show
+      toggle=this.toggle
+      content=this.content
+      trigger=this.trigger
+    )
+  }}
+</div>
