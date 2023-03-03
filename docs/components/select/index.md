@@ -64,19 +64,8 @@
 
 ## Arguments
 
-| Name           | Description                            | Type       | Default Value |
-| -------------- | -------------------------------------- | ---------- | ------------- |
-| `@isDisabled`  | Indicate if the select is disabled.    | `Boolean`  | `false`       |
-| `@isInvalid`   | Indicate if the select is invalid.     | `Boolean`  | `false`       |
-| `@isPill`      | Indicate if the select is pill shaped. | `Boolean`  | `false`       |
-| `@onChange`    | Handle the select's `change` event.    | `Function` | `undefined`   |
-| `@placeholder` | The placeholder of the select.         | `String`   | `''`          |
-| `@selected`    | The selected option of the select.     | `Unknown`  | `undefined`   |
-| `@size`        | The size of the select.                | `String`   | `'md'`        |
-| `@variant`     | The appearance of the select.          | `String`   | `'primary'`   |
+<!-- args-table: velvet-select -->
 
 ### Option Arguments
 
-| Name     | Description              | Type      | Default Value |
-| -------- | ------------------------ | --------- | ------------- |
-| `@value` | The value of the option. | `Unknown` | `undefined`   |
+<!-- args-table: velvet-select/option -->

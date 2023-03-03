@@ -3,11 +3,17 @@ import Component from '@glimmer/component';
 
 interface VelvetProgressSignature {
   Args: {
+    /// The maximum value of the progress.
     max?: number;
+    /// The minimum value of the progress.
     min?: number;
+    /// The size of the progress.
     size?: 'sm' | 'md' | 'lg';
+    /// The text describing the process in progress.
     text?: string;
+    /// The value of the progress.
     value?: number;
+    /// The appearance of the progress.
     variant?: string | 'primary';
   };
   Element: HTMLDivElement;

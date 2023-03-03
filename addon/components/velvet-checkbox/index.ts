@@ -10,18 +10,23 @@ export type Size = 'sm' | 'md' | 'lg';
 
 interface VelvetCheckboxSignature {
   Args: {
+    /// Indicate if the checkbox is checked.
     isChecked?: boolean;
+    /// Indicate if the checkbox is disabled.
     isDisabled?: boolean;
+    /// Indicate if the checkbox is indeterminate.
     isIndeterminate?: boolean;
+    /// The name of the checkbox.
     name?: string;
+    /// Handle the checkbox's `change` event.
     onChange?: (value: boolean, event: Event) => void;
+    /// The size of the checkbox.
     size?: Size;
 
-    // Private:
-    groupValue?: GroupValue;
-    groupValueIsObject?: boolean;
-    inGroup?: boolean;
-    onChangeGroup?: (value: GroupValue, event: Event) => void;
+    privateGroupValue?: GroupValue;
+    privateGroupValueIsObject?: boolean;
+    privateInGroup?: boolean;
+    privateOnChangeGroup?: (value: GroupValue, event: Event) => void;
   };
   Blocks: {
     default: [];
@@ -31,17 +36,17 @@ interface VelvetCheckboxSignature {
 
 export default class VelvetCheckbox extends Component<VelvetCheckboxSignature> {
   get groupValueAsArray() {
-    return (this.args.groupValue || []) as GroupValueAsArray;
+    return (this.args.privateGroupValue || []) as GroupValueAsArray;
   }
 
   get groupValueAsObject() {
-    return (this.args.groupValue || {}) as GroupValueAsObject;
+    return (this.args.privateGroupValue || {}) as GroupValueAsObject;
   }
 
   get isCheckedInGroup() {
     const name = this.args.name as string;
 
-    if (this.args.groupValueIsObject) {
+    if (this.args.privateGroupValueIsObject) {
       return this.groupValueAsObject[name] === true;
     }
 
@@ -55,15 +60,15 @@ export default class VelvetCheckbox extends Component<VelvetCheckboxSignature> {
     }
 
     const { checked } = event.target as HTMLInputElement;
-    const { inGroup, onChange, onChangeGroup } = this.args;
+    const { privateInGroup, onChange, privateOnChangeGroup } = this.args;
 
-    if (inGroup && typeof onChangeGroup === 'function') {
+    if (privateInGroup && typeof privateOnChangeGroup === 'function') {
       const { groupValueAsArray, groupValueAsObject } = this;
-      const { groupValueIsObject, name } = this.args;
+      const { privateGroupValueIsObject, name } = this.args;
 
       let groupValue;
 
-      if (groupValueIsObject) {
+      if (privateGroupValueIsObject) {
         groupValue = { ...groupValueAsObject, [name as string]: checked };
       } else if (checked) {
         groupValue = [...groupValueAsArray, name];
@@ -71,7 +76,7 @@ export default class VelvetCheckbox extends Component<VelvetCheckboxSignature> {
         groupValue = groupValueAsArray.filter((n) => n !== name);
       }
 
-      onChangeGroup(groupValue as GroupValue, event);
+      privateOnChangeGroup(groupValue as GroupValue, event);
     } else if (typeof onChange === 'function') {
       onChange(checked, event);
     }

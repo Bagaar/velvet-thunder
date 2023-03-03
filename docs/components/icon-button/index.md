@@ -120,14 +120,4 @@
 
 ## Arguments
 
-| Name            | Description                                                 | Type       | Default Value |
-| --------------- | ----------------------------------------------------------- | ---------- | ------------- |
-| `@isDisabled`   | Indicate if the icon button is disabled.                    | `Boolean`  | `false`       |
-| `@isDisclosure` | Indicate if the icon button discloses content.              | `Boolean`  | `false`       |
-| `@isLoading`    | Indicate if the icon button should display a loading state. | `Boolean`  | `false`       |
-| `@isRenderless` | Make the icon button renderless.                            | `Boolean`  | `false`       |
-| `@isRound`      | Indicate if the icon button is round.                       | `Boolean`  | `false`       |
-| `@onClick`      | Handle the icon button's `click` event.                     | `Function` | `undefined`   |
-| `@size`         | The size of the icon button.                                | `String`   | `'md'`        |
-| `@type`         | The type of the icon button.                                | `String`   | `'button'`    |
-| `@variant`      | The appearance of the icon button.                          | `String`   | `'primary'`   |
+<!-- args-table: velvet-icon-button -->

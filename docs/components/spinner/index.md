@@ -14,6 +14,4 @@
 
 ## Arguments
 
-| Name    | Description              | Type     | Default Value |
-| ------- | ------------------------ | -------- | ------------- |
-| `@size` | The size of the spinner. | `String` | `'md'`        |
+<!-- args-table: velvet-spinner -->

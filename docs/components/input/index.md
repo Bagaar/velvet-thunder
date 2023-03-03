@@ -46,15 +46,4 @@
 
 ## Arguments
 
-| Name           | Description                           | Type       | Default Value |
-| -------------- | ------------------------------------- | ---------- | ------------- |
-| `@isDisabled`  | Indicate if the input is disabled.    | `Boolean`  | `false`       |
-| `@isInvalid`   | Indicate if the input is invalid.     | `Boolean`  | `false`       |
-| `@isPill`      | Indicate if the input is pill shaped. | `Boolean`  | `false`       |
-| `@onChange`    | Handle the input's `change` event.    | `Function` | `undefined`   |
-| `@onInput`     | Handle the input's `input` event.     | `Function` | `undefined`   |
-| `@placeholder` | The placeholder of the input.         | `String`   | `''`          |
-| `@size`        | The size of the input.                | `String`   | `'md'`        |
-| `@type`        | The type of the input.                | `String`   | `'text'`      |
-| `@value`       | The value of the input.               | `String`   | `''`          |
-| `@variant`     | The appearance of the input.          | `String`   | `'primary'`   |
+<!-- args-table: velvet-input -->

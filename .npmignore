@@ -30,6 +30,7 @@
 /tailwind.input.css
 /testem.js
 /tsconfig.json
+/rehype-plugins/
 /tests/
 /types/
 .gitkeep

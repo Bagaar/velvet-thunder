@@ -6,10 +6,15 @@ import type { Size } from 'velvet-thunder/components/velvet-radio';
 
 interface VelvetRadioGroupSignature {
   Args: {
+    /// Indicate if the radio group is disabled.
     isDisabled?: boolean;
+    /// The name of the radio group.
     name?: string;
+    /// Handle the radio group's `change` event.
     onChange?: (value: unknown, event: Event) => void;
+    /// The size of the radios.
     size?: Size;
+    /// The value of the radio group.
     value?: unknown;
   };
   Blocks: {
@@ -17,12 +22,12 @@ interface VelvetRadioGroupSignature {
       {
         Radio: WithBoundArgs<
           typeof VelvetRadio,
-          | 'groupValue'
-          | 'inGroup'
           | 'isDisabled'
           | 'name'
-          | 'onChangeGroup'
           | 'size'
+          | 'privateGroupValue'
+          | 'privateInGroup'
+          | 'privateOnChangeGroup'
         >;
       }
     ];

@@ -84,14 +84,4 @@
 
 ## Arguments
 
-| Name            | Description                                            | Type       | Default Value |
-| --------------- | ------------------------------------------------------ | ---------- | ------------- |
-| `@isDisabled`   | Indicate if the button is disabled.                    | `Boolean`  | `false`       |
-| `@isDisclosure` | Indicate if the button discloses content.              | `Boolean`  | `false`       |
-| `@isLoading`    | Indicate if the button should display a loading state. | `Boolean`  | `false`       |
-| `@isPill`       | Indicate if the button is pill shaped.                 | `Boolean`  | `false`       |
-| `@isRenderless` | Make the button renderless.                            | `Boolean`  | `false`       |
-| `@onClick`      | Handle the button's `click` event.                     | `Function` | `undefined`   |
-| `@size`         | The size of the button.                                | `String`   | `'md'`        |
-| `@type`         | The type of the button.                                | `String`   | `'button'`    |
-| `@variant`      | The appearance of the button.                          | `String`   | `'primary'`   |
+<!-- args-table: velvet-button -->

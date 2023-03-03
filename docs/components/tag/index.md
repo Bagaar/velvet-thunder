@@ -30,8 +30,4 @@
 
 ## Arguments
 
-| Name       | Description                         | Type      | Default Value |
-| ---------- | ----------------------------------- | --------- | ------------- |
-| `@isPill`  | Indicate if the tag is pill shaped. | `Boolean` | `false`       |
-| `@size`    | The size of the tag.                | `String`  | `'md'`        |
-| `@variant` | The appearance of the tag.          | `String`  | `'primary'`   |
+<!-- args-table: velvet-tag -->
