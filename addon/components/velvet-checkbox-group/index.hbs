@@ -11,12 +11,12 @@
     (hash
       Checkbox=(component
         "velvet-checkbox"
-        groupValue=@value
-        groupValueIsObject=@valueIsObject
-        inGroup=true
         isDisabled=@isDisabled
-        onChangeGroup=@onChange
         size=@size
+        privateGroupValue=@value
+        privateGroupValueIsObject=@valueIsObject
+        privateInGroup=true
+        privateOnChangeGroup=@onChange
       )
     )
   }}

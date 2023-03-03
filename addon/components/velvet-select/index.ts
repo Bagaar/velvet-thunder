@@ -5,13 +5,21 @@ import type VelvetSelectOption from 'velvet-thunder/components/velvet-select/opt
 
 interface VelvetSelectSignature {
   Args: {
+    /// Indicate if the select is disabled.
     isDisabled?: boolean;
+    /// Indicate if the select is invalid.
     isInvalid?: boolean;
+    /// Indicate if the select is pill shaped.
     isPill?: boolean;
+    /// Handle the select's `change` event.
     onChange?: (selected: unknown, event: Event) => void;
+    /// The placeholder of the select.
     placeholder?: string;
+    /// The selected option of the select.
     selected?: unknown;
+    /// The size of the select.
     size?: 'sm' | 'md' | 'lg';
+    /// The appearance of the select.
     variant?: string | 'primary';
   };
   Blocks: {
@@ -19,7 +27,7 @@ interface VelvetSelectSignature {
       {
         Option: WithBoundArgs<
           typeof VelvetSelectOption,
-          'onCreate' | 'onDestroy' | 'selected'
+          'privateOnCreate' | 'privateOnDestroy' | 'privateSelected'
         >;
       }
     ];

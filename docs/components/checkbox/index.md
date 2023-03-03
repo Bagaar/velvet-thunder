@@ -29,11 +29,4 @@
 
 ## Arguments
 
-| Name               | Description                                | Type       | Default Value |
-| ------------------ | ------------------------------------------ | ---------- | ------------- |
-| `@isChecked`       | Indicate if the checkbox is checked.       | `Boolean`  | `false`       |
-| `@isDisabled`      | Indicate if the checkbox is disabled.      | `Boolean`  | `false`       |
-| `@isIndeterminate` | Indicate if the checkbox is indeterminate. | `Boolean`  | `false`       |
-| `@name`            | The name of the checkbox.                  | `String`   | `''`          |
-| `@onChange`        | Handle the checkbox's `change` event.      | `Function` | `undefined`   |
-| `@size`            | The size of the checkbox.                  | `String`   | `'md'`        |
+<!-- args-table: velvet-checkbox -->

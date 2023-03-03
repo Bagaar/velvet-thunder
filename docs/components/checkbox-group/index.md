@@ -54,10 +54,4 @@
 
 ## Arguments
 
-| Name             | Description                                                            | Type              | Default Value |
-| ---------------- | ---------------------------------------------------------------------- | ----------------- | ------------- |
-| `@isDisabled`    | Indicate if the checkbox group is disabled.                            | `Boolean`         | `false`       |
-| `@onChange`      | Handle the checkbox group's `change` event.                            | `Function`        | `undefined`   |
-| `@size`          | The size of the checkboxes.                                            | `String`          | `'md'`        |
-| `@value`         | The value of the checkbox group.                                       | `Array \| Object` | `[] \| {}`    |
-| `@valueIsObject` | Indicate if `@value` is / should be an `Object` instead of an `Array`. | `Boolean`         | `false`       |
+<!-- args-table: velvet-checkbox-group -->

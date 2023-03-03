@@ -3,10 +3,12 @@ import Component from '@glimmer/component';
 
 interface VelvetSelectOptionSignature {
   Args: {
-    onCreate: (id: string, value: unknown) => void;
-    onDestroy: (id: string) => void;
-    selected: unknown;
+    /// The value of the option.
     value: unknown;
+
+    privateOnCreate: (id: string, value: unknown) => void;
+    privateOnDestroy: (id: string) => void;
+    privateSelected: unknown;
   };
   Blocks: {
     default: [];
@@ -18,18 +20,18 @@ export default class VelvetSelectOption extends Component<VelvetSelectOptionSign
   uniqueId = guidFor(this);
 
   get isSelected() {
-    return this.args.value === this.args.selected;
+    return this.args.value === this.args.privateSelected;
   }
 
   constructor(owner: unknown, args: VelvetSelectOptionSignature['Args']) {
     super(owner, args);
 
-    this.args.onCreate(this.uniqueId, this.args.value);
+    this.args.privateOnCreate(this.uniqueId, this.args.value);
   }
 
   willDestroy() {
     super.willDestroy();
 
-    this.args.onDestroy(this.uniqueId);
+    this.args.privateOnDestroy(this.uniqueId);
   }
 }

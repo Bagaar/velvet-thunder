@@ -21,11 +21,4 @@
 
 ## Arguments
 
-| Name          | Description                        | Type       | Default Value |
-| ------------- | ---------------------------------- | ---------- | ------------- |
-| `@isChecked`  | Indicate if the radio is checked.  | `Boolean`  | `false`       |
-| `@isDisabled` | Indicate if the radio is disabled. | `Boolean`  | `false`       |
-| `@name`       | The name of the radio.             | `String`   | `''`          |
-| `@onChange`   | Handle the radio's `change` event. | `Function` | `undefined`   |
-| `@size`       | The size of the radio.             | `String`   | `'md'`        |
-| `@value`      | The value of the radio.            | `Unknown`  | `undefined`   |
+<!-- args-table: velvet-radio -->

@@ -11,12 +11,12 @@
     (hash
       Radio=(component
         "velvet-radio"
-        groupValue=@value
-        inGroup=true
         isDisabled=@isDisabled
         name=(or @name this.uniqueName)
-        onChangeGroup=@onChange
         size=@size
+        privateGroupValue=@value
+        privateInGroup=true
+        privateOnChangeGroup=@onChange
       )
     )
   }}

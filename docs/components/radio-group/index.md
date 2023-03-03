@@ -39,10 +39,4 @@
 
 ## Arguments
 
-| Name          | Description                              | Type       | Default Value |
-| ------------- | ---------------------------------------- | ---------- | ------------- |
-| `@isDisabled` | Indicate if the radio group is disabled. | `Boolean`  | `false`       |
-| `@name`       | The name of the radio group.             | `String`   | `uid`         |
-| `@onChange`   | Handle the radio group's `change` event. | `Function` | `undefined`   |
-| `@size`       | The size of the radios.                  | `String`   | `'md'`        |
-| `@value`      | The value of the radio group.            | `Unknown`  | `undefined`   |
+<!-- args-table: velvet-radio-group -->

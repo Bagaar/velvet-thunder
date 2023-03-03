@@ -10,10 +10,15 @@ export type Value = ValueAsArray | ValueAsObject;
 
 interface VelvetCheckboxGroupSignature {
   Args: {
+    /// Indicate if the checkbox group is disabled.
     isDisabled?: boolean;
+    /// Handle the checkbox group's `change` event.
     onChange?: (value: Value, event: Event) => void;
+    /// The size of the checkboxes.
     size?: Size;
+    /// The value of the checkbox group.
     value?: Value;
+    /// Indicate if `@value` is an `Object` instead of an `Array`.
     valueIsObject?: boolean;
   };
   Blocks: {
@@ -21,12 +26,12 @@ interface VelvetCheckboxGroupSignature {
       {
         Checkbox: WithBoundArgs<
           typeof VelvetCheckbox,
-          | 'groupValue'
-          | 'groupValueIsObject'
-          | 'inGroup'
           | 'isDisabled'
-          | 'onChangeGroup'
           | 'size'
+          | 'privateGroupValue'
+          | 'privateGroupValueIsObject'
+          | 'privateInGroup'
+          | 'privateOnChangeGroup'
         >;
       }
     ];

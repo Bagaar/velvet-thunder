@@ -42,6 +42,7 @@ module.exports = {
         './tailwind.config.js',
         './testem.js',
         './blueprints/*/index.js',
+        './rehype-plugins/**/*.js',
         './tailwind/**/*.js',
         './tests/dummy/config/**/*.js',
       ],

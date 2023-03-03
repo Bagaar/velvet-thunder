@@ -30,13 +30,4 @@
 
 ## Arguments
 
-| Name           | Description                           | Type       | Default Value |
-| -------------- | ------------------------------------- | ---------- | ------------- |
-| `@isDisabled`  | Indicate if the textarea is disabled. | `Boolean`  | `false`       |
-| `@isInvalid`   | Indicate if the textarea is invalid.  | `Boolean`  | `false`       |
-| `@onChange`    | Handle the textarea's `change` event. | `Function` | `undefined`   |
-| `@onInput`     | Handle the textarea's `input` event.  | `Function` | `undefined`   |
-| `@placeholder` | The placeholder of the textarea.      | `String`   | `''`          |
-| `@size`        | The size of the textarea.             | `String`   | `'md'`        |
-| `@value`       | The value of the textarea.            | `String`   | `''`          |
-| `@variant`     | The appearance of the textarea.       | `String`   | `'primary'`   |
+<!-- args-table: velvet-textarea -->

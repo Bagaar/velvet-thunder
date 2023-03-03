@@ -5,17 +5,22 @@ export type Size = 'sm' | 'md' | 'lg';
 
 interface VelvetRadioSignature {
   Args: {
+    /// Indicate if the radio is checked.
     isChecked?: boolean;
+    /// Indicate if the radio is disabled.
     isDisabled?: boolean;
+    /// The name of the radio.
     name?: string;
+    /// Handle the radio's `change` event.
     onChange?: (isChecked: boolean, event: Event) => void;
+    /// The size of the radio.
     size?: Size;
+    /// The value of the radio.
     value?: unknown;
 
-    // Private:
-    groupValue?: unknown;
-    inGroup?: boolean;
-    onChangeGroup?: (value: unknown, event: Event) => void;
+    privateGroupValue?: unknown;
+    privateInGroup?: boolean;
+    privateOnChangeGroup?: (value: unknown, event: Event) => void;
   };
   Blocks: {
     default: [];
@@ -25,9 +30,9 @@ interface VelvetRadioSignature {
 
 export default class VelvetRadio extends Component<VelvetRadioSignature> {
   get isChecked() {
-    const { inGroup, isChecked, groupValue, value } = this.args;
+    const { privateInGroup, isChecked, privateGroupValue, value } = this.args;
 
-    return inGroup ? value === groupValue : isChecked;
+    return privateInGroup ? value === privateGroupValue : isChecked;
   }
 
   get valueAttr() {
@@ -42,10 +47,10 @@ export default class VelvetRadio extends Component<VelvetRadioSignature> {
       return;
     }
 
-    const { inGroup, onChange, onChangeGroup, value } = this.args;
+    const { privateInGroup, onChange, privateOnChangeGroup, value } = this.args;
 
-    if (inGroup && typeof onChangeGroup === 'function') {
-      onChangeGroup(value, event);
+    if (privateInGroup && typeof privateOnChangeGroup === 'function') {
+      privateOnChangeGroup(value, event);
     } else if (typeof onChange === 'function') {
       onChange((event.target as HTMLInputElement).checked, event);
     }

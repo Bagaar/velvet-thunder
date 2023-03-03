@@ -22,9 +22,9 @@
     (hash
       Option=(component
         "velvet-select/option"
-        onCreate=this.addOption
-        onDestroy=this.removeOption
-        selected=@selected
+        privateOnCreate=this.addOption
+        privateOnDestroy=this.removeOption
+        privateSelected=@selected
       )
     )
   }}
