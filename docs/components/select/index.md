@@ -69,3 +69,18 @@
 ### Option Arguments
 
 <!-- args-table: velvet-select/option -->
+
+## Testing
+
+Use the `velvetSelect` test helper to select a specific value for a
+`VelvetSelect` component.
+
+```js
+import { velvetSelect } from "velvet-thunder/test-support";
+
+// Select by index:
+await velvetSelect(".velvet-select", { index: 0 });
+
+// Select by text:
+await velvetSelect(".velvet-select", { text: "First" });
+```
