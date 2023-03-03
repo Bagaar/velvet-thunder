@@ -4,7 +4,7 @@ Use the `@onChange` argument to handle `change` events.
 
 ```hbs template
 <DemoSpaceY>
-  <div>Value: '{{this.valueAsString}}'</div>
+  <div>Value: {{this.valueAsString}}</div>
   <VelvetCheckboxGroup
     @onChange={{this.onChange}}
     @value={{this.value}}
