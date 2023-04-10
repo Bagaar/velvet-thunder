@@ -73,7 +73,7 @@
     "@glimmer/tracking": "^1.1.2",
     "@glint/core": "^1.0.0-beta.3",
     "@glint/environment-ember-loose": "^1.0.0-beta.3",
-    "@percy/cli": "^1.20.0",
+    "@percy/cli": "^1.22.0",
     "@percy/ember": "^4.2.0",
     "@release-it-plugins/lerna-changelog": "^5.0.0",
     "@tailwindcss/forms": "^0.5.3",
