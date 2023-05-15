@@ -1,5 +1,7 @@
 import { action } from '@ember/object';
 import Component from '@glimmer/component';
+import type { ModifierLike } from '@glint/template';
+import type { TriggerSignature } from 'velvet-thunder/components/velvet-dropdown';
 
 interface VelvetIconButtonSignature {
   Args: {
@@ -21,6 +23,8 @@ interface VelvetIconButtonSignature {
     type?: 'button' | 'reset' | 'submit';
     /// The appearance of the icon button.
     variant?: string | 'primary';
+
+    privateDropdownTrigger?: ModifierLike<TriggerSignature>;
   };
   Blocks: {
     default: [{ class: string }];

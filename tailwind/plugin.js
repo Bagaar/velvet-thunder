@@ -6,6 +6,7 @@ const COMPONENTS = {
   avatar: require('./components/avatar'),
   button: require('./components/button'),
   checkbox: require('./components/checkbox'),
+  dropdown: require('./components/dropdown'),
   iconButton: require('./components/icon-button'),
   input: require('./components/input'),
   progress: require('./components/progress'),

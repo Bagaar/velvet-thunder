@@ -28,14 +28,14 @@ jobs:
         run: pnpm install
       - name: Lint
         run: pnpm lint
-
+      - name: Build Tailwind
+        run: pnpm tailwind:build
       - name: Run Tests
         if: ${{ contains(github.event.*.labels.*.name, 'percy') == false }}
         run: pnpm test:ember
-
       - name: Run Tests With Percy
         if: ${{ contains(github.event.*.labels.*.name, 'percy') }}
-        run: pnpm tailwind:build && pnpx percy exec -- pnpm test:ember
+        run: pnpx percy exec -- pnpm test:ember
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
@@ -53,7 +53,9 @@ jobs:
         with:
           version: 7
       - name: Install Dependencies
-        run: rm pnpm-lock.yaml && pnpm install
+        run: pnpm install --no-lockfile
+      - name: Build Tailwind
+        run: pnpm tailwind:build
       - name: Run Tests
         run: pnpm test:ember
 
@@ -86,5 +88,7 @@ jobs:
           version: 7
       - name: Install Dependencies
         run: pnpm install
+      - name: Build Tailwind
+        run: pnpm tailwind:build
       - name: Run Tests
         run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }}

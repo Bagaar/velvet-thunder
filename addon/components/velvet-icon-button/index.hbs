@@ -16,6 +16,7 @@
       disabled={{@isDisabled}}
       type={{or @type "button"}}
       {{on "click" this.clickHandler}}
+      {{@privateDropdownTrigger}}
       ...attributes
     >
       {{#if @isLoading}}

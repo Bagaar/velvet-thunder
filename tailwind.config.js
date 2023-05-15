@@ -11,6 +11,7 @@ module.exports = {
     './tests/dummy/app/components/**/*.{hbs,js}',
     './tests/dummy/app/templates/**/*.hbs',
     './tests/dummy/app/index.html',
+    './tests/integration/**/*-test.ts',
   ],
   darkMode: 'class',
   plugins: [
