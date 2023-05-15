@@ -1,3 +1,7 @@
+---
+manualDemoInsertion: true
+---
+
 # Radio Group
 
 ## Sizes
@@ -36,6 +40,10 @@
   <group.Radio @value="third">Third</group.Radio>
 </VelvetRadioGroup>
 ```
+
+## Examples
+
+[[demos-all]]
 
 ## Arguments
 

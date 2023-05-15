@@ -1,3 +1,7 @@
+---
+manualDemoInsertion: true
+---
+
 # Checkbox Group
 
 ## Sizes
@@ -51,6 +55,10 @@
   <group.Checkbox @name="third">Third</group.Checkbox>
 </VelvetCheckboxGroup>
 ```
+
+## Examples
+
+[[demos-all]]
 
 ## Arguments
 
