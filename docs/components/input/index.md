@@ -1,3 +1,7 @@
+---
+manualDemoInsertion: true
+---
+
 # Input
 
 ## Sizes
@@ -43,6 +47,10 @@
   <VelvetInput @type="date" />
 </DemoSpaceX>
 ```
+
+## Examples
+
+[[demos-all]]
 
 ## Arguments
 

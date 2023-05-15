@@ -1,3 +1,7 @@
+---
+manualDemoInsertion: true
+---
+
 # Button
 
 ## Variants
@@ -81,6 +85,10 @@
   </VelvetButton>
 </DemoSpaceX>
 ```
+
+## Examples
+
+[[demos-all]]
 
 ## Arguments
 

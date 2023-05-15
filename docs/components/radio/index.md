@@ -1,3 +1,7 @@
+---
+manualDemoInsertion: true
+---
+
 # Radio
 
 ## Sizes
@@ -18,6 +22,10 @@
   <VelvetRadio @isChecked={{true}} @isDisabled={{true}}>Disabled</VelvetRadio>
 </DemoSpaceX>
 ```
+
+## Examples
+
+[[demos-all]]
 
 ## Arguments
 

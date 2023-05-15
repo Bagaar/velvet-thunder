@@ -1,3 +1,7 @@
+---
+manualDemoInsertion: true
+---
+
 # Checkbox
 
 ## Sizes
@@ -26,6 +30,10 @@
 ```hbs preview-template
 <VelvetCheckbox @isIndeterminate={{true}}>Indeterminate</VelvetCheckbox>
 ```
+
+## Examples
+
+[[demos-all]]
 
 ## Arguments
 

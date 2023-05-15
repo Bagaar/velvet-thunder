@@ -1,3 +1,7 @@
+---
+manualDemoInsertion: true
+---
+
 # Textarea
 
 ## Sizes
@@ -27,6 +31,10 @@
 ```hbs preview-template
 <VelvetTextarea @placeholder="Type something here..." />
 ```
+
+## Examples
+
+[[demos-all]]
 
 ## Arguments
 

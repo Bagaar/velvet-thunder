@@ -10,7 +10,7 @@ specifiers:
   '@babel/traverse': ^7.21.5
   '@commitlint/cli': ^17.6.3
   '@commitlint/config-conventional': ^17.6.3
-  '@docfy/ember': ^0.5.0
+  '@docfy/ember': ^0.6.0
   '@ember/optional-features': ^2.0.0
   '@ember/string': ^3.0.1
   '@ember/test-helpers': ^2.9.3
@@ -97,7 +97,7 @@ devDependencies:
   '@babel/traverse': 7.21.5
   '@commitlint/cli': 17.6.3
   '@commitlint/config-conventional': 17.6.3
-  '@docfy/ember': 0.5.0
+  '@docfy/ember': 0.6.0
   '@ember/optional-features': 2.0.0
   '@ember/string': 3.0.1
   '@ember/test-helpers': 2.9.3_qetcop4dzc7f4wpewjyk3nzisy
@@ -1773,8 +1773,8 @@ packages:
       postcss-selector-parser: 6.0.12
     dev: true
 
-  /@docfy/core/0.5.0:
-    resolution: {integrity: sha512-4SBim8DAveFju1CiUfiHXGiWc+zC7CMWKid+jbwPW1AiVlwitrY2KJYGe+LN1dNxd3EcIVV8QULl7Po7ZTqxgg==}
+  /@docfy/core/0.6.0:
+    resolution: {integrity: sha512-2L5UiE720h6tmkTxvB43Q+nZybKV/8UC6jYVBqiyP9YriVjWxxVpTkR80Egg4rrMnGfYKedOI4ZgxekgdoHDMQ==}
     engines: {node: '>= 12.*'}
     dependencies:
       debug: 4.3.4
@@ -1801,11 +1801,11 @@ packages:
       - supports-color
     dev: true
 
-  /@docfy/ember/0.5.0:
-    resolution: {integrity: sha512-kgBGrryYXTQ5pB5q8X1R6IoJMwka6W6Z/+NFYbrxv6r2BY+4pR+P8Of7rBDf/ViPRMCYIU0BtZcQWZFPeN45KA==}
+  /@docfy/ember/0.6.0:
+    resolution: {integrity: sha512-TcZoNwZpQGs7EuvSvuxLp6gt11Fq/9qIHUESYR5j9qZOwLFvuvRXaui27n+Rq03LZQW/eGtBUQM06nSn9FsuXg==}
     engines: {node: '>= 12'}
     dependencies:
-      '@docfy/core': 0.5.0
+      '@docfy/core': 0.6.0
       broccoli-bridge: 1.0.0
       broccoli-file-creator: 2.1.1
       broccoli-funnel: 3.0.8
@@ -2822,6 +2822,12 @@ packages:
 
   /@types/mdast/3.0.10:
     resolution: {integrity: sha512-W864tg/Osz1+9f4lrGTZpCSO5/z4608eUp19tbozkq2HJK6i3z1kT0H9tlADXuYIb1YYOBByU4Jsqkk75q48qA==}
+    dependencies:
+      '@types/unist': 2.0.6
+    dev: true
+
+  /@types/mdast/3.0.11:
+    resolution: {integrity: sha512-Y/uImid8aAwrEA24/1tcRZwpxX3pIFTSilcNDKSPn+Y2iDywSEachzRuvgAYYLR3wpGXAsMbv5lvKLDZLeYPAw==}
     dependencies:
       '@types/unist': 2.0.6
     dev: true
@@ -4536,7 +4542,7 @@ packages:
     resolution: {integrity: sha512-Quw8a6y8CPmRd6eU+mwypktYCwUcf8yVFIRbNZ6tPQEckX9yd+EBVEPC/GSZZrMWH9e7Vz4pT7XhpmyApRByLQ==}
     engines: {node: 6.* || 8.* || >= 10.*}
     dependencies:
-      json-stable-stringify: 1.0.1
+      json-stable-stringify: 1.0.2
 
   /call-bind/1.0.2:
     resolution: {integrity: sha512-7O+FbCihrB5WGbFYesctwmTKae6rOiIzmz1icreWJ+0aA7LJfuqhEso2T9ncpcFtzMQtzXf2QGGueWJGTYsqrA==}
@@ -6012,10 +6018,10 @@ packages:
       debug: 4.3.4
       execa: 4.1.0
       fs-extra: 9.1.0
-      resolve: 1.22.1
+      resolve: 1.22.2
       rsvp: 4.8.5
-      semver: 7.3.8
-      stagehand: 1.0.0
+      semver: 7.5.1
+      stagehand: 1.0.1
       walk-sync: 2.2.0
     transitivePeerDependencies:
       - supports-color
@@ -9245,6 +9251,11 @@ packages:
     dependencies:
       jsonify: 0.0.1
 
+  /json-stable-stringify/1.0.2:
+    resolution: {integrity: sha512-eunSSaEnxV12z+Z73y/j5N37/In40GK4GmsSy+tEHJMxknvqnA7/djeYtAgW0GsWHUfg+847WJjKaEylk2y09g==}
+    dependencies:
+      jsonify: 0.0.1
+
   /json5/0.5.1:
     resolution: {integrity: sha512-4xrs1aW+6N5DalkqSVA8fxh458CXvR99WU8WLKmq4v8eWAL86Xo3BVqyd3SkA9wEVjCMqyvvRRkshAdOnBp5rw==}
     hasBin: true
@@ -9257,20 +9268,20 @@ packages:
   /jsonfile/2.4.0:
     resolution: {integrity: sha512-PKllAqbgLgxHaj8TElYymKCAgrASebJrWpTnEkOaTowt23VKXXN0sUeriJ+eh7y6ufb/CC5ap11pz71/cM0hUw==}
     optionalDependencies:
-      graceful-fs: 4.2.11
+      graceful-fs: 4.2.10
     dev: true
 
   /jsonfile/4.0.0:
     resolution: {integrity: sha512-m6F1R3z8jjlf2imQHS2Qez5sjKWQzbuuhuJ/FKYFRZvPE3PuHcSMVZzfsLhGVOkfd20obL5SWEBew5ShlquNxg==}
     optionalDependencies:
-      graceful-fs: 4.2.11
+      graceful-fs: 4.2.10
 
   /jsonfile/6.1.0:
     resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
     dependencies:
       universalify: 2.0.0
     optionalDependencies:
-      graceful-fs: 4.2.11
+      graceful-fs: 4.2.10
 
   /jsonify/0.0.1:
     resolution: {integrity: sha512-2/Ki0GcmuqSrgFyelQq9M05y7PS0mEwuIzrf3f1fPqkVDVRvZrPZtVSMHxdgo8Aq0sxAOb/cr2aqqA3LeWHVPg==}
@@ -9933,7 +9944,7 @@ packages:
   /mdast-util-from-markdown/0.8.5:
     resolution: {integrity: sha512-2hkTXtYYnr+NubD/g6KGBS/0mFmBcifAsI0yIWRiRo0PjVs6SSOSOdtzbp6kSGnShDN6G5aWZpKQ2lWRy27mWQ==}
     dependencies:
-      '@types/mdast': 3.0.10
+      '@types/mdast': 3.0.11
       mdast-util-to-string: 2.0.0
       micromark: 2.11.4
       parse-entities: 2.0.0
@@ -10011,7 +10022,7 @@ packages:
   /mdast-util-to-hast/10.2.0:
     resolution: {integrity: sha512-JoPBfJ3gBnHZ18icCwHR50orC9kNH81tiR1gs01D8Q5YpV6adHNO9nKNuFBCJQ941/32PT1a63UF/DitmS3amQ==}
     dependencies:
-      '@types/mdast': 3.0.10
+      '@types/mdast': 3.0.11
       '@types/unist': 2.0.6
       mdast-util-definitions: 4.0.0
       mdurl: 1.0.1
@@ -10047,7 +10058,7 @@ packages:
   /mdast-util-toc/5.1.0:
     resolution: {integrity: sha512-csimbRIVkiqc+PpFeKDGQ/Ck2N4f9FYH3zzBMMJzcxoKL8m+cM0n94xXm0I9eaxHnKdY9n145SGTdyJC7i273g==}
     dependencies:
-      '@types/mdast': 3.0.10
+      '@types/mdast': 3.0.11
       '@types/unist': 2.0.6
       extend: 3.0.2
       github-slugger: 1.5.0
@@ -13011,6 +13022,15 @@ packages:
       debug: 4.3.4
     transitivePeerDependencies:
       - supports-color
+
+  /stagehand/1.0.1:
+    resolution: {integrity: sha512-GqXBq2SPWv9hTXDFKS8WrKK1aISB0aKGHZzH+uD4ShAgs+Fz20ZfoerLOm8U+f62iRWLrw6nimOY/uYuTcVhvg==}
+    engines: {node: 6.* || 8.* || >= 10.*}
+    dependencies:
+      debug: 4.3.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
 
   /static-extend/0.1.2:
     resolution: {integrity: sha512-72E9+uLc27Mt718pMHt9VMNiAL4LMsmDbBva8mxWUCkT07fSzEGMYUCk0XWY6lp0j6RBAG4cJ3mWuZv2OE3s0g==}

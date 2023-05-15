@@ -1,3 +1,7 @@
+---
+manualDemoInsertion: true
+---
+
 # Icon Button
 
 ## Variants
@@ -117,6 +121,10 @@
   </VelvetIconButton>
 </DemoSpaceX>
 ```
+
+## Examples
+
+[[demos-all]]
 
 ## Arguments
 

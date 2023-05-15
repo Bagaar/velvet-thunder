@@ -1,3 +1,7 @@
+---
+manualDemoInsertion: true
+---
+
 # Select
 
 ## Sizes
@@ -61,6 +65,10 @@
   <select.Option @value="third">Third</select.Option>
 </VelvetSelect>
 ```
+
+## Examples
+
+[[demos-all]]
 
 ## Arguments
 
