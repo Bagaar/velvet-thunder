@@ -15,7 +15,7 @@ specifiers:
   '@ember/string': ^3.0.1
   '@ember/test-helpers': ^2.9.3
   '@embroider/test-setup': ^2.1.1
-  '@gavant/glint-template-types': ^0.2.4
+  '@gavant/glint-template-types': ^0.3.3
   '@glimmer/component': ^1.1.2
   '@glimmer/tracking': ^1.1.2
   '@glint/core': ^1.0.2
@@ -96,7 +96,7 @@ devDependencies:
   '@ember/string': 3.0.1
   '@ember/test-helpers': 2.9.3_qetcop4dzc7f4wpewjyk3nzisy
   '@embroider/test-setup': 2.1.1
-  '@gavant/glint-template-types': 0.2.4
+  '@gavant/glint-template-types': 0.3.3
   '@glimmer/tracking': 1.1.2
   '@glint/core': 1.0.2_typescript@4.9.5
   '@glint/environment-ember-loose': 1.0.2_r3ifk4vafsz2v2hgkwohghg5s4
@@ -1988,8 +1988,8 @@ packages:
     resolution: {integrity: sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==}
     dev: true
 
-  /@gavant/glint-template-types/0.2.4:
-    resolution: {integrity: sha512-qrS2t3sfhjNmjIUImDDGwOu7VjVqU5Zjur94KJJF+ItIy98OPOmswcHdNUm+hrG+J4f4AMUCg4vZ5QEUrb5qjQ==}
+  /@gavant/glint-template-types/0.3.3:
+    resolution: {integrity: sha512-MPRvYBeL0L5PVxSWl3JnEYtzHUjKHdZ5CmfdHEUvhO8ZNI5A+H5UHN1RxIEgTAqkrCU5XL3JjKOfjfDiHxhMpg==}
     dev: true
 
   /@glimmer/component/1.1.2_@babel+core@7.21.8:

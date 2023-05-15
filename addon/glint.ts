@@ -18,7 +18,7 @@ import type VelvetTextarea from 'velvet-thunder/components/velvet-textarea';
 import type VelvetClassListHelper from 'velvet-thunder/helpers/-velvet/class-list';
 
 // Dependencies:
-import type OrHelper from '@gavant/glint-template-types/types/ember-truth-helpers/or';
+import type OrHelper from 'ember-truth-helpers/helpers/or';
 
 declare module '@glint/environment-ember-loose/registry' {
   export default interface Registry {
