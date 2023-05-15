@@ -24,6 +24,9 @@ manualDemoInsertion: true
 
 ```hbs preview-template
 <DemoSpaceX>
+  <VelvetIconButton @size="xs">
+    <DemoMenuIcon />
+  </VelvetIconButton>
   <VelvetIconButton @size="sm">
     <DemoMenuIcon />
   </VelvetIconButton>

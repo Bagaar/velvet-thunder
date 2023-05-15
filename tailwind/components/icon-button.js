@@ -14,6 +14,10 @@ module.exports = () => ({
       '@apply cursor-not-allowed': {},
     },
 
+    '&-xs': {
+      '@apply h-7 w-7': {},
+    },
+
     '&-sm': {
       '@apply h-8 w-8': {},
     },

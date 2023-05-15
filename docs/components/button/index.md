@@ -18,6 +18,7 @@ manualDemoInsertion: true
 
 ```hbs preview-template
 <DemoSpaceX>
+  <VelvetButton @size="xs">Button</VelvetButton>
   <VelvetButton @size="sm">Button</VelvetButton>
   <VelvetButton @size="md">Button</VelvetButton>
   <VelvetButton @size="lg">Button</VelvetButton>
