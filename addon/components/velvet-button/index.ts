@@ -18,7 +18,7 @@ interface VelvetButtonSignature {
     /// Handle the button's `click` event.
     onClick?: (event: MouseEvent) => void;
     /// The size of the button.
-    size?: 'sm' | 'md' | 'lg';
+    size?: 'xs' | 'sm' | 'md' | 'lg';
     /// The type of the button.
     type?: 'button' | 'reset' | 'submit';
     /// The appearance of the button.
