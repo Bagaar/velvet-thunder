@@ -1,4 +1,10 @@
+# unconventional files
+/blueprints/*/files/
+
 # compiled output
 /coverage/
 /dist/
 /tests/dummy/public/assets/*.css
+
+# addons
+/.node_modules.ember-try/
