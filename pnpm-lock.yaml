@@ -18,9 +18,9 @@ specifiers:
   '@gavant/glint-template-types': ^0.2.4
   '@glimmer/component': ^1.1.2
   '@glimmer/tracking': ^1.1.2
-  '@glint/core': ^1.0.0-beta.3
-  '@glint/environment-ember-loose': ^1.0.0-beta.3
-  '@glint/template': ^1.0.0-beta.3
+  '@glint/core': ^1.0.2
+  '@glint/environment-ember-loose': ^1.0.2
+  '@glint/template': ^1.0.2
   '@percy/cli': ^1.24.0
   '@percy/ember': ^4.2.0
   '@release-it-plugins/lerna-changelog': ^5.0.0
@@ -79,7 +79,7 @@ specifiers:
 
 dependencies:
   '@glimmer/component': 1.1.2_@babel+core@7.21.8
-  '@glint/template': 1.0.0-beta.3
+  '@glint/template': 1.0.2
   ember-cli-babel: 7.26.11
   ember-cli-htmlbars: 6.2.0
   ember-truth-helpers: 3.1.1
@@ -98,8 +98,8 @@ devDependencies:
   '@embroider/test-setup': 2.1.1
   '@gavant/glint-template-types': 0.2.4
   '@glimmer/tracking': 1.1.2
-  '@glint/core': 1.0.0-beta.3_typescript@4.9.5
-  '@glint/environment-ember-loose': 1.0.0-beta.3_jp4edzasexunb63jwdl454ycd4
+  '@glint/core': 1.0.2_typescript@4.9.5
+  '@glint/environment-ember-loose': 1.0.2_r3ifk4vafsz2v2hgkwohghg5s4
   '@percy/cli': 1.24.0
   '@percy/ember': 4.2.0
   '@release-it-plugins/lerna-changelog': 5.0.0_release-it@15.10.3
@@ -2111,31 +2111,31 @@ packages:
       - '@babel/core'
     dev: true
 
-  /@glint/core/1.0.0-beta.3_typescript@4.9.5:
-    resolution: {integrity: sha512-4xpo6ugp/DmjyaK/kjo7cu1SLG9jaLqGslb80HXPI+9o7YadSRkHRL1Y0JxGhgTD0IJnB+EzBd8Pc9Oat/stqQ==}
+  /@glint/core/1.0.2_typescript@4.9.5:
+    resolution: {integrity: sha512-0bVt/lT/NurpD8nBG9RTPKYlcpg51UDGCKgLoBEFOiTXv3aCSxAVKPud1IYaitGBKE0C+s5pl2PHkgptotVS+w==}
     hasBin: true
     peerDependencies:
-      typescript: ^4.8.0
+      typescript: '>=4.8.0'
     dependencies:
-      '@glimmer/syntax': 0.84.2
+      '@glimmer/syntax': 0.84.3
       escape-string-regexp: 4.0.0
-      semver: 7.3.8
+      semver: 7.5.1
       silent-error: 1.1.1
       typescript: 4.9.5
       uuid: 8.3.2
-      vscode-languageserver: 8.0.2
-      vscode-languageserver-textdocument: 1.0.7
-      vscode-uri: 3.0.6
-      yargs: 17.7.0
+      vscode-languageserver: 8.1.0
+      vscode-languageserver-textdocument: 1.0.8
+      vscode-uri: 3.0.7
+      yargs: 17.7.2
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@glint/environment-ember-loose/1.0.0-beta.3_jp4edzasexunb63jwdl454ycd4:
-    resolution: {integrity: sha512-Aby8penf3PB2VJrp9Ni33ZAcmFz8OpZ3wA2rz9DirOQhGrdDoTxcvNli6wu0R/NBqjjgKhM2WGzbxJ8NRdfdxA==}
+  /@glint/environment-ember-loose/1.0.2_r3ifk4vafsz2v2hgkwohghg5s4:
+    resolution: {integrity: sha512-tVLYzAx6c/4vcSaijiAubwR27/+K2tujuozArxeNud58MTwncGxhUkCHSM9xl+wn4VJjsjkzI6+nmzjEdkszSg==}
     peerDependencies:
       '@glimmer/component': ^1.1.2
-      '@glint/template': ^1.0.0-beta.3
+      '@glint/template': ^1.0.2
       '@types/ember__array': ^4.0.2
       '@types/ember__component': ^4.0.10
       '@types/ember__controller': ^4.0.2
@@ -2160,12 +2160,12 @@ packages:
         optional: true
     dependencies:
       '@glimmer/component': 1.1.2_@babel+core@7.21.8
-      '@glint/template': 1.0.0-beta.3
+      '@glint/template': 1.0.2
       ember-cli-htmlbars: 6.2.0
     dev: true
 
-  /@glint/template/1.0.0-beta.3:
-    resolution: {integrity: sha512-jxn4yGzNZ1A4NGzvjYht0NlVziHyzjj/rm4rGsP1mVUO2Dd/LHhhxR6NUlSw9MFDZ0fCinULVwQtAKQLEpIpPw==}
+  /@glint/template/1.0.2:
+    resolution: {integrity: sha512-kFWfJrS7XM0NjC5YSN0CWA9FiN0mhUvWVlQ2O7YRz/uhrO8+TVYNLst0WKELRbfCXbdI7wyYQkazNgz6FoL9CA==}
 
   /@handlebars/parser/2.0.0:
     resolution: {integrity: sha512-EP9uEDZv/L5Qh9IWuMUGJRfwhXJ4h1dqKTT4/3+tY0eu7sPis7xh23j61SYUnNF4vqCQvvUXpDo9Bh/+q1zASA==}
@@ -14438,35 +14438,35 @@ packages:
       acorn-walk: 8.2.0
     dev: true
 
-  /vscode-jsonrpc/8.0.2:
-    resolution: {integrity: sha512-RY7HwI/ydoC1Wwg4gJ3y6LpU9FJRZAUnTYMXthqhFXXu77ErDd/xkREpGuk4MyYkk4a+XDWAMqe0S3KkelYQEQ==}
+  /vscode-jsonrpc/8.1.0:
+    resolution: {integrity: sha512-6TDy/abTQk+zDGYazgbIPc+4JoXdwC8NHU9Pbn4UJP1fehUyZmM4RHp5IthX7A6L5KS30PRui+j+tbbMMMafdw==}
     engines: {node: '>=14.0.0'}
     dev: true
 
-  /vscode-languageserver-protocol/3.17.2:
-    resolution: {integrity: sha512-8kYisQ3z/SQ2kyjlNeQxbkkTNmVFoQCqkmGrzLH6A9ecPlgTbp3wDTnUNqaUxYr4vlAcloxx8zwy7G5WdguYNg==}
+  /vscode-languageserver-protocol/3.17.3:
+    resolution: {integrity: sha512-924/h0AqsMtA5yK22GgMtCYiMdCOtWTSGgUOkgEDX+wk2b0x4sAfLiO4NxBxqbiVtz7K7/1/RgVrVI0NClZwqA==}
     dependencies:
-      vscode-jsonrpc: 8.0.2
-      vscode-languageserver-types: 3.17.2
+      vscode-jsonrpc: 8.1.0
+      vscode-languageserver-types: 3.17.3
     dev: true
 
-  /vscode-languageserver-textdocument/1.0.7:
-    resolution: {integrity: sha512-bFJH7UQxlXT8kKeyiyu41r22jCZXG8kuuVVA33OEJn1diWOZK5n8zBSPZFHVBOu8kXZ6h0LIRhf5UnCo61J4Hg==}
+  /vscode-languageserver-textdocument/1.0.8:
+    resolution: {integrity: sha512-1bonkGqQs5/fxGT5UchTgjGVnfysL0O8v1AYMBjqTbWQTFn721zaPGDYFkOKtfDgFiSgXM3KwaG3FMGfW4Ed9Q==}
     dev: true
 
-  /vscode-languageserver-types/3.17.2:
-    resolution: {integrity: sha512-zHhCWatviizPIq9B7Vh9uvrH6x3sK8itC84HkamnBWoDFJtzBf7SWlpLCZUit72b3os45h6RWQNC9xHRDF8dRA==}
+  /vscode-languageserver-types/3.17.3:
+    resolution: {integrity: sha512-SYU4z1dL0PyIMd4Vj8YOqFvHu7Hz/enbWtpfnVbJHU4Nd1YNYx8u0ennumc6h48GQNeOLxmwySmnADouT/AuZA==}
     dev: true
 
-  /vscode-languageserver/8.0.2:
-    resolution: {integrity: sha512-bpEt2ggPxKzsAOZlXmCJ50bV7VrxwCS5BI4+egUmure/oI/t4OlFzi/YNtVvY24A2UDOZAgwFGgnZPwqSJubkA==}
+  /vscode-languageserver/8.1.0:
+    resolution: {integrity: sha512-eUt8f1z2N2IEUDBsKaNapkz7jl5QpskN2Y0G01T/ItMxBxw1fJwvtySGB9QMecatne8jFIWJGWI61dWjyTLQsw==}
     hasBin: true
     dependencies:
-      vscode-languageserver-protocol: 3.17.2
+      vscode-languageserver-protocol: 3.17.3
     dev: true
 
-  /vscode-uri/3.0.6:
-    resolution: {integrity: sha512-fmL7V1eiDBFRRnu+gfRWTzyPpNIHJTc4mWnFkwBUmO9U3KPgJAmTx7oxi2bl/Rh6HLdU7+4C9wlj0k2E4AdKFQ==}
+  /vscode-uri/3.0.7:
+    resolution: {integrity: sha512-eOpPHogvorZRobNqJGhapa0JdwaxpjVvyBp0QIUMRMSf8ZAlqOdEquKuRmw9Qwu0qXtJIWqFtMkmvJjUZmMjVA==}
     dev: true
 
   /walk-sync/0.2.7:
