@@ -117,7 +117,7 @@
     "rehype-highlight": "^4.1.0",
     "rehype-wrap-all": "^1.1.0",
     "release-it": "^15.10.3",
-    "stylelint": "^15.4.0",
+    "stylelint": "^15.6.1",
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-standard": "^33.0.0",
     "stylelint-config-tailwindcss": "^0.0.7",
