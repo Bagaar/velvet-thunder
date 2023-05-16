@@ -15,6 +15,7 @@ specifiers:
   '@ember/string': ^3.0.1
   '@ember/test-helpers': ^2.9.3
   '@embroider/test-setup': ^2.1.1
+  '@embroider/util': ^1.10.0
   '@floating-ui/dom': ^1.2.1
   '@gavant/glint-template-types': ^0.3.3
   '@glimmer/component': ^1.1.2
@@ -80,6 +81,7 @@ specifiers:
   webpack: ^5.78.0
 
 dependencies:
+  '@embroider/util': 1.10.0_mp3g62gnokvy4mspivu47gzyta
   '@floating-ui/dom': 1.2.8
   '@glimmer/component': 1.1.2_@babel+core@7.21.8
   '@glimmer/tracking': 1.1.2
@@ -99,7 +101,7 @@ devDependencies:
   '@docfy/ember': 0.6.0
   '@ember/optional-features': 2.0.0
   '@ember/string': 3.0.1
-  '@ember/test-helpers': 2.9.3_qetcop4dzc7f4wpewjyk3nzisy
+  '@ember/test-helpers': 2.9.3_t7tiltyjte6775fl6ludzrpzli
   '@embroider/test-setup': 2.1.1
   '@gavant/glint-template-types': 0.3.3
   '@glint/core': 1.0.2_typescript@5.0.4
@@ -1857,7 +1859,7 @@ packages:
       - supports-color
     dev: true
 
-  /@ember/test-helpers/2.9.3_qetcop4dzc7f4wpewjyk3nzisy:
+  /@ember/test-helpers/2.9.3_t7tiltyjte6775fl6ludzrpzli:
     resolution: {integrity: sha512-ejVg4Dj+G/6zyLvQsYOvmGiOLU6AS94tY4ClaO1E2oVvjjtVJIRmVLFN61I+DuyBg9hS3cFoPjQRTZB9MRIbxQ==}
     engines: {node: 10.* || 12.* || 14.* || 15.* || >= 16.*}
     peerDependencies:
@@ -1865,7 +1867,7 @@ packages:
     dependencies:
       '@ember/test-waiters': 3.0.2
       '@embroider/macros': 1.10.0
-      '@embroider/util': 1.9.0_ember-source@4.12.0
+      '@embroider/util': 1.10.0_mp3g62gnokvy4mspivu47gzyta
       broccoli-debug: 0.6.5
       broccoli-funnel: 3.0.8
       ember-cli-babel: 7.26.11
@@ -1874,6 +1876,7 @@ packages:
       ember-source: 4.12.0_kjkxx7gmcxmxv3nkljhlk5fdc4
     transitivePeerDependencies:
       - '@babel/core'
+      - '@glint/template'
       - supports-color
     dev: true
 
@@ -1935,19 +1938,23 @@ packages:
       resolve: 1.22.1
     dev: true
 
-  /@embroider/util/1.9.0_ember-source@4.12.0:
-    resolution: {integrity: sha512-9I63iJK6N01OHJafmS/BX0msUkTlmhFMIEmDl/SRNACVi0nS6QfNyTgTTeji1P/DALf6eobg/9t/N4VhS9G9QA==}
-    engines: {node: 12.* || 14.* || >= 16}
+  /@embroider/util/1.10.0_mp3g62gnokvy4mspivu47gzyta:
+    resolution: {integrity: sha512-utAFKoq6ajI27jyqjvX3PiGL4m+ZyGVlVNbSbE/nOqi2llRyAkh5ltH1WkIK7jhdwQFJouo1NpOSj9J3/HDa3A==}
+    engines: {node: 14.* || >= 16}
     peerDependencies:
+      '@glint/template': ^1.0.0-beta.1
       ember-source: '*'
+    peerDependenciesMeta:
+      '@glint/template':
+        optional: true
     dependencies:
       '@embroider/macros': 1.10.0
+      '@glint/template': 1.0.2
       broccoli-funnel: 3.0.8
       ember-cli-babel: 7.26.11
       ember-source: 4.12.0_kjkxx7gmcxmxv3nkljhlk5fdc4
     transitivePeerDependencies:
       - supports-color
-    dev: true
 
   /@eslint-community/eslint-utils/4.4.0_eslint@8.40.0:
     resolution: {integrity: sha512-1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA==}
@@ -6290,7 +6297,7 @@ packages:
       ember-source: '>=3.28'
       qunit: ^2.13.0
     dependencies:
-      '@ember/test-helpers': 2.9.3_qetcop4dzc7f4wpewjyk3nzisy
+      '@ember/test-helpers': 2.9.3_t7tiltyjte6775fl6ludzrpzli
       broccoli-funnel: 3.0.8
       broccoli-merge-trees: 3.0.2
       common-tags: 1.8.2
@@ -7613,7 +7620,7 @@ packages:
   /fs-extra/4.0.3:
     resolution: {integrity: sha512-q6rbdDd1o2mAnQreO7YADIxf/Whx4AHBiRf6d+/cVT8h44ss+lHgxf1FemcqDnQt9X3ct4McHr+JMGlYSsK7Cg==}
     dependencies:
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
       jsonfile: 4.0.0
       universalify: 0.1.2
     dev: true
@@ -9269,20 +9276,20 @@ packages:
   /jsonfile/2.4.0:
     resolution: {integrity: sha512-PKllAqbgLgxHaj8TElYymKCAgrASebJrWpTnEkOaTowt23VKXXN0sUeriJ+eh7y6ufb/CC5ap11pz71/cM0hUw==}
     optionalDependencies:
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
     dev: true
 
   /jsonfile/4.0.0:
     resolution: {integrity: sha512-m6F1R3z8jjlf2imQHS2Qez5sjKWQzbuuhuJ/FKYFRZvPE3PuHcSMVZzfsLhGVOkfd20obL5SWEBew5ShlquNxg==}
     optionalDependencies:
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
 
   /jsonfile/6.1.0:
     resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
     dependencies:
       universalify: 2.0.0
     optionalDependencies:
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
 
   /jsonify/0.0.1:
     resolution: {integrity: sha512-2/Ki0GcmuqSrgFyelQq9M05y7PS0mEwuIzrf3f1fPqkVDVRvZrPZtVSMHxdgo8Aq0sxAOb/cr2aqqA3LeWHVPg==}
@@ -11268,7 +11275,7 @@ packages:
       got: 12.6.0
       registry-auth-token: 5.0.2
       registry-url: 6.0.1
-      semver: 7.5.0
+      semver: 7.5.1
     dev: true
 
   /parent-module/1.0.1:
@@ -12286,7 +12293,7 @@ packages:
     engines: {node: 8.* || 10.* || >= 12}
     dependencies:
       path-root: 0.1.1
-      resolve: 1.22.1
+      resolve: 1.22.2
 
   /resolve-package-path/3.1.0:
     resolution: {integrity: sha512-2oC2EjWbMJwvSN6Z7DbDfJMnD8MYEouaLn5eIX0j8XwPsYCVIyY9bbnX88YHVkbr8XHqvZrYbxaLPibfTYKZMA==}
@@ -12571,7 +12578,7 @@ packages:
     resolution: {integrity: sha512-0Ju4+6A8iOnpL/Thra7dZsSlOHYAHIeMxfhWQRI1/VLcT3WDBZKKtQt/QkBOsiIN9ZpuvHE6cGZ0x4glCMmfiA==}
     engines: {node: '>=12'}
     dependencies:
-      semver: 7.5.0
+      semver: 7.5.1
     dev: true
 
   /semver/5.7.1:

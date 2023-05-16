@@ -10,7 +10,7 @@
   {{yield
     (hash
       Radio=(component
-        "velvet-radio"
+        (ensure-safe-component this.VelvetRadio)
         isDisabled=@isDisabled
         name=(or @name this.uniqueName)
         size=@size

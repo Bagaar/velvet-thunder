@@ -1,3 +1,6 @@
+{{! @glint-nocheck }}
+{{! Needs https://github.com/embroider-build/embroider/pull/1367 to remove `@glint-nocheck`. }}
+
 <select
   class={{-velvet/class-list
     "velvet-select"
@@ -21,7 +24,7 @@
   {{yield
     (hash
       Option=(component
-        "velvet-select/option"
+        (ensure-safe-component this.VelvetSelectOption)
         privateOnCreate=this.addOption
         privateOnDestroy=this.removeOption
         privateSelected=@selected

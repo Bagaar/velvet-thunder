@@ -1,7 +1,7 @@
 import { guidFor } from '@ember/object/internals';
 import Component from '@glimmer/component';
 import type { WithBoundArgs } from '@glint/template';
-import type VelvetCheckbox from 'velvet-thunder/components/velvet-checkbox';
+import VelvetCheckbox from 'velvet-thunder/components/velvet-checkbox';
 import type { Size } from 'velvet-thunder/components/velvet-checkbox';
 
 export type ValueAsArray = string[];
@@ -41,4 +41,5 @@ interface VelvetCheckboxGroupSignature {
 
 export default class VelvetCheckboxGroup extends Component<VelvetCheckboxGroupSignature> {
   uniqueName = guidFor(this);
+  VelvetCheckbox = VelvetCheckbox;
 }

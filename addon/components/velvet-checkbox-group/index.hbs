@@ -10,7 +10,7 @@
   {{yield
     (hash
       Checkbox=(component
-        "velvet-checkbox"
+        (ensure-safe-component this.VelvetCheckbox)
         isDisabled=@isDisabled
         size=@size
         privateGroupValue=@value

@@ -51,6 +51,7 @@
     "*.{js,ts}": "eslint"
   },
   "dependencies": {
+    "@embroider/util": "^1.10.0",
     "@floating-ui/dom": "^1.2.1",
     "@glimmer/component": "^1.1.2",
     "@glimmer/tracking": "^1.1.2",
