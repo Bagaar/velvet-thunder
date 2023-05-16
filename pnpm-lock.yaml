@@ -83,7 +83,6 @@ dependencies:
   '@floating-ui/dom': 1.2.8
   '@glimmer/component': 1.1.2_@babel+core@7.21.8
   '@glimmer/tracking': 1.1.2
-  '@glint/template': 1.0.2
   ember-auto-import: 2.6.3_webpack@5.82.1
   ember-cli-babel: 7.26.11
   ember-cli-htmlbars: 6.2.0
@@ -105,6 +104,7 @@ devDependencies:
   '@gavant/glint-template-types': 0.3.3
   '@glint/core': 1.0.2_typescript@5.0.4
   '@glint/environment-ember-loose': 1.0.2_qnq4qhucxuzlwyauob2gjlavyu
+  '@glint/template': 1.0.2
   '@percy/cli': 1.24.0
   '@percy/ember': 4.2.0
   '@release-it-plugins/lerna-changelog': 5.0.0_release-it@15.10.3
@@ -2178,6 +2178,7 @@ packages:
 
   /@glint/template/1.0.2:
     resolution: {integrity: sha512-kFWfJrS7XM0NjC5YSN0CWA9FiN0mhUvWVlQ2O7YRz/uhrO8+TVYNLst0WKELRbfCXbdI7wyYQkazNgz6FoL9CA==}
+    dev: true
 
   /@handlebars/parser/2.0.0:
     resolution: {integrity: sha512-EP9uEDZv/L5Qh9IWuMUGJRfwhXJ4h1dqKTT4/3+tY0eu7sPis7xh23j61SYUnNF4vqCQvvUXpDo9Bh/+q1zASA==}
