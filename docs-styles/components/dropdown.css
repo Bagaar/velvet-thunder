@@ -1,0 +1,5 @@
+.velvet-dropdown-content {
+  @apply bg-white dark:bg-slate-900;
+  @apply border border-slate-100 dark:border-slate-800;
+  @apply drop-shadow-md p-4 rounded w-52;
+}

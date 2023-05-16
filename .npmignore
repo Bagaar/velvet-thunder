@@ -21,13 +21,13 @@
 /.template-lintrc.js
 /.watchmanconfig
 /CONTRIBUTING.md
+/docs-styles/
 /ember-cli-build.js
 /netlify.toml
 /pnpm-debug.log
 /pnpm-lock.yaml
 /RELEASE.md
 /tailwind.config.js
-/tailwind.input.css
 /testem.js
 /tsconfig.json
 /rehype-plugins/

@@ -1,0 +1,31 @@
+.velvet-checkbox-disabled,
+.velvet-radio-disabled {
+  @apply opacity-50;
+}
+
+.velvet-checkbox-input,
+.velvet-radio-input {
+  @apply bg-transparent border-gray-400/40;
+}
+
+.velvet-checkbox-input:focus-visible,
+.velvet-radio-input:focus-visible {
+  @apply border-violet-500 outline-violet-500/40;
+}
+
+.velvet-checkbox-input:checked,
+.velvet-checkbox-input:indeterminate,
+.velvet-checkbox-input:checked:hover,
+.velvet-checkbox-input:checked:focus,
+.velvet-checkbox-input:indeterminate:hover,
+.velvet-checkbox-input:indeterminate:focus,
+.velvet-radio-input:checked,
+.velvet-radio-input:checked:hover,
+.velvet-radio-input:checked:focus {
+  @apply bg-violet-500;
+}
+
+.velvet-checkbox-input:not(:checked, :disabled, :focus-visible):hover,
+.velvet-radio-input:not(:checked, :disabled, :focus-visible):hover {
+  @apply border-gray-400/80;
+}
