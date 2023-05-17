@@ -29,8 +29,6 @@
     "lint:types": "glint",
     "lint:yml": "prettier \"./**/*.yml\" --check",
     "lint:yml:fix": "prettier \"./**/*.yml\" --write",
-    "prepack": "ember ts:precompile",
-    "postpack": "ember ts:clean",
     "prepare": "husky install",
     "start": "ember serve",
     "tailwind:build": "tailwindcss -i ./docs-styles/index.css -o ./tests/dummy/public/assets/tailwind.css --minify",
