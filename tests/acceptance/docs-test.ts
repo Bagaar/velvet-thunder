@@ -18,6 +18,7 @@ const COMPONENTS = [
   'spinner',
   'tag',
   'textarea',
+  'tooltip',
 ];
 
 module('Acceptance | docs', function (hooks) {

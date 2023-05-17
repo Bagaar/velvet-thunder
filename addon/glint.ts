@@ -15,6 +15,8 @@ import type VelvetSelectOption from 'velvet-thunder/components/velvet-select/opt
 import type VelvetSpinner from 'velvet-thunder/components/velvet-spinner';
 import type VelvetTag from 'velvet-thunder/components/velvet-tag';
 import type VelvetTextarea from 'velvet-thunder/components/velvet-textarea';
+import type VelvetTooltip from 'velvet-thunder/components/velvet-tooltip';
+import type VelvetTooltipContent from 'velvet-thunder/components/velvet-tooltip/content';
 
 // Private:
 import type VelvetClassListHelper from 'velvet-thunder/helpers/-velvet/class-list';
@@ -40,6 +42,7 @@ declare module '@glint/environment-ember-loose/registry' {
     VelvetSpinner: typeof VelvetSpinner;
     VelvetTag: typeof VelvetTag;
     VelvetTextarea: typeof VelvetTextarea;
+    VelvetTooltip: typeof VelvetTooltip;
 
     'velvet-avatar': typeof VelvetAvatar;
     'velvet-button': typeof VelvetButton;
@@ -58,6 +61,8 @@ declare module '@glint/environment-ember-loose/registry' {
     'velvet-spinner': typeof VelvetSpinner;
     'velvet-tag': typeof VelvetTag;
     'velvet-textarea': typeof VelvetTextarea;
+    'velvet-tooltip': typeof VelvetTooltip;
+    'velvet-tooltip/content': typeof VelvetTooltipContent;
 
     // Private:
     '-velvet/class-list': typeof VelvetClassListHelper;
