@@ -30,6 +30,10 @@ module('Integration | Component | velvet-dropdown', function (hooks) {
     await click('.velvet-button');
 
     assert.dom(SELECTOR_CONTENT).exists();
+
+    await click('.velvet-button');
+
+    assert.dom(SELECTOR_CONTENT).doesNotExist();
   });
 
   test('it works using the yielded `IconButton` component', async function (assert) {
@@ -45,12 +49,16 @@ module('Integration | Component | velvet-dropdown', function (hooks) {
     await click('.velvet-icon-button');
 
     assert.dom(SELECTOR_CONTENT).exists();
+
+    await click('.velvet-icon-button');
+
+    assert.dom(SELECTOR_CONTENT).doesNotExist();
   });
 
   test('it works using the yielded `trigger` and `content` modifiers', async function (assert) {
     await render(hbs`
       <VelvetDropdown as |dropdown|>
-        <button data-test-trigger type="button" {{dropdown.trigger}} />
+        <VelvetButton {{dropdown.trigger}} />
         {{#if dropdown.isShown}}
           <div data-test-content {{dropdown.content}} />
         {{/if}}
@@ -59,9 +67,13 @@ module('Integration | Component | velvet-dropdown', function (hooks) {
 
     assert.dom('[data-test-content]').doesNotExist();
 
-    await click('[data-test-trigger]');
+    await click('.velvet-button');
 
     assert.dom('[data-test-content]').exists();
+
+    await click('.velvet-button');
+
+    assert.dom('[data-test-content]').doesNotExist();
   });
 
   test('it uses the correct offset', async function (assert) {
@@ -74,7 +86,7 @@ module('Integration | Component | velvet-dropdown', function (hooks) {
 
     await click('.velvet-button');
 
-    assert.dom(SELECTOR_CONTENT).hasStyle({ top: '44px' });
+    assert.dom(SELECTOR_CONTENT).hasStyle({ top: '40px' });
 
     await render(hbs`
       <VelvetDropdown @offset={{12}} class="relative" as |dropdown|>

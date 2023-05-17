@@ -15,6 +15,7 @@ const COMPONENTS = {
   spinner: require('./components/spinner'),
   tag: require('./components/tag'),
   textarea: require('./components/textarea'),
+  tooltip: require('./components/tooltip'),
 };
 
 const DEFAULT_OPTIONS = {

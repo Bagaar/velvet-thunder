@@ -1,5 +1,5 @@
-.velvet-dropdown-content {
+.velvet-tooltip-content {
   @apply bg-white dark:bg-slate-900;
   @apply border border-slate-100 dark:border-slate-800;
-  @apply p-4 rounded w-52;
+  @apply px-2 py-1 rounded;
 }
