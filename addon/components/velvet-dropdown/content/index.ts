@@ -2,7 +2,7 @@ import templateOnlyComponent from '@ember/component/template-only';
 import type { ModifierLike } from '@glint/template';
 import type { ContentSignature } from 'velvet-thunder/components/velvet-dropdown';
 
-interface VelvetDropdownContentComponentSignature {
+interface VelvetDropdownContentSignature {
   Args: {
     isShown: boolean;
     modifier: ModifierLike<ContentSignature>;
@@ -13,4 +13,4 @@ interface VelvetDropdownContentComponentSignature {
   Element: HTMLDivElement;
 }
 
-export default templateOnlyComponent<VelvetDropdownContentComponentSignature>();
+export default templateOnlyComponent<VelvetDropdownContentSignature>();
