@@ -71,7 +71,7 @@ export default class VelvetDropdown extends Component<VelvetDropdownSignature> {
   get offset(): number {
     const { offset } = this.args;
 
-    return typeof offset === 'number' ? offset : 8;
+    return typeof offset === 'number' ? offset : 4;
   }
 
   get placement(): Placement {
