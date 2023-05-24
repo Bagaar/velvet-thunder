@@ -3,6 +3,11 @@ lockfileVersion: 5.4
 overrides:
   '@types/eslint': ^8.0.0
 
+patchedDependencies:
+  '@embroider/util@1.11.0':
+    hash: rhs7dhh2ihodt53hdn4mbklkoi
+    path: patches/@embroider__util@1.11.0.patch
+
 specifiers:
   '@babel/core': ^7.21.8
   '@babel/generator': ^7.21.9
@@ -81,7 +86,7 @@ specifiers:
   webpack: ^5.83.1
 
 dependencies:
-  '@embroider/util': 1.11.0_dhohuq5rs67wid75mhxyfyb5zy
+  '@embroider/util': 1.11.0_rhs7dhh2ihodt53hdn4mbklkoi_dhohuq5rs67wid75mhxyfyb5zy
   '@floating-ui/dom': 1.2.8
   '@glimmer/component': 1.1.2_@babel+core@7.21.8
   '@glimmer/tracking': 1.1.2
@@ -1875,7 +1880,7 @@ packages:
     dependencies:
       '@ember/test-waiters': 3.0.2
       '@embroider/macros': 1.10.0
-      '@embroider/util': 1.11.0_dhohuq5rs67wid75mhxyfyb5zy
+      '@embroider/util': 1.11.0_rhs7dhh2ihodt53hdn4mbklkoi_dhohuq5rs67wid75mhxyfyb5zy
       broccoli-debug: 0.6.5
       broccoli-funnel: 3.0.8
       ember-cli-babel: 7.26.11
@@ -1992,7 +1997,7 @@ packages:
       resolve: 1.22.2
     dev: true
 
-  /@embroider/util/1.11.0_dhohuq5rs67wid75mhxyfyb5zy:
+  /@embroider/util/1.11.0_rhs7dhh2ihodt53hdn4mbklkoi_dhohuq5rs67wid75mhxyfyb5zy:
     resolution: {integrity: sha512-v6Jdjl87jzsAtYgU/xkx+7CykoC06E6qd3j8ULe8jC8hVXKkjWR7Nks5D5V970/fravGd/FMOT3tVIF3Dj5yaw==}
     engines: {node: 14.* || >= 16}
     peerDependencies:
@@ -2013,6 +2018,7 @@ packages:
       ember-source: 4.12.0_etzesmei3syxvk2ktwvwnqcnyy
     transitivePeerDependencies:
       - supports-color
+    patched: true
 
   /@eslint-community/eslint-utils/4.4.0_eslint@8.41.0:
     resolution: {integrity: sha512-1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA==}
@@ -9277,14 +9283,14 @@ packages:
   /jsonfile/4.0.0:
     resolution: {integrity: sha512-m6F1R3z8jjlf2imQHS2Qez5sjKWQzbuuhuJ/FKYFRZvPE3PuHcSMVZzfsLhGVOkfd20obL5SWEBew5ShlquNxg==}
     optionalDependencies:
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
 
   /jsonfile/6.1.0:
     resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
     dependencies:
       universalify: 2.0.0
     optionalDependencies:
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
 
   /jsonify/0.0.1:
     resolution: {integrity: sha512-2/Ki0GcmuqSrgFyelQq9M05y7PS0mEwuIzrf3f1fPqkVDVRvZrPZtVSMHxdgo8Aq0sxAOb/cr2aqqA3LeWHVPg==}

@@ -157,6 +157,9 @@
     },
     "overridesMeta": {
       "@types/eslint": "https://github.com/lint-todo/utils/pull/532"
+    },
+    "patchedDependencies": {
+      "@embroider/util@1.11.0": "patches/@embroider__util@1.11.0.patch"
     }
   },
   "release-it": {
