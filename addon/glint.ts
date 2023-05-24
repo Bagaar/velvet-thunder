@@ -22,11 +22,11 @@ import type VelvetTooltipContent from 'velvet-thunder/components/velvet-tooltip/
 import type VelvetClassListHelper from 'velvet-thunder/helpers/-velvet/class-list';
 
 // Dependencies:
-import type { EnsureSafeComponentHelper } from '@embroider/util';
+import type { EmbroiderUtilRegistry } from '@embroider/util';
 import type OrHelper from 'ember-truth-helpers/helpers/or';
 
 declare module '@glint/environment-ember-loose/registry' {
-  export default interface Registry {
+  export default interface Registry extends EmbroiderUtilRegistry {
     VelvetAvatar: typeof VelvetAvatar;
     VelvetButton: typeof VelvetButton;
     VelvetCheckbox: typeof VelvetCheckbox;
@@ -68,7 +68,6 @@ declare module '@glint/environment-ember-loose/registry' {
     '-velvet/class-list': typeof VelvetClassListHelper;
 
     // Dependencies:
-    'ensure-safe-component': typeof EnsureSafeComponentHelper;
     or: typeof OrHelper;
   }
 }
