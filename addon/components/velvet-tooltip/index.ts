@@ -1,5 +1,6 @@
 import { assert } from '@ember/debug';
 import { action } from '@ember/object';
+import { waitFor } from '@ember/test-waiters';
 import {
   autoUpdate,
   computePosition,
@@ -20,6 +21,8 @@ interface VelvetTooltipSignature {
     offset?: number;
     /// Placement of the content relative to the trigger.
     placement?: Placement;
+    /// Delay in milliseconds before showing the tooltip.
+    showDelay?: number;
     /// CSS position of the content.
     strategy?: Strategy;
   };
@@ -53,6 +56,7 @@ export interface TriggerSignature {
 export default class VelvetTooltip extends Component<VelvetTooltipSignature> {
   @tracked isShown = false;
 
+  showTimeout: number | undefined = undefined;
   triggerElement: HTMLElement | null = null;
   VelvetTooltipContent = VelvetTooltipContent;
 
@@ -64,6 +68,12 @@ export default class VelvetTooltip extends Component<VelvetTooltipSignature> {
 
   get placement(): Placement {
     return this.args.placement || 'top';
+  }
+
+  get showDelay(): number {
+    const { showDelay } = this.args;
+
+    return typeof showDelay === 'number' ? showDelay : 400;
   }
 
   get strategy(): Strategy {
@@ -115,16 +125,31 @@ export default class VelvetTooltip extends Component<VelvetTooltipSignature> {
 
   @action
   hide() {
+    clearTimeout(this.showTimeout);
+
     this.isShown = false;
   }
 
   @action
+  @waitFor
   show() {
-    this.isShown = true;
+    clearTimeout(this.showTimeout);
+
+    return new Promise<void>((resolve) => {
+      this.showTimeout = setTimeout(() => {
+        this.isShown = true;
+
+        resolve();
+      }, this.showDelay);
+    });
   }
 
   @action
   toggle() {
-    this.isShown = !this.isShown;
+    if (this.isShown) {
+      this.hide();
+    } else {
+      this.show();
+    }
   }
 }

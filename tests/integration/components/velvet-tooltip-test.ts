@@ -11,7 +11,7 @@ module('Integration | Component | velvet-tooltip', function (hooks) {
 
   test('it renders the correct base class', async function (assert) {
     await render(hbs`
-      <VelvetTooltip />
+      <VelvetTooltip @showDelay={{0}} />
     `);
 
     assert.dom(SELECTOR).exists();
@@ -19,7 +19,7 @@ module('Integration | Component | velvet-tooltip', function (hooks) {
 
   test('it works using the yielded `trigger` and `content` modifiers', async function (assert) {
     await render(hbs`
-      <VelvetTooltip as |tooltip|>
+      <VelvetTooltip @showDelay={{0}} as |tooltip|>
         <VelvetButton {{tooltip.trigger}} />
         {{#if tooltip.isShown}}
           <div data-test-content {{tooltip.content}} />
@@ -40,7 +40,7 @@ module('Integration | Component | velvet-tooltip', function (hooks) {
 
   test('it uses the correct offset', async function (assert) {
     await render(hbs`
-      <VelvetTooltip class="relative" as |tooltip|>
+      <VelvetTooltip @showDelay={{0}} class="relative" as |tooltip|>
         <VelvetButton {{tooltip.trigger}} />
         <tooltip.Content />
       </VelvetTooltip>
@@ -51,7 +51,7 @@ module('Integration | Component | velvet-tooltip', function (hooks) {
     assert.dom(SELECTOR_CONTENT).hasStyle({ top: '40px' });
 
     await render(hbs`
-      <VelvetTooltip @offset={{12}} class="relative" as |tooltip|>
+      <VelvetTooltip @offset={{12}} @showDelay={{0}} class="relative" as |tooltip|>
         <VelvetButton {{tooltip.trigger}} />
         <tooltip.Content />
       </VelvetTooltip>
@@ -65,7 +65,7 @@ module('Integration | Component | velvet-tooltip', function (hooks) {
   test('it uses the correct placement', async function (assert) {
     await render(hbs`
       {{! template-lint-disable no-inline-styles }}
-      <VelvetTooltip class="relative" as |tooltip|>
+      <VelvetTooltip @showDelay={{0}} class="relative" as |tooltip|>
         <VelvetButton style="margin-left: 200px; width: 120px;" {{tooltip.trigger}} />
         <tooltip.Content style="width: 240px;" />
       </VelvetTooltip>
@@ -77,7 +77,7 @@ module('Integration | Component | velvet-tooltip', function (hooks) {
 
     await render(hbs`
       {{! template-lint-disable no-inline-styles }}
-      <VelvetTooltip @placement="top-end" class="relative" as |tooltip|>
+      <VelvetTooltip @placement="top-end" @showDelay={{0}} class="relative" as |tooltip|>
         <VelvetButton style="margin-left: 200px; width: 120px;" {{tooltip.trigger}} />
         <tooltip.Content style="width: 240px;" />
       </VelvetTooltip>
@@ -90,7 +90,7 @@ module('Integration | Component | velvet-tooltip', function (hooks) {
 
   test('it uses the correct strategy', async function (assert) {
     await render(hbs`
-      <VelvetTooltip as |tooltip|>
+      <VelvetTooltip @showDelay={{0}} as |tooltip|>
         <VelvetButton {{tooltip.trigger}} />
         <tooltip.Content />
       </VelvetTooltip>
@@ -101,7 +101,7 @@ module('Integration | Component | velvet-tooltip', function (hooks) {
     assert.dom(SELECTOR_CONTENT).hasStyle({ position: 'absolute' });
 
     await render(hbs`
-      <VelvetTooltip @strategy="fixed" as |tooltip|>
+      <VelvetTooltip @showDelay={{0}} @strategy="fixed" as |tooltip|>
         <VelvetButton {{tooltip.trigger}} />
         <tooltip.Content />
       </VelvetTooltip>
@@ -112,9 +112,37 @@ module('Integration | Component | velvet-tooltip', function (hooks) {
     assert.dom(SELECTOR_CONTENT).hasStyle({ position: 'fixed' });
   });
 
+  test('it uses the correct show delay', async function (assert) {
+    await render(hbs`
+      <VelvetTooltip as |tooltip|>
+        <VelvetButton {{tooltip.trigger}} />
+        <tooltip.Content />
+      </VelvetTooltip>
+    `);
+
+    let startTime = Date.now();
+
+    await triggerEvent('.velvet-button', 'mouseenter');
+
+    assert.true(Date.now() - startTime > 400);
+
+    await render(hbs`
+      <VelvetTooltip @showDelay={{0}} as |tooltip|>
+        <VelvetButton {{tooltip.trigger}} />
+        <tooltip.Content />
+      </VelvetTooltip>
+    `);
+
+    startTime = Date.now();
+
+    await triggerEvent('.velvet-button', 'mouseenter');
+
+    assert.true(Date.now() - startTime < 100);
+  });
+
   test('`...attributes` works', async function (assert) {
     await render(hbs`
-      <VelvetTooltip class="mr-2" />
+      <VelvetTooltip @showDelay={{0}} class="mr-2" />
     `);
 
     assert.dom(SELECTOR).hasClass('mr-2');

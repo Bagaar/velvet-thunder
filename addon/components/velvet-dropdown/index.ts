@@ -157,6 +157,10 @@ export default class VelvetDropdown extends Component<VelvetDropdownSignature> {
 
   @action
   toggle() {
-    this.isShown = !this.isShown;
+    if (this.isShown) {
+      this.hide();
+    } else {
+      this.show();
+    }
   }
 }

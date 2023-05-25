@@ -19,6 +19,7 @@ specifiers:
   '@ember/optional-features': ^2.0.0
   '@ember/string': ^3.1.1
   '@ember/test-helpers': ^2.9.3
+  '@ember/test-waiters': ^3.0.2
   '@embroider/test-setup': ^3.0.1
   '@embroider/util': ^1.11.0
   '@floating-ui/dom': ^1.2.1
@@ -86,6 +87,7 @@ specifiers:
   webpack: ^5.83.1
 
 dependencies:
+  '@ember/test-waiters': 3.0.2
   '@embroider/util': 1.11.0_rhs7dhh2ihodt53hdn4mbklkoi_dhohuq5rs67wid75mhxyfyb5zy
   '@floating-ui/dom': 1.2.8
   '@glimmer/component': 1.1.2_@babel+core@7.21.8
@@ -1904,7 +1906,6 @@ packages:
       semver: 7.5.1
     transitivePeerDependencies:
       - supports-color
-    dev: true
 
   /@embroider/addon-shim/1.8.4:
     resolution: {integrity: sha512-sFhfWC0vI18KxVenmswQ/ShIvBg4juL8ubI+Q3NTSdkCTeaPQ/DIOUF6oR5DCQ8eO/TkIaw+kdG3FkTY6yNJqA==}
@@ -11276,7 +11277,7 @@ packages:
       got: 12.6.0
       registry-auth-token: 5.0.2
       registry-url: 6.0.1
-      semver: 7.5.0
+      semver: 7.5.1
     dev: true
 
   /parent-module/1.0.1:
@@ -12573,7 +12574,7 @@ packages:
     resolution: {integrity: sha512-0Ju4+6A8iOnpL/Thra7dZsSlOHYAHIeMxfhWQRI1/VLcT3WDBZKKtQt/QkBOsiIN9ZpuvHE6cGZ0x4glCMmfiA==}
     engines: {node: '>=12'}
     dependencies:
-      semver: 7.5.0
+      semver: 7.5.1
     dev: true
 
   /semver/5.7.1:
