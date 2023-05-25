@@ -49,6 +49,7 @@
     "*.{js,ts}": "eslint"
   },
   "dependencies": {
+    "@ember/test-waiters": "^3.0.2",
     "@embroider/util": "^1.11.0",
     "@floating-ui/dom": "^1.2.1",
     "@glimmer/component": "^1.1.2",

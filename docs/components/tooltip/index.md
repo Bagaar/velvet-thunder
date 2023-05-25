@@ -73,6 +73,33 @@ Uses [Floating UI](https://floating-ui.com/) underneath.
 </DemoSpaceX>
 ```
 
+## Show Delay
+
+```hbs preview-template
+<DemoSpaceX>
+  <VelvetTooltip @showDelay={{0}} as |tooltip|>
+    <VelvetTag {{tooltip.trigger}}>0 MilliSeconds</VelvetTag>
+    <tooltip.Content>
+      Lorem ipsum.
+    </tooltip.Content>
+  </VelvetTooltip>
+
+  <VelvetTooltip @showDelay={{400}} as |tooltip|>
+    <VelvetTag {{tooltip.trigger}}>400 MilliSeconds</VelvetTag>
+    <tooltip.Content>
+      Lorem ipsum.
+    </tooltip.Content>
+  </VelvetTooltip>
+
+  <VelvetTooltip @showDelay={{800}} as |tooltip|>
+    <VelvetTag {{tooltip.trigger}}>800 MilliSeconds</VelvetTag>
+    <tooltip.Content>
+      Lorem ipsum.
+    </tooltip.Content>
+  </VelvetTooltip>
+</DemoSpaceX>
+```
+
 ## Arguments
 
 <!-- args-table: velvet-tooltip -->
