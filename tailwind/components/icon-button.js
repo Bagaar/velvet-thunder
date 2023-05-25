@@ -7,7 +7,7 @@ module.exports = () => ({
     '@apply rounded-md transition': {},
 
     '&:focus-visible': {
-      '@apply outline outline-2 outline-offset-1': {},
+      '@apply velvet-outline': {},
     },
 
     '&:disabled': {

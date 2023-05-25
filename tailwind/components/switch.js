@@ -52,7 +52,7 @@ module.exports = () => ({
       '@apply sr-only': {},
 
       '&:focus-visible + .velvet-switch-track': {
-        '@apply outline outline-2 outline-offset-1': {},
+        '@apply velvet-outline': {},
       },
 
       '&:checked + .velvet-switch-track .velvet-switch-handle': {

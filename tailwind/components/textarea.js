@@ -5,7 +5,7 @@ module.exports = () => ({
     '@apply rounded-md text-sm transition w-full': {},
 
     '&:focus': {
-      '@apply outline outline-2 outline-offset-0 ring-0': {},
+      '@apply ring-0 velvet-outline-offset-0': {},
     },
 
     '&:disabled': {

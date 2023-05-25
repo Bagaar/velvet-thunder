@@ -19,6 +19,10 @@ const COMPONENTS = {
   tooltip: require('./components/tooltip'),
 };
 
+const UTILITIES = {
+  ...require('./utilities/outline'),
+};
+
 const DEFAULT_OPTIONS = {
   components: {},
 };
@@ -34,7 +38,7 @@ module.exports = tailwindPlugin.withOptions(
       return options.components[component] !== false;
     });
 
-    return ({ addComponents, config, theme }) => {
+    return ({ addComponents, addUtilities, config, theme }) => {
       addComponents(
         components.map((component) =>
           COMPONENTS[component]({
@@ -44,6 +48,8 @@ module.exports = tailwindPlugin.withOptions(
           })
         )
       );
+
+      addUtilities(UTILITIES);
     };
   },
   () => ({

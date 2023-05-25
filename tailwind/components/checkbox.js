@@ -36,7 +36,7 @@ module.exports = () => ({
       '@apply border-2 rounded transition': {},
 
       '&:focus': {
-        '@apply outline outline-2 outline-offset-1 ring-0 ring-offset-0': {},
+        '@apply ring-0 ring-offset-0 velvet-outline': {},
       },
 
       '&:disabled': {
