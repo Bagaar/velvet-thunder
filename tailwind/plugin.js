@@ -13,6 +13,7 @@ const COMPONENTS = {
   radio: require('./components/radio'),
   select: require('./components/select'),
   spinner: require('./components/spinner'),
+  switch: require('./components/switch'),
   tag: require('./components/tag'),
   textarea: require('./components/textarea'),
   tooltip: require('./components/tooltip'),
