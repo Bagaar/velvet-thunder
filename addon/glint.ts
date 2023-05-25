@@ -13,6 +13,7 @@ import type VelvetRadioGroup from 'velvet-thunder/components/velvet-radio-group'
 import type VelvetSelect from 'velvet-thunder/components/velvet-select';
 import type VelvetSelectOption from 'velvet-thunder/components/velvet-select/option';
 import type VelvetSpinner from 'velvet-thunder/components/velvet-spinner';
+import type VelvetSwitch from 'velvet-thunder/components/velvet-switch';
 import type VelvetTag from 'velvet-thunder/components/velvet-tag';
 import type VelvetTextarea from 'velvet-thunder/components/velvet-textarea';
 import type VelvetTooltip from 'velvet-thunder/components/velvet-tooltip';
@@ -40,6 +41,7 @@ declare module '@glint/environment-ember-loose/registry' {
     VelvetRadioGroup: typeof VelvetRadioGroup;
     VelvetSelect: typeof VelvetSelect;
     VelvetSpinner: typeof VelvetSpinner;
+    VelvetSwitch: typeof VelvetSwitch;
     VelvetTag: typeof VelvetTag;
     VelvetTextarea: typeof VelvetTextarea;
     VelvetTooltip: typeof VelvetTooltip;
@@ -59,6 +61,7 @@ declare module '@glint/environment-ember-loose/registry' {
     'velvet-select': typeof VelvetSelect;
     'velvet-select/option': typeof VelvetSelectOption;
     'velvet-spinner': typeof VelvetSpinner;
+    'velvet-switch': typeof VelvetSwitch;
     'velvet-tag': typeof VelvetTag;
     'velvet-textarea': typeof VelvetTextarea;
     'velvet-tooltip': typeof VelvetTooltip;

@@ -16,6 +16,7 @@ const COMPONENTS = [
   'radio-group',
   'select',
   'spinner',
+  'switch',
   'tag',
   'textarea',
   'tooltip',

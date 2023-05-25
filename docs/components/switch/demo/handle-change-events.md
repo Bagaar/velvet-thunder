@@ -5,9 +5,9 @@ Use the `@onChange` argument to handle `change` events.
 ```hbs template
 <DemoSpaceY>
   <div>Checked: {{this.isChecked}}</div>
-  <VelvetCheckbox @isChecked={{this.isChecked}} @onChange={{this.onChange}}>
+  <VelvetSwitch @isChecked={{this.isChecked}} @onChange={{this.onChange}}>
     Option
-  </VelvetCheckbox>
+  </VelvetSwitch>
 </DemoSpaceY>
 ```
 

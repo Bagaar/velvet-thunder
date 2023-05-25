@@ -25,7 +25,12 @@
   @apply bg-violet-500;
 }
 
-.velvet-checkbox-input:not(:checked, :disabled, :focus-visible):hover,
+.velvet-checkbox-input:not(
+    :checked,
+    :disabled,
+    :focus-visible,
+    :indeterminate
+  ):hover,
 .velvet-radio-input:not(:checked, :disabled, :focus-visible):hover {
   @apply border-gray-400/80;
 }
