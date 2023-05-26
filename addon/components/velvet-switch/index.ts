@@ -1,4 +1,3 @@
-import { action } from '@ember/object';
 import Component from '@glimmer/component';
 
 interface VelvetSwitchSignature {
@@ -21,8 +20,7 @@ interface VelvetSwitchSignature {
 }
 
 export default class VelvetSwitch extends Component<VelvetSwitchSignature> {
-  @action
-  changeHandler(event: Event) {
+  changeHandler = (event: Event) => {
     const { isDisabled, onChange } = this.args;
 
     if (typeof onChange !== 'function' || isDisabled === true) {
@@ -30,5 +28,5 @@ export default class VelvetSwitch extends Component<VelvetSwitchSignature> {
     }
 
     onChange((event.target as HTMLInputElement).checked, event);
-  }
+  };
 }

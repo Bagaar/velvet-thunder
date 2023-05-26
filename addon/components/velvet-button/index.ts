@@ -1,4 +1,3 @@
-import { action } from '@ember/object';
 import Component from '@glimmer/component';
 import type { ModifierLike } from '@glint/template';
 import type { TriggerSignature } from 'velvet-thunder/components/velvet-dropdown';
@@ -33,8 +32,7 @@ interface VelvetButtonSignature {
 }
 
 export default class VelvetButton extends Component<VelvetButtonSignature> {
-  @action
-  clickHandler(event: MouseEvent) {
+  clickHandler = (event: MouseEvent) => {
     const { isDisabled, onClick } = this.args;
 
     if (typeof onClick !== 'function' || isDisabled === true) {
@@ -42,5 +40,5 @@ export default class VelvetButton extends Component<VelvetButtonSignature> {
     }
 
     onClick(event);
-  }
+  };
 }

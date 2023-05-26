@@ -1,5 +1,4 @@
 import { assert } from '@ember/debug';
-import { action } from '@ember/object';
 import {
   autoUpdate,
   computePosition,
@@ -145,22 +144,19 @@ export default class VelvetDropdown extends Component<VelvetDropdownSignature> {
     return () => triggerElement.removeEventListener('click', this.toggle);
   });
 
-  @action
-  hide() {
+  hide = () => {
     this.isShown = false;
-  }
+  };
 
-  @action
-  show() {
+  show = () => {
     this.isShown = true;
-  }
+  };
 
-  @action
-  toggle() {
+  toggle = () => {
     if (this.isShown) {
       this.hide();
     } else {
       this.show();
     }
-  }
+  };
 }

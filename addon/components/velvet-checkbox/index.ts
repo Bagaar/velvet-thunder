@@ -1,4 +1,3 @@
-import { action } from '@ember/object';
 import Component from '@glimmer/component';
 import type {
   Value as GroupValue,
@@ -53,8 +52,7 @@ export default class VelvetCheckbox extends Component<VelvetCheckboxSignature> {
     return this.groupValueAsArray.includes(name);
   }
 
-  @action
-  changeHandler(event: Event) {
+  changeHandler = (event: Event) => {
     if (this.args.isDisabled === true) {
       return;
     }
@@ -80,5 +78,5 @@ export default class VelvetCheckbox extends Component<VelvetCheckboxSignature> {
     } else if (typeof onChange === 'function') {
       onChange(checked, event);
     }
-  }
+  };
 }

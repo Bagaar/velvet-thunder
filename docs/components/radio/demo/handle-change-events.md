@@ -12,16 +12,14 @@ Use the `@onChange` argument to handle `change` events.
 ```
 
 ```js component
-import { action } from "@ember/object";
 import Component from "@glimmer/component";
 import { tracked } from "@glimmer/tracking";
 
 export default class Demo extends Component {
   @tracked isChecked = false;
 
-  @action
-  onChange(isChecked) {
+  onChange = (isChecked) => {
     this.isChecked = isChecked;
-  }
+  };
 }
 ```

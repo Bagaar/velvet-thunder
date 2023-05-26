@@ -1,5 +1,4 @@
 import Controller from '@ember/controller';
-import { action } from '@ember/object';
 
 const DARK_MODE_CLASS = 'dark';
 const HTML = document.querySelector('html');
@@ -9,8 +8,7 @@ const THEME = {
 };
 
 export default class DocsController extends Controller {
-  @action
-  toggleDarkMode() {
+  toggleDarkMode = () => {
     if (HTML === null) {
       return;
     }
@@ -22,5 +20,5 @@ export default class DocsController extends Controller {
       localStorage.setItem('theme', THEME.DARK);
       HTML.classList.add(DARK_MODE_CLASS);
     }
-  }
+  };
 }

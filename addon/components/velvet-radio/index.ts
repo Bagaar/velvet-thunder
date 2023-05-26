@@ -1,4 +1,3 @@
-import { action } from '@ember/object';
 import Component from '@glimmer/component';
 
 export type Size = 'sm' | 'md' | 'lg';
@@ -41,8 +40,7 @@ export default class VelvetRadio extends Component<VelvetRadioSignature> {
     return value === undefined ? undefined : String(value);
   }
 
-  @action
-  changeHandler(event: Event) {
+  changeHandler = (event: Event) => {
     if (this.args.isDisabled === true) {
       return;
     }
@@ -54,5 +52,5 @@ export default class VelvetRadio extends Component<VelvetRadioSignature> {
     } else if (typeof onChange === 'function') {
       onChange((event.target as HTMLInputElement).checked, event);
     }
-  }
+  };
 }

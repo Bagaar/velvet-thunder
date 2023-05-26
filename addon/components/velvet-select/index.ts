@@ -1,4 +1,3 @@
-import { action } from '@ember/object';
 import Component from '@glimmer/component';
 import type { WithBoundArgs } from '@glint/template';
 import VelvetSelectOption from 'velvet-thunder/components/velvet-select/option';
@@ -47,8 +46,7 @@ export default class VelvetSelect extends Component<VelvetSelectSignature> {
     return Boolean(this.args.placeholder) && this.hasSelection === false;
   }
 
-  @action
-  changeHandler(event: Event) {
+  changeHandler = (event: Event) => {
     const { isDisabled, onChange } = this.args;
 
     if (typeof onChange !== 'function' || isDisabled === true) {
@@ -59,15 +57,13 @@ export default class VelvetSelect extends Component<VelvetSelectSignature> {
       this.options.get((event.target as HTMLSelectElement).value),
       event
     );
-  }
+  };
 
-  @action
-  addOption(id: string, value: unknown) {
+  addOption = (id: string, value: unknown) => {
     this.options.set(id, value);
-  }
+  };
 
-  @action
-  removeOption(id: string) {
+  removeOption = (id: string) => {
     this.options.delete(id);
-  }
+  };
 }

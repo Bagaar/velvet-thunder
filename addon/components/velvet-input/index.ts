@@ -1,4 +1,3 @@
-import { action } from '@ember/object';
 import Component from '@glimmer/component';
 
 interface VelvetInputSignature {
@@ -28,8 +27,7 @@ interface VelvetInputSignature {
 }
 
 export default class VelvetInput extends Component<VelvetInputSignature> {
-  @action
-  changeHandler(event: Event) {
+  changeHandler = (event: Event) => {
     const { isDisabled, onChange } = this.args;
 
     if (typeof onChange !== 'function' || isDisabled === true) {
@@ -37,10 +35,9 @@ export default class VelvetInput extends Component<VelvetInputSignature> {
     }
 
     onChange((event.target as HTMLInputElement).value, event);
-  }
+  };
 
-  @action
-  inputHandler(event: Event) {
+  inputHandler = (event: Event) => {
     const { isDisabled, onInput } = this.args;
 
     if (typeof onInput !== 'function' || isDisabled === true) {
@@ -48,5 +45,5 @@ export default class VelvetInput extends Component<VelvetInputSignature> {
     }
 
     onInput((event.target as HTMLInputElement).value, event);
-  }
+  };
 }

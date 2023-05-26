@@ -1,6 +1,5 @@
 import { assert } from '@ember/debug';
-import { action } from '@ember/object';
-import { waitFor } from '@ember/test-waiters';
+import { waitForPromise } from '@ember/test-waiters';
 import {
   autoUpdate,
   computePosition,
@@ -123,33 +122,31 @@ export default class VelvetTooltip extends Component<VelvetTooltipSignature> {
     };
   });
 
-  @action
-  hide() {
+  hide = () => {
     clearTimeout(this.showTimeout);
 
     this.isShown = false;
-  }
+  };
 
-  @action
-  @waitFor
-  show() {
+  show = () => {
     clearTimeout(this.showTimeout);
 
-    return new Promise<void>((resolve) => {
-      this.showTimeout = setTimeout(() => {
-        this.isShown = true;
+    return waitForPromise(
+      new Promise<void>((resolve) => {
+        this.showTimeout = setTimeout(() => {
+          this.isShown = true;
 
-        resolve();
-      }, this.showDelay);
-    });
-  }
+          resolve();
+        }, this.showDelay);
+      })
+    );
+  };
 
-  @action
-  toggle() {
+  toggle = () => {
     if (this.isShown) {
       this.hide();
     } else {
       this.show();
     }
-  }
+  };
 }

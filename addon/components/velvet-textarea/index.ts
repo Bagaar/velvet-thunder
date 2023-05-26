@@ -1,4 +1,3 @@
-import { action } from '@ember/object';
 import Component from '@glimmer/component';
 
 interface VelvetTextareaSignature {
@@ -24,8 +23,7 @@ interface VelvetTextareaSignature {
 }
 
 export default class VelvetTextarea extends Component<VelvetTextareaSignature> {
-  @action
-  changeHandler(event: Event) {
+  changeHandler = (event: Event) => {
     const { isDisabled, onChange } = this.args;
 
     if (typeof onChange !== 'function' || isDisabled === true) {
@@ -33,10 +31,9 @@ export default class VelvetTextarea extends Component<VelvetTextareaSignature> {
     }
 
     onChange((event.target as HTMLTextAreaElement).value, event);
-  }
+  };
 
-  @action
-  inputHandler(event: Event) {
+  inputHandler = (event: Event) => {
     const { isDisabled, onInput } = this.args;
 
     if (typeof onInput !== 'function' || isDisabled === true) {
@@ -44,5 +41,5 @@ export default class VelvetTextarea extends Component<VelvetTextareaSignature> {
     }
 
     onInput((event.target as HTMLTextAreaElement).value, event);
-  }
+  };
 }
