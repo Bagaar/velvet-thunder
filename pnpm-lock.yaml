@@ -22,7 +22,7 @@ specifiers:
   '@ember/test-waiters': ^3.0.2
   '@embroider/test-setup': ^3.0.1
   '@embroider/util': ^1.11.0
-  '@floating-ui/dom': ^1.2.1
+  '@floating-ui/dom': ^1.4.4
   '@gavant/glint-template-types': ^0.3.3
   '@glimmer/component': ^1.1.2
   '@glimmer/tracking': ^1.1.2
@@ -89,7 +89,7 @@ specifiers:
 dependencies:
   '@ember/test-waiters': 3.0.2
   '@embroider/util': 1.11.0_rhs7dhh2ihodt53hdn4mbklkoi_dhohuq5rs67wid75mhxyfyb5zy
-  '@floating-ui/dom': 1.2.8
+  '@floating-ui/dom': 1.4.4
   '@glimmer/component': 1.1.2_@babel+core@7.21.8
   '@glimmer/tracking': 1.1.2
   ember-auto-import: 2.6.3_webpack@5.83.1
@@ -2058,14 +2058,14 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@floating-ui/core/1.2.6:
-    resolution: {integrity: sha512-EvYTiXet5XqweYGClEmpu3BoxmsQ4hkj3QaYA6qEnigCWffTP3vNRwBReTdrwDwo7OoJ3wM8Uoe9Uk4n+d4hfg==}
+  /@floating-ui/core/1.3.1:
+    resolution: {integrity: sha512-Bu+AMaXNjrpjh41znzHqaz3r2Nr8hHuHZT6V2LBKMhyMl0FgKA62PNYbqnfgmzOhoWZj70Zecisbo4H1rotP5g==}
     dev: false
 
-  /@floating-ui/dom/1.2.8:
-    resolution: {integrity: sha512-XLwhYV90MxiHDq6S0rzFZj00fnDM+A1R9jhSioZoMsa7G0Q0i+Q4x40ajR8FHSdYDE1bgjG45mIWe6jtv9UPmg==}
+  /@floating-ui/dom/1.4.4:
+    resolution: {integrity: sha512-21hhDEPOiWkGp0Ys4Wi6Neriah7HweToKra626CIK712B5m9qkdz54OP9gVldUg+URnBTpv/j/bi/skmGdstXQ==}
     dependencies:
-      '@floating-ui/core': 1.2.6
+      '@floating-ui/core': 1.3.1
     dev: false
 
   /@gar/promisify/1.1.3:
