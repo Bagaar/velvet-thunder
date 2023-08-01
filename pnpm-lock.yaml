@@ -69,9 +69,6 @@ devDependencies:
   '@ember/optional-features':
     specifier: ^2.0.0
     version: 2.0.0
-  '@ember/string':
-    specifier: ^3.1.1
-    version: 3.1.1
   '@ember/test-helpers':
     specifier: ^3.2.0
     version: 3.2.0(@glint/template@1.0.2)(ember-source@4.12.0)(webpack@5.88.2)
@@ -151,8 +148,8 @@ devDependencies:
     specifier: ^7.0.0
     version: 7.0.0(@ember/test-helpers@3.2.0)(ember-source@4.12.0)(qunit@2.19.4)(webpack@5.88.2)
   ember-resolver:
-    specifier: ^10.1.0
-    version: 10.1.0(@ember/string@3.1.1)(ember-source@4.12.0)
+    specifier: ^11.0.0
+    version: 11.0.0(ember-source@4.12.0)
   ember-source:
     specifier: ~4.12.0
     version: 4.12.0(@babel/core@7.22.9)(@glimmer/component@1.1.2)(webpack@5.88.2)
@@ -1929,15 +1926,6 @@ packages:
       inquirer: 7.3.3
       mkdirp: 1.0.4
       silent-error: 1.1.1
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@ember/string@3.1.1:
-    resolution: {integrity: sha512-UbXJ+k3QOrYN4SRPHgXCqYIJ+yWWUg1+vr0H4DhdQPTy8LJfyqwZ2tc5uqpSSnEXE+/1KopHBE5J8GDagAg5cg==}
-    engines: {node: 12.* || 14.* || >= 16}
-    dependencies:
-      ember-cli-babel: 7.26.11
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -6485,17 +6473,15 @@ packages:
       - webpack
     dev: true
 
-  /ember-resolver@10.1.0(@ember/string@3.1.1)(ember-source@4.12.0):
-    resolution: {integrity: sha512-Ju/ORUUbGnR83AgC3qV6fIVuM5tyi/nPRf9ggTM2+kdeGPLNTSkNZ0zSbjWEm0kerDezMjj/RoGuLvZl/L758w==}
+  /ember-resolver@11.0.0(ember-source@4.12.0):
+    resolution: {integrity: sha512-TOc685OnGEMMNEt04BukmQHOYVXnRJc+sGZij/vzWdxXRq+Wpsu1Nw2nLFo6fbMqqVLATk5oLKAQ1eKQwte2wQ==}
     engines: {node: 14.* || 16.* || >= 18}
     peerDependencies:
-      '@ember/string': ^3.0.1
-      ember-source: ^4.8.3
+      ember-source: ^4.8.3 || >= 5.0.0
     peerDependenciesMeta:
       ember-source:
         optional: true
     dependencies:
-      '@ember/string': 3.1.1
       ember-cli-babel: 7.26.11
       ember-source: 4.12.0(@babel/core@7.22.9)(@glimmer/component@1.1.2)(webpack@5.88.2)
     transitivePeerDependencies:
