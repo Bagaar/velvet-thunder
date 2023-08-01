@@ -23,7 +23,7 @@ jobs:
           node-version: 18.x
       - uses: pnpm/action-setup@v2
         with:
-          version: 7
+          version: 8
       - name: Install Dependencies
         run: pnpm install
       - name: Lint
@@ -51,7 +51,7 @@ jobs:
           node-version: 18.x
       - uses: pnpm/action-setup@v2
         with:
-          version: 7
+          version: 8
       - name: Install Dependencies
         run: pnpm install --no-lockfile
       - name: Build Tailwind
@@ -85,7 +85,7 @@ jobs:
           node-version: 18.x
       - uses: pnpm/action-setup@v2
         with:
-          version: 7
+          version: 8
       - name: Install Dependencies
         run: pnpm install
       - name: Build Tailwind
