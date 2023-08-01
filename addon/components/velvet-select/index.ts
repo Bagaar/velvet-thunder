@@ -28,7 +28,7 @@ interface VelvetSelectSignature {
           typeof VelvetSelectOption,
           'privateOnCreate' | 'privateOnDestroy' | 'privateSelected'
         >;
-      }
+      },
     ];
   };
   Element: HTMLSelectElement;
@@ -55,7 +55,7 @@ export default class VelvetSelect extends Component<VelvetSelectSignature> {
 
     onChange(
       this.options.get((event.target as HTMLSelectElement).value),
-      event
+      event,
     );
   };
 

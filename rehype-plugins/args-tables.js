@@ -78,7 +78,7 @@ function velvetThunderArgsTables() {
 
                 return elements;
               },
-              []
+              [],
             );
 
             return element('tr', [
@@ -87,7 +87,7 @@ function velvetThunderArgsTables() {
               element('td', [code(componentArg.type)]),
               element('td', [code(componentArg.default)]),
             ]);
-          })
+          }),
         ),
       ]);
 

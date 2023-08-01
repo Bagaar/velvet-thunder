@@ -45,8 +45,8 @@ module.exports = tailwindPlugin.withOptions(
             config,
             options: options.components[component],
             theme,
-          })
-        )
+          }),
+        ),
       );
 
       addUtilities(UTILITIES);
@@ -58,5 +58,5 @@ module.exports = tailwindPlugin.withOptions(
         pattern: /^velvet-/,
       },
     ],
-  })
+  }),
 );
