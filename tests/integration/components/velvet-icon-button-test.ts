@@ -164,7 +164,7 @@ module('Integration | Component | velvet-icon-button', function (hooks) {
     assert
       .dom()
       .hasText(
-        'velvet-icon-button velvet-icon-button-md velvet-icon-button-primary'
+        'velvet-icon-button velvet-icon-button-md velvet-icon-button-primary',
       );
   });
 

@@ -45,7 +45,7 @@ interface VelvetDropdownSignature {
         toggle: () => void;
         content: ModifierLike<ContentSignature>;
         trigger: ModifierLike<TriggerSignature>;
-      }
+      },
     ];
   };
   Element: HTMLDivElement;
@@ -106,7 +106,7 @@ export default class VelvetDropdown extends Component<VelvetDropdownSignature> {
     const cleanupFloating = autoUpdate(
       triggerElement,
       contentElement,
-      updateFloating
+      updateFloating,
     );
 
     const clickOutsideHandler = ({ target }: MouseEvent) => {

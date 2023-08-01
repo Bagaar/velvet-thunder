@@ -8,13 +8,13 @@ interface VelvetSelectOptions {
 
 export function velvetSelect(
   target: Parameters<typeof find>[0],
-  { index, text }: VelvetSelectOptions
+  { index, text }: VelvetSelectOptions,
 ) {
   const element = find(target);
 
   assert(
     `velvetSelect: No select element found matching "${target}".`,
-    element instanceof HTMLSelectElement
+    element instanceof HTMLSelectElement,
   );
 
   let option;
@@ -27,7 +27,7 @@ export function velvetSelect(
 
   assert(
     'velvetSelect: No option element found matching the provided index or text value.',
-    option
+    option,
   );
 
   return select(element, option.value);

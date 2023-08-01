@@ -33,7 +33,7 @@ interface VelvetCheckboxGroupSignature {
           | 'privateInGroup'
           | 'privateOnChangeGroup'
         >;
-      }
+      },
     ];
   };
   Element: HTMLDivElement;
