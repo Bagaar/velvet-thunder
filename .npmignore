@@ -12,7 +12,6 @@
 /.eslintrc.js
 /.git/
 /.github/
-/.husky/
 /.gitignore
 /.prettierignore
 /.prettierrc.js
