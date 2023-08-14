@@ -64,7 +64,7 @@
     "@babel/generator": "^7.22.9",
     "@babel/parser": "^7.22.7",
     "@babel/traverse": "^7.22.8",
-    "@commitlint/cli": "^17.6.7",
+    "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.6.7",
     "@docfy/ember": "^0.7.0",
     "@ember/optional-features": "^2.0.0",
