@@ -1,4 +1,4 @@
-import Component from '@glimmer/component';
+import Component from "@glimmer/component";
 
 interface VelvetTextareaSignature {
   Args: {
@@ -13,11 +13,11 @@ interface VelvetTextareaSignature {
     /// The placeholder of the textarea.
     placeholder?: string;
     /// The size of the textarea.
-    size?: 'sm' | 'md' | 'lg';
+    size?: "sm" | "md" | "lg";
     /// The value of the textarea.
     value?: string;
     /// The appearance of the textarea.
-    variant?: string | 'primary';
+    variant?: string | "primary";
   };
   Element: HTMLTextAreaElement;
 }
@@ -26,7 +26,7 @@ export default class VelvetTextarea extends Component<VelvetTextareaSignature> {
   changeHandler = (event: Event) => {
     const { isDisabled, onChange } = this.args;
 
-    if (typeof onChange !== 'function' || isDisabled === true) {
+    if (typeof onChange !== "function" || isDisabled === true) {
       return;
     }
 
@@ -36,7 +36,7 @@ export default class VelvetTextarea extends Component<VelvetTextareaSignature> {
   inputHandler = (event: Event) => {
     const { isDisabled, onInput } = this.args;
 
-    if (typeof onInput !== 'function' || isDisabled === true) {
+    if (typeof onInput !== "function" || isDisabled === true) {
       return;
     }
 

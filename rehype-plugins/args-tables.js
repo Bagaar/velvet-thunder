@@ -1,16 +1,16 @@
-'use strict';
+"use strict";
 
-const { default: babelGenerator } = require('@babel/generator');
-const { parse: babelParse } = require('@babel/parser');
-const { default: babelTraverse } = require('@babel/traverse');
-const { existsSync, readFileSync } = require('fs');
+const { default: babelGenerator } = require("@babel/generator");
+const { parse: babelParse } = require("@babel/parser");
+const { default: babelTraverse } = require("@babel/traverse");
+const { existsSync, readFileSync } = require("fs");
 
-const MARKER_REG_EXP = new RegExp('<!-- args-table: (.*) -->');
+const MARKER_REG_EXP = new RegExp("<!-- args-table: (.*) -->");
 
 function velvetThunderArgsTables() {
   return ({ children }) => {
     const markers = children.filter((child) => {
-      return child.type === 'raw' && MARKER_REG_EXP.test(child.value);
+      return child.type === "raw" && MARKER_REG_EXP.test(child.value);
     });
 
     markers.forEach((marker) => {
@@ -21,29 +21,29 @@ function velvetThunderArgsTables() {
         throw new Error(`\`${componentName}\` is not a valid component name.`);
       }
 
-      const componentFile = readFileSync(componentPath, { encoding: 'utf-8' });
+      const componentFile = readFileSync(componentPath, { encoding: "utf-8" });
       const componentAST = babelParse(componentFile, {
-        plugins: ['decorators', 'typescript'],
-        sourceType: 'module',
+        plugins: ["decorators", "typescript"],
+        sourceType: "module",
       });
 
       let componentArgs = [];
 
       babelTraverse(componentAST, {
         TSPropertySignature(node) {
-          if (node.node.key.name !== 'Args') {
+          if (node.node.key.name !== "Args") {
             return;
           }
 
           componentArgs = node.node.typeAnnotation.typeAnnotation.members
-            .filter((node) => node.key.name.startsWith('private') === false)
+            .filter((node) => node.key.name.startsWith("private") === false)
             .map((node) => {
               let descriptionLines = (node.leadingComments || [])
-                .filter((comment) => comment.value.startsWith('/ '))
-                .map((comment) => comment.value.replace('/ ', '').trim());
+                .filter((comment) => comment.value.startsWith("/ "))
+                .map((comment) => comment.value.replace("/ ", "").trim());
 
               return {
-                default: 'undefined',
+                default: "undefined",
                 descriptionLines,
                 name: node.key.name,
                 type: babelGenerator(node.typeAnnotation.typeAnnotation).code,
@@ -56,24 +56,24 @@ function velvetThunderArgsTables() {
         return;
       }
 
-      const componentArgsTable = element('table', [
-        element('thead', [
-          element('tr', [
-            element('th', [text('Name')]),
-            element('th', [text('Description')]),
-            element('th', [text('Type')]),
-            element('th', [text('Default Value')]),
+      const componentArgsTable = element("table", [
+        element("thead", [
+          element("tr", [
+            element("th", [text("Name")]),
+            element("th", [text("Description")]),
+            element("th", [text("Type")]),
+            element("th", [text("Default Value")]),
           ]),
         ]),
         element(
-          'tbody',
+          "tbody",
           componentArgs.map((componentArg) => {
             const descriptionElements = componentArg.descriptionLines.reduce(
               (elements, line, index) => {
                 elements.push(text(line));
 
                 if (index < componentArg.descriptionLines.length - 1) {
-                  elements.push(element('br'));
+                  elements.push(element("br"));
                 }
 
                 return elements;
@@ -81,11 +81,11 @@ function velvetThunderArgsTables() {
               [],
             );
 
-            return element('tr', [
-              element('td', [code('@' + componentArg.name)]),
-              element('td', descriptionElements),
-              element('td', [code(componentArg.type)]),
-              element('td', [code(componentArg.default)]),
+            return element("tr", [
+              element("td", [code("@" + componentArg.name)]),
+              element("td", descriptionElements),
+              element("td", [code(componentArg.type)]),
+              element("td", [code(componentArg.default)]),
             ]);
           }),
         ),
@@ -97,7 +97,7 @@ function velvetThunderArgsTables() {
 }
 
 function code(value) {
-  return element('code', [text(value)]);
+  return element("code", [text(value)]);
 }
 
 function element(tagName, children = []) {
@@ -105,12 +105,12 @@ function element(tagName, children = []) {
     children,
     properties: {},
     tagName,
-    type: 'element',
+    type: "element",
   };
 }
 
 function text(value) {
-  return { type: 'text', value };
+  return { type: "text", value };
 }
 
 module.exports = velvetThunderArgsTables;

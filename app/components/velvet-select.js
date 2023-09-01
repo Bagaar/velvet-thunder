@@ -1,1 +1,1 @@
-export { default } from 'velvet-thunder/components/velvet-select';
+export { default } from "velvet-thunder/components/velvet-select";

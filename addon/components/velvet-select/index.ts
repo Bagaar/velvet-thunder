@@ -1,6 +1,6 @@
-import Component from '@glimmer/component';
-import type { WithBoundArgs } from '@glint/template';
-import VelvetSelectOption from 'velvet-thunder/components/velvet-select/option';
+import Component from "@glimmer/component";
+import type { WithBoundArgs } from "@glint/template";
+import VelvetSelectOption from "velvet-thunder/components/velvet-select/option";
 
 interface VelvetSelectSignature {
   Args: {
@@ -17,16 +17,16 @@ interface VelvetSelectSignature {
     /// The selected option of the select.
     selected?: unknown;
     /// The size of the select.
-    size?: 'sm' | 'md' | 'lg';
+    size?: "sm" | "md" | "lg";
     /// The appearance of the select.
-    variant?: string | 'primary';
+    variant?: string | "primary";
   };
   Blocks: {
     default: [
       {
         Option: WithBoundArgs<
           typeof VelvetSelectOption,
-          'privateOnCreate' | 'privateOnDestroy' | 'privateSelected'
+          "privateOnCreate" | "privateOnDestroy" | "privateSelected"
         >;
       },
     ];
@@ -49,7 +49,7 @@ export default class VelvetSelect extends Component<VelvetSelectSignature> {
   changeHandler = (event: Event) => {
     const { isDisabled, onChange } = this.args;
 
-    if (typeof onChange !== 'function' || isDisabled === true) {
+    if (typeof onChange !== "function" || isDisabled === true) {
       return;
     }
 

@@ -1,46 +1,46 @@
-'use strict';
+"use strict";
 
 module.exports = () => ({
-  '.velvet-radio': {
-    '@apply flex items-center w-fit': {},
+  ".velvet-radio": {
+    "@apply flex items-center w-fit": {},
 
-    '&-sm': {
-      '@apply text-xs': {},
+    "&-sm": {
+      "@apply text-xs": {},
 
-      '.velvet-radio-input': {
-        '@apply h-4 mr-2 w-4': {},
+      ".velvet-radio-input": {
+        "@apply h-4 mr-2 w-4": {},
       },
     },
 
-    '&-md': {
-      '@apply text-sm': {},
+    "&-md": {
+      "@apply text-sm": {},
 
-      '.velvet-radio-input': {
-        '@apply h-5 mr-3 w-5': {},
+      ".velvet-radio-input": {
+        "@apply h-5 mr-3 w-5": {},
       },
     },
 
-    '&-lg': {
-      '@apply text-base': {},
+    "&-lg": {
+      "@apply text-base": {},
 
-      '.velvet-radio-input': {
-        '@apply h-6 mr-4 w-6': {},
+      ".velvet-radio-input": {
+        "@apply h-6 mr-4 w-6": {},
       },
     },
 
-    '&-disabled': {
-      '@apply cursor-not-allowed': {},
+    "&-disabled": {
+      "@apply cursor-not-allowed": {},
     },
 
-    '&-input': {
-      '@apply border-2 transition': {},
+    "&-input": {
+      "@apply border-2 transition": {},
 
-      '&:focus': {
-        '@apply ring-0 ring-offset-0 velvet-outline': {},
+      "&:focus": {
+        "@apply ring-0 ring-offset-0 velvet-outline": {},
       },
 
-      '&:disabled': {
-        '@apply cursor-not-allowed': {},
+      "&:disabled": {
+        "@apply cursor-not-allowed": {},
       },
     },
   },

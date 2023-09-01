@@ -1,5 +1,5 @@
-import { assert } from '@ember/debug';
-import { waitForPromise } from '@ember/test-waiters';
+import { assert } from "@ember/debug";
+import { waitForPromise } from "@ember/test-waiters";
 import {
   autoUpdate,
   computePosition,
@@ -7,12 +7,12 @@ import {
   offset,
   Placement,
   Strategy,
-} from '@floating-ui/dom';
-import Component from '@glimmer/component';
-import { tracked } from '@glimmer/tracking';
-import type { ModifierLike, WithBoundArgs } from '@glint/template';
-import { modifier } from 'ember-modifier';
-import VelvetTooltipContent from 'velvet-thunder/components/velvet-tooltip/content';
+} from "@floating-ui/dom";
+import Component from "@glimmer/component";
+import { tracked } from "@glimmer/tracking";
+import type { ModifierLike, WithBoundArgs } from "@glint/template";
+import { modifier } from "ember-modifier";
+import VelvetTooltipContent from "velvet-thunder/components/velvet-tooltip/content";
 
 interface VelvetTooltipSignature {
   Args: {
@@ -30,7 +30,7 @@ interface VelvetTooltipSignature {
       {
         Content: WithBoundArgs<
           typeof VelvetTooltipContent,
-          'isShown' | 'modifier'
+          "isShown" | "modifier"
         >;
         isShown: boolean;
         hide: () => void;
@@ -62,27 +62,27 @@ export default class VelvetTooltip extends Component<VelvetTooltipSignature> {
   get offset(): number {
     const { offset } = this.args;
 
-    return typeof offset === 'number' ? offset : 4;
+    return typeof offset === "number" ? offset : 4;
   }
 
   get placement(): Placement {
-    return this.args.placement || 'top';
+    return this.args.placement || "top";
   }
 
   get showDelay(): number {
     const { showDelay } = this.args;
 
-    return typeof showDelay === 'number' ? showDelay : 400;
+    return typeof showDelay === "number" ? showDelay : 400;
   }
 
   get strategy(): Strategy {
-    return this.args.strategy || 'absolute';
+    return this.args.strategy || "absolute";
   }
 
   content = modifier<ContentSignature>((contentElement) => {
     const { placement, strategy, triggerElement } = this;
 
-    assert('[VelvetTooltip] Trigger element must be present.', triggerElement);
+    assert("[VelvetTooltip] Trigger element must be present.", triggerElement);
 
     // https://floating-ui.com/docs/computeposition#initial-layout:
     Object.assign(contentElement.style, {
@@ -113,12 +113,12 @@ export default class VelvetTooltip extends Component<VelvetTooltipSignature> {
   trigger = modifier<TriggerSignature>((triggerElement) => {
     this.triggerElement = triggerElement;
 
-    triggerElement.addEventListener('mouseenter', this.show);
-    triggerElement.addEventListener('mouseleave', this.hide);
+    triggerElement.addEventListener("mouseenter", this.show);
+    triggerElement.addEventListener("mouseleave", this.hide);
 
     return () => {
-      triggerElement.removeEventListener('mouseenter', this.show);
-      triggerElement.removeEventListener('mouseleave', this.hide);
+      triggerElement.removeEventListener("mouseenter", this.show);
+      triggerElement.removeEventListener("mouseleave", this.hide);
     };
   });
 

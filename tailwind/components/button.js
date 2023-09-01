@@ -1,45 +1,45 @@
-'use strict';
+"use strict";
 
 module.exports = () => ({
-  '.velvet-button': {
-    '@apply border border-transparent font-medium': {},
-    '@apply flex items-center justify-center': {},
-    '@apply rounded-md text-sm transition': {},
+  ".velvet-button": {
+    "@apply border border-transparent font-medium": {},
+    "@apply flex items-center justify-center": {},
+    "@apply rounded-md text-sm transition": {},
 
-    '&:focus-visible': {
-      '@apply velvet-outline': {},
+    "&:focus-visible": {
+      "@apply velvet-outline": {},
     },
 
-    '&:disabled': {
-      '@apply cursor-not-allowed': {},
+    "&:disabled": {
+      "@apply cursor-not-allowed": {},
     },
 
-    '&-xs': {
-      '@apply h-7 px-2': {},
+    "&-xs": {
+      "@apply h-7 px-2": {},
     },
 
-    '&-sm': {
-      '@apply h-8 px-3': {},
+    "&-sm": {
+      "@apply h-8 px-3": {},
     },
 
-    '&-md': {
-      '@apply h-9 px-4': {},
+    "&-md": {
+      "@apply h-9 px-4": {},
     },
 
-    '&-lg': {
-      '@apply h-10 px-6': {},
+    "&-lg": {
+      "@apply h-10 px-6": {},
     },
 
-    '&-pill': {
-      '@apply rounded-full': {},
+    "&-pill": {
+      "@apply rounded-full": {},
     },
 
-    '&-disclosure-icon': {
-      '@apply ml-2': {},
+    "&-disclosure-icon": {
+      "@apply ml-2": {},
     },
 
-    '.velvet-spinner': {
-      '@apply mr-2': {},
+    ".velvet-spinner": {
+      "@apply mr-2": {},
     },
   },
 });

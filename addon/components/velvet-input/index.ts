@@ -1,4 +1,4 @@
-import Component from '@glimmer/component';
+import Component from "@glimmer/component";
 
 interface VelvetInputSignature {
   Args: {
@@ -15,13 +15,13 @@ interface VelvetInputSignature {
     /// The placeholder of the input.
     placeholder?: string;
     /// The size of the input.
-    size?: 'sm' | 'md' | 'lg';
+    size?: "sm" | "md" | "lg";
     /// The type of the input.
     type?: string;
     /// The value of the input.
     value?: string;
     /// The appearance of the input.
-    variant?: string | 'primary';
+    variant?: string | "primary";
   };
   Element: HTMLInputElement;
 }
@@ -30,7 +30,7 @@ export default class VelvetInput extends Component<VelvetInputSignature> {
   changeHandler = (event: Event) => {
     const { isDisabled, onChange } = this.args;
 
-    if (typeof onChange !== 'function' || isDisabled === true) {
+    if (typeof onChange !== "function" || isDisabled === true) {
       return;
     }
 
@@ -40,7 +40,7 @@ export default class VelvetInput extends Component<VelvetInputSignature> {
   inputHandler = (event: Event) => {
     const { isDisabled, onInput } = this.args;
 
-    if (typeof onInput !== 'function' || isDisabled === true) {
+    if (typeof onInput !== "function" || isDisabled === true) {
       return;
     }
 

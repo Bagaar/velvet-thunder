@@ -1,5 +1,5 @@
-import { htmlSafe } from '@ember/template';
-import Component from '@glimmer/component';
+import { htmlSafe } from "@ember/template";
+import Component from "@glimmer/component";
 
 interface VelvetProgressSignature {
   Args: {
@@ -8,13 +8,13 @@ interface VelvetProgressSignature {
     /// The minimum value of the progress.
     min?: number;
     /// The size of the progress.
-    size?: 'sm' | 'md' | 'lg';
+    size?: "sm" | "md" | "lg";
     /// The text describing the process in progress.
     text?: string;
     /// The value of the progress.
     value?: number;
     /// The appearance of the progress.
-    variant?: string | 'primary';
+    variant?: string | "primary";
   };
   Element: HTMLDivElement;
 }
@@ -29,14 +29,14 @@ export default class VelvetProgress extends Component<VelvetProgressSignature> {
   }
 
   get max() {
-    return typeof this.args.max === 'number' ? this.args.max : 100;
+    return typeof this.args.max === "number" ? this.args.max : 100;
   }
 
   get min() {
-    return typeof this.args.min === 'number' ? this.args.min : 0;
+    return typeof this.args.min === "number" ? this.args.min : 0;
   }
 
   get value() {
-    return typeof this.args.value === 'number' ? this.args.value : 0;
+    return typeof this.args.value === "number" ? this.args.value : 0;
   }
 }

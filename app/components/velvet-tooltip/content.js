@@ -1,1 +1,1 @@
-export { default } from 'velvet-thunder/components/velvet-tooltip/content';
+export { default } from "velvet-thunder/components/velvet-tooltip/content";

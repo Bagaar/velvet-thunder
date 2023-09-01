@@ -1,1 +1,1 @@
-export { default } from 'velvet-thunder/components/velvet-tag';
+export { default } from "velvet-thunder/components/velvet-tag";

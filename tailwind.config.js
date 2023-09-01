@@ -1,22 +1,22 @@
-'use strict';
+"use strict";
 
-const tailwindFormsPlugin = require('@tailwindcss/forms');
-const tailwindTypographyPlugin = require('@tailwindcss/typography');
-const velvetThunder = require('./tailwind');
+const tailwindFormsPlugin = require("@tailwindcss/forms");
+const tailwindTypographyPlugin = require("@tailwindcss/typography");
+const velvetThunder = require("./tailwind");
 
 module.exports = {
   content: [
     ...velvetThunder.content(),
-    './docs/**/*.md',
-    './tests/dummy/app/components/**/*.{hbs,js}',
-    './tests/dummy/app/templates/**/*.hbs',
-    './tests/dummy/app/index.html',
-    './tests/integration/**/*-test.ts',
+    "./docs/**/*.md",
+    "./tests/dummy/app/components/**/*.{hbs,js}",
+    "./tests/dummy/app/templates/**/*.hbs",
+    "./tests/dummy/app/index.html",
+    "./tests/integration/**/*-test.ts",
   ],
-  darkMode: 'class',
+  darkMode: "class",
   plugins: [
     tailwindFormsPlugin({
-      strategy: 'class',
+      strategy: "class",
     }),
     tailwindTypographyPlugin,
     velvetThunder.plugin(),

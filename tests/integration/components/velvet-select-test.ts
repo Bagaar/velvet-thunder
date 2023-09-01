@@ -1,35 +1,35 @@
-import { render, findAll, TestContext } from '@ember/test-helpers';
-import { setupRenderingTest } from 'dummy/tests/helpers';
-import { hbs } from 'ember-cli-htmlbars';
-import { module, test } from 'qunit';
-import { velvetSelect } from 'velvet-thunder/test-support';
+import { render, findAll, TestContext } from "@ember/test-helpers";
+import { setupRenderingTest } from "dummy/tests/helpers";
+import { hbs } from "ember-cli-htmlbars";
+import { module, test } from "qunit";
+import { velvetSelect } from "velvet-thunder/test-support";
 
 interface VelvetSelectTestContext extends TestContext {
   onChange: (selected: unknown, event: Event) => void;
 }
 
-const SELECTOR = '.velvet-select';
+const SELECTOR = ".velvet-select";
 
-module('Integration | Component | velvet-select', function (hooks) {
+module("Integration | Component | velvet-select", function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders the correct base classes', async function (assert) {
+  test("it renders the correct base classes", async function (assert) {
     await render(hbs`
       <VelvetSelect />
     `);
 
-    assert.dom(SELECTOR).hasClass('form-select').hasClass('velvet-select');
+    assert.dom(SELECTOR).hasClass("form-select").hasClass("velvet-select");
   });
 
-  test('it renders a disabled select', async function (assert) {
+  test("it renders a disabled select", async function (assert) {
     await render(hbs`
       <VelvetSelect />
     `);
 
     assert
       .dom(SELECTOR)
-      .doesNotHaveAttribute('disabled')
-      .doesNotHaveClass('velvet-select-disabled');
+      .doesNotHaveAttribute("disabled")
+      .doesNotHaveClass("velvet-select-disabled");
 
     await render(hbs`
       <VelvetSelect @isDisabled={{true}} />
@@ -37,39 +37,39 @@ module('Integration | Component | velvet-select', function (hooks) {
 
     assert
       .dom(SELECTOR)
-      .hasAttribute('disabled')
-      .hasClass('velvet-select-disabled');
+      .hasAttribute("disabled")
+      .hasClass("velvet-select-disabled");
   });
 
-  test('it renders an invalid select', async function (assert) {
+  test("it renders an invalid select", async function (assert) {
     await render(hbs`
       <VelvetSelect />
     `);
 
-    assert.dom(SELECTOR).doesNotHaveClass('velvet-select-invalid');
+    assert.dom(SELECTOR).doesNotHaveClass("velvet-select-invalid");
 
     await render(hbs`
       <VelvetSelect @isInvalid={{true}} />
     `);
 
-    assert.dom(SELECTOR).hasClass('velvet-select-invalid');
+    assert.dom(SELECTOR).hasClass("velvet-select-invalid");
   });
 
-  test('it renders a pill-shaped select', async function (assert) {
+  test("it renders a pill-shaped select", async function (assert) {
     await render(hbs`
       <VelvetSelect />
     `);
 
-    assert.dom(SELECTOR).doesNotHaveClass('velvet-select-pill');
+    assert.dom(SELECTOR).doesNotHaveClass("velvet-select-pill");
 
     await render(hbs`
       <VelvetSelect @isPill={{true}} />
     `);
 
-    assert.dom(SELECTOR).hasClass('velvet-select-pill');
+    assert.dom(SELECTOR).hasClass("velvet-select-pill");
   });
 
-  test('it handles `change` events', async function (this: VelvetSelectTestContext, assert) {
+  test("it handles `change` events", async function (this: VelvetSelectTestContext, assert) {
     this.onChange = (selected) => assert.step(selected as string);
 
     await render<VelvetSelectTestContext>(hbs`
@@ -81,38 +81,38 @@ module('Integration | Component | velvet-select', function (hooks) {
 
     await velvetSelect(SELECTOR, { index: 1 });
 
-    assert.verifySteps(['second']);
+    assert.verifySteps(["second"]);
   });
 
-  test('it renders the correct size', async function (assert) {
+  test("it renders the correct size", async function (assert) {
     await render(hbs`
       <VelvetSelect />
     `);
 
-    assert.dom(SELECTOR).hasClass('velvet-select-md');
+    assert.dom(SELECTOR).hasClass("velvet-select-md");
 
     await render(hbs`
       <VelvetSelect @size="lg" />
     `);
 
-    assert.dom(SELECTOR).hasClass('velvet-select-lg');
+    assert.dom(SELECTOR).hasClass("velvet-select-lg");
   });
 
-  test('it renders the correct variant', async function (assert) {
+  test("it renders the correct variant", async function (assert) {
     await render(hbs`
       <VelvetSelect />
     `);
 
-    assert.dom(SELECTOR).hasClass('velvet-select-primary');
+    assert.dom(SELECTOR).hasClass("velvet-select-primary");
 
     await render(hbs`
       <VelvetSelect @variant="secondary" />
     `);
 
-    assert.dom(SELECTOR).hasClass('velvet-select-secondary');
+    assert.dom(SELECTOR).hasClass("velvet-select-secondary");
   });
 
-  test('it selects the correct option', async function (assert) {
+  test("it selects the correct option", async function (assert) {
     await render(hbs`
       <VelvetSelect @selected="second" as |select|>
         <select.Option @value="first" />
@@ -120,12 +120,12 @@ module('Integration | Component | velvet-select', function (hooks) {
       </VelvetSelect>
     `);
 
-    const secondOption = findAll('option')[1];
+    const secondOption = findAll("option")[1];
 
     assert.dom(SELECTOR).hasValue(secondOption?.value);
   });
 
-  test('it renders a placeholder', async function (assert) {
+  test("it renders a placeholder", async function (assert) {
     await render(hbs`
       <VelvetSelect @placeholder="Select an Option" @selected={{null}} as |select|>
         <select.Option @value="first" />
@@ -133,14 +133,14 @@ module('Integration | Component | velvet-select', function (hooks) {
       </VelvetSelect>
     `);
 
-    assert.dom('option').hasText('Select an Option').isDisabled();
+    assert.dom("option").hasText("Select an Option").isDisabled();
   });
 
-  test('`...attributes` works', async function (assert) {
+  test("`...attributes` works", async function (assert) {
     await render(hbs`
       <VelvetSelect class="mr-2" />
     `);
 
-    assert.dom(SELECTOR).hasClass('mr-2');
+    assert.dom(SELECTOR).hasClass("mr-2");
   });
 });

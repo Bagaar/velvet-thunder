@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
-const rehypeAutolinkHeadings = require('rehype-autolink-headings');
-const rehypeHighlight = require('rehype-highlight');
-const rehypeWrapAll = require('rehype-wrap-all');
-const argsTables = require('./rehype-plugins/args-tables');
+const rehypeAutolinkHeadings = require("rehype-autolink-headings");
+const rehypeHighlight = require("rehype-highlight");
+const rehypeWrapAll = require("rehype-wrap-all");
+const argsTables = require("./rehype-plugins/args-tables");
 
 module.exports = {
   rehypePlugins: [
@@ -11,22 +11,22 @@ module.exports = {
     [
       rehypeAutolinkHeadings,
       {
-        behavior: 'wrap',
+        behavior: "wrap",
       },
     ],
     [
       rehypeWrapAll,
       [
         {
-          selector: 'pre',
-          wrapper: 'div.not-prose',
+          selector: "pre",
+          wrapper: "div.not-prose",
         },
       ],
     ],
     rehypeHighlight,
   ],
   repository: {
-    editBranch: 'main',
-    url: 'https://github.com/Bagaar/velvet-thunder',
+    editBranch: "main",
+    url: "https://github.com/Bagaar/velvet-thunder",
   },
 };

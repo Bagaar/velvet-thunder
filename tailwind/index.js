@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
 module.exports = {
-  content: require('./content'),
-  plugin: require('./plugin'),
+  content: require("./content"),
+  plugin: require("./plugin"),
 };

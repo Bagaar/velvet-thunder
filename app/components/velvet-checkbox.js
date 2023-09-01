@@ -1,1 +1,1 @@
-export { default } from 'velvet-thunder/components/velvet-checkbox';
+export { default } from "velvet-thunder/components/velvet-checkbox";
