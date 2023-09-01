@@ -1,7 +1,7 @@
-import { click, findAll, render, TestContext } from '@ember/test-helpers';
-import { setupRenderingTest } from 'dummy/tests/helpers';
-import { hbs } from 'ember-cli-htmlbars';
-import { module, test } from 'qunit';
+import { click, findAll, render, TestContext } from "@ember/test-helpers";
+import { setupRenderingTest } from "dummy/tests/helpers";
+import { hbs } from "ember-cli-htmlbars";
+import { module, test } from "qunit";
 
 type VelvetCheckboxGroupValue = string[] | { [name: string]: boolean };
 
@@ -10,13 +10,13 @@ interface VelvetCheckboxGroupTestContext extends TestContext {
   value: VelvetCheckboxGroupValue;
 }
 
-const GROUP_SELECTOR = '.velvet-checkbox-group';
+const GROUP_SELECTOR = ".velvet-checkbox-group";
 const CHECKBOX_SELECTOR = 'input[type="checkbox"]';
 
-module('Integration | Component | velvet-checkbox-group', function (hooks) {
+module("Integration | Component | velvet-checkbox-group", function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders the correct base class', async function (assert) {
+  test("it renders the correct base class", async function (assert) {
     await render(hbs`
       <VelvetCheckboxGroup />
     `);
@@ -24,7 +24,7 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
     assert.dom(GROUP_SELECTOR).exists();
   });
 
-  test('it renders disabled checkboxes', async function (assert) {
+  test("it renders disabled checkboxes", async function (assert) {
     await render(hbs`
       <VelvetCheckboxGroup as |group|>
         <group.Checkbox />
@@ -32,8 +32,8 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
       </VelvetCheckboxGroup>
     `);
 
-    assert.dom('.velvet-checkbox-group-disabled').doesNotExist();
-    assert.dom('.velvet-checkbox-disabled').doesNotExist();
+    assert.dom(".velvet-checkbox-group-disabled").doesNotExist();
+    assert.dom(".velvet-checkbox-disabled").doesNotExist();
     assert.dom(`${CHECKBOX_SELECTOR}:disabled`).doesNotExist();
 
     await render(hbs`
@@ -43,15 +43,15 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
       </VelvetCheckboxGroup>
     `);
 
-    assert.dom('.velvet-checkbox-group-disabled').exists();
-    assert.dom('.velvet-checkbox-disabled').exists({ count: 2 });
+    assert.dom(".velvet-checkbox-group-disabled").exists();
+    assert.dom(".velvet-checkbox-disabled").exists({ count: 2 });
     assert.dom(`${CHECKBOX_SELECTOR}:disabled`).exists({ count: 2 });
   });
 
-  test('it handles `change` events', async function (this: VelvetCheckboxGroupTestContext, assert) {
-    this.value = ['third'];
+  test("it handles `change` events", async function (this: VelvetCheckboxGroupTestContext, assert) {
+    this.value = ["third"];
 
-    this.onChange = (value) => this.set('value', value);
+    this.onChange = (value) => this.set("value", value);
 
     await render<VelvetCheckboxGroupTestContext>(hbs`
       <VelvetCheckboxGroup
@@ -69,10 +69,10 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
     await click(`${CHECKBOX_SELECTOR}[name="second"]`);
     await click(`${CHECKBOX_SELECTOR}[name="third"]`);
 
-    assert.deepEqual(this.value, ['first', 'second']);
+    assert.deepEqual(this.value, ["first", "second"]);
   });
 
-  test('it renders the correct size for each checkbox', async function (assert) {
+  test("it renders the correct size for each checkbox", async function (assert) {
     await render(hbs`
       <VelvetCheckboxGroup as |group|>
         <group.Checkbox />
@@ -80,8 +80,8 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
       </VelvetCheckboxGroup>
     `);
 
-    assert.dom('.velvet-checkbox-group-md').exists();
-    assert.dom('.velvet-checkbox-md').exists({ count: 2 });
+    assert.dom(".velvet-checkbox-group-md").exists();
+    assert.dom(".velvet-checkbox-md").exists({ count: 2 });
 
     await render(hbs`
       <VelvetCheckboxGroup @size="lg" as |group|>
@@ -90,11 +90,11 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
       </VelvetCheckboxGroup>
     `);
 
-    assert.dom('.velvet-checkbox-group-lg').exists();
-    assert.dom('.velvet-checkbox-lg').exists({ count: 2 });
+    assert.dom(".velvet-checkbox-group-lg").exists();
+    assert.dom(".velvet-checkbox-lg").exists({ count: 2 });
   });
 
-  test('it checks the correct checkboxes', async function (assert) {
+  test("it checks the correct checkboxes", async function (assert) {
     let checkbox;
 
     await render(hbs`
@@ -122,19 +122,19 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
     assert.dom(checkbox[1]).isChecked();
   });
 
-  test('`...attributes` works', async function (assert) {
+  test("`...attributes` works", async function (assert) {
     await render(hbs`
       <VelvetCheckboxGroup class="space-x-2" />
     `);
 
-    assert.dom(GROUP_SELECTOR).hasClass('space-x-2');
+    assert.dom(GROUP_SELECTOR).hasClass("space-x-2");
   });
 
-  module('@valueIsObject={{true}}', function () {
-    test('it handles `change` events', async function (this: VelvetCheckboxGroupTestContext, assert) {
+  module("@valueIsObject={{true}}", function () {
+    test("it handles `change` events", async function (this: VelvetCheckboxGroupTestContext, assert) {
       this.value = { third: true };
 
-      this.onChange = (value) => this.set('value', value);
+      this.onChange = (value) => this.set("value", value);
 
       await render<VelvetCheckboxGroupTestContext>(hbs`
         <VelvetCheckboxGroup
@@ -160,7 +160,7 @@ module('Integration | Component | velvet-checkbox-group', function (hooks) {
       });
     });
 
-    test('it checks the correct checkboxes', async function (assert) {
+    test("it checks the correct checkboxes", async function (assert) {
       let checkbox;
 
       await render(hbs`

@@ -1,35 +1,35 @@
-import { render, typeIn, TestContext } from '@ember/test-helpers';
-import { setupRenderingTest } from 'dummy/tests/helpers';
-import { hbs } from 'ember-cli-htmlbars';
-import { module, test } from 'qunit';
+import { render, typeIn, TestContext } from "@ember/test-helpers";
+import { setupRenderingTest } from "dummy/tests/helpers";
+import { hbs } from "ember-cli-htmlbars";
+import { module, test } from "qunit";
 
 interface VelvetTextareaTestContext extends TestContext {
   onChange: (value: string, event: Event) => void;
   onInput: (value: string, event: Event) => void;
 }
 
-const SELECTOR = '.velvet-textarea';
+const SELECTOR = ".velvet-textarea";
 
-module('Integration | Component | velvet-textarea', function (hooks) {
+module("Integration | Component | velvet-textarea", function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders the correct base classes', async function (assert) {
+  test("it renders the correct base classes", async function (assert) {
     await render(hbs`
       <VelvetTextarea />
     `);
 
-    assert.dom(SELECTOR).hasClass('form-textarea').hasClass('velvet-textarea');
+    assert.dom(SELECTOR).hasClass("form-textarea").hasClass("velvet-textarea");
   });
 
-  test('it renders a disabled textarea', async function (assert) {
+  test("it renders a disabled textarea", async function (assert) {
     await render(hbs`
       <VelvetTextarea />
     `);
 
     assert
       .dom(SELECTOR)
-      .doesNotHaveAttribute('disabled')
-      .doesNotHaveClass('velvet-textarea-disabled');
+      .doesNotHaveAttribute("disabled")
+      .doesNotHaveClass("velvet-textarea-disabled");
 
     await render(hbs`
       <VelvetTextarea @isDisabled={{true}} />
@@ -37,77 +37,77 @@ module('Integration | Component | velvet-textarea', function (hooks) {
 
     assert
       .dom(SELECTOR)
-      .hasAttribute('disabled')
-      .hasClass('velvet-textarea-disabled');
+      .hasAttribute("disabled")
+      .hasClass("velvet-textarea-disabled");
   });
 
-  test('it renders an invalid textarea', async function (assert) {
+  test("it renders an invalid textarea", async function (assert) {
     await render(hbs`
       <VelvetTextarea />
     `);
 
-    assert.dom(SELECTOR).doesNotHaveClass('velvet-textarea-invalid');
+    assert.dom(SELECTOR).doesNotHaveClass("velvet-textarea-invalid");
 
     await render(hbs`
       <VelvetTextarea @isInvalid={{true}} />
     `);
 
-    assert.dom(SELECTOR).hasClass('velvet-textarea-invalid');
+    assert.dom(SELECTOR).hasClass("velvet-textarea-invalid");
   });
 
-  test('it handles `change` events', async function (this: VelvetTextareaTestContext, assert) {
+  test("it handles `change` events", async function (this: VelvetTextareaTestContext, assert) {
     this.onChange = (value) => assert.step(value);
 
     await render<VelvetTextareaTestContext>(hbs`
       <VelvetTextarea @onChange={{this.onChange}} />
     `);
 
-    await typeIn(SELECTOR, 'foo', { delay: 0 });
+    await typeIn(SELECTOR, "foo", { delay: 0 });
 
-    assert.verifySteps(['foo']);
+    assert.verifySteps(["foo"]);
   });
 
-  test('it handles `input` events', async function (this: VelvetTextareaTestContext, assert) {
+  test("it handles `input` events", async function (this: VelvetTextareaTestContext, assert) {
     this.onInput = (value) => assert.step(value);
 
     await render<VelvetTextareaTestContext>(hbs`
       <VelvetTextarea @onInput={{this.onInput}} />
     `);
 
-    await typeIn(SELECTOR, 'foo', { delay: 0 });
+    await typeIn(SELECTOR, "foo", { delay: 0 });
 
-    assert.verifySteps(['f', 'fo', 'foo']);
+    assert.verifySteps(["f", "fo", "foo"]);
   });
 
-  test('it renders the correct size', async function (assert) {
+  test("it renders the correct size", async function (assert) {
     await render(hbs`
       <VelvetTextarea />
     `);
 
-    assert.dom(SELECTOR).hasClass('velvet-textarea-md');
+    assert.dom(SELECTOR).hasClass("velvet-textarea-md");
 
     await render(hbs`
       <VelvetTextarea @size="lg" />
     `);
 
-    assert.dom(SELECTOR).hasClass('velvet-textarea-lg');
+    assert.dom(SELECTOR).hasClass("velvet-textarea-lg");
   });
 
-  test('it renders the correct variant', async function (assert) {
+  test("it renders the correct variant", async function (assert) {
     await render(hbs`
       <VelvetTextarea />
     `);
 
-    assert.dom(SELECTOR).hasClass('velvet-textarea-primary');
+    assert.dom(SELECTOR).hasClass("velvet-textarea-primary");
 
     await render(hbs`
       <VelvetTextarea @variant="secondary" />
     `);
 
-    assert.dom(SELECTOR).hasClass('velvet-textarea-secondary');
+    assert.dom(SELECTOR).hasClass("velvet-textarea-secondary");
   });
 
-  test('it renders the correct value', async function (assert) {
+  test("it renders the correct value", async function (assert) {
     await render(hbs`
       <VelvetTextarea />
     `);
@@ -118,28 +118,28 @@ module('Integration | Component | velvet-textarea', function (hooks) {
       <VelvetTextarea @value="foo" />
     `);
 
-    assert.dom(SELECTOR).hasValue('foo');
+    assert.dom(SELECTOR).hasValue("foo");
   });
 
-  test('it renders the correct placeholder', async function (assert) {
+  test("it renders the correct placeholder", async function (assert) {
     await render(hbs`
       <VelvetTextarea />
     `);
 
-    assert.dom(SELECTOR).doesNotHaveAttribute('placeholder');
+    assert.dom(SELECTOR).doesNotHaveAttribute("placeholder");
 
     await render(hbs`
       <VelvetTextarea @placeholder="foo" />
     `);
 
-    assert.dom(SELECTOR).hasAttribute('placeholder', 'foo');
+    assert.dom(SELECTOR).hasAttribute("placeholder", "foo");
   });
 
-  test('`...attributes` works', async function (assert) {
+  test("`...attributes` works", async function (assert) {
     await render(hbs`
       <VelvetTextarea class="mr-2" />
     `);
 
-    assert.dom(SELECTOR).hasClass('mr-2');
+    assert.dom(SELECTOR).hasClass("mr-2");
   });
 });

@@ -1,6 +1,6 @@
-import Component from '@glimmer/component';
-import type { ModifierLike } from '@glint/template';
-import type { TriggerSignature } from 'velvet-thunder/components/velvet-dropdown';
+import Component from "@glimmer/component";
+import type { ModifierLike } from "@glint/template";
+import type { TriggerSignature } from "velvet-thunder/components/velvet-dropdown";
 
 interface VelvetIconButtonSignature {
   Args: {
@@ -17,11 +17,11 @@ interface VelvetIconButtonSignature {
     /// Handle the icon button's `click` event.
     onClick?: (event: MouseEvent) => void;
     /// The size of the icon button.
-    size?: 'xs' | 'sm' | 'md' | 'lg';
+    size?: "xs" | "sm" | "md" | "lg";
     /// The type of the icon button.
-    type?: 'button' | 'reset' | 'submit';
+    type?: "button" | "reset" | "submit";
     /// The appearance of the icon button.
-    variant?: string | 'primary';
+    variant?: string | "primary";
 
     privateDropdownTrigger?: ModifierLike<TriggerSignature>;
   };
@@ -35,7 +35,7 @@ export default class VelvetIconButton extends Component<VelvetIconButtonSignatur
   clickHandler = (event: MouseEvent) => {
     const { isDisabled, onClick } = this.args;
 
-    if (typeof onClick !== 'function' || isDisabled === true) {
+    if (typeof onClick !== "function" || isDisabled === true) {
       return;
     }
 

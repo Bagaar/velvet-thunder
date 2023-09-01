@@ -1,5 +1,5 @@
-import { assert } from '@ember/debug';
-import { find, select } from '@ember/test-helpers';
+import { assert } from "@ember/debug";
+import { find, select } from "@ember/test-helpers";
 
 interface VelvetSelectOptions {
   index?: number;
@@ -19,14 +19,14 @@ export function velvetSelect(
 
   let option;
 
-  if (typeof index === 'number') {
+  if (typeof index === "number") {
     option = element.options[index];
   } else {
     option = [...element.options].find((option) => option.text === text);
   }
 
   assert(
-    'velvetSelect: No option element found matching the provided index or text value.',
+    "velvetSelect: No option element found matching the provided index or text value.",
     option,
   );
 

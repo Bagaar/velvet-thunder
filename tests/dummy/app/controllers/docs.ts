@@ -1,10 +1,10 @@
-import Controller from '@ember/controller';
+import Controller from "@ember/controller";
 
-const DARK_MODE_CLASS = 'dark';
-const HTML = document.querySelector('html');
+const DARK_MODE_CLASS = "dark";
+const HTML = document.querySelector("html");
 const THEME = {
-  DARK: 'dark',
-  LIGHT: 'light',
+  DARK: "dark",
+  LIGHT: "light",
 };
 
 export default class DocsController extends Controller {
@@ -14,10 +14,10 @@ export default class DocsController extends Controller {
     }
 
     if (HTML.classList.contains(DARK_MODE_CLASS)) {
-      localStorage.setItem('theme', THEME.LIGHT);
+      localStorage.setItem("theme", THEME.LIGHT);
       HTML.classList.remove(DARK_MODE_CLASS);
     } else {
-      localStorage.setItem('theme', THEME.DARK);
+      localStorage.setItem("theme", THEME.DARK);
       HTML.classList.add(DARK_MODE_CLASS);
     }
   };

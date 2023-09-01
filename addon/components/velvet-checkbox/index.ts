@@ -1,11 +1,11 @@
-import Component from '@glimmer/component';
+import Component from "@glimmer/component";
 import type {
   Value as GroupValue,
   ValueAsArray as GroupValueAsArray,
   ValueAsObject as GroupValueAsObject,
-} from 'velvet-thunder/components/velvet-checkbox-group';
+} from "velvet-thunder/components/velvet-checkbox-group";
 
-export type Size = 'sm' | 'md' | 'lg';
+export type Size = "sm" | "md" | "lg";
 
 interface VelvetCheckboxSignature {
   Args: {
@@ -60,7 +60,7 @@ export default class VelvetCheckbox extends Component<VelvetCheckboxSignature> {
     const { checked } = event.target as HTMLInputElement;
     const { privateInGroup, onChange, privateOnChangeGroup } = this.args;
 
-    if (privateInGroup && typeof privateOnChangeGroup === 'function') {
+    if (privateInGroup && typeof privateOnChangeGroup === "function") {
       const { groupValueAsArray, groupValueAsObject } = this;
       const { privateGroupValueIsObject, name } = this.args;
 
@@ -75,7 +75,7 @@ export default class VelvetCheckbox extends Component<VelvetCheckboxSignature> {
       }
 
       privateOnChangeGroup(groupValue as GroupValue, event);
-    } else if (typeof onChange === 'function') {
+    } else if (typeof onChange === "function") {
       onChange(checked, event);
     }
   };

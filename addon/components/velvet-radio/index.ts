@@ -1,6 +1,6 @@
-import Component from '@glimmer/component';
+import Component from "@glimmer/component";
 
-export type Size = 'sm' | 'md' | 'lg';
+export type Size = "sm" | "md" | "lg";
 
 interface VelvetRadioSignature {
   Args: {
@@ -47,9 +47,9 @@ export default class VelvetRadio extends Component<VelvetRadioSignature> {
 
     const { privateInGroup, onChange, privateOnChangeGroup, value } = this.args;
 
-    if (privateInGroup && typeof privateOnChangeGroup === 'function') {
+    if (privateInGroup && typeof privateOnChangeGroup === "function") {
       privateOnChangeGroup(value, event);
-    } else if (typeof onChange === 'function') {
+    } else if (typeof onChange === "function") {
       onChange((event.target as HTMLInputElement).checked, event);
     }
   };

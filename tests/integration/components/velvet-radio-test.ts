@@ -1,7 +1,7 @@
-import { click, render, TestContext } from '@ember/test-helpers';
-import { setupRenderingTest } from 'dummy/tests/helpers';
-import { hbs } from 'ember-cli-htmlbars';
-import { module, test } from 'qunit';
+import { click, render, TestContext } from "@ember/test-helpers";
+import { setupRenderingTest } from "dummy/tests/helpers";
+import { hbs } from "ember-cli-htmlbars";
+import { module, test } from "qunit";
 
 interface VelvetRadioTestContext extends TestContext {
   onChange: (isChecked: boolean, event: Event) => void;
@@ -9,38 +9,38 @@ interface VelvetRadioTestContext extends TestContext {
 
 const SELECTOR = {
   INPUT: 'input[type="radio"]',
-  LABEL: 'label',
+  LABEL: "label",
 };
 
-module('Integration | Component | velvet-radio', function (hooks) {
+module("Integration | Component | velvet-radio", function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders the correct base classes', async function (assert) {
+  test("it renders the correct base classes", async function (assert) {
     await render(hbs`
       <VelvetRadio />
     `);
 
-    assert.dom(SELECTOR.LABEL).hasClass('velvet-radio');
-    assert.dom(SELECTOR.INPUT).hasClass('form-radio');
+    assert.dom(SELECTOR.LABEL).hasClass("velvet-radio");
+    assert.dom(SELECTOR.INPUT).hasClass("form-radio");
   });
 
-  test('it renders a disabled radio', async function (assert) {
+  test("it renders a disabled radio", async function (assert) {
     await render(hbs`
       <VelvetRadio />
     `);
 
-    assert.dom(SELECTOR.LABEL).doesNotHaveClass('velvet-radio-disabled');
-    assert.dom(SELECTOR.INPUT).doesNotHaveAttribute('disabled');
+    assert.dom(SELECTOR.LABEL).doesNotHaveClass("velvet-radio-disabled");
+    assert.dom(SELECTOR.INPUT).doesNotHaveAttribute("disabled");
 
     await render(hbs`
       <VelvetRadio @isDisabled={{true}} />
     `);
 
-    assert.dom(SELECTOR.LABEL).hasClass('velvet-radio-disabled');
-    assert.dom(SELECTOR.INPUT).hasAttribute('disabled');
+    assert.dom(SELECTOR.LABEL).hasClass("velvet-radio-disabled");
+    assert.dom(SELECTOR.INPUT).hasAttribute("disabled");
   });
 
-  test('it handles `change` events', async function (this: VelvetRadioTestContext, assert) {
+  test("it handles `change` events", async function (this: VelvetRadioTestContext, assert) {
     this.onChange = (isChecked) => assert.step(String(isChecked));
 
     await render<VelvetRadioTestContext>(hbs`
@@ -49,24 +49,24 @@ module('Integration | Component | velvet-radio', function (hooks) {
 
     await click(SELECTOR.INPUT);
 
-    assert.verifySteps(['true']);
+    assert.verifySteps(["true"]);
   });
 
-  test('it renders the correct size', async function (assert) {
+  test("it renders the correct size", async function (assert) {
     await render(hbs`
       <VelvetRadio />
     `);
 
-    assert.dom(SELECTOR.LABEL).hasClass('velvet-radio-md');
+    assert.dom(SELECTOR.LABEL).hasClass("velvet-radio-md");
 
     await render(hbs`
       <VelvetRadio @size="lg" />
     `);
 
-    assert.dom(SELECTOR.LABEL).hasClass('velvet-radio-lg');
+    assert.dom(SELECTOR.LABEL).hasClass("velvet-radio-lg");
   });
 
-  test('it renders a checked radio', async function (assert) {
+  test("it renders a checked radio", async function (assert) {
     await render(hbs`
       <VelvetRadio />
     `);
@@ -80,25 +80,25 @@ module('Integration | Component | velvet-radio', function (hooks) {
     assert.dom(SELECTOR.INPUT).isChecked();
   });
 
-  test('it renders the correct value', async function (assert) {
+  test("it renders the correct value", async function (assert) {
     await render(hbs`
       <VelvetRadio />
     `);
 
-    assert.dom(SELECTOR.INPUT).doesNotHaveAttribute('value');
+    assert.dom(SELECTOR.INPUT).doesNotHaveAttribute("value");
 
     await render(hbs`
       <VelvetRadio @value="foo" />
     `);
 
-    assert.dom(SELECTOR.INPUT).hasAttribute('value', 'foo');
+    assert.dom(SELECTOR.INPUT).hasAttribute("value", "foo");
   });
 
-  test('`...attributes` works', async function (assert) {
+  test("`...attributes` works", async function (assert) {
     await render(hbs`
       <VelvetRadio id="foo" />
     `);
 
-    assert.dom(SELECTOR.INPUT).hasAttribute('id', 'foo');
+    assert.dom(SELECTOR.INPUT).hasAttribute("id", "foo");
   });
 });

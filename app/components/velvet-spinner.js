@@ -1,1 +1,1 @@
-export { default } from 'velvet-thunder/components/velvet-spinner';
+export { default } from "velvet-thunder/components/velvet-spinner";

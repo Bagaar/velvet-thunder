@@ -1,8 +1,8 @@
-import { guidFor } from '@ember/object/internals';
-import Component from '@glimmer/component';
-import type { WithBoundArgs } from '@glint/template';
-import VelvetRadio from 'velvet-thunder/components/velvet-radio';
-import type { Size } from 'velvet-thunder/components/velvet-radio';
+import { guidFor } from "@ember/object/internals";
+import Component from "@glimmer/component";
+import type { WithBoundArgs } from "@glint/template";
+import VelvetRadio from "velvet-thunder/components/velvet-radio";
+import type { Size } from "velvet-thunder/components/velvet-radio";
 
 interface VelvetRadioGroupSignature {
   Args: {
@@ -22,12 +22,12 @@ interface VelvetRadioGroupSignature {
       {
         Radio: WithBoundArgs<
           typeof VelvetRadio,
-          | 'isDisabled'
-          | 'name'
-          | 'size'
-          | 'privateGroupValue'
-          | 'privateInGroup'
-          | 'privateOnChangeGroup'
+          | "isDisabled"
+          | "name"
+          | "size"
+          | "privateGroupValue"
+          | "privateInGroup"
+          | "privateOnChangeGroup"
         >;
       },
     ];

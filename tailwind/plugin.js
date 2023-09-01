@@ -1,26 +1,26 @@
-'use strict';
+"use strict";
 
-const tailwindPlugin = require('tailwindcss/plugin');
+const tailwindPlugin = require("tailwindcss/plugin");
 
 const COMPONENTS = {
-  avatar: require('./components/avatar'),
-  button: require('./components/button'),
-  checkbox: require('./components/checkbox'),
-  dropdown: require('./components/dropdown'),
-  iconButton: require('./components/icon-button'),
-  input: require('./components/input'),
-  progress: require('./components/progress'),
-  radio: require('./components/radio'),
-  select: require('./components/select'),
-  spinner: require('./components/spinner'),
-  switch: require('./components/switch'),
-  tag: require('./components/tag'),
-  textarea: require('./components/textarea'),
-  tooltip: require('./components/tooltip'),
+  avatar: require("./components/avatar"),
+  button: require("./components/button"),
+  checkbox: require("./components/checkbox"),
+  dropdown: require("./components/dropdown"),
+  iconButton: require("./components/icon-button"),
+  input: require("./components/input"),
+  progress: require("./components/progress"),
+  radio: require("./components/radio"),
+  select: require("./components/select"),
+  spinner: require("./components/spinner"),
+  switch: require("./components/switch"),
+  tag: require("./components/tag"),
+  textarea: require("./components/textarea"),
+  tooltip: require("./components/tooltip"),
 };
 
 const UTILITIES = {
-  ...require('./utilities/outline'),
+  ...require("./utilities/outline"),
 };
 
 const DEFAULT_OPTIONS = {

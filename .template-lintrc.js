@@ -1,19 +1,19 @@
-'use strict';
+"use strict";
 
 module.exports = {
   extends: [
-    'a11y',
-    'ember-template-lint-plugin-prettier:recommended',
-    'recommended',
+    "a11y",
+    "ember-template-lint-plugin-prettier:recommended",
+    "recommended",
   ],
   overrides: [
     {
-      files: ['**/tests/integration/**/*.{js,ts}'],
+      files: ["**/tests/integration/**/*.{js,ts}"],
       rules: {
         // Doesn't work reliably for inline templates.
         prettier: false,
       },
     },
   ],
-  plugins: ['ember-template-lint-plugin-prettier'],
+  plugins: ["ember-template-lint-plugin-prettier"],
 };

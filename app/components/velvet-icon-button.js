@@ -1,1 +1,1 @@
-export { default } from 'velvet-thunder/components/velvet-icon-button';
+export { default } from "velvet-thunder/components/velvet-icon-button";

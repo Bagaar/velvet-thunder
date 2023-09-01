@@ -1,1 +1,1 @@
-export { default } from 'velvet-thunder/components/velvet-disclosure-icon';
+export { default } from "velvet-thunder/components/velvet-disclosure-icon";

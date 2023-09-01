@@ -1,8 +1,8 @@
-import { guidFor } from '@ember/object/internals';
-import Component from '@glimmer/component';
-import type { WithBoundArgs } from '@glint/template';
-import VelvetCheckbox from 'velvet-thunder/components/velvet-checkbox';
-import type { Size } from 'velvet-thunder/components/velvet-checkbox';
+import { guidFor } from "@ember/object/internals";
+import Component from "@glimmer/component";
+import type { WithBoundArgs } from "@glint/template";
+import VelvetCheckbox from "velvet-thunder/components/velvet-checkbox";
+import type { Size } from "velvet-thunder/components/velvet-checkbox";
 
 export type ValueAsArray = string[];
 export type ValueAsObject = { [name: string]: boolean };
@@ -26,12 +26,12 @@ interface VelvetCheckboxGroupSignature {
       {
         Checkbox: WithBoundArgs<
           typeof VelvetCheckbox,
-          | 'isDisabled'
-          | 'size'
-          | 'privateGroupValue'
-          | 'privateGroupValueIsObject'
-          | 'privateInGroup'
-          | 'privateOnChangeGroup'
+          | "isDisabled"
+          | "size"
+          | "privateGroupValue"
+          | "privateGroupValueIsObject"
+          | "privateInGroup"
+          | "privateOnChangeGroup"
         >;
       },
     ];

@@ -1,4 +1,4 @@
-import { assert } from '@ember/debug';
+import { assert } from "@ember/debug";
 import {
   autoUpdate,
   computePosition,
@@ -6,14 +6,14 @@ import {
   offset,
   Placement,
   Strategy,
-} from '@floating-ui/dom';
-import Component from '@glimmer/component';
-import { tracked } from '@glimmer/tracking';
-import type { ModifierLike, WithBoundArgs } from '@glint/template';
-import { modifier } from 'ember-modifier';
-import VelvetButton from 'velvet-thunder/components/velvet-button';
-import VelvetDropdownContent from 'velvet-thunder/components/velvet-dropdown/content';
-import VelvetIconButton from 'velvet-thunder/components/velvet-icon-button';
+} from "@floating-ui/dom";
+import Component from "@glimmer/component";
+import { tracked } from "@glimmer/tracking";
+import type { ModifierLike, WithBoundArgs } from "@glint/template";
+import { modifier } from "ember-modifier";
+import VelvetButton from "velvet-thunder/components/velvet-button";
+import VelvetDropdownContent from "velvet-thunder/components/velvet-dropdown/content";
+import VelvetIconButton from "velvet-thunder/components/velvet-icon-button";
 
 interface VelvetDropdownSignature {
   Args: {
@@ -29,15 +29,15 @@ interface VelvetDropdownSignature {
       {
         Button: WithBoundArgs<
           typeof VelvetButton,
-          'privateDropdownTrigger' | 'isDisclosure' | 'variant'
+          "privateDropdownTrigger" | "isDisclosure" | "variant"
         >;
         Content: WithBoundArgs<
           typeof VelvetDropdownContent,
-          'isShown' | 'modifier'
+          "isShown" | "modifier"
         >;
         IconButton: WithBoundArgs<
           typeof VelvetIconButton,
-          'privateDropdownTrigger' | 'variant'
+          "privateDropdownTrigger" | "variant"
         >;
         isShown: boolean;
         hide: () => void;
@@ -70,21 +70,21 @@ export default class VelvetDropdown extends Component<VelvetDropdownSignature> {
   get offset(): number {
     const { offset } = this.args;
 
-    return typeof offset === 'number' ? offset : 4;
+    return typeof offset === "number" ? offset : 4;
   }
 
   get placement(): Placement {
-    return this.args.placement || 'bottom-start';
+    return this.args.placement || "bottom-start";
   }
 
   get strategy(): Strategy {
-    return this.args.strategy || 'absolute';
+    return this.args.strategy || "absolute";
   }
 
   content = modifier<ContentSignature>((contentElement) => {
     const { placement, strategy, triggerElement } = this;
 
-    assert('[VelvetDropdown] Trigger element must be present.', triggerElement);
+    assert("[VelvetDropdown] Trigger element must be present.", triggerElement);
 
     // https://floating-ui.com/docs/computeposition#initial-layout:
     Object.assign(contentElement.style, {
@@ -121,27 +121,27 @@ export default class VelvetDropdown extends Component<VelvetDropdownSignature> {
     };
 
     const pressEscapeHandler = ({ key }: KeyboardEvent) => {
-      if (key === 'Escape') {
+      if (key === "Escape") {
         this.hide();
       }
     };
 
-    document.addEventListener('click', clickOutsideHandler);
-    document.addEventListener('keydown', pressEscapeHandler);
+    document.addEventListener("click", clickOutsideHandler);
+    document.addEventListener("keydown", pressEscapeHandler);
 
     return () => {
       cleanupFloating();
-      document.removeEventListener('click', clickOutsideHandler);
-      document.removeEventListener('keydown', pressEscapeHandler);
+      document.removeEventListener("click", clickOutsideHandler);
+      document.removeEventListener("keydown", pressEscapeHandler);
     };
   });
 
   trigger = modifier<TriggerSignature>((triggerElement) => {
     this.triggerElement = triggerElement;
 
-    triggerElement.addEventListener('click', this.toggle);
+    triggerElement.addEventListener("click", this.toggle);
 
-    return () => triggerElement.removeEventListener('click', this.toggle);
+    return () => triggerElement.removeEventListener("click", this.toggle);
   });
 
   hide = () => {
