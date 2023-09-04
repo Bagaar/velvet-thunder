@@ -1,7 +1,6 @@
 # Velvet Thunder
 
 [![CI](https://github.com/Bagaar/velvet-thunder/workflows/CI/badge.svg)](https://github.com/Bagaar/velvet-thunder/actions?query=workflow%3ACI)
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9b6ec67f-2c2a-42e1-a29e-ad9c1d9f3b3e/deploy-status)](https://app.netlify.com/sites/velvet-thunder/deploys)
 
 ## Compatibility
