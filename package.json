@@ -14,6 +14,7 @@
   },
   "scripts": {
     "build": "pnpm tailwind:build && ember build --environment=production",
+    "husky:install": "husky install",
     "lint": "concurrently --group --prefix-colors auto \"npm:lint:*(!fix)\"",
     "lint:css": "stylelint \"./**/*.css\"",
     "lint:css:fix": "stylelint \"./**/*.css\" --fix",
@@ -33,10 +34,10 @@
     "test:ember-compatibility": "ember try:each"
   },
   "lint-staged": {
-    "*.{css,hbs,js,json,md,ts,yml}": "prettier --cache --check",
-    "*.css": "stylelint",
-    "*.hbs": "ember-template-lint",
-    "*.{js,ts}": "eslint"
+    "*.{css,hbs,js,json,md,ts,yml}": "prettier --cache --write",
+    "*.css": "stylelint --fix",
+    "*.hbs": "ember-template-lint --fix",
+    "*.{js,ts}": "eslint --fix"
   },
   "dependencies": {
     "@babel/core": "^7.22.15",
@@ -92,6 +93,7 @@
     "eslint-plugin-ember": "^11.11.1",
     "eslint-plugin-n": "^16.0.2",
     "eslint-plugin-qunit": "^8.0.0",
+    "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "loader.js": "^4.7.0",
     "postcss": "^8.4.29",
