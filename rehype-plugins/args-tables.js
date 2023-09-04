@@ -38,12 +38,22 @@ function velvetThunderArgsTables() {
           componentArgs = node.node.typeAnnotation.typeAnnotation.members
             .filter((node) => node.key.name.startsWith("private") === false)
             .map((node) => {
-              let descriptionLines = (node.leadingComments || [])
-                .filter((comment) => comment.value.startsWith("/ "))
+              let leadingComments = node.leadingComments || [];
+              let descriptionLines = leadingComments
+                .filter(isDescriptionComment)
                 .map((comment) => comment.value.replace("/ ", "").trim());
 
+              let defaultValueComment = leadingComments.find(
+                isDefaultValueComment,
+              );
+
               return {
-                default: "undefined",
+                default: defaultValueComment
+                  ? defaultValueComment.value.substring(
+                      defaultValueComment.value.indexOf("[") + 1,
+                      defaultValueComment.value.indexOf("]"),
+                    )
+                  : "TODO",
                 descriptionLines,
                 name: node.key.name,
                 type: babelGenerator(node.typeAnnotation.typeAnnotation).code,
@@ -107,6 +117,16 @@ function element(tagName, children = []) {
     tagName,
     type: "element",
   };
+}
+
+function isDescriptionComment(comment) {
+  return (
+    comment.value.startsWith("/ ") && isDefaultValueComment(comment) === false
+  );
+}
+
+function isDefaultValueComment(comment) {
+  return comment.value.startsWith("/ @default");
 }
 
 function text(value) {

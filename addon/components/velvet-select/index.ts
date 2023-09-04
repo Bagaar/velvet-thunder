@@ -5,20 +5,28 @@ import VelvetSelectOption from "velvet-thunder/components/velvet-select/option";
 interface VelvetSelectSignature {
   Args: {
     /// Indicate if the select is disabled.
+    /// @default [false]
     isDisabled?: boolean;
     /// Indicate if the select is invalid.
+    /// @default [false]
     isInvalid?: boolean;
     /// Indicate if the select is pill shaped.
+    /// @default [false]
     isPill?: boolean;
     /// Handle the select's `change` event.
+    /// @default [undefined]
     onChange?: (selected: unknown, event: Event) => void;
     /// The placeholder of the select.
+    /// @default [""]
     placeholder?: string;
     /// The selected option of the select.
+    /// @default [undefined]
     selected?: unknown;
     /// The size of the select.
+    /// @default ["md"]
     size?: "sm" | "md" | "lg";
     /// The appearance of the select.
+    /// @default ["primary"]
     variant?: string | "primary";
   };
   Blocks: {

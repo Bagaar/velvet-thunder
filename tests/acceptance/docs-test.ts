@@ -32,7 +32,7 @@ module("Acceptance | docs", function (hooks) {
       await visit(url);
       await percySnapshot(component);
 
-      assert.ok(true);
+      assert.dom().doesNotIncludeText("TODO");
     });
   });
 });

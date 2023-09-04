@@ -15,13 +15,8 @@ module.exports = {
   ],
   darkMode: "class",
   plugins: [
-    tailwindFormsPlugin({
-      strategy: "class",
-    }),
+    tailwindFormsPlugin({ strategy: "class" }),
     tailwindTypographyPlugin,
     velvetThunder.plugin(),
   ],
-  theme: {
-    extend: {},
-  },
 };

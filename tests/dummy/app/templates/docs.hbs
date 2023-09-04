@@ -29,8 +29,8 @@
 
             <ul class="space-y-2">
               {{#each child.pages as |page|}}
-                <li>
-                  <sidebar.Link @page={{page}} class="pl-8" />
+                <li class="pl-4">
+                  <sidebar.Link @page={{page}} />
                 </li>
               {{/each}}
             </ul>
