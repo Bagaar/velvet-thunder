@@ -24,10 +24,12 @@ import type VelvetClassListHelper from "velvet-thunder/helpers/-velvet/class-lis
 
 // Dependencies:
 import type { EmbroiderUtilRegistry } from "@embroider/util";
-import type OrHelper from "ember-truth-helpers/helpers/or";
+import type EmberTruthHelpersRegistry from "ember-truth-helpers/template-registry";
 
 declare module "@glint/environment-ember-loose/registry" {
-  export default interface Registry extends EmbroiderUtilRegistry {
+  export default interface Registry
+    extends EmbroiderUtilRegistry,
+      EmberTruthHelpersRegistry {
     VelvetAvatar: typeof VelvetAvatar;
     VelvetButton: typeof VelvetButton;
     VelvetCheckbox: typeof VelvetCheckbox;
@@ -69,8 +71,5 @@ declare module "@glint/environment-ember-loose/registry" {
 
     // Private:
     "-velvet/class-list": typeof VelvetClassListHelper;
-
-    // Dependencies:
-    or: typeof OrHelper;
   }
 }
