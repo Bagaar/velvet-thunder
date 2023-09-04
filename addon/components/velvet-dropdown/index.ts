@@ -18,10 +18,13 @@ import VelvetIconButton from "velvet-thunder/components/velvet-icon-button";
 interface VelvetDropdownSignature {
   Args: {
     /// Offset of the content in pixels relative to the trigger.
+    /// @default [4]
     offset?: number;
     /// Placement of the content relative to the trigger.
+    /// @default ["bottom-start"]
     placement?: Placement;
     /// CSS position of the content.
+    /// @default ["absolute"]
     strategy?: Strategy;
   };
   Blocks: {

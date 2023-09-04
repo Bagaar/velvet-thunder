@@ -17,12 +17,16 @@ import VelvetTooltipContent from "velvet-thunder/components/velvet-tooltip/conte
 interface VelvetTooltipSignature {
   Args: {
     /// Offset of the content in pixels relative to the trigger.
+    /// @default [4]
     offset?: number;
     /// Placement of the content relative to the trigger.
+    /// @default ["top"]
     placement?: Placement;
     /// Delay in milliseconds before showing the tooltip.
+    /// @default [400]
     showDelay?: number;
     /// CSS position of the content.
+    /// @default ["absolute"]
     strategy?: Strategy;
   };
   Blocks: {

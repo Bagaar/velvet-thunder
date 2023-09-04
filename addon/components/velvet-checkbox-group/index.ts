@@ -11,14 +11,19 @@ export type Value = ValueAsArray | ValueAsObject;
 interface VelvetCheckboxGroupSignature {
   Args: {
     /// Indicate if the checkbox group is disabled.
+    /// @default [false]
     isDisabled?: boolean;
     /// Handle the checkbox group's `change` event.
+    /// @default [undefined]
     onChange?: (value: Value, event: Event) => void;
     /// The size of the checkboxes.
+    /// @default ["md"]
     size?: Size;
     /// The value of the checkbox group.
+    /// @default [undefined]
     value?: Value;
     /// Indicate if `@value` is an `Object` instead of an `Array`.
+    /// @default [false]
     valueIsObject?: boolean;
   };
   Blocks: {

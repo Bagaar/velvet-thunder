@@ -4,6 +4,7 @@ import Component from "@glimmer/component";
 interface VelvetSelectOptionSignature {
   Args: {
     /// The value of the option.
+    /// @default [undefined]
     value: unknown;
 
     privateOnCreate: (id: string, value: unknown) => void;

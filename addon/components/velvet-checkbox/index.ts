@@ -10,16 +10,22 @@ export type Size = "sm" | "md" | "lg";
 interface VelvetCheckboxSignature {
   Args: {
     /// Indicate if the checkbox is checked.
+    /// @default [false]
     isChecked?: boolean;
     /// Indicate if the checkbox is disabled.
+    /// @default [false]
     isDisabled?: boolean;
     /// Indicate if the checkbox is indeterminate.
+    /// @default [false]
     isIndeterminate?: boolean;
     /// The name of the checkbox.
+    /// @default [""]
     name?: string;
     /// Handle the checkbox's `change` event.
+    /// @default [undefined]
     onChange?: (value: boolean, event: Event) => void;
     /// The size of the checkbox.
+    /// @default ["md"]
     size?: Size;
 
     privateGroupValue?: GroupValue;
