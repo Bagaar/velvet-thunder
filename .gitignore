@@ -3,7 +3,6 @@
 # compiled output
 /dist/
 /tests/dummy/public/assets/tailwind.css
-/tmp/
 
 # dependencies
 /node_modules/
