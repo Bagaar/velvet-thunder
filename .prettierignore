@@ -1,21 +1,9 @@
-# unconventional js
-/blueprints/*/files/
-
-# compiled output
-/dist/
-/tests/dummy/public/assets/*.css
-/tmp/
-
-# dependencies
-/node_modules/
-
-# misc
-/coverage/
-!.*
-.eslintcache
-.lint-todo/
-
-# ember-try
+# Folders:
 /.node_modules.ember-try/
-/package.json.ember-try
+/dist/
+
+# Files:
 /pnpm-lock.ember-try.yaml
+/pnpm-lock.yaml
+/tests/dummy/public/assets/*.css
+*.html
