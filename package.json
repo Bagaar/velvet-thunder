@@ -12,6 +12,13 @@
     "doc": "doc",
     "test": "tests"
   },
+  "files": [
+    "addon/",
+    "addon-test-support/",
+    "app/",
+    "tailwind/",
+    "index.js"
+  ],
   "scripts": {
     "build": "pnpm tailwind:build && ember build --environment=production",
     "husky:install": "husky install",
