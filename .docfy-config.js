@@ -27,6 +27,6 @@ module.exports = {
   ],
   repository: {
     editBranch: "main",
-    url: "https://github.com/Bagaar/velvet-thunder",
+    url: "https://github.com/bagaar/velvet-thunder",
   },
 };

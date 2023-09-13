@@ -13,7 +13,7 @@ export function velvetSelect(
   const element = find(target);
 
   assert(
-    `velvetSelect: No select element found matching "${target}".`,
+    `[velvetSelect] No \`select\` element found matching \`${target}\`.`,
     element instanceof HTMLSelectElement,
   );
 
@@ -26,7 +26,7 @@ export function velvetSelect(
   }
 
   assert(
-    "velvetSelect: No option element found matching the provided index or text value.",
+    "[velvetSelect] No `option` element found matching the provided `index` or `text` value.",
     option,
   );
 

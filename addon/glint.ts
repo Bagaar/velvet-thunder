@@ -7,6 +7,7 @@ import type VelvetDropdown from "velvet-thunder/components/velvet-dropdown";
 import type VelvetDropdownContent from "velvet-thunder/components/velvet-dropdown/content";
 import type VelvetIconButton from "velvet-thunder/components/velvet-icon-button";
 import type VelvetInput from "velvet-thunder/components/velvet-input";
+import type VelvetLink from "velvet-thunder/components/velvet-link";
 import type VelvetProgress from "velvet-thunder/components/velvet-progress";
 import type VelvetRadio from "velvet-thunder/components/velvet-radio";
 import type VelvetRadioGroup from "velvet-thunder/components/velvet-radio-group";
@@ -38,6 +39,7 @@ declare module "@glint/environment-ember-loose/registry" {
     VelvetDropdown: typeof VelvetDropdown;
     VelvetIconButton: typeof VelvetIconButton;
     VelvetInput: typeof VelvetInput;
+    VelvetLink: typeof VelvetLink;
     VelvetProgress: typeof VelvetProgress;
     VelvetRadio: typeof VelvetRadio;
     VelvetRadioGroup: typeof VelvetRadioGroup;
@@ -57,6 +59,7 @@ declare module "@glint/environment-ember-loose/registry" {
     "velvet-dropdown/content": typeof VelvetDropdownContent;
     "velvet-icon-button": typeof VelvetIconButton;
     "velvet-input": typeof VelvetInput;
+    "velvet-link": typeof VelvetLink;
     "velvet-progress": typeof VelvetProgress;
     "velvet-radio": typeof VelvetRadio;
     "velvet-radio-group": typeof VelvetRadioGroup;

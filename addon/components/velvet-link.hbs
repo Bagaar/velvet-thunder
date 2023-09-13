@@ -1,0 +1,13 @@
+<a
+  class={{-velvet/class-list
+    "velvet-link"
+    (concat "velvet-link-" (or @size "md"))
+    (concat "velvet-link-" (or @variant "primary"))
+    (if @isPill "velvet-link-pill")
+  }}
+  href={{this.link.url}}
+  {{on "click" this.link.transitionTo}}
+  ...attributes
+>
+  {{yield}}
+</a>
