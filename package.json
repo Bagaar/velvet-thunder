@@ -103,7 +103,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "loader.js": "^4.7.0",
-    "postcss": "^8.4.29",
+    "postcss": "^8.4.30",
     "prettier": "^3.0.3",
     "qunit": "^2.19.4",
     "qunit-dom": "^2.0.0",
