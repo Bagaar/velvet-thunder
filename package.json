@@ -110,7 +110,7 @@
     "rehype-autolink-headings": "^5.0.0",
     "rehype-highlight": "^4.1.0",
     "rehype-wrap-all": "^1.1.0",
-    "release-it": "^16.1.5",
+    "release-it": "^16.2.1",
     "stylelint": "^15.10.3",
     "stylelint-config-standard": "^34.0.0",
     "stylelint-config-tailwindcss": "^0.0.7",
