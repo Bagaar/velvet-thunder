@@ -47,7 +47,7 @@
     "*.{js,ts}": "eslint --fix"
   },
   "dependencies": {
-    "@babel/core": "^7.22.17",
+    "@babel/core": "^7.23.2",
     "@ember/test-waiters": "^3.0.2",
     "@embroider/util": "^1.12.0",
     "@floating-ui/dom": "^1.5.2",
