@@ -1,4 +1,4 @@
-import { render, typeIn, TestContext } from "@ember/test-helpers";
+import { render, typeIn, type TestContext } from "@ember/test-helpers";
 import { setupRenderingTest } from "dummy/tests/helpers";
 import { hbs } from "ember-cli-htmlbars";
 import { module, test } from "qunit";
