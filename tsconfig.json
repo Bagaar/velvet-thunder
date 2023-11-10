@@ -13,7 +13,9 @@
       "velvet-thunder/test-support": ["addon-test-support"],
       "velvet-thunder/test-support/*": ["addon-test-support/*"],
       "*": ["types/*"]
-    }
+    },
+    // Temp because of https://github.com/josemarluedke/docfy/issues/164.
+    "skipLibCheck": true
   },
   "glint": {
     "environment": "ember-loose"
