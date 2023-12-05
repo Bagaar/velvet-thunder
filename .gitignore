@@ -1,6 +1,5 @@
-# See https://help.github.com/ignore-files/ for more about ignoring files.
-
 # compiled output
+/declarations/
 /dist/
 /tests/dummy/public/assets/tailwind.css
 
@@ -10,11 +9,8 @@
 # misc
 /.env*
 /.pnp*
-/.sass-cache
 /.eslintcache
-/connect.lock
 /coverage/
-/libpeerconnection.log
 /pnpm-debug.log
 /testem.log
 

@@ -4,8 +4,8 @@ import {
   computePosition,
   flip,
   offset,
-  Placement,
-  Strategy,
+  type Placement,
+  type Strategy,
 } from "@floating-ui/dom";
 import Component from "@glimmer/component";
 import { tracked } from "@glimmer/tracking";
