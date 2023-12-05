@@ -10,6 +10,7 @@ const COMPONENTS = [
   "checkbox-group",
   "dropdown",
   "icon-button",
+  "icon-link",
   "input",
   "link",
   "progress",

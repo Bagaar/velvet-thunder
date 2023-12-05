@@ -8,6 +8,7 @@ const COMPONENTS = {
   checkbox: require("./components/checkbox"),
   dropdown: require("./components/dropdown"),
   iconButton: require("./components/icon-button"),
+  iconLink: require("./components/icon-link"),
   input: require("./components/input"),
   link: require("./components/link"),
   progress: require("./components/progress"),
