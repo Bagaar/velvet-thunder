@@ -15,7 +15,7 @@ function velvetThunderArgsTables() {
 
     markers.forEach((marker) => {
       const componentName = MARKER_REG_EXP.exec(marker.value)[1];
-      const componentPath = `./addon/components/${componentName}/index.ts`;
+      const componentPath = `./addon/components/${componentName}.ts`;
 
       if (existsSync(componentPath) === false) {
         throw new Error(`\`${componentName}\` is not a valid component name.`);
