@@ -2,7 +2,7 @@
 
 module.exports = () => ({
   ".velvet-spinner": {
-    "@apply animate-spin": {},
+    "@apply animate-spin shrink-0": {},
 
     "&-xs": {
       "@apply h-3 w-3": {},
