@@ -3,7 +3,7 @@
 module.exports = () => ({
   ".velvet-icon-button": {
     "@apply border border-transparent": {},
-    "@apply flex items-center justify-center": {},
+    "@apply flex items-center justify-center shrink-0": {},
     "@apply rounded-md transition": {},
 
     "&:focus-visible": {

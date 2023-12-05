@@ -3,7 +3,7 @@
 module.exports = () => ({
   ".velvet-avatar": {
     "@apply flex font-medium items-center justify-center": {},
-    "@apply overflow-hidden text-white uppercase": {},
+    "@apply overflow-hidden shrink-0 text-white uppercase": {},
 
     "&-image": {
       "@apply h-full object-cover w-full": {},
