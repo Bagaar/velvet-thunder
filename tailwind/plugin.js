@@ -9,6 +9,7 @@ const COMPONENTS = {
   dropdown: require("./components/dropdown"),
   iconButton: require("./components/icon-button"),
   input: require("./components/input"),
+  link: require("./components/link"),
   progress: require("./components/progress"),
   radio: require("./components/radio"),
   select: require("./components/select"),

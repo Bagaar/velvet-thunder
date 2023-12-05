@@ -11,6 +11,7 @@ const COMPONENTS = [
   "dropdown",
   "icon-button",
   "input",
+  "link",
   "progress",
   "radio",
   "radio-group",
