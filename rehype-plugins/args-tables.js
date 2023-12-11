@@ -54,7 +54,9 @@ function velvetThunderArgsTables() {
                       defaultValueComment.value.indexOf("]"),
                     )
                   : "TODO",
-                descriptionLines,
+                descriptionLines: descriptionLines.length
+                  ? descriptionLines
+                  : ["TODO"],
                 name: node.key.name,
                 type: babelGenerator(node.typeAnnotation.typeAnnotation).code,
               };
@@ -62,46 +64,50 @@ function velvetThunderArgsTables() {
         },
       });
 
-      if (componentArgs.length === 0) {
-        return;
+      let content;
+
+      if (componentArgs.length > 0) {
+        content = element("table", [
+          element("thead", [
+            element("tr", [
+              element("th", [text("Name")]),
+              element("th", [text("Description")]),
+              element("th", [text("Type")]),
+              element("th", [text("Default Value")]),
+            ]),
+          ]),
+          element(
+            "tbody",
+            componentArgs.map((componentArg) => {
+              const descriptionElements = componentArg.descriptionLines.reduce(
+                (elements, line, index) => {
+                  elements.push(text(line));
+
+                  if (index < componentArg.descriptionLines.length - 1) {
+                    elements.push(element("br"));
+                  }
+
+                  return elements;
+                },
+                [],
+              );
+
+              return element("tr", [
+                element("td", [code("@" + componentArg.name)]),
+                element("td", descriptionElements),
+                element("td", [code(componentArg.type)]),
+                element("td", [code(componentArg.default)]),
+              ]);
+            }),
+          ),
+        ]);
+      } else {
+        content = element("p", [
+          text("This component does not accept any arguments."),
+        ]);
       }
 
-      const componentArgsTable = element("table", [
-        element("thead", [
-          element("tr", [
-            element("th", [text("Name")]),
-            element("th", [text("Description")]),
-            element("th", [text("Type")]),
-            element("th", [text("Default Value")]),
-          ]),
-        ]),
-        element(
-          "tbody",
-          componentArgs.map((componentArg) => {
-            const descriptionElements = componentArg.descriptionLines.reduce(
-              (elements, line, index) => {
-                elements.push(text(line));
-
-                if (index < componentArg.descriptionLines.length - 1) {
-                  elements.push(element("br"));
-                }
-
-                return elements;
-              },
-              [],
-            );
-
-            return element("tr", [
-              element("td", [code("@" + componentArg.name)]),
-              element("td", descriptionElements),
-              element("td", [code(componentArg.type)]),
-              element("td", [code(componentArg.default)]),
-            ]);
-          }),
-        ),
-      ]);
-
-      children.splice(children.indexOf(marker), 1, componentArgsTable);
+      children.splice(children.indexOf(marker), 1, content);
     });
   };
 }
