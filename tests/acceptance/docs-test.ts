@@ -8,6 +8,7 @@ const COMPONENTS = [
   "button",
   "checkbox",
   "checkbox-group",
+  "disclosure",
   "dropdown",
   "icon-button",
   "icon-link",

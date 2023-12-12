@@ -21,6 +21,9 @@ dependencies:
   '@floating-ui/dom':
     specifier: ^1.5.3
     version: 1.5.3
+  '@formkit/auto-animate':
+    specifier: ^0.8.1
+    version: 0.8.1
   '@glimmer/component':
     specifier: ^1.1.2
     version: 1.1.2(@babel/core@7.23.5)
@@ -2186,6 +2189,10 @@ packages:
 
   /@floating-ui/utils@0.1.6:
     resolution: {integrity: sha512-OfX7E2oUDYxtBvsuS4e/jSn4Q9Qb6DzgeYtsAdkPZ47znpoNsMgZw0+tVijiv3uGNR6dgNlty6r9rzIzHjtd/A==}
+    dev: false
+
+  /@formkit/auto-animate@0.8.1:
+    resolution: {integrity: sha512-0/Z2cuNXWVVIG/l0SpcHAWFhGdvLJ8DRvEfRWvmojtmRWfEy+LWNwgDazbZqY0qQYtkHcoEK3jBLkhiZaB/4Ig==}
     dev: false
 
   /@gar/promisify@1.1.3:

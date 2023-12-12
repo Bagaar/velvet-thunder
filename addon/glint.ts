@@ -2,6 +2,7 @@ import type VelvetAvatar from "velvet-thunder/components/velvet-avatar";
 import type VelvetButton from "velvet-thunder/components/velvet-button";
 import type VelvetCheckbox from "velvet-thunder/components/velvet-checkbox";
 import type VelvetCheckboxGroup from "velvet-thunder/components/velvet-checkbox-group";
+import type VelvetDisclosure from "velvet-thunder/components/velvet-disclosure";
 import type VelvetDisclosureIcon from "velvet-thunder/components/velvet-disclosure-icon";
 import type VelvetDropdown from "velvet-thunder/components/velvet-dropdown";
 import type VelvetDropdownContent from "velvet-thunder/components/velvet-dropdown/content";
@@ -23,6 +24,7 @@ import type VelvetTooltipContent from "velvet-thunder/components/velvet-tooltip/
 
 // Private:
 import type VelvetClassListHelper from "velvet-thunder/helpers/-velvet/class-list";
+import type VelvetAutoAnimateModifier from "velvet-thunder/modifiers/-velvet/auto-animate";
 
 // Dependencies:
 import type { EmbroiderUtilRegistry } from "@embroider/util";
@@ -36,6 +38,7 @@ declare module "@glint/environment-ember-loose/registry" {
     VelvetButton: typeof VelvetButton;
     VelvetCheckbox: typeof VelvetCheckbox;
     VelvetCheckboxGroup: typeof VelvetCheckboxGroup;
+    VelvetDisclosure: typeof VelvetDisclosure;
     VelvetDisclosureIcon: typeof VelvetDisclosureIcon;
     VelvetDropdown: typeof VelvetDropdown;
     VelvetIconButton: typeof VelvetIconButton;
@@ -56,6 +59,7 @@ declare module "@glint/environment-ember-loose/registry" {
     "velvet-button": typeof VelvetButton;
     "velvet-checkbox": typeof VelvetCheckbox;
     "velvet-checkbox-group": typeof VelvetCheckboxGroup;
+    "velvet-disclosure": typeof VelvetDisclosure;
     "velvet-disclosure-icon": typeof VelvetDisclosureIcon;
     "velvet-dropdown": typeof VelvetDropdown;
     "velvet-dropdown/content": typeof VelvetDropdownContent;
@@ -77,5 +81,6 @@ declare module "@glint/environment-ember-loose/registry" {
 
     // Private:
     "-velvet/class-list": typeof VelvetClassListHelper;
+    "-velvet/auto-animate": typeof VelvetAutoAnimateModifier;
   }
 }

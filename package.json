@@ -66,6 +66,7 @@
     "@ember/test-waiters": "^3.1.0",
     "@embroider/util": "^1.12.1",
     "@floating-ui/dom": "^1.5.3",
+    "@formkit/auto-animate": "^0.8.1",
     "@glimmer/component": "^1.1.2",
     "@glimmer/tracking": "^1.1.2",
     "ember-auto-import": "^2.7.0",
