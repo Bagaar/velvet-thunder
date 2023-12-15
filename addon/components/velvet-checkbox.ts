@@ -34,6 +34,7 @@ interface VelvetCheckboxSignature {
     privateOnChangeGroup?: (value: GroupValue, event: Event) => void;
   };
   Blocks: {
+    /// The label of the checkbox.
     default: [];
   };
   Element: HTMLInputElement;

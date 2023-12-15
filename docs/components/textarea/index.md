@@ -36,6 +36,6 @@ manualDemoInsertion: true
 
 [[demos-all]]
 
-## Arguments
+## Signature
 
-<!-- args-table: velvet-textarea -->
+<!-- component-signature: velvet-textarea -->

@@ -35,6 +35,6 @@ manualDemoInsertion: true
 
 [[demos-all]]
 
-## Arguments
+## Signature
 
-<!-- args-table: velvet-checkbox -->
+<!-- component-signature: velvet-checkbox -->

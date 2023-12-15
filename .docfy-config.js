@@ -3,11 +3,11 @@
 const rehypeAutolinkHeadings = require("rehype-autolink-headings");
 const rehypeHighlight = require("rehype-highlight");
 const rehypeWrapAll = require("rehype-wrap-all");
-const argsTables = require("./rehype-plugins/args-tables");
+const componentSignatures = require("./rehype-plugins/component-signatures");
 
 module.exports = {
   rehypePlugins: [
-    argsTables,
+    componentSignatures,
     [
       rehypeAutolinkHeadings,
       {

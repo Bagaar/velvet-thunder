@@ -8,7 +8,7 @@ interface VelvetIconLinkSignature {
     /// @default [false]
     isRound?: boolean;
 
-    /// The size of the link.
+    /// The size of the icon link.
     /// @default ["md"]
     size?: "xs" | "sm" | "md" | "lg";
 
@@ -16,11 +16,12 @@ interface VelvetIconLinkSignature {
     /// @default [undefined]
     to: string | Link;
 
-    /// The appearance of the link.
+    /// The appearance of the icon link.
     /// @default ["primary"]
     variant?: string | "primary";
   };
   Blocks: {
+    /// The icon of the icon link.
     default: [];
   };
   Element: HTMLAnchorElement;

@@ -35,6 +35,7 @@ interface VelvetButtonSignature {
     privateDropdownTrigger?: ModifierLike<TriggerSignature>;
   };
   Blocks: {
+    /// The content of the button.
     default: [{ class: string }];
   };
   Element: HTMLButtonElement;

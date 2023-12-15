@@ -36,6 +36,6 @@ manualDemoInsertion: true
 
 [[demos-all]]
 
-## Arguments
+## Signature
 
-<!-- args-table: velvet-switch -->
+<!-- component-signature: velvet-switch -->

@@ -107,9 +107,9 @@ Uses [Floating UI](https://floating-ui.com/) underneath.
 </DemoSpaceX>
 ```
 
-## Arguments
+## Signature
 
-<!-- args-table: velvet-dropdown -->
+<!-- component-signature: velvet-dropdown -->
 
 - [Click here for all available `Placement` values](https://floating-ui.com/docs/computePosition#placement)
 - [Click here for all available `Strategy` values](https://floating-ui.com/docs/computePosition#strategy)

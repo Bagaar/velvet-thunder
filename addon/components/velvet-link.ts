@@ -21,6 +21,7 @@ interface VelvetLinkSignature {
     variant?: string | "primary";
   };
   Blocks: {
+    /// The content of the link.
     default: [];
   };
   Element: HTMLAnchorElement;

@@ -23,6 +23,7 @@ interface VelvetRadioGroupSignature {
     value?: unknown;
   };
   Blocks: {
+    /// The radios for the radio group.
     default: [
       {
         Radio: WithBoundArgs<

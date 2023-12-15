@@ -13,6 +13,7 @@ interface VelvetTagSignature {
     variant?: string | "primary";
   };
   Blocks: {
+    /// The label of the tag.
     default: [];
   };
   Element: HTMLDivElement;

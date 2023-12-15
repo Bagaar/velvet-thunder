@@ -45,6 +45,6 @@ manualDemoInsertion: true
 
 [[demos-all]]
 
-## Arguments
+## Signature
 
-<!-- args-table: velvet-radio-group -->
+<!-- component-signature: velvet-radio-group -->

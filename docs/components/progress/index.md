@@ -20,6 +20,6 @@
 </DemoSpaceX>
 ```
 
-## Arguments
+## Signature
 
-<!-- args-table: velvet-progress -->
+<!-- component-signature: velvet-progress -->
