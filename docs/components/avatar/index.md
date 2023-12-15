@@ -44,9 +44,9 @@
 <VelvetAvatar />
 ```
 
-## Arguments
+## Signature
 
-<!-- args-table: velvet-avatar -->
+<!-- component-signature: velvet-avatar -->
 
 The order to determine what to display is as follows:
 

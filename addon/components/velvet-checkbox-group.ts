@@ -27,6 +27,7 @@ interface VelvetCheckboxGroupSignature {
     valueIsObject?: boolean;
   };
   Blocks: {
+    /// The checkboxes for the checkbox group.
     default: [
       {
         Checkbox: WithBoundArgs<

@@ -30,6 +30,7 @@ interface VelvetTooltipSignature {
     strategy?: Strategy;
   };
   Blocks: {
+    /// The content of the tooltip.
     default: [
       {
         Content: WithBoundArgs<

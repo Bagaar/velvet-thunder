@@ -52,6 +52,6 @@ manualDemoInsertion: true
 
 [[demos-all]]
 
-## Arguments
+## Signature
 
-<!-- args-table: velvet-input -->
+<!-- component-signature: velvet-input -->

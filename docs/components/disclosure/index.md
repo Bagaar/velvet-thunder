@@ -57,6 +57,6 @@ Uses [AutoAnimate](https://auto-animate.formkit.com/) underneath.
 
 [[demos-all]]
 
-## Arguments
+## Signature
 
-<!-- args-table: velvet-disclosure -->
+<!-- component-signature: velvet-disclosure -->

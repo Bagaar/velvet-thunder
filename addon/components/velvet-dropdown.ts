@@ -28,6 +28,7 @@ interface VelvetDropdownSignature {
     strategy?: Strategy;
   };
   Blocks: {
+    /// The trigger and the content of the dropdown.
     default: [
       {
         Button: WithBoundArgs<

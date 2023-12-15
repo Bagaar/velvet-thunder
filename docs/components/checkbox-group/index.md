@@ -60,6 +60,6 @@ manualDemoInsertion: true
 
 [[demos-all]]
 
-## Arguments
+## Signature
 
-<!-- args-table: velvet-checkbox-group -->
+<!-- component-signature: velvet-checkbox-group -->

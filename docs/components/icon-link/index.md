@@ -73,6 +73,6 @@ Requires the use of [ember-link](https://buschtoens.github.io/ember-link/).
 
 [[demos-all]]
 
-## Arguments
+## Signature
 
-<!-- args-table: velvet-icon-link -->
+<!-- component-signature: velvet-icon-link -->

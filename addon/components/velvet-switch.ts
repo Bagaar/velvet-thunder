@@ -19,6 +19,7 @@ interface VelvetSwitchSignature {
     size?: "sm" | "md" | "lg";
   };
   Blocks: {
+    /// The label of the switch.
     default: [];
   };
   Element: HTMLInputElement;

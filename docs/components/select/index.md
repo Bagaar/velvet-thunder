@@ -70,13 +70,13 @@ manualDemoInsertion: true
 
 [[demos-all]]
 
-## Arguments
+## Signature
 
-<!-- args-table: velvet-select -->
+<!-- component-signature: velvet-select -->
 
-### Option Arguments
+### Option Signature
 
-<!-- args-table: velvet-select/option -->
+<!-- component-signature: velvet-select/option -->
 
 ## Testing
 

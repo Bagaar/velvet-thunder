@@ -28,6 +28,7 @@ interface VelvetRadioSignature {
     privateOnChangeGroup?: (value: unknown, event: Event) => void;
   };
   Blocks: {
+    /// The label of the radio.
     default: [];
   };
   Element: HTMLInputElement;

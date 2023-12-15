@@ -91,6 +91,6 @@ manualDemoInsertion: true
 
 [[demos-all]]
 
-## Arguments
+## Signature
 
-<!-- args-table: velvet-button -->
+<!-- component-signature: velvet-button -->

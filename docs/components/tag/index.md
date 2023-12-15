@@ -28,6 +28,6 @@
 </DemoSpaceX>
 ```
 
-## Arguments
+## Signature
 
-<!-- args-table: velvet-tag -->
+<!-- component-signature: velvet-tag -->

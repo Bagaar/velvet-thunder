@@ -12,6 +12,6 @@
 </DemoSpaceX>
 ```
 
-## Arguments
+## Signature
 
-<!-- args-table: velvet-spinner -->
+<!-- component-signature: velvet-spinner -->

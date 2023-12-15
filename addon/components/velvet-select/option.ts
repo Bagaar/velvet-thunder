@@ -12,6 +12,7 @@ interface VelvetSelectOptionSignature {
     privateSelected: unknown;
   };
   Blocks: {
+    /// The label of the option.
     default: [];
   };
   Element: HTMLOptionElement;

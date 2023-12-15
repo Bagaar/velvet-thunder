@@ -30,6 +30,7 @@ interface VelvetSelectSignature {
     variant?: string | "primary";
   };
   Blocks: {
+    /// The options of the select.
     default: [
       {
         Option: WithBoundArgs<

@@ -11,7 +11,9 @@ interface VelvetDisclosureSignature {
     shouldAnimate?: boolean;
   };
   Blocks: {
+    /// The content of the disclosure.
     content: [publicAPI: PublicAPI];
+    /// The trigger of the disclosure.
     trigger: [
       publicAPI: PublicAPI & {
         Button: WithBoundArgs<typeof VelvetButton, "isDisclosure" | "onClick">;
