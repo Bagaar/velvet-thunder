@@ -26,9 +26,9 @@ yarn add -D velvet-thunder tailwindcss @tailwindcss/forms
 
 ## Configuration
 
-```js
-// tailwind.config.js
+In `tailwind.config.js`:
 
+```js
 "use strict";
 
 const tailwindFormsPlugin = require("@tailwindcss/forms");
