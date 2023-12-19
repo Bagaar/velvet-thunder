@@ -11,7 +11,7 @@ interface VelvetButtonSignature {
     /// Indicate if the button discloses content.
     /// @default [false]
     isDisclosure?: boolean;
-    /// Indicate if the button should display a loading state.
+    /// Indicate if the button should render a loading state.
     /// @default [false]
     isLoading?: boolean;
     /// Indicate if the button is pill shaped.

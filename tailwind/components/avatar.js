@@ -24,5 +24,9 @@ module.exports = () => ({
     "&-round": {
       "@apply rounded-full": {},
     },
+
+    "&-icon": {
+      "@apply h-4 w-4": {},
+    },
   },
 });

@@ -51,7 +51,7 @@ export default class VelvetSelect extends Component<VelvetSelectSignature> {
     return this.args.selected !== undefined && this.args.selected !== null;
   }
 
-  get shouldDisplayPlaceholder() {
+  get shouldRenderPlaceholder() {
     return Boolean(this.args.placeholder) && this.hasSelection === false;
   }
 

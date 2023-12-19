@@ -48,9 +48,9 @@
 
 <!-- component-signature: velvet-avatar -->
 
-The order to determine what to display is as follows:
+The order to determine what to render is as follows:
 
-1. If the `@src` argument is provided, the image will be displayed
+1. If the `@src` argument is provided, the image will be rendered
 1. If the `@src` argument is **not** provided, the `@name` argument will be used to determine the initials
-1. If the `@name` argument is **not** provided, the `@initials` argument will be displayed
-1. If the `@initials` argument is **not** provided, a question mark will be displayed as a last resort
+1. If the `@name` argument is **not** provided, the `@initials` argument will be rendered
+1. If the `@initials` argument is **not** provided, a user icon will be rendered as a last resort

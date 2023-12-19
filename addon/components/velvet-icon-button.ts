@@ -11,7 +11,7 @@ interface VelvetIconButtonSignature {
     /// Indicate if the icon button discloses content.
     /// @default [false]
     isDisclosure?: boolean;
-    /// Indicate if the icon button should display a loading state.
+    /// Indicate if the icon button should render a loading state.
     /// @default [false]
     isLoading?: boolean;
     /// Make the icon button renderless.

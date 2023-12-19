@@ -9,14 +9,14 @@
     (if @isInvalid "velvet-select-invalid")
     (if @isPill "velvet-select-pill")
     (if @isDisabled "velvet-select-disabled")
-    (if this.shouldDisplayPlaceholder "velvet-select-placeholder")
+    (if this.shouldRenderPlaceholder "velvet-select-placeholder")
     "form-select"
   }}
   disabled={{@isDisabled}}
   {{on "change" this.changeHandler}}
   ...attributes
 >
-  {{#if this.shouldDisplayPlaceholder}}
+  {{#if this.shouldRenderPlaceholder}}
     <option disabled selected={{true}}>
       {{@placeholder}}
     </option>

@@ -88,12 +88,12 @@ module("Integration | Component | velvet-avatar", function (hooks) {
     assert.dom(SELECTOR).hasText("JP");
   });
 
-  test("it renders a question mark as a last resort", async function (assert) {
+  test("it renders a user icon as a last resort", async function (assert) {
     await render(hbs`
       <VelvetAvatar />
     `);
 
-    assert.dom(SELECTOR).hasText("?");
+    assert.dom(`${SELECTOR} .velvet-avatar-icon`).exists();
   });
 
   test("`...attributes` works", async function (assert) {

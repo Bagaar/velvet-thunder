@@ -1,4 +1,5 @@
 import Component from "@glimmer/component";
+import VelvetIconUser from "velvet-thunder/components/velvet-icon/user";
 
 interface VelvetAvatarSignature {
   Args: {
@@ -25,6 +26,8 @@ interface VelvetAvatarSignature {
 }
 
 export default class VelvetAvatar extends Component<VelvetAvatarSignature> {
+  VelvetIconUser = VelvetIconUser;
+
   get initials() {
     return (this.args.name || "")
       .split(" ")
