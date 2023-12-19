@@ -141,7 +141,7 @@ module("Integration | Component | velvet-icon-button", function (hooks) {
   });
 
   test("it handles `click` events", async function (this: VelvetIconButtonTestContext, assert) {
-    this.onClick = () => assert.step("clicked");
+    this.onClick = () => assert.step("click");
 
     await render<VelvetIconButtonTestContext>(hbs`
       <VelvetIconButton @onClick={{this.onClick}} />
@@ -149,7 +149,7 @@ module("Integration | Component | velvet-icon-button", function (hooks) {
 
     await click(SELECTOR);
 
-    assert.verifySteps(["clicked"]);
+    assert.verifySteps(["click"]);
   });
 
   test("renderless", async function (assert) {

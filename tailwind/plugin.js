@@ -3,6 +3,7 @@
 const tailwindPlugin = require("tailwindcss/plugin");
 
 const COMPONENTS = {
+  alert: require("./components/alert"),
   avatar: require("./components/avatar"),
   button: require("./components/button"),
   checkbox: require("./components/checkbox"),

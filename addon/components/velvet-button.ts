@@ -1,6 +1,7 @@
 import Component from "@glimmer/component";
 import type { ModifierLike } from "@glint/template";
 import type { TriggerSignature } from "velvet-thunder/components/velvet-dropdown";
+import VelvetIconChevronDown from "velvet-thunder/components/velvet-icon/chevron-down";
 
 interface VelvetButtonSignature {
   Args: {
@@ -42,6 +43,8 @@ interface VelvetButtonSignature {
 }
 
 export default class VelvetButton extends Component<VelvetButtonSignature> {
+  VelvetIconChevronDown = VelvetIconChevronDown;
+
   clickHandler = (event: MouseEvent) => {
     const { isDisabled, onClick } = this.args;
 

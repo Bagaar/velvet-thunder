@@ -5,6 +5,7 @@
 @import url("docfy");
 @import url("highlight-js");
 @import url("prose");
+@import url("components/alert");
 @import url("components/avatar");
 @import url("components/button-and-icon-button");
 @import url("components/checkbox-and-radio");
