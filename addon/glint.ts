@@ -1,9 +1,9 @@
+import type VelvetAlert from "velvet-thunder/components/velvet-alert";
 import type VelvetAvatar from "velvet-thunder/components/velvet-avatar";
 import type VelvetButton from "velvet-thunder/components/velvet-button";
 import type VelvetCheckbox from "velvet-thunder/components/velvet-checkbox";
 import type VelvetCheckboxGroup from "velvet-thunder/components/velvet-checkbox-group";
 import type VelvetDisclosure from "velvet-thunder/components/velvet-disclosure";
-import type VelvetDisclosureIcon from "velvet-thunder/components/velvet-disclosure-icon";
 import type VelvetDropdown from "velvet-thunder/components/velvet-dropdown";
 import type VelvetDropdownContent from "velvet-thunder/components/velvet-dropdown/content";
 import type VelvetIconButton from "velvet-thunder/components/velvet-icon-button";
@@ -34,12 +34,12 @@ declare module "@glint/environment-ember-loose/registry" {
   export default interface Registry
     extends EmbroiderUtilRegistry,
       EmberTruthHelpersRegistry {
+    VelvetAlert: typeof VelvetAlert;
     VelvetAvatar: typeof VelvetAvatar;
     VelvetButton: typeof VelvetButton;
     VelvetCheckbox: typeof VelvetCheckbox;
     VelvetCheckboxGroup: typeof VelvetCheckboxGroup;
     VelvetDisclosure: typeof VelvetDisclosure;
-    VelvetDisclosureIcon: typeof VelvetDisclosureIcon;
     VelvetDropdown: typeof VelvetDropdown;
     VelvetIconButton: typeof VelvetIconButton;
     VelvetIconLink: typeof VelvetIconLink;
@@ -55,12 +55,12 @@ declare module "@glint/environment-ember-loose/registry" {
     VelvetTextarea: typeof VelvetTextarea;
     VelvetTooltip: typeof VelvetTooltip;
 
+    "velvet-alert": typeof VelvetAlert;
     "velvet-avatar": typeof VelvetAvatar;
     "velvet-button": typeof VelvetButton;
     "velvet-checkbox": typeof VelvetCheckbox;
     "velvet-checkbox-group": typeof VelvetCheckboxGroup;
     "velvet-disclosure": typeof VelvetDisclosure;
-    "velvet-disclosure-icon": typeof VelvetDisclosureIcon;
     "velvet-dropdown": typeof VelvetDropdown;
     "velvet-dropdown/content": typeof VelvetDropdownContent;
     "velvet-icon-button": typeof VelvetIconButton;

@@ -20,15 +20,15 @@ module("Integration | Component | velvet-disclosure", function (hooks) {
       </VelvetDisclosure>
     `);
 
-    assert.dom().hasNoText();
+    assert.dom(SELECTOR).hasNoText();
 
     await click("button");
 
-    assert.dom().hasText("Content");
+    assert.dom(SELECTOR).hasText("Content");
 
     await click("button");
 
-    assert.dom().hasNoText();
+    assert.dom(SELECTOR).hasNoText();
   });
 
   test("it toggles the disclosed content using a `VelvetIconButton`", async function (assert) {
@@ -43,15 +43,15 @@ module("Integration | Component | velvet-disclosure", function (hooks) {
       </VelvetDisclosure>
     `);
 
-    assert.dom().hasNoText();
+    assert.dom(SELECTOR).hasNoText();
 
     await click("button");
 
-    assert.dom().hasText("Content");
+    assert.dom(SELECTOR).hasText("Content");
 
     await click("button");
 
-    assert.dom().hasNoText();
+    assert.dom(SELECTOR).hasNoText();
   });
 
   test("it toggles the disclosed content using a custom trigger", async function (assert) {
@@ -66,15 +66,15 @@ module("Integration | Component | velvet-disclosure", function (hooks) {
       </VelvetDisclosure>
     `);
 
-    assert.dom().hasNoText();
+    assert.dom(SELECTOR).hasNoText();
 
     await click("button");
 
-    assert.dom().hasText("Content");
+    assert.dom(SELECTOR).hasText("Content");
 
     await click("button");
 
-    assert.dom().hasNoText();
+    assert.dom(SELECTOR).hasNoText();
   });
 
   test("it disables using animations", async function (assert) {

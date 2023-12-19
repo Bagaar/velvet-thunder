@@ -22,7 +22,9 @@
       {{#if @isLoading}}
         <VelvetSpinner />
       {{else if @isDisclosure}}
-        <VelvetDisclosureIcon class="velvet-icon-button-disclosure-icon" />
+        <this.VelvetIconChevronDown
+          class="velvet-icon-button-disclosure-icon"
+        />
       {{else}}
         {{yield (hash class=className)}}
       {{/if}}

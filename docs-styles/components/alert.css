@@ -1,0 +1,81 @@
+/* stylelint-disable no-descending-specificity */
+
+.velvet-alert-info {
+  @apply bg-sky-100 border-sky-200 text-sky-800;
+  @apply dark:bg-sky-900 dark:border-sky-800 dark:text-sky-400;
+
+  .velvet-icon-button-alert {
+    @apply bg-sky-200/40;
+    @apply dark:bg-sky-800/40;
+
+    &:hover {
+      @apply bg-sky-200/60;
+      @apply dark:bg-sky-800/60;
+    }
+
+    &:active {
+      @apply bg-sky-200/80;
+      @apply dark:bg-sky-800/80;
+    }
+  }
+}
+
+.velvet-alert-success {
+  @apply bg-emerald-100 border-emerald-200 text-emerald-800;
+  @apply dark:bg-emerald-900 dark:border-emerald-800 dark:text-emerald-400;
+
+  .velvet-icon-button-alert {
+    @apply bg-emerald-200/40;
+    @apply dark:bg-emerald-800/40;
+
+    &:hover {
+      @apply bg-emerald-200/60;
+      @apply dark:bg-emerald-800/60;
+    }
+
+    &:active {
+      @apply bg-emerald-200/80;
+      @apply dark:bg-emerald-800/80;
+    }
+  }
+}
+
+.velvet-alert-warning {
+  @apply bg-amber-100 border-amber-200 text-amber-800;
+  @apply dark:bg-amber-900 dark:border-amber-800 dark:text-amber-400;
+
+  .velvet-icon-button-alert {
+    @apply bg-amber-200/40;
+    @apply dark:bg-amber-800/40;
+
+    &:hover {
+      @apply bg-amber-200/60;
+      @apply dark:bg-amber-800/60;
+    }
+
+    &:active {
+      @apply bg-amber-200/80;
+      @apply dark:bg-amber-800/80;
+    }
+  }
+}
+
+.velvet-alert-danger {
+  @apply bg-rose-100 border-rose-200 text-rose-800;
+  @apply dark:bg-rose-900 dark:border-rose-800 dark:text-rose-400;
+
+  .velvet-icon-button-alert {
+    @apply bg-rose-200/40;
+    @apply dark:bg-rose-800/40;
+
+    &:hover {
+      @apply bg-rose-200/60;
+      @apply dark:bg-rose-800/60;
+    }
+
+    &:active {
+      @apply bg-rose-200/80;
+      @apply dark:bg-rose-800/80;
+    }
+  }
+}

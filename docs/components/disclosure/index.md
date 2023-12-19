@@ -29,7 +29,7 @@ Uses [AutoAnimate](https://auto-animate.formkit.com/) underneath.
 <VelvetDisclosure>
   <:trigger as |disclosure|>
     <disclosure.IconButton>
-      <VelvetDisclosureIcon />
+      <VelvetIcon::ChevronDown />
     </disclosure.IconButton>
   </:trigger>
   <:content>
