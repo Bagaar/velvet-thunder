@@ -5,6 +5,7 @@
     (concat "velvet-button-" (or @variant "primary"))
     (if @isPill "velvet-button-pill")
     (if @isDisabled "velvet-button-disabled")
+    (if @isDisclosure (if @isExpanded "velvet-button-expanded"))
   )
   as |className|
 }}
@@ -12,6 +13,7 @@
     {{yield (hash class=className)}}
   {{else}}
     <button
+      aria-expanded={{if @isDisclosure (if @isExpanded "true" "false") null}}
       class={{className}}
       disabled={{@isDisabled}}
       type={{or @type "button"}}
@@ -24,7 +26,11 @@
       {{/if}}
       {{yield (hash class=className)}}
       {{#if @isDisclosure}}
-        <this.VelvetIconChevronDown class="velvet-button-disclosure-icon" />
+        {{#if @isExpanded}}
+          <this.VelvetIconXMark class="velvet-button-disclosure-icon" />
+        {{else}}
+          <this.VelvetIconChevronDown class="velvet-button-disclosure-icon" />
+        {{/if}}
       {{/if}}
     </button>
   {{/if}}

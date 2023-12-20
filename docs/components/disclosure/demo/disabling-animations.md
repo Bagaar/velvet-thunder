@@ -5,7 +5,7 @@ Use the `@shouldAnimate` argument to enable/disable animations.
 ```hbs template
 <DemoSpaceY>
   <VelvetSwitch @isChecked={{this.shouldAnimate}} @onChange={{this.onChange}}>
-    Should Animate
+    Animate
   </VelvetSwitch>
 
   <VelvetDisclosure @shouldAnimate={{this.shouldAnimate}}>

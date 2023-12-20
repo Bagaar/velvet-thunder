@@ -16,7 +16,10 @@ interface VelvetDisclosureSignature {
     /// The trigger of the disclosure.
     trigger: [
       publicAPI: PublicAPI & {
-        Button: WithBoundArgs<typeof VelvetButton, "isDisclosure" | "onClick">;
+        Button: WithBoundArgs<
+          typeof VelvetButton,
+          "isDisclosure" | "isExpanded" | "onClick"
+        >;
         IconButton: WithBoundArgs<typeof VelvetIconButton, "onClick">;
       },
     ];

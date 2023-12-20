@@ -18,7 +18,7 @@ interface VelvetAlertSignature {
   };
   Blocks: {
     /// The content of the alert.
-    content?: [];
+    content: [];
     /// The icon of the alert.
     icon?: [{ class: "velvet-alert-icon" }];
     /// The title of the alert.

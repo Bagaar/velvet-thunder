@@ -2,6 +2,7 @@ import Component from "@glimmer/component";
 import type { ModifierLike } from "@glint/template";
 import type { TriggerSignature } from "velvet-thunder/components/velvet-dropdown";
 import VelvetIconChevronDown from "velvet-thunder/components/velvet-icon/chevron-down";
+import VelvetIconXMark from "velvet-thunder/components/velvet-icon/x-mark";
 
 interface VelvetButtonSignature {
   Args: {
@@ -11,6 +12,9 @@ interface VelvetButtonSignature {
     /// Indicate if the button discloses content.
     /// @default [false]
     isDisclosure?: boolean;
+    /// Indicate if the button's disclosed content is expanded.
+    /// @default [false]
+    isExpanded?: boolean;
     /// Indicate if the button should render a loading state.
     /// @default [false]
     isLoading?: boolean;
@@ -44,6 +48,7 @@ interface VelvetButtonSignature {
 
 export default class VelvetButton extends Component<VelvetButtonSignature> {
   VelvetIconChevronDown = VelvetIconChevronDown;
+  VelvetIconXMark = VelvetIconXMark;
 
   clickHandler = (event: MouseEvent) => {
     const { isDisabled, onClick } = this.args;
