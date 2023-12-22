@@ -54,19 +54,19 @@ manualDemoInsertion: true
 </DemoSpaceY>
 ```
 
-## Custom Icon
+## Custom Icons
 
 ```hbs preview-template
-<VelvetAlert @level="info">
+<VelvetAlert @level="danger">
   <:icon as |icon|>
-    <DemoLinkIcon class={{icon.class}} />
+    <VelvetIcon::XMark class={{icon.class}} />
   </:icon>
   <:title>
-    Info Alert
+    Danger Alert
   </:title>
   <:content>
-    More info about this info alert goes here. This example text is going to run
-    a bit longer, so that you can see how spacing within an alert works with
+    More info about this danger alert goes here. This example text is going to
+    run a bit longer, so that you can see how spacing within an alert works with
     this kind of content.
   </:content>
 </VelvetAlert>

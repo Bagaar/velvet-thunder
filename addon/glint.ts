@@ -1,3 +1,4 @@
+// Components:
 import type VelvetAlert from "velvet-thunder/components/velvet-alert";
 import type VelvetAvatar from "velvet-thunder/components/velvet-avatar";
 import type VelvetButton from "velvet-thunder/components/velvet-button";
@@ -22,9 +23,11 @@ import type VelvetTextarea from "velvet-thunder/components/velvet-textarea";
 import type VelvetTooltip from "velvet-thunder/components/velvet-tooltip";
 import type VelvetTooltipContent from "velvet-thunder/components/velvet-tooltip/content";
 
+// Modifiers:
+import type VelvetAutoAnimateModifier from "velvet-thunder/modifiers/velvet-auto-animate";
+
 // Private:
 import type VelvetClassListHelper from "velvet-thunder/helpers/-velvet/class-list";
-import type VelvetAutoAnimateModifier from "velvet-thunder/modifiers/-velvet/auto-animate";
 
 // Dependencies:
 import type { EmbroiderUtilRegistry } from "@embroider/util";
@@ -34,6 +37,7 @@ declare module "@glint/environment-ember-loose/registry" {
   export default interface Registry
     extends EmbroiderUtilRegistry,
       EmberTruthHelpersRegistry {
+    // Components:
     VelvetAlert: typeof VelvetAlert;
     VelvetAvatar: typeof VelvetAvatar;
     VelvetButton: typeof VelvetButton;
@@ -55,6 +59,7 @@ declare module "@glint/environment-ember-loose/registry" {
     VelvetTextarea: typeof VelvetTextarea;
     VelvetTooltip: typeof VelvetTooltip;
 
+    // Components:
     "velvet-alert": typeof VelvetAlert;
     "velvet-avatar": typeof VelvetAvatar;
     "velvet-button": typeof VelvetButton;
@@ -79,8 +84,10 @@ declare module "@glint/environment-ember-loose/registry" {
     "velvet-tooltip": typeof VelvetTooltip;
     "velvet-tooltip/content": typeof VelvetTooltipContent;
 
+    // Modifiers:
+    "velvet-auto-animate": typeof VelvetAutoAnimateModifier;
+
     // Private:
     "-velvet/class-list": typeof VelvetClassListHelper;
-    "-velvet/auto-animate": typeof VelvetAutoAnimateModifier;
   }
 }

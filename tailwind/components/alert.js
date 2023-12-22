@@ -2,14 +2,14 @@
 
 module.exports = () => ({
   ".velvet-alert": {
-    "@apply border p-4 rounded-lg": {},
+    "@apply p-4 rounded-lg": {},
 
     "&-header": {
       "@apply flex items-center mb-2 space-x-2": {},
     },
 
     "&-icon": {
-      "@apply h-4 shrink-0 w-4": {},
+      "@apply shrink-0 size-4": {},
     },
 
     "&-title": {
@@ -17,7 +17,7 @@ module.exports = () => ({
     },
 
     "&-content": {
-      "@apply text-sm": {},
+      "@apply pr-11 text-sm": {},
     },
   },
 });

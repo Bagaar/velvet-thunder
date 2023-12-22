@@ -35,7 +35,7 @@ module.exports = () => ({
     },
 
     "&-disclosure-icon": {
-      "@apply h-4 ml-2 w-4": {},
+      "@apply ml-2 size-4": {},
     },
 
     ".velvet-spinner": {

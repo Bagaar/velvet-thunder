@@ -190,7 +190,11 @@ function createApiTable(data, columns) {
       data.map((entry) =>
         element(
           "tr",
-          columns.map((column) => element("td", column.value(entry))),
+          columns.map((column) =>
+            element("td", column.value(entry), {
+              class: `col-${paramCase(column.title)}`,
+            }),
+          ),
         ),
       ),
     ),

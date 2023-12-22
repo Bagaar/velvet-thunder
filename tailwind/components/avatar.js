@@ -6,19 +6,19 @@ module.exports = () => ({
     "@apply overflow-hidden shrink-0 text-white uppercase": {},
 
     "&-image": {
-      "@apply h-full object-cover w-full": {},
+      "@apply object-cover size-full": {},
     },
 
     "&-sm": {
-      "@apply h-7 rounded text-xs w-7": {},
+      "@apply rounded size-7 text-xs": {},
     },
 
     "&-md": {
-      "@apply h-9 rounded-md text-sm w-9": {},
+      "@apply rounded-md size-9 text-sm": {},
     },
 
     "&-lg": {
-      "@apply h-11 rounded-lg text-base w-11": {},
+      "@apply rounded-lg size-11 text-base": {},
     },
 
     "&-round": {
@@ -26,7 +26,7 @@ module.exports = () => ({
     },
 
     "&-icon": {
-      "@apply h-4 w-4": {},
+      "@apply size-4": {},
     },
   },
 });

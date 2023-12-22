@@ -64,7 +64,7 @@ Uses [Floating UI](https://floating-ui.com/) underneath.
 </DemoSpaceX>
 ```
 
-## Trigger
+## Triggers
 
 ```hbs preview-template
 <DemoSpaceX>

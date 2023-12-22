@@ -6,7 +6,7 @@ manualDemoInsertion: true
 
 Uses [AutoAnimate](https://auto-animate.formkit.com/) underneath.
 
-## Trigger
+## Triggers
 
 ### Button
 
@@ -28,9 +28,12 @@ Uses [AutoAnimate](https://auto-animate.formkit.com/) underneath.
 ```hbs preview-template
 <VelvetDisclosure>
   <:trigger as |disclosure|>
-    <disclosure.IconButton>
-      <VelvetIcon::ChevronDown />
-    </disclosure.IconButton>
+    <div class="flex items-center">
+      <div class="grow">
+        Press the icon button on the right to toggle the content.
+      </div>
+      <disclosure.IconButton />
+    </div>
   </:trigger>
   <:content>
     <div class="bg-violet-500/25 h-52 mt-4 rounded-md"></div>

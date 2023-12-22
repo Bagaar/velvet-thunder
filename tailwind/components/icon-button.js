@@ -15,23 +15,27 @@ module.exports = () => ({
     },
 
     "&-xs": {
-      "@apply h-7 w-7": {},
+      "@apply size-7": {},
     },
 
     "&-sm": {
-      "@apply h-8 w-8": {},
+      "@apply size-8": {},
     },
 
     "&-md": {
-      "@apply h-9 w-9": {},
+      "@apply size-9": {},
     },
 
     "&-lg": {
-      "@apply h-10 w-10": {},
+      "@apply size-10": {},
     },
 
     "&-round": {
       "@apply rounded-full": {},
+    },
+
+    "&-disclosure-icon": {
+      "@apply size-4": {},
     },
   },
 });

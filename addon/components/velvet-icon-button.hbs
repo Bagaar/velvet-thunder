@@ -5,6 +5,7 @@
     (concat "velvet-icon-button-" (or @variant "primary"))
     (if @isRound "velvet-icon-button-round")
     (if @isDisabled "velvet-icon-button-disabled")
+    (if @isDisclosure (if @isExpanded "velvet-icon-button-expanded"))
   )
   as |className|
 }}
@@ -21,12 +22,16 @@
     >
       {{#if @isLoading}}
         <VelvetSpinner />
-      {{else if @isDisclosure}}
-        <this.VelvetIconChevronDown
-          class="velvet-icon-button-disclosure-icon"
-        />
-      {{else}}
+      {{else if (has-block)}}
         {{yield (hash class=className)}}
+      {{else if @isDisclosure}}
+        {{#if @isExpanded}}
+          <this.VelvetIconXMark class="velvet-icon-button-disclosure-icon" />
+        {{else}}
+          <this.VelvetIconChevronDown
+            class="velvet-icon-button-disclosure-icon"
+          />
+        {{/if}}
       {{/if}}
     </button>
   {{/if}}

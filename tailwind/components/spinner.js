@@ -5,23 +5,23 @@ module.exports = () => ({
     "@apply animate-spin shrink-0": {},
 
     "&-xs": {
-      "@apply h-3 w-3": {},
+      "@apply size-3": {},
     },
 
     "&-sm": {
-      "@apply h-4 w-4": {},
+      "@apply size-4": {},
     },
 
     "&-md": {
-      "@apply h-5 w-5": {},
+      "@apply size-5": {},
     },
 
     "&-lg": {
-      "@apply h-6 w-6": {},
+      "@apply size-6": {},
     },
 
     "&-xl": {
-      "@apply h-7 w-7": {},
+      "@apply size-7": {},
     },
 
     "&-track": {

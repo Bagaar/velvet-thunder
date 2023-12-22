@@ -91,15 +91,31 @@ manualDemoInsertion: true
 
 ```hbs preview-template
 <DemoSpaceX>
-  <VelvetIconButton @isDisclosure={{true}} @variant="primary">
-    <DemoMenuIcon />
-  </VelvetIconButton>
-  <VelvetIconButton @isDisclosure={{true}} @variant="secondary">
-    <DemoMenuIcon />
-  </VelvetIconButton>
-  <VelvetIconButton @isDisclosure={{true}} @variant="ghost">
-    <DemoMenuIcon />
-  </VelvetIconButton>
+  <VelvetIconButton @isDisclosure={{true}} @variant="primary" />
+  <VelvetIconButton @isDisclosure={{true}} @variant="secondary" />
+  <VelvetIconButton @isDisclosure={{true}} @variant="ghost" />
+</DemoSpaceX>
+```
+
+## Expanded
+
+```hbs preview-template
+<DemoSpaceX>
+  <VelvetIconButton
+    @isDisclosure={{true}}
+    @isExpanded={{true}}
+    @variant="primary"
+  />
+  <VelvetIconButton
+    @isDisclosure={{true}}
+    @isExpanded={{true}}
+    @variant="secondary"
+  />
+  <VelvetIconButton
+    @isDisclosure={{true}}
+    @isExpanded={{true}}
+    @variant="ghost"
+  />
 </DemoSpaceX>
 ```
 

@@ -71,6 +71,26 @@ manualDemoInsertion: true
 </DemoSpaceX>
 ```
 
+## Expanded
+
+```hbs preview-template
+<DemoSpaceX>
+  <VelvetButton @isDisclosure={{true}} @isExpanded={{true}} @variant="primary">
+    Button
+  </VelvetButton>
+  <VelvetButton
+    @isDisclosure={{true}}
+    @isExpanded={{true}}
+    @variant="secondary"
+  >
+    Button
+  </VelvetButton>
+  <VelvetButton @isDisclosure={{true}} @isExpanded={{true}} @variant="ghost">
+    Button
+  </VelvetButton>
+</DemoSpaceX>
+```
+
 ## Renderless
 
 ```hbs preview-template

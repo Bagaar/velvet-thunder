@@ -8,7 +8,7 @@ module.exports = () => ({
       "@apply text-xs": {},
 
       ".velvet-checkbox-input": {
-        "@apply h-4 mr-2 w-4": {},
+        "@apply mr-2 size-4": {},
       },
     },
 
@@ -16,7 +16,7 @@ module.exports = () => ({
       "@apply text-sm": {},
 
       ".velvet-checkbox-input": {
-        "@apply h-5 mr-3 w-5": {},
+        "@apply mr-3 size-5": {},
       },
     },
 
@@ -24,7 +24,7 @@ module.exports = () => ({
       "@apply text-base": {},
 
       ".velvet-checkbox-input": {
-        "@apply h-6 mr-4 w-6": {},
+        "@apply mr-4 size-6": {},
       },
     },
 

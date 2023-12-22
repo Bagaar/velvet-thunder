@@ -45,6 +45,7 @@ manualDemoInsertion: true
   <VelvetInput @type="number" />
   <VelvetInput @type="time" />
   <VelvetInput @type="date" />
+  <VelvetInput @type="range" />
 </DemoSpaceX>
 ```
 

@@ -3,7 +3,7 @@
 Use the `@onHide` argument to handle `hide` events.
 
 ```hbs template
-<DemoSpaceY {{-velvet/auto-animate}}>
+<DemoSpaceY {{velvet-auto-animate}}>
   {{#if this.isShown}}
     <VelvetSwitch
       @isChecked={{this.isHideable}}

@@ -16,7 +16,7 @@ module.exports = () => ({
       },
 
       ".velvet-switch-handle": {
-        "@apply h-3 w-3": {},
+        "@apply size-3": {},
       },
     },
 
@@ -28,7 +28,7 @@ module.exports = () => ({
       },
 
       ".velvet-switch-handle": {
-        "@apply h-4 w-4": {},
+        "@apply size-4": {},
       },
     },
 
@@ -40,7 +40,7 @@ module.exports = () => ({
       },
 
       ".velvet-switch-handle": {
-        "@apply h-5 w-5": {},
+        "@apply size-5": {},
       },
     },
 
