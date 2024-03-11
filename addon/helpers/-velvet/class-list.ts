@@ -1,5 +1,3 @@
-import { helper } from "@ember/component/helper";
-
-export default helper(function velvetClassList(positional) {
-  return positional.filter(Boolean).join(" ");
-});
+export default function velvetClassList(...classNames: string[]) {
+  return classNames.filter(Boolean).join(" ");
+}

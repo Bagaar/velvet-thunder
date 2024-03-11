@@ -1,7 +1,7 @@
 <label
   class={{-velvet/class-list
     "velvet-checkbox"
-    (concat "velvet-checkbox-" (or @size "md"))
+    (concat "velvet-checkbox-" (-velvet/arg @size "md"))
     (if @isDisabled "velvet-checkbox-disabled")
   }}
 >

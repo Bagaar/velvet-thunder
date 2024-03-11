@@ -1,8 +1,8 @@
 <label
   class={{-velvet/class-list
     "velvet-switch"
-    (concat "velvet-switch-" (or @size "md"))
-    (concat "velvet-switch-" (or @alignment "left"))
+    (concat "velvet-switch-" (-velvet/arg @size "md"))
+    (concat "velvet-switch-" (-velvet/arg @alignment "left"))
     (if @isDisabled "velvet-switch-disabled")
   }}
 >

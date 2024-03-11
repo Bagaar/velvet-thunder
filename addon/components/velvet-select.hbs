@@ -4,8 +4,8 @@
 <select
   class={{-velvet/class-list
     "velvet-select"
-    (concat "velvet-select-" (or @size "md"))
-    (concat "velvet-select-" (or @variant "primary"))
+    (concat "velvet-select-" (-velvet/arg @size "md"))
+    (concat "velvet-select-" (-velvet/arg @variant "primary"))
     (if @isInvalid "velvet-select-invalid")
     (if @isPill "velvet-select-pill")
     (if @isDisabled "velvet-select-disabled")

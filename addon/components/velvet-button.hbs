@@ -1,8 +1,8 @@
 {{#let
   (-velvet/class-list
     "velvet-button"
-    (concat "velvet-button-" (or @size "md"))
-    (concat "velvet-button-" (or @variant "primary"))
+    (concat "velvet-button-" (-velvet/arg @size "md"))
+    (concat "velvet-button-" (-velvet/arg @variant "primary"))
     (if @isPill "velvet-button-pill")
     (if @isDisabled "velvet-button-disabled")
     (if @isDisclosure (if @isExpanded "velvet-button-expanded"))
@@ -16,7 +16,7 @@
       aria-expanded={{if @isDisclosure (if @isExpanded "true" "false") null}}
       class={{className}}
       disabled={{@isDisabled}}
-      type={{or @type "button"}}
+      type={{-velvet/arg @type "button"}}
       {{on "click" this.clickHandler}}
       {{@privateDropdownTrigger}}
       ...attributes

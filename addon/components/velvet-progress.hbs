@@ -1,8 +1,8 @@
 <div
   class={{-velvet/class-list
     "velvet-progress"
-    (concat "velvet-progress-" (or @size "md"))
-    (concat "velvet-progress-" (or @variant "primary"))
+    (concat "velvet-progress-" (-velvet/arg @size "md"))
+    (concat "velvet-progress-" (-velvet/arg @variant "primary"))
   }}
   aria-valuemax={{this.max}}
   aria-valuemin={{this.min}}

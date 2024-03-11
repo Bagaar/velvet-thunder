@@ -1,7 +1,7 @@
 <svg
   class={{-velvet/class-list
     "velvet-spinner"
-    (concat "velvet-spinner-" (or @size "md"))
+    (concat "velvet-spinner-" (-velvet/arg @size "md"))
   }}
   fill="none"
   role="status"

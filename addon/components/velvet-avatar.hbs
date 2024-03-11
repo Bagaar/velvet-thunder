@@ -1,8 +1,8 @@
 <div
   class={{-velvet/class-list
     "velvet-avatar"
-    (concat "velvet-avatar-" (or @size "md"))
-    (concat "velvet-avatar-" (or @variant "primary"))
+    (concat "velvet-avatar-" (-velvet/arg @size "md"))
+    (concat "velvet-avatar-" (-velvet/arg @variant "primary"))
     (if @isRound "velvet-avatar-round")
   }}
   ...attributes

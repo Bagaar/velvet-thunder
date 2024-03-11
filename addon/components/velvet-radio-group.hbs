@@ -1,7 +1,7 @@
 <div
   class={{-velvet/class-list
     "velvet-radio-group"
-    (concat "velvet-radio-group-" (or @size "md"))
+    (concat "velvet-radio-group-" (-velvet/arg @size "md"))
     (if @isDisabled "velvet-radio-group-disabled")
   }}
   role="group"
@@ -12,7 +12,7 @@
       Radio=(component
         (ensure-safe-component this.VelvetRadio)
         isDisabled=@isDisabled
-        name=(or @name this.uniqueName)
+        name=(-velvet/arg @name this.uniqueName)
         size=@size
         privateGroupValue=@value
         privateInGroup=true

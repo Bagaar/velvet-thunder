@@ -1,8 +1,8 @@
 <input
   class={{-velvet/class-list
     "velvet-input"
-    (concat "velvet-input-" (or @size "md"))
-    (concat "velvet-input-" (or @variant "primary"))
+    (concat "velvet-input-" (-velvet/arg @size "md"))
+    (concat "velvet-input-" (-velvet/arg @variant "primary"))
     (if @isInvalid "velvet-input-invalid")
     (if @isPill "velvet-input-pill")
     (if @isDisabled "velvet-input-disabled")
@@ -10,7 +10,7 @@
   }}
   disabled={{@isDisabled}}
   placeholder={{@placeholder}}
-  type={{or @type "text"}}
+  type={{-velvet/arg @type "text"}}
   value={{@value}}
   {{on "change" this.changeHandler}}
   {{on "input" this.inputHandler}}

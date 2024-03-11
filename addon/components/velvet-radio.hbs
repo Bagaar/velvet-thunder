@@ -1,7 +1,7 @@
 <label
   class={{-velvet/class-list
     "velvet-radio"
-    (concat "velvet-radio-" (or @size "md"))
+    (concat "velvet-radio-" (-velvet/arg @size "md"))
     (if @isDisabled "velvet-radio-disabled")
   }}
 >

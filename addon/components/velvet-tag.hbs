@@ -1,8 +1,8 @@
 <div
   class={{-velvet/class-list
     "velvet-tag"
-    (concat "velvet-tag-" (or @size "md"))
-    (concat "velvet-tag-" (or @variant "primary"))
+    (concat "velvet-tag-" (-velvet/arg @size "md"))
+    (concat "velvet-tag-" (-velvet/arg @variant "primary"))
     (if @isPill "velvet-tag-pill")
   }}
   ...attributes

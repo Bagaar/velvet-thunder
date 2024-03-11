@@ -1,8 +1,8 @@
 <textarea
   class={{-velvet/class-list
     "velvet-textarea"
-    (concat "velvet-textarea-" (or @size "md"))
-    (concat "velvet-textarea-" (or @variant "primary"))
+    (concat "velvet-textarea-" (-velvet/arg @size "md"))
+    (concat "velvet-textarea-" (-velvet/arg @variant "primary"))
     (if @isInvalid "velvet-textarea-invalid")
     (if @isDisabled "velvet-textarea-disabled")
     "form-textarea"

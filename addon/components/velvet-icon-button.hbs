@@ -1,8 +1,8 @@
 {{#let
   (-velvet/class-list
     "velvet-icon-button"
-    (concat "velvet-icon-button-" (or @size "md"))
-    (concat "velvet-icon-button-" (or @variant "primary"))
+    (concat "velvet-icon-button-" (-velvet/arg @size "md"))
+    (concat "velvet-icon-button-" (-velvet/arg @variant "primary"))
     (if @isRound "velvet-icon-button-round")
     (if @isDisabled "velvet-icon-button-disabled")
     (if @isDisclosure (if @isExpanded "velvet-icon-button-expanded"))
@@ -15,7 +15,7 @@
     <button
       class={{className}}
       disabled={{@isDisabled}}
-      type={{or @type "button"}}
+      type={{-velvet/arg @type "button"}}
       {{on "click" this.clickHandler}}
       {{@privateDropdownTrigger}}
       ...attributes

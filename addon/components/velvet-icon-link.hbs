@@ -1,8 +1,8 @@
 <a
   class={{-velvet/class-list
     "velvet-icon-link"
-    (concat "velvet-icon-link-" (or @size "md"))
-    (concat "velvet-icon-link-" (or @variant "primary"))
+    (concat "velvet-icon-link-" (-velvet/arg @size "md"))
+    (concat "velvet-icon-link-" (-velvet/arg @variant "primary"))
     (if @isRound "velvet-icon-link-round")
   }}
   href={{this.link.url}}

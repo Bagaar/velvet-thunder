@@ -1,7 +1,7 @@
 <div
   class={{-velvet/class-list
     "velvet-checkbox-group"
-    (concat "velvet-checkbox-group-" (or @size "md"))
+    (concat "velvet-checkbox-group-" (-velvet/arg @size "md"))
     (if @isDisabled "velvet-checkbox-group-disabled")
   }}
   role="group"
