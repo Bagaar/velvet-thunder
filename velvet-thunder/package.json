@@ -95,5 +95,8 @@
     "type": "addon",
     "main": "addon-main.cjs",
     "app-js": {}
+  },
+  "volta": {
+    "extends": "../package.json"
   }
 }
