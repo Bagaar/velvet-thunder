@@ -1,6 +1,6 @@
 import { service } from '@ember/service';
 import Component from '@glimmer/component';
-import { Link, type LinkManagerService } from 'ember-link';
+import { type Link, type LinkManagerService } from 'ember-link';
 
 export interface VelvetIconLinkSignature {
   Args: {
