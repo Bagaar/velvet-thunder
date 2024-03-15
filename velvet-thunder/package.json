@@ -106,6 +106,7 @@
     "type": "addon",
     "main": "addon-main.cjs",
     "app-js": {
+      "./helpers/-velvet/class-list.js": "./dist/_app_/helpers/-velvet/class-list.js",
       "./modifiers/velvet-auto-animate.js": "./dist/_app_/modifiers/velvet-auto-animate.js"
     }
   },
