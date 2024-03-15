@@ -1,0 +1,31 @@
+.velvet-progress-primary {
+  @apply bg-slate-200;
+
+  .velvet-progress-line {
+    @apply bg-slate-400;
+  }
+}
+
+.velvet-progress-emerald {
+  @apply bg-emerald-200;
+
+  .velvet-progress-line {
+    @apply bg-emerald-400;
+  }
+}
+
+.velvet-progress-amber {
+  @apply bg-amber-200;
+
+  .velvet-progress-line {
+    @apply bg-amber-400;
+  }
+}
+
+.velvet-progress-rose {
+  @apply bg-rose-200;
+
+  .velvet-progress-line {
+    @apply bg-rose-400;
+  }
+}

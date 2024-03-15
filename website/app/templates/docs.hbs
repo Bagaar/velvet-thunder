@@ -1,0 +1,128 @@
+{{! @glint-nocheck }}
+
+{{page-title "Documentation"}}
+
+<DocsHeader>
+  <DocsLogo />
+
+  <div class="flex items-center">
+    <DocsDarkModeToggle @onToggle={{this.toggleDarkMode}} class="mr-4" />
+    <DocsGithubLink />
+  </div>
+</DocsHeader>
+
+<DocsSidebar class="border-r left-0 px-4" as |sidebar|>
+  <nav aria-label="primary site navigation">
+    <ul class="space-y-2">
+      <DocfyOutput @scope="docs" as |node|>
+        {{#each node.pages as |page|}}
+          <li>
+            <sidebar.Link @page={{page}} />
+          </li>
+        {{/each}}
+
+        {{#each node.children as |child|}}
+          <li>
+            <sidebar.Heading class="mb-2 px-4 py-2">
+              {{child.label}}
+            </sidebar.Heading>
+
+            <ul class="space-y-2">
+              {{#each child.pages as |page|}}
+                <li class="pl-4">
+                  <sidebar.Link @page={{page}} />
+                </li>
+              {{/each}}
+            </ul>
+          </li>
+        {{/each}}
+      </DocfyOutput>
+    </ul>
+  </nav>
+</DocsSidebar>
+
+<div class="ml-64 my-16 p-8 xl:mr-64">
+  <main
+    class="max-w-4xl mx-auto prose prose-slate prose-a:no-underline dark:prose-invert"
+  >
+    {{outlet}}
+  </main>
+</div>
+
+<div
+  class={{-velvet/class-list
+    "bottom-0 fixed h-16 left-64 px-8 right-0 xl:right-64"
+    "backdrop-blur bg-white/80 border-t border-slate-100"
+    "dark:bg-slate-900/80 dark:border-slate-800"
+  }}
+>
+  <div class="flex h-full items-center justify-between max-w-4xl mx-auto">
+    <DocfyPreviousAndNextPage as |previous next|>
+      <div>
+        {{#if previous}}
+          <DocsSimpleLink as |link|>
+            <DocfyLink @to={{previous.url}} class={{link.class}}>
+              <svg
+                class="mr-3 rotate-180 size-3"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"
+                ></path>
+              </svg>
+              {{previous.title}}
+            </DocfyLink>
+          </DocsSimpleLink>
+        {{/if}}
+      </div>
+      <div>
+        {{#if next}}
+          <DocsSimpleLink as |link|>
+            <DocfyLink @to={{next.url}} class={{link.class}}>
+              {{next.title}}
+              <svg
+                class="ml-3 size-3"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"
+                ></path>
+              </svg>
+            </DocfyLink>
+          </DocsSimpleLink>
+        {{/if}}
+      </div>
+    </DocfyPreviousAndNextPage>
+  </div>
+</div>
+
+<DocsSidebar class="border-l hidden right-0 xl:block" as |sidebar|>
+  <sidebar.Heading class="mb-4">
+    On This Page
+  </sidebar.Heading>
+  <nav aria-label="secondary site navigation">
+    <ul class="space-y-4">
+      <DocfyOutput @fromCurrentURL={{true}} as |page|>
+        {{#if page.headings}}
+          {{#each page.headings as |heading|}}
+            <li>
+              <DocsSimpleLink as |link|>
+                <a class={{link.class}} href="#{{heading.id}}">
+                  {{heading.title}}
+                </a>
+              </DocsSimpleLink>
+            </li>
+          {{/each}}
+        {{else}}
+          <div class="text-sm">
+            Move along, nothing to see here.
+          </div>
+        {{/if}}
+      </DocfyOutput>
+    </ul>
+  </nav>
+</DocsSidebar>

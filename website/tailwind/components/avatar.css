@@ -1,0 +1,15 @@
+.velvet-avatar-primary {
+  @apply bg-slate-400;
+}
+
+.velvet-avatar-emerald {
+  @apply bg-emerald-400;
+}
+
+.velvet-avatar-amber {
+  @apply bg-amber-400;
+}
+
+.velvet-avatar-rose {
+  @apply bg-rose-400;
+}
