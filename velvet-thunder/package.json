@@ -28,6 +28,7 @@
   },
   "files": [
     "addon-main.cjs",
+    "CHANGELOG.md",
     "declarations",
     "dist"
   ],
