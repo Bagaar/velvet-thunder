@@ -1,0 +1,37 @@
+{{#let
+  (-velvet/class-list
+    "velvet-button"
+    (concat "velvet-button-" (or @size "md"))
+    (concat "velvet-button-" (or @variant "primary"))
+    (if @isPill "velvet-button-pill")
+    (if @isDisabled "velvet-button-disabled")
+    (if @isDisclosure (if @isExpanded "velvet-button-expanded"))
+  )
+  as |className|
+}}
+  {{#if @isRenderless}}
+    {{yield (hash class=className)}}
+  {{else}}
+    <button
+      aria-expanded={{if @isDisclosure (if @isExpanded "true" "false") null}}
+      class={{className}}
+      disabled={{@isDisabled}}
+      type={{or @type "button"}}
+      {{on "click" this.clickHandler}}
+      {{@privateDropdownTrigger}}
+      ...attributes
+    >
+      {{#if @isLoading}}
+        <VelvetSpinner />
+      {{/if}}
+      {{yield (hash class=className)}}
+      {{#if @isDisclosure}}
+        {{#if @isExpanded}}
+          <this.VelvetIconXMark class="velvet-button-disclosure-icon" />
+        {{else}}
+          <this.VelvetIconChevronDown class="velvet-button-disclosure-icon" />
+        {{/if}}
+      {{/if}}
+    </button>
+  {{/if}}
+{{/let}}

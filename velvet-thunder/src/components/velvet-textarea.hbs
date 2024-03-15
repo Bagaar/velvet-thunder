@@ -1,0 +1,16 @@
+<textarea
+  class={{-velvet/class-list
+    "velvet-textarea"
+    (concat "velvet-textarea-" (or @size "md"))
+    (concat "velvet-textarea-" (or @variant "primary"))
+    (if @isInvalid "velvet-textarea-invalid")
+    (if @isDisabled "velvet-textarea-disabled")
+    "form-textarea"
+  }}
+  disabled={{@isDisabled}}
+  placeholder={{@placeholder}}
+  value={{@value}}
+  {{on "change" this.changeHandler}}
+  {{on "input" this.inputHandler}}
+  ...attributes
+></textarea>

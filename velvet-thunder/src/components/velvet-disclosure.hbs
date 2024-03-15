@@ -1,0 +1,36 @@
+<div
+  class="velvet-disclosure"
+  {{(if this.shouldAnimate (modifier "velvet-auto-animate"))}}
+  ...attributes
+>
+  {{yield
+    (hash
+      Button=(component
+        (ensure-safe-component this.VelvetButton)
+        isDisclosure=true
+        isExpanded=this.isShown
+        onClick=this.toggle
+      )
+      IconButton=(component
+        (ensure-safe-component this.VelvetIconButton)
+        isDisclosure=true
+        isExpanded=this.isShown
+        onClick=this.toggle
+      )
+      isShown=this.isShown
+      hide=this.hide
+      show=this.show
+      toggle=this.toggle
+    )
+    to="trigger"
+  }}
+
+  {{#if this.isShown}}
+    {{yield
+      (hash
+        isShown=this.isShown hide=this.hide show=this.show toggle=this.toggle
+      )
+      to="content"
+    }}
+  {{/if}}
+</div>

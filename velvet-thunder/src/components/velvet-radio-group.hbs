@@ -1,0 +1,23 @@
+<div
+  class={{-velvet/class-list
+    "velvet-radio-group"
+    (concat "velvet-radio-group-" (or @size "md"))
+    (if @isDisabled "velvet-radio-group-disabled")
+  }}
+  role="group"
+  ...attributes
+>
+  {{yield
+    (hash
+      Radio=(component
+        (ensure-safe-component this.VelvetRadio)
+        isDisabled=@isDisabled
+        name=(or @name this.uniqueName)
+        size=@size
+        privateGroupValue=@value
+        privateInGroup=true
+        privateOnChangeGroup=@onChange
+      )
+    )
+  }}
+</div>

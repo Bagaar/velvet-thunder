@@ -1,0 +1,18 @@
+<input
+  class={{-velvet/class-list
+    "velvet-input"
+    (concat "velvet-input-" (or @size "md"))
+    (concat "velvet-input-" (or @variant "primary"))
+    (if @isInvalid "velvet-input-invalid")
+    (if @isPill "velvet-input-pill")
+    (if @isDisabled "velvet-input-disabled")
+    "form-input"
+  }}
+  disabled={{@isDisabled}}
+  placeholder={{@placeholder}}
+  type={{or @type "text"}}
+  value={{@value}}
+  {{on "change" this.changeHandler}}
+  {{on "input" this.inputHandler}}
+  ...attributes
+/>

@@ -1,0 +1,13 @@
+<a
+  class={{-velvet/class-list
+    "velvet-icon-link"
+    (concat "velvet-icon-link-" (or @size "md"))
+    (concat "velvet-icon-link-" (or @variant "primary"))
+    (if @isRound "velvet-icon-link-round")
+  }}
+  href={{this.link.url}}
+  {{on "click" this.link.transitionTo}}
+  ...attributes
+>
+  {{yield}}
+</a>

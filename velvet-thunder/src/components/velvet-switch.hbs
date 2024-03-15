@@ -1,0 +1,21 @@
+<label
+  class={{-velvet/class-list
+    "velvet-switch"
+    (concat "velvet-switch-" (or @size "md"))
+    (concat "velvet-switch-" (or @alignment "left"))
+    (if @isDisabled "velvet-switch-disabled")
+  }}
+>
+  <input
+    checked={{@isChecked}}
+    class="velvet-switch-input"
+    disabled={{@isDisabled}}
+    type="checkbox"
+    {{on "change" this.changeHandler}}
+    ...attributes
+  />
+  <div class="velvet-switch-track">
+    <div class="velvet-switch-handle"></div>
+  </div>
+  {{yield}}
+</label>

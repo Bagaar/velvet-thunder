@@ -1,0 +1,23 @@
+<div
+  class={{-velvet/class-list
+    "velvet-checkbox-group"
+    (concat "velvet-checkbox-group-" (or @size "md"))
+    (if @isDisabled "velvet-checkbox-group-disabled")
+  }}
+  role="group"
+  ...attributes
+>
+  {{yield
+    (hash
+      Checkbox=(component
+        (ensure-safe-component this.VelvetCheckbox)
+        isDisabled=@isDisabled
+        size=@size
+        privateGroupValue=@value
+        privateGroupValueIsObject=@valueIsObject
+        privateInGroup=true
+        privateOnChangeGroup=@onChange
+      )
+    )
+  }}
+</div>
