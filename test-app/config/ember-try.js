@@ -5,6 +5,7 @@ const { embroiderSafe, embroiderOptimized } = require('@embroider/test-setup');
 
 module.exports = async function () {
   return {
+    command: 'pnpm test:ember',
     usePnpm: true,
     scenarios: [
       {

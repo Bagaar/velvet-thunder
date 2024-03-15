@@ -31,6 +31,7 @@ module.exports = {
     // node files
     {
       files: [
+        './tailwind/**/*.cjs',
         './.eslintrc.cjs',
         './.prettierrc.cjs',
         './.template-lintrc.cjs',

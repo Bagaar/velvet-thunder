@@ -18,6 +18,9 @@
       "default": "./dist/*.js"
     },
     "./addon-main.js": "./addon-main.cjs",
+    "./tailwind": {
+      "require": "./tailwind/index.cjs"
+    },
     "./test-support": {
       "types": "./declarations/test-support/index.d.ts",
       "default": "./dist/test-support/index.js"
@@ -37,7 +40,8 @@
     "addon-main.cjs",
     "CHANGELOG.md",
     "declarations",
-    "dist"
+    "dist",
+    "tailwind"
   ],
   "scripts": {
     "build": "concurrently 'npm:build:*'",

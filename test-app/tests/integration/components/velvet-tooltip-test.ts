@@ -40,9 +40,10 @@ module('Integration | Component | velvet-tooltip', function (hooks) {
 
   test('it uses the correct offset', async function (assert) {
     await render(hbs`
+      {{! template-lint-disable no-inline-styles }}
       <VelvetTooltip @showDelay={{0}} class="relative" as |tooltip|>
         <VelvetButton {{tooltip.trigger}} />
-        <tooltip.Content />
+        <tooltip.Content style="height: 40px;" />
       </VelvetTooltip>
     `);
 
@@ -51,9 +52,10 @@ module('Integration | Component | velvet-tooltip', function (hooks) {
     assert.dom(SELECTOR_CONTENT).hasStyle({ top: '40px' });
 
     await render(hbs`
+      {{! template-lint-disable no-inline-styles }}
       <VelvetTooltip @offset={{12}} @showDelay={{0}} class="relative" as |tooltip|>
         <VelvetButton {{tooltip.trigger}} />
-        <tooltip.Content />
+        <tooltip.Content style="height: 40px;" />
       </VelvetTooltip>
     `);
 
