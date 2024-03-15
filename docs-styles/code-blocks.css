@@ -1,5 +1,0 @@
-pre {
-  @apply border overflow-auto p-4 rounded-xl text-[0.875rem];
-  @apply bg-slate-900 border-slate-900;
-  @apply dark:bg-slate-800/40 dark:border-slate-800;
-}

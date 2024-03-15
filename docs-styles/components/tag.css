@@ -1,7 +1,0 @@
-.velvet-tag-primary {
-  @apply bg-violet-500 text-white;
-}
-
-.velvet-tag-secondary {
-  @apply bg-violet-500/20 text-violet-600;
-}
