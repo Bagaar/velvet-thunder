@@ -1,8 +1,8 @@
 {
   "private": true,
-  "repository": "",
+  "repository": "https://github.com/bagaar/velvet-thunder",
   "license": "MIT",
-  "author": "",
+  "author": "Bagaar",
   "scripts": {
     "build": "pnpm --filter velvet-thunder build",
     "lint": "pnpm --filter '*' lint",

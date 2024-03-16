@@ -12,5 +12,8 @@
     },
     // https://github.com/josemarluedke/docfy/issues/164:
     "skipLibCheck": true
+  },
+  "glint": {
+    "environment": "ember-loose"
   }
 }

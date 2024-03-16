@@ -1,6 +1,6 @@
 # Velvet Thunder
 
-[![CI](https://github.com/Bagaar/velvet-thunder/workflows/CI/badge.svg)](https://github.com/Bagaar/velvet-thunder/actions?query=workflow%3ACI)
+[![CI](https://github.com/bagaar/velvet-thunder/workflows/CI/badge.svg)](https://github.com/bagaar/velvet-thunder/actions?query=workflow%3ACI)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9b6ec67f-2c2a-42e1-a29e-ad9c1d9f3b3e/deploy-status)](https://app.netlify.com/sites/velvet-thunder/deploys)
 
 **Velvet Thunder** is a semi-headless UI library built for [Ember](https://emberjs.com/) using [Tailwind CSS](https://tailwindcss.com/).

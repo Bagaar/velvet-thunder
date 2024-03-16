@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "description": "Test app for velvet-thunder addon",
-  "repository": "",
+  "repository": "https://github.com/bagaar/velvet-thunder",
   "license": "MIT",
-  "author": "",
+  "author": "Bagaar",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -20,7 +20,7 @@
     "lint:hbs:fix": "ember-template-lint . --fix",
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
-    "lint:types": "tsc --noEmit",
+    "lint:types": "glint",
     "start": "ember serve",
     "tailwind:build": "tailwindcss -i ./tailwind.css -o ./public/assets/tailwind.css --minify",
     "tailwind:watch": "tailwindcss -i ./tailwind.css -o ./public/assets/tailwind.css --watch",
