@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - master
   pull_request: {}
 
 concurrency:
@@ -12,57 +13,49 @@ concurrency:
 
 jobs:
   test:
-    name: Tests
+    name: "Tests"
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18.x
-      - uses: pnpm/action-setup@v2
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
         with:
           version: 8
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: pnpm
       - name: Install Dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
       - name: Lint
         run: pnpm lint
-      - name: Build Tailwind
-        run: pnpm tailwind:build
       - name: Run Tests
-        if: ${{ contains(github.event.*.labels.*.name, 'percy') == false }}
-        run: pnpm test:ember
-      - name: Run Tests With Percy
-        if: ${{ contains(github.event.*.labels.*.name, 'percy') }}
-        run: pnpx percy exec -- pnpm test:ember
-        env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+        run: pnpm test
 
   floating:
-    name: Floating Dependencies
+    name: "Floating Dependencies"
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18.x
-      - uses: pnpm/action-setup@v2
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
         with:
           version: 8
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: pnpm
       - name: Install Dependencies
         run: pnpm install --no-lockfile
-      - name: Build Tailwind
-        run: pnpm tailwind:build
       - name: Run Tests
-        run: pnpm test:ember
+        run: pnpm test
 
   try-scenarios:
-    name: Scenario - ${{ matrix.try-scenario }}
+    name: ${{ matrix.try-scenario }}
     runs-on: ubuntu-latest
-    needs: test
+    needs: 'test'
     timeout-minutes: 10
 
     strategy:
@@ -71,6 +64,7 @@ jobs:
         try-scenario:
           - ember-lts-4.8
           - ember-lts-4.12
+          - ember-lts-5.4
           - ember-release
           - ember-beta
           - ember-canary
@@ -78,16 +72,16 @@ jobs:
           - embroider-optimized
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18.x
-      - uses: pnpm/action-setup@v2
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
         with:
           version: 8
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: pnpm
       - name: Install Dependencies
-        run: pnpm install
-      - name: Build Tailwind
-        run: pnpm tailwind:build
+        run: pnpm install --frozen-lockfile
       - name: Run Tests
-        run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }}
+        run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }} --skip-cleanup
+        working-directory: test-app
