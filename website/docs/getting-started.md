@@ -6,6 +6,12 @@ order: 2
 
 ## Installation
 
+### bun
+
+```shell
+bun add -D velvet-thunder tailwindcss @tailwindcss/forms
+```
+
 ### npm
 
 ```shell
@@ -37,9 +43,7 @@ const velvetThunder = require("velvet-thunder/tailwind");
 module.exports = {
   content: [...velvetThunder.content()],
   plugins: [
-    tailwindFormsPlugin({
-      strategy: "class",
-    }),
+    tailwindFormsPlugin({ strategy: "class" }),
     velvetThunder.plugin(),
   ],
 };
