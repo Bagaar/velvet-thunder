@@ -4,6 +4,7 @@ const { default: babelGenerator } = require('@babel/generator');
 const { parse: babelParse } = require('@babel/parser');
 const { default: babelTraverse } = require('@babel/traverse');
 const { paramCase } = require('change-case');
+const { Preprocessor  } = require('content-tag');
 const { existsSync, readFileSync } = require('fs');
 
 const MARKER_REG_EXP = new RegExp('<!-- component-signature: (.*) -->');
@@ -47,6 +48,8 @@ const COLUMN = {
   }),
 };
 
+const contentTagPreprocessor = new Preprocessor();
+
 function velvetThunderComponentSignatures() {
   return ({ children }) => {
     const markers = children.filter((child) => {
@@ -55,13 +58,25 @@ function velvetThunderComponentSignatures() {
 
     markers.forEach((marker) => {
       const componentName = MARKER_REG_EXP.exec(marker.value)[1];
-      const componentPath = `../velvet-thunder/src/components/${componentName}.ts`;
 
-      if (existsSync(componentPath) === false) {
+      let componentPath;
+      for (const ext of ['.gts', '.ts']) {
+        componentPath = `../velvet-thunder/src/components/${componentName}${ext}`;
+
+        if (existsSync(componentPath)) {
+          break;
+        }
+      }
+
+      if (componentPath === undefined) {
         throw new Error(`\`${componentName}\` is not a valid component name.`);
       }
 
-      const componentFile = readFileSync(componentPath, { encoding: 'utf-8' });
+      let componentFile = readFileSync(componentPath, { encoding: 'utf-8' });
+      if (componentPath.endsWith('.gts')) {
+        componentFile = contentTagPreprocessor.process(componentFile);
+      }
+
       const componentAST = babelParse(componentFile, {
         plugins: ['decorators', 'typescript'],
         sourceType: 'module',

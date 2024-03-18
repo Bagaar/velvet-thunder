@@ -390,6 +390,9 @@ importers:
       concurrently:
         specifier: ^8.2.2
         version: 8.2.2
+      content-tag:
+        specifier: ^2.0.1
+        version: 2.0.1
       ember-auto-import:
         specifier: ^2.7.2
         version: 2.7.2(@glint/template@1.3.0)(webpack@5.90.3)
