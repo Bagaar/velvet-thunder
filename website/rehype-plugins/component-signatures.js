@@ -4,7 +4,7 @@ const { default: babelGenerator } = require('@babel/generator');
 const { parse: babelParse } = require('@babel/parser');
 const { default: babelTraverse } = require('@babel/traverse');
 const { paramCase } = require('change-case');
-const { Preprocessor  } = require('content-tag');
+const { Preprocessor } = require('content-tag');
 const { existsSync, readFileSync } = require('fs');
 
 const MARKER_REG_EXP = new RegExp('<!-- component-signature: (.*) -->');
