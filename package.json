@@ -15,14 +15,17 @@
     "test:ember": "pnpm --filter '*' test:ember"
   },
   "devDependencies": {
+    "@glint/core": "^1.2.1",
     "concurrently": "^8.2.0",
     "prettier": "^3.0.3",
-    "prettier-plugin-ember-template-tag": "^1.1.0",
-    "@glint/core": "^1.2.1"
+    "prettier-plugin-ember-template-tag": "^2.0.1"
   },
   "pnpm": {
     "overrides": {
       "@types/eslint": "^7.0.0"
+    },
+    "patchedDependencies": {
+      "fix-bad-declaration-output@1.1.2": "patches/fix-bad-declaration-output@1.1.2.patch"
     }
   },
   "volta": {

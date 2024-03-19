@@ -1,36 +1,33 @@
 // components
-import type VelvetAlert from './components/velvet-alert.ts';
-import type VelvetAvatar from './components/velvet-avatar.ts';
-import type VelvetButton from './components/velvet-button.ts';
-import type VelvetCheckboxGroup from './components/velvet-checkbox-group.ts';
-import type VelvetCheckbox from './components/velvet-checkbox.ts';
-import type VelvetDisclosure from './components/velvet-disclosure.ts';
-import type VelvetDropdown from './components/velvet-dropdown.ts';
-import type VelvetDropdownContent from './components/velvet-dropdown/content.ts';
-import type VelvetIconButton from './components/velvet-icon-button.ts';
-import type VelvetIconLink from './components/velvet-icon-link.ts';
-import type VelvetIconChevronDown from './components/velvet-icon/chevron-down.ts';
-import type VelvetIconCircleCheckSolid from './components/velvet-icon/circle-check-solid.ts';
-import type VelvetIconCircleExclamationSolid from './components/velvet-icon/circle-exclamation-solid.ts';
-import type VelvetIconCircleInfoSolid from './components/velvet-icon/circle-info-solid.ts';
-import type VelvetIconUser from './components/velvet-icon/user.ts';
-import type VelvetIconXMark from './components/velvet-icon/x-mark.ts';
-import type VelvetInput from './components/velvet-input.ts';
-import type VelvetLink from './components/velvet-link.ts';
-import type VelvetProgress from './components/velvet-progress.ts';
-import type VelvetRadioGroup from './components/velvet-radio-group.ts';
-import type VelvetRadio from './components/velvet-radio.ts';
-import type VelvetSelect from './components/velvet-select.ts';
-import type VelvetSelectOption from './components/velvet-select/option.ts';
-import type VelvetSpinner from './components/velvet-spinner.ts';
-import type VelvetSwitch from './components/velvet-switch.ts';
-import type VelvetTag from './components/velvet-tag.ts';
-import type VelvetTextarea from './components/velvet-textarea.ts';
-import type VelvetTooltip from './components/velvet-tooltip.ts';
-import type VelvetTooltipContent from './components/velvet-tooltip/content.ts';
-
-// helpers
-import type VelvetClassList from './helpers/-velvet/class-list.ts';
+import type VelvetAlert from './components/velvet-alert.gts';
+import type VelvetAvatar from './components/velvet-avatar.gts';
+import type VelvetButton from './components/velvet-button.gts';
+import type VelvetCheckboxGroup from './components/velvet-checkbox-group.gts';
+import type VelvetCheckbox from './components/velvet-checkbox.gts';
+import type VelvetDisclosure from './components/velvet-disclosure.gts';
+import type VelvetDropdown from './components/velvet-dropdown.gts';
+import type VelvetDropdownContent from './components/velvet-dropdown/content.gts';
+import type VelvetIconButton from './components/velvet-icon-button.gts';
+import type VelvetIconLink from './components/velvet-icon-link.gts';
+import type VelvetIconChevronDown from './components/velvet-icon/chevron-down.gts';
+import type VelvetIconCircleCheckSolid from './components/velvet-icon/circle-check-solid.gts';
+import type VelvetIconCircleExclamationSolid from './components/velvet-icon/circle-exclamation-solid.gts';
+import type VelvetIconCircleInfoSolid from './components/velvet-icon/circle-info-solid.gts';
+import type VelvetIconUser from './components/velvet-icon/user.gts';
+import type VelvetIconXMark from './components/velvet-icon/x-mark.gts';
+import type VelvetInput from './components/velvet-input.gts';
+import type VelvetLink from './components/velvet-link.gts';
+import type VelvetProgress from './components/velvet-progress.gts';
+import type VelvetRadioGroup from './components/velvet-radio-group.gts';
+import type VelvetRadio from './components/velvet-radio.gts';
+import type VelvetSelect from './components/velvet-select.gts';
+import type VelvetSelectOption from './components/velvet-select/option.gts';
+import type VelvetSpinner from './components/velvet-spinner.gts';
+import type VelvetSwitch from './components/velvet-switch.gts';
+import type VelvetTag from './components/velvet-tag.gts';
+import type VelvetTextarea from './components/velvet-textarea.gts';
+import type VelvetTooltip from './components/velvet-tooltip.gts';
+import type VelvetTooltipContent from './components/velvet-tooltip/content.gts';
 
 // modifiers
 import type VelvetAutoAnimate from './modifiers/velvet-auto-animate.ts';
@@ -95,9 +92,6 @@ export default interface VelvetThunderRegistry {
   VelvetTooltip: typeof VelvetTooltip;
   'velvet-tooltip/content': typeof VelvetTooltipContent;
   'VelvetTooltip::Content': typeof VelvetTooltipContent;
-
-  // helpers
-  '-velvet/class-list': typeof VelvetClassList;
 
   // modifiers
   'velvet-auto-animate': typeof VelvetAutoAnimate;
