@@ -23,9 +23,6 @@
   "pnpm": {
     "overrides": {
       "@types/eslint": "^7.0.0"
-    },
-    "patchedDependencies": {
-      "fix-bad-declaration-output@1.1.2": "patches/fix-bad-declaration-output@1.1.2.patch"
     }
   },
   "volta": {
