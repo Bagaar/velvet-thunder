@@ -9,25 +9,25 @@ order: 2
 ### bun
 
 ```shell
-bun add -D velvet-thunder tailwindcss @tailwindcss/forms
+bun add -D @bagaar/velvet-thunder tailwindcss @tailwindcss/forms
 ```
 
 ### npm
 
 ```shell
-npm install -D velvet-thunder tailwindcss @tailwindcss/forms
+npm install -D @bagaar/velvet-thunder tailwindcss @tailwindcss/forms
 ```
 
 ### pnpm
 
 ```shell
-pnpm add -D velvet-thunder tailwindcss @tailwindcss/forms
+pnpm add -D @bagaar/velvet-thunder tailwindcss @tailwindcss/forms
 ```
 
 ### yarn
 
 ```shell
-yarn add -D velvet-thunder tailwindcss @tailwindcss/forms
+yarn add -D @bagaar/velvet-thunder tailwindcss @tailwindcss/forms
 ```
 
 ## Configuration
@@ -38,7 +38,7 @@ In `tailwind.config.js`:
 "use strict";
 
 const tailwindFormsPlugin = require("@tailwindcss/forms");
-const velvetThunder = require("velvet-thunder/tailwind");
+const velvetThunder = require("@bagaar/velvet-thunder/tailwind");
 
 module.exports = {
   content: [...velvetThunder.content()],
