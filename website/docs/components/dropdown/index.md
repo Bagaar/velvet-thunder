@@ -87,6 +87,14 @@ Uses [Floating UI](https://floating-ui.com/) underneath.
       tempor incididunt ut labore et dolore magna aliqua.
     </dropdown.Content>
   </VelvetDropdown>
+
+   <VelvetDropdown as |dropdown|>
+    <dropdown.IconButton />
+    <dropdown.Content>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </dropdown.Content>
+  </VelvetDropdown>
 </DemoSpaceX>
 ```
 
@@ -96,6 +104,23 @@ Uses [Floating UI](https://floating-ui.com/) underneath.
 <DemoSpaceX>
   <VelvetDropdown as |dropdown|>
     <VelvetAvatar @name="Jake Peralta" role="button" {{dropdown.trigger}} />
+    {{#if dropdown.isShown}}
+      <img
+        class="rounded-md w-52"
+        src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5b9d1b46230007.584c7bdd776b5.jpg"
+        {{dropdown.content}}
+      />
+    {{/if}}
+  </VelvetDropdown>
+  
+  <VelvetDropdown as |dropdown|>
+    <button {{dropdown.trigger}}>
+      {{#if dropdown.isShown}}
+        <div>Open</div>
+      {{else}}
+        <div>Closed</div>
+      {{/if}}
+    </button>
     {{#if dropdown.isShown}}
       <img
         class="rounded-md w-52"
