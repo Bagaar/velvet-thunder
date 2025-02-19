@@ -1,0 +1,1 @@
+{"version":3,"file":"user.d.ts","sourceRoot":"","sources":["../../../src/components/velvet-icon/user.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,GAAG,EAAE,MAAM,gCAAgC,CAAC;AAE1D,MAAM,WAAW,uBAAuB;IACtC,OAAO,EAAE,UAAU,CAAC;CACrB;AAED,QAAA,MAAM,cAAc,EAAE,GAAG,CAAC,uBAAuB,CAmB/C,CAAC;AAEH,eAAe,cAAc,CAAC"}
