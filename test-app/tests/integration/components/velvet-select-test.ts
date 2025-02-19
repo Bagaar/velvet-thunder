@@ -2,7 +2,7 @@ import { render, findAll, type TestContext } from '@ember/test-helpers';
 import { setupRenderingTest } from 'test-app/tests/helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { module, test } from 'qunit';
-import { velvetSelect } from 'velvet-thunder/test-support';
+import { velvetSelect } from '@bagaar/velvet-thunder/test-support';
 
 interface VelvetSelectTestContext extends TestContext {
   onChange: (selected: unknown, event: Event) => void;

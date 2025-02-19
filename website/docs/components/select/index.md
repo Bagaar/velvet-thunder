@@ -76,7 +76,7 @@ Use the `velvetSelect` test helper to select a specific value for a
 `VelvetSelect` component.
 
 ```js
-import { velvetSelect } from "velvet-thunder/test-support";
+import { velvetSelect } from "@bagaar/velvet-thunder/test-support";
 
 // Select by index:
 await velvetSelect(".velvet-select", { index: 0 });
