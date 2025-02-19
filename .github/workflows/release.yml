@@ -1,0 +1,27 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - release
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - run: npm install
+        working-directory: velvet-thunder
+      - name: git config
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+      - name: Release
+        run: | 
+          npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
+          npm run release
+        working-directory: velvet-thunder
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

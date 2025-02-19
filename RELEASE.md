@@ -1,0 +1,1 @@
+Handled by (release-it)[https://github.com/release-it/release-it]. Just merge to the release branch when ready and it will take care of the rest.
