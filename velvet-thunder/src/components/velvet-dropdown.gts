@@ -182,6 +182,8 @@ export default class VelvetDropdown extends Component<VelvetDropdownSignature> {
           IconButton=(component
             VelvetIconButton
             privateDropdownTrigger=this.trigger
+            isDisclosure=true
+            isExpanded=this.isShown
           )
           isShown=this.isShown
           hide=this.hide
