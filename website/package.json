@@ -21,9 +21,10 @@
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
     "lint:types": "glint",
-    "start": "ember serve",
+    "start": "concurrently 'pnpm:start:*'",
+    "start:ember": "ember serve --port 4202",
+    "start:tailwind": "tailwindcss -i ./tailwind/index.css -o ./public/assets/tailwind.css --watch",
     "tailwind:build": "tailwindcss -i ./tailwind/index.css -o ./public/assets/tailwind.css --minify",
-    "tailwind:watch": "tailwindcss -i ./tailwind/index.css -o ./public/assets/tailwind.css --watch",
     "test": "concurrently \"npm:lint\" \"npm:test:*\" --names \"lint,test:\"",
     "test:ember": "pnpm tailwind:build && ember test --test-port=0"
   },
