@@ -129,13 +129,15 @@ export default class VelvetDropdown extends Component<VelvetDropdownSignature> {
         this.hide();
       }
     };
-
-    document.addEventListener('click', clickOutsideHandler);
+    // this is a mouseup instead of a click event, because if not, this immediately gets fired in the same cycle as the click to toggle the content open.
+    // this then means the clickOutsideHandler get called and fires the hide() method because after a rerender there is now a different icon shown, and that is no longer a child of the triggerElement
+    // changing this event to mouseup prevents this double toggle from happening and still works to hide the content when doing a subsequent click
+    document.addEventListener('mouseup', clickOutsideHandler);
     document.addEventListener('keydown', pressEscapeHandler);
 
     return () => {
       cleanupFloating();
-      document.removeEventListener('click', clickOutsideHandler);
+      document.removeEventListener('mouseup', clickOutsideHandler);
       document.removeEventListener('keydown', pressEscapeHandler);
     };
   });
@@ -165,7 +167,7 @@ export default class VelvetDropdown extends Component<VelvetDropdownSignature> {
   };
 
   <template>
-    <div class="velvet-dropdown" ...attributes>
+    <div class='velvet-dropdown' ...attributes>
       {{yield
         (hash
           Button=(component
@@ -175,9 +177,7 @@ export default class VelvetDropdown extends Component<VelvetDropdownSignature> {
             privateDropdownTrigger=this.trigger
           )
           Content=(component
-            VelvetDropdownContent
-            isShown=this.isShown
-            modifier=this.content
+            VelvetDropdownContent isShown=this.isShown modifier=this.content
           )
           IconButton=(component
             VelvetIconButton

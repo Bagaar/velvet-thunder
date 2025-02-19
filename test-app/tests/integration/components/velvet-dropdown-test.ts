@@ -36,6 +36,25 @@ module('Integration | Component | velvet-dropdown', function (hooks) {
     assert.dom(SELECTOR_CONTENT).doesNotExist();
   });
 
+  test('it works when clicking the default svg of the `Button` component', async function (assert) {
+    await render(hbs`
+      <VelvetDropdown as |dropdown|>
+        <dropdown.Button />
+        <dropdown.Content />
+      </VelvetDropdown>
+    `);
+
+    assert.dom(SELECTOR_CONTENT).doesNotExist();
+
+    await click('.velvet-button svg path');
+
+    assert.dom(SELECTOR_CONTENT).exists();
+
+    await click('.velvet-button svg path');
+
+    assert.dom(SELECTOR_CONTENT).doesNotExist();
+  });
+
   test('it works using the yielded `IconButton` component', async function (assert) {
     await render(hbs`
       <VelvetDropdown as |dropdown|>
