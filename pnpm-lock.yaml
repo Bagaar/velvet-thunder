@@ -29,6 +29,9 @@ importers:
       '@babel/core':
         specifier: ^7.24.0
         version: 7.26.9
+      '@bagaar/velvet-thunder':
+        specifier: workspace:*
+        version: link:../velvet-thunder
       '@ember/optional-features':
         specifier: ^2.1.0
         version: 2.2.0
@@ -188,9 +191,6 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.7.3
-      velvet-thunder:
-        specifier: workspace:*
-        version: link:../velvet-thunder
       webpack:
         specifier: ^5.90.3
         version: 5.98.0
@@ -336,6 +336,9 @@ importers:
       '@babel/traverse':
         specifier: ^7.24.0
         version: 7.26.9
+      '@bagaar/velvet-thunder':
+        specifier: workspace:*
+        version: link:../velvet-thunder
       '@docfy/ember':
         specifier: ^0.8.5
         version: 0.8.5(@babel/core@7.26.9)(@glint/template@1.5.2)
@@ -504,9 +507,6 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.7.3
-      velvet-thunder:
-        specifier: workspace:*
-        version: link:../velvet-thunder
       webpack:
         specifier: ^5.90.3
         version: 5.98.0

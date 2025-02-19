@@ -2,7 +2,7 @@
 
 const tailwindFormsPlugin = require('@tailwindcss/forms');
 const tailwindTypographyPlugin = require('@tailwindcss/typography');
-const velvetThunder = require('velvet-thunder/tailwind');
+const velvetThunder = require('@bagaar/velvet-thunder/tailwind');
 
 module.exports = {
   content: [
