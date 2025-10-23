@@ -1,6 +1,6 @@
 {
   "name": "@bagaar/velvet-thunder",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Velvet Thunder is a semi-headless UI library built for Ember.",
   "keywords": [
     "ember-addon"
