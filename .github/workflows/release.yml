@@ -9,19 +9,24 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
         with:
-          fetch-depth: 0
-      - run: npm install
-        working-directory: velvet-thunder
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: pnpm
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
       - name: git config
         run: |
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
       - name: Release
         run: | 
-          npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
-          npm run release
+          pnpm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
+          pnpm release
         working-directory: velvet-thunder
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
