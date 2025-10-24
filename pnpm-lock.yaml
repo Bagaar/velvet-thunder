@@ -27,7 +27,7 @@ importers:
   test-app:
     devDependencies:
       '@babel/core':
-        specifier: ^7.24.0
+        specifier: ^7.28.4
         version: 7.28.4
       '@bagaar/velvet-thunder':
         specifier: workspace:*
@@ -235,10 +235,10 @@ importers:
         version: 3.4.18(yaml@2.8.1)
     devDependencies:
       '@babel/core':
-        specifier: ^7.23.6
+        specifier: ^7.28.4
         version: 7.28.4
       '@babel/plugin-transform-typescript':
-        specifier: ^7.23.6
+        specifier: ^7.28.0
         version: 7.28.0(@babel/core@7.28.4)
       '@babel/runtime':
         specifier: ^7.17.0
@@ -331,16 +331,16 @@ importers:
   website:
     devDependencies:
       '@babel/core':
-        specifier: ^7.24.0
+        specifier: ^7.28.4
         version: 7.28.4
       '@babel/generator':
-        specifier: ^7.23.6
+        specifier: ^7.28.3
         version: 7.28.3
       '@babel/parser':
-        specifier: ^7.24.0
+        specifier: ^7.28.4
         version: 7.28.4
       '@babel/traverse':
-        specifier: ^7.24.0
+        specifier: ^7.28.4
         version: 7.28.4
       '@bagaar/velvet-thunder':
         specifier: workspace:*
@@ -9230,7 +9230,7 @@ snapshots:
   '@babel/traverse@7.23.9':
     dependencies:
       '@babel/code-frame': 7.27.1
-      '@babel/generator': 7.23.6
+      '@babel/generator': 7.28.3
       '@babel/helper-environment-visitor': 7.24.7
       '@babel/helper-function-name': 7.24.7
       '@babel/helper-hoist-variables': 7.24.7
@@ -15922,7 +15922,7 @@ snapshots:
       ky: 1.13.0
       registry-auth-token: 5.1.0
       registry-url: 6.0.1
-      semver: 7.6.3
+      semver: 7.7.3
 
   package-json@6.5.0:
     dependencies:
@@ -17879,7 +17879,7 @@ snapshots:
       is-npm: 6.1.0
       latest-version: 9.0.0
       pupa: 3.3.0
-      semver: 7.6.3
+      semver: 7.7.3
       xdg-basedir: 5.1.0
 
   upper-case-first@2.0.2:
