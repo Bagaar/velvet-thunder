@@ -74,8 +74,8 @@
     "ember-truth-helpers": "^5.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.6",
-    "@babel/plugin-transform-typescript": "^7.23.6",
+    "@babel/core": "^7.28.4",
+    "@babel/plugin-transform-typescript": "^7.28.0",
     "@babel/runtime": "^7.17.0",
     "@ember/test-helpers": "^3.0.0",
     "@embroider/addon-dev": "^4.1.0",

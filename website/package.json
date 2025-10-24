@@ -29,10 +29,10 @@
     "test:ember": "pnpm tailwind:build && ember test --test-port=0"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.0",
-    "@babel/generator": "^7.23.6",
-    "@babel/parser": "^7.24.0",
-    "@babel/traverse": "^7.24.0",
+    "@babel/core": "^7.28.4",
+    "@babel/generator": "^7.28.3",
+    "@babel/parser": "^7.28.4",
+    "@babel/traverse": "^7.28.4",
     "@docfy/ember": "^0.8.5",
     "@ember/optional-features": "^2.1.0",
     "@ember/string": "^3.1.1",
