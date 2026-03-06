@@ -1,6 +1,7 @@
 import { hash } from '@ember/helper';
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
+import { and } from 'ember-truth-helpers';
 import type { WithBoundArgs } from '@glint/template';
 import velvetAutoAnimate from '../modifiers/velvet-auto-animate.ts';
 import VelvetButton from './velvet-button.gts';
@@ -11,10 +12,21 @@ export interface VelvetDisclosureSignature {
     /// Indicate if the disclosed content should animate.
     /// @default [true]
     shouldAnimate?: boolean;
+    /// Indicate wether the trigger should be hidden when the content is opened.
+    /// @default [false]
+    hideTriggerWhenOpened?: boolean;
   };
   Blocks: {
     /// The content of the disclosure.
-    content: [publicAPI: PublicAPI];
+    content: [
+      publicAPI: PublicAPI & {
+        Button: WithBoundArgs<
+          typeof VelvetButton,
+          'isDisclosure' | 'isExpanded' | 'onClick'
+        >;
+        IconButton: WithBoundArgs<typeof VelvetIconButton, 'onClick'>;
+      },
+    ];
 
     /// The trigger of the disclosure.
     trigger: [
@@ -46,6 +58,12 @@ export default class VelvetDisclosure extends Component<VelvetDisclosureSignatur
       : true;
   }
 
+  get hideTriggerWhenOpened() {
+    return typeof this.args.hideTriggerWhenOpened === 'boolean'
+      ? this.args.hideTriggerWhenOpened
+      : false;
+  }
+
   hide = () => {
     this.isShown = false;
   };
@@ -64,38 +82,55 @@ export default class VelvetDisclosure extends Component<VelvetDisclosureSignatur
 
   <template>
     <div
-      class="velvet-disclosure"
+      class='velvet-disclosure'
       {{(if this.shouldAnimate velvetAutoAnimate)}}
       ...attributes
     >
-      {{yield
-        (hash
-          Button=(component
-            VelvetButton
-            isDisclosure=true
-            isExpanded=this.isShown
-            onClick=this.toggle
+      {{#unless (and this.hideTriggerWhenOpened this.isShown)}}
+        {{yield
+          (hash
+            Button=(component
+              VelvetButton
+              isDisclosure=true
+              isExpanded=this.isShown
+              onClick=this.toggle
+            )
+            IconButton=(component
+              VelvetIconButton
+              isDisclosure=true
+              isExpanded=this.isShown
+              onClick=this.toggle
+            )
+            isShown=this.isShown
+            hide=this.hide
+            show=this.show
+            toggle=this.toggle
           )
-          IconButton=(component
-            VelvetIconButton
-            isDisclosure=true
-            isExpanded=this.isShown
-            onClick=this.toggle
-          )
-          isShown=this.isShown
-          hide=this.hide
-          show=this.show
-          toggle=this.toggle
-        )
-        to="trigger"
-      }}
+          to='trigger'
+        }}
+      {{/unless}}
 
       {{#if this.isShown}}
         {{yield
           (hash
-            isShown=this.isShown hide=this.hide show=this.show toggle=this.toggle
+            Button=(component
+              VelvetButton
+              isDisclosure=true
+              isExpanded=this.isShown
+              onClick=this.toggle
+            )
+            IconButton=(component
+              VelvetIconButton
+              isDisclosure=true
+              isExpanded=this.isShown
+              onClick=this.toggle
+            )
+            isShown=this.isShown
+            hide=this.hide
+            show=this.show
+            toggle=this.toggle
           )
-          to="content"
+          to='content'
         }}
       {{/if}}
     </div>
