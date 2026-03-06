@@ -9,7 +9,7 @@ It also uses [Floating UI](https://floating-ui.com/) and [AutoAnimate](https://a
 
 ## Compatibility
 
-- Ember.js v4.8 or above
+- Ember.js v5.4 or above
 - Embroider or ember-auto-import v2
 - Node.js v18 or above
 - Tailwind v3 or above
