@@ -30,7 +30,7 @@
       "rebaseWhen": "behind-base-branch"
     },
     {
-      "managers": ["npm"],
+      "matchManagers": ["npm"],
       "matchCurrentVersion": "<1.0.0",
       "automerge": false
     },
