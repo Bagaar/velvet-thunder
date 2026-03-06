@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.0](https://github.com/Bagaar/velvet-thunder/compare/0.0.4...0.1.0) (2026-03-06)
+
+### Features
+
+* add option to hide trigger when Velvet Disclosure is opened ([bdeb493](https://github.com/Bagaar/velvet-thunder/commit/bdeb4937c57bc5e94d6b1fb6febf2ab74b71af1f))
+
 ## [0.0.4](https://github.com/bagaar/velvet-thunder/compare/0.0.3...0.0.4) (2025-10-23)
 
 ## 0.0.3 (2025-10-23)
