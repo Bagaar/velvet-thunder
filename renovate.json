@@ -3,10 +3,51 @@
   "extends": [
     "config:best-practices",
     "group:glimmer",
-    "security:minimumReleaseAgeNpm",
     ":semanticCommits",
+    ":semanticCommitTypeAll(chore)",
+    "schedule:weekends",
+    "schedule:automergeWeekends",
     ":pinAllExceptPeerDependencies"
   ],
   "separateMultipleMajor": true,
-  "commitMessageExtra": "from {{currentVersion}} to {{newVersion}}"
+  "packageRules": [
+    {
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["minor", "patch", "pin"],
+      "automerge": true
+    },
+    {
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["patch", "pin"],
+      "automerge": true
+    },
+    {
+      "automerge": true,
+      "matchUpdateTypes": ["patch", "minor", "pin"],
+      "matchPackageNames": ["pnpm", "node"],
+      "rebaseWhen": "behind-base-branch"
+    },
+    {
+      "managers": ["npm"],
+      "matchCurrentVersion": "<1.0.0",
+      "automerge": false
+    },
+    {
+      "automerge": false,
+      "matchPackageNames": ["ember-cli", "ember-data", "ember-source"],
+      "matchUpdateTypes": ["major", "minor"]
+    }
+  ],
+  "commitMessageExtra": "from {{currentVersion}} to {{newVersion}}",
+  "patch": {
+    "semanticCommitScope": "deps-patch"
+  },
+  "minor": {
+    "semanticCommitScope": "deps-minor"
+  },
+  "major": {
+    "semanticCommitScope": "deps-major"
+  }
 }
