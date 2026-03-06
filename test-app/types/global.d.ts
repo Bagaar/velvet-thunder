@@ -7,6 +7,5 @@ import type VelvetThunderRegistry from '@bagaar/velvet-thunder/template-registry
 
 declare module '@glint/environment-ember-loose/registry' {
   export default interface Registry
-    extends EmberPageTitleRegistry,
-      VelvetThunderRegistry {}
+    extends EmberPageTitleRegistry, VelvetThunderRegistry {}
 }
