@@ -41,6 +41,31 @@ Uses [AutoAnimate](https://auto-animate.formkit.com/) underneath.
 </VelvetDisclosure>
 ```
 
+### Hide trigger when opened
+
+```hbs preview-template
+<VelvetDisclosure @hideTriggerWhenOpened={{true}}>
+  <:trigger as |disclosure|>
+    <div class="flex items-center">
+      <div class="grow">
+        Press the icon button on the right to toggle the content.
+      </div>
+      <disclosure.IconButton />
+    </div>
+  </:trigger>
+  <:content as |disclosure|>
+    <div
+      class="bg-violet-500/25 h-52 flex items-start rounded-md justify-between"
+    >
+      <div>
+        Trigger is now replaced with the entire content block
+      </div>
+      <disclosure.IconButton />
+    </div>
+  </:content>
+</VelvetDisclosure>
+```
+
 ### Custom
 
 ```hbs preview-template
