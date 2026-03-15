@@ -50,7 +50,7 @@
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "broccoli-asset-rev": "^3.0.0",
-    "change-case": "^4.1.2",
+    "change-case": "^5.0.0",
     "concurrently": "^8.2.2",
     "content-tag": "^2.0.1",
     "ember-auto-import": "^2.7.2",
