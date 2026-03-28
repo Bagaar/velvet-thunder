@@ -1,5 +1,7 @@
 # Changelog
 
+## [0.1.1](https://github.com/Bagaar/velvet-thunder/compare/0.1.0...0.1.1) (2026-03-28)
+
 ## [0.1.0](https://github.com/Bagaar/velvet-thunder/compare/0.0.4...0.1.0) (2026-03-06)
 
 ### Features
