@@ -23,7 +23,8 @@
   },
   "pnpm": {
     "overrides": {
-      "@types/eslint": "^7.0.0"
+      "@types/eslint": "^7.0.0",
+      "@glimmer/component": "^2.0.0"
     }
   },
   "volta": {

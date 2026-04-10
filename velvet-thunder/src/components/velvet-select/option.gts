@@ -1,5 +1,6 @@
 import { guidFor } from '@ember/object/internals';
 import Component from '@glimmer/component';
+import type Owner from '@ember/owner';
 
 export interface VelvetSelectOptionSignature {
   Args: {
@@ -25,7 +26,7 @@ export default class VelvetSelectOption extends Component<VelvetSelectOptionSign
     return this.args.value === this.args.privateSelected;
   }
 
-  constructor(owner: unknown, args: VelvetSelectOptionSignature['Args']) {
+  constructor(owner: Owner, args: VelvetSelectOptionSignature['Args']) {
     super(owner, args);
 
     this.args.privateOnCreate(this.uniqueId, this.args.value);
