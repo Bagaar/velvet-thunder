@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.0](https://github.com/Bagaar/velvet-thunder/compare/0.1.1...0.2.0) (2026-04-10)
+
+### Features
+
+* support Glimmer v2 ([b8a3c30](https://github.com/Bagaar/velvet-thunder/commit/b8a3c30e98e1f880cf27d39540699187a9aaa87b))
+
 ## [0.1.1](https://github.com/Bagaar/velvet-thunder/compare/0.1.0...0.1.1) (2026-03-28)
 
 ## [0.1.0](https://github.com/Bagaar/velvet-thunder/compare/0.0.4...0.1.0) (2026-03-06)
