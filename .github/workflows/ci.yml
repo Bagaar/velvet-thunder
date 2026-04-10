@@ -17,11 +17,30 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v3
         with:
           version: 10
-      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+      - uses: actions/setup-node@v6 # v6
+        with:
+          node-version: 24
+          cache: pnpm
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Run Tests
+        run: pnpm test
+  
+  lint:
+    name: "Lint"
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 10
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: pnpm
@@ -29,8 +48,6 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Lint
         run: pnpm lint
-      - name: Run Tests
-        run: pnpm test
 
   floating:
     name: "Floating Dependencies"
@@ -38,11 +55,11 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v3
         with:
           version: 10
-      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: pnpm
@@ -75,11 +92,11 @@ jobs:
           - embroider-optimized
 
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v3
         with:
           version: 10
-      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: pnpm
