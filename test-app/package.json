@@ -24,8 +24,7 @@
     "start": "ember serve",
     "tailwind:build": "tailwindcss -i ./tailwind.css -o ./public/assets/tailwind.css --minify",
     "tailwind:watch": "tailwindcss -i ./tailwind.css -o ./public/assets/tailwind.css --watch",
-    "test": "concurrently \"npm:lint\" \"npm:test:*\" --names \"lint,test:\"",
-    "test:ember": "pnpm tailwind:build && ember test --test-port=0"
+    "test": "pnpm tailwind:build && ember test --test-port=0"
   },
   "devDependencies": {
     "@babel/core": "^7.24.0",
