@@ -9,6 +9,23 @@ module.exports = async function () {
     usePnpm: true,
     scenarios: [
       {
+        name: 'glimmer-v1',
+        npm: {
+          devDependencies: {
+            '@glimmer/component': '^1.1.2',
+            '@glimmer/tracking': '^1.1.2',
+          },
+        },
+      },
+      {
+        name: 'glimmer-v2',
+        npm: {
+          devDependencies: {
+            '@glimmer/component': '^2.0.0',
+          },
+        },
+      },
+      {
         name: 'ember-lts-5.4',
         npm: {
           devDependencies: {
