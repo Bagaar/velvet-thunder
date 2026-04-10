@@ -14,11 +14,11 @@ export interface VelvetDropdownContentSignature {
 }
 
 const VelvetDropdownContent: TOC<VelvetDropdownContentSignature> = <template>
-    {{#if @isShown}}
-      <div class="velvet-dropdown-content" {{@modifier}} ...attributes>
-        {{yield}}
-      </div>
-    {{/if}}
-  </template>;
+  {{#if @isShown}}
+    <div class="velvet-dropdown-content" {{@modifier}} ...attributes>
+      {{yield}}
+    </div>
+  {{/if}}
+</template>;
 
 export default VelvetDropdownContent;

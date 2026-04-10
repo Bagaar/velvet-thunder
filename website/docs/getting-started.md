@@ -42,9 +42,6 @@ const velvetThunder = require("@bagaar/velvet-thunder/tailwind");
 
 module.exports = {
   content: [...velvetThunder.content()],
-  plugins: [
-    tailwindFormsPlugin({ strategy: "class" }),
-    velvetThunder.plugin(),
-  ],
+  plugins: [tailwindFormsPlugin({ strategy: "class" }), velvetThunder.plugin()],
 };
 ```

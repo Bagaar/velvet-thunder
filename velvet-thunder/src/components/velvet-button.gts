@@ -87,7 +87,11 @@ export default class VelvetButton extends Component<VelvetButtonSignature> {
         {{yield (hash class=className)}}
       {{else}}
         <button
-          aria-expanded={{if @isDisclosure (if @isExpanded "true" "false") null}}
+          aria-expanded={{if
+            @isDisclosure
+            (if @isExpanded "true" "false")
+            null
+          }}
           class={{className}}
           disabled={{@isDisabled}}
           type={{or @type "button"}}

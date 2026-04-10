@@ -88,7 +88,7 @@ Uses [Floating UI](https://floating-ui.com/) underneath.
     </dropdown.Content>
   </VelvetDropdown>
 
-   <VelvetDropdown as |dropdown|>
+  <VelvetDropdown as |dropdown|>
     <dropdown.IconButton />
     <dropdown.Content>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -112,7 +112,7 @@ Uses [Floating UI](https://floating-ui.com/) underneath.
       />
     {{/if}}
   </VelvetDropdown>
-  
+
   <VelvetDropdown as |dropdown|>
     <button {{dropdown.trigger}}>
       {{#if dropdown.isShown}}

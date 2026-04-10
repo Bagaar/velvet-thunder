@@ -82,7 +82,7 @@ export default class VelvetDisclosure extends Component<VelvetDisclosureSignatur
 
   <template>
     <div
-      class='velvet-disclosure'
+      class="velvet-disclosure"
       {{(if this.shouldAnimate velvetAutoAnimate)}}
       ...attributes
     >
@@ -106,7 +106,7 @@ export default class VelvetDisclosure extends Component<VelvetDisclosureSignatur
             show=this.show
             toggle=this.toggle
           )
-          to='trigger'
+          to="trigger"
         }}
       {{/unless}}
 
@@ -130,7 +130,7 @@ export default class VelvetDisclosure extends Component<VelvetDisclosureSignatur
             show=this.show
             toggle=this.toggle
           )
-          to='content'
+          to="content"
         }}
       {{/if}}
     </div>

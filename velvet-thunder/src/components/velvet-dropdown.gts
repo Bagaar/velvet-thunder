@@ -167,7 +167,7 @@ export default class VelvetDropdown extends Component<VelvetDropdownSignature> {
   };
 
   <template>
-    <div class='velvet-dropdown' ...attributes>
+    <div class="velvet-dropdown" ...attributes>
       {{yield
         (hash
           Button=(component
