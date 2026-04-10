@@ -51,7 +51,7 @@
     "@typescript-eslint/parser": "^6.21.0",
     "broccoli-asset-rev": "^3.0.0",
     "change-case": "^4.1.2",
-    "concurrently": "^8.2.2",
+    "concurrently": "^9.0.0",
     "content-tag": "^2.0.1",
     "ember-auto-import": "^2.7.2",
     "ember-cli": "~5.7.0",
