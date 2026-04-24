@@ -5,7 +5,10 @@
   "keywords": [
     "ember-addon"
   ],
-  "repository": "https://github.com/bagaar/velvet-thunder",
+  "repository": {
+    "directory": "velvet-thunder",
+    "url": "https://github.com/bagaar/velvet-thunder"
+  },
   "license": "MIT",
   "author": "Bagaar",
   "exports": {
