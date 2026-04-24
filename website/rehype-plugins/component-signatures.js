@@ -3,7 +3,7 @@
 const { default: babelGenerator } = require('@babel/generator');
 const { parse: babelParse } = require('@babel/parser');
 const { default: babelTraverse } = require('@babel/traverse');
-const { paramCase } = require('change-case');
+const { kebabCase } = require('change-case');
 const { Preprocessor } = require('content-tag');
 const { existsSync, readFileSync } = require('fs');
 
@@ -207,7 +207,7 @@ function createApiTable(data, columns) {
           'tr',
           columns.map((column) =>
             element('td', column.value(entry), {
-              class: `col-${paramCase(column.title)}`,
+              class: `col-${kebabCase(column.title)}`,
             }),
           ),
         ),
@@ -221,7 +221,7 @@ function code(value) {
 }
 
 function h3(content) {
-  return element('h3', [text(content)], { id: paramCase(content) });
+  return element('h3', [text(content)], { id: kebabCase(content) });
 }
 
 function note(content) {
