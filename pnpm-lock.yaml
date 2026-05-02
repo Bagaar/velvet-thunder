@@ -22,7 +22,7 @@ importers:
         specifier: ^3.8.2
         version: 3.8.2
       prettier-plugin-ember-template-tag:
-        specifier: ^2.0.1
+        specifier: ^2.1.4
         version: 2.1.4(prettier@3.8.2)
 
   test-app:
@@ -293,7 +293,7 @@ importers:
         specifier: ^3.8.2
         version: 3.8.2
       prettier-plugin-ember-template-tag:
-        specifier: ^2.0.1
+        specifier: ^2.1.4
         version: 2.1.4(prettier@3.8.2)
       release-it:
         specifier: ^19.0.0

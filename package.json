@@ -18,7 +18,7 @@
     "@glint/core": "^1.2.1",
     "concurrently": "^9.0.0",
     "prettier": "^3.8.2",
-    "prettier-plugin-ember-template-tag": "^2.0.1"
+    "prettier-plugin-ember-template-tag": "^2.1.4"
   },
   "pnpm": {
     "overrides": {
