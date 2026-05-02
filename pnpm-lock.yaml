@@ -178,7 +178,7 @@ importers:
         specifier: ^5.3.3
         version: 5.9.3
       webpack:
-        specifier: ^5.90.3
+        specifier: ^5.106.1
         version: 5.106.1
 
   velvet-thunder:
@@ -485,7 +485,7 @@ importers:
         specifier: ^5.3.3
         version: 5.9.3
       webpack:
-        specifier: ^5.90.3
+        specifier: ^5.106.1
         version: 5.106.1
 
 packages:
