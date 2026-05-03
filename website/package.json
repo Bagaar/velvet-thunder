@@ -35,7 +35,7 @@
     "@babel/parser": "^7.24.0",
     "@babel/traverse": "^7.24.0",
     "@docfy/ember": "^0.8.5",
-    "@ember/optional-features": "^2.1.0",
+    "@ember/optional-features": "^3.0.0",
     "@ember/string": "^3.1.1",
     "@ember/test-helpers": "^3.3.0",
     "@glimmer/component": "^1.1.2",
