@@ -350,8 +350,8 @@ importers:
         specifier: 1.5.0
         version: 1.5.0
       '@percy/ember':
-        specifier: ^4.2.0
-        version: 4.2.0
+        specifier: ^5.0.0
+        version: 5.0.1(@babel/core@7.29.0)(@glint/template@1.5.0)(webpack@5.106.1)
       '@tailwindcss/forms':
         specifier: ^0.5.7
         version: 0.5.11(tailwindcss@3.4.19(yaml@2.8.3))
@@ -1785,9 +1785,9 @@ packages:
   '@octokit/types@16.0.0':
     resolution: {integrity: sha512-sKq+9r1Mm4efXW1FCk7hFSeJo4QKreL/tTbR0rz/qx/r1Oa2VV83LTA/H/MuCOX7uCIJmQVRKBcbmWoySjAnSg==}
 
-  '@percy/ember@4.2.0':
-    resolution: {integrity: sha512-D/WckDD2tQetdn8uq46nQA1rOVgov8jsZG4uN7snAq6SrOpxNxacONg37QPwczmICBc7o/NlipCAUteukmtKzg==}
-    engines: {node: '>= 14'}
+  '@percy/ember@5.0.1':
+    resolution: {integrity: sha512-f/lnUq2MmCQOOJPIX2aypxVNbvEcSEdBaAETqa9yckzKyEedTVgYhDCD6WtgZtMu+azWLXHmqyMbxti4KN6OLQ==}
+    engines: {node: '>= 16'}
 
   '@percy/sdk-utils@1.31.11':
     resolution: {integrity: sha512-I4/Bx2RqSx/k00qVU0t/wcYudeyVRARQPdMnRZ/JvEZRZmXo0u+mHHpvZ5liHvnlpvWq6dv2WRA5MVy+GZHUhA==}
@@ -9876,12 +9876,16 @@ snapshots:
     dependencies:
       '@octokit/openapi-types': 27.0.0
 
-  '@percy/ember@4.2.0':
+  '@percy/ember@5.0.1(@babel/core@7.29.0)(@glint/template@1.5.0)(webpack@5.106.1)':
     dependencies:
       '@percy/sdk-utils': 1.31.11
-      ember-cli-babel: 7.26.11
+      ember-auto-import: 2.13.1(@glint/template@1.5.0)(webpack@5.106.1)
+      ember-cli-babel: 8.3.1(@babel/core@7.29.0)
     transitivePeerDependencies:
+      - '@babel/core'
+      - '@glint/template'
       - supports-color
+      - webpack
 
   '@percy/sdk-utils@1.31.11':
     dependencies:
