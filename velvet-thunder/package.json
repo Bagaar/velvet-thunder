@@ -67,7 +67,7 @@
     "release": "release-it"
   },
   "dependencies": {
-    "@ember/test-waiters": "^3.1.0",
+    "@ember/test-waiters": "^4.0.0",
     "@embroider/addon-shim": "^1.8.7",
     "@embroider/util": "^1.12.1",
     "@floating-ui/dom": "^1.5.3",
