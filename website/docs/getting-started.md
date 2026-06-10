@@ -45,3 +45,9 @@ module.exports = {
   plugins: [tailwindFormsPlugin({ strategy: "class" }), velvetThunder.plugin()],
 };
 ```
+
+## Styling
+
+The plugin generates structural styles for all components but intentionally leaves out colors and visual theme. You apply those yourself by targeting the `velvet-*` CSS classes in your own stylesheet.
+
+See [Customizing Styles](./styling.md) for a full guide.
