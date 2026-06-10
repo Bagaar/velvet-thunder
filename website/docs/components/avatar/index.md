@@ -44,6 +44,21 @@
 <VelvetAvatar />
 ```
 
+## CSS Classes
+
+The following classes are applied by the component and can be targeted to fully customize its appearance — see the [styling guide](../../styling.md) for details.
+
+| Class                     | Applied when                               |
+| ------------------------- | ------------------------------------------ |
+| `velvet-avatar`           | Always                                     |
+| `velvet-avatar-sm`        | `@size="sm"`                               |
+| `velvet-avatar-md`        | `@size="md"` (default)                     |
+| `velvet-avatar-lg`        | `@size="lg"`                               |
+| `velvet-avatar-{variant}` | Any custom `@variant` value                |
+| `velvet-avatar-round`     | `@isRound={{true}}`                        |
+| `velvet-avatar-image`     | Always (on the `<img>` when `@src` is set) |
+| `velvet-avatar-icon`      | Always (on the fallback icon)              |
+
 ## Signature
 
 <!-- component-signature: velvet-avatar -->

@@ -22,7 +22,7 @@ velvetThunder.plugin({
   components: {
     button: false,
   },
-})
+});
 ```
 
 ## Adding Visual Styles

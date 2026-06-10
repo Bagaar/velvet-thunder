@@ -85,6 +85,22 @@ await velvetSelect(".velvet-select", { index: 0 });
 await velvetSelect(".velvet-select", { text: "First" });
 ```
 
+## CSS Classes
+
+The following classes are applied by the component and can be targeted to fully customize its appearance — see the [styling guide](../../styling.md) for details.
+
+| Class                       | Applied when                                         |
+| --------------------------- | ---------------------------------------------------- |
+| `velvet-select`             | Always                                               |
+| `velvet-select-sm`          | `@size="sm"`                                         |
+| `velvet-select-md`          | `@size="md"` (default)                               |
+| `velvet-select-lg`          | `@size="lg"`                                         |
+| `velvet-select-{variant}`   | Any `@variant` value                                 |
+| `velvet-select-invalid`     | `@isInvalid={{true}}`                                |
+| `velvet-select-pill`        | `@isPill={{true}}`                                   |
+| `velvet-select-disabled`    | `@isDisabled={{true}}`                               |
+| `velvet-select-placeholder` | When no value is selected and a placeholder is shown |
+
 ## Signature
 
 <!-- component-signature: velvet-select -->
