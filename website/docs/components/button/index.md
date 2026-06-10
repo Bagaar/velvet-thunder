@@ -111,6 +111,23 @@ manualDemoInsertion: true
 
 [[demos-all]]
 
+## CSS Classes
+
+The following classes are applied by the component and can be targeted to fully customize its appearance — see the [styling guide](../../styling.md) for details.
+
+| Class                           | Applied when                                        |
+| ------------------------------- | --------------------------------------------------- |
+| `velvet-button`                 | Always                                              |
+| `velvet-button-xs`              | `@size="xs"`                                        |
+| `velvet-button-sm`              | `@size="sm"`                                        |
+| `velvet-button-md`              | `@size="md"` (default)                              |
+| `velvet-button-lg`              | `@size="lg"`                                        |
+| `velvet-button-{variant}`       | Any `@variant` value                                |
+| `velvet-button-pill`            | `@isPill={{true}}`                                  |
+| `velvet-button-disabled`        | `@isDisabled={{true}}`                              |
+| `velvet-button-expanded`        | `@isDisclosure={{true}}` and `@isExpanded={{true}}` |
+| `velvet-button-disclosure-icon` | Always (on the disclosure chevron icon)             |
+
 ## Signature
 
 <!-- component-signature: velvet-button -->
