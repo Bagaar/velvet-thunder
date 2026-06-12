@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/Bagaar/velvet-thunder/compare/0.2.0...0.2.1) (2026-06-12)
+
+### Bug Fixes
+
+* add directory to npm repository setting ([0a5ffce](https://github.com/Bagaar/velvet-thunder/commit/0a5ffce4cdec80fd37cc4270c395536214b64829))
+* use theming variables instead of css classes in plugin to allow Tailwind v4 to work ([6c20601](https://github.com/Bagaar/velvet-thunder/commit/6c20601f45993c92fae7f2bfb74786d5d123a8cf))
+
 ## [0.2.0](https://github.com/Bagaar/velvet-thunder/compare/0.1.1...0.2.0) (2026-04-10)
 
 ### Features
