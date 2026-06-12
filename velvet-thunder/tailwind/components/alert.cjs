@@ -1,23 +1,32 @@
 'use strict';
 
-module.exports = () => ({
+module.exports = ({ theme }) => ({
   '.velvet-alert': {
-    '@apply p-4 rounded-lg': {},
+    padding: theme('spacing.4'),
+    'border-radius': theme('borderRadius.lg'),
 
     '&-header': {
-      '@apply flex items-center mb-2 space-x-2': {},
+      display: 'flex',
+      'align-items': 'center',
+      'margin-bottom': theme('spacing.2'),
+      'column-gap': theme('spacing.2'),
     },
 
     '&-icon': {
-      '@apply shrink-0 size-4': {},
+      'flex-shrink': '0',
+      width: theme('spacing.4'),
+      height: theme('spacing.4'),
     },
 
     '&-title': {
-      '@apply font-medium w-full': {},
+      'font-weight': theme('fontWeight.medium'),
+      width: '100%',
     },
 
     '&-content': {
-      '@apply pr-11 text-sm': {},
+      'padding-right': theme('spacing.11'),
+      'font-size': theme('fontSize.sm'),
+      'line-height': theme('lineHeight.5'),
     },
   },
 });

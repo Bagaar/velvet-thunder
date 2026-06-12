@@ -1,71 +1,102 @@
 'use strict';
 
-module.exports = () => ({
+module.exports = ({ theme }) => ({
   '.velvet-switch': {
-    '@apply flex items-center w-fit': {},
+    display: 'flex',
+    'align-items': 'center',
+    width: 'fit-content',
 
     '&-right': {
-      '@apply flex-row-reverse': {},
+      'flex-direction': 'row-reverse',
     },
 
     '&-sm': {
-      '@apply gap-2 text-xs': {},
+      gap: theme('spacing.2'),
+      'font-size': theme('fontSize.xs'),
+      'line-height': theme('lineHeight.4'),
 
       '.velvet-switch-track': {
-        '@apply h-4 w-7': {},
+        height: theme('spacing.4'),
+        width: theme('spacing.7'),
       },
 
       '.velvet-switch-handle': {
-        '@apply size-3': {},
+        width: theme('spacing.3'),
+        height: theme('spacing.3'),
       },
     },
 
     '&-md': {
-      '@apply gap-3 text-sm': {},
+      gap: theme('spacing.3'),
+      'font-size': theme('fontSize.sm'),
+      'line-height': theme('lineHeight.5'),
 
       '.velvet-switch-track': {
-        '@apply h-5 w-9': {},
+        height: theme('spacing.5'),
+        width: theme('spacing.9'),
       },
 
       '.velvet-switch-handle': {
-        '@apply size-4': {},
+        width: theme('spacing.4'),
+        height: theme('spacing.4'),
       },
     },
 
     '&-lg': {
-      '@apply gap-4 text-base': {},
+      gap: theme('spacing.4'),
+      'font-size': theme('fontSize.base'),
+      'line-height': theme('lineHeight.6'),
 
       '.velvet-switch-track': {
-        '@apply h-6 w-11': {},
+        height: theme('spacing.6'),
+        width: theme('spacing.11'),
       },
 
       '.velvet-switch-handle': {
-        '@apply size-5': {},
+        width: theme('spacing.5'),
+        height: theme('spacing.5'),
       },
     },
 
     '&-disabled': {
-      '@apply cursor-not-allowed': {},
+      cursor: 'not-allowed',
     },
 
     '&-input': {
-      '@apply sr-only': {},
+      position: 'absolute',
+      width: '1px',
+      height: '1px',
+      padding: '0',
+      margin: '-1px',
+      overflow: 'hidden',
+      clip: 'rect(0, 0, 0, 0)',
+      'white-space': 'nowrap',
+      'border-width': '0',
 
       '&:focus-visible + .velvet-switch-track': {
-        '@apply velvet-outline': {},
+        'outline-style': 'solid',
+        'outline-width': '2px',
+        'outline-offset': '1px',
       },
 
       '&:checked + .velvet-switch-track .velvet-switch-handle': {
-        '@apply translate-x-full': {},
+        transform: 'translateX(100%)',
       },
     },
 
     '.velvet-switch-track': {
-      '@apply p-0.5 rounded-full transition-colors': {},
+      padding: '0.125rem',
+      'border-radius': theme('borderRadius.full'),
+      'transition-property': theme('transitionProperty.colors'),
+      'transition-timing-function': theme('transitionTimingFunction.DEFAULT'),
+      'transition-duration': theme('transitionDuration.DEFAULT'),
     },
 
     '.velvet-switch-handle': {
-      '@apply rounded-full transition-transform': {},
+      'border-radius': theme('borderRadius.full'),
+      'transition-property': theme('transitionProperty.transform'),
+      'transition-timing-function': theme('transitionTimingFunction.DEFAULT'),
+      'transition-duration': theme('transitionDuration.DEFAULT'),
     },
   },
 });

@@ -1,23 +1,29 @@
 'use strict';
 
-module.exports = () => ({
+module.exports = ({ theme }) => ({
   '.velvet-progress': {
-    '@apply overflow-hidden rounded-full w-full': {},
+    overflow: 'hidden',
+    'border-radius': theme('borderRadius.full'),
+    width: '100%',
 
     '&-sm': {
-      '@apply h-1': {},
+      height: theme('spacing.1'),
     },
 
     '&-md': {
-      '@apply h-2': {},
+      height: theme('spacing.2'),
     },
 
     '&-lg': {
-      '@apply h-3': {},
+      height: theme('spacing.3'),
     },
 
     '&-line': {
-      '@apply h-full rounded-full transition-all': {},
+      height: '100%',
+      'border-radius': theme('borderRadius.full'),
+      'transition-property': theme('transitionProperty.all'),
+      'transition-timing-function': theme('transitionTimingFunction.DEFAULT'),
+      'transition-duration': theme('transitionDuration.DEFAULT'),
     },
   },
 });
