@@ -1,46 +1,63 @@
 'use strict';
 
-module.exports = () => ({
+module.exports = ({ theme }) => ({
   '.velvet-radio': {
-    '@apply flex items-center w-fit': {},
+    display: 'flex',
+    'align-items': 'center',
+    width: 'fit-content',
 
     '&-sm': {
-      '@apply text-xs': {},
+      'font-size': theme('fontSize.xs'),
+      'line-height': theme('lineHeight.4'),
 
       '.velvet-radio-input': {
-        '@apply mr-2 size-4': {},
+        'margin-right': theme('spacing.2'),
+        width: theme('spacing.4'),
+        height: theme('spacing.4'),
       },
     },
 
     '&-md': {
-      '@apply text-sm': {},
+      'font-size': theme('fontSize.sm'),
+      'line-height': theme('lineHeight.5'),
 
       '.velvet-radio-input': {
-        '@apply mr-3 size-5': {},
+        'margin-right': theme('spacing.3'),
+        width: theme('spacing.5'),
+        height: theme('spacing.5'),
       },
     },
 
     '&-lg': {
-      '@apply text-base': {},
+      'font-size': theme('fontSize.base'),
+      'line-height': theme('lineHeight.6'),
 
       '.velvet-radio-input': {
-        '@apply mr-4 size-6': {},
+        'margin-right': theme('spacing.4'),
+        width: theme('spacing.6'),
+        height: theme('spacing.6'),
       },
     },
 
     '&-disabled': {
-      '@apply cursor-not-allowed': {},
+      cursor: 'not-allowed',
     },
 
     '&-input': {
-      '@apply border-2 transition': {},
+      'border-width': '2px',
+      'transition-property': theme('transitionProperty.DEFAULT'),
+      'transition-timing-function': theme('transitionTimingFunction.DEFAULT'),
+      'transition-duration': theme('transitionDuration.DEFAULT'),
 
       '&:focus': {
-        '@apply ring-0 ring-offset-0 velvet-outline': {},
+        'box-shadow': 'none',
+        'outline-style': 'solid',
+        'outline-width': '2px',
+        'outline-offset': '1px',
       },
 
       '&:disabled': {
-        '@apply cursor-not-allowed': {},
+        cursor: 'not-allowed',
       },
     },
   },

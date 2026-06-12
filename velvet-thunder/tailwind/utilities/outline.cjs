@@ -2,9 +2,13 @@
 
 module.exports = {
   '.velvet-outline': {
-    '@apply outline outline-2 outline-offset-1': {},
+    'outline-style': 'solid',
+    'outline-width': '2px',
+    'outline-offset': '1px',
   },
   '.velvet-outline-offset-0': {
-    '@apply outline outline-2 outline-offset-0': {},
+    'outline-style': 'solid',
+    'outline-width': '2px',
+    'outline-offset': '0px',
   },
 };

@@ -1,31 +1,41 @@
 'use strict';
 
-module.exports = () => ({
+module.exports = ({ theme }) => ({
+  '@keyframes velvet-spin': {
+    to: { transform: 'rotate(360deg)' },
+  },
+
   '.velvet-spinner': {
-    '@apply animate-spin shrink-0': {},
+    animation: 'velvet-spin 1s linear infinite',
+    'flex-shrink': '0',
 
     '&-xs': {
-      '@apply size-3': {},
+      width: theme('spacing.3'),
+      height: theme('spacing.3'),
     },
 
     '&-sm': {
-      '@apply size-4': {},
+      width: theme('spacing.4'),
+      height: theme('spacing.4'),
     },
 
     '&-md': {
-      '@apply size-5': {},
+      width: theme('spacing.5'),
+      height: theme('spacing.5'),
     },
 
     '&-lg': {
-      '@apply size-6': {},
+      width: theme('spacing.6'),
+      height: theme('spacing.6'),
     },
 
     '&-xl': {
-      '@apply size-7': {},
+      width: theme('spacing.7'),
+      height: theme('spacing.7'),
     },
 
     '&-track': {
-      '@apply opacity-20': {},
+      opacity: '0.2',
     },
   },
 });

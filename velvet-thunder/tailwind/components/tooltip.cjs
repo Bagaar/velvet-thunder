@@ -1,9 +1,10 @@
 'use strict';
 
-module.exports = () => ({
+module.exports = ({ theme }) => ({
   '.velvet-tooltip': {
     '&-content': {
-      '@apply text-sm': {},
+      'font-size': theme('fontSize.sm'),
+      'line-height': theme('lineHeight.5'),
     },
   },
 });

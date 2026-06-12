@@ -1,33 +1,46 @@
 'use strict';
 
-module.exports = () => ({
+module.exports = ({ theme }) => ({
   '.velvet-icon-link': {
-    '@apply border border-transparent': {},
-    '@apply flex items-center justify-center shrink-0': {},
-    '@apply rounded-md transition': {},
+    'border-width': '1px',
+    'border-color': 'transparent',
+    display: 'flex',
+    'align-items': 'center',
+    'justify-content': 'center',
+    'flex-shrink': '0',
+    'border-radius': theme('borderRadius.md'),
+    'transition-property': theme('transitionProperty.DEFAULT'),
+    'transition-timing-function': theme('transitionTimingFunction.DEFAULT'),
+    'transition-duration': theme('transitionDuration.DEFAULT'),
 
     '&:focus-visible': {
-      '@apply velvet-outline': {},
+      'outline-style': 'solid',
+      'outline-width': '2px',
+      'outline-offset': '1px',
     },
 
     '&-xs': {
-      '@apply size-7': {},
+      width: theme('spacing.7'),
+      height: theme('spacing.7'),
     },
 
     '&-sm': {
-      '@apply size-8': {},
+      width: theme('spacing.8'),
+      height: theme('spacing.8'),
     },
 
     '&-md': {
-      '@apply size-9': {},
+      width: theme('spacing.9'),
+      height: theme('spacing.9'),
     },
 
     '&-lg': {
-      '@apply size-10': {},
+      width: theme('spacing.10'),
+      height: theme('spacing.10'),
     },
 
     '&-round': {
-      '@apply rounded-full': {},
+      'border-radius': theme('borderRadius.full'),
     },
   },
 });
