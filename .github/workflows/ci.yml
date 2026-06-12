@@ -85,6 +85,7 @@ jobs:
           - ember-lts-5.12
           - ember-lts-6.4
           - ember-lts-6.8
+          - ember-lts-6.12
           - ember-release
           - ember-beta
           - ember-canary
@@ -105,4 +106,4 @@ jobs:
       - name: Run Tests
         run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }} --skip-cleanup
         working-directory: test-app
-        continue-on-error: ${{ matrix.try-scenario == 'ember-beta' || matrix.try-scenario == 'ember-canary' }}
+        continue-on-error: ${{ matrix.try-scenario == 'ember-beta' || matrix.try-scenario == 'ember-canary' || matrix.try-scenario == 'ember-release' }}
