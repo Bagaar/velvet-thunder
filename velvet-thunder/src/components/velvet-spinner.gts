@@ -14,10 +14,7 @@ export interface VelvetSpinnerSignature {
 
 const VelvetSpinner: TOC<VelvetSpinnerSignature> = <template>
   <svg
-    class={{cn
-      "velvet-spinner"
-      (concat "velvet-spinner-" (or @size "md"))
-    }}
+    class={{cn "velvet-spinner" (concat "velvet-spinner-" (or @size "md"))}}
     fill="none"
     role="status"
     stroke="currentColor"

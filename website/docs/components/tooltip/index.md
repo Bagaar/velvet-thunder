@@ -100,6 +100,15 @@ Uses [Floating UI](https://floating-ui.com/) underneath.
 </DemoSpaceX>
 ```
 
+## CSS Classes
+
+The following classes are applied by the component and can be targeted to fully customize its appearance — see the [styling guide](../../styling.md) for details.
+
+| Class                    | Applied when                             |
+| ------------------------ | ---------------------------------------- |
+| `velvet-tooltip`         | Always (root wrapper)                    |
+| `velvet-tooltip-content` | Always (on the floating content element) |
+
 ## Signature
 
 <!-- component-signature: velvet-tooltip -->

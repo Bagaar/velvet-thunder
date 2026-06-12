@@ -45,6 +45,18 @@ manualDemoInsertion: true
 
 [[demos-all]]
 
+## CSS Classes
+
+The following classes are applied by the component and can be targeted to fully customize its appearance — see the [styling guide](../../styling.md) for details.
+
+| Class                         | Applied when           |
+| ----------------------------- | ---------------------- |
+| `velvet-radio-group`          | Always                 |
+| `velvet-radio-group-sm`       | `@size="sm"`           |
+| `velvet-radio-group-md`       | `@size="md"` (default) |
+| `velvet-radio-group-lg`       | `@size="lg"`           |
+| `velvet-radio-group-disabled` | `@isDisabled={{true}}` |
+
 ## Signature
 
 <!-- component-signature: velvet-radio-group -->

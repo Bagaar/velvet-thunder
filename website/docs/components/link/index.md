@@ -61,6 +61,19 @@ Requires the use of [ember-link](https://buschtoens.github.io/ember-link/).
 
 [[demos-all]]
 
+## CSS Classes
+
+The following classes are applied by the component and can be targeted to fully customize its appearance — see the [styling guide](../../styling.md) for details.
+
+| Class                   | Applied when           |
+| ----------------------- | ---------------------- |
+| `velvet-link`           | Always                 |
+| `velvet-link-sm`        | `@size="sm"`           |
+| `velvet-link-md`        | `@size="md"` (default) |
+| `velvet-link-lg`        | `@size="lg"`           |
+| `velvet-link-{variant}` | Any `@variant` value   |
+| `velvet-link-pill`      | `@isPill={{true}}`     |
+
 ## Signature
 
 <!-- component-signature: velvet-link -->

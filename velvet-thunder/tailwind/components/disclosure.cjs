@@ -2,10 +2,10 @@
 
 module.exports = () => ({
   '.velvet-disclosure': {
-    '@apply overflow-hidden': {},
+    overflow: 'hidden',
 
     '&:focus-within': {
-      '@apply overflow-visible': {},
+      overflow: 'visible',
     },
   },
 });

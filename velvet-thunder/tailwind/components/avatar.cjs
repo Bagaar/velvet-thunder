@@ -1,32 +1,53 @@
 'use strict';
 
-module.exports = () => ({
+module.exports = ({ theme }) => ({
   '.velvet-avatar': {
-    '@apply flex font-medium items-center justify-center': {},
-    '@apply overflow-hidden shrink-0 text-white uppercase': {},
+    display: 'flex',
+    'font-weight': theme('fontWeight.medium'),
+    'align-items': 'center',
+    'justify-content': 'center',
+    overflow: 'hidden',
+    'flex-shrink': '0',
+    color: theme('colors.white'),
+    'text-transform': 'uppercase',
 
     '&-image': {
-      '@apply object-cover size-full': {},
+      'object-fit': 'cover',
+      width: '100%',
+      height: '100%',
     },
 
     '&-sm': {
-      '@apply rounded size-7 text-xs': {},
+      'border-radius': theme('borderRadius.DEFAULT'),
+      width: theme('spacing.7'),
+      height: theme('spacing.7'),
+      'font-size': theme('fontSize.xs'),
+      'line-height': theme('lineHeight.4'),
     },
 
     '&-md': {
-      '@apply rounded-md size-9 text-sm': {},
+      'border-radius': theme('borderRadius.md'),
+      width: theme('spacing.9'),
+      height: theme('spacing.9'),
+      'font-size': theme('fontSize.sm'),
+      'line-height': theme('lineHeight.5'),
     },
 
     '&-lg': {
-      '@apply rounded-lg size-11 text-base': {},
+      'border-radius': theme('borderRadius.lg'),
+      width: theme('spacing.11'),
+      height: theme('spacing.11'),
+      'font-size': theme('fontSize.base'),
+      'line-height': theme('lineHeight.6'),
     },
 
     '&-round': {
-      '@apply rounded-full': {},
+      'border-radius': theme('borderRadius.full'),
     },
 
     '&-icon': {
-      '@apply size-4': {},
+      width: theme('spacing.4'),
+      height: theme('spacing.4'),
     },
   },
 });

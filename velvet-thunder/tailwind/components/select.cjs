@@ -2,33 +2,51 @@
 
 module.exports = ({ theme }) => ({
   '.velvet-select': {
-    '@apply py-0 rounded-md text-sm transition w-full': {},
+    'padding-top': '0',
+    'padding-bottom': '0',
+    'border-radius': theme('borderRadius.md'),
+    'font-size': theme('fontSize.sm'),
+    'line-height': theme('lineHeight.5'),
+    'transition-property': theme('transitionProperty.DEFAULT'),
+    'transition-timing-function': theme('transitionTimingFunction.DEFAULT'),
+    'transition-duration': theme('transitionDuration.DEFAULT'),
+    width: '100%',
 
     '&:focus': {
-      '@apply ring-0 velvet-outline-offset-0': {},
+      'box-shadow': 'none',
+      'outline-style': 'solid',
+      'outline-width': '2px',
+      'outline-offset': '0px',
     },
 
     '&:disabled': {
-      '@apply cursor-not-allowed opacity-100': {},
+      cursor: 'not-allowed',
+      opacity: '1',
     },
 
     '&-sm': {
-      '@apply h-8 pl-2 pr-8': {},
-      [`@apply bg-[right_${theme('spacing.1')}_center]`]: {},
+      height: theme('spacing.8'),
+      'padding-left': theme('spacing.2'),
+      'padding-right': theme('spacing.8'),
+      'background-position': `right ${theme('spacing.1')} center`,
     },
 
     '&-md': {
-      '@apply h-9 pl-3 pr-10': {},
-      [`@apply bg-[right_${theme('spacing.2')}_center]`]: {},
+      height: theme('spacing.9'),
+      'padding-left': theme('spacing.3'),
+      'padding-right': theme('spacing.10'),
+      'background-position': `right ${theme('spacing.2')} center`,
     },
 
     '&-lg': {
-      '@apply h-10 pl-4 pr-12': {},
-      [`@apply bg-[right_${theme('spacing.3')}_center]`]: {},
+      height: theme('spacing.10'),
+      'padding-left': theme('spacing.4'),
+      'padding-right': theme('spacing.12'),
+      'background-position': `right ${theme('spacing.3')} center`,
     },
 
     '&-pill': {
-      '@apply rounded-full': {},
+      'border-radius': theme('borderRadius.full'),
     },
   },
 });

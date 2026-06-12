@@ -28,6 +28,20 @@
 </DemoSpaceX>
 ```
 
+## CSS Classes
+
+The following classes are applied by the component and can be targeted to fully customize its appearance — see the [styling guide](../../styling.md) for details.
+
+| Class                  | Applied when                   |
+| ---------------------- | ------------------------------ |
+| `velvet-tag`           | Always                         |
+| `velvet-tag-sm`        | `@size="sm"`                   |
+| `velvet-tag-md`        | `@size="md"` (default)         |
+| `velvet-tag-lg`        | `@size="lg"`                   |
+| `velvet-tag-primary`   | `@variant="primary"` (default) |
+| `velvet-tag-{variant}` | Any custom `@variant` value    |
+| `velvet-tag-pill`      | `@isPill={{true}}`             |
+
 ## Signature
 
 <!-- component-signature: velvet-tag -->

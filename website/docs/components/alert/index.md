@@ -76,6 +76,21 @@ manualDemoInsertion: true
 
 [[demos-all]]
 
+## CSS Classes
+
+The following classes are applied by the component and can be targeted to fully customize its appearance — see the [styling guide](../../styling.md) for details.
+
+| Class                  | Applied when            |
+| ---------------------- | ----------------------- |
+| `velvet-alert`         | Always (root element)   |
+| `velvet-alert-danger`  | `@level="danger"`       |
+| `velvet-alert-info`    | `@level="info"`         |
+| `velvet-alert-success` | `@level="success"`      |
+| `velvet-alert-warning` | `@level="warning"`      |
+| `velvet-alert-header`  | Always (header wrapper) |
+| `velvet-alert-icon`    | Always (icon element)   |
+| `velvet-alert-title`   | Always (title wrapper)  |
+
 ## Signature
 
 <!-- component-signature: velvet-alert -->

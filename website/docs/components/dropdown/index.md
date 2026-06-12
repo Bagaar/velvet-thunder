@@ -88,7 +88,7 @@ Uses [Floating UI](https://floating-ui.com/) underneath.
     </dropdown.Content>
   </VelvetDropdown>
 
-   <VelvetDropdown as |dropdown|>
+  <VelvetDropdown as |dropdown|>
     <dropdown.IconButton />
     <dropdown.Content>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -112,7 +112,7 @@ Uses [Floating UI](https://floating-ui.com/) underneath.
       />
     {{/if}}
   </VelvetDropdown>
-  
+
   <VelvetDropdown as |dropdown|>
     <button {{dropdown.trigger}}>
       {{#if dropdown.isShown}}
@@ -131,6 +131,15 @@ Uses [Floating UI](https://floating-ui.com/) underneath.
   </VelvetDropdown>
 </DemoSpaceX>
 ```
+
+## CSS Classes
+
+The following classes are applied by the component and can be targeted to fully customize its appearance — see the [styling guide](../../styling.md) for details.
+
+| Class                     | Applied when                             |
+| ------------------------- | ---------------------------------------- |
+| `velvet-dropdown`         | Always (root element)                    |
+| `velvet-dropdown-content` | Always (on the floating content element) |
 
 ## Signature
 

@@ -12,14 +12,13 @@
     "start:addon": "pnpm --filter velvet-thunder start --no-watch.clearScreen",
     "start:test-app": "pnpm --filter test-app start",
     "start:website": "pnpm --filter website start",
-    "test": "pnpm --filter '*' test",
-    "test:ember": "pnpm --filter '*' test:ember"
+    "test": "pnpm --filter '*' test"
   },
   "devDependencies": {
     "@glint/core": "^1.2.1",
-    "concurrently": "^8.2.0",
-    "prettier": "^3.0.3",
-    "prettier-plugin-ember-template-tag": "^2.0.1"
+    "concurrently": "^10.0.0",
+    "prettier": "^3.8.2",
+    "prettier-plugin-ember-template-tag": "^2.1.4"
   },
   "pnpm": {
     "overrides": {

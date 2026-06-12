@@ -35,6 +35,19 @@ manualDemoInsertion: true
 
 [[demos-all]]
 
+## CSS Classes
+
+The following classes are applied by the component and can be targeted to fully customize its appearance — see the [styling guide](../../styling.md) for details.
+
+| Class                      | Applied when                      |
+| -------------------------- | --------------------------------- |
+| `velvet-checkbox`          | Always (root `<label>`)           |
+| `velvet-checkbox-sm`       | `@size="sm"`                      |
+| `velvet-checkbox-md`       | `@size="md"` (default)            |
+| `velvet-checkbox-lg`       | `@size="lg"`                      |
+| `velvet-checkbox-disabled` | `@isDisabled={{true}}`            |
+| `velvet-checkbox-input`    | Always (on the `<input>` element) |
+
 ## Signature
 
 <!-- component-signature: velvet-checkbox -->

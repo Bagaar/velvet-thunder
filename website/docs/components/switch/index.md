@@ -36,6 +36,23 @@ manualDemoInsertion: true
 
 [[demos-all]]
 
+## CSS Classes
+
+The following classes are applied by the component and can be targeted to fully customize its appearance — see the [styling guide](../../styling.md) for details.
+
+| Class                    | Applied when                     |
+| ------------------------ | -------------------------------- |
+| `velvet-switch`          | Always (root `<label>`)          |
+| `velvet-switch-sm`       | `@size="sm"`                     |
+| `velvet-switch-md`       | `@size="md"` (default)           |
+| `velvet-switch-lg`       | `@size="lg"`                     |
+| `velvet-switch-left`     | `@alignment="left"` (default)    |
+| `velvet-switch-right`    | `@alignment="right"`             |
+| `velvet-switch-disabled` | `@isDisabled={{true}}`           |
+| `velvet-switch-input`    | Always (on the hidden `<input>`) |
+| `velvet-switch-track`    | Always (on the track element)    |
+| `velvet-switch-handle`   | Always (on the handle element)   |
+
 ## Signature
 
 <!-- component-signature: velvet-switch -->

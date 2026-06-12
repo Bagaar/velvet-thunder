@@ -163,9 +163,7 @@ export default class VelvetTooltip extends Component<VelvetTooltipSignature> {
       {{yield
         (hash
           Content=(component
-            VelvetTooltipContent
-            isShown=this.isShown
-            modifier=this.content
+            VelvetTooltipContent isShown=this.isShown modifier=this.content
           )
           isShown=this.isShown
           hide=this.hide
