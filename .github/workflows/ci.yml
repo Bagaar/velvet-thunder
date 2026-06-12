@@ -91,6 +91,8 @@ jobs:
           - ember-canary
           - embroider-safe
           - embroider-optimized
+          - tailwind-v3
+          - tailwind-v4
 
     steps:
       - uses: actions/checkout@v6
@@ -106,3 +108,45 @@ jobs:
       - name: Run Tests
         run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }} --skip-cleanup
         working-directory: test-app
+
+  deploy-website-tailwind:
+    name: "Deploy Website (Tailwind ${{ matrix.tailwind }})"
+    runs-on: ubuntu-latest
+    needs: 'test'
+    timeout-minutes: 15
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - tailwind: v3
+          - tailwind: v4
+            tailwind-packages: "tailwindcss@^4 @tailwindcss/cli@^4"
+            build-script: build:v4
+
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@26f6d4f2c533a43e6b5da0b4a5dd983f98f7b49a # v6
+        with:
+          version: 10
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Upgrade to Tailwind ${{ matrix.tailwind }}
+        if: matrix.tailwind-packages != ''
+        run: pnpm add --filter website ${{ matrix.tailwind-packages }}
+      - name: Build Website
+        run: pnpm --filter website ${{ matrix.build-script || 'build' }}
+      - name: Deploy to Netlify (draft)
+        uses: nwtgck/actions-netlify@v3.0
+        with:
+          publish-dir: website/dist
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Tailwind ${{ matrix.tailwind }} — ${{ github.sha }}"
+          overwrites-pull-request-comment: false
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

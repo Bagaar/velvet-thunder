@@ -42,7 +42,7 @@ module('Integration | Component | velvet-tooltip', function (hooks) {
     await render(hbs`
       {{! template-lint-disable no-inline-styles }}
       <VelvetTooltip @showDelay={{0}} class="relative" as |tooltip|>
-        <VelvetButton {{tooltip.trigger}} />
+        <VelvetButton style="height: 36px;" {{tooltip.trigger}} />
         <tooltip.Content style="height: 40px;" />
       </VelvetTooltip>
     `);
@@ -54,7 +54,7 @@ module('Integration | Component | velvet-tooltip', function (hooks) {
     await render(hbs`
       {{! template-lint-disable no-inline-styles }}
       <VelvetTooltip @offset={{12}} @showDelay={{0}} class="relative" as |tooltip|>
-        <VelvetButton {{tooltip.trigger}} />
+        <VelvetButton style="height: 36px;" {{tooltip.trigger}} />
         <tooltip.Content style="height: 40px;" />
       </VelvetTooltip>
     `);

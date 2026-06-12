@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@import "./code-blocks.css";
+@import "./docfy.css";
+@import "./highlight-js.css";
+@import "./prose.css";
+@import "./components/alert.css";
+@import "./components/avatar.css";
+@import "./components/button-and-icon-button.css";
+@import "./components/checkbox-and-radio.css";
+@import "./components/dropdown.css";
+@import "./components/input-and-textarea.css";
+@import "./components/link-and-icon-link.css";
+@import "./components/progress.css";
+@import "./components/select.css";
+@import "./components/switch.css";
+@import "./components/tag.css";
+@import "./components/tooltip.css";
+
+@config "../tailwind.config.js";
