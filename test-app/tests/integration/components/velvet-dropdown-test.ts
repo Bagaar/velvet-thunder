@@ -97,8 +97,9 @@ module('Integration | Component | velvet-dropdown', function (hooks) {
 
   test('it uses the correct offset', async function (assert) {
     await render(hbs`
+      {{! template-lint-disable no-inline-styles }}
       <VelvetDropdown class="relative" as |dropdown|>
-        <dropdown.Button />
+        <dropdown.Button style="height: 36px;" />
         <dropdown.Content />
       </VelvetDropdown>
     `);
@@ -108,8 +109,9 @@ module('Integration | Component | velvet-dropdown', function (hooks) {
     assert.dom(SELECTOR_CONTENT).hasStyle({ top: '40px' });
 
     await render(hbs`
+      {{! template-lint-disable no-inline-styles }}
       <VelvetDropdown @offset={{12}} class="relative" as |dropdown|>
-        <dropdown.Button />
+        <dropdown.Button style="height: 36px;" />
         <dropdown.Content />
       </VelvetDropdown>
     `);
