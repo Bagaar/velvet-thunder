@@ -22,7 +22,6 @@
   },
   "pnpm": {
     "overrides": {
-      "@types/eslint": "^8.0.0",
       "@glimmer/component": "^2.0.0"
     }
   },
