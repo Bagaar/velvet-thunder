@@ -102,6 +102,24 @@ module.exports = async function () {
       },
       embroiderSafe(),
       embroiderOptimized(),
+      {
+        name: 'tailwind-v3',
+        npm: {
+          devDependencies: {
+            tailwindcss: '^3.4.1',
+          },
+        },
+      },
+      {
+        name: 'tailwind-v4',
+        command: 'pnpm run test:v4',
+        npm: {
+          devDependencies: {
+            tailwindcss: '^4.0.0',
+            '@tailwindcss/cli': '^4.0.0',
+          },
+        },
+      },
     ],
   };
 };
