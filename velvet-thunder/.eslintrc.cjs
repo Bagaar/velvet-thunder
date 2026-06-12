@@ -15,14 +15,23 @@ module.exports = {
   overrides: [
     // ts files
     {
-      files: ['**/*.ts', '**/*.gts'],
+      files: ['**/*.ts'],
       extends: [
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
       ],
-      rules: {
-        // Add any custom rules here
-      },
+      rules: {},
+    },
+    // gts files
+    {
+      files: ['**/*.gts'],
+      parser: 'ember-eslint-parser',
+      extends: [
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:ember/recommended-gts',
+      ],
+      rules: {},
     },
     // node files
     {
