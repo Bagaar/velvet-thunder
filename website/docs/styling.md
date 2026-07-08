@@ -8,10 +8,15 @@ order: 3
 
 `velvetThunder.plugin()` generates **structural** CSS for all `velvet-*` component classes — layout, sizing, spacing, transitions, and disabled cursors. Colors, borders, and hover/focus states are intentionally left out. This is what makes Velvet Thunder semi-headless: the plugin gives components their shape, and you give them their look.
 
-The plugin also:
+The plugin also adds `.velvet-outline` and `.velvet-outline-offset-0` utility classes used internally for focus rings (see [Outline](./utilities/outline.md)).
 
-- Adds `.velvet-outline` and `.velvet-outline-offset-0` utility classes used internally for focus rings (see [Outline](./utilities/outline.md))
-- Safelists all `/^velvet-/` classes so Tailwind never purges them, even when they are composed dynamically at runtime
+### Tailwind v3
+
+The plugin safelists all `/^velvet-/` classes so Tailwind never purges them, even when they are composed dynamically at runtime.
+
+### Tailwind v4
+
+The safelist is not respected in Tailwind v4. Instead, `velvetThunder.content()` points Tailwind at the compiled component files so it can detect which classes are used. Classes that are composed dynamically at runtime (e.g. `velvet-button-${size}`) will not appear as literal strings in those files and may be omitted from the output. Explicitly use every variant class you need somewhere in your own templates, or write them out in your stylesheet, to ensure they are included.
 
 ## Opting Out of Components
 
