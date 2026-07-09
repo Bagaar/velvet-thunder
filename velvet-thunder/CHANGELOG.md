@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.3.0](https://github.com/Bagaar/velvet-thunder/compare/0.2.1...0.3.0) (2026-07-09)
+
+### Features
+
+* allow plugin to be used with tailwind [@plugin](https://github.com/plugin) directive in css instead of js config file ([7662c0c](https://github.com/Bagaar/velvet-thunder/commit/7662c0c50940e1fc5681ed516047cfd211a84771))
+
 ## [0.2.1](https://github.com/Bagaar/velvet-thunder/compare/0.2.0...0.2.1) (2026-06-12)
 
 ### Bug Fixes
