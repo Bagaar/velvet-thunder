@@ -3,8 +3,8 @@
 }
 
 .velvet-select-primary.velvet-select-placeholder {
-  @apply text-opacity-50 text-slate-500;
-  @apply dark:text-opacity-50 dark:text-slate-400;
+  @apply text-slate-500/50;
+  @apply dark:text-slate-400/50;
 }
 
 .velvet-select-primary:disabled {

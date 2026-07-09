@@ -12,6 +12,7 @@
   },
   "scripts": {
     "build": "pnpm tailwind:build && ember build --environment=production",
+    "build:v4": "pnpm tailwind:build:v4 && ember build --environment=production",
     "lint": "concurrently \"npm:lint:*(!fix)\" --names \"lint:\"",
     "lint:css": "stylelint \"**/*.css\"",
     "lint:css:fix": "concurrently \"npm:lint:css -- --fix\"",
@@ -27,6 +28,7 @@
     "start:ember": "ember serve --port 4202",
     "start:tailwind": "tailwindcss -i ./tailwind/index.css -o ./public/assets/tailwind.css --watch",
     "tailwind:build": "tailwindcss -i ./tailwind/index.css -o ./public/assets/tailwind.css --minify",
+    "tailwind:build:v4": "tailwindcss -i ./tailwind/index.v4.css -o ./public/assets/tailwind.css --minify",
     "test": "pnpm tailwind:build && ember test --test-port=0"
   },
   "devDependencies": {
@@ -73,7 +75,7 @@
     "ember-template-lint": "^7.0.0",
     "eslint": "^8.57.0",
     "eslint-plugin-ember": "^12.0.0",
-    "eslint-plugin-n": "^17.0.0",
+    "eslint-plugin-n": "^18.0.0",
     "eslint-plugin-qunit": "^8.1.1",
     "loader.js": "^4.7.0",
     "prettier": "^3.8.2",
