@@ -9,34 +9,62 @@ order: 2
 ### bun
 
 ```shell
-bun add -D @bagaar/velvet-thunder tailwindcss @tailwindcss/forms
+bun add -D @bagaar/velvet-thunder tailwindcss @tailwindcss/forms postcss-nested
 ```
 
 ### npm
 
 ```shell
-npm install -D @bagaar/velvet-thunder tailwindcss @tailwindcss/forms
+npm install -D @bagaar/velvet-thunder tailwindcss @tailwindcss/forms postcss-nested
 ```
 
 ### pnpm
 
 ```shell
-pnpm add -D @bagaar/velvet-thunder tailwindcss @tailwindcss/forms
+pnpm add -D @bagaar/velvet-thunder tailwindcss @tailwindcss/forms postcss-nested
 ```
 
 ### yarn
 
 ```shell
-yarn add -D @bagaar/velvet-thunder tailwindcss @tailwindcss/forms
+yarn add -D @bagaar/velvet-thunder tailwindcss @tailwindcss/forms postcss-nested
 ```
 
 ## Configuration
 
 ### Tailwind v4
 
-Tailwind v4 uses a CSS-first configuration approach. Add `@tailwindcss/forms` via `@plugin` directly in your CSS entry file, and keep a minimal `tailwind.config.js` for the Velvet Thunder plugin.
+Tailwind v4 supports two approaches. Both require `postcss-nested` in the PostCSS pipeline so that plugin-generated variant classes like `.velvet-button-sm` are expanded to flat rules. Both also require an explicit source declaration because Tailwind v4 does not scan `node_modules` automatically.
 
-Because Tailwind v4 does not scan `node_modules` automatically, `velvetThunder.content()` is still needed to point Tailwind at the component files so it can include the structural styles.
+Add `postcss-nested` after `@tailwindcss/postcss` in your PostCSS config:
+
+```js
+export default {
+  plugins: {
+    "@tailwindcss/postcss": {},
+    "postcss-nested": {},
+  },
+};
+```
+
+#### Option A: CSS-first (no JS config)
+
+Load both plugins via `@plugin` directly in your CSS entry file. Use `@source` to point Tailwind at the Velvet Thunder component files:
+
+```css
+@import "tailwindcss/theme";
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+
+@source "../node_modules/@bagaar/velvet-thunder";
+
+@plugin "@bagaar/velvet-thunder/tailwind/plugin";
+@plugin "@tailwindcss/forms";
+```
+
+#### Option B: JS config file
+
+Keep a `tailwind.config.js` and load it via `@config`. The forms plugin can be added either in the JS config or as a `@plugin` in CSS.
 
 `tailwind.config.js`:
 
@@ -62,23 +90,6 @@ Your CSS entry file:
 @plugin "@tailwindcss/forms";
 
 @config "./tailwind.config.js";
-```
-
-Tailwind v4 emits native CSS nesting for plugin-generated component classes. To ensure variant classes like `.velvet-button-sm` are expanded to flat rules, add `postcss-nested` after `@tailwindcss/postcss` in your PostCSS config:
-
-```shell
-pnpm add -D postcss-nested
-```
-
-`postcss.config.js`:
-
-```js
-export default {
-  plugins: {
-    "@tailwindcss/postcss": {},
-    "postcss-nested": {},
-  },
-};
 ```
 
 ### Tailwind v3
