@@ -24,6 +24,9 @@
     "./tailwind": {
       "require": "./tailwind/index.cjs"
     },
+    "./tailwind/plugin": {
+      "require": "./tailwind/plugin.cjs"
+    },
     "./test-support": {
       "types": "./declarations/test-support/index.d.ts",
       "default": "./dist/test-support/index.js"
