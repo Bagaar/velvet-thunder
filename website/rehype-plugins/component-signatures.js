@@ -74,7 +74,7 @@ function velvetThunderComponentSignatures() {
 
       let componentFile = readFileSync(componentPath, { encoding: 'utf-8' });
       if (componentPath.endsWith('.gts')) {
-        componentFile = contentTagPreprocessor.process(componentFile);
+        componentFile = contentTagPreprocessor.process(componentFile).code;
       }
 
       const componentAST = babelParse(componentFile, {
