@@ -141,7 +141,7 @@ jobs:
       - name: Build Website
         run: pnpm --filter website ${{ matrix.build-script || 'build' }}
       - name: Deploy to Netlify (draft)
-        uses: nwtgck/actions-netlify@v3.0.0
+        uses: nwtgck/actions-netlify@v4.0.0
         with:
           publish-dir: website/dist
           github-token: ${{ secrets.GITHUB_TOKEN }}
