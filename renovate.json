@@ -42,6 +42,11 @@
     {
       "matchDepTypes": ["action"],
       "pinDigests": false
+    },
+    {
+      "matchFileNames": ["velvet-thunder/package.json"],
+      "matchDepTypes": ["dependencies"],
+      "rangeStrategy": "widen"
     }
   ],
   "commitMessageExtra": "from {{currentVersion}} to {{newVersion}}",
