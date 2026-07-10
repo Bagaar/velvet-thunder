@@ -17,7 +17,7 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v6.0.3
+      - uses: actions/checkout@v7.0.0
       - uses: pnpm/action-setup@v6.0.9
         with:
           version: 10.34.5
@@ -36,7 +36,7 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v6.0.3
+      - uses: actions/checkout@v7.0.0
       - uses: pnpm/action-setup@v6.0.9
         with:
           version: 10.34.5
@@ -55,7 +55,7 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v6.0.3
+      - uses: actions/checkout@v7.0.0
       - uses: pnpm/action-setup@v6.0.9
         with:
           version: 10.34.5
@@ -95,7 +95,7 @@ jobs:
           - tailwind-v4
 
     steps:
-      - uses: actions/checkout@v6.0.3
+      - uses: actions/checkout@v7.0.0
       - uses: pnpm/action-setup@v6.0.9
         with:
           version: 10.34.5
@@ -125,7 +125,7 @@ jobs:
             build-script: build:v4
 
     steps:
-      - uses: actions/checkout@v6.0.3
+      - uses: actions/checkout@v7.0.0
       - uses: pnpm/action-setup@v6.0.9
         with:
           version: 10.34.5
