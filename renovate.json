@@ -38,6 +38,10 @@
       "automerge": false,
       "matchPackageNames": ["ember-cli", "ember-data", "ember-source"],
       "matchUpdateTypes": ["major", "minor"]
+    },
+    {
+      "matchDepTypes": ["action"],
+      "pinDigests": false
     }
   ],
   "commitMessageExtra": "from {{currentVersion}} to {{newVersion}}",
