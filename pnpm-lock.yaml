@@ -12,37 +12,37 @@ importers:
   .:
     devDependencies:
       '@glint/core':
-        specifier: ^1.2.1
+        specifier: 1.5.2
         version: 1.5.2(typescript@5.9.3)
       concurrently:
-        specifier: ^10.0.0
+        specifier: 10.0.3
         version: 10.0.3
       prettier:
-        specifier: ^3.8.2
+        specifier: 3.8.2
         version: 3.8.2
       prettier-plugin-ember-template-tag:
-        specifier: ^2.1.4
+        specifier: 2.1.4
         version: 2.1.4(prettier@3.8.2)
 
   test-app:
     devDependencies:
       '@babel/core':
-        specifier: ^7.29.0
+        specifier: 7.29.0
         version: 7.29.0
       '@bagaar/velvet-thunder':
         specifier: workspace:*
         version: link:../velvet-thunder
       '@ember/optional-features':
-        specifier: ^3.0.0
+        specifier: 3.0.0
         version: 3.0.0(@types/node@25.6.0)
       '@ember/string':
-        specifier: ^3.1.1
+        specifier: 3.1.1
         version: 3.1.1
       '@ember/test-helpers':
-        specifier: ^4.0.0
+        specifier: 4.0.5
         version: 4.0.5(@babel/core@7.29.0)(@glint/template@1.5.0)(ember-source@5.7.0(@babel/core@7.29.0)(@glimmer/component@2.1.1)(@glint/template@1.5.0)(rsvp@4.8.5))
       '@embroider/test-setup':
-        specifier: ^3.0.1
+        specifier: 3.0.3
         version: 3.0.3(@embroider/core@3.5.9(@glint/template@1.5.0))
       '@glimmer/component':
         specifier: ^2.0.0
@@ -51,133 +51,133 @@ importers:
         specifier: ^1.1.2
         version: 1.1.2
       '@glint/environment-ember-loose':
-        specifier: ^1.3.0
+        specifier: 1.5.2
         version: 1.5.2(@glimmer/component@2.1.1)(@glint/template@1.5.0)(ember-cli-htmlbars@7.0.1(@babel/core@7.29.0)(ember-source@5.7.0(@babel/core@7.29.0)(@glimmer/component@2.1.1)(@glint/template@1.5.0)(rsvp@4.8.5)(webpack@5.106.1)))(ember-modifier@4.3.0(@babel/core@7.29.0))
       '@glint/template':
         specifier: 1.5.0
         version: 1.5.0
       '@tailwindcss/forms':
-        specifier: ^0.5.7
+        specifier: 0.5.11
         version: 0.5.11(tailwindcss@3.4.19(yaml@2.8.3))
       '@tsconfig/ember':
-        specifier: ^3.0.4
+        specifier: 3.0.12
         version: 3.0.12
       '@types/qunit':
-        specifier: ^2.19.10
+        specifier: 2.19.13
         version: 2.19.13
       '@types/rsvp':
-        specifier: ^4.0.9
+        specifier: 4.0.9
         version: 4.0.9
       '@typescript-eslint/eslint-plugin':
-        specifier: ^7.0.0
+        specifier: 7.18.0
         version: 7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3)
       '@typescript-eslint/parser':
-        specifier: ^7.0.0
+        specifier: 7.18.0
         version: 7.18.0(eslint@8.57.1)(typescript@5.9.3)
       broccoli-asset-rev:
-        specifier: ^3.0.0
+        specifier: 3.0.0
         version: 3.0.0
       concurrently:
-        specifier: ^10.0.0
+        specifier: 10.0.3
         version: 10.0.3
       ember-auto-import:
-        specifier: ^2.7.2
+        specifier: 2.13.1
         version: 2.13.1(@glint/template@1.5.0)(webpack@5.106.1)
       ember-cli:
-        specifier: ~6.12.0
+        specifier: 6.12.0
         version: 6.12.0(@babel/core@7.29.0)(@types/node@25.6.0)(ejs@3.1.10)(handlebars@4.7.9)(underscore@1.13.8)
       ember-cli-app-version:
-        specifier: ^6.0.1
+        specifier: 6.0.1
         version: 6.0.1(ember-source@5.7.0(@babel/core@7.29.0)(@glimmer/component@2.1.1)(@glint/template@1.5.0)(rsvp@4.8.5)(webpack@5.106.1))
       ember-cli-babel:
-        specifier: ^8.2.0
+        specifier: 8.3.1
         version: 8.3.1(@babel/core@7.29.0)
       ember-cli-clean-css:
-        specifier: ^3.0.0
+        specifier: 3.0.0
         version: 3.0.0
       ember-cli-dependency-checker:
-        specifier: ^3.3.2
+        specifier: 3.3.3
         version: 3.3.3(ember-cli@6.12.0(@babel/core@7.29.0)(@types/node@25.6.0)(ejs@3.1.10)(handlebars@4.7.9)(underscore@1.13.8))
       ember-cli-htmlbars:
-        specifier: ^7.0.0
+        specifier: 7.0.1
         version: 7.0.1(@babel/core@7.29.0)(ember-source@5.7.0(@babel/core@7.29.0)(@glimmer/component@2.1.1)(@glint/template@1.5.0)(rsvp@4.8.5)(webpack@5.106.1))
       ember-cli-inject-live-reload:
-        specifier: ^2.1.0
+        specifier: 2.1.0
         version: 2.1.0
       ember-cli-sri:
-        specifier: ^2.1.1
+        specifier: 2.1.1
         version: 2.1.1
       ember-cli-terser:
-        specifier: ^4.0.2
+        specifier: 4.0.2
         version: 4.0.2
       ember-fetch:
-        specifier: ^8.1.2
+        specifier: 8.1.2
         version: 8.1.2
       ember-link:
-        specifier: ^3.1.0
+        specifier: 3.5.0
         version: 3.5.0(@babel/core@7.29.0)(@ember/test-helpers@4.0.5(@babel/core@7.29.0)(@glint/template@1.5.0)(ember-source@5.7.0(@babel/core@7.29.0)(@glimmer/component@2.1.1)(@glint/template@1.5.0)(rsvp@4.8.5)))(@glint/template@1.5.0)
       ember-load-initializers:
-        specifier: ^2.1.2
+        specifier: 2.1.2
         version: 2.1.2(@babel/core@7.29.0)
       ember-modifier:
-        specifier: ^4.1.0
+        specifier: 4.3.0
         version: 4.3.0(@babel/core@7.29.0)
       ember-page-title:
-        specifier: ^9.0.0
+        specifier: 9.0.3
         version: 9.0.3
       ember-qunit:
-        specifier: ^9.0.0
+        specifier: 9.1.0
         version: 9.1.0(@ember/test-helpers@4.0.5(@babel/core@7.29.0)(@glint/template@1.5.0)(ember-source@5.7.0(@babel/core@7.29.0)(@glimmer/component@2.1.1)(@glint/template@1.5.0)(rsvp@4.8.5)(webpack@5.106.1)))(qunit@2.25.0)
       ember-resolver:
-        specifier: ^11.0.1
+        specifier: 11.0.1
         version: 11.0.1(ember-source@5.7.0(@babel/core@7.29.0)(@glimmer/component@2.1.1)(@glint/template@1.5.0)(rsvp@4.8.5)(webpack@5.106.1))
       ember-source:
-        specifier: ~5.7.0
+        specifier: 5.7.0
         version: 5.7.0(@babel/core@7.29.0)(@glimmer/component@2.1.1)(@glint/template@1.5.0)(rsvp@4.8.5)(webpack@5.106.1)
       ember-source-channel-url:
-        specifier: ^3.0.0
+        specifier: 3.0.0
         version: 3.0.0
       ember-template-lint:
-        specifier: ^7.0.0
+        specifier: 7.9.3
         version: 7.9.3
       ember-try:
-        specifier: ^4.0.0
+        specifier: 4.0.0
         version: 4.0.0
       eslint:
-        specifier: ^8.57.0
+        specifier: 8.57.1
         version: 8.57.1
       eslint-plugin-ember:
-        specifier: ^12.0.0
+        specifier: 12.7.5
         version: 12.7.5(@babel/core@7.29.0)(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3)
       eslint-plugin-n:
-        specifier: ^18.0.0
+        specifier: 18.2.1
         version: 18.2.1(eslint@8.57.1)(ts-declaration-location@1.0.7(typescript@5.9.3))(typescript@5.9.3)
       eslint-plugin-qunit:
-        specifier: ^8.1.1
+        specifier: 8.2.6
         version: 8.2.6(eslint@8.57.1)
       loader.js:
-        specifier: ^4.7.0
+        specifier: 4.7.0
         version: 4.7.0
       prettier:
-        specifier: ^3.8.2
+        specifier: 3.8.2
         version: 3.8.2
       qunit:
-        specifier: ^2.20.1
+        specifier: 2.25.0
         version: 2.25.0
       qunit-dom:
-        specifier: ^3.5.0
+        specifier: 3.5.0
         version: 3.5.0
       tailwindcss:
-        specifier: ^3.4.1
+        specifier: 3.4.19
         version: 3.4.19(yaml@2.8.3)
       tracked-built-ins:
-        specifier: ^3.3.0
+        specifier: 3.4.0
         version: 3.4.0(@babel/core@7.29.0)
       typescript:
-        specifier: ^5.3.3
+        specifier: 5.9.3
         version: 5.9.3
       webpack:
-        specifier: ^5.106.1
+        specifier: 5.106.1
         version: 5.106.1
 
   velvet-thunder:
@@ -220,124 +220,124 @@ importers:
         version: 3.4.19(yaml@2.8.3)
     devDependencies:
       '@babel/core':
-        specifier: ^7.29.0
+        specifier: 7.29.0
         version: 7.29.0
       '@babel/plugin-transform-typescript':
-        specifier: ^7.28.6
+        specifier: 7.28.6
         version: 7.28.6(@babel/core@7.29.0)
       '@babel/runtime':
-        specifier: ^7.29.2
+        specifier: 7.29.2
         version: 7.29.2
       '@ember/test-helpers':
-        specifier: ^4.0.0
+        specifier: 4.0.5
         version: 4.0.5(@babel/core@7.29.0)(@glint/template@1.5.0)(ember-source@5.7.0(@babel/core@7.29.0)(@glimmer/component@2.1.1)(@glint/template@1.5.0)(rsvp@4.8.5))
       '@embroider/addon-dev':
-        specifier: ^4.1.0
+        specifier: 4.3.1
         version: 4.3.1(@glint/template@1.5.0)(rollup@4.60.1)
       '@glint/core':
-        specifier: ^1.2.1
+        specifier: 1.5.2
         version: 1.5.2(typescript@5.9.3)
       '@glint/environment-ember-loose':
-        specifier: ^1.2.1
+        specifier: 1.5.2
         version: 1.5.2(@glimmer/component@2.1.1)(@glint/template@1.5.0)(ember-cli-htmlbars@6.3.0)(ember-modifier@4.3.0(@babel/core@7.29.0))
       '@glint/environment-ember-template-imports':
-        specifier: ^1.2.1
+        specifier: 1.5.2
         version: 1.5.2(@glint/environment-ember-loose@1.5.2(@glimmer/component@2.1.1)(@glint/template@1.5.0)(ember-cli-htmlbars@6.3.0)(ember-modifier@4.3.0(@babel/core@7.29.0)))(@glint/template@1.5.0)
       '@glint/template':
         specifier: 1.5.0
         version: 1.5.0
       '@release-it/conventional-changelog':
-        specifier: ^11.0.0
+        specifier: 11.0.1
         version: 11.0.1(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.4.0)(release-it@20.0.1(@types/node@25.6.0))
       '@rollup/plugin-babel':
-        specifier: ^7.0.0
+        specifier: 7.1.0
         version: 7.1.0(@babel/core@7.29.0)(rollup@4.60.1)
       '@tsconfig/ember':
-        specifier: ^3.0.2
+        specifier: 3.0.12
         version: 3.0.12
       '@typescript-eslint/eslint-plugin':
-        specifier: ^7.0.0
+        specifier: 7.18.0
         version: 7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3)
       '@typescript-eslint/parser':
-        specifier: ^7.0.0
+        specifier: 7.18.0
         version: 7.18.0(eslint@8.57.1)(typescript@5.9.3)
       babel-plugin-ember-template-compilation:
-        specifier: ^3.0.0
+        specifier: 3.1.0
         version: 3.1.0
       concurrently:
-        specifier: ^10.0.0
+        specifier: 10.0.3
         version: 10.0.3
       ember-eslint-parser:
-        specifier: ^0.13.0
+        specifier: 0.13.0
         version: 0.13.0(@babel/eslint-parser@7.29.7(@babel/core@7.29.0)(eslint@8.57.1))(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(typescript@5.9.3)
       ember-link:
-        specifier: ^3.1.0
+        specifier: 3.5.0
         version: 3.5.0(@babel/core@7.29.0)(@ember/test-helpers@4.0.5(@babel/core@7.29.0)(@glint/template@1.5.0)(ember-source@5.7.0(@babel/core@7.29.0)(@glimmer/component@2.1.1)(@glint/template@1.5.0)(rsvp@4.8.5)))(@glint/template@1.5.0)
       ember-source:
-        specifier: ~5.7.0
+        specifier: 5.7.0
         version: 5.7.0(@babel/core@7.29.0)(@glimmer/component@2.1.1)(@glint/template@1.5.0)(rsvp@4.8.5)(webpack@5.106.1)
       ember-template-lint:
-        specifier: ^7.0.0
+        specifier: 7.9.3
         version: 7.9.3
       eslint:
-        specifier: ^8.56.0
+        specifier: 8.57.1
         version: 8.57.1
       eslint-plugin-ember:
-        specifier: ^12.0.0
+        specifier: 12.7.5
         version: 12.7.5(@babel/core@7.29.0)(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3)
       eslint-plugin-n:
-        specifier: ^18.0.0
+        specifier: 18.2.1
         version: 18.2.1(eslint@8.57.1)(ts-declaration-location@1.0.7(typescript@5.9.3))(typescript@5.9.3)
       fix-bad-declaration-output:
-        specifier: ^1.1.3
+        specifier: 1.1.5
         version: 1.1.5(@babel/preset-env@7.29.2(@babel/core@7.29.0))
       prettier:
-        specifier: ^3.8.2
+        specifier: 3.8.2
         version: 3.8.2
       prettier-plugin-ember-template-tag:
-        specifier: ^2.1.4
+        specifier: 2.1.4
         version: 2.1.4(prettier@3.8.2)
       release-it:
-        specifier: ^20.0.0
+        specifier: 20.0.1
         version: 20.0.1(@types/node@25.6.0)
       rollup:
-        specifier: ^4.60.1
+        specifier: 4.60.1
         version: 4.60.1
       rollup-plugin-copy:
-        specifier: ^3.5.0
+        specifier: 3.5.0
         version: 3.5.0
       typescript:
-        specifier: ^5.3.3
+        specifier: 5.9.3
         version: 5.9.3
 
   website:
     devDependencies:
       '@babel/core':
-        specifier: ^7.29.0
+        specifier: 7.29.0
         version: 7.29.0
       '@babel/generator':
-        specifier: ^7.29.1
+        specifier: 7.29.1
         version: 7.29.1
       '@babel/parser':
-        specifier: ^7.29.2
+        specifier: 7.29.2
         version: 7.29.2
       '@babel/traverse':
-        specifier: ^7.29.0
+        specifier: 7.29.0
         version: 7.29.0
       '@bagaar/velvet-thunder':
         specifier: workspace:*
         version: link:../velvet-thunder
       '@docfy/ember':
-        specifier: ^0.8.5
+        specifier: 0.8.5
         version: 0.8.5(@babel/core@7.29.0)(@glint/template@1.5.0)
       '@ember/optional-features':
-        specifier: ^3.0.0
+        specifier: 3.0.0
         version: 3.0.0(@types/node@25.6.0)
       '@ember/string':
-        specifier: ^3.1.1
+        specifier: 3.1.1
         version: 3.1.1
       '@ember/test-helpers':
-        specifier: ^4.0.0
+        specifier: 4.0.5
         version: 4.0.5(@babel/core@7.29.0)(@glint/template@1.5.0)(ember-source@5.7.0(@babel/core@7.29.0)(@glimmer/component@2.1.1)(@glint/template@1.5.0)(rsvp@4.8.5))
       '@glimmer/component':
         specifier: ^2.0.0
@@ -346,148 +346,148 @@ importers:
         specifier: ^1.1.2
         version: 1.1.2
       '@glint/environment-ember-loose':
-        specifier: ^1.3.0
+        specifier: 1.5.2
         version: 1.5.2(@glimmer/component@2.1.1)(@glint/template@1.5.0)(ember-cli-htmlbars@7.0.1(@babel/core@7.29.0)(ember-source@5.7.0(@babel/core@7.29.0)(@glimmer/component@2.1.1)(@glint/template@1.5.0)(rsvp@4.8.5)(webpack@5.106.1)))(ember-modifier@4.3.0(@babel/core@7.29.0))
       '@glint/template':
         specifier: 1.5.0
         version: 1.5.0
       '@percy/ember':
-        specifier: ^5.0.0
+        specifier: 5.0.1
         version: 5.0.1(@babel/core@7.29.0)(@glint/template@1.5.0)(webpack@5.106.1)
       '@tailwindcss/forms':
-        specifier: ^0.5.7
+        specifier: 0.5.11
         version: 0.5.11(tailwindcss@3.4.19(yaml@2.8.3))
       '@tailwindcss/typography':
-        specifier: ^0.5.10
+        specifier: 0.5.19
         version: 0.5.19(tailwindcss@3.4.19(yaml@2.8.3))
       '@tsconfig/ember':
-        specifier: ^3.0.4
+        specifier: 3.0.12
         version: 3.0.12
       '@types/qunit':
-        specifier: ^2.19.10
+        specifier: 2.19.13
         version: 2.19.13
       '@types/rsvp':
-        specifier: ^4.0.9
+        specifier: 4.0.9
         version: 4.0.9
       '@typescript-eslint/eslint-plugin':
-        specifier: ^7.0.0
+        specifier: 7.18.0
         version: 7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3)
       '@typescript-eslint/parser':
-        specifier: ^7.0.0
+        specifier: 7.18.0
         version: 7.18.0(eslint@8.57.1)(typescript@5.9.3)
       broccoli-asset-rev:
-        specifier: ^3.0.0
+        specifier: 3.0.0
         version: 3.0.0
       change-case:
-        specifier: ^5.0.0
+        specifier: 5.4.4
         version: 5.4.4
       concurrently:
-        specifier: ^10.0.0
+        specifier: 10.0.3
         version: 10.0.3
       content-tag:
-        specifier: ^2.0.1
+        specifier: 2.0.3
         version: 2.0.3
       ember-auto-import:
-        specifier: ^2.7.2
+        specifier: 2.13.1
         version: 2.13.1(@glint/template@1.5.0)(webpack@5.106.1)
       ember-cli:
-        specifier: ~6.12.0
+        specifier: 6.12.0
         version: 6.12.0(@babel/core@7.29.0)(@types/node@25.6.0)(ejs@3.1.10)(handlebars@4.7.9)(underscore@1.13.8)
       ember-cli-app-version:
-        specifier: ^6.0.1
+        specifier: 6.0.1
         version: 6.0.1(ember-source@5.7.0(@babel/core@7.29.0)(@glimmer/component@2.1.1)(@glint/template@1.5.0)(rsvp@4.8.5)(webpack@5.106.1))
       ember-cli-babel:
-        specifier: ^8.2.0
+        specifier: 8.3.1
         version: 8.3.1(@babel/core@7.29.0)
       ember-cli-clean-css:
-        specifier: ^3.0.0
+        specifier: 3.0.0
         version: 3.0.0
       ember-cli-dependency-checker:
-        specifier: ^3.3.2
+        specifier: 3.3.3
         version: 3.3.3(ember-cli@6.12.0(@babel/core@7.29.0)(@types/node@25.6.0)(ejs@3.1.10)(handlebars@4.7.9)(underscore@1.13.8))
       ember-cli-htmlbars:
-        specifier: ^7.0.0
+        specifier: 7.0.1
         version: 7.0.1(@babel/core@7.29.0)(ember-source@5.7.0(@babel/core@7.29.0)(@glimmer/component@2.1.1)(@glint/template@1.5.0)(rsvp@4.8.5)(webpack@5.106.1))
       ember-cli-inject-live-reload:
-        specifier: ^2.1.0
+        specifier: 2.1.0
         version: 2.1.0
       ember-fetch:
-        specifier: ^8.1.2
+        specifier: 8.1.2
         version: 8.1.2
       ember-link:
-        specifier: ^3.1.0
+        specifier: 3.5.0
         version: 3.5.0(@babel/core@7.29.0)(@ember/test-helpers@4.0.5(@babel/core@7.29.0)(@glint/template@1.5.0)(ember-source@5.7.0(@babel/core@7.29.0)(@glimmer/component@2.1.1)(@glint/template@1.5.0)(rsvp@4.8.5)))(@glint/template@1.5.0)
       ember-load-initializers:
-        specifier: ^2.1.2
+        specifier: 2.1.2
         version: 2.1.2(@babel/core@7.29.0)
       ember-modifier:
-        specifier: ^4.1.0
+        specifier: 4.3.0
         version: 4.3.0(@babel/core@7.29.0)
       ember-page-title:
-        specifier: ^9.0.0
+        specifier: 9.0.3
         version: 9.0.3
       ember-qunit:
-        specifier: ^9.0.0
+        specifier: 9.1.0
         version: 9.1.0(@ember/test-helpers@4.0.5(@babel/core@7.29.0)(@glint/template@1.5.0)(ember-source@5.7.0(@babel/core@7.29.0)(@glimmer/component@2.1.1)(@glint/template@1.5.0)(rsvp@4.8.5)(webpack@5.106.1)))(qunit@2.25.0)
       ember-resolver:
-        specifier: ^11.0.1
+        specifier: 11.0.1
         version: 11.0.1(ember-source@5.7.0(@babel/core@7.29.0)(@glimmer/component@2.1.1)(@glint/template@1.5.0)(rsvp@4.8.5)(webpack@5.106.1))
       ember-source:
-        specifier: ~5.7.0
+        specifier: 5.7.0
         version: 5.7.0(@babel/core@7.29.0)(@glimmer/component@2.1.1)(@glint/template@1.5.0)(rsvp@4.8.5)(webpack@5.106.1)
       ember-template-lint:
-        specifier: ^7.0.0
+        specifier: 7.9.3
         version: 7.9.3
       eslint:
-        specifier: ^8.57.0
+        specifier: 8.57.1
         version: 8.57.1
       eslint-plugin-ember:
-        specifier: ^12.0.0
+        specifier: 12.7.5
         version: 12.7.5(@babel/core@7.29.0)(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3)
       eslint-plugin-n:
-        specifier: ^18.0.0
+        specifier: 18.2.1
         version: 18.2.1(eslint@8.57.1)(ts-declaration-location@1.0.7(typescript@5.9.3))(typescript@5.9.3)
       eslint-plugin-qunit:
-        specifier: ^8.1.1
+        specifier: 8.2.6
         version: 8.2.6(eslint@8.57.1)
       loader.js:
-        specifier: ^4.7.0
+        specifier: 4.7.0
         version: 4.7.0
       prettier:
-        specifier: ^3.8.2
+        specifier: 3.8.2
         version: 3.8.2
       qunit:
-        specifier: ^2.20.1
+        specifier: 2.25.0
         version: 2.25.0
       qunit-dom:
-        specifier: ^3.5.0
+        specifier: 3.5.0
         version: 3.5.0
       rehype-autolink-headings:
-        specifier: ^5.0.0
+        specifier: 5.1.0
         version: 5.1.0
       rehype-highlight:
-        specifier: ^4.1.0
+        specifier: 4.1.0
         version: 4.1.0
       rehype-wrap-all:
-        specifier: ^1.1.0
+        specifier: 1.1.0
         version: 1.1.0
       stylelint:
-        specifier: ^17.0.0
+        specifier: 17.10.0
         version: 17.10.0(typescript@5.9.3)
       stylelint-config-standard:
-        specifier: ^40.0.0
+        specifier: 40.0.0
         version: 40.0.0(stylelint@17.10.0(typescript@5.9.3))
       tailwindcss:
-        specifier: ^3.4.1
+        specifier: 3.4.19
         version: 3.4.19(yaml@2.8.3)
       tracked-built-ins:
-        specifier: ^3.3.0
+        specifier: 3.4.0
         version: 3.4.0(@babel/core@7.29.0)
       typescript:
-        specifier: ^5.3.3
+        specifier: 5.9.3
         version: 5.9.3
       webpack:
-        specifier: ^5.106.1
+        specifier: 5.106.1
         version: 5.106.1
 
 packages:
@@ -3341,9 +3341,6 @@ packages:
   content-tag@3.1.3:
     resolution: {integrity: sha512-4Kiv9mEroxuMXfWUNUHcljVJgxThCNk7eEswdHMXdzJnkBBaYDqDwzHkoh3F74JJhfU3taJOsgpR6oEGIDg17g==}
 
-  content-tag@4.1.1:
-    resolution: {integrity: sha512-LyIbq4ZY+WbN0NoyHmg0w1kLPHyXZkZZrTDJZm/HW+MVurnKJy7U3m8WlpKm6lqbYbUSWP6ATNacE5dL2eH8+g==}
-
   content-tag@4.2.0:
     resolution: {integrity: sha512-f/o+F3qSa4gg23I7RWy6cMDxP2nPo99YWusxw2bjne7ZC6Acqqf4uB/+87AekOq1ehTocHH7b7nMd2X4S3NHVw==}
 
@@ -4556,11 +4553,6 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
-    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
-
-  glob@8.1.0:
-    resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
-    engines: {node: '>=12'}
     deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   glob@9.3.5:
@@ -6267,10 +6259,6 @@ packages:
 
   postcss@8.5.13:
     resolution: {integrity: sha512-qif0+jGGZoLWdHey3UFHHWP0H7Gbmsk8T5VEqyYFbWqPr1XqvLGBbk/sl8V5exGmcYJklJOhOQq1pV9IcsiFag==}
-    engines: {node: ^10 || ^12 || >=14}
-
-  postcss@8.5.9:
-    resolution: {integrity: sha512-7a70Nsot+EMX9fFU3064K/kdHWZqGVY+BADLyXc8Dfv+mTLLVl6JzJpPaCZ2kQL9gIJvKXSLMHhqdRRjwQeFtw==}
     engines: {node: ^10 || ^12 || >=14}
 
   powershell-utils@0.1.0:
@@ -9842,7 +9830,7 @@ snapshots:
 
   '@types/glob@9.0.0':
     dependencies:
-      glob: 8.1.0
+      glob: 13.0.6
 
   '@types/json-schema@7.0.15': {}
 
@@ -11208,8 +11196,6 @@ snapshots:
 
   content-tag@3.1.3: {}
 
-  content-tag@4.1.1: {}
-
   content-tag@4.2.0: {}
 
   content-type@1.0.5: {}
@@ -11315,13 +11301,13 @@ snapshots:
 
   css-loader@5.2.7(webpack@5.106.1):
     dependencies:
-      icss-utils: 5.1.0(postcss@8.5.9)
+      icss-utils: 5.1.0(postcss@8.5.13)
       loader-utils: 2.0.4
-      postcss: 8.5.9
-      postcss-modules-extract-imports: 3.1.0(postcss@8.5.9)
-      postcss-modules-local-by-default: 4.2.0(postcss@8.5.9)
-      postcss-modules-scope: 3.2.1(postcss@8.5.9)
-      postcss-modules-values: 4.0.0(postcss@8.5.9)
+      postcss: 8.5.13
+      postcss-modules-extract-imports: 3.1.0(postcss@8.5.13)
+      postcss-modules-local-by-default: 4.2.0(postcss@8.5.13)
+      postcss-modules-scope: 3.2.1(postcss@8.5.13)
+      postcss-modules-values: 4.0.0(postcss@8.5.13)
       postcss-value-parser: 4.2.0
       schema-utils: 3.3.0
       semver: 7.7.4
@@ -11861,7 +11847,7 @@ snapshots:
       compression: 1.8.1
       configstore: 7.1.0
       console-ui: 3.1.2
-      content-tag: 4.1.1
+      content-tag: 4.2.0
       core-object: 3.1.5
       dag-map: 2.0.2
       diff: 8.0.4
@@ -11975,7 +11961,7 @@ snapshots:
     dependencies:
       '@glimmer/syntax': 0.95.0
       '@typescript-eslint/tsconfig-utils': 8.61.0(typescript@5.9.3)
-      content-tag: 4.1.1
+      content-tag: 4.2.0
       ember-estree: 0.6.4
       eslint-scope: 9.1.2
       html-tags: 5.1.0
@@ -13106,14 +13092,6 @@ snapshots:
       once: 1.4.0
       path-is-absolute: 1.0.1
 
-  glob@8.1.0:
-    dependencies:
-      fs.realpath: 1.0.0
-      inflight: 1.0.6
-      inherits: 2.0.4
-      minimatch: 5.1.9
-      once: 1.4.0
-
   glob@9.3.5:
     dependencies:
       fs.realpath: 1.0.0
@@ -13450,9 +13428,9 @@ snapshots:
     dependencies:
       safer-buffer: 2.1.2
 
-  icss-utils@5.1.0(postcss@8.5.9):
+  icss-utils@5.1.0(postcss@8.5.13):
     dependencies:
-      postcss: 8.5.9
+      postcss: 8.5.13
 
   ignore@5.3.2: {}
 
@@ -14835,50 +14813,50 @@ snapshots:
 
   possible-typed-array-names@1.1.0: {}
 
-  postcss-import@15.1.0(postcss@8.5.9):
+  postcss-import@15.1.0(postcss@8.5.13):
     dependencies:
-      postcss: 8.5.9
+      postcss: 8.5.13
       postcss-value-parser: 4.2.0
       read-cache: 1.0.0
       resolve: 1.22.11
 
-  postcss-js@4.1.0(postcss@8.5.9):
+  postcss-js@4.1.0(postcss@8.5.13):
     dependencies:
       camelcase-css: 2.0.1
-      postcss: 8.5.9
+      postcss: 8.5.13
 
-  postcss-load-config@6.0.1(jiti@1.21.7)(postcss@8.5.9)(yaml@2.8.3):
+  postcss-load-config@6.0.1(jiti@1.21.7)(postcss@8.5.13)(yaml@2.8.3):
     dependencies:
       lilconfig: 3.1.3
     optionalDependencies:
       jiti: 1.21.7
-      postcss: 8.5.9
+      postcss: 8.5.13
       yaml: 2.8.3
 
-  postcss-modules-extract-imports@3.1.0(postcss@8.5.9):
+  postcss-modules-extract-imports@3.1.0(postcss@8.5.13):
     dependencies:
-      postcss: 8.5.9
+      postcss: 8.5.13
 
-  postcss-modules-local-by-default@4.2.0(postcss@8.5.9):
+  postcss-modules-local-by-default@4.2.0(postcss@8.5.13):
     dependencies:
-      icss-utils: 5.1.0(postcss@8.5.9)
-      postcss: 8.5.9
+      icss-utils: 5.1.0(postcss@8.5.13)
+      postcss: 8.5.13
       postcss-selector-parser: 7.1.1
       postcss-value-parser: 4.2.0
 
-  postcss-modules-scope@3.2.1(postcss@8.5.9):
+  postcss-modules-scope@3.2.1(postcss@8.5.13):
     dependencies:
-      postcss: 8.5.9
+      postcss: 8.5.13
       postcss-selector-parser: 7.1.1
 
-  postcss-modules-values@4.0.0(postcss@8.5.9):
+  postcss-modules-values@4.0.0(postcss@8.5.13):
     dependencies:
-      icss-utils: 5.1.0(postcss@8.5.9)
-      postcss: 8.5.9
+      icss-utils: 5.1.0(postcss@8.5.13)
+      postcss: 8.5.13
 
-  postcss-nested@6.2.0(postcss@8.5.9):
+  postcss-nested@6.2.0(postcss@8.5.13):
     dependencies:
-      postcss: 8.5.9
+      postcss: 8.5.13
       postcss-selector-parser: 6.1.2
 
   postcss-safe-parser@7.0.1(postcss@8.5.13):
@@ -14908,12 +14886,6 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  postcss@8.5.9:
-    dependencies:
-      nanoid: 3.3.11
-      picocolors: 1.1.1
-      source-map-js: 1.2.1
-
   powershell-utils@0.1.0: {}
 
   powershell-utils@0.2.0: {}
@@ -14925,7 +14897,7 @@ snapshots:
   prettier-plugin-ember-template-tag@2.1.4(prettier@3.8.2):
     dependencies:
       '@babel/traverse': 7.29.0
-      content-tag: 4.1.1
+      content-tag: 4.2.0
       prettier: 3.8.2
     transitivePeerDependencies:
       - supports-color
@@ -16047,11 +16019,11 @@ snapshots:
       normalize-path: 3.0.0
       object-hash: 3.0.0
       picocolors: 1.1.1
-      postcss: 8.5.9
-      postcss-import: 15.1.0(postcss@8.5.9)
-      postcss-js: 4.1.0(postcss@8.5.9)
-      postcss-load-config: 6.0.1(jiti@1.21.7)(postcss@8.5.9)(yaml@2.8.3)
-      postcss-nested: 6.2.0(postcss@8.5.9)
+      postcss: 8.5.13
+      postcss-import: 15.1.0(postcss@8.5.13)
+      postcss-js: 4.1.0(postcss@8.5.13)
+      postcss-load-config: 6.0.1(jiti@1.21.7)(postcss@8.5.13)(yaml@2.8.3)
+      postcss-nested: 6.2.0(postcss@8.5.13)
       postcss-selector-parser: 6.1.2
       resolve: 1.22.11
       sucrase: 3.35.1
