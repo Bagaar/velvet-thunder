@@ -71,7 +71,7 @@
     "ember-page-title": "9.0.3",
     "ember-qunit": "9.1.0",
     "ember-resolver": "11.0.1",
-    "ember-source": "5.7.0",
+    "ember-source": "5.12.0",
     "ember-template-lint": "7.9.3",
     "eslint": "8.57.1",
     "eslint-plugin-ember": "12.7.5",
