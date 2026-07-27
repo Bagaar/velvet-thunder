@@ -106,7 +106,7 @@
     "eslint-plugin-n": "18.2.1",
     "eslint": "8.57.1",
     "fix-bad-declaration-output": "1.1.5",
-    "prettier-plugin-ember-template-tag": "2.1.4",
+    "prettier-plugin-ember-template-tag": "2.1.7",
     "prettier": "3.8.2",
     "release-it": "20.0.1",
     "rollup-plugin-copy": "3.5.0",
