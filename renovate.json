@@ -6,7 +6,6 @@
     ":semanticCommits",
     ":semanticCommitTypeAll(chore)",
     "schedule:weekends",
-    "schedule:automergeWeekends",
     ":pinAllExceptPeerDependencies"
   ],
   "separateMultipleMajor": true,
