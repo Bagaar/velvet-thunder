@@ -352,8 +352,8 @@ importers:
         specifier: 1.5.0
         version: 1.5.0
       '@percy/ember':
-        specifier: 5.0.1
-        version: 5.0.1(@babel/core@7.29.7)(@glint/template@1.5.0)(webpack@5.106.1)
+        specifier: 5.0.2
+        version: 5.0.2(@babel/core@7.29.7)(@glint/template@1.5.0)(webpack@5.106.1)
       '@tailwindcss/forms':
         specifier: 0.5.11
         version: 0.5.11(tailwindcss@3.4.19(yaml@2.8.3))
@@ -1983,12 +1983,12 @@ packages:
   '@oxc-project/types@0.130.0':
     resolution: {integrity: sha512-ibD2usx9JRu7f5pu2tMKMI4cpA4NgXJQoYRP4pQ7Pxmn1l6k/53qWtQWZayhYy3X4QZkt90Ot+mJEaeXouio6Q==}
 
-  '@percy/ember@5.0.1':
-    resolution: {integrity: sha512-f/lnUq2MmCQOOJPIX2aypxVNbvEcSEdBaAETqa9yckzKyEedTVgYhDCD6WtgZtMu+azWLXHmqyMbxti4KN6OLQ==}
+  '@percy/ember@5.0.2':
+    resolution: {integrity: sha512-KVszb1zj5cG9SAYORyt4/MLjaxvTZl1EKHWHNeEGIG43Kq6Z3ZWGxNXA2KZjYBhytG3ZiHyZfCZN+BXcH8R5OQ==}
     engines: {node: '>= 16'}
 
-  '@percy/sdk-utils@1.31.11':
-    resolution: {integrity: sha512-I4/Bx2RqSx/k00qVU0t/wcYudeyVRARQPdMnRZ/JvEZRZmXo0u+mHHpvZ5liHvnlpvWq6dv2WRA5MVy+GZHUhA==}
+  '@percy/sdk-utils@1.32.5':
+    resolution: {integrity: sha512-xdCmG2QiWKT8M5NtWQqLLkG9DiE/m4kHvbROqwAGbVk0hd+fgUYIq/O6AvkHXtVZVfBXr7CiNqqRTjGKakIY7g==}
     engines: {node: '>=14'}
 
   '@phun-ky/typeof@2.0.3':
@@ -9808,9 +9808,9 @@ snapshots:
 
   '@oxc-project/types@0.130.0': {}
 
-  '@percy/ember@5.0.1(@babel/core@7.29.7)(@glint/template@1.5.0)(webpack@5.106.1)':
+  '@percy/ember@5.0.2(@babel/core@7.29.7)(@glint/template@1.5.0)(webpack@5.106.1)':
     dependencies:
-      '@percy/sdk-utils': 1.31.11
+      '@percy/sdk-utils': 1.32.5
       ember-auto-import: 2.13.1(@glint/template@1.5.0)(webpack@5.106.1)
       ember-cli-babel: 8.3.1(@babel/core@7.29.7)
     transitivePeerDependencies:
@@ -9819,7 +9819,7 @@ snapshots:
       - supports-color
       - webpack
 
-  '@percy/sdk-utils@1.31.11':
+  '@percy/sdk-utils@1.32.5':
     dependencies:
       pac-proxy-agent: 7.2.0
     transitivePeerDependencies:
