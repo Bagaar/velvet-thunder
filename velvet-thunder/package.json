@@ -103,7 +103,7 @@
     "ember-template-lint": "7.9.3",
     "ember-eslint-parser": "0.13.0",
     "eslint-plugin-ember": "12.7.5",
-    "eslint-plugin-n": "18.2.1",
+    "eslint-plugin-n": "18.2.2",
     "eslint": "8.57.1",
     "fix-bad-declaration-output": "1.1.5",
     "prettier-plugin-ember-template-tag": "2.1.7",
