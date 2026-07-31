@@ -90,7 +90,7 @@
     "@glint/core": "1.5.2",
     "@glint/environment-ember-loose": "1.5.2",
     "@glint/environment-ember-template-imports": "1.5.2",
-    "@glint/template": "1.5.0",
+    "@glint/template": "1.7.10",
     "@release-it/conventional-changelog": "11.0.1",
     "@rollup/plugin-babel": "7.1.0",
     "@tsconfig/ember": "3.0.12",
