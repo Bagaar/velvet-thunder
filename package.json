@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@glint/core": "1.5.2",
-    "concurrently": "10.0.3",
+    "concurrently": "10.0.4",
     "prettier": "3.8.2",
     "prettier-plugin-ember-template-tag": "2.1.7"
   },
