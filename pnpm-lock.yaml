@@ -150,8 +150,8 @@ importers:
         specifier: 12.7.5
         version: 12.7.5(@babel/core@7.29.7)(@typescript-eslint/parser@8.65.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3)
       eslint-plugin-n:
-        specifier: 18.2.2
-        version: 18.2.2(eslint@8.57.1)(ts-declaration-location@1.0.7(typescript@5.9.3))(typescript@5.9.3)
+        specifier: 18.3.0
+        version: 18.3.0(eslint@8.57.1)(ts-declaration-location@1.0.7(typescript@5.9.3))(typescript@5.9.3)
       eslint-plugin-qunit:
         specifier: 8.2.6
         version: 8.2.6(eslint@8.57.1)
@@ -286,8 +286,8 @@ importers:
         specifier: 12.7.5
         version: 12.7.5(@babel/core@7.29.7)(@typescript-eslint/parser@8.65.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3)
       eslint-plugin-n:
-        specifier: 18.2.2
-        version: 18.2.2(eslint@8.57.1)(ts-declaration-location@1.0.7(typescript@5.9.3))(typescript@5.9.3)
+        specifier: 18.3.0
+        version: 18.3.0(eslint@8.57.1)(ts-declaration-location@1.0.7(typescript@5.9.3))(typescript@5.9.3)
       fix-bad-declaration-output:
         specifier: 1.1.5
         version: 1.1.5(@babel/preset-env@7.29.2(@babel/core@7.29.7))
@@ -445,8 +445,8 @@ importers:
         specifier: 12.7.5
         version: 12.7.5(@babel/core@7.29.7)(@typescript-eslint/parser@8.65.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3)
       eslint-plugin-n:
-        specifier: 18.2.2
-        version: 18.2.2(eslint@8.57.1)(ts-declaration-location@1.0.7(typescript@5.9.3))(typescript@5.9.3)
+        specifier: 18.3.0
+        version: 18.3.0(eslint@8.57.1)(ts-declaration-location@1.0.7(typescript@5.9.3))(typescript@5.9.3)
       eslint-plugin-qunit:
         specifier: 8.2.6
         version: 8.2.6(eslint@8.57.1)
@@ -4127,8 +4127,8 @@ packages:
     peerDependencies:
       eslint: '>=8'
 
-  eslint-plugin-n@18.2.2:
-    resolution: {integrity: sha512-gOO0lIqwEjZ750kv9/SptCWArUoAZXJoBr0vYWTO2dCBxctHUXlBIigiC8xuxxr/NKqgIT6Ehz1xRcilj8a5cA==}
+  eslint-plugin-n@18.3.0:
+    resolution: {integrity: sha512-cPVguuDe6DrIPb/qUXHf8P89MaVTUmiYWwpt5gX5AILsvRIiZAxMFXcFR6QHYBksqKJpjfUBlL/RleCJUWcD7w==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
     peerDependencies:
       eslint: '>=8.57.1'
@@ -12607,7 +12607,7 @@ snapshots:
       eslint: 8.57.1
       eslint-compat-utils: 0.5.1(eslint@8.57.1)
 
-  eslint-plugin-n@18.2.2(eslint@8.57.1)(ts-declaration-location@1.0.7(typescript@5.9.3))(typescript@5.9.3):
+  eslint-plugin-n@18.3.0(eslint@8.57.1)(ts-declaration-location@1.0.7(typescript@5.9.3))(typescript@5.9.3):
     dependencies:
       '@eslint-community/eslint-utils': 4.9.1(eslint@8.57.1)
       enhanced-resolve: 5.20.1
