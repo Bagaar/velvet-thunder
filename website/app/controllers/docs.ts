@@ -9,7 +9,7 @@ const THEME = {
 };
 
 const VELVET_THEME_STORAGE_KEY = 'velvetTheme';
-const VELVET_THEME_NAMES = ['default', 'unstyled'];
+const VELVET_THEME_NAMES = ['default', 'unstyled', 'variables'];
 
 export default class DocsController extends Controller {
   @tracked velvetTheme =
@@ -21,6 +21,10 @@ export default class DocsController extends Controller {
 
   get isUnstyledVelvetTheme() {
     return this.velvetTheme === 'unstyled';
+  }
+
+  get isVariablesVelvetTheme() {
+    return this.velvetTheme === 'variables';
   }
 
   toggleDarkMode = () => {

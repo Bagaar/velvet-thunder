@@ -109,6 +109,14 @@ The following classes are applied by the component and can be targeted to fully 
 | `velvet-tooltip`         | Always (root wrapper)                    |
 | `velvet-tooltip-content` | Always (on the floating content element) |
 
+## Generated Colors
+
+Pass `colors: true` to generate the content bubble's border color from CSS custom properties instead of writing your own CSS — see [Generating Colors from CSS Variables](../../styling.md#generating-colors-from-css-variables) for details.
+
+| Custom Property    | Used for     |
+| ------------------ | ------------ |
+| `--velvet-neutral` | Border color |
+
 ## Signature
 
 <!-- component-signature: velvet-tooltip -->

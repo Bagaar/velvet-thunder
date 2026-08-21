@@ -4,6 +4,7 @@
 /public/assets/tailwind.css
 /public/assets/theme-default.css
 /public/assets/theme-unstyled.css
+/public/assets/theme-variables.css
 
 # dependencies
 /node_modules/

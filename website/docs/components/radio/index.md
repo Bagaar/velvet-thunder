@@ -40,6 +40,16 @@ The following classes are applied by the component and can be targeted to fully 
 | `velvet-radio-disabled` | `@isDisabled={{true}}`            |
 | `velvet-radio-input`    | Always (on the `<input>` element) |
 
+## Generated Colors
+
+Pass `colors: true` to generate the checked/focus accent color from CSS custom properties instead of writing your own CSS — see [Generating Colors from CSS Variables](../../styling.md#generating-colors-from-css-variables) for details.
+
+| Custom Property           | Used for                                                               |
+| ------------------------- | ---------------------------------------------------------------------- |
+| `--velvet-primary`        | Checked background and border, and focus border                        |
+| `--velvet-primary-hover`  | Checked background/border on `:hover`                                  |
+| `--velvet-primary-active` | Checked background/border on `:focus`, and focus-visible outline color |
+
 ## Signature
 
 <!-- component-signature: velvet-radio -->

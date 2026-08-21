@@ -162,6 +162,19 @@ The following classes are applied by the component and can be targeted to fully 
 | `velvet-icon-button-expanded`        | `@isDisclosure={{true}}` and `@isExpanded={{true}}` |
 | `velvet-icon-button-disclosure-icon` | Always (on the disclosure chevron icon)             |
 
+## Generated Colors
+
+Pass `variants: [true]` (or `variants: [true, [...]]` to pick specific names) to generate the `@variant` classes above from CSS custom properties instead of writing your own CSS — see [Generating Colors from CSS Variables](../../styling.md#generating-colors-from-css-variables) for details.
+
+| Custom Property               | Used for                        |
+| ----------------------------- | ------------------------------- |
+| `--velvet-{variant}`          | Background color                |
+| `--velvet-on-{variant}`       | Text color                      |
+| `--velvet-{variant}-border`   | Border color                    |
+| `--velvet-{variant}-hover`    | Background color on `:hover`    |
+| `--velvet-{variant}-active`   | Background color on `:active`   |
+| `--velvet-{variant}-disabled` | Background color on `:disabled` |
+
 ## Signature
 
 <!-- component-signature: velvet-icon-button -->

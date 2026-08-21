@@ -33,6 +33,15 @@ The following classes are applied by the component and can be targeted to fully 
 | `velvet-progress-{variant}` | Any `@variant` value               |
 | `velvet-progress-line`      | Always (on the inner progress bar) |
 
+## Generated Colors
+
+Pass `variants: [true, [...]]` to generate the `@variant` classes above from CSS custom properties instead of writing your own CSS — see [Generating Colors from CSS Variables](../../styling.md#generating-colors-from-css-variables) for details.
+
+| Custom Property            | Used for                            |
+| -------------------------- | ----------------------------------- |
+| `--velvet-{variant}`       | Fill color (`velvet-progress-line`) |
+| `--velvet-{variant}-track` | Track background color              |
+
 ## Signature
 
 <!-- component-signature: velvet-progress -->
