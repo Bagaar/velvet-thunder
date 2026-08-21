@@ -1,6 +1,8 @@
 'use strict';
 
-module.exports = ({ theme }) => ({
+const { generateVariants, velvetVar } = require('../variants.cjs');
+
+module.exports = ({ theme, options }) => ({
   '.velvet-avatar': {
     display: 'flex',
     'font-weight': theme('fontWeight.medium'),
@@ -49,5 +51,8 @@ module.exports = ({ theme }) => ({
       width: theme('spacing.4'),
       height: theme('spacing.4'),
     },
+    ...generateVariants(options?.variants, (name) => ({
+      'background-color': velvetVar(name),
+    })),
   },
 });

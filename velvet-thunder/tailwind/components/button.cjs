@@ -1,6 +1,8 @@
 'use strict';
 
-module.exports = ({ theme }) => ({
+const { generateVariants, velvetVar, velvetOnVar } = require('../variants.cjs');
+
+module.exports = ({ options, theme }) => ({
   '.velvet-button': {
     'border-width': '1px',
     'border-color': 'transparent',
@@ -62,5 +64,23 @@ module.exports = ({ theme }) => ({
     '.velvet-spinner': {
       'margin-right': theme('spacing.2'),
     },
+
+    ...generateVariants(options?.variants, (name) => ({
+      'background-color': velvetVar(name),
+      color: velvetOnVar(name),
+      'border-color': velvetVar(name, 'border'),
+
+      '&:hover': {
+        'background-color': velvetVar(name, 'hover'),
+      },
+
+      '&:active': {
+        'background-color': velvetVar(name, 'active'),
+      },
+
+      '&:disabled': {
+        'background-color': velvetVar(name, 'disabled'),
+      },
+    })),
   },
 });

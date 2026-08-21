@@ -31,6 +31,13 @@
       href="{{rootURL}}assets/theme-unstyled.css"
       disabled
     />
+    <link
+      id="theme-variables"
+      integrity=""
+      rel="stylesheet"
+      href="{{rootURL}}assets/theme-variables.css"
+      disabled
+    />
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/website.css" />
 
     {{content-for "head-footer"}}
@@ -51,7 +58,11 @@
     </script>
 
     <script>
-      const THEME_LINK_IDS = ["theme-default", "theme-unstyled"];
+      const THEME_LINK_IDS = [
+        "theme-default",
+        "theme-unstyled",
+        "theme-variables",
+      ];
       const themeName = localStorage.velvetTheme || "default";
       const activeThemeLink = document.getElementById(`theme-${themeName}`);
 

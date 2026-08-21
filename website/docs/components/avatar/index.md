@@ -59,6 +59,14 @@ The following classes are applied by the component and can be targeted to fully 
 | `velvet-avatar-image`     | Always (on the `<img>` when `@src` is set) |
 | `velvet-avatar-icon`      | Always (on the fallback icon)              |
 
+## Generated Colors
+
+Pass `variants: [true, [...]]` to generate the `@variant` classes above from CSS custom properties instead of writing your own CSS — see [Generating Colors from CSS Variables](../../styling.md#generating-colors-from-css-variables) for details.
+
+| Custom Property      | Used for         |
+| -------------------- | ---------------- |
+| `--velvet-{variant}` | Background color |
+
 ## Signature
 
 <!-- component-signature: velvet-avatar -->

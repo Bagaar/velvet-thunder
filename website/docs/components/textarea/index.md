@@ -51,6 +51,17 @@ The following classes are applied by the component and can be targeted to fully 
 | `velvet-textarea-invalid`   | `@isInvalid={{true}}`          |
 | `velvet-textarea-disabled`  | `@isDisabled={{true}}`         |
 
+## Generated Colors
+
+Pass `colors: true` to generate the `primary` variant's border/outline colors from CSS custom properties instead of writing your own CSS — see [Generating Colors from CSS Variables](../../styling.md#generating-colors-from-css-variables) for details.
+
+| Custom Property          | Used for                                        |
+| ------------------------ | ----------------------------------------------- |
+| `--velvet-neutral`       | Resting border color                            |
+| `--velvet-neutral-hover` | Border color on `:hover`                        |
+| `--velvet-primary`       | Border/outline color on `:focus`                |
+| `--velvet-danger`        | Border/outline color when `@isInvalid={{true}}` |
+
 ## Signature
 
 <!-- component-signature: velvet-textarea -->

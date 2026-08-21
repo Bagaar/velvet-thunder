@@ -48,6 +48,15 @@ The following classes are applied by the component and can be targeted to fully 
 | `velvet-checkbox-disabled` | `@isDisabled={{true}}`            |
 | `velvet-checkbox-input`    | Always (on the `<input>` element) |
 
+## Generated Colors
+
+Pass `colors: true` to generate the checked/focus accent color from CSS custom properties instead of writing your own CSS — see [Generating Colors from CSS Variables](../../styling.md#generating-colors-from-css-variables) for details.
+
+| Custom Property           | Used for                                                      |
+| ------------------------- | ------------------------------------------------------------- |
+| `--velvet-primary`        | Checked/indeterminate background and border, and focus border |
+| `--velvet-primary-active` | Focus-visible outline color                                   |
+
 ## Signature
 
 <!-- component-signature: velvet-checkbox -->
