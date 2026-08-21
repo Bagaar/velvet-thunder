@@ -1,0 +1,39 @@
+{{! @glint-nocheck }}
+
+<div
+  class="flex items-center rounded-full border border-slate-200 dark:border-slate-800 p-0.5"
+  ...attributes
+>
+  <button
+    class={{cn
+      "rounded-full px-3 py-1 text-sm transition"
+      "focus:outline-none focus-visible:ring"
+      (if
+        @isDefault
+        "bg-slate-100 text-slate-900 dark:bg-slate-800 dark:text-white"
+        "text-slate-500 hover:text-slate-900 dark:hover:text-white"
+      )
+    }}
+    title="Default Theme"
+    type="button"
+    {{on "click" (fn @onChange "default")}}
+  >
+    Default
+  </button>
+  <button
+    class={{cn
+      "rounded-full px-3 py-1 text-sm transition"
+      "focus:outline-none focus-visible:ring"
+      (if
+        @isUnstyled
+        "bg-slate-100 text-slate-900 dark:bg-slate-800 dark:text-white"
+        "text-slate-500 hover:text-slate-900 dark:hover:text-white"
+      )
+    }}
+    title="Unstyled Theme"
+    type="button"
+    {{on "click" (fn @onChange "unstyled")}}
+  >
+    Unstyled
+  </button>
+</div>

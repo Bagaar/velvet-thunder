@@ -22,7 +22,7 @@
 
 ## CSS Classes
 
-The following classes are applied by the component and can be targeted to fully customize its appearance — see the [styling guide](../../styling.md) for details.
+The following classes are applied by the component and can be targeted to fully customize its appearance — see the [styling guide](../../styling.md) for details. This site's own default skin for them is defined in [`progress.css`](https://github.com/Bagaar/velvet-thunder/blob/main/website/tailwind/components/progress.css).
 
 | Class                       | Applied when                       |
 | --------------------------- | ---------------------------------- |
