@@ -1,6 +1,8 @@
 'use strict';
 
-module.exports = ({ theme }) => ({
+const { whenColorsEnabled, velvetVar } = require('../variants.cjs');
+
+module.exports = ({ theme, options }) => ({
   '.velvet-input': {
     'padding-top': '0',
     'padding-bottom': '0',
@@ -44,5 +46,33 @@ module.exports = ({ theme }) => ({
     '&-pill': {
       'border-radius': theme('borderRadius.full'),
     },
+
+    ...whenColorsEnabled(options?.colors, {
+      '&-primary': {
+        'background-color': 'transparent',
+        'border-color': velvetVar('neutral'),
+
+        '&:hover:not(:disabled, :focus)': {
+          'border-color': velvetVar('neutral', 'hover'),
+        },
+
+        '&:disabled': {
+          opacity: '0.5',
+        },
+
+        '&:focus': {
+          'border-color': velvetVar('primary'),
+          'outline-color': velvetVar('primary'),
+        },
+
+        '&.velvet-input-invalid': {
+          'border-color': velvetVar('danger'),
+
+          '&:focus': {
+            'outline-color': velvetVar('danger'),
+          },
+        },
+      },
+    }),
   },
 });

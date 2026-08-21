@@ -36,4 +36,20 @@
   >
     Unstyled
   </button>
+  <button
+    class={{cn
+      "rounded-full px-3 py-1 text-sm transition"
+      "focus:outline-none focus-visible:ring"
+      (if
+        @isVariables
+        "bg-slate-100 text-slate-900 dark:bg-slate-800 dark:text-white"
+        "text-slate-500 hover:text-slate-900 dark:hover:text-white"
+      )
+    }}
+    title="CSS Variables Theme"
+    type="button"
+    {{on "click" (fn @onChange "variables")}}
+  >
+    CSS Variables
+  </button>
 </div>

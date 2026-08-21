@@ -1,0 +1,47 @@
+@tailwind components;
+
+:root {
+  --velvet-primary: theme("colors.teal.600");
+  --velvet-primary-border: theme("colors.teal.600");
+  --velvet-primary-hover: theme("colors.teal.500");
+  --velvet-primary-active: theme("colors.teal.700");
+  --velvet-primary-disabled: theme("colors.teal.100");
+  --velvet-primary-track: theme("colors.teal.100");
+  --velvet-on-primary: #fff;
+  --velvet-secondary: transparent;
+  --velvet-secondary-border: theme("colors.teal.600");
+  --velvet-secondary-hover: transparent;
+  --velvet-secondary-active: theme("colors.teal.100");
+  --velvet-secondary-disabled: theme("colors.teal.100");
+  --velvet-on-secondary: theme("colors.teal.600");
+  --velvet-ghost: transparent;
+  --velvet-ghost-border: transparent;
+  --velvet-ghost-hover: theme("colors.teal.500");
+  --velvet-ghost-active: theme("colors.teal.600");
+  --velvet-ghost-disabled: theme("colors.teal.100");
+  --velvet-on-ghost: theme("colors.teal.600");
+  --velvet-neutral: theme("colors.gray.400");
+  --velvet-neutral-hover: theme("colors.gray.500");
+  --velvet-info: theme("colors.cyan.200");
+  --velvet-info-icon-hover: theme("colors.cyan.400");
+  --velvet-info-icon-active: theme("colors.cyan.600");
+  --velvet-on-info: theme("colors.cyan.800");
+  --velvet-danger: theme("colors.red.200");
+  --velvet-danger-icon-hover: theme("colors.red.400");
+  --velvet-danger-icon-active: theme("colors.red.600");
+  --velvet-on-danger: theme("colors.red.800");
+  --velvet-success: theme("colors.emerald.200");
+  --velvet-success-icon-hover: theme("colors.emerald.400");
+  --velvet-success-icon-active: theme("colors.emerald.600");
+  --velvet-on-success: theme("colors.emerald.800");
+  --velvet-warning: theme("colors.orange.200");
+  --velvet-warning-icon-hover: theme("colors.orange.400");
+  --velvet-warning-icon-active: theme("colors.orange.600");
+  --velvet-on-warning: theme("colors.orange.800");
+  --velvet-emerald: theme("colors.emerald.500");
+  --velvet-emerald-track: theme("colors.emerald.200");
+  --velvet-amber: theme("colors.amber.500");
+  --velvet-amber-track: theme("colors.amber.200");
+  --velvet-rose: theme("colors.rose.500");
+  --velvet-rose-track: theme("colors.rose.200");
+}

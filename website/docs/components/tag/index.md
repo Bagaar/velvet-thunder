@@ -42,6 +42,15 @@ The following classes are applied by the component and can be targeted to fully 
 | `velvet-tag-{variant}` | Any custom `@variant` value    |
 | `velvet-tag-pill`      | `@isPill={{true}}`             |
 
+## Generated Colors
+
+Pass `variants: [true, [...]]` to generate the `@variant` classes above from CSS custom properties instead of writing your own CSS — see [Generating Colors from CSS Variables](../../styling.md#generating-colors-from-css-variables) for details.
+
+| Custom Property         | Used for         |
+| ----------------------- | ---------------- |
+| `--velvet-{variant}`    | Background color |
+| `--velvet-on-{variant}` | Text color       |
+
 ## Signature
 
 <!-- component-signature: velvet-tag -->
