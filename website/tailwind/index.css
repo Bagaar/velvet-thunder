@@ -5,15 +5,3 @@
 @import "docfy";
 @import "highlight-js";
 @import "prose";
-@import "components/alert";
-@import "components/avatar";
-@import "components/button-and-icon-button";
-@import "components/checkbox-and-radio";
-@import "components/dropdown";
-@import "components/input-and-textarea";
-@import "components/link-and-icon-link";
-@import "components/progress";
-@import "components/select";
-@import "components/switch";
-@import "components/tag";
-@import "components/tooltip";

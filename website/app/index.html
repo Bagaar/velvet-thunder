@@ -17,6 +17,20 @@
       href="{{rootURL}}assets/night-owl.min.css"
     />
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/tailwind.css" />
+    <link
+      id="theme-default"
+      integrity=""
+      rel="stylesheet"
+      href="{{rootURL}}assets/theme-default.css"
+      disabled
+    />
+    <link
+      id="theme-unstyled"
+      integrity=""
+      rel="stylesheet"
+      href="{{rootURL}}assets/theme-unstyled.css"
+      disabled
+    />
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/website.css" />
 
     {{content-for "head-footer"}}
@@ -34,6 +48,20 @@
       } else {
         HTML.classList.remove(DARK_MODE_CLASS);
       }
+    </script>
+
+    <script>
+      const THEME_LINK_IDS = ["theme-default", "theme-unstyled"];
+      const themeName = localStorage.velvetTheme || "default";
+      const activeThemeLink = document.getElementById(`theme-${themeName}`);
+
+      THEME_LINK_IDS.forEach((id) => {
+        const link = document.getElementById(id);
+
+        if (link) {
+          link.disabled = link !== activeThemeLink;
+        }
+      });
     </script>
   </head>
   <body
