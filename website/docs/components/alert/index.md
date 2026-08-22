@@ -78,7 +78,7 @@ manualDemoInsertion: true
 
 ## CSS Classes
 
-The following classes are applied by the component and can be targeted to fully customize its appearance — see the [styling guide](../../styling.md) for details.
+The following classes are applied by the component and can be targeted to fully customize its appearance — see the [styling guide](../../styling.md) for details. This site's own default skin for them is defined in [`alert.css`](https://github.com/Bagaar/velvet-thunder/blob/main/website/tailwind/components/alert.css).
 
 | Class                  | Applied when            |
 | ---------------------- | ----------------------- |
@@ -90,6 +90,17 @@ The following classes are applied by the component and can be targeted to fully 
 | `velvet-alert-header`  | Always (header wrapper) |
 | `velvet-alert-icon`    | Always (icon element)   |
 | `velvet-alert-title`   | Always (title wrapper)  |
+
+## Generated Colors
+
+Pass `variants: [true, [...]]` to generate colors for the `@level` values above from CSS custom properties instead of writing your own CSS — see [Generating Colors from CSS Variables](../../styling.md#generating-colors-from-css-variables) for details. Here `{variant}` refers to the `@level` name (`info`, `danger`, `warning`, `success`, …).
+
+| Custom Property                  | Used for                                           |
+| -------------------------------- | -------------------------------------------------- |
+| `--velvet-{variant}`             | Background color, and the icon button's text color |
+| `--velvet-on-{variant}`          | Text color, and the icon button's background color |
+| `--velvet-{variant}-icon-hover`  | Icon button's background color on `:hover`         |
+| `--velvet-{variant}-icon-active` | Icon button's background color on `:active`        |
 
 ## Signature
 

@@ -1,6 +1,8 @@
 'use strict';
 
-module.exports = ({ theme }) => ({
+const { whenColorsEnabled, velvetVar } = require('../variants.cjs');
+
+module.exports = ({ theme, options }) => ({
   '.velvet-switch': {
     display: 'flex',
     'align-items': 'center',
@@ -60,6 +62,9 @@ module.exports = ({ theme }) => ({
 
     '&-disabled': {
       cursor: 'not-allowed',
+      ...whenColorsEnabled(options?.colors, {
+        opacity: '0.5',
+      }),
     },
 
     '&-input': {
@@ -77,11 +82,29 @@ module.exports = ({ theme }) => ({
         'outline-style': 'solid',
         'outline-width': '2px',
         'outline-offset': '1px',
+
+        ...whenColorsEnabled(options?.colors, {
+          'outline-color': velvetVar('primary', 'active'),
+        }),
       },
 
       '&:checked + .velvet-switch-track .velvet-switch-handle': {
         transform: 'translateX(100%)',
       },
+
+      ...whenColorsEnabled(options?.colors, {
+        '&:checked + .velvet-switch-track': {
+          'background-color': velvetVar('primary'),
+        },
+
+        '&:not(:checked, :disabled):hover + .velvet-switch-track': {
+          'background-color': velvetVar('neutral', 'hover'),
+        },
+
+        '&:checked:not(:disabled):hover + .velvet-switch-track': {
+          'background-color': velvetVar('primary', 'hover'),
+        },
+      }),
     },
 
     '.velvet-switch-track': {
@@ -90,6 +113,10 @@ module.exports = ({ theme }) => ({
       'transition-property': theme('transitionProperty.colors'),
       'transition-timing-function': theme('transitionTimingFunction.DEFAULT'),
       'transition-duration': theme('transitionDuration.DEFAULT'),
+
+      ...whenColorsEnabled(options?.colors, {
+        'background-color': velvetVar('neutral'),
+      }),
     },
 
     '.velvet-switch-handle': {
@@ -97,6 +124,10 @@ module.exports = ({ theme }) => ({
       'transition-property': theme('transitionProperty.transform'),
       'transition-timing-function': theme('transitionTimingFunction.DEFAULT'),
       'transition-duration': theme('transitionDuration.DEFAULT'),
+
+      ...whenColorsEnabled(options?.colors, {
+        'background-color': '#ffffff',
+      }),
     },
   },
 });

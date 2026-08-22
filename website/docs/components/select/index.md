@@ -87,7 +87,7 @@ await velvetSelect(".velvet-select", { text: "First" });
 
 ## CSS Classes
 
-The following classes are applied by the component and can be targeted to fully customize its appearance — see the [styling guide](../../styling.md) for details.
+The following classes are applied by the component and can be targeted to fully customize its appearance — see the [styling guide](../../styling.md) for details. This site's own default skin for them is defined in [`select.css`](https://github.com/Bagaar/velvet-thunder/blob/main/website/tailwind/components/select.css).
 
 | Class                       | Applied when                                         |
 | --------------------------- | ---------------------------------------------------- |
@@ -100,6 +100,17 @@ The following classes are applied by the component and can be targeted to fully 
 | `velvet-select-pill`        | `@isPill={{true}}`                                   |
 | `velvet-select-disabled`    | `@isDisabled={{true}}`                               |
 | `velvet-select-placeholder` | When no value is selected and a placeholder is shown |
+
+## Generated Colors
+
+Pass `colors: true` to generate the `primary` variant's border/outline colors from CSS custom properties instead of writing your own CSS — see [Generating Colors from CSS Variables](../../styling.md#generating-colors-from-css-variables) for details.
+
+| Custom Property          | Used for                                        |
+| ------------------------ | ----------------------------------------------- |
+| `--velvet-neutral`       | Resting border color                            |
+| `--velvet-neutral-hover` | Border color on `:hover`                        |
+| `--velvet-primary`       | Border/outline color on `:focus`                |
+| `--velvet-danger`        | Border/outline color when `@isInvalid={{true}}` |
 
 ## Signature
 

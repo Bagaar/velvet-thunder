@@ -1,6 +1,8 @@
 'use strict';
 
-module.exports = ({ theme }) => ({
+const { whenColorsEnabled, velvetVar } = require('../variants.cjs');
+
+module.exports = ({ theme, options }) => ({
   '.velvet-radio': {
     display: 'flex',
     'align-items': 'center',
@@ -41,6 +43,9 @@ module.exports = ({ theme }) => ({
 
     '&-disabled': {
       cursor: 'not-allowed',
+      ...whenColorsEnabled(options?.colors, {
+        opacity: '0.5',
+      }),
     },
 
     '&-input': {
@@ -59,6 +64,26 @@ module.exports = ({ theme }) => ({
       '&:disabled': {
         cursor: 'not-allowed',
       },
+
+      ...whenColorsEnabled(options?.colors, {
+        '&:checked': {
+          'background-color': velvetVar('primary'),
+          'border-color': velvetVar('primary'),
+          '&:hover': {
+            'background-color': velvetVar('primary', 'hover'),
+            'border-color': velvetVar('primary', 'hover'),
+          },
+          '&:focus': {
+            'background-color': velvetVar('primary', 'active'),
+            'border-color': velvetVar('primary', 'active'),
+          },
+        },
+
+        '&:focus-visible': {
+          'border-color': velvetVar('primary'),
+          'outline-color': velvetVar('primary', 'active'),
+        },
+      }),
     },
   },
 });

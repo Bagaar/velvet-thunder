@@ -1,6 +1,8 @@
 'use strict';
 
-module.exports = ({ theme }) => ({
+const { whenColorsEnabled, velvetVar } = require('../variants.cjs');
+
+module.exports = ({ theme, options }) => ({
   '.velvet-textarea': {
     'border-radius': theme('borderRadius.md'),
     'font-size': theme('fontSize.sm'),
@@ -44,5 +46,33 @@ module.exports = ({ theme }) => ({
       'padding-top': theme('spacing.3'),
       'padding-bottom': theme('spacing.3'),
     },
+
+    ...whenColorsEnabled(options?.colors, {
+      '&-primary': {
+        'background-color': 'transparent',
+        'border-color': velvetVar('neutral'),
+
+        '&:hover:not(:disabled, :focus)': {
+          'border-color': velvetVar('neutral', 'hover'),
+        },
+
+        '&:disabled': {
+          opacity: '0.5',
+        },
+
+        '&:focus': {
+          'border-color': velvetVar('primary'),
+          'outline-color': velvetVar('primary'),
+        },
+
+        '&.velvet-textarea-invalid': {
+          'border-color': velvetVar('danger'),
+
+          '&:focus': {
+            'outline-color': velvetVar('danger'),
+          },
+        },
+      },
+    }),
   },
 });

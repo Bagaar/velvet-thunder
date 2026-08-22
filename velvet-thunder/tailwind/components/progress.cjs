@@ -1,6 +1,8 @@
 'use strict';
 
-module.exports = ({ theme }) => ({
+const { generateVariants, velvetVar } = require('../variants.cjs');
+
+module.exports = ({ theme, options }) => ({
   '.velvet-progress': {
     overflow: 'hidden',
     'border-radius': theme('borderRadius.full'),
@@ -25,5 +27,13 @@ module.exports = ({ theme }) => ({
       'transition-timing-function': theme('transitionTimingFunction.DEFAULT'),
       'transition-duration': theme('transitionDuration.DEFAULT'),
     },
+
+    ...generateVariants(options?.variants, (name) => ({
+      'background-color': velvetVar(name, 'track'),
+
+      '.velvet-progress-line': {
+        'background-color': velvetVar(name),
+      },
+    })),
   },
 });
