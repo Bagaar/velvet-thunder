@@ -111,7 +111,7 @@
     "release-it": "20.0.1",
     "rollup-plugin-copy": "3.5.0",
     "rollup": "4.62.4",
-    "typescript": "5.9.3"
+    "typescript": "6.0.3"
   },
   "peerDependencies": {
     "@ember/test-helpers": ">= 3.0.0",
