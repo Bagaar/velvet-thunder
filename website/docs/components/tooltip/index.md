@@ -102,12 +102,20 @@ Uses [Floating UI](https://floating-ui.com/) underneath.
 
 ## CSS Classes
 
-The following classes are applied by the component and can be targeted to fully customize its appearance — see the [styling guide](../../styling.md) for details.
+The following classes are applied by the component and can be targeted to fully customize its appearance — see the [styling guide](../../styling.md) for details. This site's own default skin for them is defined in [`tooltip.css`](https://github.com/Bagaar/velvet-thunder/blob/main/website/tailwind/components/tooltip.css).
 
 | Class                    | Applied when                             |
 | ------------------------ | ---------------------------------------- |
 | `velvet-tooltip`         | Always (root wrapper)                    |
 | `velvet-tooltip-content` | Always (on the floating content element) |
+
+## Generated Colors
+
+Pass `colors: true` to generate the content bubble's border color from CSS custom properties instead of writing your own CSS — see [Generating Colors from CSS Variables](../../styling.md#generating-colors-from-css-variables) for details.
+
+| Custom Property    | Used for     |
+| ------------------ | ------------ |
+| `--velvet-neutral` | Border color |
 
 ## Signature
 

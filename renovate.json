@@ -6,7 +6,6 @@
     ":semanticCommits",
     ":semanticCommitTypeAll(chore)",
     "schedule:weekends",
-    "schedule:automergeWeekends",
     ":pinAllExceptPeerDependencies"
   ],
   "separateMultipleMajor": true,
@@ -38,6 +37,15 @@
       "automerge": false,
       "matchPackageNames": ["ember-cli", "ember-data", "ember-source"],
       "matchUpdateTypes": ["major", "minor"]
+    },
+    {
+      "matchDepTypes": ["action"],
+      "pinDigests": false
+    },
+    {
+      "matchFileNames": ["velvet-thunder/package.json"],
+      "matchDepTypes": ["dependencies"],
+      "rangeStrategy": "widen"
     }
   ],
   "commitMessageExtra": "from {{currentVersion}} to {{newVersion}}",

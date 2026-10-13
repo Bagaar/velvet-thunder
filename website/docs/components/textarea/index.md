@@ -38,7 +38,7 @@ manualDemoInsertion: true
 
 ## CSS Classes
 
-The following classes are applied by the component and can be targeted to fully customize its appearance — see the [styling guide](../../styling.md) for details.
+The following classes are applied by the component and can be targeted to fully customize its appearance — see the [styling guide](../../styling.md) for details. This site's own default skin for them is defined in [`input-and-textarea.css`](https://github.com/Bagaar/velvet-thunder/blob/main/website/tailwind/components/input-and-textarea.css).
 
 | Class                       | Applied when                   |
 | --------------------------- | ------------------------------ |
@@ -50,6 +50,17 @@ The following classes are applied by the component and can be targeted to fully 
 | `velvet-textarea-{variant}` | Any custom `@variant` value    |
 | `velvet-textarea-invalid`   | `@isInvalid={{true}}`          |
 | `velvet-textarea-disabled`  | `@isDisabled={{true}}`         |
+
+## Generated Colors
+
+Pass `colors: true` to generate the `primary` variant's border/outline colors from CSS custom properties instead of writing your own CSS — see [Generating Colors from CSS Variables](../../styling.md#generating-colors-from-css-variables) for details.
+
+| Custom Property          | Used for                                        |
+| ------------------------ | ----------------------------------------------- |
+| `--velvet-neutral`       | Resting border color                            |
+| `--velvet-neutral-hover` | Border color on `:hover`                        |
+| `--velvet-primary`       | Border/outline color on `:focus`                |
+| `--velvet-danger`        | Border/outline color when `@isInvalid={{true}}` |
 
 ## Signature
 

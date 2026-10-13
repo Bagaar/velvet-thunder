@@ -1,6 +1,15 @@
 'use strict';
 
-module.exports = ({ theme }) => ({
+const { generateVariants, velvetVar, velvetOnVar } = require('../variants.cjs');
+
+function variantStyles(name) {
+  return {
+    'background-color': velvetVar(name),
+    color: velvetOnVar(name),
+  };
+}
+
+module.exports = ({ options, theme }) => ({
   '.velvet-tag': {
     'border-width': '1px',
     'border-color': 'transparent',
@@ -36,5 +45,7 @@ module.exports = ({ theme }) => ({
     '&-pill': {
       'border-radius': theme('borderRadius.full'),
     },
+
+    ...generateVariants(options?.variants, variantStyles),
   },
 });

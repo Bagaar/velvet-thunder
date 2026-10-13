@@ -15,18 +15,18 @@
     "test": "pnpm --filter '*' test"
   },
   "devDependencies": {
-    "@glint/core": "^1.2.1",
-    "concurrently": "^10.0.0",
-    "prettier": "^3.8.2",
-    "prettier-plugin-ember-template-tag": "^2.1.4"
+    "@glint/core": "1.5.2",
+    "concurrently": "10.0.6",
+    "prettier": "3.9.10",
+    "prettier-plugin-ember-template-tag": "2.1.8"
   },
   "pnpm": {
     "overrides": {
-      "@glimmer/component": "^2.0.0"
+      "@glimmer/component": "2.1.1"
     }
   },
   "volta": {
-    "node": "24.14.0",
-    "pnpm": "10.19.0"
+    "node": "24.21.0",
+    "pnpm": "10.34.6"
   }
 }

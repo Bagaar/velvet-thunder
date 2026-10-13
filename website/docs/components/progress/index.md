@@ -22,7 +22,7 @@
 
 ## CSS Classes
 
-The following classes are applied by the component and can be targeted to fully customize its appearance — see the [styling guide](../../styling.md) for details.
+The following classes are applied by the component and can be targeted to fully customize its appearance — see the [styling guide](../../styling.md) for details. This site's own default skin for them is defined in [`progress.css`](https://github.com/Bagaar/velvet-thunder/blob/main/website/tailwind/components/progress.css).
 
 | Class                       | Applied when                       |
 | --------------------------- | ---------------------------------- |
@@ -32,6 +32,15 @@ The following classes are applied by the component and can be targeted to fully 
 | `velvet-progress-lg`        | `@size="lg"`                       |
 | `velvet-progress-{variant}` | Any `@variant` value               |
 | `velvet-progress-line`      | Always (on the inner progress bar) |
+
+## Generated Colors
+
+Pass `variants: [true, [...]]` to generate the `@variant` classes above from CSS custom properties instead of writing your own CSS — see [Generating Colors from CSS Variables](../../styling.md#generating-colors-from-css-variables) for details.
+
+| Custom Property            | Used for                            |
+| -------------------------- | ----------------------------------- |
+| `--velvet-{variant}`       | Fill color (`velvet-progress-line`) |
+| `--velvet-{variant}-track` | Track background color              |
 
 ## Signature
 
