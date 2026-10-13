@@ -16,7 +16,7 @@
     ]
   },
   "npm": {
-    "skipChecks": false
+    "skipChecks": true
   },
   "plugins": {
     "@release-it/conventional-changelog": {

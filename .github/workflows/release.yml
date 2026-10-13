@@ -8,6 +8,9 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
     steps:
       - uses: actions/checkout@v7.0.1
         with:
@@ -26,9 +29,5 @@ jobs:
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
       - name: Release
-        run: | 
-          pnpm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
-          pnpm release
+        run: pnpm release
         working-directory: velvet-thunder
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
