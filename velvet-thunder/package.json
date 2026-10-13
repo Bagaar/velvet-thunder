@@ -7,7 +7,8 @@
   ],
   "repository": {
     "directory": "velvet-thunder",
-    "url": "https://github.com/bagaar/velvet-thunder"
+    "type": "git",
+    "url": "git+https://github.com/Bagaar/velvet-thunder.git"
   },
   "license": "MIT",
   "author": "Bagaar",
