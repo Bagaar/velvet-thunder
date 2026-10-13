@@ -262,8 +262,8 @@ importers:
         specifier: 8.67.0
         version: 8.67.0(eslint@8.57.1)(typescript@6.0.3)
       babel-plugin-ember-template-compilation:
-        specifier: 4.0.0
-        version: 4.0.0
+        specifier: 4.0.1
+        version: 4.0.1
       concurrently:
         specifier: 10.0.5
         version: 10.0.5
@@ -2831,8 +2831,8 @@ packages:
     resolution: {integrity: sha512-n+ktQ3JeyWrpRutSyPn2PsHeH+A94SVm+iUoogzf9VUqpP47FfWem24gpQXhn+p6+x5/BpuFJXMLXWt7ZoYAKA==}
     engines: {node: '>= 12.*'}
 
-  babel-plugin-ember-template-compilation@4.0.0:
-    resolution: {integrity: sha512-J2dR6ZPfPNuIR7vzhneO9xR0aTvOHITszuGif2EOYw3Qg3KlIVEd/hNnEeubyWgjYXn06Sgm6/NdNXEMNSsWYQ==}
+  babel-plugin-ember-template-compilation@4.0.1:
+    resolution: {integrity: sha512-t1o2O+91u4oLtku0sysC2nAuwBoyH9lDWmRoKHdAktt5fFaD8b2slKsWq2dyXrZ+/FW/jFa5rWdN3zK9VB0qvQ==}
     engines: {node: '>= 18.*'}
 
   babel-plugin-htmlbars-inline-precompile@5.3.1:
@@ -10708,7 +10708,7 @@ snapshots:
       '@glimmer/syntax': 0.95.0
       babel-import-util: 3.0.1
 
-  babel-plugin-ember-template-compilation@4.0.0:
+  babel-plugin-ember-template-compilation@4.0.1:
     dependencies:
       '@glimmer/syntax': 0.95.0
       babel-import-util: 3.0.1
