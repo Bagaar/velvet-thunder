@@ -96,7 +96,7 @@
     "@tsconfig/ember": "3.0.12",
     "@typescript-eslint/eslint-plugin": "8.67.0",
     "@typescript-eslint/parser": "8.67.0",
-    "babel-plugin-ember-template-compilation": "4.0.0",
+    "babel-plugin-ember-template-compilation": "4.0.1",
     "concurrently": "10.0.5",
     "ember-link": "3.5.0",
     "ember-source": "5.12.0",
