@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.4.0](https://github.com/Bagaar/velvet-thunder/compare/0.3.0...0.4.0) (2026-10-13)
+
+### Features
+
+* add option to style components using default css variables ([913a44a](https://github.com/Bagaar/velvet-thunder/commit/913a44a5ee055d4586ba83f40ce9e91cf6cfe8e3))
+
+### Reverts
+
+* Revert "chore(deps-minor): update dependency webpack from 5.106.1 to 5.111.1 (#622)" ([371c348](https://github.com/Bagaar/velvet-thunder/commit/371c348e334b7d2ce19c9fb653af8cb73054e1aa)), references [#622](https://github.com/Bagaar/velvet-thunder/issues/622)
+
 ## [0.3.0](https://github.com/Bagaar/velvet-thunder/compare/0.2.1...0.3.0) (2026-07-09)
 
 ### Features
