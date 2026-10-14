@@ -4,6 +4,7 @@ const { whenColorsEnabled, velvetVar } = require('../variants.cjs');
 
 module.exports = ({ theme, options }) => ({
   '.velvet-select': {
+    cursor: 'pointer',
     'padding-top': '0',
     'padding-bottom': '0',
     'border-radius': theme('borderRadius.md'),
