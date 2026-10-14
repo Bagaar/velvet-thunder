@@ -1,0 +1,5 @@
+@import "tailwindcss/theme";
+@import "tailwindcss/utilities" source(none);
+@import "./variables.css";
+
+@config "../../tailwind.config.variables.js";
