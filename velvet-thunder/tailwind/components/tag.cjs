@@ -6,6 +6,7 @@ function variantStyles(name) {
   return {
     'background-color': velvetVar(name),
     color: velvetOnVar(name),
+    'border-color': velvetVar(name, 'border'),
   };
 }
 
