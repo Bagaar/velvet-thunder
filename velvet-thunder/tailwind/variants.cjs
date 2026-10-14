@@ -4,15 +4,18 @@ const DEFAULT_VARIANT_NAMES = ['primary', 'secondary', 'ghost'];
 
 // Consumers define these as CSS custom properties, following the
 // `--velvet-{name}`, `--velvet-{name}-hover`, `--velvet-{name}-active`,
-// `--velvet-{name}-disabled`, and `--velvet-on-{name}` naming contract.
+// `--velvet-{name}-disabled`, `--velvet-{name}-subtle`, `--velvet-on-{name}`, and
+// `--velvet-on-{name}-subtle` naming contract.
 function velvetVar(name, state) {
   // todo: add validation here to see variable really exists
   return state ? `var(--velvet-${name}-${state})` : `var(--velvet-${name})`;
 }
 
-function velvetOnVar(name) {
+function velvetOnVar(name, state) {
   // todo: add validation here to see variable really exists
-  return `var(--velvet-on-${name})`;
+  return state
+    ? `var(--velvet-on-${name}-${state})`
+    : `var(--velvet-on-${name})`;
 }
 
 // `variables: true` generates the default variant names; `variables: [...]`

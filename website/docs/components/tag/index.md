@@ -46,10 +46,11 @@ The following classes are applied by the component and can be targeted to fully 
 
 Pass `variants: [true, [...]]` to generate the `@variant` classes above from CSS custom properties instead of writing your own CSS — see [Generating Colors from CSS Variables](../../styling.md#generating-colors-from-css-variables) for details.
 
-| Custom Property         | Used for         |
-| ----------------------- | ---------------- |
-| `--velvet-{variant}`    | Background color |
-| `--velvet-on-{variant}` | Text color       |
+| Custom Property                | Used for         |
+| ------------------------------ | ---------------- |
+| `--velvet-{variant}-subtle`    | Background color |
+| `--velvet-on-{variant}-subtle` | Text color       |
+| `--velvet-{variant}-border`    | Border color     |
 
 ## Signature
 
