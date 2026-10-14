@@ -121,7 +121,7 @@ jobs:
         include:
           - tailwind: v3
           - tailwind: v4
-            tailwind-packages: "tailwindcss@^4 @tailwindcss/cli@^4"
+            tailwind-packages: "tailwindcss@^4 @tailwindcss/postcss@^4"
             build-script: build:v4
 
     steps:
@@ -146,6 +146,7 @@ jobs:
           publish-dir: website/dist
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: "Tailwind ${{ matrix.tailwind }} — ${{ github.sha }}"
+          alias: tailwind-${{ matrix.tailwind }}-${{ github.event.pull_request.number && format('pr-{0}', github.event.pull_request.number) || github.ref_name }}
           overwrites-pull-request-comment: false
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}

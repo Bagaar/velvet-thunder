@@ -14,14 +14,14 @@ const velvetThunder = require('@bagaar/velvet-thunder/tailwind');
 // would also re-emit their `.prose`/form component styles into this file, which
 // load after the base tailwind.css and can win the cascade over utility-layer
 // overrides (like `prose-a:no-underline`) that only exist in the base build.
+//
+// For the same reason `content` only points at velvetThunder's own files: v4
+// has no `@tailwind components` equivalent (plugin components are emitted as
+// utilities), so scanning the site's templates here would re-emit their
+// utilities into this file too. v3 doesn't need the templates either, since
+// the plugin safelists every `velvet-*` class.
 module.exports = {
-  content: [
-    ...velvetThunder.content(),
-    './docs/**/*.md',
-    './app/components/**/*.{hbs,ts}',
-    './app/templates/**/*.hbs',
-    './app/index.html',
-  ],
+  content: [...velvetThunder.content()],
   darkMode: 'class',
   plugins: [
     velvetThunder.plugin({
