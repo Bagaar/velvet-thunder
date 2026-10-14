@@ -4,8 +4,8 @@ const { generateVariants, velvetVar, velvetOnVar } = require('../variants.cjs');
 
 function variantStyles(name) {
   return {
-    'background-color': velvetVar(name),
-    color: velvetOnVar(name),
+    'background-color': velvetVar(name, 'subtle'),
+    color: velvetOnVar(name, 'subtle'),
     'border-color': velvetVar(name, 'border'),
   };
 }
