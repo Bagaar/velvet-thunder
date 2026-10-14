@@ -121,7 +121,7 @@ jobs:
         include:
           - tailwind: v3
           - tailwind: v4
-            tailwind-packages: "tailwindcss@^4 @tailwindcss/cli@^4"
+            tailwind-packages: "tailwindcss@^4 @tailwindcss/postcss@^4"
             build-script: build:v4
 
     steps:
