@@ -4,6 +4,7 @@ const { whenColorsEnabled, velvetVar } = require('../variants.cjs');
 
 module.exports = ({ theme, options }) => ({
   '.velvet-checkbox': {
+    cursor: 'pointer',
     display: 'flex',
     'align-items': 'center',
     width: 'fit-content',
