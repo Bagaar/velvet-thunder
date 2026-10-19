@@ -42,7 +42,13 @@ module.exports = tailwindPlugin.withOptions(
       return options.components[component] !== false;
     });
 
-    return ({ addComponents, addUtilities, config, theme }) => {
+    return ({ addBase, addComponents, addUtilities, config, theme }) => {
+      addBase({
+        'button:not(:disabled), [role="button"]:not(:disabled)': {
+          cursor: 'pointer',
+        },
+      });
+
       addComponents(
         components.map((component) =>
           COMPONENTS[component]({

@@ -6,7 +6,9 @@ order: 3
 
 ## How the Plugin Works
 
-`velvetThunder.plugin()` generates **structural** CSS for all `velvet-*` component classes — layout, sizing, spacing, transitions, and disabled cursors. Colors, borders, and hover/focus states are intentionally left out. This is what makes Velvet Thunder semi-headless: the plugin gives components their shape, and you give them their look.
+`velvetThunder.plugin()` generates **structural** CSS for all `velvet-*` component classes — layout, sizing, spacing, transitions, and cursors. Colors, borders, and hover/focus states are intentionally left out. This is what makes Velvet Thunder semi-headless: the plugin gives components their shape, and you give them their look.
+
+On top of that, it adds a few base styles to smooth over differences between Tailwind versions' preflight, such as the pointer cursor on buttons that Tailwind v4 no longer sets.
 
 The plugin also adds `.velvet-outline` and `.velvet-outline-offset-0` utility classes used internally for focus rings (see [Outline](./utilities/outline.md)).
 
