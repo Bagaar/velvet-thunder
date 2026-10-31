@@ -111,7 +111,7 @@
     "prettier": "3.9.10",
     "release-it": "21.1.1",
     "rollup-plugin-copy": "3.5.0",
-    "rollup": "4.62.4",
+    "rollup": "4.65.1",
     "typescript": "6.0.3"
   },
   "peerDependencies": {
