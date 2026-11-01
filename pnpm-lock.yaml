@@ -268,8 +268,8 @@ importers:
         specifier: 10.0.6
         version: 10.0.6
       ember-eslint-parser:
-        specifier: 0.14.9
-        version: 0.14.9(@babel/eslint-parser@7.29.9(@babel/core@7.29.7)(eslint@8.57.1))(@typescript-eslint/parser@8.72.1(eslint@8.57.1)(typescript@6.0.3))(typescript@6.0.3)
+        specifier: 0.16.1
+        version: 0.16.1(@babel/eslint-parser@7.29.9(@babel/core@7.29.7)(eslint@8.57.1))(@typescript-eslint/parser@8.72.1(eslint@8.57.1)(typescript@6.0.3))(typescript@6.0.3)
       ember-link:
         specifier: 3.5.0
         version: 3.5.0(@babel/core@7.29.7)(@ember/test-helpers@5.7.0(@babel/core@7.29.7))(@glint/template@1.11.0)
@@ -1401,9 +1401,6 @@ packages:
   '@glimmer/interfaces@0.92.3':
     resolution: {integrity: sha512-QwQeA01N+0h+TAi/J7iUnZtRuJy+093hNyagxDQBA6b1wCBw+q+al9+O6gmbWlkWE7EifzmNE1nnrgcecJBlJQ==}
 
-  '@glimmer/interfaces@0.94.6':
-    resolution: {integrity: sha512-sp/1WePvB/8O+jrcUHwjboNPTKrdGicuHKA9T/lh0vkYK2qM5Xz4i25lQMQ38tEMiw7KixrjHiTUiaXRld+IwA==}
-
   '@glimmer/manager@0.92.4':
     resolution: {integrity: sha512-YMoarZT/+Ft2YSd+Wuu5McVsdP9y6jeAdVQGYFpno3NlL3TXYbl7ELtK7OGxFLjzQE01BdiUZZRvcY+a/s9+CQ==}
 
@@ -1431,9 +1428,6 @@ packages:
   '@glimmer/syntax@0.92.3':
     resolution: {integrity: sha512-7wPKQmULyXCYf0KvbPmfrs/skPISH2QGR9atCnmDWnHyLv5SSZVLm1P0Ctrpta6+Ci3uGQb7hGk0IjsLEavcYQ==}
 
-  '@glimmer/syntax@0.95.0':
-    resolution: {integrity: sha512-W/PHdODnpONsXjbbdY9nedgIHpglMfOzncf/moLVrKIcCfeQhw2vG07Rs/YW8KeJCgJRCLkQsi+Ix7XvrurGAg==}
-
   '@glimmer/syntax@0.97.0':
     resolution: {integrity: sha512-uDUqlAxU40eJHJjMUR6ffdpDp6W53gNvS9YZNrBbf77sUL5xUFsBAaReB3FuyVPbwRg09p5rviioUJ8nyg7BBA==}
 
@@ -1445,9 +1439,6 @@ packages:
 
   '@glimmer/util@0.92.3':
     resolution: {integrity: sha512-K1oH93gGU36slycxJ9CcFpUTsdOc4XQ6RuZFu5oRsxFYtEF5PSu7ik11h58fyeoaWOr1ebfkyAMawbeI2AJ5GA==}
-
-  '@glimmer/util@0.94.8':
-    resolution: {integrity: sha512-HfCKeZ74clF9BsPDBOqK/yRNa/ke6niXFPM6zRn9OVYw+ZAidLs7V8He/xljUHlLRL322kaZZY8XxRW7ALEwyg==}
 
   '@glimmer/validator@0.44.0':
     resolution: {integrity: sha512-i01plR0EgFVz69GDrEuFgq1NheIjZcyTy3c7q+w7d096ddPVeVcRzU3LKaqCfovvLJ+6lJx40j45ecycASUUyw==}
@@ -1464,9 +1455,6 @@ packages:
 
   '@glimmer/wire-format@0.92.3':
     resolution: {integrity: sha512-gFz81Q9+V7Xs0X8mSq6y8qacHm0dPaGJo2/Bfcsdow1hLOKNgTCLr4XeDBhRML8f6I6Gk9ugH4QDxyIOXOpC4w==}
-
-  '@glimmer/wire-format@0.94.8':
-    resolution: {integrity: sha512-A+Cp5m6vZMAEu0Kg/YwU2dJZXyYxVJs2zI57d3CP6NctmX7FsT8WjViiRUmt5abVmMmRH5b8BUovqY6GSMAdrw==}
 
   '@glint/core@1.5.2':
     resolution: {integrity: sha512-kbEt8jBEkH65yDB20tBq/rnZl+iigmAenKQcgu1cqex6/eT6LrQ5E9QxyKtqe9S18qZv0c/LNa0qE7jwbAEKMA==}
@@ -1526,10 +1514,6 @@ packages:
 
   '@handlebars/parser@2.0.0':
     resolution: {integrity: sha512-EP9uEDZv/L5Qh9IWuMUGJRfwhXJ4h1dqKTT4/3+tY0eu7sPis7xh23j61SYUnNF4vqCQvvUXpDo9Bh/+q1zASA==}
-
-  '@handlebars/parser@2.2.4':
-    resolution: {integrity: sha512-/h1xCfa032pytotQCcvL6TROzLK7KUjnzCYk17ZfFCSP5Shp+k0E8JMnwgz+DqlqbRGZMyk2kFYXtx+wYkx/eA==}
-    engines: {node: ^18 || ^20 || ^22 || >=24}
 
   '@humanwhocodes/config-array@0.13.0':
     resolution: {integrity: sha512-DZLEEqFWQFiyK6h5YIeynKx7JlvCYWL0cImfSRXZ9l4Sg2efkFGTuFf6vzXjK1cq6IYkU+Eg/JizXw+TD2vRNw==}
@@ -2310,12 +2294,6 @@ packages:
   '@typescript-eslint/scope-manager@8.72.1':
     resolution: {integrity: sha512-lC/t6eMCZZQAAKZEYGL6RDVSuFehpdmMT6h+nJIjIa6oylN/PwDgDVtEIbB7O9xFfZYtZAYLoLlDNWKJhtF+uQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
-  '@typescript-eslint/tsconfig-utils@8.72.0':
-    resolution: {integrity: sha512-0vbxCf7xLVPSjcOdm6eQbgViH8EDJ8xnl1laLT9yoqSz2YmcSfSg5Vdl0JUvZf6rcuJ0ZivJIuMD4edTg8obaA==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    peerDependencies:
-      typescript: '>=4.8.4 <6.1.0'
 
   '@typescript-eslint/tsconfig-utils@8.72.1':
     resolution: {integrity: sha512-e4D5R5vpeAEPBxT2BAzsFQL3sbwyeeeo5+aczgNSRK1V734jE7pTqaGFU+fXapWEQwnZbpFaTn32+Z8DwS6OTg==}
@@ -3829,8 +3807,8 @@ packages:
     engines: {node: '>= 20.19.0'}
     hasBin: true
 
-  ember-eslint-parser@0.14.9:
-    resolution: {integrity: sha512-42TiXJU7qK0xYokRhXyBYffId9u5gPokzQm28sCs5lRgj+XeYpdKUnpZuMpGwtPQs0TNGTS9UknBhDtOksqLFA==}
+  ember-eslint-parser@0.16.1:
+    resolution: {integrity: sha512-1FSGhbknZwYG3nz3HK30lim4xVxM0B42ps5dOtrFrzz9cbdMtR5K+ftlOsfFjRLU7gL66zCJVVnsF1VuVlBSZg==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       '@babel/eslint-parser': ^7.28.6 || ^8.0.0
@@ -3851,8 +3829,8 @@ packages:
       '@typescript-eslint/parser':
         optional: true
 
-  ember-estree@0.6.11:
-    resolution: {integrity: sha512-aZyheQGUXyHu8GARPd1YyjbDMGkvqBYKzPj6RVp8qqMqA1L1MbkWKsljWE3K1CwiJcHwTPgm/O3oxS0TY1AX9Q==}
+  ember-estree@0.9.0:
+    resolution: {integrity: sha512-CExL0d6FbbffZaQkD0+zA5PaIgle3fbpzapuLVQ+QZfI2KLalnhuof0e85Zvfy/fh8+q9liw7dqUhQX4gibMBA==}
 
   ember-fetch@8.1.2:
     resolution: {integrity: sha512-TVx24/jrvDIuPL296DV0hBwp7BWLcSMf0I8464KGz01sPytAB+ZAePbc9ooBTJDkKZEGFgatJa4nj3yF1S9Bpw==}
@@ -9122,11 +9100,6 @@ snapshots:
     dependencies:
       '@simple-dom/interface': 1.4.0
 
-  '@glimmer/interfaces@0.94.6':
-    dependencies:
-      '@simple-dom/interface': 1.4.0
-      type-fest: 4.41.0
-
   '@glimmer/manager@0.92.4':
     dependencies:
       '@glimmer/debug': 0.92.4
@@ -9212,14 +9185,6 @@ snapshots:
       '@handlebars/parser': 2.0.0
       simple-html-tokenizer: 0.5.11
 
-  '@glimmer/syntax@0.95.0':
-    dependencies:
-      '@glimmer/interfaces': 0.94.6
-      '@glimmer/util': 0.94.8
-      '@glimmer/wire-format': 0.94.8
-      '@handlebars/parser': 2.2.4
-      simple-html-tokenizer: 0.5.11
-
   '@glimmer/syntax@0.97.0':
     dependencies:
       simple-html-tokenizer: 1.0.0
@@ -9239,10 +9204,6 @@ snapshots:
     dependencies:
       '@glimmer/env': 0.1.7
       '@glimmer/interfaces': 0.92.3
-
-  '@glimmer/util@0.94.8':
-    dependencies:
-      '@glimmer/interfaces': 0.94.6
 
   '@glimmer/validator@0.44.0': {}
 
@@ -9268,10 +9229,6 @@ snapshots:
     dependencies:
       '@glimmer/interfaces': 0.92.3
       '@glimmer/util': 0.92.3
-
-  '@glimmer/wire-format@0.94.8':
-    dependencies:
-      '@glimmer/interfaces': 0.94.6
 
   '@glint/core@1.5.2(typescript@6.0.3)':
     dependencies:
@@ -9313,8 +9270,6 @@ snapshots:
   '@glint/template@1.11.0': {}
 
   '@handlebars/parser@2.0.0': {}
-
-  '@handlebars/parser@2.2.4': {}
 
   '@humanwhocodes/config-array@0.13.0':
     dependencies:
@@ -10006,10 +9961,6 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.72.1
       '@typescript-eslint/visitor-keys': 8.72.1
-
-  '@typescript-eslint/tsconfig-utils@8.72.0(typescript@6.0.3)':
-    dependencies:
-      typescript: 6.0.3
 
   '@typescript-eslint/tsconfig-utils@8.72.1(typescript@6.0.3)':
     dependencies:
@@ -12000,12 +11951,12 @@ snapshots:
       - walrus
       - whiskers
 
-  ember-eslint-parser@0.14.9(@babel/eslint-parser@7.29.9(@babel/core@7.29.7)(eslint@8.57.1))(@typescript-eslint/parser@8.72.1(eslint@8.57.1)(typescript@6.0.3))(typescript@6.0.3):
+  ember-eslint-parser@0.16.1(@babel/eslint-parser@7.29.9(@babel/core@7.29.7)(eslint@8.57.1))(@typescript-eslint/parser@8.72.1(eslint@8.57.1)(typescript@6.0.3))(typescript@6.0.3):
     dependencies:
-      '@glimmer/syntax': 0.95.0
-      '@typescript-eslint/tsconfig-utils': 8.72.0(typescript@6.0.3)
+      '@glimmer/syntax': 0.97.0
+      '@typescript-eslint/tsconfig-utils': 8.72.1(typescript@6.0.3)
       content-tag: 4.2.1
-      ember-estree: 0.6.11
+      ember-estree: 0.9.0
       eslint-scope: 9.1.2
       html-tags: 5.1.0
       mathml-tag-names: 4.0.0
@@ -12021,7 +11972,7 @@ snapshots:
       '@babel/core': 7.29.7
       '@babel/eslint-parser': 7.29.9(@babel/core@7.29.7)(eslint@8.57.1)
       '@glimmer/syntax': 0.97.0
-      '@typescript-eslint/tsconfig-utils': 8.72.0(typescript@6.0.3)
+      '@typescript-eslint/tsconfig-utils': 8.72.1(typescript@6.0.3)
       content-tag: 2.0.3
       eslint-scope: 7.2.2
       html-tags: 3.3.1
@@ -12033,10 +11984,10 @@ snapshots:
       - eslint
       - typescript
 
-  ember-estree@0.6.11:
+  ember-estree@0.9.0:
     dependencies:
       '@glimmer/env': 0.1.7
-      '@glimmer/syntax': 0.95.0
+      '@glimmer/syntax': 0.97.0
       content-tag: 4.2.1
       oxc-parser: 0.130.0
 
