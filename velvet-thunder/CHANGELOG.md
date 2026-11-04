@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.5.0](https://github.com/Bagaar/velvet-thunder/compare/0.4.0...0.5.0) (2026-11-04)
+
+### Features
+
+* add focus and disabled text/border variables to button variants ([3191614](https://github.com/Bagaar/velvet-thunder/commit/319161434c82855852e583b3843020027007dc07))
+* give tag variants and extra subtle option instead of the full variant color as background ([472fae9](https://github.com/Bagaar/velvet-thunder/commit/472fae98d46b1712278b6f9580e6e657c1ec1b97))
+
+### Bug Fixes
+
+* add cursor pointer styling to buttons in Tailwind v4 implementations ([88d5a62](https://github.com/Bagaar/velvet-thunder/commit/88d5a62398072fcd4bbba44b384e55a6f0caa12a))
+* give secondary tag a border default when using variables styling ([2bbace8](https://github.com/Bagaar/velvet-thunder/commit/2bbace808b011865dd5e715bb5968292de29a9ff))
+
 ## [0.4.0](https://github.com/Bagaar/velvet-thunder/compare/0.3.0...0.4.0) (2026-10-13)
 
 ### Features
