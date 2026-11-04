@@ -67,8 +67,18 @@ module.exports = ({ options, theme }) => ({
         'background-color': velvetVar(name, 'active'),
       },
 
+      '&:focus-visible': {
+        'outline-color': velvetVar(name, 'focus'),
+      },
+
       '&:disabled': {
         'background-color': velvetVar(name, 'disabled'),
+        color: velvetOnVar(name, 'disabled', velvetOnVar(name)),
+        'border-color': velvetVar(
+          name,
+          'border-disabled',
+          velvetVar(name, 'border'),
+        ),
       },
     })),
   },

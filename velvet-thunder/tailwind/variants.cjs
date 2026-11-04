@@ -6,16 +6,26 @@ const DEFAULT_VARIANT_NAMES = ['primary', 'secondary', 'ghost'];
 // `--velvet-{name}`, `--velvet-{name}-hover`, `--velvet-{name}-active`,
 // `--velvet-{name}-disabled`, `--velvet-{name}-subtle`, `--velvet-on-{name}`, and
 // `--velvet-on-{name}-subtle` naming contract.
-function velvetVar(name, state) {
+// `fallback` is used when the consumer hasn't defined that custom property,
+// so optional states (e.g. `-border-disabled`) don't reset to the initial value.
+function velvetVar(name, state, fallback) {
   // todo: add validation here to see variable really exists
-  return state ? `var(--velvet-${name}-${state})` : `var(--velvet-${name})`;
+  return withFallback(
+    state ? `--velvet-${name}-${state}` : `--velvet-${name}`,
+    fallback,
+  );
 }
 
-function velvetOnVar(name, state) {
+function velvetOnVar(name, state, fallback) {
   // todo: add validation here to see variable really exists
-  return state
-    ? `var(--velvet-on-${name}-${state})`
-    : `var(--velvet-on-${name})`;
+  return withFallback(
+    state ? `--velvet-on-${name}-${state}` : `--velvet-on-${name}`,
+    fallback,
+  );
+}
+
+function withFallback(property, fallback) {
+  return fallback ? `var(${property}, ${fallback})` : `var(${property})`;
 }
 
 // `variables: true` generates the default variant names; `variables: [...]`
