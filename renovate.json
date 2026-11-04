@@ -9,42 +9,90 @@
     ":pinAllExceptPeerDependencies"
   ],
   "separateMultipleMajor": true,
+  "labels": [
+    "internal"
+  ],
   "packageRules": [
     {
-      "matchManagers": ["npm"],
-      "matchDepTypes": ["devDependencies"],
-      "matchUpdateTypes": ["minor", "patch", "pin"],
+      "matchManagers": [
+        "npm"
+      ],
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin"
+      ],
       "automerge": true
     },
     {
-      "matchManagers": ["npm"],
-      "matchDepTypes": ["dependencies"],
-      "matchUpdateTypes": ["patch", "pin"],
+      "matchManagers": [
+        "npm"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "pin"
+      ],
       "automerge": true
     },
     {
       "automerge": true,
-      "matchUpdateTypes": ["patch", "minor", "pin"],
-      "matchPackageNames": ["pnpm", "node"],
+      "matchUpdateTypes": [
+        "patch",
+        "minor",
+        "pin"
+      ],
+      "matchPackageNames": [
+        "pnpm",
+        "node"
+      ],
       "rebaseWhen": "behind-base-branch"
     },
     {
-      "matchManagers": ["npm"],
+      "matchManagers": [
+        "npm"
+      ],
       "matchCurrentVersion": "<1.0.0",
       "automerge": false
     },
     {
       "automerge": false,
-      "matchPackageNames": ["ember-cli", "ember-data", "ember-source"],
-      "matchUpdateTypes": ["major", "minor"]
+      "matchPackageNames": [
+        "ember-cli",
+        "ember-data",
+        "ember-source"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ]
     },
     {
-      "matchDepTypes": ["action"],
+      "matchDepTypes": [
+        "action"
+      ],
       "pinDigests": false
     },
     {
-      "matchFileNames": ["velvet-thunder/package.json"],
-      "matchDepTypes": ["dependencies"],
+      "groupName": "stylelint",
+      "matchPackageNames": [
+        "stylelint",
+        "stylelint-*"
+      ],
+      "separateMultipleMajor": false
+    },
+    {
+      "matchFileNames": [
+        "velvet-thunder/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
       "rangeStrategy": "widen"
     }
   ],
