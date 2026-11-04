@@ -5,6 +5,7 @@
   --velvet-primary-border: theme("colors.teal.600");
   --velvet-primary-hover: theme("colors.teal.500");
   --velvet-primary-active: theme("colors.teal.700");
+  --velvet-primary-focus: theme("colors.teal.500 / 40%");
   --velvet-primary-disabled: theme("colors.teal.100");
   --velvet-primary-track: theme("colors.teal.100");
   --velvet-primary-subtle: theme("colors.teal.100");
@@ -15,6 +16,9 @@
   --velvet-secondary-hover: transparent;
   --velvet-secondary-active: theme("colors.teal.100");
   --velvet-secondary-disabled: theme("colors.teal.100");
+  --velvet-secondary-focus: theme("colors.teal.500 / 40%");
+  --velvet-secondary-border-disabled: theme("colors.teal.400");
+  --velvet-on-secondary-disabled: theme("colors.teal.400");
   --velvet-secondary-subtle: transparent;
   --velvet-on-secondary: theme("colors.teal.600");
   --velvet-on-secondary-subtle: theme("colors.teal.600");
@@ -23,6 +27,8 @@
   --velvet-ghost-hover: theme("colors.teal.500");
   --velvet-ghost-active: theme("colors.teal.600");
   --velvet-ghost-disabled: theme("colors.teal.100");
+  --velvet-ghost-focus: theme("colors.teal.500 / 40%");
+  --velvet-on-ghost-disabled: theme("colors.teal.400");
   --velvet-ghost-subtle: transparent;
   --velvet-on-ghost: theme("colors.teal.600");
   --velvet-on-ghost-subtle: theme("colors.teal.600");

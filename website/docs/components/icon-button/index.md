@@ -166,14 +166,17 @@ The following classes are applied by the component and can be targeted to fully 
 
 Pass `variants: [true]` (or `variants: [true, [...]]` to pick specific names) to generate the `@variant` classes above from CSS custom properties instead of writing your own CSS — see [Generating Colors from CSS Variables](../../styling.md#generating-colors-from-css-variables) for details.
 
-| Custom Property               | Used for                        |
-| ----------------------------- | ------------------------------- |
-| `--velvet-{variant}`          | Background color                |
-| `--velvet-on-{variant}`       | Text color                      |
-| `--velvet-{variant}-border`   | Border color                    |
-| `--velvet-{variant}-hover`    | Background color on `:hover`    |
-| `--velvet-{variant}-active`   | Background color on `:active`   |
-| `--velvet-{variant}-disabled` | Background color on `:disabled` |
+| Custom Property                      | Used for                                                                |
+| ------------------------------------ | ----------------------------------------------------------------------- |
+| `--velvet-{variant}`                 | Background color                                                        |
+| `--velvet-on-{variant}`              | Text color                                                              |
+| `--velvet-{variant}-border`          | Border color                                                            |
+| `--velvet-{variant}-hover`           | Background color on `:hover`                                            |
+| `--velvet-{variant}-active`          | Background color on `:active`                                           |
+| `--velvet-{variant}-focus`           | Outline color on `:focus-visible`                                       |
+| `--velvet-{variant}-disabled`        | Background color on `:disabled`                                         |
+| `--velvet-on-{variant}-disabled`     | Text color on `:disabled` (falls back to `--velvet-on-{variant}`)       |
+| `--velvet-{variant}-border-disabled` | Border color on `:disabled` (falls back to `--velvet-{variant}-border`) |
 
 ## Signature
 
