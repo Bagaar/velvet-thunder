@@ -1,33 +1,41 @@
-name: Release
+# For every push to the primary branch with .release-plan.json modified,
+# runs release-plan.
+
+name: Publish Stable
 
 on:
+  workflow_dispatch:
   push:
     branches:
-      - release
+      - main
+    paths:
+      - '.release-plan.json'
+
+concurrency:
+  group: publish-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  release:
+  publish:
+    name: "NPM Publish"
     runs-on: ubuntu-latest
     permissions:
       contents: write
       id-token: write
+      attestations: write
+
     steps:
-      - uses: actions/checkout@v7.0.1
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v5
         with:
-          fetch-depth: 0
-      - uses: pnpm/action-setup@v6.1.0
+          version: 9
+      - uses: actions/setup-node@v6
         with:
-          version: 10.34.9
-      - uses: actions/setup-node@v7.1.0
-        with:
-          node-version: 24.21.0
+          node-version: 24
+          registry-url: 'https://registry.npmjs.org'
           cache: pnpm
-      - name: Install Dependencies
-        run: pnpm install --frozen-lockfile
-      - name: git config
-        run: |
-          git config user.name "${GITHUB_ACTOR}"
-          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-      - name: Release
-        run: pnpm release
-        working-directory: velvet-thunder
+      - run: pnpm install --frozen-lockfile
+      - name: Publish to NPM
+        run: NPM_CONFIG_PROVENANCE=true pnpm release-plan publish
+        env:
+          GITHUB_AUTH: ${{ secrets.GITHUB_TOKEN }}
