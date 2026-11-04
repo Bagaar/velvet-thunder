@@ -22,7 +22,8 @@
   },
   "pnpm": {
     "overrides": {
-      "@glimmer/component": "2.1.1"
+      "@glimmer/component": "2.1.1",
+      "postcss": "8.5.30"
     }
   },
   "volta": {
