@@ -1,0 +1,8 @@
+{
+  "solution": {
+    "@bagaar/velvet-thunder": {
+      "oldVersion": "0.5.0"
+    }
+  },
+  "description": "## Release (2026-11-04)\n\n\n\n#### :house: Internal\n* [#664](https://github.com/Bagaar/velvet-thunder/pull/664) chore(deps-minor): update node.js from v24.21.0 to v24.22.2 ([@renovate[bot]](https://github.com/apps/renovate))\n\n#### Committers: 1\n- Renovate [Bot] ([@renovate](https://github.com/apps/renovate))\n"
+}

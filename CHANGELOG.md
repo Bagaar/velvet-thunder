@@ -1,5 +1,15 @@
 # Changelog
 
+## Release (2026-11-04)
+
+
+
+#### :house: Internal
+* [#664](https://github.com/Bagaar/velvet-thunder/pull/664) chore(deps-minor): update node.js from v24.21.0 to v24.22.2 ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 1
+- Renovate [Bot] ([@renovate](https://github.com/apps/renovate))
+
 ## [0.5.0](https://github.com/Bagaar/velvet-thunder/compare/0.4.0...0.5.0) (2026-11-04)
 
 ### Features
