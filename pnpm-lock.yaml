@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  '@ember/test-waiters': ^4.1.2
+  '@ember/test-waiters': 4.1.2
   '@glimmer/component': 2.2.1
   postcss: 8.5.30
 
@@ -26,7 +26,7 @@ importers:
         specifier: 2.1.8
         version: 2.1.8(prettier@3.9.10)
       release-plan:
-        specifier: ^0.18.0
+        specifier: 0.18.0
         version: 0.18.0
 
   test-app:
@@ -191,7 +191,7 @@ importers:
   velvet-thunder:
     dependencies:
       '@ember/test-waiters':
-        specifier: ^4.1.2
+        specifier: 4.1.2
         version: 4.1.2
       '@embroider/addon-shim':
         specifier: ^1.10.2
