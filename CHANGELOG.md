@@ -1,5 +1,29 @@
 # Changelog
 
+## Release (2026-11-05)
+
+* @bagaar/velvet-thunder 0.6.0 (minor)
+
+#### :rocket: Enhancement
+* `@bagaar/velvet-thunder`
+  * [#672](https://github.com/Bagaar/velvet-thunder/pull/672) feat: support Ember v7 ([@gvdp](https://github.com/gvdp))
+
+#### :house: Internal
+* Other
+  * [#681](https://github.com/Bagaar/velvet-thunder/pull/681) chore(deps-major): update pnpm/action-setup action to v6.1.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#677](https://github.com/Bagaar/velvet-thunder/pull/677) chore(deps-major): update dependency @embroider/test-setup from 3.0.3 to 4.0.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#673](https://github.com/Bagaar/velvet-thunder/pull/673) chore(deps): pin dependencies ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#657](https://github.com/Bagaar/velvet-thunder/pull/657) chore(deps-minor): update dependency @glimmer/component from 2.1.1 to 2.2.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#664](https://github.com/Bagaar/velvet-thunder/pull/664) chore(deps-minor): update node.js from v24.21.0 to v24.22.2 ([@renovate[bot]](https://github.com/apps/renovate))
+* `@bagaar/velvet-thunder`
+  * [#678](https://github.com/Bagaar/velvet-thunder/pull/678) chore(deps-major): update dependency eslint-plugin-ember from 12.7.5 to 13.9.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#676](https://github.com/Bagaar/velvet-thunder/pull/676) chore(deps-major): update dependency @embroider/addon-dev from 7.1.6 to 8.4.2 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#669](https://github.com/Bagaar/velvet-thunder/pull/669) chore(deps-major): update dependency @embroider/addon-dev from 4.3.1 to 7.1.6 ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 2
+- Renovate [Bot] ([@renovate](https://github.com/apps/renovate))
+- [@gvdp](https://github.com/gvdp)
+
 ## [0.5.0](https://github.com/Bagaar/velvet-thunder/compare/0.4.0...0.5.0) (2026-11-04)
 
 ### Features
