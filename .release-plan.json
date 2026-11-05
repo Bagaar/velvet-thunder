@@ -1,0 +1,22 @@
+{
+  "solution": {
+    "@bagaar/velvet-thunder": {
+      "impact": "minor",
+      "oldVersion": "0.5.0",
+      "newVersion": "0.6.0",
+      "tagName": "latest",
+      "constraints": [
+        {
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :house: Internal"
+        }
+      ],
+      "pkgJSONPath": "./velvet-thunder/package.json"
+    }
+  },
+  "description": "## Release (2026-11-05)\n\n* @bagaar/velvet-thunder 0.6.0 (minor)\n\n#### :rocket: Enhancement\n* `@bagaar/velvet-thunder`\n  * [#672](https://github.com/Bagaar/velvet-thunder/pull/672) feat: support Ember v7 ([@gvdp](https://github.com/gvdp))\n\n#### :house: Internal\n* Other\n  * [#681](https://github.com/Bagaar/velvet-thunder/pull/681) chore(deps-major): update pnpm/action-setup action to v6.1.1 ([@renovate[bot]](https://github.com/apps/renovate))\n  * [#677](https://github.com/Bagaar/velvet-thunder/pull/677) chore(deps-major): update dependency @embroider/test-setup from 3.0.3 to 4.0.0 ([@renovate[bot]](https://github.com/apps/renovate))\n  * [#673](https://github.com/Bagaar/velvet-thunder/pull/673) chore(deps): pin dependencies ([@renovate[bot]](https://github.com/apps/renovate))\n  * [#657](https://github.com/Bagaar/velvet-thunder/pull/657) chore(deps-minor): update dependency @glimmer/component from 2.1.1 to 2.2.1 ([@renovate[bot]](https://github.com/apps/renovate))\n  * [#664](https://github.com/Bagaar/velvet-thunder/pull/664) chore(deps-minor): update node.js from v24.21.0 to v24.22.2 ([@renovate[bot]](https://github.com/apps/renovate))\n* `@bagaar/velvet-thunder`\n  * [#678](https://github.com/Bagaar/velvet-thunder/pull/678) chore(deps-major): update dependency eslint-plugin-ember from 12.7.5 to 13.9.1 ([@renovate[bot]](https://github.com/apps/renovate))\n  * [#676](https://github.com/Bagaar/velvet-thunder/pull/676) chore(deps-major): update dependency @embroider/addon-dev from 7.1.6 to 8.4.2 ([@renovate[bot]](https://github.com/apps/renovate))\n  * [#669](https://github.com/Bagaar/velvet-thunder/pull/669) chore(deps-major): update dependency @embroider/addon-dev from 4.3.1 to 7.1.6 ([@renovate[bot]](https://github.com/apps/renovate))\n\n#### Committers: 2\n- Renovate [Bot] ([@renovate](https://github.com/apps/renovate))\n- [@gvdp](https://github.com/gvdp)\n"
+}
