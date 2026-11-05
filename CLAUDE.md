@@ -18,6 +18,8 @@ All commands are run from the monorepo root unless noted.
 pnpm start              # Start all three packages concurrently (addon watch + test-app on :4200 + website on :4202)
 ```
 
+`test-app` consumes the addon as a pnpm **injected** dependency (`dependenciesMeta` in `test-app/package.json`) so the addon's peers resolve against test-app's `ember-source` — required for the Ember 7 ember-try scenario. As a result, test-app does not pick up rebuilds from the addon's watch mode; run `pnpm build` to rebuild the addon and re-sync the injected copy (`syncInjectedDepsAfterScripts` in `pnpm-workspace.yaml`). The website links the addon normally and keeps live reloading.
+
 ### Building
 ```sh
 pnpm build              # Build all packages

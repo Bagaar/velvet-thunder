@@ -2,3 +2,8 @@ packages:
   - 'velvet-thunder'
   - 'test-app'
   - 'website'
+
+# test-app gets velvet-thunder as an injected copy (so its peers resolve against
+# test-app's ember-source), which needs re-syncing whenever the addon is rebuilt.
+syncInjectedDepsAfterScripts:
+  - build

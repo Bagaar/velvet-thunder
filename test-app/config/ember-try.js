@@ -74,6 +74,14 @@ module.exports = async function () {
         },
       },
       {
+        name: 'ember-7.4',
+        npm: {
+          devDependencies: {
+            'ember-source': '~7.4.0',
+          },
+        },
+      },
+      {
         name: 'ember-release',
         allowedToFail: true,
         npm: {
