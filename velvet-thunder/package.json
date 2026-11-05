@@ -87,7 +87,7 @@
     "@babel/plugin-transform-typescript": "7.29.9",
     "@babel/runtime": "7.29.10",
     "@ember/test-helpers": "5.7.0",
-    "@embroider/addon-dev": "4.3.1",
+    "@embroider/addon-dev": "7.1.6",
     "@glint/core": "1.5.2",
     "@glint/environment-ember-loose": "1.5.2",
     "@glint/environment-ember-template-imports": "1.5.2",
