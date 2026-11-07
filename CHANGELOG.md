@@ -1,5 +1,20 @@
 # Changelog
 
+## Release (2026-11-07)
+
+* @bagaar/velvet-thunder 0.6.1 (patch)
+
+#### :house: Internal
+* `@bagaar/velvet-thunder`
+  * [#689](https://github.com/Bagaar/velvet-thunder/pull/689) chore(deps-patch): update dependency @glint/template from 1.11.0 to 1.11.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#684](https://github.com/Bagaar/velvet-thunder/pull/684) chore(deps-minor): update dependency rollup from 4.66.0 to 4.67.4 ([@renovate[bot]](https://github.com/apps/renovate))
+* Other
+  * [#674](https://github.com/Bagaar/velvet-thunder/pull/674) chore(deps-major): update actions/checkout action from v6.1.0 to v7.0.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#675](https://github.com/Bagaar/velvet-thunder/pull/675) chore(deps-major): update actions/setup-node action from v6.5.0 to v7.1.0 ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 1
+- Renovate [Bot] ([@renovate](https://github.com/apps/renovate))
+
 ## Release (2026-11-05)
 
 * @bagaar/velvet-thunder 0.6.0 (minor)
