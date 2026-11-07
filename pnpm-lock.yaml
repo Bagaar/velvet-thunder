@@ -215,8 +215,8 @@ importers:
         specifier: '>= 0.5.0'
         version: 0.5.11(tailwindcss@3.4.19(yaml@2.8.3))
       decorator-transforms:
-        specifier: ^1.0.1
-        version: 1.2.1(@babel/core@7.29.7)
+        specifier: ^1.0.1 || ^2.0.0
+        version: 2.3.1(@babel/core@7.29.7)
       ember-modifier:
         specifier: ^4.1.0
         version: 4.3.0(@babel/core@7.29.7)
@@ -785,12 +785,6 @@ packages:
     resolution: {integrity: sha512-0QZ8qP/3RLDVBwBFoWAwCtgcDZJVwA5LUJRZU8x2YFfKNuFq161wK3cuGrALu5yiPu+vzwTAg/sMWVNeWeNyaw==}
     engines: {node: '>=6.9.0'}
     deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-property-in-object instead.
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-
-  '@babel/plugin-syntax-decorators@7.28.6':
-    resolution: {integrity: sha512-71EYI0ONURHJBL4rSFXnITXqXrrY8q4P0q006DPfN+Rk+ASM+++IBXem/ruokgBZR8YNEWZ8R6B+rCb8VcUTqA==}
-    engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
 
@@ -9211,7 +9205,7 @@ snapshots:
       '@babel/core': 7.29.7
       '@babel/helper-create-class-features-plugin': 7.29.7(@babel/core@7.29.7)
       '@babel/helper-plugin-utils': 7.29.7
-      '@babel/plugin-syntax-decorators': 7.28.6(@babel/core@7.29.7)
+      '@babel/plugin-syntax-decorators': 7.29.7(@babel/core@7.29.7)
     transitivePeerDependencies:
       - supports-color
 
@@ -9245,11 +9239,6 @@ snapshots:
       '@babel/plugin-syntax-private-property-in-object': 7.14.5(@babel/core@7.29.7)
     transitivePeerDependencies:
       - supports-color
-
-  '@babel/plugin-syntax-decorators@7.28.6(@babel/core@7.29.7)':
-    dependencies:
-      '@babel/core': 7.29.7
-      '@babel/helper-plugin-utils': 7.29.7
 
   '@babel/plugin-syntax-decorators@7.29.7(@babel/core@7.29.7)':
     dependencies:
@@ -12400,7 +12389,7 @@ snapshots:
   babel-remove-types@1.1.0:
     dependencies:
       '@babel/core': 7.29.7
-      '@babel/plugin-syntax-decorators': 7.28.6(@babel/core@7.29.7)
+      '@babel/plugin-syntax-decorators': 7.29.7(@babel/core@7.29.7)
       '@babel/plugin-transform-typescript': 7.29.9(@babel/core@7.29.7)
       prettier: 2.8.8
     transitivePeerDependencies:
@@ -13442,7 +13431,7 @@ snapshots:
 
   decorator-transforms@1.2.1(@babel/core@7.29.7):
     dependencies:
-      '@babel/plugin-syntax-decorators': 7.28.6(@babel/core@7.29.7)
+      '@babel/plugin-syntax-decorators': 7.29.7(@babel/core@7.29.7)
       babel-import-util: 2.1.1
     transitivePeerDependencies:
       - '@babel/core'
