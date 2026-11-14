@@ -39,7 +39,7 @@ importers:
         version: 7.29.13
       '@bagaar/velvet-thunder':
         specifier: workspace:*
-        version: file:velvet-thunder(@babel/core@7.29.13)(@ember/test-helpers@5.7.0(@babel/core@7.29.13))(@glint/environment-ember-loose@1.5.2(@glimmer/component@2.2.1)(@glint/template@1.11.1)(ember-cli-htmlbars@7.0.1(@babel/core@7.29.13)(ember-source@5.12.0(@glimmer/component@2.2.1)(@glint/template@1.11.1)(rsvp@4.8.5)(webpack@5.112.2(postcss@8.5.32))))(ember-modifier@4.3.0(@babel/core@7.29.13)))(@glint/template@1.11.1)(@tailwindcss/forms@0.5.11(tailwindcss@3.4.19(yaml@2.8.3)))(ember-link@3.5.0(@babel/core@7.29.13)(@ember/test-helpers@5.7.0(@babel/core@7.29.13))(@glint/template@1.11.1))(ember-source@5.12.0(@glimmer/component@2.2.1)(@glint/template@1.11.1)(rsvp@4.8.5)(webpack@5.112.2(postcss@8.5.32)))(tailwindcss@3.4.19(yaml@2.8.3))
+        version: file:velvet-thunder(@babel/core@7.29.13)(@ember/test-helpers@5.8.0(@babel/core@7.29.13))(@glint/environment-ember-loose@1.5.2(@glimmer/component@2.2.1)(@glint/template@1.11.1)(ember-cli-htmlbars@7.0.1(@babel/core@7.29.13)(ember-source@5.12.0(@glimmer/component@2.2.1)(@glint/template@1.11.1)(rsvp@4.8.5)(webpack@5.112.2(postcss@8.5.32))))(ember-modifier@4.3.0(@babel/core@7.29.13)))(@glint/template@1.11.1)(@tailwindcss/forms@0.5.11(tailwindcss@3.4.19(yaml@2.8.3)))(ember-link@3.5.0(@babel/core@7.29.13)(@ember/test-helpers@5.8.0(@babel/core@7.29.13))(@glint/template@1.11.1))(ember-source@5.12.0(@glimmer/component@2.2.1)(@glint/template@1.11.1)(rsvp@4.8.5)(webpack@5.112.2(postcss@8.5.32)))(tailwindcss@3.4.19(yaml@2.8.3))
       '@ember/optional-features':
         specifier: 3.0.0
         version: 3.0.0(@types/node@25.6.0)
@@ -47,8 +47,8 @@ importers:
         specifier: 4.0.1
         version: 4.0.1
       '@ember/test-helpers':
-        specifier: 5.7.0
-        version: 5.7.0(@babel/core@7.29.13)
+        specifier: 5.8.0
+        version: 5.8.0(@babel/core@7.29.13)
       '@embroider/test-setup':
         specifier: 4.0.0
         version: 4.0.0(@embroider/core@3.5.9(@glint/template@1.11.1))
@@ -123,7 +123,7 @@ importers:
         version: 8.1.2(encoding@0.1.14)
       ember-link:
         specifier: 3.5.0
-        version: 3.5.0(@babel/core@7.29.13)(@ember/test-helpers@5.7.0(@babel/core@7.29.13))(@glint/template@1.11.1)
+        version: 3.5.0(@babel/core@7.29.13)(@ember/test-helpers@5.8.0(@babel/core@7.29.13))(@glint/template@1.11.1)
       ember-load-initializers:
         specifier: 3.0.1
         version: 3.0.1(ember-source@5.12.0(@glimmer/component@2.2.1)(@glint/template@1.11.1)(rsvp@4.8.5)(webpack@5.112.2(postcss@8.5.32)))
@@ -135,7 +135,7 @@ importers:
         version: 9.0.3
       ember-qunit:
         specifier: 9.2.0
-        version: 9.2.0(@ember/test-helpers@5.7.0(@babel/core@7.29.13))(qunit@3.0.0)
+        version: 9.2.0(@ember/test-helpers@5.8.0(@babel/core@7.29.13))(qunit@3.0.0)
       ember-resolver:
         specifier: 13.2.0
         version: 13.2.0
@@ -237,8 +237,8 @@ importers:
         specifier: 7.29.13
         version: 7.29.13
       '@ember/test-helpers':
-        specifier: 5.7.0
-        version: 5.7.0(@babel/core@7.29.13)
+        specifier: 5.8.0
+        version: 5.8.0(@babel/core@7.29.13)
       '@embroider/addon-dev':
         specifier: 8.4.2
         version: 8.4.2(@glint/template@1.11.1)(rollup@4.67.4)
@@ -280,7 +280,7 @@ importers:
         version: 0.16.1(@babel/eslint-parser@7.29.7(@babel/core@7.29.13)(eslint@8.57.1))(@typescript-eslint/parser@8.72.2(eslint@8.57.1)(typescript@6.0.3))(typescript@6.0.3)
       ember-link:
         specifier: 3.5.0
-        version: 3.5.0(@babel/core@7.29.13)(@ember/test-helpers@5.7.0(@babel/core@7.29.13))(@glint/template@1.11.1)
+        version: 3.5.0(@babel/core@7.29.13)(@ember/test-helpers@5.8.0(@babel/core@7.29.13))(@glint/template@1.11.1)
       ember-source:
         specifier: 5.12.0
         version: 5.12.0(@glimmer/component@2.2.1)(@glint/template@1.11.1)(rsvp@4.8.5)(webpack@5.112.2(postcss@8.5.32))
@@ -345,8 +345,8 @@ importers:
         specifier: 4.0.1
         version: 4.0.1
       '@ember/test-helpers':
-        specifier: 5.7.0
-        version: 5.7.0(@babel/core@7.29.13)
+        specifier: 5.8.0
+        version: 5.8.0(@babel/core@7.29.13)
       '@glimmer/component':
         specifier: 2.2.1
         version: 2.2.1
@@ -424,7 +424,7 @@ importers:
         version: 8.1.2(encoding@0.1.14)
       ember-link:
         specifier: 3.5.0
-        version: 3.5.0(@babel/core@7.29.13)(@ember/test-helpers@5.7.0(@babel/core@7.29.13))(@glint/template@1.11.1)
+        version: 3.5.0(@babel/core@7.29.13)(@ember/test-helpers@5.8.0(@babel/core@7.29.13))(@glint/template@1.11.1)
       ember-load-initializers:
         specifier: 3.0.1
         version: 3.0.1(ember-source@5.12.0(@glimmer/component@2.2.1)(@glint/template@1.11.1)(rsvp@4.8.5)(webpack@5.112.2(postcss@8.5.32)))
@@ -436,7 +436,7 @@ importers:
         version: 9.0.3
       ember-qunit:
         specifier: 9.2.0
-        version: 9.2.0(@ember/test-helpers@5.7.0(@babel/core@7.29.13))(qunit@3.0.0)
+        version: 9.2.0(@ember/test-helpers@5.8.0(@babel/core@7.29.13))(qunit@3.0.0)
       ember-resolver:
         specifier: 13.2.0
         version: 13.2.0
@@ -1728,8 +1728,8 @@ packages:
   '@ember/string@4.0.1':
     resolution: {integrity: sha512-VWeng8BSWrIsdPfffOQt/bKwNKJL7+37gPFh/6iZZ9bke+S83kKqkS30poo4bTGfRcMnvAE0ie7txom+iDu81Q==}
 
-  '@ember/test-helpers@5.7.0':
-    resolution: {integrity: sha512-h77kAJpFQ9fffuLc9+XhoYsk7URDLd7jTLnq7Yk9gGvQ41JupxrGMHoRjyboytSbwngSy+0yXyMhNYfH8ng4xg==}
+  '@ember/test-helpers@5.8.0':
+    resolution: {integrity: sha512-JvQr0F8f5YfhshcG9gpOhZyuCPHFGMnWYaMH0rPf33W2R+CocSdp/aHr7D5wUg9Tl7aBiMJW6yz80MpTPVpTWQ==}
 
   '@ember/test-waiters@4.1.2':
     resolution: {integrity: sha512-zJwFaHLHjJn6mKoXYVM1SEyMT+U1JpaaSKg3JBmxHJwiIoJRI5djJ/CE33Z7N09mk5JfXd2xdhbd9LBWdlvAzg==}
@@ -10049,7 +10049,7 @@ snapshots:
       '@babel/helper-string-parser': 7.29.14
       '@babel/helper-validator-identifier': 7.29.7
 
-  '@bagaar/velvet-thunder@file:velvet-thunder(@babel/core@7.29.13)(@ember/test-helpers@5.7.0(@babel/core@7.29.13))(@glint/environment-ember-loose@1.5.2(@glimmer/component@2.2.1)(@glint/template@1.11.1)(ember-cli-htmlbars@7.0.1(@babel/core@7.29.13)(ember-source@5.12.0(@glimmer/component@2.2.1)(@glint/template@1.11.1)(rsvp@4.8.5)(webpack@5.112.2(postcss@8.5.32))))(ember-modifier@4.3.0(@babel/core@7.29.13)))(@glint/template@1.11.1)(@tailwindcss/forms@0.5.11(tailwindcss@3.4.19(yaml@2.8.3)))(ember-link@3.5.0(@babel/core@7.29.13)(@ember/test-helpers@5.7.0(@babel/core@7.29.13))(@glint/template@1.11.1))(ember-source@5.12.0(@glimmer/component@2.2.1)(@glint/template@1.11.1)(rsvp@4.8.5)(webpack@5.112.2(postcss@8.5.32)))(tailwindcss@3.4.19(yaml@2.8.3))':
+  '@bagaar/velvet-thunder@file:velvet-thunder(@babel/core@7.29.13)(@ember/test-helpers@5.8.0(@babel/core@7.29.13))(@glint/environment-ember-loose@1.5.2(@glimmer/component@2.2.1)(@glint/template@1.11.1)(ember-cli-htmlbars@7.0.1(@babel/core@7.29.13)(ember-source@5.12.0(@glimmer/component@2.2.1)(@glint/template@1.11.1)(rsvp@4.8.5)(webpack@5.112.2(postcss@8.5.32))))(ember-modifier@4.3.0(@babel/core@7.29.13)))(@glint/template@1.11.1)(@tailwindcss/forms@0.5.11(tailwindcss@3.4.19(yaml@2.8.3)))(ember-link@3.5.0(@babel/core@7.29.13)(@ember/test-helpers@5.8.0(@babel/core@7.29.13))(@glint/template@1.11.1))(ember-source@5.12.0(@glimmer/component@2.2.1)(@glint/template@1.11.1)(rsvp@4.8.5)(webpack@5.112.2(postcss@8.5.32)))(tailwindcss@3.4.19(yaml@2.8.3))':
     dependencies:
       '@ember/test-waiters': 4.1.2
       '@embroider/addon-shim': 1.10.2
@@ -10063,10 +10063,10 @@ snapshots:
       ember-source: 5.12.0(@glimmer/component@2.2.1)(@glint/template@1.11.1)(rsvp@4.8.5)(webpack@5.112.2(postcss@8.5.32))
       ember-truth-helpers: 5.0.0
     optionalDependencies:
-      '@ember/test-helpers': 5.7.0(@babel/core@7.29.13)
+      '@ember/test-helpers': 5.8.0(@babel/core@7.29.13)
       '@glint/template': 1.11.1
       '@tailwindcss/forms': 0.5.11(tailwindcss@3.4.19(yaml@2.8.3))
-      ember-link: 3.5.0(@babel/core@7.29.13)(@ember/test-helpers@5.7.0(@babel/core@7.29.13))(@glint/template@1.11.1)
+      ember-link: 3.5.0(@babel/core@7.29.13)(@ember/test-helpers@5.8.0(@babel/core@7.29.13))(@glint/template@1.11.1)
       tailwindcss: 3.4.19(yaml@2.8.3)
     transitivePeerDependencies:
       - '@babel/core'
@@ -10264,7 +10264,7 @@ snapshots:
 
   '@ember/string@4.0.1': {}
 
-  '@ember/test-helpers@5.7.0(@babel/core@7.29.13)':
+  '@ember/test-helpers@5.8.0(@babel/core@7.29.13)':
     dependencies:
       '@ember/test-waiters': 4.1.2
       '@embroider/addon-shim': 1.10.2
@@ -13651,9 +13651,9 @@ snapshots:
       - '@glint/template'
       - supports-color
 
-  ember-link@3.5.0(@babel/core@7.29.13)(@ember/test-helpers@5.7.0(@babel/core@7.29.13))(@glint/template@1.11.1):
+  ember-link@3.5.0(@babel/core@7.29.13)(@ember/test-helpers@5.8.0(@babel/core@7.29.13))(@glint/template@1.11.1):
     dependencies:
-      '@ember/test-helpers': 5.7.0(@babel/core@7.29.13)
+      '@ember/test-helpers': 5.8.0(@babel/core@7.29.13)
       '@embroider/addon-shim': 1.10.2
       '@embroider/macros': 1.20.2(@babel/core@7.29.13)(@glint/template@1.11.1)
       decorator-transforms: 2.3.1(@babel/core@7.29.13)
@@ -13681,9 +13681,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  ember-qunit@9.2.0(@ember/test-helpers@5.7.0(@babel/core@7.29.13))(qunit@3.0.0):
+  ember-qunit@9.2.0(@ember/test-helpers@5.8.0(@babel/core@7.29.13))(qunit@3.0.0):
     dependencies:
-      '@ember/test-helpers': 5.7.0(@babel/core@7.29.13)
+      '@ember/test-helpers': 5.8.0(@babel/core@7.29.13)
       '@embroider/addon-shim': 1.10.2
       qunit: 3.0.0
       qunit-theme-ember: 1.0.0
