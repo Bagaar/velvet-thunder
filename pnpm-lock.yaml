@@ -240,8 +240,8 @@ importers:
         specifier: 5.8.0
         version: 5.8.0(@babel/core@7.29.13)
       '@embroider/addon-dev':
-        specifier: 8.4.2
-        version: 8.4.2(@glint/template@1.11.1)(rollup@4.67.4)
+        specifier: 8.5.0
+        version: 8.5.0(@glint/template@1.11.1)(rollup@4.67.4)
       '@glint/core':
         specifier: 1.5.2
         version: 1.5.2(typescript@6.0.3)
@@ -1734,8 +1734,8 @@ packages:
   '@ember/test-waiters@4.1.2':
     resolution: {integrity: sha512-zJwFaHLHjJn6mKoXYVM1SEyMT+U1JpaaSKg3JBmxHJwiIoJRI5djJ/CE33Z7N09mk5JfXd2xdhbd9LBWdlvAzg==}
 
-  '@embroider/addon-dev@8.4.2':
-    resolution: {integrity: sha512-1fDiIrXenU3VxcWE7uu7YijLuzJOdFAguoVqZSgkxC/r0otg4bLHhNdgpsXI+6OxNcuFdjYuI/zTnSYZgu7xMQ==}
+  '@embroider/addon-dev@8.5.0':
+    resolution: {integrity: sha512-zr851qMWNZC5C0l31nic3R/yxLZAywAl98nEv/cup2gR3gSfREBkYsmF9JzRVWlrouslLMXa3oHL99ueQ87KGQ==}
     engines: {node: 12.* || 14.* || >= 16}
     hasBin: true
     peerDependencies:
@@ -6122,6 +6122,9 @@ packages:
   magic-string@0.25.9:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==}
 
+  magic-string@0.30.21:
+    resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
+
   make-dir@2.1.0:
     resolution: {integrity: sha512-LS9X+dc8KLxXCb8dni79fLIIUA5VyZoyjSMCwTluaXA0o27cCK0bhXkpgw+sTXVpPy/lSO57ilRixqk0vDmtRA==}
     engines: {node: '>=6'}
@@ -10281,13 +10284,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@embroider/addon-dev@8.4.2(@glint/template@1.11.1)(rollup@4.67.4)':
+  '@embroider/addon-dev@8.5.0(@glint/template@1.11.1)(rollup@4.67.4)':
     dependencies:
       '@embroider/core': 4.6.10(@glint/template@1.11.1)
       '@rollup/pluginutils': 5.3.0(rollup@4.67.4)
       content-tag: 4.2.0
       execa: 5.1.1
       fs-extra: 10.1.0
+      magic-string: 0.30.21
       minimatch: 3.1.5
       package-up: 5.0.0
       rollup-plugin-copy-assets: 2.0.3(rollup@4.67.4)
@@ -11296,7 +11300,7 @@ snapshots:
 
   '@rollup/pluginutils@5.3.0(rollup@4.67.4)':
     dependencies:
-      '@types/estree': 1.0.9
+      '@types/estree': 1.0.10
       estree-walker: 2.0.2
       picomatch: 4.0.4
     optionalDependencies:
@@ -11439,7 +11443,7 @@ snapshots:
 
   '@types/acorn@4.0.6':
     dependencies:
-      '@types/estree': 1.0.9
+      '@types/estree': 1.0.10
 
   '@types/cors@2.8.19':
     dependencies:
@@ -11447,7 +11451,7 @@ snapshots:
 
   '@types/eslint@8.56.12':
     dependencies:
-      '@types/estree': 1.0.9
+      '@types/estree': 1.0.10
       '@types/json-schema': 7.0.15
 
   '@types/esrecurse@4.3.1': {}
@@ -14034,7 +14038,7 @@ snapshots:
   eslint-scope@9.1.2:
     dependencies:
       '@types/esrecurse': 4.3.1
-      '@types/estree': 1.0.9
+      '@types/estree': 1.0.10
       esrecurse: 4.3.0
       estraverse: 5.3.0
 
@@ -15277,7 +15281,7 @@ snapshots:
 
   is-reference@1.2.1:
     dependencies:
-      '@types/estree': 1.0.9
+      '@types/estree': 1.0.10
 
   is-regex@1.2.1:
     dependencies:
@@ -15689,6 +15693,10 @@ snapshots:
   magic-string@0.25.9:
     dependencies:
       sourcemap-codec: 1.4.8
+
+  magic-string@0.30.21:
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.5.5
 
   make-dir@2.1.0:
     dependencies:
