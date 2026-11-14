@@ -1,5 +1,32 @@
 # Changelog
 
+## Release (2026-11-14)
+
+* @bagaar/velvet-thunder 0.6.1 (patch)
+
+#### :house: Internal
+* Other
+  * [#701](https://github.com/Bagaar/velvet-thunder/pull/701) chore(deps-minor): update dependency ember-page-title from 9.0.3 to 9.1.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#691](https://github.com/Bagaar/velvet-thunder/pull/691) chore(deps-patch): update dependency postcss from 8.5.30 to 8.5.32 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#687](https://github.com/Bagaar/velvet-thunder/pull/687) chore(deps-major): update dependency postcss-nested from 8.0.1 to 9.0.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#688](https://github.com/Bagaar/velvet-thunder/pull/688) chore(deps-major): update dependency qunit from 2.26.0 to 3.0.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#683](https://github.com/Bagaar/velvet-thunder/pull/683) chore(deps-minor): update dependency release-plan from 0.18.0 to 0.20.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#674](https://github.com/Bagaar/velvet-thunder/pull/674) chore(deps-major): update actions/checkout action from v6.1.0 to v7.0.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#675](https://github.com/Bagaar/velvet-thunder/pull/675) chore(deps-major): update actions/setup-node action from v6.5.0 to v7.1.0 ([@renovate[bot]](https://github.com/apps/renovate))
+* `@bagaar/velvet-thunder`
+  * [#702](https://github.com/Bagaar/velvet-thunder/pull/702) chore(deps-minor): update dependency prettier from 3.9.10 to 3.10.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#700](https://github.com/Bagaar/velvet-thunder/pull/700) chore(deps-minor): update dependency @embroider/addon-dev from 8.4.2 to 8.5.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#699](https://github.com/Bagaar/velvet-thunder/pull/699) chore(deps-minor): update dependency @ember/test-helpers from 5.7.0 to 5.8.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#698](https://github.com/Bagaar/velvet-thunder/pull/698) chore(deps-patch): update typescript-eslint monorepo from 8.72.1 to 8.72.2 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#695](https://github.com/Bagaar/velvet-thunder/pull/695) chore(deps-patch): update dependency release-it from 21.1.1 to 21.1.2 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#694](https://github.com/Bagaar/velvet-thunder/pull/694) chore(deps-patch): update dependency concurrently from 10.0.6 to 10.0.7 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#693](https://github.com/Bagaar/velvet-thunder/pull/693) chore(deps-patch): update babel monorepo from 7.29.7 to 7.29.13 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#689](https://github.com/Bagaar/velvet-thunder/pull/689) chore(deps-patch): update dependency @glint/template from 1.11.0 to 1.11.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#684](https://github.com/Bagaar/velvet-thunder/pull/684) chore(deps-minor): update dependency rollup from 4.66.0 to 4.67.4 ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 1
+- Renovate [Bot] ([@renovate](https://github.com/apps/renovate))
+
 ## Release (2026-11-05)
 
 * @bagaar/velvet-thunder 0.6.0 (minor)
