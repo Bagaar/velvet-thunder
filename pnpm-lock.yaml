@@ -20,11 +20,11 @@ importers:
         specifier: 10.0.7
         version: 10.0.7
       prettier:
-        specifier: 3.9.10
-        version: 3.9.10
+        specifier: 3.10.0
+        version: 3.10.0
       prettier-plugin-ember-template-tag:
         specifier: 2.1.8
-        version: 2.1.8(prettier@3.9.10)
+        version: 2.1.8(prettier@3.10.0)
       release-plan:
         specifier: 0.20.1
         version: 0.20.1
@@ -167,8 +167,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0
       prettier:
-        specifier: 3.9.10
-        version: 3.9.10
+        specifier: 3.10.0
+        version: 3.10.0
       qunit:
         specifier: 3.0.0
         version: 3.0.0
@@ -300,11 +300,11 @@ importers:
         specifier: 1.1.5
         version: 1.1.5(@babel/preset-env@7.29.7(@babel/core@7.29.13))
       prettier:
-        specifier: 3.9.10
-        version: 3.9.10
+        specifier: 3.10.0
+        version: 3.10.0
       prettier-plugin-ember-template-tag:
         specifier: 2.1.8
-        version: 2.1.8(prettier@3.9.10)
+        version: 2.1.8(prettier@3.10.0)
       release-it:
         specifier: 21.1.2
         version: 21.1.2(@types/node@25.6.0)
@@ -471,8 +471,8 @@ importers:
         specifier: 9.0.1
         version: 9.0.1(postcss@8.5.32)
       prettier:
-        specifier: 3.9.10
-        version: 3.9.10
+        specifier: 3.10.0
+        version: 3.10.0
       qunit:
         specifier: 3.0.0
         version: 3.0.0
@@ -7072,8 +7072,8 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
-  prettier@3.9.10:
-    resolution: {integrity: sha512-skGHTH1Yb9QvaTC4hWnRTzEYtCpApF0UMBPz+t/0ZPzP8ihefo/btKd+QA7pUE0fEwA1SbS/NmhyEcstdXOIdA==}
+  prettier@3.10.0:
+    resolution: {integrity: sha512-mBi4765LgjO1PFjlEs7pUeK0nb1bw71c+N4/ItfeUWNdY5cV2pRKaFpbbFRYmDJMO+5ZwzGxHRqHxFZna7iv5w==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -16680,17 +16680,17 @@ snapshots:
 
   prepend-http@2.0.0: {}
 
-  prettier-plugin-ember-template-tag@2.1.8(prettier@3.9.10):
+  prettier-plugin-ember-template-tag@2.1.8(prettier@3.10.0):
     dependencies:
       '@babel/traverse': 7.29.10
       content-tag: 4.2.0
-      prettier: 3.9.10
+      prettier: 3.10.0
     transitivePeerDependencies:
       - supports-color
 
   prettier@2.8.8: {}
 
-  prettier@3.9.10: {}
+  prettier@3.10.0: {}
 
   pretty-hrtime@1.0.3: {}
 
