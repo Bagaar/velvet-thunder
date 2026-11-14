@@ -36,10 +36,10 @@
     "test": "pnpm tailwind:build && ember test --test-port=0"
   },
   "devDependencies": {
-    "@babel/core": "7.29.7",
-    "@babel/generator": "7.29.12",
-    "@babel/parser": "7.29.12",
-    "@babel/traverse": "7.29.12",
+    "@babel/core": "7.29.13",
+    "@babel/generator": "7.29.13",
+    "@babel/parser": "7.29.13",
+    "@babel/traverse": "7.29.13",
     "@bagaar/velvet-thunder": "workspace:*",
     "@docfy/ember": "0.8.5",
     "@ember/optional-features": "3.0.0",
