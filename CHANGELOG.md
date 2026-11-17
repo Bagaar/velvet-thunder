@@ -2,6 +2,27 @@
 
 ## Release (2026-11-17)
 
+* @bagaar/velvet-thunder 0.6.2 (patch)
+
+#### :house: Internal
+* `@bagaar/velvet-thunder`
+  * [#713](https://github.com/Bagaar/velvet-thunder/pull/713) chore(deps-dev): update dependency ember-source from 5.12.0 to 6.12.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#716](https://github.com/Bagaar/velvet-thunder/pull/716) chore(deps): pin dependencies ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#685](https://github.com/Bagaar/velvet-thunder/pull/685) chore(deps-major): update dependency decorator-transforms from 1.2.1 to 2.4.0 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#708](https://github.com/Bagaar/velvet-thunder/pull/708) chore: upgrade to Eslint v10 ([@gvdp](https://github.com/gvdp))
+* Other
+  * [#715](https://github.com/Bagaar/velvet-thunder/pull/715) chore(deps-dev): update stylelint (major) ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#712](https://github.com/Bagaar/velvet-thunder/pull/712) chore(deps-major): update node.js from v24.22.3 to v26.13.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#680](https://github.com/Bagaar/velvet-thunder/pull/680) chore(deps-major): update pnpm to v11.28.12 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#679](https://github.com/Bagaar/velvet-thunder/pull/679) chore(deps-major): update dependency node from 24.22.3 to 26.13.1 ([@renovate[bot]](https://github.com/apps/renovate))
+  * [#704](https://github.com/Bagaar/velvet-thunder/pull/704) chore(deps-dev): update dependency content-tag from 3.1.3 to 4.2.1 ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 2
+- Renovate [Bot] ([@renovate](https://github.com/apps/renovate))
+- [@gvdp](https://github.com/gvdp)
+
+## Release (2026-11-17)
+
 * @bagaar/velvet-thunder 0.6.1 (patch)
 
 #### :house: Internal
