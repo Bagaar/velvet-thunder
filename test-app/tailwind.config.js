@@ -1,8 +1,6 @@
 'use strict';
 
 const tailwindFormsPlugin = require('@tailwindcss/forms');
-// TODO: False positive?
-// eslint-disable-next-line n/no-missing-require
 const velvetThunder = require('@bagaar/velvet-thunder/tailwind');
 
 module.exports = {
