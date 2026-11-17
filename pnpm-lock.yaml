@@ -200,16 +200,16 @@ importers:
         specifier: 4.1.2
         version: 4.1.2
       '@embroider/addon-shim':
-        specifier: ^1.10.2
+        specifier: 1.11.0
         version: 1.11.0
       '@embroider/util':
-        specifier: ^1.12.1
+        specifier: 1.13.5
         version: 1.13.5(@babel/core@7.29.13(supports-color@10.2.2))(@glint/environment-ember-loose@1.5.2(@glimmer/component@2.2.1)(@glint/template@1.11.1)(ember-cli-htmlbars@6.3.0(supports-color@10.2.2))(ember-modifier@4.3.0(@babel/core@7.29.13(supports-color@10.2.2))))(@glint/template@1.11.1)(ember-source@5.12.0(@glimmer/component@2.2.1)(@glint/template@1.11.1)(rsvp@4.8.5)(supports-color@10.2.2)(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3)))(supports-color@10.2.2)
       '@floating-ui/dom':
-        specifier: ^1.5.3
+        specifier: 1.8.0
         version: 1.8.0
       '@formkit/auto-animate':
-        specifier: ^0.8.1 || ^0.10.0
+        specifier: 0.10.2
         version: 0.10.2
       '@glimmer/component':
         specifier: 2.2.1
@@ -221,13 +221,13 @@ importers:
         specifier: '>= 0.5.0'
         version: 0.5.11(tailwindcss@3.4.19(yaml@2.9.1))
       decorator-transforms:
-        specifier: ^2.0.0
+        specifier: 2.4.0
         version: 2.4.0(@babel/core@7.29.13(supports-color@10.2.2))
       ember-modifier:
-        specifier: ^4.1.0
+        specifier: 4.3.0
         version: 4.3.0(@babel/core@7.29.13(supports-color@10.2.2))
       ember-truth-helpers:
-        specifier: ^5.0.0
+        specifier: 5.0.0
         version: 5.0.0
       tailwindcss:
         specifier: '>= 3.4.0'
