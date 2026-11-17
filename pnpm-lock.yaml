@@ -221,8 +221,8 @@ importers:
         specifier: '>= 0.5.0'
         version: 0.5.11(tailwindcss@3.4.19(yaml@2.9.1))
       decorator-transforms:
-        specifier: ^1.0.1
-        version: 1.2.1(@babel/core@7.29.13(supports-color@10.2.2))
+        specifier: ^2.0.0
+        version: 2.4.0(@babel/core@7.29.13(supports-color@10.2.2))
       ember-modifier:
         specifier: ^4.1.0
         version: 4.3.0(@babel/core@7.29.13(supports-color@10.2.2))
@@ -3696,9 +3696,6 @@ packages:
   decompress-response@3.3.0:
     resolution: {integrity: sha512-BzRPQuY1ip+qDonAOz42gRm/pg9F768C+npV/4JOsxRC2sq+Rlk+Q4ZCAsOhnIaMrgarILY+RMUIvMmmX1qAEA==}
     engines: {node: '>=4'}
-
-  decorator-transforms@1.2.1:
-    resolution: {integrity: sha512-UUtmyfdlHvYoX3VSG1w5rbvBQ2r5TX1JsE4hmKU9snleFymadA3VACjl6SRfi9YgBCSjBbfQvR1bs9PRW9yBKw==}
 
   decorator-transforms@2.4.0:
     resolution: {integrity: sha512-IB+0RqnJpuS7ndH4dVY5dfWTZsrCzN3avWFdjSiET0uT2U24jKywjpVEK97TflnZkZgiSRfmeqc1WfS+1CI23w==}
@@ -8925,7 +8922,7 @@ snapshots:
       '@formkit/auto-animate': 0.10.2
       '@glimmer/component': 2.2.1
       '@glimmer/tracking': 1.1.2
-      decorator-transforms: 1.2.1(@babel/core@7.29.13(supports-color@10.2.2))
+      decorator-transforms: 2.4.0(@babel/core@7.29.13(supports-color@10.2.2))
       ember-modifier: 4.3.0(@babel/core@7.29.13(supports-color@10.2.2))
       ember-source: 5.12.0(@glimmer/component@2.2.1)(@glint/template@1.11.1)(rsvp@4.8.5)(supports-color@10.2.2)(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3))
       ember-truth-helpers: 5.0.0
@@ -11895,13 +11892,6 @@ snapshots:
   decompress-response@3.3.0:
     dependencies:
       mimic-response: 1.0.1
-
-  decorator-transforms@1.2.1(@babel/core@7.29.13(supports-color@10.2.2)):
-    dependencies:
-      '@babel/plugin-syntax-decorators': 7.29.7(@babel/core@7.29.13(supports-color@10.2.2))
-      babel-import-util: 2.1.1
-    transitivePeerDependencies:
-      - '@babel/core'
 
   decorator-transforms@2.4.0(@babel/core@7.29.13(supports-color@10.2.2)):
     dependencies:
