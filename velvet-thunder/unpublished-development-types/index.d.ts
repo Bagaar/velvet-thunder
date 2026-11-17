@@ -11,8 +11,6 @@ import type EmberTruthHelpersRegistry from 'ember-truth-helpers/template-registr
 import type VelvetThunderRegistry from '../src/template-registry.ts';
 
 declare module '@glint/environment-ember-loose/registry' {
-  // Remove this once entries have been added! 👇
-  // eslint-disable-next-line @typescript-eslint/no-empty-interface
   export default interface Registry
     extends
       EmbroiderUtilRegistry,
