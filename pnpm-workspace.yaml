@@ -10,7 +10,7 @@ syncInjectedDepsAfterScripts:
 overrides:
   '@ember/test-waiters': 4.1.2
   '@glimmer/component': 2.2.1
-  postcss: 8.5.32
+  postcss: 8.5.33
 allowBuilds:
   core-js: false
 minimumReleaseAgeExclude:

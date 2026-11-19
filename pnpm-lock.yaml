@@ -7,7 +7,7 @@ settings:
 overrides:
   '@ember/test-waiters': 4.1.2
   '@glimmer/component': 2.2.1
-  postcss: 8.5.32
+  postcss: 8.5.33
 
 importers:
 
@@ -90,7 +90,7 @@ importers:
         version: 10.0.7
       ember-auto-import:
         specifier: 2.13.1
-        version: 2.13.1(@glint/template@1.11.1)(supports-color@10.2.2)(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3))
+        version: 2.13.1(@glint/template@1.11.1)(supports-color@10.2.2)(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3))
       ember-cli:
         specifier: 7.4.0
         version: 7.4.0(@babel/core@7.29.13(supports-color@10.2.2))(@types/node@26.6.6)(debug@4.4.3(supports-color@10.2.2))(ejs@3.1.10)(handlebars@4.7.10)(supports-color@10.2.2)(underscore@1.13.8)
@@ -192,7 +192,7 @@ importers:
         version: 8.73.0(eslint@10.15.0(jiti@1.21.7)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@6.0.3)
       webpack:
         specifier: 5.112.2
-        version: 5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3)
+        version: 5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3)
 
   velvet-thunder:
     dependencies:
@@ -376,7 +376,7 @@ importers:
         version: 1.11.1
       '@percy/ember':
         specifier: 5.0.2
-        version: 5.0.2(@babel/core@7.29.13(supports-color@10.2.2))(@glint/template@1.11.1)(supports-color@10.2.2)(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3))
+        version: 5.0.2(@babel/core@7.29.13(supports-color@10.2.2))(@glint/template@1.11.1)(supports-color@10.2.2)(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3))
       '@tailwindcss/forms':
         specifier: 0.5.11
         version: 0.5.11(tailwindcss@3.4.19(yaml@2.9.1))
@@ -409,7 +409,7 @@ importers:
         version: 4.2.1
       ember-auto-import:
         specifier: 2.13.1
-        version: 2.13.1(@glint/template@1.11.1)(supports-color@10.2.2)(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3))
+        version: 2.13.1(@glint/template@1.11.1)(supports-color@10.2.2)(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3))
       ember-cli:
         specifier: 7.4.0
         version: 7.4.0(@babel/core@7.29.13(supports-color@10.2.2))(@types/node@26.6.6)(debug@4.4.3(supports-color@10.2.2))(ejs@3.1.10)(handlebars@4.7.10)(supports-color@10.2.2)(underscore@1.13.8)
@@ -477,14 +477,14 @@ importers:
         specifier: 4.7.0
         version: 4.7.0
       postcss:
-        specifier: 8.5.32
-        version: 8.5.32
+        specifier: 8.5.33
+        version: 8.5.33
       postcss-cli:
         specifier: 12.0.0
-        version: 12.0.0(jiti@2.7.0)(postcss@8.5.32)(yaml@2.9.1)
+        version: 12.0.0(jiti@2.7.0)(postcss@8.5.33)(yaml@2.9.1)
       postcss-nested:
         specifier: 9.0.1
-        version: 9.0.1(postcss@8.5.32)
+        version: 9.0.1(postcss@8.5.33)
       prettier:
         specifier: 3.10.0
         version: 3.10.0
@@ -523,7 +523,7 @@ importers:
         version: 8.73.0(eslint@10.15.0(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@6.0.3)
       webpack:
         specifier: 5.112.2
-        version: 5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3)
+        version: 5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3)
 
 packages:
 
@@ -4876,7 +4876,7 @@ packages:
     resolution: {integrity: sha512-soFhflCVWLfRNOPU3iv5Z9VUdT44xFRbzjLsEzSr5AQmgqPMTHdU3PMT1Cf1ssx8fLNJDA1juftYl+PUcv3MqA==}
     engines: {node: ^10 || ^12 || >= 14}
     peerDependencies:
-      postcss: 8.5.32
+      postcss: 8.5.33
 
   ignore@5.3.2:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
@@ -6316,26 +6316,26 @@ packages:
     engines: {node: '>=22'}
     hasBin: true
     peerDependencies:
-      postcss: 8.5.32
+      postcss: 8.5.33
 
   postcss-import@15.1.0:
     resolution: {integrity: sha512-hpr+J05B2FVYUAXHeK1YyI267J/dDDhMU6B6civm8hSY1jYJnBXxzKDKDswzJmtLHryrjhnDjqqp/49t8FALew==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
-      postcss: 8.5.32
+      postcss: 8.5.33
 
   postcss-js@4.1.0:
     resolution: {integrity: sha512-oIAOTqgIo7q2EOwbhb8UalYePMvYoIeRY2YKntdpFQXNosSu3vLrniGgmH9OKs/qAkfoj5oB3le/7mINW1LCfw==}
     engines: {node: ^12 || ^14 || >= 16}
     peerDependencies:
-      postcss: 8.5.32
+      postcss: 8.5.33
 
   postcss-load-config@6.0.1:
     resolution: {integrity: sha512-oPtTM4oerL+UXmx+93ytZVN82RrlY/wPUV8IeDxFrzIjXOLF1pN+EmKPLbubvKHT2HC20xXsCAH2Z+CKV6Oz/g==}
     engines: {node: '>= 18'}
     peerDependencies:
       jiti: '>=1.21.0'
-      postcss: 8.5.32
+      postcss: 8.5.33
       tsx: ^4.8.1
       yaml: ^2.4.2
     peerDependenciesMeta:
@@ -6352,49 +6352,49 @@ packages:
     resolution: {integrity: sha512-k3kNe0aNFQDAZGbin48pL2VNidTF0w4/eASDsxlyspobzU3wZQLOGj7L9gfRe0Jo9/4uud09DsjFNH7winGv8Q==}
     engines: {node: ^10 || ^12 || >= 14}
     peerDependencies:
-      postcss: 8.5.32
+      postcss: 8.5.33
 
   postcss-modules-local-by-default@4.2.0:
     resolution: {integrity: sha512-5kcJm/zk+GJDSfw+V/42fJ5fhjL5YbFDl8nVdXkJPLLW+Vf9mTD5Xe0wqIaDnLuL2U6cDNpTr+UQ+v2HWIBhzw==}
     engines: {node: ^10 || ^12 || >= 14}
     peerDependencies:
-      postcss: 8.5.32
+      postcss: 8.5.33
 
   postcss-modules-scope@3.2.1:
     resolution: {integrity: sha512-m9jZstCVaqGjTAuny8MdgE88scJnCiQSlSrOWcTQgM2t32UBe+MUmFSO5t7VMSfAf/FJKImAxBav8ooCHJXCJA==}
     engines: {node: ^10 || ^12 || >= 14}
     peerDependencies:
-      postcss: 8.5.32
+      postcss: 8.5.33
 
   postcss-modules-values@4.0.0:
     resolution: {integrity: sha512-RDxHkAiEGI78gS2ofyvCsu7iycRv7oqw5xMWn9iMoR0N/7mf9D50ecQqUo5BZ9Zh2vH4bCUR/ktCqbB9m8vJjQ==}
     engines: {node: ^10 || ^12 || >= 14}
     peerDependencies:
-      postcss: 8.5.32
+      postcss: 8.5.33
 
   postcss-nested@6.2.0:
     resolution: {integrity: sha512-HQbt28KulC5AJzG+cZtj9kvKB93CFCdLvog1WFLf1D+xmMvPGlBstkpTEZfK5+AN9hfJocyBFCNiqyS48bpgzQ==}
     engines: {node: '>=12.0'}
     peerDependencies:
-      postcss: 8.5.32
+      postcss: 8.5.33
 
   postcss-nested@9.0.1:
     resolution: {integrity: sha512-FfeEbUMZ9nhld7AUMA32mGKstuXpQoDNj60v722j6+vH06H2kfuGhjmYdxDlkslx8H9+GrR7/cvlfS1zsuBscw==}
     engines: {node: ^22.0.0 || ^24.0.0 || >= 26.0.0}
     peerDependencies:
-      postcss: 8.5.32
+      postcss: 8.5.33
 
   postcss-reporter@7.1.0:
     resolution: {integrity: sha512-/eoEylGWyy6/DOiMP5lmFRdmDKThqgn7D6hP2dXKJI/0rJSO1ADFNngZfDzxL0YAxFvws+Rtpuji1YIHj4mySA==}
     engines: {node: '>=10'}
     peerDependencies:
-      postcss: 8.5.32
+      postcss: 8.5.33
 
   postcss-safe-parser@7.1.0:
     resolution: {integrity: sha512-1WzZxRLaAFwEh6Do+zyGpjWV3nGJNxxhuh7Ubu/q1ICImMgZJnLwhoaEpRbG4pJppp2Y1ncL9ffA2f+LhrefQg==}
     engines: {node: '>=18.0'}
     peerDependencies:
-      postcss: 8.5.32
+      postcss: 8.5.33
 
   postcss-selector-parser@6.0.10:
     resolution: {integrity: sha512-IQ7TZdoaqbT+LCpShg46jnZVlhWD2w6iQYAcYXfHARZ7X1t/UGhhceQDs5X0cGqKvYlHNOuv7Oa1xmb0oQuA3w==}
@@ -6411,8 +6411,8 @@ packages:
   postcss-value-parser@4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
 
-  postcss@8.5.32:
-    resolution: {integrity: sha512-LJlKCCAUFKOuZxipUdYw1NzIITEsPcgyOG9LkvRJvuKj/bRzbuRY0ARXvL0pWGpsZvn8jku+LMep2eU0seHp8g==}
+  postcss@8.5.33:
+    resolution: {integrity: sha512-RVHEU9/Pp1Fnjr/MpAJsZoADukCKhfIi15OunEYiGktIkYLkPVvC1sioWolGDS7XByMTx9m/IGbro0Js13zhnQ==}
     engines: {node: ^10 || ^12 || >=14}
 
   powershell-utils@0.2.1:
@@ -9746,10 +9746,10 @@ snapshots:
 
   '@oxc-project/types@0.130.0': {}
 
-  '@percy/ember@5.0.2(@babel/core@7.29.13(supports-color@10.2.2))(@glint/template@1.11.1)(supports-color@10.2.2)(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3))':
+  '@percy/ember@5.0.2(@babel/core@7.29.13(supports-color@10.2.2))(@glint/template@1.11.1)(supports-color@10.2.2)(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3))':
     dependencies:
       '@percy/sdk-utils': 1.32.12(supports-color@10.2.2)
-      ember-auto-import: 2.13.1(@glint/template@1.11.1)(supports-color@10.2.2)(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3))
+      ember-auto-import: 2.13.1(@glint/template@1.11.1)(supports-color@10.2.2)(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3))
       ember-cli-babel: 8.3.2(@babel/core@7.29.13(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - '@babel/core'
@@ -10479,14 +10479,14 @@ snapshots:
 
   babel-import-util@3.0.1: {}
 
-  babel-loader@8.4.1(@babel/core@7.29.13(supports-color@10.2.2))(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3)):
+  babel-loader@8.4.1(@babel/core@7.29.13(supports-color@10.2.2))(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3)):
     dependencies:
       '@babel/core': 7.29.13(supports-color@10.2.2)
       find-cache-dir: 3.3.2
       loader-utils: 2.0.4
       make-dir: 3.1.0
       schema-utils: 2.7.1
-      webpack: 5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3)
+      webpack: 5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3)
 
   babel-plugin-debug-macros@0.3.4(@babel/core@7.29.13(supports-color@10.2.2)):
     dependencies:
@@ -11518,19 +11518,19 @@ snapshots:
       shebang-command: 2.0.0
       which: 2.0.2
 
-  css-loader@5.2.7(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3)):
+  css-loader@5.2.7(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3)):
     dependencies:
-      icss-utils: 5.1.0(postcss@8.5.32)
+      icss-utils: 5.1.0(postcss@8.5.33)
       loader-utils: 2.0.4
-      postcss: 8.5.32
-      postcss-modules-extract-imports: 3.1.0(postcss@8.5.32)
-      postcss-modules-local-by-default: 4.2.0(postcss@8.5.32)
-      postcss-modules-scope: 3.2.1(postcss@8.5.32)
-      postcss-modules-values: 4.0.0(postcss@8.5.32)
+      postcss: 8.5.33
+      postcss-modules-extract-imports: 3.1.0(postcss@8.5.33)
+      postcss-modules-local-by-default: 4.2.0(postcss@8.5.33)
+      postcss-modules-scope: 3.2.1(postcss@8.5.33)
+      postcss-modules-values: 4.0.0(postcss@8.5.33)
       postcss-value-parser: 4.2.0
       schema-utils: 3.3.0
       semver: 7.8.6
-      webpack: 5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3)
+      webpack: 5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3)
 
   css-selector-parser@1.4.1: {}
 
@@ -11729,7 +11729,7 @@ snapshots:
 
   electron-to-chromium@1.5.486: {}
 
-  ember-auto-import@2.13.1(@glint/template@1.11.1)(supports-color@10.2.2)(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3)):
+  ember-auto-import@2.13.1(@glint/template@1.11.1)(supports-color@10.2.2)(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3)):
     dependencies:
       '@babel/core': 7.29.13(supports-color@10.2.2)
       '@babel/plugin-proposal-class-properties': 7.18.6(@babel/core@7.29.13(supports-color@10.2.2))(supports-color@10.2.2)
@@ -11740,7 +11740,7 @@ snapshots:
       '@embroider/macros': 1.21.4(@babel/core@7.29.13(supports-color@10.2.2))(@glint/template@1.11.1)(supports-color@10.2.2)
       '@embroider/reverse-exports': 0.2.0
       '@embroider/shared-internals': 2.9.2(supports-color@10.2.2)
-      babel-loader: 8.4.1(@babel/core@7.29.13(supports-color@10.2.2))(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3))
+      babel-loader: 8.4.1(@babel/core@7.29.13(supports-color@10.2.2))(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3))
       babel-plugin-ember-modules-api-polyfill: 3.5.0
       babel-plugin-ember-template-compilation: 2.4.1
       babel-plugin-htmlbars-inline-precompile: 5.3.1
@@ -11750,7 +11750,7 @@ snapshots:
       broccoli-merge-trees: 4.2.0(supports-color@10.2.2)
       broccoli-plugin: 4.0.7(supports-color@10.2.2)
       broccoli-source: 3.0.1
-      css-loader: 5.2.7(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3))
+      css-loader: 5.2.7(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3))
       debug: 4.4.3(supports-color@10.2.2)
       fs-extra: 10.1.0
       fs-tree-diff: 2.0.1(supports-color@10.2.2)
@@ -11758,14 +11758,14 @@ snapshots:
       is-subdir: 1.2.0
       js-string-escape: 1.0.1
       lodash: 4.18.1
-      mini-css-extract-plugin: 2.10.2(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3))
+      mini-css-extract-plugin: 2.10.2(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3))
       minimatch: 3.1.5
       parse5: 6.0.1
       pkg-entry-points: 1.1.2
       resolve: 1.22.14
       resolve-package-path: 4.0.3
       semver: 7.8.6
-      style-loader: 2.0.0(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3))
+      style-loader: 2.0.0(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3))
       typescript-memoize: 1.1.1
       walk-sync: 3.0.0
     transitivePeerDependencies:
@@ -13634,9 +13634,9 @@ snapshots:
     dependencies:
       safer-buffer: 2.1.2
 
-  icss-utils@5.1.0(postcss@8.5.32):
+  icss-utils@5.1.0(postcss@8.5.33):
     dependencies:
-      postcss: 8.5.32
+      postcss: 8.5.33
 
   ignore@5.3.2: {}
 
@@ -14506,11 +14506,11 @@ snapshots:
 
   mimic-response@1.0.1: {}
 
-  mini-css-extract-plugin@2.10.2(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3)):
+  mini-css-extract-plugin@2.10.2(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3)):
     dependencies:
-      schema-utils: 4.8.3(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3))
+      schema-utils: 4.8.3(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3))
       tapable: 2.3.4
-      webpack: 5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3)
+      webpack: 5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3)
 
   mini-svg-data-uri@1.4.4: {}
 
@@ -14541,15 +14541,15 @@ snapshots:
 
   minimist@1.2.8: {}
 
-  minimizer-webpack-plugin@5.14.0(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3)(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3)):
+  minimizer-webpack-plugin@5.14.0(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3)(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3)):
     dependencies:
       jest-worker: 27.5.1
-      schema-utils: 4.8.3(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3))
+      schema-utils: 4.8.3(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3))
       terser: 5.51.2
-      webpack: 5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3)
+      webpack: 5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3)
     optionalDependencies:
       clean-css: 5.3.3
-      postcss: 8.5.32
+      postcss: 8.5.33
       uglify-js: 3.19.3
 
   minipass-collect@2.0.1:
@@ -15083,14 +15083,14 @@ snapshots:
 
   possible-typed-array-names@1.1.0: {}
 
-  postcss-cli@12.0.0(jiti@2.7.0)(postcss@8.5.32)(yaml@2.9.1):
+  postcss-cli@12.0.0(jiti@2.7.0)(postcss@8.5.33)(yaml@2.9.1):
     dependencies:
       chokidar: 5.0.0
       dependency-graph: 1.0.0
       picocolors: 1.1.1
-      postcss: 8.5.32
-      postcss-load-config: 6.0.1(jiti@2.7.0)(postcss@8.5.32)(yaml@2.9.1)
-      postcss-reporter: 7.1.0(postcss@8.5.32)
+      postcss: 8.5.33
+      postcss-load-config: 6.0.1(jiti@2.7.0)(postcss@8.5.33)(yaml@2.9.1)
+      postcss-reporter: 7.1.0(postcss@8.5.33)
       pretty-hrtime: 1.0.3
       read-cache: 1.0.2
       slash: 5.1.0
@@ -15101,74 +15101,74 @@ snapshots:
       - tsx
       - yaml
 
-  postcss-import@15.1.0(postcss@8.5.32):
+  postcss-import@15.1.0(postcss@8.5.33):
     dependencies:
-      postcss: 8.5.32
+      postcss: 8.5.33
       postcss-value-parser: 4.2.0
       read-cache: 1.0.2
       resolve: 1.22.14
 
-  postcss-js@4.1.0(postcss@8.5.32):
+  postcss-js@4.1.0(postcss@8.5.33):
     dependencies:
       camelcase-css: 2.0.1
-      postcss: 8.5.32
+      postcss: 8.5.33
 
-  postcss-load-config@6.0.1(jiti@1.21.7)(postcss@8.5.32)(yaml@2.9.1):
+  postcss-load-config@6.0.1(jiti@1.21.7)(postcss@8.5.33)(yaml@2.9.1):
     dependencies:
       lilconfig: 3.1.5
     optionalDependencies:
       jiti: 1.21.7
-      postcss: 8.5.32
+      postcss: 8.5.33
       yaml: 2.9.1
 
-  postcss-load-config@6.0.1(jiti@2.7.0)(postcss@8.5.32)(yaml@2.9.1):
+  postcss-load-config@6.0.1(jiti@2.7.0)(postcss@8.5.33)(yaml@2.9.1):
     dependencies:
       lilconfig: 3.1.5
     optionalDependencies:
       jiti: 2.7.0
-      postcss: 8.5.32
+      postcss: 8.5.33
       yaml: 2.9.1
 
-  postcss-modules-extract-imports@3.1.0(postcss@8.5.32):
+  postcss-modules-extract-imports@3.1.0(postcss@8.5.33):
     dependencies:
-      postcss: 8.5.32
+      postcss: 8.5.33
 
-  postcss-modules-local-by-default@4.2.0(postcss@8.5.32):
+  postcss-modules-local-by-default@4.2.0(postcss@8.5.33):
     dependencies:
-      icss-utils: 5.1.0(postcss@8.5.32)
-      postcss: 8.5.32
+      icss-utils: 5.1.0(postcss@8.5.33)
+      postcss: 8.5.33
       postcss-selector-parser: 7.2.1
       postcss-value-parser: 4.2.0
 
-  postcss-modules-scope@3.2.1(postcss@8.5.32):
+  postcss-modules-scope@3.2.1(postcss@8.5.33):
     dependencies:
-      postcss: 8.5.32
+      postcss: 8.5.33
       postcss-selector-parser: 7.2.1
 
-  postcss-modules-values@4.0.0(postcss@8.5.32):
+  postcss-modules-values@4.0.0(postcss@8.5.33):
     dependencies:
-      icss-utils: 5.1.0(postcss@8.5.32)
-      postcss: 8.5.32
+      icss-utils: 5.1.0(postcss@8.5.33)
+      postcss: 8.5.33
 
-  postcss-nested@6.2.0(postcss@8.5.32):
+  postcss-nested@6.2.0(postcss@8.5.33):
     dependencies:
-      postcss: 8.5.32
+      postcss: 8.5.33
       postcss-selector-parser: 6.1.6
 
-  postcss-nested@9.0.1(postcss@8.5.32):
+  postcss-nested@9.0.1(postcss@8.5.33):
     dependencies:
-      postcss: 8.5.32
+      postcss: 8.5.33
       postcss-selector-parser: 7.2.1
 
-  postcss-reporter@7.1.0(postcss@8.5.32):
+  postcss-reporter@7.1.0(postcss@8.5.33):
     dependencies:
       picocolors: 1.1.1
-      postcss: 8.5.32
+      postcss: 8.5.33
       thenby: 1.4.1
 
-  postcss-safe-parser@7.1.0(postcss@8.5.32):
+  postcss-safe-parser@7.1.0(postcss@8.5.33):
     dependencies:
-      postcss: 8.5.32
+      postcss: 8.5.33
 
   postcss-selector-parser@6.0.10:
     dependencies:
@@ -15185,7 +15185,7 @@ snapshots:
 
   postcss-value-parser@4.2.0: {}
 
-  postcss@8.5.32:
+  postcss@8.5.33:
     dependencies:
       nanoid: 3.3.20
       picocolors: 1.1.1
@@ -15820,14 +15820,14 @@ snapshots:
       ajv: 6.15.0
       ajv-keywords: 3.5.2(ajv@6.15.0)
 
-  schema-utils@4.8.3(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3)):
+  schema-utils@4.8.3(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3)):
     dependencies:
       '@types/json-schema': 7.0.15
       ajv: 8.20.0
       ajv-formats: 3.0.1
       ajv-keywords: 5.1.0(ajv@8.20.0)
     optionalDependencies:
-      webpack: 5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3)
+      webpack: 5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3)
 
   semver-deprecate@1.1.0:
     dependencies:
@@ -16198,11 +16198,11 @@ snapshots:
 
   stubborn-utils@1.0.2: {}
 
-  style-loader@2.0.0(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3)):
+  style-loader@2.0.0(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3)):
     dependencies:
       loader-utils: 2.0.4
       schema-utils: 3.3.0
-      webpack: 5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3)
+      webpack: 5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3)
 
   styled_string@0.0.1: {}
 
@@ -16230,8 +16230,8 @@ snapshots:
       ignore: 7.0.14
       import-meta-resolve: 4.2.0
       picomatch: 4.0.7
-      postcss: 8.5.32
-      postcss-safe-parser: 7.1.0(postcss@8.5.32)
+      postcss: 8.5.33
+      postcss-safe-parser: 7.1.0(postcss@8.5.33)
       postcss-selector-parser: 7.2.1
       postcss-value-parser: 4.2.0
       tinyglobby: 0.2.17
@@ -16307,11 +16307,11 @@ snapshots:
       normalize-path: 3.0.0
       object-hash: 3.0.0
       picocolors: 1.1.1
-      postcss: 8.5.32
-      postcss-import: 15.1.0(postcss@8.5.32)
-      postcss-js: 4.1.0(postcss@8.5.32)
-      postcss-load-config: 6.0.1(jiti@1.21.7)(postcss@8.5.32)(yaml@2.9.1)
-      postcss-nested: 6.2.0(postcss@8.5.32)
+      postcss: 8.5.33
+      postcss-import: 15.1.0(postcss@8.5.33)
+      postcss-js: 4.1.0(postcss@8.5.33)
+      postcss-load-config: 6.0.1(jiti@1.21.7)(postcss@8.5.33)(yaml@2.9.1)
+      postcss-nested: 6.2.0(postcss@8.5.33)
       postcss-selector-parser: 6.1.6
       resolve: 1.22.14
       sucrase: 3.35.1
@@ -16848,7 +16848,7 @@ snapshots:
 
   webpack-sources@3.7.0: {}
 
-  webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3):
+  webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3):
     dependencies:
       '@types/estree': 1.0.10
       '@types/json-schema': 7.0.15
@@ -16862,8 +16862,8 @@ snapshots:
       events: 3.3.0
       graceful-fs: 4.2.12
       mime-db: 1.54.0
-      minimizer-webpack-plugin: 5.14.0(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3)(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3))
-      schema-utils: 4.8.3(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.32)(uglify-js@3.19.3))
+      minimizer-webpack-plugin: 5.14.0(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3)(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3))
+      schema-utils: 4.8.3(webpack@5.112.2(clean-css@5.3.3)(postcss@8.5.33)(uglify-js@3.19.3))
       tapable: 2.3.4
       watchpack: 2.6.4
       webpack-sources: 3.7.0
