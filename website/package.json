@@ -90,7 +90,7 @@
     "prettier": "3.10.0",
     "qunit": "3.0.0",
     "qunit-dom": "3.6.0",
-    "rehype-autolink-headings": "5.1.0",
+    "rehype-autolink-headings": "6.1.1",
     "rehype-highlight": "4.1.0",
     "rehype-wrap-all": "1.1.0",
     "stylelint": "18.0.0",
